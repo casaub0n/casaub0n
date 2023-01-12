@@ -1,9 +1,54 @@
 ---
+// https://github.com/catnose99/next-head-seo/blob/main/index.tsx
 export interface Props {
 	title: string;
+	canonical?: string;
+  /**
+   * Set `robots` only when you don't want search engines to index the page.
+   */
+  robots?: 'noindex' | 'nofollow' | 'noindex, nofollow' | 'index, follow';
+  description?: string;
+  /**
+   * Truncate after maxDescriptionCharacters. Default value is 150.
+   * (Google generally truncates descritpion to ~155–160 characters https://moz.com/learn/seo/meta-description )
+   */
+  maxDescriptionCharacters?: number;
+  twitter?: {
+    /**
+     * Twitter card type
+     * https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards
+     */
+    card?: 'summary' | 'summary_large_image' | 'player' | 'app';
+    /**
+     * Twitter username starting with @
+     */
+    site?: string;
+	};
+	/**
+   * Additional meta tags.
+   * Setting same value for `key` property between `<DefaultSeo />` and `<PageSeo />` will override the default meta tag (Otherwise both of them will be rendered)
+   */
+	customMetaTags?: Record<string, string>[];
+	/**
+   * Additional link tags.
+   * Setting same value for `key` property between `<DefaultSeo />` and `<PageSeo />` will override the default meta tag (Otherwise both of them will be rendered)
+   */
+	customLinkTags?: Record<string, string>[];
+	og?: {
+    title?: string;
+    description?: string;
+    url?: string;
+    type?: 'article' | 'book' | 'website' | 'profile';
+    /**
+     * URL for og:image
+     */
+    image?: string;
+    siteName?: string;
+  };
+
 }
 
-const { title } = Astro.props;
+const { title, description, canonical, robots, maxDescriptionCharacters = 150, twitter = {}, og = {}, customMetaTags = [], customLinkTags = [] } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -13,6 +58,39 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		{robots ? <meta name="robots" content={robots} /> : <></>}
+		{description ? <meta name="description" content={description.substring(0, maxDescriptionCharacters)} /> : <></>}
+		{canonical ? <link rel="canonical" href={canonical} /> : <></>}
+		{twitter.card ? <meta name="twitter:card" content={twitter.card} /> : <></>}
+		{twitter.site ? <meta name="twitter:site" content={twitter.site} />: <></>}
+		{og.url || canonical ? <meta property="og:url" content={og.url || canonical} /> : <></>}
+		{og.title || title ? <meta property="og:title" content={og.title || title} /> : <></>}
+		{og.image ? <meta property="og:image" content={og.image} /> : <></>}
+		{og.description || description ?
+			<meta
+				property="og:description"
+				content={(og.description || description)?.substring(
+					0,
+					maxDescriptionCharacters
+				)}
+			/> : <></>}
+		{og.type ? <meta property="og:type" content={og.type} /> : <></>}
+		{og.siteName ?
+			<meta
+				property="og:site_name"
+				content={og.siteName}
+			/> : <></> 
+		}
+		{customMetaTags.length > 0 ?
+			customMetaTags.map(({ ...tagProps }) => (
+          <meta {...tagProps} />
+      )) : <></>
+		}
+		{customLinkTags.length > 0 ?
+			customLinkTags.map(({ ...tagProps }) => (
+          <link {...tagProps} />
+      )) : <></>
+		}
 		<title>{title}</title>
 	</head>
 	<body>
