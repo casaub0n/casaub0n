@@ -20,7 +20,7 @@
     "test": "echo hello",
     "rmdist": "node -e 'fs.rmSync(`dist`, {recursive:true, force:true})'",
     "build": "yarn rmdist && tsup src/index.ts --format cjs --dts",
-    "dev": "yarn build && node dist/index.js"
+    "start:tsbox": "yarn build && node dist/index.js"
   },
   "files": [
     "dist"
