@@ -1,5 +1,5 @@
 import { filterArray, flatArray } from "./flatMapExample";
-import { satisfiesExampleJson } from "./satisfiesExample";
+import { foodList, myName, satisfiesExampleJson } from "./satisfiesExample";
 
 console.log(satisfiesExampleJson);
 
@@ -15,4 +15,10 @@ flatArray.forEach((data) => {
 
 filterArray.forEach((data) => {
   console.log(data);
+});
+
+console.log(myName);
+
+Object.keys(foodList).forEach((key) => {
+  console.log("key: " + key + ", value: " + foodList[key]);
 });
