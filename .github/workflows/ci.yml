@@ -1,8 +1,24 @@
 # https://turborepo.org/docs/ci/github-actions
 name: Userscript build by using turbo cache
-on: [push]
+on:
+  push:
+    paths:
+      - './packages/dotfiles/init/linux/**'
 
 jobs:
+  dotfiles:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        script: ["./scripts/zsh.sh", "./scripts/tmux.sh"]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: unit-test of ${{matrix.script}}
+        working-directory: ./init/linux
+        run: ${{matrix.script}}
+
   publish:
     runs-on: ubuntu-latest
     permissions:
