@@ -1,8 +1,24 @@
 # https://turborepo.org/docs/ci/github-actions
+# https://kotaro7750.hatenablog.com/entry/dotfile_ci
 name: Userscript build by using turbo cache
 on: [push]
 
 jobs:
+  dotfiles:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ["ubuntu-latest"]
+        script: ["./packages/dotfiles/init/linux/scripts/zsh.sh", "./packages/dotfiles/init/linux/scripts/tmux.sh"]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install dotfiles
+      run: ${{matrix.script}}
+
   publish:
     runs-on: ubuntu-latest
     permissions:
