@@ -8,6 +8,7 @@ jobs:
       fail-fast: false
       matrix:
         os: ["ubuntu-latest"]
+        script: ["./packages/dotfiles/init/linux/scripts/zsh.sh", "./packages/dotfiles/init/linux/scripts/tmux.sh"]
     runs-on: ${{ matrix.os }}
     timeout-minutes: 10
     
@@ -15,7 +16,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Install dotfiles
-      run: sh -c ./packages/dotfiles/init/linux/scripts/zsh.sh
+      run: ${{matrix.script}}
 
   publish:
     runs-on: ubuntu-latest
