@@ -17,6 +17,10 @@
     "start:tsbox": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
+    },
+    "start:parse-html": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
     }
   }
 }
