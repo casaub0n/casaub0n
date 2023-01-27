@@ -15,6 +15,8 @@ const getContent = (htmlText: string): Result<string, DoSomethingError> => {
     runScripts: "dangerously",
     resources: "usable",
   });
+  // document.getElementsByClassName("scrTable").item(0).getElementsByTagName("td").item(3)
+  // TODO:d3.js
   const tableElement = dom.window.document.getElementById("scrTable");
   tableElement?.removeAttribute("scrTable");
   if (tableElement) return new Success(tableElement.outerHTML);
@@ -68,12 +70,12 @@ const init = () => {
           const htmlFile = await fs.readFile(file, "utf-8");
           const content = getContent(htmlFile);
           if (content.isSuccess()) {
+            const contentH = content.value.replace(/id/g, "class");
             console.log(`${preTag}`);
-            console.log(`${content.value}`);
+            console.log(`${contentH}`);
             console.log(`${endTag}`);
-
             await appendHtmlFile(preTag);
-            await appendHtmlFile(content.value);
+            await appendHtmlFile(contentH);
             await appendHtmlFile(endTag);
           }
         }
