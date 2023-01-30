@@ -5,6 +5,21 @@ export const response = {
   hello: "world",
 } as const satisfies { [key: string]: string };
 
+export type Program = {
+  title: string;
+  time: string;
+};
+
+export type ScheduleTxt = {
+  contentDay: string;
+  programs: Program[];
+};
+
+export type ScheduleContent = {
+  img?: string[];
+  txt?: ScheduleTxt[];
+};
+
 const init = async () => {
   const data = await got.get("https://www.shin-bungeiza.com/schedule.html");
 
