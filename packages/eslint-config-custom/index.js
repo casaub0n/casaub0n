@@ -8,6 +8,7 @@ module.exports = {
     "plugin:jest/style",
   ],
   rules: {
+    "no-unused-vars": "off",
     "@next/next/no-html-link-for-pages": "off",
     "react/jsx-key": "off",
   },
