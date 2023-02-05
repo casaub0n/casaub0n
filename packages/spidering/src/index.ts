@@ -45,26 +45,61 @@ export const makePureTitle = (
   honDateList?: string[],
 ) => {
   const discriptionDom = title.getElementsByTagName("small");
+  console.log(`discription length: ${discriptionDom.length}`);
   for (const discription of discriptionDom) {
-    console.log(`discription: ${discription.textContent}`);
     const pureDiscription = discription.textContent;
-    if (pureDiscription) {
+    if (pureDiscription != null) {
+      console.log(`discription: ${pureDiscription}`);
       discriptionList.push(pureDiscription);
     }
-    if (honDate && honDateList) {
-      const pureHonDate = honDate.textContent;
-      if (pureHonDate) {
-        honDateList.push(pureHonDate);
-      }
-      honDate.remove();
-    }
+  }
+  // remove discription
+  for (const discription of discriptionDom) {
     discription.remove();
-    const pureTitle = title.textContent?.replace(/^\s+/, "");
-    console.log(`pure title: ${pureTitle}`);
-    if (pureTitle) {
-      titleList.push(pureTitle);
+  }
+
+  if (honDate && honDateList) {
+    const pureHonDate = honDate.textContent;
+    if (pureHonDate != null) {
+      honDateList.push(pureHonDate);
+    }
+    honDate.remove();
+  }
+  const hogeSmall = title.getElementsByTagName("small");
+  console.log(`small tag length: ${hogeSmall.length}`);
+
+  for (const hoge of hogeSmall) {
+    console.log(`small tag value: ${hoge.textContent}`);
+  }
+
+  const pureTitle = title.textContent?.replace(/^\s+/, "").split("\n");
+  if (pureTitle != null) {
+    for (const title of pureTitle) {
+      console.log(`pure title: ${title}`);
+      titleList.push(title);
     }
   }
+
+  // for (const discription of discriptionDom) {
+  //   console.log(`discription: ${discription.textContent}`);
+  //   const pureDiscription = discription.textContent;
+  //   if (pureDiscription) {
+  //     discriptionList.push(pureDiscription);
+  //   }
+  //   if (honDate && honDateList) {
+  //     const pureHonDate = honDate.textContent;
+  //     if (pureHonDate) {
+  //       honDateList.push(pureHonDate);
+  //     }
+  //     honDate.remove();
+  //   }
+  //   discription.remove();
+  //   const pureTitle = title.textContent?.replace(/^\s+/, "");
+  //   console.log(`pure title: ${pureTitle}`);
+  //   if (pureTitle) {
+  //     titleList.push(pureTitle);
+  //   }
+  // }
 };
 
 const init = async () => {
