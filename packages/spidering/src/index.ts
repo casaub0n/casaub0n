@@ -53,10 +53,13 @@ export const makePureTitle = (
       discriptionList.push(pureDiscription);
     }
   }
-  // remove discription
-  for (const discription of discriptionDom) {
-    discription.remove();
-  }
+  const removeDiscription = (dom: HTMLCollectionOf<HTMLElement>) => {
+    if (dom.length > 0) {
+      dom.item(0)?.remove();
+      removeDiscription(dom);
+    }
+  };
+  removeDiscription(discriptionDom);
 
   if (honDate && honDateList) {
     const pureHonDate = honDate.textContent;
