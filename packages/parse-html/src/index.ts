@@ -15,9 +15,14 @@ const getContent = (htmlText: string): Result<string, DoSomethingError> => {
     runScripts: "dangerously",
     resources: "usable",
   });
-  // document.getElementsByClassName("scrTable").item(0).getElementsByTagName("td").item(3)
-  // TODO:d3.js
   const tableElement = dom.window.document.getElementById("scrTable");
+  const columnName = tableElement?.getElementsByClassName("midashi2");
+  if (columnName) {
+    for (const i of columnName) {
+      // get midashi
+      console.log(i.textContent);
+    }
+  }
   tableElement?.removeAttribute("scrTable");
   if (tableElement) return new Success(tableElement.outerHTML);
   return new Failure(new DoSomethingError());
@@ -67,15 +72,15 @@ const init = () => {
         await makeHtmlFile();
         for (let i = 0; i < files.length; i++) {
           const file = files[i];
-          const htmlFile = await fs.readFile(file, "utf-8");
+          const rawFile = await fs.readFile(file, "utf-8");
+          const htmlFile = rawFile.replace(/id='liststd'/g, "class='listd'");
           const content = getContent(htmlFile);
           if (content.isSuccess()) {
-            const contentH = content.value.replace(/id/g, "class");
             console.log(`${preTag}`);
-            console.log(`${contentH}`);
+            console.log(`${content.value}`);
             console.log(`${endTag}`);
             await appendHtmlFile(preTag);
-            await appendHtmlFile(contentH);
+            await appendHtmlFile(content.value);
             await appendHtmlFile(endTag);
           }
         }
