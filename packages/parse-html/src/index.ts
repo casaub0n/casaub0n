@@ -3,6 +3,7 @@ import path from "path";
 import fs from "fs/promises";
 import glob from "glob";
 import { DoSomethingError, Failure, Result, Success } from "./utils/Result";
+import * as dfd from "danfojs-node";
 
 const readData = (filePath: string): Result<string, DoSomethingError> => {
   const htmlStr = path.join(process.cwd(), filePath);
@@ -10,14 +11,70 @@ const readData = (filePath: string): Result<string, DoSomethingError> => {
   return new Failure(new DoSomethingError());
 };
 
-const getContent = (htmlText: string): Result<string, DoSomethingError> => {
+export const tableDf = (tableElement: HTMLElement) => {
+  const trArray = tableElement?.getElementsByTagName("tr");
+  let data: string[][] = [];
+  let cols: string[] = [];
+  if (trArray) {
+    for (const tr of trArray) {
+      const tdArray = tr.getElementsByTagName("td");
+      let dataTd: string[] = [];
+      for (const td of tdArray) {
+        if (td.classList.contains("midashi2")) {
+          const tdValue = td.textContent;
+          if (tdValue) {
+            cols.push(tdValue);
+          }
+        } else {
+          const tdValue = td.textContent;
+          if (tdValue) {
+            dataTd.push(tdValue);
+          } else {
+            dataTd.push("");
+          }
+        }
+      }
+      data.push(dataTd);
+    }
+    const tf = dfd.tensorflow;
+    const tensor_arr = tf.tensor2d(data);
+    const df = new dfd.DataFrame(tensor_arr, { columns: cols });
+    df.print();
+  }
+};
+
+export const convertCSVfromTable = (tableElement: HTMLElement, month: number) => {
+  const trArray = tableElement?.getElementsByTagName("tr");
+  let csvString = "";
+  if (trArray) {
+    for (let i = 0; i < trArray.length; i++) {
+      const tr = trArray[i];
+      const tdArray = tr.getElementsByTagName("td");
+      for (let j = 0; j < tdArray.length; j++) {
+        const td = tdArray[j];
+        if (j === tdArray.length - 1) {
+          csvString = csvString + `"${td.textContent}"`;
+        } else {
+          csvString = csvString + `"${td.textContent}", `;
+        }
+      }
+      csvString = csvString + "\n";
+    }
+  }
+  console.log(`csv: \n${csvString}`);
+  const filePath = path.join(process.cwd(), `./dist/${month}out.csv`);
+  (async () => {
+    await fs.writeFile(filePath, csvString, "utf-8");
+  })();
+};
+
+const getContent = (htmlText: string, month: number): Result<string, DoSomethingError> => {
   const dom = new JSDOM(htmlText, {
     runScripts: "dangerously",
     resources: "usable",
   });
-  // document.getElementsByClassName("scrTable").item(0).getElementsByTagName("td").item(3)
-  // TODO:d3.js
   const tableElement = dom.window.document.getElementById("scrTable");
+  if (tableElement) convertCSVfromTable(tableElement, month);
   tableElement?.removeAttribute("scrTable");
   if (tableElement) return new Success(tableElement.outerHTML);
   return new Failure(new DoSomethingError());
@@ -67,15 +124,12 @@ const init = () => {
         await makeHtmlFile();
         for (let i = 0; i < files.length; i++) {
           const file = files[i];
-          const htmlFile = await fs.readFile(file, "utf-8");
-          const content = getContent(htmlFile);
+          const rawFile = await fs.readFile(file, "utf-8");
+          const htmlFile = rawFile.replace(/id='liststd'/g, "class='listd'");
+          const content = getContent(htmlFile, i);
           if (content.isSuccess()) {
-            const contentH = content.value.replace(/id/g, "class");
-            console.log(`${preTag}`);
-            console.log(`${contentH}`);
-            console.log(`${endTag}`);
             await appendHtmlFile(preTag);
-            await appendHtmlFile(contentH);
+            await appendHtmlFile(content.value);
             await appendHtmlFile(endTag);
           }
         }
