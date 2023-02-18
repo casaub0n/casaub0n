@@ -28,5 +28,6 @@
       "outputs": ["dist/**"]
     }
   },
-  "globalDependencies": [".env"]
+  "globalDependencies": [".env"],
+  "globalEnv": ["VERCEL_URL", "RENDER_INTERNAL_HOSTNAME", "PORT"]
 }
