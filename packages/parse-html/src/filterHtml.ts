@@ -3,7 +3,6 @@ import path from "path";
 import fs from "fs/promises";
 import glob from "glob";
 import { DoSomethingError, Failure, Result, Success } from "./utils/Result";
-import * as dfd from "danfojs-node";
 
 const readData = (filePath: string): Result<string, DoSomethingError> => {
   const htmlStr = path.join(process.cwd(), filePath);
@@ -11,61 +10,27 @@ const readData = (filePath: string): Result<string, DoSomethingError> => {
   return new Failure(new DoSomethingError());
 };
 
-export const tableDf = (tableElement: HTMLElement) => {
-  const trArray = tableElement?.getElementsByTagName("tr");
-  let data: string[][] = [];
-  let cols: string[] = [];
-  if (trArray) {
-    for (const tr of trArray) {
-      const tdArray = tr.getElementsByTagName("td");
-      let dataTd: string[] = [];
-      for (const td of tdArray) {
-        if (td.classList.contains("midashi2")) {
-          const tdValue = td.textContent;
-          if (tdValue) {
-            cols.push(tdValue);
-          }
-        } else {
-          const tdValue = td.textContent;
-          if (tdValue) {
-            dataTd.push(tdValue);
-          } else {
-            dataTd.push("");
-          }
-        }
-      }
-      data.push(dataTd);
-    }
-    const tf = dfd.tensorflow;
-    const tensor_arr = tf.tensor2d(data);
-    const df = new dfd.DataFrame(tensor_arr, { columns: cols });
-    df.print();
-  }
-};
+/**
+ * the numbers array of filtered column
+ */
+const filterNum = [0, 1, 2, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 19, 20, 21, 22];
 
-export const convertCSVfromTable = (tableElement: HTMLElement, month: number) => {
-  const trArray = tableElement?.getElementsByTagName("tr");
-  let csvString = "";
-  if (trArray) {
-    for (let i = 0; i < trArray.length; i++) {
-      const tr = trArray[i];
-      const tdArray = tr.getElementsByTagName("td");
-      for (let j = 0; j < tdArray.length; j++) {
-        const td = tdArray[j];
-        if (j === tdArray.length - 1) {
-          csvString = csvString + `"${td.textContent}"`;
-        } else {
-          csvString = csvString + `"${td.textContent}", `;
-        }
+const filterTable = (tableElement: HTMLElement, month: number): string => {
+  let str = `<h2>${month}${process.env.TABLE_HEAD}</h2>\n<table id='scrTable' border="1" style="border-collapse:collapse; font-size:0.025em">\n`;
+  const trArray = tableElement.getElementsByTagName("tr");
+  for (const tr of trArray) {
+    str += "<tr align='center'height:20px;'>\n";
+    const tdArray = tr.getElementsByTagName("td");
+    for (let i = 0; i < tdArray.length; i++) {
+      const td = tdArray[i];
+      if (filterNum.includes(i)) {
+        str += `<td>${td.textContent}</td>\n`;
       }
-      csvString = csvString + "\n";
     }
+    str += "</tr>\n";
   }
-  console.log(`csv: \n${csvString}`);
-  const filePath = path.join(process.cwd(), `./dist/${month}out.csv`);
-  (async () => {
-    await fs.writeFile(filePath, csvString, "utf-8");
-  })();
+  str += "</table>\n";
+  return str;
 };
 
 const getContent = (htmlText: string, month: number): Result<string, DoSomethingError> => {
@@ -74,9 +39,7 @@ const getContent = (htmlText: string, month: number): Result<string, DoSomething
     resources: "usable",
   });
   const tableElement = dom.window.document.getElementById("scrTable");
-  if (tableElement) convertCSVfromTable(tableElement, month);
-  tableElement?.removeAttribute("scrTable");
-  if (tableElement) return new Success(tableElement.outerHTML);
+  if (tableElement) return new Success(filterTable(tableElement, month));
   return new Failure(new DoSomethingError());
 };
 
@@ -115,20 +78,22 @@ const appendHtmlFile = async (str: string): Promise<void> => {
   await fs.appendFile(filePath, str, "utf-8");
 };
 
-export const makeCsv = () => {
+export const filterHtml = () => {
   const month_html = readData("./src/input_data");
   if (month_html.isSuccess()) {
-    console.log(`month_html: ${month_html.value}`);
+    // console.log(`month_html: ${month_html.value}`);
     glob(month_html.value, (err, files) => {
+      if (err) err;
       (async () => {
         await makeHtmlFile();
         for (let i = 0; i < files.length; i++) {
           const file = files[i];
           const rawFile = await fs.readFile(file, "utf-8");
           const htmlFile = rawFile.replace(/id='liststd'/g, "class='listd'");
-          const content = getContent(htmlFile, i);
+          const content = getContent(htmlFile, i+1);
           if (content.isSuccess()) {
             await appendHtmlFile(preTag);
+            // console.log(content.value);
             await appendHtmlFile(content.value);
             await appendHtmlFile(endTag);
           }
@@ -137,4 +102,4 @@ export const makeCsv = () => {
       })();
     });
   }
-}
+};
