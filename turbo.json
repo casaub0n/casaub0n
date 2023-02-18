@@ -20,11 +20,13 @@
     },
     "start:parse-html": {
       "dependsOn": ["^build"],
+      "env": ["TABLE_HEAD"],
       "outputs": ["dist/**"]
     },
     "start:sp": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
     }
-  }
+  },
+  "globalDependencies": [".env"]
 }

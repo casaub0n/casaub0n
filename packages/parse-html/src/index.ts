@@ -1,9 +1,7 @@
-import { analyzeCsv } from "./analyzeCsv";
-import { makeCsv } from "./makeCsv";
+import { filterHtml } from "./filterHtml";
 
 const init = () => {
-  makeCsv();
-  analyzeCsv();
+  filterHtml();
 };
 
 init();
