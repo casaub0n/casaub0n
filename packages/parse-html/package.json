@@ -19,8 +19,7 @@
   "scripts": {
     "test": "echo hello",
     "rmdist": "node -e 'fs.rmSync(`dist`, {recursive:true, force:true})'",
-    "echo": "bash -c 'cat .env && source .env && echo $TABLE_HEAD'",
-    "prebuild": "yarn rmdist && yarn echo",
+    "prebuild": "yarn rmdist",
     "build": "tsup src/index.ts --format cjs --dts --env.TABLE_HEAD something",
     "start:parse-html": "yarn build && node dist/index.js"
   },
