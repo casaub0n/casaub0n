@@ -1,0 +1,45 @@
+{
+  "name": "test-driven-development-by-example",
+  "version": "1.0.0",
+  "description": "test driven development by example",
+  "license": "MIT",
+  "repository": {
+    "url": "casaub0n/userscript",
+    "directory": "packages/test-driven-development-by-example"
+  },
+  "author": {
+    "name": "casaub0n",
+    "email": "netzach.yoshida@gmail.com",
+    "url": "https://github.com/casaub0n"
+  },
+  "main": "./dist/index.js",
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "test": "jest",
+    "rmdist": "node -e 'fs.rmSync(`dist`, {recursive:true, force:true})'",
+    "prebuild": "yarn rmdist",
+    "build": "tsup src/index.ts --format cjs --dts --env.TABLE_HEAD something",
+    "start:parse-html": "yarn build && node dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "userscript"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.4.0",
+    "@types/node": "^18.11.18",
+    "eslint-config-custom": "*",
+    "jest": "^29.4.3",
+    "ts-jest": "^29.0.5",
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {}
+}
