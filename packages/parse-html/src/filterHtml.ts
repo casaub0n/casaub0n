@@ -15,6 +15,12 @@ const readData = (filePath: string): Result<string, DoSomethingError> => {
  */
 const filterNum = [0, 1, 2, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 19, 20, 21, 22];
 
+/**
+ * filter useful value and then, make a table html string
+ * @param tableElement get table element like this: // dom.window.document.getElementById("somethingId")
+ * @param month In this project, just use file suffix
+ * @returns
+ */
 const filterTable = (tableElement: HTMLElement, month: number): string => {
   let str = `<h2>${month}${process.env.TABLE_HEAD}</h2>\n<table id='scrTable' border="1" style="border-collapse:collapse; font-size:0.025em">\n`;
   const trArray = tableElement.getElementsByTagName("tr");
@@ -33,6 +39,12 @@ const filterTable = (tableElement: HTMLElement, month: number): string => {
   return str;
 };
 
+/**
+ * read html file
+ * @param htmlText
+ * @param month
+ * @returns
+ */
 const getContent = (htmlText: string, month: number): Result<string, DoSomethingError> => {
   const dom = new JSDOM(htmlText, {
     runScripts: "dangerously",
@@ -68,37 +80,29 @@ const endHtmlTag = `
 </html>
 ` as const satisfies string;
 
-const makeHtmlFile = async (): Promise<void> => {
+const makeHtmlFile = async (str: string): Promise<void> => {
   const filePath = path.join(process.cwd(), "./dist/hello.html");
-  await fs.writeFile(filePath, preHtmlTag, "utf-8");
-};
-
-const appendHtmlFile = async (str: string): Promise<void> => {
-  const filePath = path.join(process.cwd(), "./dist/hello.html");
-  await fs.appendFile(filePath, str, "utf-8");
+  await fs.writeFile(filePath, str, "utf-8");
 };
 
 export const filterHtml = () => {
   const month_html = readData("./src/input_data");
   if (month_html.isSuccess()) {
-    // console.log(`month_html: ${month_html.value}`);
     glob(month_html.value, (err, files) => {
       if (err) err;
       (async () => {
-        await makeHtmlFile();
+        let outPutString = "" + preHtmlTag;
         for (let i = 0; i < files.length; i++) {
           const file = files[i];
           const rawFile = await fs.readFile(file, "utf-8");
           const htmlFile = rawFile.replace(/id='liststd'/g, "class='listd'");
-          const content = getContent(htmlFile, i+1);
+          const content = getContent(htmlFile, i + 1);
           if (content.isSuccess()) {
-            await appendHtmlFile(preTag);
-            // console.log(content.value);
-            await appendHtmlFile(content.value);
-            await appendHtmlFile(endTag);
+            outPutString = outPutString + preTag + "\n" + content.value + "\n" + endTag + "\n";
           }
         }
-        await appendHtmlFile(endHtmlTag);
+        outPutString = outPutString + endHtmlTag;
+        await makeHtmlFile(outPutString);
       })();
     });
   }
