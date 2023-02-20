@@ -1,4 +1,7 @@
-<a id="label-2d082c" href="/casaub0n/casaub0n/labels/area%3A%20test-driven-by-example" data-name="area: test-driven-by-example" style="color: #EBB0BF">
+<a href="https://github.com/casaub0n/casaub0n/labels/area%3A%20test-driven-by-example" data-name="area: test-driven-by-example">
+<svg height="100" width="100">
+  <circle cx="10" cy="10" r="10" stroke-width="3" fill="#EBB0BF" />
+</svg>
         <h2>Test Driven Development By Example</h2>
 </a>
 
