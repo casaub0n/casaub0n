@@ -1,11 +1,17 @@
 // https://refactoring.guru/design-patterns/factory-method
 export abstract class Money {
   protected amount: number;
+  protected _currency: string;
 
   abstract times(multiplier: number): Money;
 
-  constructor(amount: number) {
+  constructor(amount: number, currency: string) {
     this.amount = amount;
+    this._currency = currency;
+  }
+
+  get currency() {
+    return this._currency;
   }
 
   public equals(object: Money): boolean {
@@ -13,22 +19,22 @@ export abstract class Money {
   }
 
   static doller(amount: number): Money {
-    return new Dollar(amount);
+    return new Dollar(amount, "USD");
   }
 
   static franc(amount: number): Money {
-    return new Franc(amount);
+    return new Franc(amount, "CHF");
   }
 }
 
 export class Dollar extends Money {
   times(multiplier: number): Money {
-    return new Dollar(this.amount * multiplier);
+    return Money.doller(this.amount * multiplier);
   }
 }
 
 export class Franc extends Money {
   times(multiplier: number): Money {
-    return new Franc(this.amount * multiplier);
+    return Money.franc(this.amount * multiplier);
   }
 }
