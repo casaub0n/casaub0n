@@ -5,9 +5,23 @@
 
 This project was implemented example codes by TypeScript.
 
-## Problem
+## Circular Reference
 In money package, each modules uses Factory method, but it occurs the technical issue about circular reference.
 In addition, the actual error message is `TypeError: Class extends value undefined is not a constructor or null`
 
-## Solution
+### Solution:
 Still WIP: https://jestjs.io/ja/docs/ecmascript-modules
+
+## equals method
+As Java, when we compare strings, we use `equals()` method because `String` is Object. But as TypeScript, it must be `===` operator because `string` type is primitive data type. 
+
+## Member variable
+In TypeScript Class, member variable can't use method name.
+
+If you use member variable, you must specify `this` keyword because of distinguishing memeber variable from normal variable.
+
+## Down casting
+Don't do down casting.
+
+## Extends class sets super constractor
+automatically

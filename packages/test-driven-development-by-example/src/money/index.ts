@@ -1,13 +1,19 @@
 // https://refactoring.guru/design-patterns/factory-method
-export abstract class Money {
+export class Money implements Expression {
   protected amount: number;
   protected _currency: string;
-
-  abstract times(multiplier: number): Money;
 
   constructor(amount: number, currency: string) {
     this.amount = amount;
     this._currency = currency;
+  }
+
+  public times(multiplier: number): Money {
+    return new Money(this.amount * multiplier, this._currency);
+  }
+
+  public plus(addend: Money): Expression {
+    return new Money(this.amount + addend.amount, this.currency);
   }
 
   get currency() {
@@ -15,26 +21,26 @@ export abstract class Money {
   }
 
   public equals(object: Money): boolean {
-    return this.amount === object.amount && this.constructor.name === object.constructor.name;
+    return this.amount === object.amount && this.currency === object.currency;
+  }
+
+  public toString(): string {
+    return this.amount + " " + this.currency;
   }
 
   static doller(amount: number): Money {
-    return new Dollar(amount, "USD");
+    return new Money(amount, "USD");
   }
 
   static franc(amount: number): Money {
-    return new Franc(amount, "CHF");
+    return new Money(amount, "CHF");
   }
 }
 
-export class Dollar extends Money {
-  times(multiplier: number): Money {
-    return Money.doller(this.amount * multiplier);
-  }
-}
+export interface Expression {}
 
-export class Franc extends Money {
-  times(multiplier: number): Money {
-    return Money.franc(this.amount * multiplier);
+export class Bank {
+  public reduce(source: Expression, to: string): Money {
+    return Money.doller(10);
   }
 }
