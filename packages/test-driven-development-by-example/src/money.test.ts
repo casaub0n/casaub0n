@@ -1,4 +1,4 @@
-import { Money, Expression, Bank } from "./money";
+import { Money, Bank, Sum } from "./money";
 
 test("multiplication", () => {
   const five = Money.doller(5);
@@ -26,12 +26,33 @@ test("currency", () => {
 });
 
 test("simple addition", () => {
-  // const sum = Money.doller(5).plus(Money.doller(5));
   const five = Money.doller(5);
   const sum = five.plus(five);
   const bank = new Bank();
   const reduced = bank.reduce(sum, "USD");
-  expect(sum).toEqual(Money.doller(10));
-  // expect(sum.equals(Money.doller(10))).toBe(true);
   expect(reduced).toEqual(Money.doller(10));
+});
+
+it.todo("$5 + 10 CHF = 19 when the rate is 2:1");
+it.todo("$5 + $5 = $10");
+it.todo("$5 + $5 return Money");
+
+test("plus return sum", () => {
+  const five = Money.doller(5);
+  const sum = five.plus(five);
+  expect(five).toBe(sum.augend);
+  expect(five).toBe(sum.addend);
+});
+
+test("reduce sum", () => {
+  const sum = new Sum(Money.doller(3), Money.doller(4));
+  const bank = new Bank();
+  const result = bank.reduce(sum, "USD");
+  expect(result).toEqual(Money.doller(7));
+});
+
+test("reduce money", () => {
+  const bank = new Bank();
+  const result = bank.reduce(Money.doller(1), "USD");
+  expect(result).toEqual(Money.doller(1));
 });
