@@ -16,8 +16,10 @@ export class Money implements Expression {
     return new Sum(this, addend);
   }
 
-  public reduce(to: string): Money {
-    return this;
+  public reduce(bank: Bank, to: string): Money {
+    const rate = bank.rate(this._currency, to);
+    if (rate) return new Money(this._amount / rate, to);
+    return new Money(this._amount / 2, to); // TODO
   }
 
   get currency() {
@@ -46,12 +48,28 @@ export class Money implements Expression {
 }
 
 export interface Expression {
-  reduce(to: string): Money;
+  reduce(bank: Bank, to: string): Money;
 }
 
 export class Bank {
+  private rates: Map<Pair, number>;
+
+  constructor() {
+    this.rates = new Map<Pair, number>();
+    // this.rates = rates;
+  }
+
   public reduce(source: Expression, to: string): Money {
-    return source.reduce(to);
+    return source.reduce(this, to);
+  }
+
+  public rate(from: string, to: string) {
+    if (from === to) return 1;
+    return this.rates.get(new Pair(from, to));
+  }
+
+  public addRate(from: string, to: string, rate: number): void {
+    this.rates.set(new Pair(from, to), rate);
   }
 }
 
@@ -62,8 +80,27 @@ export class Sum implements Expression {
     this.augend = augend;
     this.addend = addend;
   }
-  reduce(to: string): Money {
+
+  public reduce(bank: Bank, to: string): Money {
     const amount = this.augend.amount + this.addend.amount;
     return new Money(amount, to);
+  }
+}
+
+export class Pair {
+  private from: string;
+  private to: string;
+
+  constructor(from: string, to: string) {
+    this.from = from;
+    this.to = to;
+  }
+
+  public equals(pair: Pair): boolean {
+    return this.from === pair.from && this.to === pair.to;
+  }
+
+  public hasCode(): number {
+    return 0;
   }
 }
