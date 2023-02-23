@@ -56,3 +56,14 @@ test("reduce money", () => {
   const result = bank.reduce(Money.doller(1), "USD");
   expect(result).toEqual(Money.doller(1));
 });
+
+test("reduce Money different Currency", () => {
+  const bank = new Bank();
+  bank.addRate("CHF", "USD", 2);
+  const result = bank.reduce(Money.franc(2), "USD");
+  expect(result).toEqual(Money.doller(1));
+});
+
+test("identy rate", () => {
+  expect(new Bank().rate("USD", "USD")).toBe(1);
+})
