@@ -8,18 +8,17 @@ export class Money implements Expression {
     this._currency = currency;
   }
 
-  public times(multiplier: number): Money {
+  public times(multiplier: number): Expression {
     return new Money(this._amount * multiplier, this._currency);
   }
 
-  public plus(addend: Money) {
+  public plus(addend: Money): Sum {
     return new Sum(this, addend);
   }
 
   public reduce(bank: Bank, to: string): Money {
     const rate = bank.rate(this._currency, to);
-    if (rate) return new Money(this._amount / rate, to);
-    return new Money(this._amount / 2, to); // TODO
+    return new Money(this._amount / rate, to);
   }
 
   get currency() {
@@ -30,8 +29,8 @@ export class Money implements Expression {
     return this._amount;
   }
 
-  public equals(object: Money): boolean {
-    return this._amount === object._amount && this.currency === object.currency;
+  public equals(money: Money): boolean {
+    return this._amount === money._amount && this.currency === money.currency;
   }
 
   public toString(): string {
@@ -48,59 +47,65 @@ export class Money implements Expression {
 }
 
 export interface Expression {
+  times(multiplier: number): Expression;
+  plus(addend: Expression): Expression;
   reduce(bank: Bank, to: string): Money;
 }
 
-export class Bank {
-  private rates: Map<Pair, number>;
+type Rate = {
+  pair: [string, string];
+  rate: number;
+};
 
-  constructor() {
-    this.rates = new Map<Pair, number>();
-    // this.rates = rates;
-  }
+export class Bank {
+  private rates: Rate | undefined;
 
   public reduce(source: Expression, to: string): Money {
     return source.reduce(this, to);
   }
 
-  public rate(from: string, to: string) {
+  public rate(from: string, to: string): number {
     if (from === to) return 1;
-    return this.rates.get(new Pair(from, to));
+    const rate = this.rates?.rate;
+    if (rate) return rate;
+    return 1; // if no setting
   }
 
   public addRate(from: string, to: string, rate: number): void {
-    this.rates.set(new Pair(from, to), rate);
+    this.rates = {
+      pair: [from, to],
+      rate: rate,
+    };
   }
 }
 
 export class Sum implements Expression {
-  augend: Money;
-  addend: Money;
-  constructor(augend: Money, addend: Money) {
-    this.augend = augend;
-    this.addend = addend;
+  private _augend: Expression;
+  private _addend: Expression;
+
+  constructor(augend: Expression, addend: Expression) {
+    this._augend = augend;
+    this._addend = addend;
+  }
+
+  public times(multiplier: number): Expression {
+    return new Sum(this._augend.times(multiplier), this._addend.times(multiplier));
+  }
+
+  public plus(addend: Expression): Expression {
+    return new Sum(this, addend);
   }
 
   public reduce(bank: Bank, to: string): Money {
-    const amount = this.augend.amount + this.addend.amount;
+    const amount = this._augend.reduce(bank, to).amount + this._addend.reduce(bank, to).amount;
     return new Money(amount, to);
   }
-}
 
-export class Pair {
-  private from: string;
-  private to: string;
-
-  constructor(from: string, to: string) {
-    this.from = from;
-    this.to = to;
+  get augend() {
+    return this._addend;
   }
 
-  public equals(pair: Pair): boolean {
-    return this.from === pair.from && this.to === pair.to;
-  }
-
-  public hasCode(): number {
-    return 0;
+  get addend() {
+    return this._addend;
   }
 }
