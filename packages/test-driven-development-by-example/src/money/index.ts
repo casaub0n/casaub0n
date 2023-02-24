@@ -64,13 +64,13 @@ export class Bank {
   }
 
   public rate(from: string, to: string): number {
-    const rate = this.rates.get(new Pair(from, to));
+    const rate = this.rates.get([from, to]);
     if (rate) return rate;
     return 1; // TODO
   }
 
   public addRate(from: string, to: string, rate: number): void {
-    this.rates.set(new Pair(from, to), rate);
+    this.rates.set([from, to], rate);
   }
 }
 
@@ -105,20 +105,4 @@ export class Sum implements Expression {
   }
 }
 
-export class Pair {
-  private from: string;
-  private to: string;
-
-  constructor(from: string, to: string) {
-    this.from = from;
-    this.to = to;
-  }
-
-  public equals(pair: Pair): boolean {
-    return this.from === pair.from && this.to === pair.to;
-  }
-
-  public hasCode(): number {
-    return 0;
-  }
-}
+type Pair = [string, string];
