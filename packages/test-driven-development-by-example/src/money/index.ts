@@ -8,18 +8,17 @@ export class Money implements Expression {
     this._currency = currency;
   }
 
-  public times(multiplier: number): Money {
+  public times(multiplier: number): Expression {
     return new Money(this._amount * multiplier, this._currency);
   }
 
-  public plus(addend: Money) {
+  public plus(addend: Money): Sum {
     return new Sum(this, addend);
   }
 
   public reduce(bank: Bank, to: string): Money {
     const rate = bank.rate(this._currency, to);
-    if (rate) return new Money(this._amount / rate, to);
-    return new Money(this._amount / 2, to); // TODO
+    return new Money(this._amount / rate, to);
   }
 
   get currency() {
@@ -30,8 +29,8 @@ export class Money implements Expression {
     return this._amount;
   }
 
-  public equals(object: Money): boolean {
-    return this._amount === object._amount && this.currency === object.currency;
+  public equals(money: Money): boolean {
+    return this._amount === money._amount && this.currency === money.currency;
   }
 
   public toString(): string {
@@ -48,6 +47,8 @@ export class Money implements Expression {
 }
 
 export interface Expression {
+  times(multiplier: number): Expression;
+  plus(addend: Expression): Expression;
   reduce(bank: Bank, to: string): Money;
 }
 
@@ -56,16 +57,16 @@ export class Bank {
 
   constructor() {
     this.rates = new Map<Pair, number>();
-    // this.rates = rates;
   }
 
   public reduce(source: Expression, to: string): Money {
     return source.reduce(this, to);
   }
 
-  public rate(from: string, to: string) {
-    if (from === to) return 1;
-    return this.rates.get(new Pair(from, to));
+  public rate(from: string, to: string): number {
+    const rate = this.rates.get(new Pair(from, to));
+    if (rate) return rate;
+    return 1; // TODO
   }
 
   public addRate(from: string, to: string, rate: number): void {
@@ -74,16 +75,33 @@ export class Bank {
 }
 
 export class Sum implements Expression {
-  augend: Money;
-  addend: Money;
-  constructor(augend: Money, addend: Money) {
-    this.augend = augend;
-    this.addend = addend;
+  private _augend: Expression;
+  private _addend: Expression;
+
+  constructor(augend: Expression, addend: Expression) {
+    this._augend = augend;
+    this._addend = addend;
+  }
+
+  public times(multiplier: number): Expression {
+    return new Sum(this._augend.times(multiplier), this._addend.times(multiplier));
+  }
+
+  public plus(addend: Expression): Expression {
+    return new Sum(this, addend);
   }
 
   public reduce(bank: Bank, to: string): Money {
-    const amount = this.augend.amount + this.addend.amount;
+    const amount = this._augend.reduce(bank, to).amount + this._addend.reduce(bank, to).amount;
     return new Money(amount, to);
+  }
+
+  get augend() {
+    return this._addend;
+  }
+
+  get addend() {
+    return this._addend;
   }
 }
 
