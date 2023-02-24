@@ -49,8 +49,7 @@ test("reduce Money different Currency", () => {
   const bank = new Bank();
   bank.addRate("CHF", "USD", 2);
   const result = bank.reduce(Money.franc(2), "USD");
-  // expect(result).toEqual(Money.doller(1)); // Money.doller(1) is collect
-  expect(result.amount).toBe(Money.doller(1).amount);
+  expect(result).toEqual(Money.doller(1));
 });
 
 test("identy rate", () => {
@@ -68,10 +67,20 @@ test("mixed addition", () => {
 
 test("sum plus money", () => {
   const fiveBucks = Money.doller(5);
-  const tenFrancs = Money.franc(5);
+  const tenFrancs = Money.franc(10);
   const bank = new Bank();
   bank.addRate("CHF", "USD", 2);
   const sum = new Sum(fiveBucks, tenFrancs).plus(fiveBucks);
   const result = bank.reduce(sum, "USD");
-  expect(result).toBe(Money.doller(15));
+  expect(result).toEqual(Money.doller(15));
+});
+
+test("sum times", () => {
+  const fiveBucks = Money.doller(5);
+  const tesFrancs = Money.franc(10);
+  const bank = new Bank();
+  bank.addRate("CHF", "USD", 2);
+  const sum = new Sum(fiveBucks, tesFrancs).times(2);
+  const result = bank.reduce(sum, "USD");
+  expect(result).toEqual(Money.doller(20));
 });

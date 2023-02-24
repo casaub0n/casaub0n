@@ -52,25 +52,30 @@ export interface Expression {
   reduce(bank: Bank, to: string): Money;
 }
 
-export class Bank {
-  private rates: Map<Pair, number>;
+type Rate = {
+  pair: [string, string];
+  rate: number;
+};
 
-  constructor() {
-    this.rates = new Map<Pair, number>();
-  }
+export class Bank {
+  private rates: Rate | undefined;
 
   public reduce(source: Expression, to: string): Money {
     return source.reduce(this, to);
   }
 
   public rate(from: string, to: string): number {
-    const rate = this.rates.get([from, to]);
+    if (from === to) return 1;
+    const rate = this.rates?.rate;
     if (rate) return rate;
-    return 1; // TODO
+    return 1; // if no setting
   }
 
   public addRate(from: string, to: string, rate: number): void {
-    this.rates.set([from, to], rate);
+    this.rates = {
+      pair: [from, to],
+      rate: rate,
+    };
   }
 }
 
@@ -104,5 +109,3 @@ export class Sum implements Expression {
     return this._addend;
   }
 }
-
-type Pair = [string, string];
