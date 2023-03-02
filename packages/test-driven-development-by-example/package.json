@@ -18,7 +18,7 @@
   },
   "scripts": {
     "test": "jest",
-    "rmdist": "node -e 'fs.rmSync(`dist`, {recursive:true, force:true})'",
+    "rmdist": "node -e \"fs.rmSync(`dist`, {recursive:true, force:true})\"",
     "prebuild": "yarn rmdist",
     "build": "tsup src/index.ts --format cjs --dts --env.TABLE_HEAD something",
     "start:parse-html": "yarn build && node dist/index.js"

@@ -14,7 +14,7 @@
     "node": ">=12"
   },
   "scripts": {
-    "rmdist": "node -e 'fs.rmSync(`dist`, {recursive:true, force:true})'",
+    "rmdist": "node -e \"fs.rmSync(`dist`, {recursive:true, force:true})\"",
     "build": "yarn rmdist && spack",
     "test": "jest"
   },
