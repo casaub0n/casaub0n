@@ -19,7 +19,8 @@ jobs:
     - name: Install dotfiles
       run: ${{matrix.script}}
 
-  publish:
+  Run-npm-on-Ubuntu:
+    name: Run npm on Ubuntu
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -54,3 +55,18 @@ jobs:
           CI: true
           TURBO_TOKEN: ${{ secrets.USERSCRIPT_TURBO_TOKEN }}
           TURBO_TEAM: ${{ secrets.USERSCRIPT_TURBO_TEAM }}
+
+  Run-PSScriptAnalyzer-on-Windows:
+    name: Run PSScriptAnalyzer on Windows
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install PSScriptAnalyzer module
+        shell: pwsh
+        run: |
+          Set-PSRepository PSGallery -InstallationPolicy Trusted
+          Install-Module PSScriptAnalyzer -ErrorAction Stop
+      - name: Get list of rules
+        shell: pwsh
+        run: |
+          Get-ScriptAnalyzerRule
