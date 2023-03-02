@@ -26,29 +26,22 @@ jobs:
       contents: read
       deployments: write
       statuses: write
-
-    name: Build userscript
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
-        # build process
       - name: set up node.js
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
           cache: yarn
-
       - name: yarn install
         run: yarn install
-
       - name: build
         run: yarn build
         env:
           CI: true
           TURBO_TOKEN: ${{ secrets.USERSCRIPT_TURBO_TOKEN }}
           TURBO_TEAM: ${{ secrets.USERSCRIPT_TURBO_TEAM }}
-
       - name: test
         run: yarn test
         env:
