@@ -18,7 +18,7 @@
   },
   "scripts": {
     "test": "echo hello",
-    "rmdist": "node -e \"fs.rmSync(`dist`, {recursive:true, force:true})\"",
+    "rmdist": "rimraf dist",
     "prebuild": "yarn rmdist",
     "build": "tsup src/index.ts --format cjs --dts --env.TABLE_HEAD something",
     "start:parse-html": "yarn build && node dist/index.js"
@@ -37,6 +37,7 @@
     "@types/jsdom": "^21.0.0",
     "@types/node": "^18.11.18",
     "eslint-config-custom": "*",
+    "rimraf": "^4.2.0",
     "tsup": "^6.5.0",
     "typescript": "^4.9.3"
   },
