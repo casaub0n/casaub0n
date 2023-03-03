@@ -19,38 +19,47 @@ jobs:
     - name: Install dotfiles
       run: ${{matrix.script}}
 
-  publish:
+  Run-npm-on-Ubuntu:
+    name: Run npm on Ubuntu
     runs-on: ubuntu-latest
     permissions:
       contents: read
       deployments: write
       statuses: write
-
-    name: Build userscript
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
-        # build process
       - name: set up node.js
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
           cache: yarn
-
       - name: yarn install
         run: yarn install
-
       - name: build
         run: yarn build
         env:
           CI: true
           TURBO_TOKEN: ${{ secrets.USERSCRIPT_TURBO_TOKEN }}
           TURBO_TEAM: ${{ secrets.USERSCRIPT_TURBO_TEAM }}
-
       - name: test
         run: yarn test
         env:
           CI: true
           TURBO_TOKEN: ${{ secrets.USERSCRIPT_TURBO_TOKEN }}
           TURBO_TEAM: ${{ secrets.USERSCRIPT_TURBO_TEAM }}
+
+  Run-PSScriptAnalyzer-on-Windows:
+    name: Run PSScriptAnalyzer on Windows
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install PSScriptAnalyzer module
+        shell: pwsh
+        run: |
+          Set-PSRepository PSGallery -InstallationPolicy Trusted
+          Install-Module PSScriptAnalyzer -ErrorAction Stop
+      - name: Get list of rules
+        shell: pwsh
+        run: |
+          Get-ScriptAnalyzerRule
