@@ -26,6 +26,10 @@
     "start:sp": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
+    },
+    "dev:me": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
     }
   },
   "globalDependencies": [".env"],
