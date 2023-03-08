@@ -1,6 +1,5 @@
 /** @type {import('jest').Config} */
 const config = {
-  preset: 'jest-puppeteer',
   moduleFileExtensions: ['js', 'ts'],
   transform: {
     '^.+\\.ts$': 'ts-jest',
