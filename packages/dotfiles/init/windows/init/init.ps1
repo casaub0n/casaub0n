@@ -27,6 +27,10 @@ New-item -Type SymbolicLink $HOME\.node-version -Value ..\.node-version
 scoop install starship
 New-Item -Type SymbolicLink $HOME\.config\starship.toml -Value ..\starship.toml
 
+# fzf
+scoop install fzf
+scoop install psFzf
+
 # install my profile
 $ProfileFilePath = Split-Path $PROFILE
 New-Item -ItemType Directory $ProfileFilePath
