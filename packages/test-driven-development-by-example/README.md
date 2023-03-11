@@ -10,6 +10,8 @@ Test Driven Development By Example has some issues, but that's still useful book
 
 Kent Beck shows the way to implement the code from his idea. Some implementation looks winding road, but test case is very clear.
 
+Currently we have more choice for TDD that is type system, integration test and maybe Model Checking.
+
 ## Circular Reference
 In money package, each modules uses Factory method, but it occurs the technical issue about circular reference.
 In addition, the actual error message is `TypeError: Class extends value undefined is not a constructor or null`

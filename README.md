@@ -2,6 +2,17 @@
 I live in Tokyo and I have my own business.
 [This repository](https://github.com/casaub0n/casaub0n) is collected my config files, userscript and some sandbox vaporware.
 
+## require
+- Git
+- Yarn
+- Node.js
+
+## environment
+From the beginning, this runs on Linux, but I try to works it on Windows.
+
+### attention
+connection to turbo daemon process failed on Windows: imformation👉 https://github.com/vercel/turbo/issues/2034
+
 ## Why do I use rimraf?
 As `Node.js >= v14.14.0`, it can replace rimraf with `node -e 'fs.rmSync(`dist`, {recursive:true, force:true})'`
 
