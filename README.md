@@ -8,7 +8,7 @@ I live in Tokyo and I have my own business.
 - Node.js
 
 ## environment
-From the beginning, this runs on Linux, but I try to works it on Windows.
+From the beginning, this runs on Linux, but I try to work it on Windows.
 
 ### attention
 connection to turbo daemon process failed on Windows: imformation👉 https://github.com/vercel/turbo/issues/2034
