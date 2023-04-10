@@ -17,7 +17,7 @@
     "node": ">=12"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "rmdist": "rimraf dist",
     "prebuild": "yarn rmdist",
     "build": "tsup src/index.ts --format cjs --dts --env.TABLE_HEAD something",
