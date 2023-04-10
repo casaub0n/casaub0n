@@ -15,7 +15,7 @@
   },
   "scripts": {
     "rmdist": "rimraf dist",
-    "build": "yarn rmdist && tsup src/index.ts",
+    "build": "yarn rmdist && tsup src/index.ts --format cjs",
     "test": "jest"
   },
   "files": [
@@ -39,6 +39,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@github/hotkey": "^2.0.1"
+    "@github/hotkey": "^2.0.1",
+    "hotkeys-js": "^3.10.1"
   }
 }
