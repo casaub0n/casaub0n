@@ -15,7 +15,7 @@
   },
   "scripts": {
     "rmdist": "rimraf dist",
-    "build": "yarn rmdist && tsup src/index.ts --format cjs",
+    "build": "pnpm rmdist && tsup src/index.ts --format cjs",
     "test": "jest"
   },
   "files": [

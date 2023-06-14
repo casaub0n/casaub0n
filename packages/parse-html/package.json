@@ -19,9 +19,9 @@
   "scripts": {
     "test": "echo hello",
     "rmdist": "rimraf dist",
-    "prebuild": "yarn rmdist",
+    "prebuild": "pnpm rmdist",
     "build": "tsup src/index.ts --format cjs --dts --env.TABLE_HEAD something",
-    "start:parse-html": "yarn build && node dist/index.js"
+    "start:parse-html": "pnpm build && node dist/index.js"
   },
   "files": [
     "dist"

@@ -19,8 +19,8 @@
   "scripts": {
     "test": "echo hello",
     "rmdist": "rimraf dist",
-    "build": "yarn rmdist && tsup src/index.ts --format cjs --dts",
-    "start:tsbox": "yarn build && node dist/index.js"
+    "build": "pnpm rmdist && tsup src/index.ts --format cjs --dts",
+    "start:tsbox": "pnpm build && node dist/index.js"
   },
   "files": [
     "dist"

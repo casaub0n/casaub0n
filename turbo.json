@@ -6,28 +6,12 @@
       "outputs": ["dist/**"]
     },
     "test": {
-      "outputs": [
-        "__report__/**"
-      ]
+      "outputs": ["__report__/**"]
     },
     "dev": {
-      "dependsOn": ["^build"],
-      "outputs": []
+      "cache": false
     },
-    "start:tsbox": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**"]
-    },
-    "start:parse-html": {
-      "dependsOn": ["^build"],
-      "env": ["TABLE_HEAD"],
-      "outputs": ["dist/**"]
-    },
-    "start:sp": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**"]
-    },
-    "dev:me": {
+    "start": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
     }

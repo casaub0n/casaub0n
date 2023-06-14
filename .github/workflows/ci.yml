@@ -9,15 +9,19 @@ jobs:
       fail-fast: false
       matrix:
         os: ["ubuntu-latest"]
-        script: ["./packages/dotfiles/init/linux/scripts/zsh.sh", "./packages/dotfiles/init/linux/scripts/tmux.sh"]
+        script:
+          [
+            "./packages/dotfiles/init/linux/scripts/zsh.sh",
+            "./packages/dotfiles/init/linux/scripts/tmux.sh",
+          ]
     runs-on: ${{ matrix.os }}
     timeout-minutes: 10
-    
-    steps:
-    - uses: actions/checkout@v3
 
-    - name: Install dotfiles
-      run: ${{matrix.script}}
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install dotfiles
+        run: ${{matrix.script}}
 
   Run-npm-on-Ubuntu:
     name: Run npm on Ubuntu
@@ -29,21 +33,24 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: set up node.js
-        uses: actions/setup-node@v3
+      - name: set up pnpm
+        uses: pnpm/action-setup@v2
         with:
-          node-version: 16.x
-          cache: yarn
-      - name: yarn install
-        run: yarn install
+          version: 8.6.2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18.16.0"
+          cache: "pnpm"
+      - name: pnpm install
+        run: pnpm install --frozen-lockfile
       - name: build
-        run: yarn build
+        run: pnpm build
         env:
           CI: true
           TURBO_TOKEN: ${{ secrets.USERSCRIPT_TURBO_TOKEN }}
           TURBO_TEAM: ${{ secrets.USERSCRIPT_TURBO_TEAM }}
       - name: test
-        run: yarn test
+        run: pnpm test
         env:
           CI: true
           TURBO_TOKEN: ${{ secrets.USERSCRIPT_TURBO_TOKEN }}
