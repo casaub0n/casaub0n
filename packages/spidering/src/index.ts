@@ -1,5 +1,5 @@
-import got from "got";
 import { JSDOM } from "jsdom";
+import fetch from "node-fetch";
 import type HTMLCollectionOf from "jsdom";
 import type Element from "jsdom";
 
@@ -106,49 +106,56 @@ export const makePureTitle = (
 };
 
 const init = async () => {
-  const data = await got.get("https://www.shin-bungeiza.com/schedule.html");
+  try {
+    // const data = await got.get("https://www.shin-bungeiza.com/schedule.html");
 
-  let imgList: string[] = [];
-  let honDateList: string[] = [];
-  let discriptionList: string[] = [];
-  let titleList: string[] = [];
+    let imgList: string[] = [];
+    let honDateList: string[] = [];
+    let discriptionList: string[] = [];
+    let titleList: string[] = [];
 
-  const dom = new JSDOM(data.body, {
-    runScripts: "dangerously",
-    resources: "usable",
-  });
-  const scheduleContentDom = dom.window.document.getElementsByClassName("schedule-content");
-  for (const element of scheduleContentDom) {
-    const h2collections = element.getElementsByTagName("h2");
-    const images = element.getElementsByTagName("img");
-    const schedulePrograms = element.getElementsByClassName("schedule-program");
-    for (const img of images) {
-      console.log(`https://www.shin-bungeiza.com${img.src}`);
-      imgList.push(`https://www.shin-bungeiza.com${img.src}`);
-    }
-    for (const h2 of h2collections) {
-      console.log(h2.textContent);
-      // TODO: convert h2.textContent to date type
-    }
-    for (const scheduleProgram of schedulePrograms) {
-      const titles = scheduleProgram.getElementsByTagName("p");
-      for (const title of titles) {
-        const honDateDom = title.getElementsByClassName("hon-date");
-        if (honDateDom.length > 0) {
-          for (const honDate of honDateDom) {
-            console.log(honDate.textContent);
-            makePureTitle(title, discriptionList, titleList, honDate, honDateList);
+    const response = await fetch("https://www.shin-bungeiza.com/schedule.html");
+    const body = await response.text();
+
+    const dom = new JSDOM(body, {
+      runScripts: "dangerously",
+      resources: "usable",
+    });
+    const scheduleContentDom = dom.window.document.getElementsByClassName("schedule-content");
+    for (const element of scheduleContentDom) {
+      const h2collections = element.getElementsByTagName("h2");
+      const images = element.getElementsByTagName("img");
+      const schedulePrograms = element.getElementsByClassName("schedule-program");
+      for (const img of images) {
+        console.log(`https://www.shin-bungeiza.com${img.src}`);
+        imgList.push(`https://www.shin-bungeiza.com${img.src}`);
+      }
+      for (const h2 of h2collections) {
+        console.log(h2.textContent);
+        // TODO: convert h2.textContent to date type
+      }
+      for (const scheduleProgram of schedulePrograms) {
+        const titles = scheduleProgram.getElementsByTagName("p");
+        for (const title of titles) {
+          const honDateDom = title.getElementsByClassName("hon-date");
+          if (honDateDom.length > 0) {
+            for (const honDate of honDateDom) {
+              console.log(honDate.textContent);
+              makePureTitle(title, discriptionList, titleList, honDate, honDateList);
+            }
+          } else {
+            makePureTitle(title, discriptionList, titleList);
           }
-        } else {
-          makePureTitle(title, discriptionList, titleList);
+        }
+        const timelist = scheduleProgram.getElementsByTagName("li");
+        for (const time of timelist) {
+          console.log(time.textContent);
         }
       }
-      const timelist = scheduleProgram.getElementsByTagName("li");
-      for (const time of timelist) {
-        console.log(time.textContent);
-      }
+      console.log("\n\n");
     }
-    console.log("\n\n");
+  } catch (error) {
+    console.error(error);
   }
 };
 
