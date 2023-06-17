@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
+  reactStrictMode: true,
+  images: {
+    loader: "cloudinary",
+    path: "https://res.cloudinary.com/dycpos4uc/image/upload",
   },
-}
+  output: "export",
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

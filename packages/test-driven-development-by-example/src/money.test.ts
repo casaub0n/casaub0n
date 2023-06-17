@@ -1,4 +1,4 @@
-import { Money, Bank, Sum, Expression } from "./money";
+import { Money, Bank, Sum } from "./money";
 
 test("multiplication", () => {
   const five = Money.doller(5);
