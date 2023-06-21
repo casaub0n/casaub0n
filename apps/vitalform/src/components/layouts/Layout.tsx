@@ -7,6 +7,8 @@ import { pageTitle } from "@/components/meta";
 import { Footer } from "@/components/organisms/footer";
 import { Header } from "@/components/organisms/header";
 
+import { getCssText } from "@/utils/stitches.config";
+
 type Layout = {
   children: ReactNode;
 };
@@ -17,6 +19,7 @@ export const Layout: FC<Layout> = ({ children }) => {
       <Head>
         <title>{pageTitle("トップページ")}</title>
         <meta key='robots' name='robots' content='all' />
+        <style id='stitches' dangerouslySetInnerHTML={{ __html: getCssText() }} />
       </Head>
       <body className={styles.container}>
         <Header />
