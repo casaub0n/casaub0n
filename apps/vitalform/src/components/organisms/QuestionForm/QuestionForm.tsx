@@ -36,7 +36,6 @@ export const QuestionForm: FC = () => {
     <FormRoot onSubmit={handleSubmit(onSubmit)}>
       <Controller
         name='email'
-        control={control}
         render={({ field, fieldState }) => (
           <FormField name='email'>
             <Flex css={{ alignItems: "baseline", justifyContent: "space-between" }}>
@@ -48,10 +47,10 @@ export const QuestionForm: FC = () => {
             </Form.Control>
           </FormField>
         )}
+        control={control}
       />
       <Controller
         name='question'
-        control={control}
         render={({ field, fieldState }) => (
           <FormField name='question'>
             <Flex css={{ alignItems: "baseline", justifyContent: "space-between" }}>
@@ -63,6 +62,7 @@ export const QuestionForm: FC = () => {
             </Form.Control>
           </FormField>
         )}
+        control={control}
       />
       <Form.Submit asChild>
         <Button css={{ marginTop: 10 }}>Post question</Button>

@@ -9,7 +9,7 @@ export const NavBar = memo(function BasicHeaderBase() {
   return (
     <aside className="navbar">
       <div className="container flex">
-        <Link passHref href="/" className={clsx(styles.logoImage)}>Home</Link>
+        <Link className={clsx(styles.logoImage)} href="/" passHref>Home</Link>
         <nav aria-label="メインナビゲーション">
           <ul>
             <li><a href="#services">Services</a></li>

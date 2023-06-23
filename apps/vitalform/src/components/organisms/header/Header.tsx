@@ -11,7 +11,7 @@ export const Header = memo(function BasicHeaderBase() {
       <div className={clsx(styles.container)}>
         <div className={clsx(styles.textContainer)}>
           <h1 className={clsx(styles.h1Large)}>A ONE HOUSING YOSHIDA</h1>
-          <Link href={"https://a-one-housing-smile.blogspot.com/p/blog-page.html"} passHref className={clsx(styles.btnOutlineLg)}>
+          <Link className={clsx(styles.btnOutlineLg)} href={"https://a-one-housing-smile.blogspot.com/p/blog-page.html"} passHref>
           blog
           </Link>
         </div>
