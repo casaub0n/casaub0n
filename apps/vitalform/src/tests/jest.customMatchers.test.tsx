@@ -133,14 +133,14 @@ describe("Atoms", () => {
   test("<label>(role=none)", () => {
     const { container } = render(
       <label>
-        <input type='checkbox' id='check' />
+        <input id='check' type='checkbox' />
         Test
       </label>,
     );
     const { container: htmlFor } = render(
       <>
         <label htmlFor='check'>Test</label>
-        <input type='checkbox' id='check' />
+        <input id='check' type='checkbox' />
       </>,
     );
     asserts(container);

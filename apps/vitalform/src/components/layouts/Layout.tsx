@@ -18,7 +18,7 @@ export const Layout: FC<Layout> = ({ children }) => {
     <html lang='ja'>
       <Head>
         <title>{pageTitle("トップページ")}</title>
-        <meta key='robots' name='robots' content='all' />
+        <meta name='robots' content='all' key='robots' />
         <style id='stitches' dangerouslySetInnerHTML={{ __html: getCssText() }} />
       </Head>
       <body className={styles.container}>

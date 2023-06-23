@@ -21,15 +21,15 @@ export const EmptyRoom: FC<Props> = ({ className }) => {
       <div className={clsx(className, styles.hero_columns, styles.switcher)} data-direction='rev'>
         <div className={styles.flow}>
           <Image
-            alt='sakura building living room'
-            loader={cloudinaryLoader("v1665804278")}
-            src='/sakura-building-livingroom.jpg'
-            width={480}
-            height={640}
             style={{
               maxWidth: "100%",
               height: "auto",
             }}
+            alt='sakura building living room'
+            height={640}
+            loader={cloudinaryLoader("v1665804278")}
+            src='/sakura-building-livingroom.jpg'
+            width={480}
           />
         </div>
         <div>
