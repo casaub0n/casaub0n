@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { blackA, violet, mauve } from "@radix-ui/colors";
 import * as Form from "@radix-ui/react-form";
 import { styled } from "@stitches/react";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
 
 import type { SubmitHandler } from "react-hook-form";
@@ -23,41 +23,47 @@ const FormSchema = z.object({
 export type IForm = z.infer<typeof FormSchema>;
 
 export const QuestionForm: FC = () => {
-  const {
-    register,
-    formState: { errors },
-    handleSubmit,
-  } = useForm<IForm>({
+  const { control, handleSubmit } = useForm<IForm>({
     mode: "onChange",
     resolver: zodResolver(FormSchema),
   });
 
   const onSubmit: SubmitHandler<IForm> = async () => {
-    await fetch(`https://example.com`, {
-      method: "PUT",
-    });
+    console.log("hello");
   };
 
   return (
     <FormRoot onSubmit={handleSubmit(onSubmit)}>
-      <FormField name='email'>
-        <Flex css={{ alignItems: "baseline", justifyContent: "space-between" }}>
-          <FormLabel {...register("email")}>Email</FormLabel>
-          <FormMessage>{errors.email?.message}</FormMessage>
-        </Flex>
-        <Form.Control asChild>
-          <Input type='email' required />
-        </Form.Control>
-      </FormField>
-      <FormField name='question'>
-        <Flex css={{ alignItems: "baseline", justifyContent: "space-between" }}>
-          <FormLabel>Question</FormLabel>
-          <FormMessage match='valueMissing'>Please enter a question</FormMessage>
-        </Flex>
-        <Form.Control asChild>
-          <Textarea required />
-        </Form.Control>
-      </FormField>
+      <Controller
+        name='email'
+        control={control}
+        render={({ field, fieldState }) => (
+          <FormField name='email'>
+            <Flex css={{ alignItems: "baseline", justifyContent: "space-between" }}>
+              <FormLabel>Email</FormLabel>
+              {fieldState.error?.message && <FormMessage>{fieldState.error?.message}</FormMessage>}
+            </Flex>
+            <Form.Control asChild>
+              <Input {...field} type='email' required />
+            </Form.Control>
+          </FormField>
+        )}
+      />
+      <Controller
+        name='question'
+        control={control}
+        render={({ field, fieldState }) => (
+          <FormField name='question'>
+            <Flex css={{ alignItems: "baseline", justifyContent: "space-between" }}>
+              <FormLabel>Question</FormLabel>
+              {fieldState.error?.message && <FormMessage>{fieldState.error?.message}</FormMessage>}
+            </Flex>
+            <Form.Control asChild>
+              <Textarea {...field} required />
+            </Form.Control>
+          </FormField>
+        )}
+      />
       <Form.Submit asChild>
         <Button css={{ marginTop: 10 }}>Post question</Button>
       </Form.Submit>
@@ -78,12 +84,12 @@ const FormLabel = styled(Form.Label, {
   fontSize: 15,
   fontWeight: 500,
   lineHeight: "35px",
-  color: "white",
+  color: "black",
 });
 
 const FormMessage = styled(Form.Message, {
   fontSize: 13,
-  color: "white",
+  color: "red",
   opacity: 0.8,
 });
 

@@ -14,4 +14,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   name: "Default QuestionForm",
   tags: ["navbar"],
+  parameters: {
+    describe: "form by using Radix UI",
+  },
 };
