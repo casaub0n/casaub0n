@@ -1,3 +1,26 @@
+const { FlatCompat } = require("@eslint/eslintrc");
+const ts = require("@typescript-eslint/eslint-plugin");
+const prettier = require("eslint-config-prettier");
+
+const compat = new FlatCompat();
+
+// https://www.sunapro.com/eslint-flat-config/#index_id2
+const newEslint = [
+  ...compat.extends("next/core-web-vitals"),
+  {
+    rules: {
+      ...prettier,
+    },
+    plugin: {
+      "@typescript-eslint": ts,
+    },
+    rules: {
+      ...ts.configs["recommended"].rules,
+      ...ts.configs["eslint-recommended"].rules,
+    },
+  },
+];
+
 const eslintConfig = {
   // https://github.com/storybookjs/eslint-plugin-storybook
   extends: ["next/core-web-vitals", "turbo", "prettier", "plugin:storybook/recommended"],
