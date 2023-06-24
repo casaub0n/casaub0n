@@ -5,8 +5,15 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
     },
+    "build:sb": {
+      "dependsOn": ["test:generate-output"],
+      "outputs": ["storybook-static/**"]
+    },
     "test": {
       "outputs": ["__report__/**"]
+    },
+    "test:generate-output": {
+      "outputs": [".jest-test-results.json"]
     },
     "dev": {
       "cache": false,

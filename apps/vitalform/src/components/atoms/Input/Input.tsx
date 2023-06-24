@@ -4,6 +4,7 @@ import { blackA } from "@radix-ui/colors";
 import { styled } from "@stitches/react";
 import clsx from "clsx";
 
+/*#__NO_SIDE_EFFECTS__*/
 const inputStyles = {
   all: "unset",
   boxSizing: "border-box",
@@ -22,6 +23,7 @@ const inputStyles = {
   "&::selection": { backgroundColor: blackA.blackA9, color: "white" },
 };
 
+/*#__NO_SIDE_EFFECTS__*/
 const StyledInput = styled("input", {
   ...inputStyles,
   height: 35,
@@ -29,6 +31,7 @@ const StyledInput = styled("input", {
   padding: "0 10px",
 });
 
+/*#__NO_SIDE_EFFECTS__*/
 export const Input = forwardRef<HTMLInputElement, ComponentPropsWithoutRef<"input">>(
   function InputBase({ className, ...props }, ref) {
     return <StyledInput type='email' {...props} className={clsx(className)} ref={ref} />;

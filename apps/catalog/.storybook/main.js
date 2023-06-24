@@ -16,6 +16,7 @@ const config = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/addon-docs",
+    "@storybook/addon-jest",
   ],
   framework: "@storybook/nextjs",
   core: {
