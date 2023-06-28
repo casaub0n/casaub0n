@@ -1,8 +1,15 @@
 const { FlatCompat } = require("@eslint/eslintrc");
 const ts = require("@typescript-eslint/eslint-plugin");
 const prettier = require("eslint-config-prettier");
+const { turbo } = require("eslint-config-turbo");
 
 const compat = new FlatCompat();
+
+const turboConf = {
+  rules: {
+    ...turbo.configs["recommended"].rules,
+  },
+};
 
 // https://www.sunapro.com/eslint-flat-config/#index_id2
 const newEslint = [
