@@ -12,16 +12,25 @@ import type { SubmitHandler } from "react-hook-form";
 // see https://github.com/casaub0n/blogr-nextjs-prisma/blob/master/src/components/simpleForm/index.tsx
 // https://www.radix-ui.com/docs/primitives/components/form#message
 
-const FormSchema = z.object({
+/**
+ * @see https://github.com/colinhacks/zod/issues/63#issuecomment-1429974422
+ * @todo try testing
+ */
+export const FormSchema = z.object({
   email: z
     .string()
-    .nonempty({ message: "Please enter your email" })
+    .trim()
+    .min(1, { message: "Please enter your email" })
     .email({ message: "Please provide a valid email" }),
-  question: z.string().nonempty({ message: "Please enter a question" }),
+  question: z.string().trim().min(1, { message: "Please enter a question" }),
 });
 
 export type IForm = z.infer<typeof FormSchema>;
 
+/**
+ * @description currently, this form doesn't send any message to saver
+ * @returns Question form component
+ */
 export const QuestionForm: FC = () => {
   const { control, handleSubmit } = useForm<IForm>({
     mode: "onChange",
