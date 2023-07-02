@@ -55,7 +55,7 @@ export const QuestionForm: FC<Props> = ({ className, ...props }) => {
               {fieldState.error?.message && <FormMessage>{fieldState.error?.message}</FormMessage>}
             </Flex>
             <Form.Control asChild>
-              <Input {...field} type='email' required />
+              <Input {...field} name='email' className='emailbox' type='email' required />
             </Form.Control>
           </FormField>
         )}
@@ -67,7 +67,9 @@ export const QuestionForm: FC<Props> = ({ className, ...props }) => {
           <FormField name='question'>
             <Flex css={{ alignItems: "baseline", justifyContent: "space-between" }}>
               <FormLabel>Question</FormLabel>
-              {fieldState.error?.message && <FormMessage>{fieldState.error?.message}</FormMessage>}
+              {fieldState.error?.message && (
+                <FormMessage name='emailerr'>{fieldState.error?.message}</FormMessage>
+              )}
             </Flex>
             <Form.Control asChild>
               <Textarea {...field} required />

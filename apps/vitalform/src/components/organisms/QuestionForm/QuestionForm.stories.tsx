@@ -17,6 +17,7 @@ export const Default: Story = {
   name: "Default QuestionForm",
   tags: ["navbar"],
   args: {
+    title: "Enter your question",
     "aria-labelledby": "quizeTitle",
   },
   parameters: {

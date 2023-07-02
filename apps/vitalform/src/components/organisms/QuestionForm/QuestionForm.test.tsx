@@ -10,5 +10,14 @@ describe("src/components/organisms/QuestionForm/QuestionForm.test.tsx", () => {
     const { container } = render(<Default />);
     expect(container).toBeOrganism();
   });
-  test.todo("show the error message for empty");
+  // test("show error message when submit the empty value", async () => {
+  //   const { container, getByRole } = render(<EmptyName />);
+  //   await EmptyName.play({ canvasElement: container });
+  //   await waitFor(() => {
+  //     expect(getByRole("emailbox", { name: "email" })).toHaveErrorMessage(
+  //       "Please enter your email",
+  //     );
+  //   });
+  // });
+  test.todo("show error message when submit the empty value");
 });
