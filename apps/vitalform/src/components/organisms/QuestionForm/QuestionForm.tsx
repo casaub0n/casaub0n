@@ -1,9 +1,10 @@
-import type { FC } from "react";
+import type { ComponentPropsWithoutRef, FC } from "react";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { blackA, violet, mauve } from "@radix-ui/colors";
 import * as Form from "@radix-ui/react-form";
 import { styled } from "@stitches/react";
+import clsx from "clsx";
 import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -27,11 +28,13 @@ export const FormSchema = z.object({
 
 export type IForm = z.infer<typeof FormSchema>;
 
+type Props = ComponentPropsWithoutRef<"form">;
+
 /**
  * @description currently, this form doesn't send any message to saver
  * @returns Question form component
  */
-export const QuestionForm: FC = () => {
+export const QuestionForm: FC<Props> = ({ className, ...props }) => {
   const { control, handleSubmit } = useForm<IForm>({
     mode: "onChange",
     resolver: zodResolver(FormSchema),
@@ -42,7 +45,7 @@ export const QuestionForm: FC = () => {
   };
 
   return (
-    <FormRoot onSubmit={handleSubmit(onSubmit)}>
+    <FormRoot className={clsx(className)} onSubmit={handleSubmit(onSubmit)} {...props}>
       <Controller
         name='email'
         render={({ field, fieldState }) => (
