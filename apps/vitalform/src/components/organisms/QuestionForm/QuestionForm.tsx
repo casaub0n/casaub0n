@@ -1,4 +1,4 @@
-import type { ComponentPropsWithoutRef, FC } from "react";
+import { useId, type ComponentPropsWithoutRef, type FC } from "react";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { blackA, violet, mauve } from "@radix-ui/colors";
@@ -35,6 +35,8 @@ type Props = ComponentPropsWithoutRef<"form">;
  * @returns Question form component
  */
 export const QuestionForm: FC<Props> = ({ className, ...props }) => {
+  const errorMessageId = useId();
+
   const { control, handleSubmit } = useForm<IForm>({
     mode: "onChange",
     resolver: zodResolver(FormSchema),
@@ -48,14 +50,21 @@ export const QuestionForm: FC<Props> = ({ className, ...props }) => {
     <FormRoot className={clsx(className)} onSubmit={handleSubmit(onSubmit)} {...props}>
       <Controller
         name='email'
-        render={({ field, fieldState }) => (
+        render={({ field, fieldState: { error } }) => (
           <FormField name='email'>
             <Flex css={{ alignItems: "baseline", justifyContent: "space-between" }}>
               <FormLabel>Email</FormLabel>
-              {fieldState.error?.message && <FormMessage>{fieldState.error?.message}</FormMessage>}
+              {error?.message && <FormMessage id={errorMessageId}>{error?.message}</FormMessage>}
             </Flex>
             <Form.Control asChild>
-              <Input {...field} name='email' className='emailbox' type='email' required />
+              <Input
+                {...field}
+                aria-errormessage={errorMessageId}
+                aria-invalid={!!error}
+                aria-label='email'
+                type='email'
+                required
+              />
             </Form.Control>
           </FormField>
         )}
@@ -63,16 +72,14 @@ export const QuestionForm: FC<Props> = ({ className, ...props }) => {
       />
       <Controller
         name='question'
-        render={({ field, fieldState }) => (
+        render={({ field, fieldState: { error } }) => (
           <FormField name='question'>
             <Flex css={{ alignItems: "baseline", justifyContent: "space-between" }}>
               <FormLabel>Question</FormLabel>
-              {fieldState.error?.message && (
-                <FormMessage name='emailerr'>{fieldState.error?.message}</FormMessage>
-              )}
+              {error?.message && <FormMessage name='emailerr'>{error?.message}</FormMessage>}
             </Flex>
             <Form.Control asChild>
-              <Textarea {...field} required />
+              <Textarea {...field} aria-invalid={!!error} aria-label='question' required />
             </Form.Control>
           </FormField>
         )}
