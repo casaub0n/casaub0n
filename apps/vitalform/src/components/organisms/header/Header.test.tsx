@@ -11,7 +11,7 @@ describe("src/components/organisms/header/Header.test.tsx", () => {
     expect(container).toBeOrganism();
   });
   test("[role=banner]", () => {
-    const { getByRole } = render(<Default />)
+    const { getByRole } = render(<Default />);
     expect(getByRole("banner")).toBeInTheDocument();
-  })
+  });
 });

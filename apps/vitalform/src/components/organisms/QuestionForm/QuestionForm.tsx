@@ -1,9 +1,10 @@
-import type { FC } from "react";
+import { useId, type ComponentPropsWithoutRef, type FC } from "react";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { blackA, violet, mauve } from "@radix-ui/colors";
 import * as Form from "@radix-ui/react-form";
 import { styled } from "@stitches/react";
+import clsx from "clsx";
 import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -12,17 +13,30 @@ import type { SubmitHandler } from "react-hook-form";
 // see https://github.com/casaub0n/blogr-nextjs-prisma/blob/master/src/components/simpleForm/index.tsx
 // https://www.radix-ui.com/docs/primitives/components/form#message
 
-const FormSchema = z.object({
+/**
+ * @see https://github.com/colinhacks/zod/issues/63#issuecomment-1429974422
+ * @todo try testing
+ */
+export const FormSchema = z.object({
   email: z
     .string()
-    .nonempty({ message: "Please enter your email" })
+    .trim()
+    .min(1, { message: "Please enter your email" })
     .email({ message: "Please provide a valid email" }),
-  question: z.string().nonempty({ message: "Please enter a question" }),
+  question: z.string().trim().min(1, { message: "Please enter a question" }),
 });
 
 export type IForm = z.infer<typeof FormSchema>;
 
-export const QuestionForm: FC = () => {
+type Props = ComponentPropsWithoutRef<"form">;
+
+/**
+ * @description currently, this form doesn't send any message to saver
+ * @returns Question form component
+ */
+export const QuestionForm: FC<Props> = ({ className, ...props }) => {
+  const errorMessageId = useId();
+
   const { control, handleSubmit } = useForm<IForm>({
     mode: "onChange",
     resolver: zodResolver(FormSchema),
@@ -33,17 +47,24 @@ export const QuestionForm: FC = () => {
   };
 
   return (
-    <FormRoot onSubmit={handleSubmit(onSubmit)}>
+    <FormRoot className={clsx(className)} onSubmit={handleSubmit(onSubmit)} {...props}>
       <Controller
         name='email'
-        render={({ field, fieldState }) => (
+        render={({ field, fieldState: { error } }) => (
           <FormField name='email'>
             <Flex css={{ alignItems: "baseline", justifyContent: "space-between" }}>
               <FormLabel>Email</FormLabel>
-              {fieldState.error?.message && <FormMessage>{fieldState.error?.message}</FormMessage>}
+              {error?.message && <FormMessage id={errorMessageId}>{error?.message}</FormMessage>}
             </Flex>
             <Form.Control asChild>
-              <Input {...field} type='email' required />
+              <Input
+                {...field}
+                aria-errormessage={errorMessageId}
+                aria-invalid={!!error}
+                aria-label='email'
+                type='email'
+                required
+              />
             </Form.Control>
           </FormField>
         )}
@@ -51,14 +72,14 @@ export const QuestionForm: FC = () => {
       />
       <Controller
         name='question'
-        render={({ field, fieldState }) => (
+        render={({ field, fieldState: { error } }) => (
           <FormField name='question'>
             <Flex css={{ alignItems: "baseline", justifyContent: "space-between" }}>
               <FormLabel>Question</FormLabel>
-              {fieldState.error?.message && <FormMessage>{fieldState.error?.message}</FormMessage>}
+              {error?.message && <FormMessage name='emailerr'>{error?.message}</FormMessage>}
             </Flex>
             <Form.Control asChild>
-              <Textarea {...field} required />
+              <Textarea {...field} aria-invalid={!!error} aria-label='question' required />
             </Form.Control>
           </FormField>
         )}

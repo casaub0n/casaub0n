@@ -108,6 +108,9 @@ importers:
       '@storybook/react':
         specifier: 7.0.24
         version: 7.0.24(react-dom@18.2.0)(react@18.2.0)(typescript@5.1.6)
+      '@storybook/testing-library':
+        specifier: ^0.2.0
+        version: 0.2.0
       '@storybook/testing-react':
         specifier: ^2.0.1
         version: 2.0.1(@storybook/client-logger@7.0.24)(@storybook/preview-api@7.0.24)(@storybook/react@7.0.24)(@storybook/types@7.0.24)(react@18.2.0)
@@ -132,6 +135,9 @@ importers:
       '@types/react-dom':
         specifier: 18.2.6
         version: 18.2.6
+      '@types/testing-library__jest-dom':
+        specifier: ^5.14.6
+        version: 5.14.6
       eslint-config-custom:
         specifier: '*'
         version: link:../../packages/eslint-config-custom
@@ -5459,6 +5465,14 @@ packages:
     transitivePeerDependencies:
       - encoding
       - supports-color
+    dev: true
+
+  /@storybook/testing-library@0.2.0:
+    resolution: {integrity: sha512-Ff6jNnrsosmDshgCf0Eb5Cz7IA34p/1Ps5N3Kp3598kfXpBSccSkQQvVFUXC3kIHw/isIXWPqntZuKqnWUz7Gw==}
+    dependencies:
+      '@testing-library/dom': 9.3.1
+      '@testing-library/user-event': 14.4.3(@testing-library/dom@9.3.1)
+      ts-dedent: 2.2.0
     dev: true
 
   /@storybook/testing-react@2.0.1(@storybook/client-logger@7.0.24)(@storybook/preview-api@7.0.24)(@storybook/react@7.0.24)(@storybook/types@7.0.24)(react@18.2.0):
