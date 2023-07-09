@@ -5,7 +5,7 @@ import { PandaForm } from "./PandaForm";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-  title: "organisms/question form",
+  title: "organisms/panda question form",
   component: PandaForm,
 } satisfies Meta<typeof PandaForm>;
 
@@ -15,9 +15,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   name: "Default QuestionForm",
-  tags: ["navbar"],
   args: {
-    title: "Enter your question",
+    // title: "Enter your question",
     "aria-labelledby": "quizeTitle",
   },
   parameters: {

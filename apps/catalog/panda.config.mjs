@@ -5,10 +5,7 @@ export default defineConfig({
   preflight: true,
 
   // Where to look for your css declarations
-  include: [
-    "./src/components/**/*.{js,jsx,ts,tsx,stories.tsx}",
-    "./src/app/**/*.{js,jsx,ts,tsx,stories.tsx}",
-  ],
+  include: ["../../vitalform/src/**/*.{js,jsx,ts,tsx,stories.tsx}"],
 
   // Files to exclude
   exclude: [],

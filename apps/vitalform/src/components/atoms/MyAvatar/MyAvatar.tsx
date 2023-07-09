@@ -1,3 +1,4 @@
+"use client";
 import type { ComponentPropsWithoutRef, FC } from "react";
 
 import { blackA, violet } from "@radix-ui/colors";
@@ -5,11 +6,11 @@ import * as AvatarPrimitive from "@radix-ui/react-avatar";
 
 import { css } from "../../../../styled-system/css";
 
-type Props = ComponentPropsWithoutRef<"section">;
+type Props = ComponentPropsWithoutRef<"div">;
 
 export const MyAvatar: FC<Props> = ({ className, ...props }) => {
   return (
-    <div className={css({ display: "flex" })}>
+    <div className={css({ display: "flex" })} {...props}>
       <AvatarPrimitive.Root
         className={css({
           display: "inline-flex",

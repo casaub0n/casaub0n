@@ -15,7 +15,7 @@ import type { SubmitHandler } from "react-hook-form";
 
 /**
  * @see https://github.com/colinhacks/zod/issues/63#issuecomment-1429974422
- * @todo try testing
+ * @todo use pandacss
  */
 export const FormSchema = z.object({
   email: z
