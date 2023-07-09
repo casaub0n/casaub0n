@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "prepare": "panda codegen",
+    "dev": "rimraf .next && next dev",
     "build": "next build",
     "start": "serve out",
     "test": "jest --coverage",
@@ -13,6 +14,8 @@
   "dependencies": {
     "@hookform/resolvers": "^3.1.1",
     "@radix-ui/colors": "^1.0.0",
+    "@radix-ui/react-aspect-ratio": "^1.0.3",
+    "@radix-ui/react-avatar": "^1.0.3",
     "@radix-ui/react-form": "^0.0.3",
     "@stitches/react": "^1.2.8",
     "clsx": "1.2.1",
@@ -21,6 +24,7 @@
     "zod": "^3.20.2"
   },
   "devDependencies": {
+    "@pandacss/dev": "^0.5.1",
     "@storybook/react": "7.0.26",
     "@storybook/testing-library": "^0.2.0",
     "@storybook/testing-react": "^2.0.1",
@@ -39,6 +43,7 @@
     "prettier": "^3.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "rimraf": "^5.0.0",
     "serve": "14.2.0",
     "typescript": "5.1.6"
   }

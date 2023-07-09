@@ -1,3 +1,12 @@
-import { Top } from "@/components/templates/Top";
+"use client";
+import { MyAvatar } from "@/components/atoms/MyAvatar";
 
-export default Top;
+import { css } from "../../styled-system/css";
+
+export default function Home() {
+  return (
+    <div className={css({ fontSize: "2xl", fontWeight: "bold" })}>
+      <MyAvatar />
+    </div>
+  );
+}

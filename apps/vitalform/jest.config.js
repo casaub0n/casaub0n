@@ -10,6 +10,8 @@ const customJestConfig = {
   // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   // if using TypeScript with a baseUrl set to the root directory then you need the below for alias' to work
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js", "<rootDir>/src/tests/jest.customMatchers.ts"],
+  moduleNameMapper: { "^@/(.*)$": "<rootDir>/src/$1" },
+  testMatch: ["**/?(*.)+(test).[jt]s?(x)"],
   moduleDirectories: ["node_modules", "<rootDir>/"],
   testEnvironment: "jest-environment-jsdom",
   reporters: [
@@ -22,6 +24,7 @@ const customJestConfig = {
       },
     ],
   ],
+  coveragePathIgnorePatterns: ["<rootDir>/styled-system/"],
 };
 
 module.exports = createJestConfig(customJestConfig);

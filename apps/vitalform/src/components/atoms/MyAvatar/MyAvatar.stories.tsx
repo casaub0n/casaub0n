@@ -1,26 +1,23 @@
-import { Top } from "./Top";
+import { MyAvatar } from "./MyAvatar";
 
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-  title: "templates/Top",
-  component: Top,
+  title: "atoms/MyAvatar",
+  component: MyAvatar,
   parameters: {
     docs: {
       description: {
-        component: "exactly top page",
+        component: "Avatar",
       },
     },
   },
-} satisfies Meta<typeof Top>;
+} satisfies Meta<typeof MyAvatar>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  name: "Default Top",
-  args: {
-    panda: "top",
-  },
+  name: "default my avatar",
 };
