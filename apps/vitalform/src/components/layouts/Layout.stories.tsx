@@ -1,3 +1,4 @@
+import { Layout } from "./Layout";
 
 import type { Meta, StoryObj } from "@storybook/react";
 
@@ -27,6 +28,7 @@ const rElement = (
 export const Default: Story = {
   name: "layout for Next.js",
   args: {
+    className: "layout",
     children: rElement,
   },
 };
