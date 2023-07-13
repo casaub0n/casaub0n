@@ -4,6 +4,7 @@
  * @type {import('eslint').Rule.RuleModule}
  */
 const eslintConfig = {
+  // @ts-ignore
   root: true,
   // This tells ESLint to load the config from the package `eslint-config-custom`
   extends: ["custom"],
@@ -14,4 +15,4 @@ const eslintConfig = {
   },
 };
 
-module.exports = eslintConfig
+module.exports = eslintConfig;
