@@ -13,6 +13,14 @@ const config = {
   ],
   addons: [
     "@storybook/addon-links",
+    {
+      name: "@storybook/addon-styling",
+      options: {
+        postCss: {
+          implementation: require("postcss"),
+        },
+      },
+    },
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/addon-docs",
