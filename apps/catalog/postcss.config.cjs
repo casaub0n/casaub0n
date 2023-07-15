@@ -1,6 +1,17 @@
+const postcssConfig = require("../vitalform/postcss.config.cjs");
+const usePlugins = {};
+
+// NOTE: Using Next.js postcss config
+// Convert a plugins format for postcss-loader.
+postcssConfig.plugins.forEach((plugin) => {
+  // Has options?
+  if (Array.isArray(plugin) && plugin.length === 2) {
+    usePlugins[plugin[0]] = plugin[1];
+  } else {
+    usePlugins[plugin] = {};
+  }
+});
+
 module.exports = {
-  plugins: {
-    plugins: [require("@pandacss/dev/postcss")],
-    // '@pandacss/dev/postcss': {},
-  },
+  plugins: usePlugins,
 };
