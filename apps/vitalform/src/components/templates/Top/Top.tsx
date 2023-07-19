@@ -1,23 +1,19 @@
-import type { FC } from "react";
+import type { ComponentPropsWithoutRef, FC } from "react";
 
 import clsx from "clsx";
-import Head from "next/head";
 
-import { pageTitle } from "@/components/meta";
-import { Main } from "@/components/molecules/main";
-import styles from "@/components/templates/Top/styles.module.css";
+import { MyAvatar } from "@/components/atoms/MyAvatar";
 
-type Props = {
-  panda: string;
-};
+import { grid, gridItem } from "../../../../styled-system/patterns";
 
-export const Top: FC<Props> = ({ panda }) => {
+type Props = ComponentPropsWithoutRef<"main">;
+
+export const Top: FC<Props> = ({ className, ...props }) => {
   return (
-    <main className={clsx(panda, styles.component)}>
-      <Head>
-        <title>{pageTitle("トップページ")}</title>
-      </Head>
-      <Main />
+    <main className={clsx(className, grid({ columns: 3, gap: 0 }))} {...props}>
+      <section className={clsx(gridItem({ colSpan: 2 }))}>
+        <MyAvatar />
+      </section>
     </main>
   );
 };

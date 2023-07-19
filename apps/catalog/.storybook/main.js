@@ -25,6 +25,7 @@ const config = {
     "@storybook/addon-interactions",
     "@storybook/addon-docs",
   ],
+  staticDirs: ["../../vitalform/public"],
   framework: "@storybook/nextjs",
   core: {
     disableTelemetry: true,

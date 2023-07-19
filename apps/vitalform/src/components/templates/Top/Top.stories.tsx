@@ -20,7 +20,4 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   name: "Default Top",
-  args: {
-    panda: "top",
-  },
 };
