@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "license": "UNLICENSED",
   "scripts": {
+    "prepare": "panda codegen",
     "storybook": "storybook dev -p 6006",
-    "build": "storybook build",
+    "build": "pnpm prepare && storybook build",
     "start": "serve storybook-static"
   },
   "devDependencies": {
