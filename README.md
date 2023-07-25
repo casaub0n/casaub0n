@@ -40,3 +40,5 @@ As they say, 'live and learn.'
 ## storybook
 
 [storybook GitHub pages](https://casaub0n.github.io/casaub0n/)
+
+[README](./apps/catalog/README.md)
