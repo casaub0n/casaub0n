@@ -4,10 +4,15 @@ import type { ComponentPropsWithoutRef, FC } from "react";
 import { blackA, violet } from "@radix-ui/colors";
 import * as AvatarPrimitive from "@radix-ui/react-avatar";
 import clsx from "clsx";
+import Image from "next/image";
 
 import { css } from "../../../../styled-system/css";
 
 type Props = ComponentPropsWithoutRef<"div">;
+
+export const MyImage = () => (
+  <Image alt='my picture' height={144} src='/images/me.jpg' width={144} />
+);
 
 export const MyAvatar: FC<Props> = ({ className, ...props }) => {
   return (
