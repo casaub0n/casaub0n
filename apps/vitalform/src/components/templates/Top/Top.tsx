@@ -4,14 +4,14 @@ import clsx from "clsx";
 
 import { MyAvatar } from "@/components/atoms/MyAvatar";
 
-import { grid, gridItem } from "../../../../styled-system/patterns";
+import { css } from "../../../../styled-system/css";
 
 type Props = ComponentPropsWithoutRef<"main">;
 
 export const Top: FC<Props> = ({ className, ...props }) => {
   return (
-    <main className={clsx(className, grid({ columns: 3, gap: 0 }))} {...props}>
-      <section className={clsx(gridItem({ colSpan: 2 }))}>
+    <main className={clsx(className)} {...props}>
+      <section className={clsx(css({ display: "grid", placeItems: "center", padding: "20" }))}>
         <MyAvatar />
       </section>
     </main>
