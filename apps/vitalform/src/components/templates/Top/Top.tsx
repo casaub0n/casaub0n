@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 import { MyAvatar } from "@/components/atoms/MyAvatar";
 
-import { css } from "../../../../styled-system/css";
+import css from "@/utils/pandaLoader";
 
 type Props = ComponentPropsWithoutRef<"main">;
 

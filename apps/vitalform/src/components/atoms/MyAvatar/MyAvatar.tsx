@@ -6,7 +6,7 @@ import * as AvatarPrimitive from "@radix-ui/react-avatar";
 import clsx from "clsx";
 import Image from "next/image";
 
-import { css } from "../../../../styled-system/css";
+import css from "@/utils/pandaLoader";
 
 type Props = ComponentPropsWithoutRef<"div">;
 

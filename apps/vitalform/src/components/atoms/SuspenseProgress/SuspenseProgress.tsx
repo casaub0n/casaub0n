@@ -7,7 +7,7 @@ import { tomato } from "@radix-ui/colors";
 import * as Progress from "@radix-ui/react-progress";
 import clsx from "clsx";
 
-import { css } from "../../../../styled-system/css";
+import css from "@/utils/pandaLoader";
 
 export const SuspenseProgress: FC = () => {
   const [progress, setProgress] = useState(13);
