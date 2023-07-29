@@ -1,6 +1,7 @@
 import type { ComponentPropsWithoutRef, FC } from "react";
 
 import clsx from "clsx";
+import { Tweet } from "react-tweet";
 
 import { MyAvatar } from "@/components/atoms/MyAvatar";
 
@@ -11,8 +12,9 @@ type Props = ComponentPropsWithoutRef<"main">;
 export const Top: FC<Props> = ({ className, ...props }) => {
   return (
     <main className={clsx(className)} {...props}>
-      <section className={clsx(css({ display: "grid", placeItems: "center", padding: "20" }))}>
-        <MyAvatar />
+      <section className={clsx(css({ display: "grid", placeItems: "center" }))}>
+        <MyAvatar className={clsx(css({ padding: "20" }))} />
+        <Tweet id='1671802628051984384' />
       </section>
     </main>
   );
