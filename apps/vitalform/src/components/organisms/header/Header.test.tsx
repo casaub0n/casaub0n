@@ -1,14 +1,15 @@
 import { composeStories } from "@storybook/react";
 import { render } from "@testing-library/react";
 
-import { organism, organismsPath } from "../tests/organisms";
+import { atomicElementName } from "../utils";
 
 import * as stories from "./Header.stories";
+import { componentPath } from "./utils";
 
 const { Default } = composeStories(stories);
 
-describe(`${organismsPath}header/Header.test.tsx`, () => {
-  test(organism, () => {
+describe(`${componentPath}Header.test.tsx`, () => {
+  test(atomicElementName, () => {
     const { container } = render(<Default />);
     expect(container).toBeOrganism();
   });
