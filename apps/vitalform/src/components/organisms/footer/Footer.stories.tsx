@@ -1,9 +1,10 @@
 import { Footer } from "./Footer";
+import { componentStoryName } from "./utils";
 
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-  title: "organisms/footer",
+  title: componentStoryName,
   component: Footer,
   parameters: {
     docs: {
