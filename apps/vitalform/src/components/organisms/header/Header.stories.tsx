@@ -1,10 +1,10 @@
 import { Header } from "./Header";
-import { componentStoryName } from "./utils";
+// import { componentStoryName } from "./utils";
 
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-  title: componentStoryName,
+  title: "organisms/header",
   component: Header,
   parameters: {
     docs: {

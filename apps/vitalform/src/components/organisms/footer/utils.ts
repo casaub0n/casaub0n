@@ -5,9 +5,9 @@ const componentName = "footer";
 /**
  * @package
  */
-export const componentPath = `${atomicElementPath}/${componentName}/`;
+export const componentPath = `${atomicElementPath}${componentName}/`;
 
 /**
  * @package
  */
-export const componentStoryName = `${atomicElementStoryName}/${componentName}`;
+export const componentStoryName = `${atomicElementStoryName}${componentName}`;
