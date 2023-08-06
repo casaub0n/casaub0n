@@ -7,8 +7,8 @@ const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 const config = {
   stories: [
     {
-      directory: "../../vitalform/src/",
-      titlePrefix: "vitalform",
+      directory: "../../casaub0n-page/src/",
+      titlePrefix: "casaub0n-page",
     },
   ],
   addons: [
@@ -25,7 +25,7 @@ const config = {
     "@storybook/addon-interactions",
     "@storybook/addon-docs",
   ],
-  staticDirs: ["../../vitalform/public"],
+  staticDirs: ["../../casaub0n-page/public"],
   framework: "@storybook/nextjs",
   core: {
     disableTelemetry: true,
@@ -37,7 +37,7 @@ const config = {
     config.resolve.plugins = config.resolve.plugins || [];
     config.resolve.plugins.push(
       new TsconfigPathsPlugin({
-        configFile: path.resolve(__dirname, "../../vitalform/tsconfig.json"),
+        configFile: path.resolve(__dirname, "../../casaub0n-page/tsconfig.json"),
       }),
     );
     return config;

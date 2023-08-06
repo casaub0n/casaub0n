@@ -1,4 +1,4 @@
-import "../../vitalform/src/app/globals.css";
+import "../../casaub0n-page/src/app/globals.css";
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {

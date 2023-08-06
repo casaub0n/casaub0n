@@ -6,8 +6,8 @@ export default defineConfig({
 
   // Where to look for your css declarations
   include: [
-    "../vitalform/src/components/**/*.{js,jsx,ts,tsx,stories.tsx}",
-    "../vitalform/src/app/**/*.{js,jsx,ts,tsx,stories.tsx}",
+    "../casaub0n-page/src/components/**/*.{js,jsx,ts,tsx,stories.tsx}",
+    "../casaub0n-page/src/app/**/*.{js,jsx,ts,tsx,stories.tsx}",
   ],
 
   // Files to exclude

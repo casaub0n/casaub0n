@@ -1,4 +1,4 @@
-const postcssConfig = require("../vitalform/postcss.config.cjs");
+const postcssConfig = require("../casaub0n-page/postcss.config.cjs");
 const usePlugins = {};
 
 // NOTE: Using Next.js postcss config

@@ -22,6 +22,6 @@ But this is not enough for monorepo storybook. I added postcss config for storyb
 
 GitHub pages doesn't support image files.
 
-[staticDirs](https://storybook.js.org/docs/react/api/main-config-static-dirs) is a good solution, but it is impossible because in this case, we wanna use GitHub's asset files as example ☞ https://github.com/casaub0n/casaub0n/blob/main/apps/vitalform/public/images/me.jpg?raw=true
+[staticDirs](https://storybook.js.org/docs/react/api/main-config-static-dirs) is a good solution, but it is impossible because in this case, we wanna use GitHub's asset files as example ☞ https://github.com/casaub0n/casaub0n/blob/main/apps/casaub0n-page/public/images/me.jpg?raw=true
 
 so it must use regular expression.
