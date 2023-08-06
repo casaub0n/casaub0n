@@ -30,43 +30,33 @@ jobs:
       contents: read
       deployments: write
       statuses: write
+    env:
+      CI: true
+      TURBO_TOKEN: ${{ secrets.USERSCRIPT_TURBO_TOKEN }}
+      TURBO_TEAM: ${{ secrets.USERSCRIPT_TURBO_TEAM }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: set up pnpm
+        with:
+          fetch-depth: 2
+
+      - name: Set up pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 8.6.2
-      - uses: actions/setup-node@v3
+          version: 8
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
         with:
-          node-version: "18.16.0"
+          node-version: 18
           cache: "pnpm"
-      - name: pnpm install
+
+      - name: Install dependencies
         run: pnpm install --frozen-lockfile
-      - name: build
+
+      - name: Build
         run: pnpm build
-        env:
-          CI: true
-          TURBO_TOKEN: ${{ secrets.USERSCRIPT_TURBO_TOKEN }}
-          TURBO_TEAM: ${{ secrets.USERSCRIPT_TURBO_TEAM }}
+
       - name: test
         run: pnpm test
-        env:
-          CI: true
-          TURBO_TOKEN: ${{ secrets.USERSCRIPT_TURBO_TOKEN }}
-          TURBO_TEAM: ${{ secrets.USERSCRIPT_TURBO_TEAM }}
-
-  # Run-PSScriptAnalyzer-on-Windows:
-  #   name: Run PSScriptAnalyzer on Windows
-  #   runs-on: windows-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - name: Install PSScriptAnalyzer module
-  #       shell: pwsh
-  #       run: |
-  #         Set-PSRepository PSGallery -InstallationPolicy Trusted
-  #         Install-Module PSScriptAnalyzer -ErrorAction Stop
-  #     - name: Get list of rules
-  #       shell: pwsh
-  #       run: |
-  #         Get-ScriptAnalyzerRule
