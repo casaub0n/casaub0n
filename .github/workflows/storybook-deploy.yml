@@ -91,8 +91,8 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.runner }} build --filter=@casaub0n/catalog
         env:
           CI: true
-          TURBO_TOKEN: ${{ secrets.USERSCRIPT_TURBO_TOKEN }}
-          TURBO_TEAM: ${{ secrets.USERSCRIPT_TURBO_TEAM }}
+          TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+          TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
