@@ -37,7 +37,7 @@ const customJestConfig = {
   // transformIgnorePatterns: [`/node_modules/(?!(${esModules.join("|")})/)`],
   // And other custom config...
 
-  testPathIgnorePatterns: ["styled-system"],
+  // testPathIgnorePatterns: ["<rootDir>/styled-system/"],
 };
 
 module.exports = createJestConfig(customJestConfig);
