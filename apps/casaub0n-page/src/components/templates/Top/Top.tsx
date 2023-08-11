@@ -6,9 +6,10 @@ import { MyAvatar } from "@/components/atoms/MyAvatar";
 
 import css from "@/utils/pandaLoader";
 
+import { cherry_bomb_one } from "@/app/fonts";
+
 import { MyTweet } from "../MyTweet";
 
-import { cherry_bomb_one } from "@/app/fonts";
 
 type Props = ComponentPropsWithoutRef<"main">;
 

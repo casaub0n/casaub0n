@@ -1,5 +1,7 @@
-const path = require("path");
-const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
+// @ts-check
+
+import path from "path";
+import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 
 // https://github.com/storybookjs/storybook/tree/next/code/frameworks/nextjs
 
@@ -33,9 +35,13 @@ const config = {
   docs: {
     autodocs: "tag",
   },
+  // ignore type because this is dynamic config
   webpackFinal: async (config) => {
+    // @ts-ignore
     config.resolve.plugins = config.resolve.plugins || [];
+    // @ts-ignore
     config.resolve.plugins.push(
+      // @ts-ignore
       new TsconfigPathsPlugin({
         configFile: path.resolve(__dirname, "../../casaub0n-page/tsconfig.json"),
       }),

@@ -7,11 +7,13 @@ By Storybook v7, see below
 - [storybook/MIGRATION.md at next · storybookjs/storybook · GitHub](https://github.com/storybookjs/storybook/blob/next/MIGRATION.md)
 - [storybook/code/frameworks/nextjs at next · storybookjs/storybook · GitHub](https://github.com/storybookjs/storybook/tree/next/code/frameworks/nextjs)
 
+This configure files is written by ES Modules. I dont't use TypeScript in this case because it must conflict loaded projects.
+
 ## Panda CSS
 
 I followd [panda-css doc](https://panda-css.com/docs/installation/storybook)
 
-But this is not enough for monorepo storybook. I added postcss config for storybook
+But this is not enough for monorepo storybook. I added postcss config for storybook by followed tailwindcss guides.
 
 <!-- TODO more details -->
 
