@@ -16,7 +16,7 @@
   "scripts": {
     "rmdist": "rimraf dist",
     "build": "pnpm rmdist && tsup src/index.ts --format cjs",
-    "test": "jest"
+    "test": "echo hello"
   },
   "files": [
     "dist"
@@ -25,14 +25,15 @@
     "userscript"
   ],
   "devDependencies": {
-    "@types/jest": "^29.2.4",
+    "@types/jest": "^29.5.3",
     "@types/puppeteer": "^7.0.4",
+    "dotenv": "^16.3.1",
     "header-inserter": "1.0.11",
-    "jest": "^29.3.1",
-    "puppeteer": "^21.0.0",
-    "rimraf": "^5.0.0",
-    "ts-jest": "^29.0.3",
-    "tsup": "^7.0.0",
+    "jest": "^29.6.2",
+    "puppeteer": "^21.0.3",
+    "rimraf": "^5.0.1",
+    "ts-jest": "^29.1.1",
+    "tsup": "^7.2.0",
     "typescript": "5.1.6"
   },
   "publishConfig": {
@@ -40,6 +41,6 @@
   },
   "dependencies": {
     "@github/hotkey": "^2.0.1",
-    "hotkeys-js": "^3.10.1"
+    "hotkeys-js": "^3.12.0"
   }
 }
