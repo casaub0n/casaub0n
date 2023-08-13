@@ -17,7 +17,7 @@
     "node": ">=12"
   },
   "scripts": {
-    "test": "tsc --noEmit && node --loader tsx src/money.test.ts",
+    "test": "tsc --noEmit && node --no-warnings --loader tsx src/money.test.ts",
     "rmdist": "rimraf dist",
     "prebuild": "pnpm rmdist",
     "build": "tsup src/index.ts --format cjs --dts --env.TABLE_HEAD something",
