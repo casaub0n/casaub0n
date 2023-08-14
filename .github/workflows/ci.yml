@@ -67,6 +67,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
+      - uses: browser-actions/setup-chrome@v1
+        name: Setup Chrome
+        id: setup-chrome
+      - run: |
+          echo Installed chromium version: ${{ steps.setup-chrome.outputs.chrome-version }}
+          ${{ steps.setup-chrome.outputs.chrome-path }} --version
+
       - name: Install dependencies
         run: pnpm install
 
