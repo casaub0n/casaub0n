@@ -8,6 +8,7 @@
     "test": {
       "outputs": ["__report__/**"]
     },
+    "test:ci": {},
     "dev": {
       "cache": false,
       "persistent": true
@@ -20,6 +21,6 @@
       "outputs": ["dist/**"]
     }
   },
-  "globalDependencies": [".env"],
-  "globalEnv": ["VERCEL_URL", "RENDER_INTERNAL_HOSTNAME", "PORT"]
+  "globalDependencies": ["**/.env.*local", "**/.env.*ci"],
+  "globalEnv": ["VERCEL_URL", "RENDER_INTERNAL_HOSTNAME", "PORT", "CHROME"]
 }

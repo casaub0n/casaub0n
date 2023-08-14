@@ -16,7 +16,8 @@
   "scripts": {
     "rmdist": "rimraf dist",
     "build": "pnpm rmdist && tsup src/index.ts --format cjs",
-    "test": "echo hello"
+    "test": "dotenv -e .env.local jest",
+    "test:ci": "dotenv -e ../../.env.ci jest"
   },
   "files": [
     "dist"
@@ -27,7 +28,6 @@
   "devDependencies": {
     "@types/jest": "^29.5.3",
     "@types/puppeteer": "^7.0.4",
-    "dotenv": "^16.3.1",
     "header-inserter": "1.0.11",
     "jest": "^29.6.2",
     "puppeteer": "^21.0.3",

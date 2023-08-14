@@ -3,12 +3,14 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
-    "test": "turbo run test",
+    "test": "dotenv -- turbo run test",
+    "test:ci": "dotenv -- turbo run test:ci",
     "dev": "turbo run dev",
     "start": "turbo run start",
     "storybook": "turbo run storybook"
   },
   "devDependencies": {
+    "dotenv-cli": "^7.2.1",
     "eslint": "^8.31.0",
     "eslint-config-custom": "*",
     "git-cz": "^4.9.0",

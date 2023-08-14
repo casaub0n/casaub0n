@@ -67,12 +67,18 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - uses: browser-actions/setup-chrome@v1
-        name: Setup Chrome
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@v1
         id: setup-chrome
       - run: |
           echo Installed chromium version: ${{ steps.setup-chrome.outputs.chrome-version }}
           ${{ steps.setup-chrome.outputs.chrome-path }} --version
+
+      - name: Create dot env file
+        shell: bash
+        run: |
+          touch .env.ci
+          echo "CHROME=${{ steps.setup-chrome.outputs.chrome-path }}" >> .env.ci
 
       - name: Install dependencies
         run: pnpm install
@@ -81,4 +87,4 @@ jobs:
         run: pnpm build
 
       - name: test
-        run: pnpm test
+        run: pnpm test:ci
