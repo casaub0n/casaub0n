@@ -4,7 +4,7 @@
 
 - the author: Kent Beck
 
-This project was implemented example codes by TypeScript.
+This project is implemented example codes by TypeScript.
 
 ## Getting Started
 
@@ -15,13 +15,15 @@ pnpm test
 
 ## Test Environment
 
-I followed this link 👉
+I follow this link 👉
 [How to run the Node built-in testrunner for TypeScript files inside a specific directory? · Issue #3902 · nodejs/help](https://github.com/nodejs/help/issues/3902#issuecomment-1307124174)
 
 This LTS version's Node.js shows the warning:
 `ExperimentalWarning: Custom ESM Loaders is an experimental feature and might change at any time`
 
-Node.js uses loader to run TypeScript.
+That must be standard feature in the future.
+
+Node.js has to use loader to run TypeScript.
 
 [TypeScript runtime comparisons](https://github.com/privatenumber/ts-runtime-comparison)
 
@@ -31,7 +33,7 @@ Use standard functions by Node.js
 
 ## Conclusion
 
-Test Driven Development By Example has some issues, but that's still useful book.
+Test Driven Development By Example has some technical issues that is occurred by legacy programming environment, but the article is still useful book.
 
 Kent Beck shows the way to implement the code from his idea. Some implementation looks winding road, but test case is very clear.
 
