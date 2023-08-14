@@ -21,6 +21,10 @@ I followed this link 👉
 This LTS version's Node.js shows the warning:
 `ExperimentalWarning: Custom ESM Loaders is an experimental feature and might change at any time`
 
+Node.js uses loader to run TypeScript.
+
+[TypeScript runtime comparisons](https://github.com/privatenumber/ts-runtime-comparison)
+
 ### Motivation
 
 Use standard functions by Node.js
