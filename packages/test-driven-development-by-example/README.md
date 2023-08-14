@@ -37,7 +37,7 @@ Test Driven Development By Example has some technical issues that is occurred by
 
 Kent Beck shows the way to implement the code from his idea. Some implementation looks winding road, but test case is very clear.
 
-Currently we have more choice for TDD that is type system, integration test and maybe Model Checking.
+Currently we have more choices for TDD that is type system, integration test and maybe Model Checking.
 
 ## Circular Reference
 
