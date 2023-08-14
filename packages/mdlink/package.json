@@ -15,7 +15,7 @@
   },
   "scripts": {
     "rmdist": "rimraf dist",
-    "build": "pnpm rmdist && tsup src/index.ts --format cjs",
+    "build": "pnpm rmdist && esbuild src/index.ts --bundle --define:process.env.NODE_ENV='production' --minify --platform=node --target=node17 --outfile=dist/index.js",
     "test": "dotenv -e .env.local jest",
     "test:ci": "dotenv -e ../../.env.ci jest"
   },
@@ -28,12 +28,12 @@
   "devDependencies": {
     "@types/jest": "^29.5.3",
     "@types/puppeteer": "^7.0.4",
+    "esbuild": "^0.19.2",
     "header-inserter": "1.0.11",
     "jest": "^29.6.2",
     "puppeteer": "^21.0.3",
     "rimraf": "^5.0.1",
     "ts-jest": "^29.1.1",
-    "tsup": "^7.2.0",
     "typescript": "5.1.6"
   },
   "publishConfig": {
