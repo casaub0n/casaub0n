@@ -1,10 +1,11 @@
 {
-  "name": "test-driven-development-by-example",
+  "name": "@casaub0n/test-driven-development-by-example",
   "version": "1.0.0",
-  "description": "test driven development by example",
+  "description": "test driven development by example for TypeScript",
   "license": "MIT",
   "repository": {
-    "url": "casaub0n/userscript",
+    "url": "https://github.com/casaub0n/casaub0n",
+    "type": "git",
     "directory": "packages/test-driven-development-by-example"
   },
   "author": {
@@ -14,20 +15,23 @@
   },
   "main": "./dist/index.js",
   "engines": {
-    "node": ">=12"
+    "node": ">=18"
   },
   "scripts": {
     "test": "tsc --noEmit && node --no-warnings --loader tsx src/money.test.ts",
+    "test:watch": "node --watch --no-warnings --loader tsx src/money.test.ts",
     "rmdist": "rimraf dist",
     "prebuild": "pnpm rmdist",
     "build": "tsup src/index.ts --format cjs --dts --env.TABLE_HEAD something",
-    "start:parse-html": "pnpm build && node dist/index.js"
+    "start": "pnpm build && node dist/index.js"
   },
   "files": [
     "dist"
   ],
   "keywords": [
-    "userscript"
+    "Testing",
+    "TypeScript",
+    "Node.js"
   ],
   "publishConfig": {
     "access": "public"
