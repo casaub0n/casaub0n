@@ -3,13 +3,11 @@ import type { ComponentPropsWithoutRef, FC } from "react";
 import clsx from "clsx";
 
 import { MyAvatar } from "@/components/atoms/MyAvatar";
+import { MyTweet } from "@/components/templates/MyTweet";
 
 import css from "@/utils/pandaLoader";
 
 import { cherry_bomb_one } from "@/app/fonts";
-
-import { MyTweet } from "../MyTweet";
-
 
 type Props = ComponentPropsWithoutRef<"main">;
 
