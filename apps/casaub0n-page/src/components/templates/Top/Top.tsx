@@ -3,7 +3,7 @@ import type { ComponentPropsWithoutRef, FC } from "react";
 import clsx from "clsx";
 
 import { MyAvatar } from "@/components/atoms/MyAvatar";
-import { MyTweet } from "@/components/templates/MyTweet";
+import { MyTweet } from "@/components/organisms/myTweet";
 
 import css from "@/utils/pandaLoader";
 

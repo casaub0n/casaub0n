@@ -3,7 +3,7 @@ import { MyTweet } from "./MyTweet";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-  title: "templates/MyTweet",
+  title: "organisms/MyTweet",
   component: MyTweet,
   parameters: {
     docs: {
