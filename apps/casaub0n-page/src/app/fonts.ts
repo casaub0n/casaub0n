@@ -7,5 +7,8 @@ export const inter = Inter({
 
 export const cherry_bomb_one = Cherry_Bomb_One({
   weight: "400",
+  style: "normal",
+  display: "swap",
+  subsets: ["latin"],
   preload: false,
 });
