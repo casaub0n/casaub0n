@@ -1,9 +1,12 @@
+This repository is experimental apps and profile readme
+
 ## require
 
-- Git
-- pnpm
-- Node.js
-- Rust
+- [Git](https://git-scm.com/)
+- [pnpm](https://pnpm.io/)
+- [Node.js](https://nodejs.org/ja)
+- [Rust](https://www.rust-lang.org/)
+- [vscode](https://code.visualstudio.com/)
 
 ### attention
 
