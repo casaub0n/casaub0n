@@ -6,6 +6,13 @@ This is my favourite place
 
 ![IMG_20210920_180030](https://github.com/casaub0n/casaub0n/assets/6220791/5277e375-9143-46de-97dd-18397784a891)
 
-[Twitch](https://www.twitch.tv/casaub0nn)
+Judges Bay Reserve is known as the historical landmark. It dramatically chnages the scenery by tide.
+
+## Links
+
+- ![Twitch Status](https://img.shields.io/twitch/status/casaub0nn) [casaub00n Twitch](https://www.twitch.tv/casaub0nn)
+- ![Twitter Follow](https://img.shields.io/twitter/follow/casaub0n)
+
+## Others
 
 [What is this repository](./packages/casaub0n/README.md)
