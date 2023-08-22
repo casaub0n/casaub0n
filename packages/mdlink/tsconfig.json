@@ -1,13 +1,17 @@
 {
   "compilerOptions": {
-    "target": "ES2015",
+    "baseUrl": ".",
+    "declaration": true,
+    "target": "ES2022",
     "module": "CommonJS",
     "outDir": "./dist",
     "strict": true,
     "noImplicitAny": false,
     "moduleResolution": "Node",
     "allowJs": true,
-    "esModuleInterop": true
+    "lib": ["es2022", "dom"],
+    "esModuleInterop": true,
+    "resolveJsonModule": true
   },
   "include": ["./src/**/*"]
 }
