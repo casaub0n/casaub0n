@@ -18,6 +18,7 @@
   },
   "scripts": {
     "test": "vitest",
+    "test:ci": "pnpm test",
     "rmdist": "rimraf dist",
     "build": "pnpm rmdist && tsup src/index.ts --format cjs --dts",
     "start:tsbox": "pnpm build && node dist/index.js"
