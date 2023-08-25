@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "target": "ES2022",
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "strict": true,
+    "noImplicitAny": false,
+    "moduleResolution": "Node",
+    "allowJs": true,
+    "lib": ["es2022", "dom"],
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "types": ["vitest/globals"]
+  },
+  "include": ["./src/**/*"]
+}
