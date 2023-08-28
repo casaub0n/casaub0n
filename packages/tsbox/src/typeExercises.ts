@@ -1,16 +1,29 @@
+/**
+ * 0 or more is true
+ */
 export const isPositive = (num: number): boolean => {
   return num >= 0;
 };
 
 type User = {
+  /**
+   * @example name = bob;
+   */
   name: string;
+  /**
+   * @example age = 23;
+   */
   age: number;
+  /**
+   * not sure
+   */
   private_: boolean;
 };
 
-export const showUserInfo = (user: User): string => {
-  return user.name;
-};
+/**
+ * @param user const examplePerson = { name: "B", age: 18, private_: false } satisfies Parameters<typeof userName>[0]
+ */
+export const userName = (user: User): string => user.name;
 
 type IsPositiveFunc = (arg: number) => boolean;
 export const isPositiveFunc: IsPositiveFunc = (num) => num >= 0;
