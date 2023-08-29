@@ -44,6 +44,9 @@ export const myFilter = <T>(arr: T[], predicate: (elm: T) => boolean): T[] => {
 
 type Speed = "slow" | "medium" | "fast";
 
+/**
+ * each velocities level answer actual mount
+ */
 export const getSpeed = (speed: Speed): number => {
   switch (speed) {
     case "slow":
