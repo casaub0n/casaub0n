@@ -15,7 +15,7 @@
   },
   "scripts": {
     "rmdist": "rimraf dist",
-    "build": "pnpm rmdist && esbuild src/index.ts --bundle --define:process.env.NODE_ENV='production' --minify --platform=node --target=node17 --outfile=dist/index.js",
+    "build": "pnpm rmdist && esbuild src/index.ts --bundle --define:process.env.NODE_ENV=\\\"production\\\" --minify --platform=node --target=node17 --outfile=dist/index.js",
     "test": "cross-env CHROME=\"C:\\Program Files\\Google\\Chrome\\Application\\chrome\" node --no-warnings --loader tsx src/test.ts",
     "test:ci": "cross-env CHROME='/opt/hostedtoolcache/chromium/latest/x64/chrome' node --no-warnings --loader tsx src/test.ts"
   },
