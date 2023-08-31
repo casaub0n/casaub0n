@@ -3,7 +3,7 @@ import { EmbedYoutube } from "./EmbedYoutube";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-  title: "organisms/EmbedYoutube",
+  title: "molecules/EmbedYoutube",
   component: EmbedYoutube,
 } satisfies Meta<typeof EmbedYoutube>;
 

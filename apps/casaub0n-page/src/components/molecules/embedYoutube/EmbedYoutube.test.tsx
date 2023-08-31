@@ -5,9 +5,9 @@ import * as stories from "./EmbedYoutube.stories";
 
 const { Default } = composeStories(stories);
 
-describe("src/components/organisms/embedYoutube/EmbedYoutube.test.tsx", () => {
-  test("Organism", () => {
+describe("src/components/molecules/embedYoutube/EmbedYoutube.test.tsx", () => {
+  test("Molecule", () => {
     const { container } = render(<Default />);
-    expect(container).toBeOrganism();
+    expect(container).toBeMolecule();
   });
 });
