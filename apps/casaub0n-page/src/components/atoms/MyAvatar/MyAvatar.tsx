@@ -14,11 +14,12 @@ type Props = ComponentPropsWithoutRef<"div">;
  * @description my picture component by next/image
  */
 export const MyImage = () => (
-  <Image alt='my picture' height={144} src='/images/me.jpg' width={144} />
+  <Image alt='my picture' height={144} objectFit='cover' src='/images/me.jpg' width={144} />
 );
 
 /**
  * @description my avatar component by radix-ui. Righ now, this image is local image. If it's possible, image should use next/image
+ * @see https://github.com/radix-ui/primitives/issues/2230#issuecomment-1675838910
  */
 export const MyAvatar: FC<Props> = ({ className, ...props }) => {
   return (
@@ -38,7 +39,10 @@ export const MyAvatar: FC<Props> = ({ className, ...props }) => {
           })}
           alt='my picture'
           src='/images/me.jpg'
-        />
+          asChild
+        >
+          <Image alt='my picture' height={144} objectFit='cover' src='/images/me.jpg' width={144} />
+        </AvatarPrimitive.AvatarImage>
         <AvatarPrimitive.AvatarFallback
           className={css({
             width: 144,
