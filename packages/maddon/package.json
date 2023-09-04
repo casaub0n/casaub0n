@@ -1,9 +1,9 @@
 {
-  "name": "@casaub0n/mdlink",
+  "name": "@casaub0n/maddon",
   "version": "1.0.0",
   "description": "redirect favorite host",
   "license": "MIT",
-  "repository": "casaub0n/mdlink",
+  "repository": "casaub0n/packages/maddon",
   "author": {
     "name": "casaub0n",
     "email": "netzach.yoshida@gmail.com",
@@ -15,7 +15,9 @@
   },
   "scripts": {
     "rmdist": "rimraf dist",
-    "build": "pnpm rmdist && esbuild src/index.ts --bundle --define:process.env.NODE_ENV=\\\"production\\\" --minify --platform=node --target=node17 --outfile=dist/index.js",
+    "prebuild": "pnpm rmdist && esbuild src/index.ts --bundle --define:process.env.NODE_ENV=\\\"production\\\" --minify --platform=node --target=node17 --outfile=dist/index.js",
+    "copy": "cpx -u src/static/**/*.{json,html} dist/",
+    "build": "pnpm prebuild && pnpm copy",
     "test": "cross-env CHROME=\"C:\\Program Files\\Google\\Chrome\\Application\\chrome\" node --no-warnings --loader tsx src/test.ts",
     "test:ci": "cross-env CHROME='/opt/hostedtoolcache/chromium/latest/x64/chrome' node --no-warnings --loader tsx src/test.ts"
   },
@@ -28,6 +30,7 @@
   "devDependencies": {
     "@types/jest": "^29.5.4",
     "@types/puppeteer": "^7.0.4",
+    "cpx": "^1.5.0",
     "cross-env": "^7.0.3",
     "esbuild": "^0.19.2",
     "header-inserter": "1.0.11",
