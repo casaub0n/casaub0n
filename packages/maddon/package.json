@@ -16,7 +16,7 @@
   "scripts": {
     "rmdist": "rimraf dist",
     "prebuild": "pnpm rmdist && esbuild src/index.ts --bundle --define:process.env.NODE_ENV=\\\"production\\\" --minify --platform=node --target=node17 --outfile=dist/index.js",
-    "copy": "cpx -u src/static/** dist/",
+    "copy": "cpx -u src/static/**/*.{json,html} dist/",
     "build": "pnpm prebuild && pnpm copy",
     "test": "cross-env CHROME=\"C:\\Program Files\\Google\\Chrome\\Application\\chrome\" node --no-warnings --loader tsx src/test.ts",
     "test:ci": "cross-env CHROME='/opt/hostedtoolcache/chromium/latest/x64/chrome' node --no-warnings --loader tsx src/test.ts"
