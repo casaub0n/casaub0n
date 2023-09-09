@@ -21,11 +21,25 @@ test("Addon Test", async () => {
   });
   const page = await browser.newPage();
   await page.goto("chrome://extensions/");
-  const title = await page.title();
-  const uri = page.url();
+
+  // screenshot
   page.setViewport({ width: 1200, height: 800 });
   await page.screenshot({ path: "screenshot.png", fullPage: true });
-  assert.deepStrictEqual(markdownLink(title, uri), "[拡張機能](chrome://extensions/)");
 
+  // /html/body/extensions-manager//div[2]/cr-view-manager/extensions-item-list//div/div/div[4]/extensions-item[1]//div[2]/div[1]/div[2]/div[1]/div/div
+  // TODO: wait
+  // await page.waitForSelector("body");
+  // it con't be gotten tree
+  const el = await page.$("html");
+
+  if (el) {
+    const hoge = await (await el.getProperty("textContent")).jsonValue();
+    console.log(`el: ${hoge}`);
+  }
+
+  const title = await page.title();
+  const uri = page.url();
+
+  assert.deepStrictEqual(markdownLink(title, uri), "[拡張機能](chrome://extensions/)");
   await browser.close();
 });
