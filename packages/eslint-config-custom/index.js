@@ -7,17 +7,18 @@ const eslintConfig = {
     "@typescript-eslint/no-unused-vars": "off",
     "unused-imports/no-unused-imports": "warn",
     "@typescript-eslint/consistent-type-imports": ["warn", { prefer: "type-imports" }],
-    "perfectionist/sort-jsx-props": [
-      "warn",
-      {
-        type: "natural",
-        order: "asc",
-        "always-on-top": ["id", "name"],
-        shorthand: "last",
-        multiline: "first",
-        callback: "ignore",
-      },
-    ],
+    // TODO react settings
+    // "perfectionist/sort-jsx-props": [
+    //   "warn",
+    //   {
+    //     type: "natural",
+    //     order: "asc",
+    //     "always-on-top": ["id", "name"],
+    //     shorthand: "last",
+    //     multiline: "first",
+    //     callback: "ignore",
+    //   },
+    // ],
     "import/order": [
       "warn",
       {
