@@ -5,9 +5,9 @@
 import { strict as assert } from "assert";
 import { env } from "node:process";
 import { test } from "node:test";
+import path from "path";
 
 import puppeteer from "puppeteer";
-import path from "path";
 
 import { markdownLink } from "./markdownLink";
 
