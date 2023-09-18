@@ -1,15 +1,4 @@
-// import hotkeys from "hotkeys-js";
-
-// import { markdownLink } from "./markdownLink";
-
-// const href = document.location.href;
-// const title = document.title;
-
-// hotkeys("alt+h", function (event) {
-//   event.preventDefault();
-//   navigator.clipboard.writeText(markdownLink(title, href));
-// });
-
+// https://developer.chrome.com/docs/extensions/reference/commands/#event-onCommand
 const button = document.getElementById("btn");
 const title = document.querySelector("h1");
 if (button && title) {
