@@ -5,5 +5,24 @@
   "manifest_version": 3,
   "action": {
     "default_popup": "index.html"
-  }
+  },
+  "commands": {
+    "run-mdlink": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Run \"mdlink\" on the current page."
+    },
+    "_execute_action": {
+      "suggested_key": {
+        "windows": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y",
+        "chromeos": "Ctrl+Shift+U",
+        "linux": "Ctrl+Shift+J"
+      }
+    }
+  },
+  "permissions": ["tabs", "scripting"],
+  "host_permissions": ["<all_urls>"]
 }
