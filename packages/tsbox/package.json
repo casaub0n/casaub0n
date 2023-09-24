@@ -17,7 +17,7 @@
     "node": ">=18"
   },
   "scripts": {
-    "test": "vitest",
+    "test": "vitest run",
     "test:ci": "pnpm test",
     "rmdist": "rimraf dist",
     "build": "pnpm rmdist && tsup src/index.ts --format cjs --dts",
