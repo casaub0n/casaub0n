@@ -2,7 +2,7 @@ import { useState, type ComponentPropsWithoutRef, type FC } from "react";
 
 import clsx from "clsx";
 
-import { Dialog } from "@/components/atoms/dialog";
+import { Mdialog } from "@/components/atoms/mDialog";
 
 import css from "@/utils/pandaLoader";
 
@@ -31,7 +31,7 @@ export const Pdialog: FC<Props> = ({...props}) => {
       </div>
 
       {/* Dialog_Component */}
-      <Dialog isOpen={isOpen} onClose={closeDialog} />
+      <Mdialog isOpen={isOpen} onClose={closeDialog} />
     </div>
   );
 };

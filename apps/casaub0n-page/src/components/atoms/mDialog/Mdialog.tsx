@@ -18,7 +18,7 @@ type Props = {
 /**
  * @see https://zenn.dev/aiq_dev/articles/69c60e0c378d98#dialog%E3%82%BF%E3%82%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9Fdialog-component%E3%81%AEsamplecode
  */
-export const Dialog: FC<Props> = ({ className, onClose, isOpen, dialogStyle, dialogInnerStyle, ...props }) => {
+export const Mdialog: FC<Props> = ({ className, onClose, isOpen, dialogStyle, dialogInnerStyle, ...props }) => {
   /**
    * Dialog_Element
    * => useRef() で、dialogタグを参照する
