@@ -27,7 +27,8 @@ const jsonLd: WithContext<Article> = {
   "url": "https://casaub0n-page.vercel.app",
   "author": {
     "@type": "Person",
-    "name": "casaub0n"
+    "name": "casaub0n",
+    "url": "https://twitter.com/casaub0n"
   },
   "datePublished": "2023-10-03",
   "description": "This page is my web site that shows my favorite own tweet"
