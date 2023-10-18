@@ -1,8 +1,6 @@
 "use client";
 import type { ComponentPropsWithoutRef, FC } from "react";
 
-import { blackA, violet } from "@radix-ui/colors";
-import * as AvatarPrimitive from "@radix-ui/react-avatar";
 import clsx from "clsx";
 import Image from "next/image";
 
@@ -11,52 +9,14 @@ import css from "@/utils/pandaLoader";
 type Props = ComponentPropsWithoutRef<"div">;
 
 /**
- * @description my picture component by next/image
- */
-export const MyImage = () => (
-  <Image alt='my picture' height={144} objectFit='cover' src='/images/me.jpg' width={144} />
-);
-
-/**
- * @description my avatar component by radix-ui. Righ now, this image is local image. If it's possible, image should use next/image
- * @see https://github.com/radix-ui/primitives/issues/2230#issuecomment-1675838910
+ * My Image Avatar by next/image
+ * @description vercel can host image file.
+ * @see https://github.com/vercel/next.js/blob/2c8606e59647714e5b74da46e4ff25bb63be37d9/examples/image-legacy-component/pages/layout-fill.tsx
  */
 export const MyAvatar: FC<Props> = ({ className, ...props }) => {
   return (
-    <div className={clsx(className)} {...props}>
-      <AvatarPrimitive.Root
-        className={css({
-          borderRadius: "100%",
-          backgroundColor: blackA.blackA3,
-        })}
-      >
-        <AvatarPrimitive.AvatarImage
-          className={css({
-            width: 144,
-            height: 144,
-            objectFit: "cover",
-            borderRadius: "inherit",
-          })}
-          alt='my picture'
-          src='/images/me.jpg'
-          asChild
-        >
-          <Image alt='my picture' height={144} objectFit='cover' src='/images/me.jpg' width={144} />
-        </AvatarPrimitive.AvatarImage>
-        <AvatarPrimitive.AvatarFallback
-          className={css({
-            width: 144,
-            height: 144,
-            color: violet.violet11,
-            fontSize: 15,
-            lineHeight: 1,
-            fontWeight: 500,
-          })}
-          delayMs={600}
-        >
-          Me
-        </AvatarPrimitive.AvatarFallback>
-      </AvatarPrimitive.Root>
+    <div className={clsx(className, css({position: 'relative', width: '144px', height: '144px'}))} {...props}>
+      <Image alt='my picture' fill objectFit="cover" src="/images/me.jpg" style={{ borderRadius: "50%"}}/>
     </div>
   );
 };
