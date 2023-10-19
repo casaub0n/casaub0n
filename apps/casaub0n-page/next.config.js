@@ -6,14 +6,11 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "res.cloudinary.com",
-        port: "",
         pathname: "/dycpos4uc/image/upload/**",
       },
       {
         protocol: "https",
         hostname: "images.unsplash.com",
-        port: "",
-        pathname: "",
       },
     ],
   },
