@@ -27,7 +27,7 @@ type Props = ComponentPropsWithoutRef<"div">;
 export const MyAvatar: FC<Props> = ({ className, ...props }) => {
   return (
     <div className={clsx(className, css({position: 'relative', width: '144px', height: '144px'}))} {...props}>
-      <Image className={css({ borderRadius: "50%" })} alt='my picture' fill objectFit="cover" src="/images/me.jpg" />
+      <Image className={css({ borderRadius: "50%", objectFit: "cover" })} alt='my picture' fill src="/images/me.jpg" />
     </div>
   );
 };
