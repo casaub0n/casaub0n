@@ -1,16 +1,21 @@
 items:
-# general
-  - echo_hello:
-      description: Echo 'Hellom, World'
-      command: echo Hello, World!
-# git
-  - git_init:
-      description: Initialize a git repository
-      command: git init
-  - git_clone:
-      description: Clone a git repository
-      command: git clone <branch_name> <repository> <clone_directory>
-# powershell
-  - Get-Content:
+  # gh
+  - feature_pr:
+      description: basic feature pull request
+      command: gh pr create -t "<pr_name>" --label "enhancement" --assignee "casaub0n"
+  # powershell
+  - cat_ps:
       description: As Linux, cat command
-      command: Get-Content
+      command: Get-Content <$target>
+  - ln_ps:
+      description: SymbolicLink for powershell
+      command: New-Item -ItemType SymbolicLink -Path <$path> -Value <$target>
+  - find_ps:
+      description: find -name target
+      command: ls -r | where { $_.Name -match "<$target>" }
+  - grep_ps:
+      description: grep
+      command: Select-String -Path <$path> -Pattern "<$pattern>"
+  - sudo_ps:
+      description: sudo su -
+      command: Start-Process PowerShell.exe -Verb runas
