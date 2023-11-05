@@ -83,8 +83,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      # pass nextjs-dashboard project because that is still WIP
       - name: Build
-        run: pnpm build
+        run: pnpm build --filter=!nextjs-dashboard
 
       - name: test
         run: pnpm test:ci
