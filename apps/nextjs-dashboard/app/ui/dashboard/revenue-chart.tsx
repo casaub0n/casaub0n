@@ -1,7 +1,8 @@
 
+import { lusitana } from '@/app/ui/fonts';
+
 import type { Revenue } from '@/app/lib/definitions';
 
-import { lusitana } from '@/app/ui/fonts';
 
 
 // This component is representational only.
