@@ -1,4 +1,5 @@
 # my nvim config
+![my neovim](https://github.com/casaub0n/casaub0n/assets/6220791/e45e4cbc-e13a-41cd-b75d-5f6079705407)
 
 ```PowerShell
 # sudo su -
