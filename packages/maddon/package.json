@@ -18,8 +18,8 @@
     "prebuild": "pnpm rmdist && esbuild src/index.ts --bundle --define:process.env.NODE_ENV=\\\"production\\\" --minify --platform=node --target=node17 --outfile=dist/index.js",
     "copy": "cpx -u src/static/**/*.{json,html,js} dist/",
     "build": "pnpm prebuild && pnpm copy",
-    "test": "cross-env CHROME=\"C:\\Program Files\\Google\\Chrome\\Application\\chrome\" node --no-warnings --loader tsx src/test.ts",
-    "test:addon": "pnpm build && cross-env CHROME=\"C:\\Program Files\\Google\\Chrome\\Application\\chrome\" node --no-warnings --loader tsx src/addonTest.ts",
+    "test": "cross-env CHROME=\"C:\\Program Files\\Google\\Chrome\\Application\\chrome\" node --no-warnings --import tsx src/test.ts",
+    "test:addon": "pnpm build && cross-env CHROME=\"C:\\Program Files\\Google\\Chrome\\Application\\chrome\" node --no-warnings --import tsx src/addonTest.ts",
     "test:ci": "cross-env CHROME='/opt/hostedtoolcache/chromium/latest/x64/chrome' node --no-warnings --loader tsx src/test.ts"
   },
   "files": [
@@ -36,10 +36,10 @@
     "esbuild": "^0.19.3",
     "header-inserter": "1.0.11",
     "jest": "^29.6.4",
-    "puppeteer": "^21.1.0",
+    "puppeteer": "^21.5.1",
     "rimraf": "^5.0.1",
     "ts-jest": "^29.1.1",
-    "tsx": "^3.12.8",
+    "tsx": "^4.1.0",
     "typescript": "5.2.2"
   },
   "publishConfig": {
