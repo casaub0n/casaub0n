@@ -18,8 +18,9 @@
     "node": ">=18"
   },
   "scripts": {
-    "test": "tsc --noEmit && node --no-warnings --loader tsx src/money.test.ts",
-    "test:watch": "node --watch --no-warnings --loader tsx src/money.test.ts",
+    "test": "tsc --noEmit && node --no-warnings --import tsx src/money.test.ts",
+    "test:watch": "node --watch --no-warnings --import tsx src/money.test.ts",
+    "test:ci": "pnpm test",
     "rmdist": "rimraf dist",
     "prebuild": "pnpm rmdist",
     "build": "tsup src/index.ts --format cjs --dts --env.TABLE_HEAD something",
