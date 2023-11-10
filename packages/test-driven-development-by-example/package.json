@@ -18,7 +18,7 @@
     "node": ">=18"
   },
   "scripts": {
-    "test": "tsc --noEmit && node --no-warnings --import tsx src/money.test.ts",
+    "test": "tsc --noEmit && node --import tsx src/money.test.ts",
     "test:watch": "node --watch --no-warnings --import tsx src/money.test.ts",
     "test:ci": "pnpm test",
     "rmdist": "rimraf dist",
