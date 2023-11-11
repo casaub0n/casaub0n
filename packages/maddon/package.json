@@ -19,7 +19,8 @@
     "copy": "cpx -u src/static/**/*.{json,html,js} dist/",
     "build": "pnpm prebuild && pnpm copy",
     "test": "cross-env CHROME=\"C:\\Program Files\\Google\\Chrome\\Application\\chrome\" node --no-warnings --import tsx src/test.ts",
-    "test:addon": "pnpm build && cross-env CHROME=\"C:\\Program Files\\Google\\Chrome\\Application\\chrome\" node --no-warnings --import tsx src/addonTest.ts"
+    "test:addon": "pnpm build && cross-env CHROME=\"C:\\Program Files\\Google\\Chrome\\Application\\chrome\" node --no-warnings --import tsx src/addonTest.ts",
+    "test:ci": "cross-env CHROME='/opt/hostedtoolcache/chromium/latest/x64/chrome' node --no-warnings --import tsx src/test.ts"
   },
   "files": [
     "dist"
