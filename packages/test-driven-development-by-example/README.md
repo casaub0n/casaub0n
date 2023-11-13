@@ -29,7 +29,17 @@ Node.js has to use loader to run TypeScript.
 
 ### Motivation
 
-Use standard functions by Node.js
+Use standard Node.js's functions
+
+### Notes
+
+This node version is expected over 20 currently. As tsup, `node:test` is not propper solving in build process.
+
+I hope this:
+
+```console
+tsup src/money.test.ts
+```
 
 ## Conclusion
 
