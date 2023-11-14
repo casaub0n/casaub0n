@@ -1,4 +1,6 @@
-// https://refactoring.guru/design-patterns/factory-method
+/**
+ * @see https://refactoring.guru/design-patterns/factory-method
+ */
 export class Money implements Expression {
   protected _amount: number;
   protected _currency: string;
@@ -8,6 +10,9 @@ export class Money implements Expression {
     this._currency = currency;
   }
 
+  /**
+   * amout * multiplier
+   */
   public times(multiplier: number): Expression {
     return new Money(this._amount * multiplier, this._currency);
   }

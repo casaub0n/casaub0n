@@ -15,7 +15,7 @@
   },
   "main": "./dist/index.js",
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "scripts": {
     "test": "tsc --noEmit && node --import tsx src/money.test.ts",
@@ -42,7 +42,7 @@
     "eslint-config-custom": "*",
     "rimraf": "^5.0.1",
     "tsup": "^7.2.0",
-    "tsx": "^4.0.0",
+    "tsx": "^4.1.1",
     "typescript": "^5.2.2"
   }
 }
