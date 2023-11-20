@@ -1,5 +1,11 @@
 # casaub0n page
 
+[![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/jestjs/jest)
+<a href="https://github.com/storybooks/storybook" target="_blank"><img src="https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg"></a>
+![ts](https://badgen.net/badge/-/TypeScript/blue?icon=typescript&label)
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+
 This project is my Next.js boilerplate.
 
 ## Getting Started
