@@ -1,3 +1,5 @@
+![GitHub License](https://img.shields.io/github/license/:casaub0n/:casaub0n)
+
 This repository is experimental apps and profile readme
 
 ## require
