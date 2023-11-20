@@ -1,4 +1,4 @@
-![GitHub License](https://img.shields.io/github/license/:casaub0n/:casaub0n)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This repository is experimental apps and profile readme
 
