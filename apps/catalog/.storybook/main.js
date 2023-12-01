@@ -1,5 +1,8 @@
 // @ts-check
 
+/**
+ * @see https://github.com/storybookjs/storybook/blob/a4b91eaf33dd38d6223aaf43fada8db94cf3ac77/code/frameworks/nextjs/README.md#getting-started
+ */
 import path from "path";
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 
