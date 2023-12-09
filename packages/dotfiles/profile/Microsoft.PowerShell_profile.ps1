@@ -41,3 +41,31 @@ function nav() {
     navi("-r")
 }
 
+# @see https://learn.microsoft.com/ja-jp/powershell/module/psreadline/about/about_psreadline?view=powershell-7.4
+$parameters = @{
+    key              = 'Alt-w'
+    BriefDescription = 'SaveInHistory'
+    LongDescription  = 'Save current line in history but do not execute'
+    ScriptBlock      = {
+        param($key, $arg)   # The arguments are ignored in this example
+
+        # GetBufferState gives us the command line (with the cursor position)
+        $line = $null
+        $cursor = $null
+        [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line,
+            [ref]$cursor)
+
+        # AddToHistory saves the line in history, but does not execute it.
+        [Microsoft.PowerShell.PSConsoleReadLine]::AddToHistory($line)
+
+        # RevertLine is like pressing Escape.
+        [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
+    }
+}
+Set-PSReadLineKeyHandler @parameters
+
+function pzc {
+    $data = Get-Content .\package.json | jq ".scripts" | ConvertFrom-Json | fzf
+    $rdata = $data -replace '[\s].*$', ''
+    -join ("pnpm ", $rdata) | Write-Output | Invoke-Expression
+}
