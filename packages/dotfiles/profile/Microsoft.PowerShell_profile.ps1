@@ -64,8 +64,6 @@ $parameters = @{
 }
 Set-PSReadLineKeyHandler @parameters
 
-function pzc {
-    $data = Get-Content .\package.json | jq ".scripts" | ConvertFrom-Json | fzf
-    $rdata = $data -replace '[\s].*$', ''
-    -join ("pnpm ", $rdata) | Write-Output | Invoke-Expression
-}
+$psdir = "$HOME\sandbox\casaub0n\packages\dotfiles\profile"
+Write-Host ("Load PS Profiles from {0}\modules" -f $psdir) -ForegroundColor DarkCyan
+Get-ChildItem $psdir\modules | Where-Object Extension -eq ".ps1" | ForEach-Object { .$_.FullName }
