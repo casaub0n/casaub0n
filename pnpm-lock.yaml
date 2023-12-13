@@ -179,7 +179,7 @@ importers:
         version: 5.3.3
       vercel:
         specifier: ^32.2.4
-        version: 32.7.1
+        version: 32.7.2
 
   apps/catalog:
     dependencies:
@@ -360,7 +360,7 @@ importers:
         version: 29.7.0(@types/node@20.10.4)
       puppeteer:
         specifier: ^21.5.1
-        version: 21.6.0(typescript@5.3.3)
+        version: 21.6.1(typescript@5.3.3)
       rimraf:
         specifier: ^5.0.1
         version: 5.0.5
@@ -427,7 +427,7 @@ importers:
         version: 29.7.0(@types/node@20.10.4)
       puppeteer:
         specifier: ^21.1.0
-        version: 21.6.0(typescript@5.3.3)
+        version: 21.6.1(typescript@5.3.3)
       rimraf:
         specifier: ^5.0.0
         version: 5.0.5
@@ -7941,7 +7941,7 @@ packages:
     resolution: {integrity: sha512-ja78vquZc8y+GM2al07GZqWDKQskQXygCDiu0e3uO0DMRKqE0MjrFBFmTulfPYzLB6WnL7Kl2tFPy0WXSpPomg==}
     deprecated: This is a stub types definition. puppeteer provides its own type definitions, so you do not need this installed.
     dependencies:
-      puppeteer: 21.6.0(typescript@5.3.3)
+      puppeteer: 21.6.1(typescript@5.3.3)
     transitivePeerDependencies:
       - bufferutil
       - encoding
@@ -10010,6 +10010,7 @@ packages:
     requiresBuild: true
     dependencies:
       node-gyp-build: 4.7.1
+    dev: false
 
   /builtin-status-codes@3.0.0:
     resolution: {integrity: sha512-HpGFw18DgFWlncDfjTa2rcQ4W88O1mC8e8yZ2AvQY5KDaktSTwo+KRf6nHK6FRI5FyRyb/5T6+TSxfP7QyGsmQ==}
@@ -19268,8 +19269,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /puppeteer-core@21.6.0:
-    resolution: {integrity: sha512-1vrzbp2E1JpBwtIIrriWkN+A0afUxkqRuFTC3uASc5ql6iuK9ppOdIU/CPGKwOyB4YFIQ16mRbK0PK19mbXnaQ==}
+  /puppeteer-core@21.6.1:
+    resolution: {integrity: sha512-0chaaK/RL9S1U3bsyR4fUeUfoj51vNnjWvXgG6DcsyMjwYNpLcAThv187i1rZCo7QhJP0wZN8plQkjNyrq2h+A==}
     engines: {node: '>=16.13.2'}
     dependencies:
       '@puppeteer/browsers': 1.9.0
@@ -19277,7 +19278,7 @@ packages:
       cross-fetch: 4.0.0
       debug: 4.3.4
       devtools-protocol: 0.0.1203626
-      ws: 8.14.2(bufferutil@4.0.8)(utf-8-validate@6.0.3)
+      ws: 8.15.1
     transitivePeerDependencies:
       - bufferutil
       - encoding
@@ -19285,15 +19286,15 @@ packages:
       - utf-8-validate
     dev: true
 
-  /puppeteer@21.6.0(typescript@5.3.3):
-    resolution: {integrity: sha512-u6JhSF7xaPYZ2gd3tvhYI8MwVAjLc3Cazj7UWvMV95A07/y7cIjBwYUiMU9/jm4z0FSUORriLX/RZRaiASNWPw==}
+  /puppeteer@21.6.1(typescript@5.3.3):
+    resolution: {integrity: sha512-O+pbc61oj8ln6m8EJKncrsQFmytgRyFYERtk190PeLbJn5JKpmmynn2p1PiFrlhCitAQXLJ0MOy7F0TeyCRqBg==}
     engines: {node: '>=16.13.2'}
     hasBin: true
     requiresBuild: true
     dependencies:
       '@puppeteer/browsers': 1.9.0
       cosmiconfig: 8.3.6(typescript@5.3.3)
-      puppeteer-core: 21.6.0
+      puppeteer-core: 21.6.1
     transitivePeerDependencies:
       - bufferutil
       - encoding
@@ -23150,6 +23151,7 @@ packages:
     requiresBuild: true
     dependencies:
       node-gyp-build: 4.7.1
+    dev: false
 
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
@@ -23220,8 +23222,8 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /vercel@32.7.1:
-    resolution: {integrity: sha512-GGKZxQX1an8UxwRuAcsnGQuPm7/gNYIuhnepqKnOJ2NuyrgJ0Ve1WE66mk0F5QqQ84ZAk88O8aXMTBVVPwkmmA==}
+  /vercel@32.7.2:
+    resolution: {integrity: sha512-esyeo67OZ/f7usKFCrx6NSjsvpo/BP/C8Mfron2uiCb4vXVcjkwOM7TwliHx6b0DbXjpzomdGVUHKRs34VNn2Q==}
     engines: {node: '>= 16'}
     hasBin: true
     dependencies:
@@ -23849,6 +23851,7 @@ packages:
     dependencies:
       bufferutil: 4.0.8
       utf-8-validate: 6.0.3
+    dev: false
 
   /ws@8.15.1:
     resolution: {integrity: sha512-W5OZiCjXEmk0yZ66ZN82beM5Sz7l7coYxpRkzS+p9PP+ToQry8szKh+61eNktr7EA9DOwvFGhfC605jDHbP6QQ==}
