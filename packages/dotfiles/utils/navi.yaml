@@ -2,11 +2,11 @@ items:
   # git
   - empty_commit:
       description: empty commit for wip
-      command: git commit --allow-empty -m "[WIP] <commit_message>"
+      command: git commit --allow-empty -m '[WIP] <commit_message>'
   # gh
   - feature_pr:
       description: basic feature pull request
-      command: gh pr create -t "<pr_name>" --label "enhancement" --assignee "casaub0n"
+      command: gh pr create -t '<pr_name>' --label 'enhancement' --assignee 'casaub0n'
   # powershell
   - cat_ps:
       description: As Linux, cat command
@@ -16,10 +16,10 @@ items:
       command: New-Item -ItemType SymbolicLink -Path <$path> -Value <$target>
   - find_ps:
       description: find -name target
-      command: ls -r | where { $_.Name -match "<$target>" }
+      command: ls -r | where { $_.Name -match '<$target>' }
   - grep_ps:
       description: grep
-      command: Select-String -Path <$path> -Pattern "<$pattern>"
+      command: Select-String -Path <$path> -Pattern '<$pattern>'
   - sudo_ps:
       description: sudo su -
       command: Start-Process PowerShell.exe -Verb runas
