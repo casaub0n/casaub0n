@@ -35,3 +35,17 @@ function pzc {
     $rdata = $data -replace '[\s].*$', ''
     -join ("pnpm ", $rdata) | Write-Output | Invoke-Expression
 }
+
+function emof {
+    # PowerShellで外部コマンドの出力が文字化けする場合の対処法
+    # 一時的にコンソールの出力エンコードをutf-8にしてコマンドの実行後に元に戻す
+    # https://ascii.jp/elem/000/004/140/4140455/
+    # エンコーディングの一覧
+    # https://learn.microsoft.com/ja-jp/dotnet/api/system.text.encoding?view=net-7.0#list-of-encodings
+    $TempMyOutputEncode = [System.Console]::OutputEncoding
+    [System.Console]::OutputEncoding = [System.Text.Encoding]::GetEncoding('utf-8')
+    $emoji = curl -sSL 'https://git.io/JXXO7'
+    $selected_emoji = Write-Output $emoji | fzf
+    Write-Output $selected_emoji
+    [System.Console]::OutputEncoding = $TempMyOutputEncode
+}
