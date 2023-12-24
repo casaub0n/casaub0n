@@ -8,6 +8,8 @@ Import-Module posh-git
 Import-Module PSFzf
 Enable-PsFzfAliases
 
+Import-Module DockerCompletion
+
 # fzf https://github.com/kelleyma49/PSFzf#reverse-search-through-psreadline-history-default-chord-ctrlr
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
 
