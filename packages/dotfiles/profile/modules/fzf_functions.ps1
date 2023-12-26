@@ -52,6 +52,7 @@ function emof {
 
 <#
     git utility
+    https://github.com/junegunn/fzf/wiki/examples#git
 #>
 # TODO: the last command is not working to parse
 # below is original commands
