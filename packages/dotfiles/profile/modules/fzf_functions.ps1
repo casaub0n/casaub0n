@@ -49,3 +49,15 @@ function emof {
     Write-Output $selected_emoji
     [System.Console]::OutputEncoding = $TempMyOutputEncode
 }
+
+<#
+    git utility
+#>
+# WIP
+function ghw {
+    gh run list `
+        --branch $(git rev-parse --abbrev-ref HEAD) `
+        --json "status,name,databaseId" |
+    jq -r '.[] | select(.status != "completed") | (.databaseId | tostring) + "\t" + (.name)' |
+    fzf -1 -0 | awk '{print $1}' | xargs gh run watch
+}
