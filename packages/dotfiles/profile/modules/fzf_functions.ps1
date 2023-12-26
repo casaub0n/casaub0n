@@ -53,7 +53,9 @@ function emof {
 <#
     git utility
 #>
-# WIP
+# TODO: the last command is not working to parse
+# below is original commands
+# awk '{print $1}' | xargs gh run watch
 function ghw {
     gh run list `
         --branch $(git rev-parse --abbrev-ref HEAD) `
