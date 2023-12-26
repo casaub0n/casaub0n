@@ -59,5 +59,5 @@ function ghw {
         --branch $(git rev-parse --abbrev-ref HEAD) `
         --json "status,name,databaseId" |
     jq -r '.[] | select(.status != "completed") | (.databaseId | tostring) + "\t" + (.name)' |
-    fzf -1 -0 | awk '{print $1}' | xargs gh run watch
+    fzf -1 -0 | ForEach-Object { $_.Split(" ")[0] } | ForEach-Object { gh run watch $_ }
 }
