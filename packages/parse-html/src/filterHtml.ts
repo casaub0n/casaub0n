@@ -95,22 +95,22 @@ const makeHtmlFile = async (str: string): Promise<void> => {
 export const filterHtml = () => {
   const month_html = readData("./src/input_data");
   if (month_html.isSuccess()) {
-    glob(month_html.value, (err, files) => {
-      if (err) err;
-      (async () => {
-        let outPutString = "" + preHtmlTag;
-        for (let i = 0; i < files.length; i++) {
-          const file = files[i];
+    (async () => {
+      const htmlFiles = await glob(month_html.value);
+      let outPutString = "" + preHtmlTag;
+      let count = 0;
+      htmlFiles.forEach((file) => {
+        (async () => {
           const rawFile = await fs.readFile(file, "utf-8");
           const htmlFile = rawFile.replace(/id='liststd'/g, "class='listd'");
-          const content = getContent(htmlFile, i + 1);
+          const content = getContent(htmlFile, count + 1);
           if (content.isSuccess()) {
             outPutString = outPutString + preTag + "\n" + content.value + "\n" + endTag + "\n";
           }
-        }
-        outPutString = outPutString + endHtmlTag;
-        await makeHtmlFile(outPutString);
-      })();
-    });
+        })();
+      });
+      outPutString = outPutString + endHtmlTag;
+      await makeHtmlFile(outPutString);
+    })();
   }
 };
