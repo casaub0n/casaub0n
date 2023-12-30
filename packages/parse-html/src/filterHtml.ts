@@ -1,8 +1,12 @@
-import { JSDOM } from "jsdom";
-import path from "path";
 import fs from "fs/promises";
-import glob from "glob";
-import { DoSomethingError, Failure, Result, Success } from "./utils/Result";
+import path from "path";
+
+import { glob } from "glob";
+import { JSDOM } from "jsdom";
+
+import { DoSomethingError, Failure, Success } from "./utils/Result";
+
+import type { Result } from "./utils/Result";
 
 const readData = (filePath: string): Result<string, DoSomethingError> => {
   const htmlStr = path.join(process.cwd(), filePath);
@@ -58,6 +62,9 @@ const getContent = (htmlText: string, month: number): Result<string, DoSomething
 const preTag = '<div class="calc-table">' as const satisfies string;
 const endTag = "</div>" as const satisfies string;
 
+/**
+ * html template for generated element
+ */
 const preHtmlTag = `
 <!DOCTYPE html>
 <html lang="ja" class="no-js">
