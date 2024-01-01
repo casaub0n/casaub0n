@@ -8,6 +8,7 @@ import studyDataList from "./studyData";
 type Props = ComponentPropsWithoutRef<"div">;
 
 /**
+ * line graph
  * @description by recharts
  * @see https://zenn.dev/acha_n/articles/how-to-customize-recharts
  */
