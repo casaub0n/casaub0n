@@ -37,6 +37,7 @@ const config = {
   },
   docs: {
     autodocs: "tag",
+    defaultName: "Documentation",
   },
   // ignore type because this is dynamic config
   webpackFinal: async (config) => {

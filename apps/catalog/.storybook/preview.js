@@ -1,5 +1,7 @@
 import "../../casaub0n-page/src/app/globals.css";
 
+import { Title, Subtitle, Description, Primary, Controls, Stories } from "@storybook/blocks";
+
 /** @type { import('@storybook/react').Preview } */
 const preview = {
   parameters: {
@@ -9,6 +11,18 @@ const preview = {
         color: /(background|color)$/i,
         date: /Date$/,
       },
+    },
+    docs: {
+      page: () => (
+        <>
+          <Title />
+          <Subtitle />
+          <Description />
+          <Primary />
+          <Controls />
+          <Stories />
+        </>
+      ),
     },
   },
 };
