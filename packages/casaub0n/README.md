@@ -44,6 +44,7 @@ As they say, 'live and learn.'
 
 - [dotfiles](../dotfiles/README.md)
 - [Test Driven Development by Example](../test-driven-development-by-example/README.md)
+- [userscript header](../ush/README.md)
 - [casaub0n pages](../../apps/casaub0n-page/README.md)
 - [casaub0n astro](../../apps/casaub0n-astro/README.md)
 - [catalog - storybook](../../apps/catalog/README.md)
