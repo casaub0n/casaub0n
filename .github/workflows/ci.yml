@@ -1,7 +1,11 @@
 # https://turborepo.org/docs/ci/github-actions
 # https://kotaro7750.hatenablog.com/entry/dotfile_ci
-name: workflow by turbo cache
-on: [push]
+# https://qiita.com/nacam403/items/3e2a5df5e88ba20aa76a
+name: workflow monorepo with turbo cache
+on:
+  push:
+    paths-ignore:
+      - "*.md"
 
 jobs:
   dotfiles:
