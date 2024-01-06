@@ -50,6 +50,9 @@ As they say, 'live and learn.'
 - [catalog - storybook](../../apps/catalog/README.md)
 - [My web addon](../maddon/README.md)
 
+**rust project**
+- [direct2d](../crates/direct2d)
+
 ## storybook
 
 [storybook GitHub pages](https://casaub0n.github.io/casaub0n/)
