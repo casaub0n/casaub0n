@@ -1,8 +1,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![PNPM](https://img.shields.io/badge/pnpm-%234a4a4a.svg?style=for-the-badge&logo=pnpm&logoColor=f69220)
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-![Turborepo](https://img.shields.io/badge/Turborepo-EF4444.svg?style=for-the-badge&logo=Turborepo&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+[![PNPM](https://img.shields.io/badge/pnpm-%234a4a4a.svg?style=for-the-badge&logo=pnpm&logoColor=f69220)](https://pnpm.io/)
+[![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com/)
+[![Turborepo](https://img.shields.io/badge/Turborepo-EF4444.svg?style=for-the-badge&logo=Turborepo&logoColor=white)](https://turbo.build/repo)
+[![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/casaub0n/casaub0n/actions)
 
 This repository is experimental apps and profile readme
 
@@ -16,7 +16,9 @@ This repository is experimental apps and profile readme
 
 ### attention
 
-turbo daemon process is failed on Windows: imformation👉 https://github.com/vercel/turbo/issues/2034
+~turbo daemon process is failed on Windows: imformation👉 https://github.com/vercel/turbo/issues/2034~
+
+Currently, it's fine.
 
 ## Why do I use rimraf
 
@@ -37,6 +39,15 @@ But in PowerShell, a single-quoted string in a double-quoted string works differ
 ```terminal
 As they say, 'live and learn.'
 ```
+
+## Projects
+
+- [dotfiles](../dotfiles/README.md)
+- [Test Driven Development by Example](../test-driven-development-by-example/README.md)
+- [casaub0n pages](../../apps/casaub0n-page/README.md)
+- [casaub0n astro](../../apps/casaub0n-astro/README.md)
+- [catalog - storybook](../../apps/catalog/README.md)
+- [My web addon](../maddon/README.md)
 
 ## storybook
 
