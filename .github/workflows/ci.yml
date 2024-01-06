@@ -5,7 +5,7 @@ name: workflow monorepo with turbo cache
 on:
   push:
     paths-ignore:
-      - "*.md"
+      - "**.md"
 
 jobs:
   dotfiles:
