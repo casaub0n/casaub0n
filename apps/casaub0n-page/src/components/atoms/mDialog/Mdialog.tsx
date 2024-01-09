@@ -2,7 +2,7 @@ import { useRef, type ComponentPropsWithoutRef, type FC, useEffect, useCallback 
 
 import clsx from "clsx";
 
-import css from "@/utils/pandaLoader";
+import { button, defaultDialogInnerStyle, defaultDialogStyle } from "./Mdialog.css";
 
 type Props = {
   /** 開閉を管理する Flag */
@@ -72,27 +72,6 @@ export const Mdialog: FC<Props> = ({ className, onClose, isOpen, dialogStyle, di
     []
   );
 
-  const defaultDialogStyle = css({
-    padding: 0,
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    border: "1px solid black",
-    borderRadius: "8px",
-  })
-
-  const defaultDialogInnerStyle = css({
-    width: "500px",
-    height: "500px",
-    padding: "1em",
-    textAlign: "center",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-evenly",
-    alignItems: "center",
-  })
-
   return (
     <dialog {...props} className={clsx(dialogStyle ? dialogStyle : defaultDialogStyle)} ref={dialogRef} onClick={() => {
       onCloseDialog();
@@ -101,7 +80,7 @@ export const Mdialog: FC<Props> = ({ className, onClose, isOpen, dialogStyle, di
         handleClickContent(e);
       }} className={clsx(dialogInnerStyle ? dialogInnerStyle : defaultDialogInnerStyle)}>
         <h2>Dialog Test</h2>
-        <button onClick={() => onCloseDialog()} className={clsx(css({width: "60px", height: "30px" }))}>Close</button>
+        <button onClick={() => onCloseDialog()} className={clsx(button)}>Close</button>
       </div>
     </dialog>
   )
