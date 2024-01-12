@@ -1,7 +1,6 @@
 import fs from "fs/promises";
 import path from "path";
 
-import { glob } from "glob";
 import { JSDOM } from "jsdom";
 
 import { DoSomethingError, Failure, Success } from "./utils/Result";
@@ -92,19 +91,18 @@ export const filterHtml = () => {
   const month_html = readData("./src/input_data");
   if (month_html.isSuccess()) {
     (async () => {
-      const htmlFiles = await glob(month_html.value);
       let outPutString = "" + preHtmlTag;
-      let count = 0;
-      htmlFiles.forEach((file) => {
-        (async () => {
-          const rawFile = await fs.readFile(file, "utf-8");
-          const htmlFile = rawFile.replace(/id='liststd'/g, "class='listd'");
-          const content = getContent(htmlFile, count + 1);
-          if (content.isSuccess()) {
-            outPutString = outPutString + preTag + "\n" + content.value + "\n" + endTag + "\n";
-          }
-        })();
-      });
+      for (let i = 1; i < 13; i++) {
+        const file = "src\\input_data\\" + i.toString() + ".html";
+        const rawFile = await fs.readFile(file, "utf-8");
+        const htmlFile = rawFile.replace(/id='liststd'/g, "class='listd'");
+        const month = path.basename(file, ".html");
+
+        const content = getContent(htmlFile, Number(month));
+        if (content.isSuccess()) {
+          outPutString = outPutString + preTag + "\n" + content.value + "\n" + endTag + "\n";
+        }
+      }
       outPutString = outPutString + endHtmlTag;
       await makeHtmlFile(outPutString);
     })();
