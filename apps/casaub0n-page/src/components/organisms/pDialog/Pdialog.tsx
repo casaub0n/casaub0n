@@ -4,8 +4,7 @@ import clsx from "clsx";
 
 import { Mdialog } from "@/components/atoms/mDialog";
 
-import css from "@/utils/pandaLoader";
-
+import { div } from "./Pdialog.css";
 
 type Props = ComponentPropsWithoutRef<"div">;
 
@@ -26,7 +25,7 @@ export const Pdialog: FC<Props> = ({...props}) => {
   return (
     <div {...props}>
       {/* Dialogを Openする Btn */}
-      <div className={clsx(css({textAlign: "center"}))}>
+      <div className={clsx(div)}>
         <button onClick={() => openDialog()}>Dialog Open</button>
       </div>
 

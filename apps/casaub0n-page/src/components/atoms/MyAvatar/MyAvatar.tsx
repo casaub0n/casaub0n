@@ -3,7 +3,8 @@ import type { ComponentPropsWithoutRef, FC } from "react";
 import clsx from "clsx";
 import Image from "next/image";
 
-import css from "@/utils/pandaLoader";
+
+import { div, image } from "./MyAvatar.css";
 
 type Props = ComponentPropsWithoutRef<"div">;
 
@@ -26,8 +27,8 @@ type Props = ComponentPropsWithoutRef<"div">;
  */
 export const MyAvatar: FC<Props> = ({ className, ...props }) => {
   return (
-    <div className={clsx(className, css({position: 'relative', width: '144px', height: '144px'}))} {...props}>
-      <Image className={css({ borderRadius: "50%", objectFit: "cover" })} alt='my picture' fill src="/images/me.jpg" />
+    <div className={clsx(className, div)} {...props}>
+      <Image className={clsx(image)} alt='my picture' fill src="/images/me.jpg" />
     </div>
   );
 };

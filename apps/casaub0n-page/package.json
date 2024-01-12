@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prepare": "panda codegen",
     "dev": "next dev",
     "build": "rimraf .next && next build",
     "start": "next start",
@@ -22,6 +21,8 @@
     "@radix-ui/react-form": "^0.0.3",
     "@radix-ui/react-progress": "^1.0.3",
     "@stitches/react": "^1.2.8",
+    "@vanilla-extract/css": "^1.14.0",
+    "@vanilla-extract/dynamic": "^2.1.0",
     "clsx": "2.1.0",
     "jotai": "^2.6.1",
     "next": "14.0.4",
@@ -34,8 +35,6 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^5.0.0",
-    "@pandacss/dev": "^0.25.0",
     "@storybook/react": "7.6.7",
     "@storybook/testing-library": "^0.2.2",
     "@testing-library/jest-dom": "^6.2.0",
@@ -45,6 +44,7 @@
     "@types/node": "20.10.6",
     "@types/react": "18.2.47",
     "@types/react-dom": "18.2.18",
+    "@vanilla-extract/next-plugin": "^2.3.2",
     "autoprefixer": "^10.4.16",
     "eslint-config-custom": "workspace:^",
     "jest": "^29.7.0",
