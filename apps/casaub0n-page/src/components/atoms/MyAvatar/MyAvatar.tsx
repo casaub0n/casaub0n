@@ -28,7 +28,7 @@ type Props = ComponentPropsWithoutRef<"div">;
 export const MyAvatar: FC<Props> = ({ className, ...props }) => {
   return (
     <div className={clsx(className, div)} {...props}>
-      <Image className={clsx(image)} alt='my picture' fill src="/images/me.jpg" />
+      <Image className={clsx(image)} alt='my picture' fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="/images/me.jpg" />
     </div>
   );
 };
