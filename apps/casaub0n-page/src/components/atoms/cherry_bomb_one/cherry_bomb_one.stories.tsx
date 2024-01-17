@@ -1,8 +1,9 @@
 import clsx from "clsx";
 
+import type { Meta, StoryObj } from "@storybook/react";
+
 import { cherry_bomb_one } from "@/app/fonts";
 
-import type { Meta, StoryObj } from "@storybook/react";
 
 const CherryBombOneText = () => (
   <p className={clsx(cherry_bomb_one.className)}>
@@ -15,12 +16,20 @@ const CherryBombOneText = () => (
 const meta = {
   title: "atoms/cherry bomb one",
   component: CherryBombOneText,
+  tags: ["autodocs"],
 } satisfies Meta<typeof CherryBombOneText>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
+/**
+ * deployed story
+ * @see https://casaub0n.github.io/casaub0n/?path=/story/casaub0n-page-atoms-cherry-bomb-one--default
+ *
+ * local story
+ * @see http://localhost:6006/?path=/story/casaub0n-page-atoms-cherry-bomb-one--default
+ */
 export const Default: Story = {
   name: "cherry bomb one text",
 };
