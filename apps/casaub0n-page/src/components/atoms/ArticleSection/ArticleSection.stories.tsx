@@ -5,13 +5,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 const meta = {
   title: "atoms/Article Section",
   component: ArticleSection,
-  parameters: {
-    docs: {
-      description: {
-        component: "section tag, it is defined h2, h3 and list",
-      },
-    },
-  },
+  tags: ["autodocs"],
 } satisfies Meta<typeof ArticleSection>;
 
 export default meta;

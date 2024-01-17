@@ -5,6 +5,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 const meta = {
   title: "atoms/Tweet Skelton",
   component: TweetSkeleton,
+  tags: ["autodocs"],
 } satisfies Meta<typeof TweetSkeleton>;
 
 export default meta;

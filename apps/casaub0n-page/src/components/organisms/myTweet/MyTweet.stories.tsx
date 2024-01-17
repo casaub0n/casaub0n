@@ -5,13 +5,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 const meta = {
   title: "organisms/MyTweet",
   component: MyTweet,
-  parameters: {
-    docs: {
-      description: {
-        component: "my tweet",
-      },
-    },
-  },
+  tags: ["autodocs"],
 } satisfies Meta<typeof MyTweet>;
 
 export default meta;

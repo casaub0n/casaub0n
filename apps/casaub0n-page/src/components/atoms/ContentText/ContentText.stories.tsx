@@ -5,13 +5,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 const meta = {
   title: "atoms/Content text",
   component: ContentText,
-  parameters: {
-    docs: {
-      description: {
-        component: "p tag",
-      },
-    },
-  },
+  tags: ["autodocs"],
 } satisfies Meta<typeof ContentText>;
 
 export default meta;
