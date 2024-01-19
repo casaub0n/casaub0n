@@ -36,7 +36,7 @@ importers:
   apps/casaub0n-astro:
     dependencies:
       astro:
-        specifier: ^4.1.2
+        specifier: ^4.2.1
         version: 4.2.1
       tsconfig:
         specifier: ^7.0.0
@@ -51,7 +51,7 @@ importers:
         specifier: ^1.0.7
         version: 1.0.7(@prisma/client@5.8.1)(next-auth@4.24.5)
       '@prisma/client':
-        specifier: ^5.8.0
+        specifier: ^5.8.1
         version: 5.8.1(prisma@5.8.1)
       '@radix-ui/colors':
         specifier: 3.0.0
@@ -81,7 +81,7 @@ importers:
         specifier: 2.1.0
         version: 2.1.0
       jotai:
-        specifier: ^2.6.1
+        specifier: ^2.6.2
         version: 2.6.2(@types/react@18.2.48)(react@18.2.0)
       next:
         specifier: 14.1.0
@@ -136,10 +136,10 @@ importers:
         specifier: 18.2.18
         version: 18.2.18
       '@vanilla-extract/next-plugin':
-        specifier: ^2.3.2
+        specifier: ^2.3.3
         version: 2.3.3(@types/node@20.11.5)(next@14.1.0)(webpack@5.89.0)
       autoprefixer:
-        specifier: ^10.4.16
+        specifier: ^10.4.17
         version: 10.4.17(postcss@8.4.33)
       eslint-config-custom:
         specifier: workspace:^
@@ -157,10 +157,10 @@ importers:
         specifier: ^2.0.11
         version: 2.0.11
       prettier:
-        specifier: ^3.2.1
+        specifier: ^3.2.4
         version: 3.2.4
       prisma:
-        specifier: ^5.8.0
+        specifier: ^5.8.1
         version: 5.8.1
       react:
         specifier: 18.2.0
@@ -184,7 +184,7 @@ importers:
   apps/catalog:
     devDependencies:
       '@storybook/addon-docs':
-        specifier: ^7.6.8
+        specifier: ^7.6.10
         version: 7.6.10(react-dom@18.2.0)(react@18.2.0)
       '@storybook/addon-essentials':
         specifier: 7.6.10
@@ -202,7 +202,7 @@ importers:
         specifier: ^0.0.6
         version: 0.0.6(webpack@5.89.0)
       '@storybook/blocks':
-        specifier: ^7.6.8
+        specifier: ^7.6.10
         version: 7.6.10(react-dom@18.2.0)(react@18.2.0)
       '@storybook/nextjs':
         specifier: 7.6.10
@@ -211,7 +211,7 @@ importers:
         specifier: 7.6.10
         version: 7.6.10(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3)
       '@vanilla-extract/webpack-plugin':
-        specifier: ^2.3.1
+        specifier: ^2.3.2
         version: 2.3.2(less@4.2.0)(webpack@5.89.0)
       mini-css-extract-plugin:
         specifier: ^2.7.7
@@ -259,7 +259,7 @@ importers:
         specifier: ^2.1.0
         version: 2.1.0
       next:
-        specifier: ^14.0.4
+        specifier: ^14.1.0
         version: 14.1.0(@babel/core@7.23.7)(@opentelemetry/api@1.7.0)(react-dom@18.2.0)(react@18.2.0)
       postcss:
         specifier: 8.4.33
@@ -296,10 +296,10 @@ importers:
         specifier: ^8.56.0
         version: 8.56.0
       eslint-config-next:
-        specifier: ^14.0.4
+        specifier: ^14.1.0
         version: 14.1.0(eslint@8.56.0)(typescript@5.3.3)
       prettier:
-        specifier: ^3.2.1
+        specifier: ^3.2.4
         version: 3.2.4
 
   packages/dotfiles: {}
@@ -7609,7 +7609,7 @@ packages:
   /@types/node-fetch@2.6.11:
     resolution: {integrity: sha512-24xFj9R5+rfQJLRyM56qh+wnVSYhyXC2tkoBndtY0U+vubqNsYXGjufB2nn8Q6gt0LrARwL6UBtMCSVCwl4B1g==}
     dependencies:
-      '@types/node': 20.11.5
+      '@types/node': 18.19.8
       form-data: 4.0.0
     dev: true
 
@@ -9680,7 +9680,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001579
-      electron-to-chromium: 1.4.638
+      electron-to-chromium: 1.4.639
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.22.2)
 
@@ -11380,8 +11380,8 @@ packages:
       jake: 10.8.7
     dev: true
 
-  /electron-to-chromium@1.4.638:
-    resolution: {integrity: sha512-gpmbAG2LbfPKcDaL5m9IKutKjUx4ZRkvGNkgL/8nKqxkXsBVYykVULboWlqCrHsh3razucgDJDuKoWJmGPdItA==}
+  /electron-to-chromium@1.4.639:
+    resolution: {integrity: sha512-CkKf3ZUVZchr+zDpAlNLEEy2NJJ9T64ULWaDgy3THXXlPVPkLu3VOs9Bac44nebVtdwl2geSj6AxTtGDOxoXhg==}
 
   /elliptic@6.5.4:
     resolution: {integrity: sha512-iLhC6ULemrljPZb+QutR5TQGB+pdW6KGD5RSegS+8sorOZT+rdQFbsQFJgvN3eRqNALqJer4oQ16YvJHlU8hzQ==}
@@ -15123,7 +15123,7 @@ packages:
     resolution: {integrity: sha512-7vuh85V5cdDofPyxn58nrPjBktZo0u9x1g8WtjQol+jZDaE+fhN+cIvTj11GndBnMnyfrUOG1sZQxCdjKh+DKg==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 20.11.5
+      '@types/node': 18.19.8
       merge-stream: 2.0.0
       supports-color: 8.1.1
     dev: true
