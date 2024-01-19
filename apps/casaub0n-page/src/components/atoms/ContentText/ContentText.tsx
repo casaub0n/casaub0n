@@ -7,5 +7,5 @@ import styles from "./styles.module.css";
 type Props = ComponentPropsWithoutRef<"p">;
 
 export const ContentText: FC<Props> = ({ className, ...props }) => {
-  return <p {...props} className={clsx(className, styles.module)} />;
+  return <p className={clsx(className, styles.module)} {...props} />;
 };

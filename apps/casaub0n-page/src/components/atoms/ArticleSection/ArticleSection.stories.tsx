@@ -14,10 +14,11 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
+    className: "article-component",
     children: (
       <>
         <h2>Article Example: 記事画面</h2>
-        <p></p>
+        <p>Hellow World!</p>
       </>
     ),
   },

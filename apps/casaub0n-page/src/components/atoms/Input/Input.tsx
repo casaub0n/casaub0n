@@ -31,6 +31,6 @@ const StyledInput = styled("input", {
 
 export const Input = forwardRef<HTMLInputElement, ComponentPropsWithoutRef<"input">>(
   function InputBase({ className, ...props }, ref) {
-    return <StyledInput type='email' {...props} className={clsx(className)} ref={ref} />;
+    return <StyledInput type='email'className={clsx(className)} ref={ref} {...props} />;
   },
 );
