@@ -15,7 +15,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   name: "Default QuestionForm",
-  tags: ["autodocs"],
+  // tags: ["autodocs"],
   args: {
     title: "Enter your question",
     "aria-labelledby": "quizeTitle",

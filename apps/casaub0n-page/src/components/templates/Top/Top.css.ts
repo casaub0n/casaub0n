@@ -1,18 +1,18 @@
 import { style } from "@vanilla-extract/css";
 
-export const section = style({
+export const styledSection = style({
   display: "grid",
   placeItems: "center",
 });
 
-export const myAvatar = style({
+export const styledMyAvatar = style({
   marginTop: "2rem",
 });
 
-export const h1 = style({
+export const styledH1 = style({
   paddingTop: "10",
 });
 
-export const div = style({
+export const styledDiv = style({
   paddingTop: "10",
 });

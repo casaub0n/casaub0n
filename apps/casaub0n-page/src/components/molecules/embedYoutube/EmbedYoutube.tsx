@@ -12,7 +12,7 @@ type Props = ComponentPropsWithoutRef<"div">;
  */
 export const EmbedYoutube: FC<Props> = ({ className, ...props }) => {
   return (
-    <div className={clsx({ className, ...props })}>
+    <div className={clsx(className)} {...props}>
       <YouTube id={"wm5gMKuwSYk"} title='Next.js conf' />
     </div>
   );
