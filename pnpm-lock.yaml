@@ -247,8 +247,8 @@ importers:
         specifier: 20.11.7
         version: 20.11.7
       '@vercel/postgres':
-        specifier: ^0.5.1
-        version: 0.5.1
+        specifier: ^0.7.0
+        version: 0.7.2
       autoprefixer:
         specifier: 10.4.17
         version: 10.4.17(postcss@8.4.33)
@@ -4007,8 +4007,8 @@ packages:
       tar-fs: 2.1.1
     dev: true
 
-  /@neondatabase/serverless@0.6.0:
-    resolution: {integrity: sha512-qXxBRYN0m2v8kVQBfMxbzNGn2xFAhTXFibzQlE++NfJ56Shz3m7+MyBBtXDlEH+3Wfa6lToDXf1MElocY4sJ3w==}
+  /@neondatabase/serverless@0.7.2:
+    resolution: {integrity: sha512-wU3WA2uTyNO7wjPs3Mg0G01jztAxUxzd9/mskMmtPwPTjf7JKWi9AW5/puOGXLxmZ9PVgRFeBVRVYq5nBPhsCg==}
     dependencies:
       '@types/pg': 8.6.6
     dev: false
@@ -8251,11 +8251,11 @@ packages:
       - supports-color
     dev: true
 
-  /@vercel/postgres@0.5.1:
-    resolution: {integrity: sha512-JKl8QOBIDnifhkxAhIKtY0A5Tb8oWBf2nzZhm0OH7Ffjsl0hGVnDL2w1/FCfpX8xna3JAWM034NGuhZfTFdmiw==}
+  /@vercel/postgres@0.7.2:
+    resolution: {integrity: sha512-IqR/ZAvoPGcPaXl9eWWB5KaA+w/81RzZa/18P4izQRHpNBkTGt9HwGfYi9+wut5UgxNq4QSX9A7HIQR6QDvX2Q==}
     engines: {node: '>=14.6'}
     dependencies:
-      '@neondatabase/serverless': 0.6.0
+      '@neondatabase/serverless': 0.7.2
       bufferutil: 4.0.8
       utf-8-validate: 6.0.3
       ws: 8.14.2(bufferutil@4.0.8)(utf-8-validate@6.0.3)
