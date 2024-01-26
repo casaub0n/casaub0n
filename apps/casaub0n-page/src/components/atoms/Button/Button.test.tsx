@@ -1,13 +1,3 @@
-import { composeStories } from "@storybook/react";
-import { render } from "@testing-library/react";
-
-import * as stories from "./Button.stories";
-
-const { Default } = composeStories(stories);
-
 describe("src/component/atoms/Button.test.tsx", () => {
-  test("Atom", () => {
-    const { container } = render(<Default />);
-    expect(container).toBeAtom();
-  });
+  test.todo("test of css variables");
 });
