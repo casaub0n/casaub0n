@@ -1,9 +1,73 @@
-import { style, styleVariants } from "@vanilla-extract/css";
+/**
+ * https://github.com/shuuuu10-01/useful-react-components/blob/main/src/components/Button/Button.module.css
+ */
+
+import { createVar, style, styleVariants } from "@vanilla-extract/css";
+
+/**
+ * I have not understood variable https://vanilla-extract.style/documentation/api/create-var/
+ * color scheme is here: https://github.com/shuuuu10-01/useful-react-components/blob/main/src/index.css
+ */
+export const bgColor = createVar();
+
+export const backgroundBlue = style({
+  vars: {
+    [bgColor]: "#1ea7fd",
+  },
+});
+
+export const backgroundBlueHover1 = style({
+  vars: {
+    [bgColor]: "#0787d7",
+  },
+});
+
+export const backgroundBlueHover2 = style({
+  vars: {
+    [bgColor]: "#daf0ff",
+  },
+});
+
+export const backgroundBlueActive1 = style({
+  vars: {
+    [bgColor]: "#0075be",
+  },
+});
+
+export const backgroundBlueActive2 = style({
+  vars: {
+    [bgColor]: "#b0e1ff",
+  },
+});
+
+export const backgroundWhite = style({
+  vars: {
+    [bgColor]: "#fff",
+  },
+});
+
+export const backgroundRed = style({
+  vars: {
+    [bgColor]: "#fc2d37",
+  },
+});
+
+export const backgroundRedHover = style({
+  vars: {
+    [bgColor]: "#d93535",
+  },
+});
+
+export const backgroundRedActive = style({
+  vars: {
+    [bgColor]: "#d30d17",
+  },
+});
 
 export const button = style({
   fontWeight: "bold",
   cursor: "pointer",
-  backgroundColor: "var(--background-white)",
+  backgroundColor: backgroundWhite,
   border: "2px solid transparent",
   ":disabled": {
     pointerEvents: "none",
@@ -31,27 +95,33 @@ export const size = styleVariants({
 
 export const visual = styleVariants({
   primary: {
-    color: "var(--background-white)",
-    backgroundColor: "var(--background-blue)",
+    color: backgroundWhite,
+    backgroundColor: backgroundBlue,
     ":hover": {
-      backgroundColor: "var(--background-blue-hover1)",
+      backgroundColor: backgroundBlueHover1,
     },
     ":active": {
-      backgroundColor: "var(--background-blue-active1)",
+      backgroundColor: backgroundBlueActive1,
     },
   },
   secondary: {
-    color: "var(--background-blue)",
-    borderColor: "var(--background-blue)",
+    color: backgroundBlue,
+    borderColor: backgroundBlue,
     ":hover": {
-      backgroundColor: "var(--background-blue-hover2)",
+      backgroundColor: backgroundBlueHover2,
     },
     ":active": {
-      backgroundColor: "var(--background-blue-active2)",
+      backgroundColor: backgroundBlueActive2,
     },
   },
   alert: {
-    color: "var(--background-white)",
-    backgroundColor: "var(--background-red)",
+    color: backgroundWhite,
+    backgroundColor: backgroundRed,
+    ":hover": {
+      backgroundColor: backgroundRedHover,
+    },
+    ":active": {
+      backgroundColor: backgroundRedActive,
+    },
   },
 });

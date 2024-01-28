@@ -12,6 +12,11 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
+/**
+ * ## TODO
+ *
+ * default color only works, others is not...
+ */
 export const Default: Story = {
   name: "Default Button",
   args: {
@@ -42,3 +47,13 @@ export const SecondaryButton: Story = {
     children: "Sample",
   },
 };
+
+export const AlertButton: Story = {
+  args: {
+    visualVariant: "alert",
+    sizeVariant: "medium",
+    disabled: false,
+    className: "sample-button",
+    children: "Sample"
+  }
+}
