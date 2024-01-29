@@ -1,9 +1,31 @@
+/**
+ * https://github.com/shuuuu10-01/useful-react-components/blob/main/src/components/Button/Button.module.css
+ */
+
 import { style, styleVariants } from "@vanilla-extract/css";
+
+const backgroundBlue = "#1ea7fd";
+
+const backgroundBlueHover1 = "#0787d7";
+
+const backgroundBlueHover2 = "#daf0ff";
+
+const backgroundBlueActive1 = "#0075be";
+
+const backgroundBlueActive2 = "#b0e1ff";
+
+const backgroundWhite = "#fff";
+
+const backgroundRed = "#fc2d37";
+
+const backgroundRedHover = "#d93535";
+
+const backgroundRedActive = "#d30d17";
 
 export const button = style({
   fontWeight: "bold",
   cursor: "pointer",
-  backgroundColor: "var(--background-white)",
+  backgroundColor: backgroundWhite,
   border: "2px solid transparent",
   ":disabled": {
     pointerEvents: "none",
@@ -31,27 +53,33 @@ export const size = styleVariants({
 
 export const visual = styleVariants({
   primary: {
-    color: "var(--background-white)",
-    backgroundColor: "var(--background-blue)",
+    color: backgroundWhite,
+    backgroundColor: backgroundBlue,
     ":hover": {
-      backgroundColor: "var(--background-blue-hover1)",
+      backgroundColor: backgroundBlueHover1,
     },
     ":active": {
-      backgroundColor: "var(--background-blue-active1)",
+      backgroundColor: backgroundBlueActive1,
     },
   },
   secondary: {
-    color: "var(--background-blue)",
-    borderColor: "var(--background-blue)",
+    color: backgroundBlue,
+    borderColor: backgroundBlue,
     ":hover": {
-      backgroundColor: "var(--background-blue-hover2)",
+      backgroundColor: backgroundBlueHover2,
     },
     ":active": {
-      backgroundColor: "var(--background-blue-active2)",
+      backgroundColor: backgroundBlueActive2,
     },
   },
   alert: {
-    color: "var(--background-white)",
-    backgroundColor: "var(--background-red)",
+    color: backgroundWhite,
+    backgroundColor: backgroundRed,
+    ":hover": {
+      backgroundColor: backgroundRedHover,
+    },
+    ":active": {
+      backgroundColor: backgroundRedActive,
+    },
   },
 });

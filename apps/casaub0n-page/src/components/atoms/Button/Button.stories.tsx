@@ -18,7 +18,8 @@ export const Default: Story = {
     visualVariant: "primary",
     sizeVariant: "large",
     disabled: false,
-    className: "Sample"
+    className: "sample-button",
+    children: "Sample"
   }
 };
 
@@ -27,6 +28,7 @@ export const PrimaryButton: Story = {
     visualVariant: "primary",
     sizeVariant: "medium",
     disabled: false,
+    className: "sample-button",
     children: "Sample",
   }
 }
@@ -36,6 +38,17 @@ export const SecondaryButton: Story = {
     visualVariant: "secondary",
     sizeVariant: "medium",
     disabled: false,
+    className: "sample-button",
     children: "Sample",
   },
 };
+
+export const AlertButton: Story = {
+  args: {
+    visualVariant: "alert",
+    sizeVariant: "medium",
+    disabled: false,
+    className: "sample-button",
+    children: "Sample"
+  }
+}
