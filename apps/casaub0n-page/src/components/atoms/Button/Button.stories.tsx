@@ -12,18 +12,13 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-/**
- * ## TODO
- *
- * default color only works, others is not...
- */
 export const Default: Story = {
   name: "Default Button",
   args: {
     visualVariant: "primary",
     sizeVariant: "large",
     disabled: false,
-    className: "Sample-button",
+    className: "sample-button",
     children: "Sample"
   }
 };
@@ -33,7 +28,7 @@ export const PrimaryButton: Story = {
     visualVariant: "primary",
     sizeVariant: "medium",
     disabled: false,
-    className: "Sample-button",
+    className: "sample-button",
     children: "Sample",
   }
 }
@@ -43,7 +38,7 @@ export const SecondaryButton: Story = {
     visualVariant: "secondary",
     sizeVariant: "medium",
     disabled: false,
-    className: "Sample-button",
+    className: "sample-button",
     children: "Sample",
   },
 };

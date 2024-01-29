@@ -2,67 +2,25 @@
  * https://github.com/shuuuu10-01/useful-react-components/blob/main/src/components/Button/Button.module.css
  */
 
-import { createVar, style, styleVariants } from "@vanilla-extract/css";
+import { style, styleVariants } from "@vanilla-extract/css";
 
-/**
- * I have not understood variable https://vanilla-extract.style/documentation/api/create-var/
- * color scheme is here: https://github.com/shuuuu10-01/useful-react-components/blob/main/src/index.css
- */
-export const bgColor = createVar();
+const backgroundBlue = "#1ea7fd";
 
-export const backgroundBlue = style({
-  vars: {
-    [bgColor]: "#1ea7fd",
-  },
-});
+const backgroundBlueHover1 = "#0787d7";
 
-export const backgroundBlueHover1 = style({
-  vars: {
-    [bgColor]: "#0787d7",
-  },
-});
+const backgroundBlueHover2 = "#daf0ff";
 
-export const backgroundBlueHover2 = style({
-  vars: {
-    [bgColor]: "#daf0ff",
-  },
-});
+const backgroundBlueActive1 = "#0075be";
 
-export const backgroundBlueActive1 = style({
-  vars: {
-    [bgColor]: "#0075be",
-  },
-});
+const backgroundBlueActive2 = "#b0e1ff";
 
-export const backgroundBlueActive2 = style({
-  vars: {
-    [bgColor]: "#b0e1ff",
-  },
-});
+const backgroundWhite = "#fff";
 
-export const backgroundWhite = style({
-  vars: {
-    [bgColor]: "#fff",
-  },
-});
+const backgroundRed = "#fc2d37";
 
-export const backgroundRed = style({
-  vars: {
-    [bgColor]: "#fc2d37",
-  },
-});
+const backgroundRedHover = "#d93535";
 
-export const backgroundRedHover = style({
-  vars: {
-    [bgColor]: "#d93535",
-  },
-});
-
-export const backgroundRedActive = style({
-  vars: {
-    [bgColor]: "#d30d17",
-  },
-});
+const backgroundRedActive = "#d30d17";
 
 export const button = style({
   fontWeight: "bold",
