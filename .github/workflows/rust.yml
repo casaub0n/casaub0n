@@ -1,12 +1,18 @@
+# https://github.com/microsoft/windows-rs/blob/master/.github/workflows/
 name: rust-action for Windows
 
 on:
-  pull_request:
   push:
     paths-ignore:
       - "**.md"
-    branches:
-      - master
+      - ".github/**"
+      - "apps/**"
+      - "packages/**"
+      - "**.js"
+      - "pnpm**"
+      - "package.json"
+      - "renovate.json"
+      - ".node-version"
 
 env:
   RUSTFLAGS: -Dwarnings
