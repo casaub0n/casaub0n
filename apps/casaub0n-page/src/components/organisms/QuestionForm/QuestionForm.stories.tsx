@@ -7,6 +7,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 const meta = {
   title: "organisms/question form",
   component: QuestionForm,
+  tags: ["autodocs"],
 } satisfies Meta<typeof QuestionForm>;
 
 export default meta;
@@ -15,7 +16,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   name: "Default QuestionForm",
-  // tags: ["autodocs"],
   args: {
     title: "Enter your question",
     "aria-labelledby": "quizeTitle",
