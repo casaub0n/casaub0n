@@ -13,6 +13,9 @@ on:
       - "package.json"
       - "renovate.json"
       - ".node-version"
+      - ".npmrc"
+      - ".textlintignore"
+      - "turbo.json"
 
 env:
   RUSTFLAGS: -Dwarnings
