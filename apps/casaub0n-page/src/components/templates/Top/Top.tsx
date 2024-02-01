@@ -5,9 +5,10 @@ import clsx from "clsx";
 import { MyAvatar } from "@/components/atoms/MyAvatar";
 import { MyTweet } from "@/components/organisms/myTweet";
 
+import { cherry_bomb_one } from "@/app/fonts";
+
 import { styledSection, styledMyAvatar, styledH1, styledDiv } from "./Top.css"
 
-import { cherry_bomb_one } from "@/app/fonts";
 
 type Props = ComponentPropsWithoutRef<"main">;
 
