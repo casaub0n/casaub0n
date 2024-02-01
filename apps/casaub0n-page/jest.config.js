@@ -11,7 +11,7 @@ const createJestConfig = nextJest({
   dir: "./",
 });
 
-/** @type {import('@jest/types').Config.InitialOptions} */
+/** @type { import('jest').Config } */
 const customJestConfig = {
   // Add more setup options before each test is run
   // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
