@@ -27,3 +27,11 @@ GitHub pages doesn't support image files.
 [staticDirs](https://storybook.js.org/docs/react/api/main-config-static-dirs) is a good solution, but it is impossible because in this case, we wanna use GitHub's asset files as example ☞ https://github.com/casaub0n/casaub0n/blob/main/apps/casaub0n-page/public/images/me.jpg?raw=true
 
 so it must use regular expression.
+
+## Tests results
+
+**local**
+[Tests results report](./__reports__/jest.html)
+
+**GitHub Pages**
+[Test results report](https://casaub0n.github.io/casaub0n/__reports__/jest.html)

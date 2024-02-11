@@ -4,7 +4,8 @@
   "license": "UNLICENSED",
   "scripts": {
     "storybook": "storybook dev -p 6006",
-    "build": "storybook build",
+    "mv-test-results": "node mv-test-result.js",
+    "build": "storybook build && pnpm mv-test-results",
     "start": "serve storybook-static"
   },
   "devDependencies": {
@@ -18,6 +19,7 @@
     "@storybook/nextjs": "7.6.14",
     "@storybook/react": "7.6.14",
     "@vanilla-extract/webpack-plugin": "^2.3.6",
+    "fs-extra": "^11.2.0",
     "mini-css-extract-plugin": "^2.8.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",

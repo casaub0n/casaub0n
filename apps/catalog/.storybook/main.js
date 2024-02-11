@@ -14,6 +14,10 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 const config = {
   stories: [
     {
+      directory: "../docs/",
+      titlePrefix: "docs",
+    },
+    {
       directory: "../../casaub0n-page/src/",
       titlePrefix: "casaub0n-page",
     },
