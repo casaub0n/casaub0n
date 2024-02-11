@@ -30,4 +30,8 @@ so it must use regular expression.
 
 ## Tests results
 
-[Tests report](./__reports__/jest.html)
+**local**
+[Tests results report](./__reports__/jest.html)
+
+**GitHub Pages**
+[Test results report](https://casaub0n.github.io/casaub0n/__reports__/jest.html)
