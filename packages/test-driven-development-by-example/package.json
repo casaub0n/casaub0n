@@ -25,6 +25,8 @@
     "prebuild": "pnpm rmdist",
     "build:module": "tsup src/index.ts --format cjs --dts --env.TABLE_HEAD something",
     "build:test": "esbuild src/money.test.ts --bundle --define:process.env.NODE_ENV=\\\"production\\\" --minify --platform=node --target=node20 --outfile=dist/money.test.js",
+    "test:coverage": "node --test --experimental-test-coverage ./dist/money.test.js",
+    "test:xml": "node --test --test-reporter=junit ./dist/money.test.js > ../../apps/casaub0n-astro/src/test-driven-development-by-example-report.xml",
     "build": "run-p build:module build:test",
     "start": "pnpm build && node dist/index.js"
   },
@@ -40,13 +42,13 @@
     "access": "public"
   },
   "devDependencies": {
-    "@types/node": "^20.11.14",
+    "@types/node": "^20.11.17",
     "esbuild": "^0.20.0",
     "eslint-config-custom": "workspace:^",
-    "npm-run-all2": "^6.0.0",
+    "npm-run-all2": "^6.1.2",
     "rimraf": "^5.0.5",
-    "tsup": "^8.0.1",
-    "tsx": "^4.7.0",
+    "tsup": "^8.0.2",
+    "tsx": "^4.7.1",
     "typescript": "^5.3.3"
   }
 }
