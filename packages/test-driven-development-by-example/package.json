@@ -18,7 +18,9 @@
     "node": ">=20"
   },
   "scripts": {
-    "test": "tsc --noEmit && node --import tsx src/money.test.ts",
+    "test:money": "tsc --noEmit && node --import tsx src/money.test.ts",
+    "test:algo": "tsc --noEmit && node --import tsx src/pyAlgo/pyAlgo.test.ts",
+    "test": "run-p test:money test:algo",
     "test:watch": "node --watch --no-warnings --import tsx src/money.test.ts",
     "test:ci": "pnpm test",
     "rmdist": "rimraf dist",
