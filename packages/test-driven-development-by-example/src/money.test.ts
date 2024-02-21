@@ -2,6 +2,14 @@ import { strict as assert } from "assert";
 import { test } from "node:test";
 
 import { Bank, Money, Sum } from "./money";
+import { getFirst } from "./pyAlgo";
+
+test("return head number", () => {
+  const oneToThree = getFirst([1, 2, 3]);
+  assert.deepEqual(oneToThree, 1);
+  const oneToTen = getFirst([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+  assert.deepEqual(oneToTen, 1);
+});
 
 test("multiplication", () => {
   const five = Money.doller(5);
