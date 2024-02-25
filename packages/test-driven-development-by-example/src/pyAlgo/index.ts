@@ -19,5 +19,7 @@ export const stringExpObjectMethod = (val: string) => {
   return val.match(/BC/);
 };
 
-export const specifyConstracta = new RegExp("ABC", "g");
-export const specifyLiteral = /ABC/g;
+export const ConstractaWithOptionG = new RegExp("ABC", "g");
+export const LiteralWithOptionG = /ABC/g;
+
+export const regExpOptionI = "ABC".match(/ABC/i);
