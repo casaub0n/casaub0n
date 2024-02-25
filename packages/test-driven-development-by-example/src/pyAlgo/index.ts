@@ -9,3 +9,15 @@ export const getSum = (myList: number[]) => {
   }
   return sum;
 };
+
+// regexp
+export const regExpObjectMethod = (val: string) => {
+  return /BC/.exec(val);
+};
+
+export const stringExpObjectMethod = (val: string) => {
+  return val.match(/BC/);
+};
+
+export const specifyConstracta = new RegExp("ABC", "g");
+export const specifyLiteral = /ABC/g;
