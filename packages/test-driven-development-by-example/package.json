@@ -21,7 +21,8 @@
     "test:money": "tsc --noEmit && node --import tsx src/money.test.ts",
     "test:algo": "tsc --noEmit && node --import tsx src/pyAlgo/pyAlgo.test.ts",
     "test": "run-p test:money test:algo",
-    "test:watch": "node --watch --no-warnings --import tsx src/money.test.ts",
+    "test:watch:money": "node --watch --no-warnings --import tsx src/money.test.ts",
+    "test:watch:algo": "node --watch --no-warnings --import tsx src/pyAlgo/pyAlgo.test.ts",
     "test:ci": "pnpm test",
     "rmdist": "rimraf dist",
     "prebuild": "pnpm rmdist",
@@ -44,7 +45,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@types/node": "^20.11.19",
+    "@types/node": "^20.11.20",
     "esbuild": "^0.20.1",
     "eslint-config-custom": "workspace:^",
     "npm-run-all2": "^6.1.2",
