@@ -1,5 +1,5 @@
 import { strict as assert } from "assert";
-import { test } from "node:test";
+import { test, todo } from "node:test";
 
 import {
   getFirst,
@@ -126,3 +126,14 @@ test("combine g with i option", () => {
 test("it matchs meta char", () => {
   if (metaRegExp) assert.deepStrictEqual(metaRegExp, ["?", "?", "?"]);
 });
+
+todo('["A"]');
+todo('["A", "B", "C"]');
+todo('["AB"]');
+todo('["AB"]');
+todo('["AB"]');
+todo('["AB", "CD"]');
+todo('["AB"]');
+todo('["CD"]');
+todo("null");
+todo('["あ", " 1 ", "!", "?", "*", "/", "-", "_"]');
