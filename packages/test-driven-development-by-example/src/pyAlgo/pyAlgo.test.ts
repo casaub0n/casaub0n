@@ -1,5 +1,5 @@
 import { strict as assert } from "assert";
-import { test } from "node:test";
+import { test, todo } from "node:test";
 
 import {
   getFirst,
@@ -98,6 +98,25 @@ test('"ABC\\nDEF" much "D" by Option "m"', () => {
   if (regExpOptionM) assert.deepStrictEqual(regExpOptionM[0], "D");
 });
 
-test('last index of "ABC" by Option "y" is 0', () => {
+test('By Option "y", Last index of "ABC" is 0', () => {
   assert.deepStrictEqual(regExpOptionY.lastIndex, 0);
 });
+
+test('By Option "y", the regexp much "ABC"', () => {
+  assert.deepStrictEqual(regExpOptionY.test("ABC"), true);
+});
+
+test("When from second word", () => {
+  regExpOptionY.lastIndex = 1;
+  assert.deepStrictEqual(regExpOptionY.test("ABC"), false);
+});
+
+test('When from second word and Option "y", the regexp much "ABC"', () => {
+  regExpOptionY.lastIndex = 1;
+  const hoge = "ABC".match(regExpOptionY);
+  if (hoge) assert.deepStrictEqual(hoge[0], "ABC");
+});
+
+todo("combine g and i option");
+
+todo("match meta char");
