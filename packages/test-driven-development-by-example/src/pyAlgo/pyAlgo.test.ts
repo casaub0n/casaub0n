@@ -1,5 +1,5 @@
 import { strict as assert } from "assert";
-import { test, todo } from "node:test";
+import { test } from "node:test";
 
 import {
   getFirst,
@@ -8,9 +8,11 @@ import {
   ConstractaWithOptionG,
   stringExpObjectMethod,
   LiteralWithOptionG,
-  regExpOptionI,
-  regExpOptionM,
-  regExpOptionY,
+  optionI_regExp,
+  optionM_regExp,
+  optionY_regExp,
+  optionGI_regExp,
+  metaRegExp,
 } from "./index";
 
 test("the first number 1 in 1, 2, 3", () => {
@@ -91,32 +93,36 @@ test('Same result between specify constracta and specify literal with "g" option
 });
 
 test('"ABC" much "ABC" by Option "i"', () => {
-  if (regExpOptionI) assert.deepStrictEqual(regExpOptionI[0], "ABC");
+  if (optionI_regExp) assert.deepStrictEqual(optionI_regExp[0], "ABC");
 });
 
 test('"ABC\\nDEF" much "D" by Option "m"', () => {
-  if (regExpOptionM) assert.deepStrictEqual(regExpOptionM[0], "D");
+  if (optionM_regExp) assert.deepStrictEqual(optionM_regExp[0], "D");
 });
 
 test('By Option "y", Last index of "ABC" is 0', () => {
-  assert.deepStrictEqual(regExpOptionY.lastIndex, 0);
+  assert.deepStrictEqual(optionY_regExp.lastIndex, 0);
 });
 
 test('By Option "y", the regexp much "ABC"', () => {
-  assert.deepStrictEqual(regExpOptionY.test("ABC"), true);
+  assert.deepStrictEqual(optionY_regExp.test("ABC"), true);
 });
 
 test("When from second word", () => {
-  regExpOptionY.lastIndex = 1;
-  assert.deepStrictEqual(regExpOptionY.test("ABC"), false);
+  optionY_regExp.lastIndex = 1;
+  assert.deepStrictEqual(optionY_regExp.test("ABC"), false);
 });
 
 test('When from second word and Option "y", the regexp much "ABC"', () => {
-  regExpOptionY.lastIndex = 1;
-  const hoge = "ABC".match(regExpOptionY);
-  if (hoge) assert.deepStrictEqual(hoge[0], "ABC");
+  optionY_regExp.lastIndex = 1;
+  const abcMatchResult = "ABC".match(optionY_regExp);
+  if (abcMatchResult) assert.deepStrictEqual(abcMatchResult[0], "ABC");
 });
 
-todo("combine g and i option");
+test("combine g with i option", () => {
+  if (optionGI_regExp) assert.deepStrictEqual(optionGI_regExp, ["ABC", "abc", "ABC"]);
+});
 
-todo("match meta char");
+test("it matchs meta char", () => {
+  if (metaRegExp) assert.deepStrictEqual(metaRegExp, ["?", "?", "?"]);
+});
