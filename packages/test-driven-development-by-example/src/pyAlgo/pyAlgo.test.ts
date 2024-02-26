@@ -8,9 +8,11 @@ import {
   ConstractaWithOptionG,
   stringExpObjectMethod,
   LiteralWithOptionG,
-  regExpOptionI,
-  regExpOptionM,
-  regExpOptionY,
+  optionI_regExp,
+  optionM_regExp,
+  optionY_regExp,
+  optionGI_regExp,
+  metaRegExp,
 } from "./index";
 
 test("the first number 1 in 1, 2, 3", () => {
@@ -91,13 +93,36 @@ test('Same result between specify constracta and specify literal with "g" option
 });
 
 test('"ABC" much "ABC" by Option "i"', () => {
-  if (regExpOptionI) assert.deepStrictEqual(regExpOptionI[0], "ABC");
+  if (optionI_regExp) assert.deepStrictEqual(optionI_regExp[0], "ABC");
 });
 
 test('"ABC\\nDEF" much "D" by Option "m"', () => {
-  if (regExpOptionM) assert.deepStrictEqual(regExpOptionM[0], "D");
+  if (optionM_regExp) assert.deepStrictEqual(optionM_regExp[0], "D");
 });
 
-test('last index of "ABC" by Option "y" is 0', () => {
-  assert.deepStrictEqual(regExpOptionY.lastIndex, 0);
+test('By Option "y", Last index of "ABC" is 0', () => {
+  assert.deepStrictEqual(optionY_regExp.lastIndex, 0);
+});
+
+test('By Option "y", the regexp much "ABC"', () => {
+  assert.deepStrictEqual(optionY_regExp.test("ABC"), true);
+});
+
+test("When from second word", () => {
+  optionY_regExp.lastIndex = 1;
+  assert.deepStrictEqual(optionY_regExp.test("ABC"), false);
+});
+
+test('When from second word and Option "y", the regexp much "ABC"', () => {
+  optionY_regExp.lastIndex = 1;
+  const abcMatchResult = "ABC".match(optionY_regExp);
+  if (abcMatchResult) assert.deepStrictEqual(abcMatchResult[0], "ABC");
+});
+
+test("combine g with i option", () => {
+  if (optionGI_regExp) assert.deepStrictEqual(optionGI_regExp, ["ABC", "abc", "ABC"]);
+});
+
+test("it matchs meta char", () => {
+  if (metaRegExp) assert.deepStrictEqual(metaRegExp, ["?", "?", "?"]);
 });
