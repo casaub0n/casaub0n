@@ -9,6 +9,8 @@ import {
   stringExpObjectMethod,
   LiteralWithOptionG,
   regExpOptionI,
+  regExpOptionM,
+  regExpOptionY,
 } from "./index";
 
 test("the first number 1 in 1, 2, 3", () => {
@@ -88,6 +90,14 @@ test('Same result between specify constracta and specify literal with "g" option
   assert.deepStrictEqual(resultRegExpLiteral, resultRegExpConstracta);
 });
 
-test("Option I", () => {
+test('"ABC" much "ABC" by Option "i"', () => {
   if (regExpOptionI) assert.deepStrictEqual(regExpOptionI[0], "ABC");
+});
+
+test('"ABC\\nDEF" much "D" by Option "m"', () => {
+  if (regExpOptionM) assert.deepStrictEqual(regExpOptionM[0], "D");
+});
+
+test('last index of "ABC" by Option "y" is 0', () => {
+  assert.deepStrictEqual(regExpOptionY.lastIndex, 0);
 });
