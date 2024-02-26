@@ -43,3 +43,8 @@ export const optionY_regExp = /ABC/y;
 export const optionGI_regExp = "ABC_abc_ABC".match(/ABC/gi);
 
 export const metaRegExp = "?!?!?!".match(/\?/g);
+
+/**
+ * uniq? char
+ */
+export const hoge = "ABC".match(/./);
