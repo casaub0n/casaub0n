@@ -45,6 +45,21 @@ export const optionGI_regExp = "ABC_abc_ABC".match(/ABC/gi);
 export const metaRegExp = "?!?!?!".match(/\?/g);
 
 /**
- * uniq? char
+ * single word
  */
-export const hoge = "ABC".match(/./);
+export const singleMatcher = "ABC".match(/./);
+
+/**
+ * single word with g Option
+ */
+export const singleMatcherGoption = "ABC".match(/./g);
+
+/**
+ * continued word
+ */
+export const continuedWordMatcher = "ABC".match(/../);
+
+/**
+ * continued word with G Option
+ */
+export const continuedWordMatcherGoption = "ABC".match(/../g);
