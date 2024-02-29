@@ -25,7 +25,7 @@ importers:
         version: 3.2.5
       renovate:
         specifier: ^37.208.0
-        version: 37.212.0(typanion@3.14.0)
+        version: 37.220.1(typanion@3.14.0)
       textlint:
         specifier: ^14.0.3
         version: 14.0.3
@@ -2930,8 +2930,8 @@ packages:
     resolution: {integrity: sha512-x/rqGMdzj+fWZvCOYForTghzbtqPDZ5gPwaoNGHdgDfF2QA/XZbCBp4Moo5scrkAMPhB7z26XM/AaHuIJdgauA==}
     dev: true
 
-  /@babel/runtime-corejs3@7.23.9:
-    resolution: {integrity: sha512-oeOFTrYWdWXCvXGB5orvMTJ6gCZ9I6FBjR+M38iKNXCsPxr4xT0RTdg5uz1H7QP8pp74IzPtwritEr+JscqHXQ==}
+  /@babel/runtime-corejs3@7.24.0:
+    resolution: {integrity: sha512-HxiRMOncx3ly6f3fcZ1GVKf+/EROcI9qwPgmij8Czqy6Okm/0T37T4y2ZIlLUuEUFjtM7NRsfdCO8Y3tAiJZew==}
     engines: {node: '>=6.9.0'}
     dependencies:
       core-js-pure: 3.36.0
@@ -4767,7 +4767,7 @@ packages:
   /@qnighy/marshal@0.1.3:
     resolution: {integrity: sha512-uaDZTJYtD2UgQTGemmgWeth+e2WapZm+GkAq8UU8AJ55PKRFaf1GkH7X/uzA+Ygu8iInzIlM2FGyCUnruyMKMg==}
     dependencies:
-      '@babel/runtime-corejs3': 7.23.9
+      '@babel/runtime-corejs3': 7.24.0
     dev: true
 
   /@radix-ui/colors@3.0.0:
@@ -7462,7 +7462,7 @@ packages:
   /@types/better-sqlite3@7.6.9:
     resolution: {integrity: sha512-FvktcujPDj9XKMJQWFcl2vVl7OdRIqsSRX9b0acWwTmwLK9CF2eqo/FRcmMLNpugKoX/avA6pb7TorDLmpgTnQ==}
     dependencies:
-      '@types/node': 20.11.20
+      '@types/node': 20.11.22
     dev: true
 
   /@types/body-parser@1.19.5:
@@ -7838,6 +7838,10 @@ packages:
 
   /@types/semver@7.5.7:
     resolution: {integrity: sha512-/wdoPq1QqkSj9/QOeKkFquEuPzQbHTWAMPH/PaUMB+JuR31lXhlWXRZ52IpfDYVlDOUBvX09uBrPwxGT1hjNBg==}
+
+  /@types/semver@7.5.8:
+    resolution: {integrity: sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==}
+    dev: true
 
   /@types/send@0.17.4:
     resolution: {integrity: sha512-x2EM6TJOybec7c52BX0ZspPodMsQUd5L6PRwOunVyVUhXiBSKf3AezDL8Dgvgt5o0UfKNfuA0eMLr2wLT4AiBA==}
@@ -8748,7 +8752,7 @@ packages:
     engines: {node: '>=18.12.0'}
     dependencies:
       '@arcanis/slice-ansi': 1.1.1
-      '@types/semver': 7.5.7
+      '@types/semver': 7.5.8
       '@types/treeify': 1.0.3
       '@yarnpkg/fslib': 3.0.2
       '@yarnpkg/libzip': 3.0.1(@yarnpkg/fslib@3.0.2)
@@ -9697,8 +9701,8 @@ packages:
       open: 8.4.2
     dev: true
 
-  /better-sqlite3@9.4.1:
-    resolution: {integrity: sha512-QpqiQeMI4WkE+dQ68zTMX5OzlPGc7lXIDP1iKUt4Omt9PdaVgzKYxHIJRIzt1E+RUBQoFmkip/IbvzyrxehAIg==}
+  /better-sqlite3@9.4.3:
+    resolution: {integrity: sha512-ud0bTmD9O3uWJGuXDltyj3R47Nz0OHX8iqPOT5PMspGqlu/qQFn+5S2eFBUCrySpavTjFXbi4EgrfVvPAHlImw==}
     requiresBuild: true
     dependencies:
       bindings: 1.5.0
@@ -17367,8 +17371,8 @@ packages:
       oidc-token-hash: 5.0.3
     dev: false
 
-  /openpgp@5.11.0:
-    resolution: {integrity: sha512-hytHsxIPtRhuh6uAmoBUThHSwHSX3imLu7x4453T+xkVqIw49rl22MRD4KQIAQdCDoVdouejzYgcuLmMA/2OAA==}
+  /openpgp@5.11.1:
+    resolution: {integrity: sha512-TynUBPuaSI7dN0gP+A38CjNRLxkOkkptefNanalDQ71BFAKKm+dLbksymSW5bUrB7RcAneMySL/Y+r/TbLpOnQ==}
     engines: {node: '>= 8.0.0'}
     dependencies:
       asn1.js: 5.4.1
@@ -19167,8 +19171,8 @@ packages:
       strip-ansi: 6.0.1
     dev: true
 
-  /renovate@37.212.0(typanion@3.14.0):
-    resolution: {integrity: sha512-hPmQNtKZJp7U9mEAKy7dlpjY7bS5aLvugrQGw6J7ZQm6pMzSPkCIF7YvQpk7ENJu1AWqxvvTM+0LJdINy7GNvA==}
+  /renovate@37.220.1(typanion@3.14.0):
+    resolution: {integrity: sha512-ehhgtWsxkt++28KlW1NJx3vt8jGgcfYpwj0ByQzlREEIvpF+OKjZc2gBbkV4AmGKnzAPTAR5ZGVpeAUorrx93w==}
     engines: {node: ^18.12.0 || >=20.0.0, pnpm: ^8.0.0}
     hasBin: true
     dependencies:
@@ -19205,7 +19209,7 @@ packages:
       auth-header: 1.0.0
       aws4: 1.12.0
       azure-devops-node-api: 12.4.0
-      better-sqlite3: 9.4.1
+      better-sqlite3: 9.4.3
       bunyan: 1.8.15
       cacache: 18.0.2
       cacheable-lookup: 5.0.4
@@ -19253,7 +19257,7 @@ packages:
       ms: 2.1.3
       nanoid: 3.3.7
       node-html-parser: 6.1.12
-      openpgp: 5.11.0
+      openpgp: 5.11.1
       p-all: 3.0.0
       p-map: 4.0.0
       p-queue: 6.6.2
