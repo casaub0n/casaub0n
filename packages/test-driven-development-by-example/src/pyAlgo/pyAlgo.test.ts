@@ -13,6 +13,10 @@ import {
   optionY_regExp,
   optionGI_regExp,
   metaRegExp,
+  singleMatcher,
+  singleMatcherGoption,
+  continuedWordMatcher,
+  continuedWordMatcherGoption,
 } from "./index";
 
 test("the first number 1 in 1, 2, 3", () => {
@@ -127,10 +131,22 @@ test("it matchs meta char", () => {
   if (metaRegExp) assert.deepStrictEqual(metaRegExp, ["?", "?", "?"]);
 });
 
-todo('["A"]');
-todo('["A", "B", "C"]');
-todo('["AB"]');
-todo('["AB"]');
+test("it matchs single word", () => {
+  if (singleMatcher) assert.deepStrictEqual(singleMatcher[0], "A");
+});
+
+test("it matchs single word with G Option", () => {
+  if (singleMatcherGoption) assert.deepStrictEqual(singleMatcherGoption, ["A", "B", "C"]);
+});
+
+test("it matches continued word", () => {
+  if (continuedWordMatcher) assert.deepStrictEqual(continuedWordMatcher[0], "AB");
+});
+
+test("it matches continued word with G Option", () => {
+  if (continuedWordMatcherGoption) assert.deepStrictEqual(continuedWordMatcherGoption[0], "AB");
+});
+
 todo('["AB"]');
 todo('["AB", "CD"]');
 todo('["AB"]');
