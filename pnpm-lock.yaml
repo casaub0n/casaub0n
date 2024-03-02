@@ -265,8 +265,8 @@ importers:
         specifier: ^0.7.2
         version: 0.7.2
       autoprefixer:
-        specifier: 10.4.17
-        version: 10.4.17(postcss@8.4.35)
+        specifier: 10.4.18
+        version: 10.4.18(postcss@8.4.35)
       bcrypt:
         specifier: ^5.1.1
         version: 5.1.1
@@ -9295,6 +9295,23 @@ packages:
       picocolors: 1.0.0
       postcss: 8.4.35
       postcss-value-parser: 4.2.0
+    dev: true
+
+  /autoprefixer@10.4.18(postcss@8.4.35):
+    resolution: {integrity: sha512-1DKbDfsr6KUElM6wg+0zRNkB/Q7WcKYAaK+pzXn+Xqmszm/5Xa9coeNdtP88Vi+dPzZnMjhge8GIV49ZQkDa+g==}
+    engines: {node: ^10 || ^12 || >=14}
+    hasBin: true
+    peerDependencies:
+      postcss: ^8.1.0
+    dependencies:
+      browserslist: 4.23.0
+      caniuse-lite: 1.0.30001591
+      fraction.js: 4.3.7
+      normalize-range: 0.1.2
+      picocolors: 1.0.0
+      postcss: 8.4.35
+      postcss-value-parser: 4.2.0
+    dev: false
 
   /available-typed-arrays@1.0.7:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
@@ -18265,6 +18282,7 @@ packages:
 
   /queue-tick@1.0.1:
     resolution: {integrity: sha512-kJt5qhMxoszgU/62PLP1CJytzd2NKetjSRnyuj31fDd3Rlcz3fzlFdFLD1SItunPwyqEOkca6GbV612BWfaBag==}
+    requiresBuild: true
 
   /queue@6.0.2:
     resolution: {integrity: sha512-iHZWu+q3IdFZFX36ro/lKBkSvfkztY5Y7HMiPlOUjhupPcG2JMfst2KKEpu5XndviX/3UhFbRngUPNKtgvtZiA==}
