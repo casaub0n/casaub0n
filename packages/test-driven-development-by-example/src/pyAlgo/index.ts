@@ -63,3 +63,13 @@ export const continuedWordMatcher = "ABC".match(/../);
  * continued word with G Option
  */
 export const continuedWordMatcherGoption = "ABC".match(/../g);
+
+/**
+ * combine word
+ */
+export const combineMatcherA = "ABCD".match(/A./);
+
+/**
+ * combine word
+ */
+export const combineMatcherD = "ABCD".match(/D./);

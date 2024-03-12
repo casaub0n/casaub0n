@@ -17,6 +17,8 @@ import {
   singleMatcherGoption,
   continuedWordMatcher,
   continuedWordMatcherGoption,
+  combineMatcherA,
+  combineMatcherD,
 } from "./index";
 
 test("the first number 1 in 1, 2, 3", () => {
@@ -147,7 +149,14 @@ test("it matches continued word with G Option", () => {
   if (continuedWordMatcherGoption) assert.deepStrictEqual(continuedWordMatcherGoption[0], "AB");
 });
 
-todo('["AB"]');
+test('it matches "AB" by combine word matcher that\'s "ABCD"', () => {
+  if (combineMatcherA) assert.deepStrictEqual(combineMatcherA[0], "AB");
+});
+
+test('it matches "CD" by combine word matcher that\'s "ABCD"', () => {
+  if (combineMatcherD) assert.deepStrictEqual(combineMatcherD[0], "CD");
+});
+
 todo('["AB", "CD"]');
 todo('["AB"]');
 todo('["CD"]');
