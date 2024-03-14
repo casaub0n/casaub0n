@@ -49,12 +49,12 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20.11.1
+          node-version: 20
 
       - name: Set up pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 8.15.4
+          version: 8
           run_install: false
 
       # I used https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#caching-packages-data
