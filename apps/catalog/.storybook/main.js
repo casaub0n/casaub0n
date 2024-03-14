@@ -27,6 +27,7 @@ const config = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/addon-docs",
+    "@storybook/addon-styling-webpack",
   ],
   staticDirs: ["../../casaub0n-page/public"],
   framework: "@storybook/nextjs",
