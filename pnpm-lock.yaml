@@ -25,7 +25,7 @@ importers:
         version: 3.2.5
       renovate:
         specifier: ^37.208.0
-        version: 37.244.0(typanion@3.14.0)
+        version: 37.244.1(typanion@3.14.0)
       textlint:
         specifier: ^14.0.3
         version: 14.0.4
@@ -4767,7 +4767,7 @@ packages:
     dependencies:
       '@octokit/rest': 20.0.2
       '@renovatebot/osv-offline-db': 1.6.0
-      adm-zip: 0.5.11
+      adm-zip: 0.5.12
       fs-extra: 11.2.0
       got: 11.8.6
       luxon: 3.4.4
@@ -8043,8 +8043,8 @@ packages:
       regex-parser: 2.3.0
     dev: true
 
-  /adm-zip@0.5.11:
-    resolution: {integrity: sha512-bSG/kcTQRVyCZ3aOWt3nu/KGIxkfSNi7MXzgKr/MHfKbqPakFESQvaujpUaAG8OQuSroxYMY5vLMpdE6+oND2Q==}
+  /adm-zip@0.5.12:
+    resolution: {integrity: sha512-6TVU49mK6KZb4qG6xWaaM4C7sA/sgUMLy/JYMOzkcp3BvVLpW0fXDFQiIzAuxFCt/2+xD7fNIiPFAoLZPhVNLQ==}
     engines: {node: '>=6.0'}
     dev: true
 
@@ -15909,7 +15909,7 @@ packages:
     resolution: {integrity: sha512-fZjdhDOeRcaS+rcpve7XuwHBmktS1nS1gzgghwKUQQ8nTy2FdSDr6ZT8k6YhvlJeHmmQMYiT/IH9hfco5zeW2Q==}
     engines: {node: '>=10'}
     dependencies:
-      semver: 7.6.0
+      semver: 7.5.4
 
   /node-abort-controller@3.1.1:
     resolution: {integrity: sha512-AGK2yQKIjRuqnc6VkX2Xj5d+QW8xZ87pa1UK6yA6ouUyuxfHuMP6umE5QK7UmTeOAymo+Zx1Fxiuw9rVx8taHQ==}
@@ -18045,8 +18045,8 @@ packages:
       strip-ansi: 6.0.1
     dev: true
 
-  /renovate@37.244.0(typanion@3.14.0):
-    resolution: {integrity: sha512-kUf4FGvyxGYOsD+7QJJmMLGOmIq3EekKtt9aDV2rlwJKvPihQA3Zilt0SbeqMUQ72O+zeyKJB5Si2/V7jkfyCQ==}
+  /renovate@37.244.1(typanion@3.14.0):
+    resolution: {integrity: sha512-96glPUSuHTsWlJwvl1ahlgkkjo8tAzVCE2uric8Km5vPgVEY5q0xOZ19IVpDKaQois2bP58g0r2VunOfy4FXrg==}
     engines: {node: ^18.12.0 || >=20.0.0, pnpm: ^8.0.0}
     hasBin: true
     dependencies:
@@ -18582,7 +18582,6 @@ packages:
     hasBin: true
     dependencies:
       lru-cache: 6.0.0
-    dev: true
 
   /semver@7.6.0:
     resolution: {integrity: sha512-EnwXhrlwXMk9gKu5/flx5sv/an57AkRplG3hTK68W7FRDN+k+OWBj65M7719OkA82XLBxrcX0KSHj+X5COhOVg==}
