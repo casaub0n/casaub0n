@@ -12,7 +12,7 @@ describe("Example Domain", () => {
   it("markdown link", async () => {
     console.log(`chrome path: ${env.CHROME}`);
     const browser = await puppeteer.launch({
-      headless: "new",
+      headless: true,
       executablePath: env.CHROME,
     });
     const page = await browser.newPage();

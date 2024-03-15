@@ -13,7 +13,7 @@ import { markdownLink } from "./markdownLink";
 test("Example Domain", async () => {
   console.log(`chrome path: ${env.CHROME}`);
   const browser = await puppeteer.launch({
-    headless: "new",
+    headless: true,
     executablePath: env.CHROME,
   });
   const page = await browser.newPage();
