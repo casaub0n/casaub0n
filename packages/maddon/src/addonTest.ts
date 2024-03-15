@@ -15,7 +15,7 @@ test("Addon Test", async () => {
   console.log(`chrome path: ${env.CHROME}`);
   const pathToExtension = path.join(process.cwd(), "dist");
   const browser = await puppeteer.launch({
-    headless: "new",
+    headless: true,
     executablePath: env.CHROME,
     args: [`--disable-extensions-except=${pathToExtension}`, `--load-extension=${pathToExtension}`],
   });
