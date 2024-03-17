@@ -25,7 +25,7 @@ importers:
         version: 3.2.5
       renovate:
         specifier: ^37.208.0
-        version: 37.250.0(typanion@3.14.0)
+        version: 37.250.1(typanion@3.14.0)
       textlint:
         specifier: ^14.0.3
         version: 14.0.4
@@ -17323,6 +17323,7 @@ packages:
 
   /queue-tick@1.0.1:
     resolution: {integrity: sha512-kJt5qhMxoszgU/62PLP1CJytzd2NKetjSRnyuj31fDd3Rlcz3fzlFdFLD1SItunPwyqEOkca6GbV612BWfaBag==}
+    requiresBuild: true
 
   /queue@6.0.2:
     resolution: {integrity: sha512-iHZWu+q3IdFZFX36ro/lKBkSvfkztY5Y7HMiPlOUjhupPcG2JMfst2KKEpu5XndviX/3UhFbRngUPNKtgvtZiA==}
@@ -17987,8 +17988,8 @@ packages:
       strip-ansi: 6.0.1
     dev: true
 
-  /renovate@37.250.0(typanion@3.14.0):
-    resolution: {integrity: sha512-m593Q0H4gLfFZcA0ojJvffpbuRpEQgKDLLqL4LM597mmoMqkW0/nRBMOptrf1zQPVD2YbOwID6lRyvUm3D2B+g==}
+  /renovate@37.250.1(typanion@3.14.0):
+    resolution: {integrity: sha512-EzY0jJjpN2K6GnkQ7yKVdxwCy2vadyY/YMwIB+npXeOu79rykUIAArvoAvBAUPKbtmPlBHMN9AGjX32BVdBJoA==}
     engines: {node: ^18.12.0 || >=20.0.0, pnpm: ^8.0.0}
     hasBin: true
     dependencies:
