@@ -19,6 +19,7 @@
   "scripts": {
     "test": "vitest run",
     "test:ci": "pnpm test",
+    "test:export": "vitest --reporter=html",
     "rmdist": "rimraf dist",
     "build": "pnpm rmdist && tsup src/index.ts --format cjs --dts",
     "start:tsbox": "pnpm build && node dist/index.js",
@@ -35,6 +36,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.28",
+    "@vitest/ui": "^1.4.0",
     "eslint-config-custom": "workspace:^",
     "rimraf": "^5.0.5",
     "tsup": "^8.0.2",
