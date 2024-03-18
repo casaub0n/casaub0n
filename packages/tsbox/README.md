@@ -13,3 +13,7 @@ pnpm test
 ## Testing design
 
 [vitest](https://github.com/vitest-dev/vitest)
+
+## TODO
+
+add gitignore that's vitest output
