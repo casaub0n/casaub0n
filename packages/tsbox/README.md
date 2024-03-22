@@ -17,3 +17,8 @@ pnpm test
 ## TODO
 
 add gitignore that's vitest output
+
+**Type Script 5.5 features**
+
+- [Infer type predicates from function bodies using control flow analysis by danvk · Pull Request #57465 · microsoft/TypeScript](https://github.com/microsoft/TypeScript/pull/57465)
+- [TypeScript 5.5で型述語を推論できて最高。配列のfilterも型安全に](https://zenn.dev/ubie_dev/articles/ts-infer-type-predicates)
