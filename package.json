@@ -1,13 +1,16 @@
 {
   "license": "MIT",
+  "name": "casaub0n",
   "private": true,
+  "description": "my experimental apps and readme profile",
   "scripts": {
     "build": "turbo run build",
     "test": "dotenv -- turbo run test",
     "test:ci": "dotenv -- turbo run test:ci",
     "dev": "turbo run dev",
     "start": "turbo run start",
-    "storybook": "turbo run storybook"
+    "storybook": "turbo run storybook",
+    "version:set": "pnpm exec lerna version"
   },
   "devDependencies": {
     "@lerna-lite/cli": "^3.3.1",
