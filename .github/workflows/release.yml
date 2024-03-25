@@ -1,0 +1,39 @@
+name: Release projects on GitHub
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20]
+    env:
+      CI: true
+      TURBO_TOKEN: ${{ secrets.USERSCRIPT_TURBO_TOKEN }}
+      TURBO_TEAM: ${{ secrets.USERSCRIPT_TURBO_TEAM }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: false
+      - name: Install Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build
+        run: pnpm build --filter=@casaub0n/maddon
+
+      # TODO: Publish the projects on GitHub
