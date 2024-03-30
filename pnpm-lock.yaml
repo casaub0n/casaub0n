@@ -34,7 +34,7 @@ importers:
         version: 3.2.5
       renovate:
         specifier: ^37.208.0
-        version: 37.274.0(typanion@3.14.0)
+        version: 37.278.0(typanion@3.14.0)
       textlint:
         specifier: ^14.0.3
         version: 14.0.4
@@ -7265,6 +7265,12 @@ packages:
     resolution: {integrity: sha512-zQ0NYO87hyN6Xrclcqp7f8ZbXNbRfoGWNcMvHTPQp9UUrwI0mI7XBz+cu7/W6/VClYo2g63B0cjull/srU7LgQ==}
     dependencies:
       undici-types: 5.26.5
+
+  /@types/node@20.12.2:
+    resolution: {integrity: sha512-zQ0NYO87hyN6Xrclcqp7f8ZbXNbRfoGWNcMvHTPQp9UUrwI0mI7XBz+cu7/W6/VClYo2g63B0cjull/srU7LgQ==}
+    dependencies:
+      undici-types: 5.26.5
+    dev: true
 
   /@types/normalize-package-data@2.4.4:
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -18932,8 +18938,8 @@ packages:
       strip-ansi: 6.0.1
     dev: true
 
-  /renovate@37.274.0(typanion@3.14.0):
-    resolution: {integrity: sha512-9IttWKRFq2SwmklYNnibK8DLR6YE3NDQWucQoXA3FDnO13LnOcBzS5F2uiJ/K+kLmowRgVCKDlzSThXtw+Dopg==}
+  /renovate@37.278.0(typanion@3.14.0):
+    resolution: {integrity: sha512-uzrsNJuesdjqigL0Z9eFd9BaEGmN1e5FZfDOw/A0giBw/Mdi9EKOa3PJ/KaHPXdzL2+budPFkND/zBpc9XCvfA==}
     engines: {node: ^18.12.0 || >=20.0.0, pnpm: ^8.0.0}
     hasBin: true
     dependencies:
