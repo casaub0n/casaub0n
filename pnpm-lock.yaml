@@ -34,7 +34,7 @@ importers:
         version: 3.2.5
       renovate:
         specifier: ^37.208.0
-        version: 37.278.1(typanion@3.14.0)
+        version: 37.278.2(typanion@3.14.0)
       textlint:
         specifier: ^14.0.3
         version: 14.0.4
@@ -16614,10 +16614,9 @@ packages:
       tslib: 2.6.2
     dev: true
 
-  /node-abi@3.56.0:
-    resolution: {integrity: sha512-fZjdhDOeRcaS+rcpve7XuwHBmktS1nS1gzgghwKUQQ8nTy2FdSDr6ZT8k6YhvlJeHmmQMYiT/IH9hfco5zeW2Q==}
+  /node-abi@3.57.0:
+    resolution: {integrity: sha512-Dp+A9JWxRaKuHP35H77I4kCKesDy5HUDEmScia2FyncMTOXASMyg251F5PhFoDA5uqBrDDffiLpbqnrZmNXW+g==}
     engines: {node: '>=10'}
-    requiresBuild: true
     dependencies:
       semver: 7.6.0
 
@@ -17950,7 +17949,7 @@ packages:
       minimist: 1.2.8
       mkdirp-classic: 0.5.3
       napi-build-utils: 1.0.2
-      node-abi: 3.56.0
+      node-abi: 3.57.0
       pump: 3.0.0
       rc: 1.2.8
       simple-get: 4.0.1
@@ -18245,6 +18244,7 @@ packages:
 
   /queue-tick@1.0.1:
     resolution: {integrity: sha512-kJt5qhMxoszgU/62PLP1CJytzd2NKetjSRnyuj31fDd3Rlcz3fzlFdFLD1SItunPwyqEOkca6GbV612BWfaBag==}
+    requiresBuild: true
 
   /queue@6.0.2:
     resolution: {integrity: sha512-iHZWu+q3IdFZFX36ro/lKBkSvfkztY5Y7HMiPlOUjhupPcG2JMfst2KKEpu5XndviX/3UhFbRngUPNKtgvtZiA==}
@@ -18943,8 +18943,8 @@ packages:
       strip-ansi: 6.0.1
     dev: true
 
-  /renovate@37.278.1(typanion@3.14.0):
-    resolution: {integrity: sha512-+LsASJ1fvMAEx6bvh58Uw+ggkp3/rK9M+mKhIoRbnHuTjXwZyOohOO+0Ay9cz3RZzhL5TFaxmbhAJI8pBucipA==}
+  /renovate@37.278.2(typanion@3.14.0):
+    resolution: {integrity: sha512-f1AIETvBJu38nYu0d82v3ZimKCmHod/jymOcPKvlnymvMV68mgLuQ2M3to7MfIKduuMJEMx+FdKJDNqRhd5Y7Q==}
     engines: {node: ^18.12.0 || >=20.0.0, pnpm: ^8.0.0}
     hasBin: true
     dependencies:
