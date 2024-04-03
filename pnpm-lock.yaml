@@ -10,7 +10,7 @@ importers:
     devDependencies:
       '@lerna-lite/cli':
         specifier: ^3.3.1
-        version: 3.3.1(@lerna-lite/publish@3.3.1)(@lerna-lite/version@3.3.2)
+        version: 3.3.2(@lerna-lite/publish@3.3.1)(@lerna-lite/version@3.3.2)
       '@lerna-lite/publish':
         specifier: ^3.3.1
         version: 3.3.1
@@ -3832,48 +3832,6 @@ packages:
       '@lerna-lite/init': 3.3.1
       '@lerna-lite/publish': 3.3.1
       '@lerna-lite/version': 3.3.1(@lerna-lite/publish@3.3.1)
-      dedent: 1.5.1
-      dotenv: 16.4.5
-      import-local: 3.1.0
-      load-json-file: 7.0.1
-      npmlog: 7.0.1
-      yargs: 17.7.2
-    transitivePeerDependencies:
-      - babel-plugin-macros
-      - bluebird
-      - supports-color
-      - typescript
-    dev: true
-
-  /@lerna-lite/cli@3.3.1(@lerna-lite/publish@3.3.1)(@lerna-lite/version@3.3.2):
-    resolution: {integrity: sha512-tniFllcJtrR6SinS1AnDMzviZmnR1fInyIX1HZCIaDiiSz1O3FAM+QmrrFfSHl5HRaPpVGEPMP9KexTKZE+Csw==}
-    engines: {node: ^18.0.0 || >=20.0.0}
-    hasBin: true
-    peerDependencies:
-      '@lerna-lite/exec': '*'
-      '@lerna-lite/list': '*'
-      '@lerna-lite/publish': '*'
-      '@lerna-lite/run': '*'
-      '@lerna-lite/version': '*'
-      '@lerna-lite/watch': '*'
-    peerDependenciesMeta:
-      '@lerna-lite/exec':
-        optional: true
-      '@lerna-lite/list':
-        optional: true
-      '@lerna-lite/publish':
-        optional: true
-      '@lerna-lite/run':
-        optional: true
-      '@lerna-lite/version':
-        optional: true
-      '@lerna-lite/watch':
-        optional: true
-    dependencies:
-      '@lerna-lite/core': 3.3.1
-      '@lerna-lite/init': 3.3.1
-      '@lerna-lite/publish': 3.3.1
-      '@lerna-lite/version': 3.3.2(@lerna-lite/publish@3.3.1)
       dedent: 1.5.1
       dotenv: 16.4.5
       import-local: 3.1.0
