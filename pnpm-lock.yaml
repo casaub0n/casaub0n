@@ -230,7 +230,7 @@ importers:
         version: 8.0.5(react-dom@18.2.0)(react@18.2.0)(typescript@5.4.3)
       '@vanilla-extract/webpack-plugin':
         specifier: ^2.3.7
-        version: 2.3.7(webpack@5.91.0)
+        version: 2.3.7(@types/node@20.12.4)(webpack@5.91.0)
       fs-extra:
         specifier: ^11.2.0
         version: 11.2.0
@@ -450,7 +450,7 @@ importers:
         version: 21.1.6
       '@types/node':
         specifier: ^20.11.19
-        version: 20.12.3
+        version: 20.12.4
       eslint-config-custom:
         specifier: workspace:^
         version: link:../eslint-config-custom
@@ -490,7 +490,7 @@ importers:
         version: 21.1.6
       '@types/node':
         specifier: ^20.11.19
-        version: 20.12.3
+        version: 20.12.4
       eslint-config-custom:
         specifier: workspace:^
         version: link:../eslint-config-custom
@@ -508,7 +508,7 @@ importers:
     devDependencies:
       '@types/node':
         specifier: ^20.11.28
-        version: 20.12.3
+        version: 20.12.4
       esbuild:
         specifier: ^0.20.2
         version: 0.20.2
@@ -539,7 +539,7 @@ importers:
     devDependencies:
       '@types/node':
         specifier: ^20.11.28
-        version: 20.12.3
+        version: 20.12.4
       '@vitest/ui':
         specifier: ^1.4.0
         version: 1.4.0(vitest@1.4.0)
@@ -557,7 +557,7 @@ importers:
         version: 5.4.3
       vitest:
         specifier: ^1.4.0
-        version: 1.4.0(@types/node@20.12.3)(@vitest/ui@1.4.0)
+        version: 1.4.0(@types/node@20.12.4)(@vitest/ui@1.4.0)
 
   packages/tsconfig: {}
 
@@ -571,7 +571,7 @@ importers:
     devDependencies:
       '@types/node':
         specifier: ^20.11.19
-        version: 20.12.3
+        version: 20.12.4
       eslint-config-custom:
         specifier: workspace:^
         version: link:../eslint-config-custom
@@ -7389,12 +7389,6 @@ packages:
       undici-types: 5.26.5
     dev: true
 
-  /@types/node@20.12.3:
-    resolution: {integrity: sha512-sD+ia2ubTeWrOu+YMF+MTAB7E+O7qsMqAbMfW7DG3K1URwhZ5hN1pLlRVGbf4wDFzSfikL05M17EyorS86jShw==}
-    dependencies:
-      undici-types: 5.26.5
-    dev: true
-
   /@types/node@20.12.4:
     resolution: {integrity: sha512-E+Fa9z3wSQpzgYQdYmme5X3OTuejnnTx88A6p6vkkJosR3KBz+HpE3kqNm98VE6cfLFcISx7zW7MsJkH6KwbTw==}
     dependencies:
@@ -7836,33 +7830,6 @@ packages:
       '@vanilla-extract/private': 1.0.4
     dev: false
 
-  /@vanilla-extract/integration@7.1.2:
-    resolution: {integrity: sha512-jpjw0L3P1E+U9L8OAFVMGpPFbNPD+/Vpfew7oOKBYipCrRZEqShu3WLXuUxjXz/mcIH7KCS5nasIdy2VclbEaQ==}
-    dependencies:
-      '@babel/core': 7.24.3
-      '@babel/plugin-syntax-typescript': 7.24.1(@babel/core@7.24.3)
-      '@vanilla-extract/babel-plugin-debug-ids': 1.0.5
-      '@vanilla-extract/css': 1.14.2
-      esbuild: 0.19.12
-      eval: 0.1.8
-      find-up: 5.0.0
-      javascript-stringify: 2.1.0
-      lodash: 4.17.21
-      mlly: 1.6.1
-      outdent: 0.8.0
-      vite: 5.2.7(@types/node@20.12.3)
-      vite-node: 1.4.0(@types/node@20.12.3)
-    transitivePeerDependencies:
-      - '@types/node'
-      - less
-      - lightningcss
-      - sass
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
-    dev: true
-
   /@vanilla-extract/integration@7.1.2(@types/node@20.12.4):
     resolution: {integrity: sha512-jpjw0L3P1E+U9L8OAFVMGpPFbNPD+/Vpfew7oOKBYipCrRZEqShu3WLXuUxjXz/mcIH7KCS5nasIdy2VclbEaQ==}
     dependencies:
@@ -7918,27 +7885,6 @@ packages:
       webpack: ^4.30.0 || ^5.20.2
     dependencies:
       '@vanilla-extract/integration': 7.1.2(@types/node@20.12.4)
-      chalk: 4.1.2
-      debug: 4.3.4
-      loader-utils: 2.0.4
-      webpack: 5.91.0(esbuild@0.20.2)
-    transitivePeerDependencies:
-      - '@types/node'
-      - less
-      - lightningcss
-      - sass
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
-    dev: true
-
-  /@vanilla-extract/webpack-plugin@2.3.7(webpack@5.91.0):
-    resolution: {integrity: sha512-xKhl7BUGqjj1eRzgASBcfKSvzIWGN1ndNT9ycUcfDz1AXZr6rok99LSj+Z2LqAnCGZGAiLsYzdQ5AYBABXV+vA==}
-    peerDependencies:
-      webpack: ^4.30.0 || ^5.20.2
-    dependencies:
-      '@vanilla-extract/integration': 7.1.2
       chalk: 4.1.2
       debug: 4.3.4
       loader-utils: 2.0.4
@@ -8218,7 +8164,7 @@ packages:
       pathe: 1.1.2
       picocolors: 1.0.0
       sirv: 2.0.4
-      vitest: 1.4.0(@types/node@20.12.3)(@vitest/ui@1.4.0)
+      vitest: 1.4.0(@types/node@20.12.4)(@vitest/ui@1.4.0)
     dev: true
 
   /@vitest/utils@1.3.1:
@@ -21901,27 +21847,6 @@ packages:
       d3-timer: 3.0.1
     dev: false
 
-  /vite-node@1.4.0(@types/node@20.12.3):
-    resolution: {integrity: sha512-VZDAseqjrHgNd4Kh8icYHWzTKSCZMhia7GyHfhtzLW33fZlG9SwsB6CEhgyVOWkJfJ2pFLrp/Gj1FSfAiqH9Lw==}
-    engines: {node: ^18.0.0 || >=20.0.0}
-    hasBin: true
-    dependencies:
-      cac: 6.7.14
-      debug: 4.3.4
-      pathe: 1.1.2
-      picocolors: 1.0.0
-      vite: 5.2.7(@types/node@20.12.3)
-    transitivePeerDependencies:
-      - '@types/node'
-      - less
-      - lightningcss
-      - sass
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
-    dev: true
-
   /vite-node@1.4.0(@types/node@20.12.4):
     resolution: {integrity: sha512-VZDAseqjrHgNd4Kh8icYHWzTKSCZMhia7GyHfhtzLW33fZlG9SwsB6CEhgyVOWkJfJ2pFLrp/Gj1FSfAiqH9Lw==}
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -21941,42 +21866,6 @@ packages:
       - sugarss
       - supports-color
       - terser
-    dev: true
-
-  /vite@5.2.7(@types/node@20.12.3):
-    resolution: {integrity: sha512-k14PWOKLI6pMaSzAuGtT+Cf0YmIx12z9YGon39onaJNy8DLBfBJrzg9FQEmkAM5lpHBZs9wksWAsyF/HkpEwJA==}
-    engines: {node: ^18.0.0 || >=20.0.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': ^18.0.0 || >=20.0.0
-      less: '*'
-      lightningcss: ^1.21.0
-      sass: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.4.0
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      less:
-        optional: true
-      lightningcss:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-    dependencies:
-      '@types/node': 20.12.3
-      esbuild: 0.20.2
-      postcss: 8.4.38
-      rollup: 4.14.0
-    optionalDependencies:
-      fsevents: 2.3.3
     dev: true
 
   /vite@5.2.7(@types/node@20.12.4):
@@ -22061,7 +21950,7 @@ packages:
       vite: 5.2.8
     dev: false
 
-  /vitest@1.4.0(@types/node@20.12.3)(@vitest/ui@1.4.0):
+  /vitest@1.4.0(@types/node@20.12.4)(@vitest/ui@1.4.0):
     resolution: {integrity: sha512-gujzn0g7fmwf83/WzrDTnncZt2UiXP41mHuFYFrdwaLRVQ6JYQEiME2IfEjU3vcFL3VKa75XhI3lFgn+hfVsQw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -22086,7 +21975,7 @@ packages:
       jsdom:
         optional: true
     dependencies:
-      '@types/node': 20.12.3
+      '@types/node': 20.12.4
       '@vitest/expect': 1.4.0
       '@vitest/runner': 1.4.0
       '@vitest/snapshot': 1.4.0
@@ -22105,8 +21994,8 @@ packages:
       strip-literal: 2.1.0
       tinybench: 2.6.0
       tinypool: 0.8.3
-      vite: 5.2.7(@types/node@20.12.3)
-      vite-node: 1.4.0(@types/node@20.12.3)
+      vite: 5.2.7(@types/node@20.12.4)
+      vite-node: 1.4.0(@types/node@20.12.4)
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
       - less
