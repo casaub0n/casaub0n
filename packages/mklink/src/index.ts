@@ -15,18 +15,27 @@ document.addEventListener("keyup", function (event) {
 
 let keysPressed = {};
 
-const getSelectedTextAndUrl = () => {
+/**
+ * selected text or title
+ */
+const getTextAndUrl = () => {
   const selectedText = window.getSelection()?.toString();
   const url = window.location.href;
-  return { selectedText, url };
+  const title = document.title;
+  if (selectedText) return { selectedText, url };
+  return { title, url };
 };
 
-const copyAsMarkdown = (selectedText: string, url: string) => {
-  let markdownLink = `[${selectedText}](${url})`;
+const copyAsMarkdown = (text: string, url: string) => {
+  let markdownLink = `[${text}](${url})`;
   navigator.clipboard.writeText(markdownLink);
 };
 
 const copySelectedTextAsMarkdown = () => {
-  const { selectedText, url } = getSelectedTextAndUrl();
-  if (selectedText) copyAsMarkdown(selectedText, url);
+  const { selectedText, url, title } = getTextAndUrl();
+  if (selectedText) {
+    copyAsMarkdown(selectedText, url);
+  } else {
+    if (title) copyAsMarkdown(title, url);
+  }
 };
