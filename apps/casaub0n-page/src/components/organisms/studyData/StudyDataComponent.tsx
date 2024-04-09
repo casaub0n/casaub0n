@@ -14,7 +14,7 @@ type Props = ComponentPropsWithoutRef<"div">;
  */
 export const StudyDataComponent: FC<Props> = ({ className, ...props }) => {
   return (
-    <div className={clsx(className)} {...props}>
+    <div className={clsx(className)} {...props} role="main">
       <LineChart
         data={studyDataList}
         height={300}
