@@ -18,8 +18,8 @@
     "prebuild": "pnpm rmdist && esbuild src/index.ts --bundle --define:process.env.NODE_ENV=\\\"production\\\" --minify --platform=node --target=node17 --outfile=dist/index.js",
     "copy": "cpx -u src/static/**/*.{json,html,js} dist/",
     "build": "pnpm prebuild && pnpm copy",
-    "test": "tsc --noEmit && cross-env CHROME='C:/Program Files/Google/Chrome/Application/chrome.exe' node --no-warnings --import tsx src/test.ts",
-    "test:addon": "pnpm build && cross-env CHROME='C:/Program Files/Google/Chrome/Application/chrome.exe' node --no-warnings --import tsx src/addonTest.ts",
+    "test": "tsc --noEmit && node --env-file .env --import tsx src/test.ts",
+    "test:addon": "pnpm build && node --env-file .env --import tsx src/addonTest.ts",
     "test:ci": "cross-env CHROME='/opt/hostedtoolcache/chromium/latest/x64/chrome' node --no-warnings --import tsx src/test.ts"
   },
   "files": [
