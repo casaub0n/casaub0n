@@ -34,7 +34,7 @@ importers:
         version: 3.2.5
       renovate:
         specifier: ^37.208.0
-        version: 37.316.2(encoding@0.1.13)(typanion@3.14.0)
+        version: 37.318.1(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: ^14.0.3
         version: 14.0.4
@@ -4579,6 +4579,9 @@ packages:
   bn.js@5.2.1:
     resolution: {integrity: sha512-eXRvHzWyYPBuB4NBy0cmYQjGitUrtqwbvlzP3G6VFnNRbsZQIxQ10PbKKHt8gZ/HW/D/747aDl+QkDqg3KQLMQ==}
 
+  bn@1.0.5:
+    resolution: {integrity: sha512-7TvGbqbZb6lDzsBtNz1VkdXXV0BVmZKPPViPmo2IpvwaryF7P+QKYKACyVkwo2mZPr2CpFiz7EtgPEcc3o/JFQ==}
+
   body-parser@1.20.2:
     resolution: {integrity: sha512-ml9pReCu3M61kGlqoTm2umSXTlRTuGTx0bfYj+uIUKKYycG5NtSbeetV3faSU6R7ajOPw0g/J1PvK4qNy7s5bA==}
     engines: {node: '>= 0.8', npm: 1.2.8000 || >= 1.4.16}
@@ -4715,6 +4718,9 @@ packages:
   bytes@3.1.2:
     resolution: {integrity: sha512-/Nf7TyzTx6S3yRJObOAV7956r8cr2+Oj8AC5dt8wSP3BQAoeX58NoHyCU8P8zGkNXStjTSi6fzO6F0pBdcYbEg==}
     engines: {node: '>= 0.8'}
+
+  bzip-deflate@1.0.0:
+    resolution: {integrity: sha512-9RMnpiJqMYMJcLdr4pxwowZ8Zh3P+tVswE/bnX6tZ14UGKNcdV5WVK2P+lGp2As+RCjl+i3SFJ117HyCaaHNDA==}
 
   cac@6.7.14:
     resolution: {integrity: sha512-b6Ilus+c3RrdDk+JhLKUAQfzzgLEPy6wcXqS7f/xe1EETvsDP6GORG7SFuOs6cID5YkqchW/LXZbX5bc8j7ZcQ==}
@@ -5414,6 +5420,10 @@ packages:
   deep-eql@4.1.3:
     resolution: {integrity: sha512-WaEtAOpRA1MQ0eohqZjpGD8zdI0Ovsm8mmFhaDN8dvDZzyoUMcYDnf5Y6iu7HTXxf8JDS23qWa4a+hKCDyOPzw==}
     engines: {node: '>=6'}
+
+  deep-equal@1.1.2:
+    resolution: {integrity: sha512-5tdhKF6DbU7iIzrIOa1AOUt39ZRm13cmL1cGEh//aqR8x9+tNfbywRf0n5FD/18OKMdo7DNEtrX2t22ZAkI+eg==}
+    engines: {node: '>= 0.4'}
 
   deep-equal@2.2.3:
     resolution: {integrity: sha512-ZIwpnevOurS8bpT4192sqAowWM76JDKSHYzMLty3BZGSswgq6pBaH3DhCSW5xVAZICZyKdOBPjwww5wfgT/6PA==}
@@ -6693,8 +6703,8 @@ packages:
     resolution: {integrity: sha512-QUcQZutczESpdo2w9BMG6VpLFoq9ix7ER5HLM1mAdZdri2F3eISkCb8ep84W6YOo0grYWJdyT/8JkYqGjQfSSQ==}
     engines: {node: '>=18.12.0', yarn: ^1.17.0}
 
-  google-auth-library@9.7.0:
-    resolution: {integrity: sha512-I/AvzBiUXDzLOy4iIZ2W+Zq33W4lcukQv1nl7C8WUA6SQwyQwUwu3waNmWNAvzds//FG8SZ+DnKnW/2k6mQS8A==}
+  google-auth-library@9.8.0:
+    resolution: {integrity: sha512-TJJXFzMlVGRlIH27gYZ6XXyPf5Y3OItsKFfefsDAafNNywYRTkei83nEO29IrYj8GtdHWU78YnW+YZdaZaXIJA==}
     engines: {node: '>=14'}
 
   gopd@1.0.1:
@@ -6939,6 +6949,15 @@ packages:
 
   humanize-ms@1.2.1:
     resolution: {integrity: sha512-Fl70vYtsAFb/C06PTS9dZBo7ihau+Tu/DNCk/OyHhea07S+aeMWpFFkUaXRa8fI+ScZbEI8dfSxwY7gxZ9SAVQ==}
+
+  iced-error@0.0.13:
+    resolution: {integrity: sha512-yEEaG8QfyyRL0SsbNNDw3rVgTyqwHFMCuV6jDvD43f/2shmdaFXkqvFLGhDlsYNSolzYHwVLM/CrXt9GygYopA==}
+
+  iced-lock@1.1.0:
+    resolution: {integrity: sha512-J9UMVitgTMYrkUil5EB9/Q4BPWiMpFH156yjDlmMoMRKs3s3PnXj/6G0UlzIOGnNi5JVNk/zVYLXVnuo+1QnqQ==}
+
+  iced-runtime@1.0.4:
+    resolution: {integrity: sha512-rgiJXNF6ZgF2Clh/TKUlBDW3q51YPDJUXmxGQXx1b8tbZpVpTn+1RX9q1sjNkujXIIaVxZByQzPHHORg7KV51g==}
 
   iconv-lite@0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
@@ -7667,6 +7686,15 @@ packages:
   jws@4.0.0:
     resolution: {integrity: sha512-KDncfTmOZoOMTFG4mBlG0qUIOlc03fmzH+ru6RgYVZhPkyiy/92Owlt/8UEN+a4TXR1FQetfIpJE8ApdvdVxTg==}
 
+  kbpgp@2.1.15:
+    resolution: {integrity: sha512-iFdQT+m2Mi2DB14kEFydF2joNe9x3E2VZCGZUt7UXsiZnQx5TtSl4KofP7EPtjHvf7weCxNKlEPSYiiCNMZ2jA==}
+
+  keybase-ecurve@1.0.1:
+    resolution: {integrity: sha512-2GlVxDsNF+52LtYjgFsjoKuN7MQQgiVeR4HRdJxLuN8fm4mf4stGKPUjDJjky15c/98UsZseLjp7Ih5X0Sy1jQ==}
+
+  keybase-nacl@1.1.4:
+    resolution: {integrity: sha512-7TFyWLq42CQs7JES9arR+Vnv/eMk5D6JT1Y8samrEA5ff3FOmaiRcXIVrwJQd3KJduxmSjgAjdkXlQK7Q437xQ==}
+
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
@@ -8332,6 +8360,9 @@ packages:
 
   moo@0.5.2:
     resolution: {integrity: sha512-iSAJLHYKnX41mKcJKjqvnAN9sf0LMDTXDEvFv+ffuRR9a1MIuXLjMNL6EsnDHSkKLTWNqQQ5uo61P4EbU4NU+Q==}
+
+  more-entropy@0.0.7:
+    resolution: {integrity: sha512-e0TxQtU1F6/ZA8WnEA2JLQwwDqBTtZFLJSW7rWgUsQou35wx1IOL0g2O7q7oGoMgIJto+jHMnNGHLfSiylHRrw==}
 
   mri@1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
@@ -9036,6 +9067,9 @@ packages:
     resolution: {integrity: sha512-qTAAlrEsl8s4OiEQY69wDvcMIdQN6wdz5ojQiOy6YRMuynxenON0O5oCpJI6lshc6scgAY8qvJ2On/p+CXY0GA==}
     engines: {node: '>=4'}
 
+  pgp-utils@0.0.35:
+    resolution: {integrity: sha512-gCT6EbSTgljgycVa5qGpfRITaLOLbIKsEVRTdsNRgmLMAJpuJNNdrTn/95r8IWo9rFLlccfmGMJXkG9nVDwmrA==}
+
   picocolors@1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
 
@@ -9274,6 +9308,10 @@ packages:
     resolution: {integrity: sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==}
     engines: {node: '>= 0.6.0'}
 
+  progress@1.1.8:
+    resolution: {integrity: sha512-UdA8mJ4weIkUBO224tIarHzuHs4HuYiJvsuGT7j/SPQiUJVjYvNDBIPa0hAorduOfjGohB/qHWRa/lrrWX/mXw==}
+    engines: {node: '>=0.4.0'}
+
   progress@2.0.3:
     resolution: {integrity: sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==}
     engines: {node: '>=0.4.0'}
@@ -9353,6 +9391,10 @@ packages:
 
   pure-rand@6.1.0:
     resolution: {integrity: sha512-bVWawvoZoBYpp6yIoQtQXHZjmz35RSVHnUOTefl8Vcjr8snTPY1wnpSPMWekcFwbxI6gtmT7rSYPFvz71ldiOA==}
+
+  purepack@1.0.6:
+    resolution: {integrity: sha512-L/e3qq/3m/TrYtINo2aBB98oz6w8VHGyFy+arSKwPMZDUNNw2OaQxYnZO6UIZZw2OnRl2qkxGmuSOEfsuHXJdA==}
+    engines: {node: '>=0.10.0'}
 
   purify-ts@1.1.0:
     resolution: {integrity: sha512-hfXuxs6hoRURvcBwHVGlLdeNp9R96z+l1sQQj5enqU1ZDqV1GGVPIr6wNw2rNKqhQemaaMERrqjqjzO2hVYZsg==}
@@ -9691,8 +9733,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@37.316.2:
-    resolution: {integrity: sha512-oXpwbes6v3hOkOXuTrSSy0RMlYSzz6XnrJt9WpG24kmIkAZRCrDlEP2y7nOr4d2gBlLtuz+XvCuvNSW4kgQsFw==}
+  renovate@37.318.1:
+    resolution: {integrity: sha512-aRXv5gJmIdBs7hOtYV5ZbCTH5Z52FT7ZhPIovEh19cZ96a8ubaqOoeqhEwhCFOFAOn/z618xPhOn5w+oOobKiQ==}
     engines: {node: ^18.12.0 || >=20.0.0, pnpm: ^8.0.0}
     hasBin: true
 
@@ -10563,6 +10605,9 @@ packages:
     resolution: {integrity: sha512-c1PTsA3tYrIsLGkJkzHF+w9F2EyxfXGo4UyJc4pFL++FMjnq0HJS69T3M7d//gKrFKwy429bouPescbjecU+Zw==}
     engines: {node: '>=8'}
 
+  triplesec@4.0.3:
+    resolution: {integrity: sha512-fug70e1nJoCMxsXQJlETisAALohm84vl++IiTTHEqM7Lgqwz62jrlwqOC/gJEAJjO/ByN127sEcioB56HW3wIw==}
+
   trough@1.0.5:
     resolution: {integrity: sha512-rvuRbTarPXmMb79SmzEp8aqXNKcK+y0XaB298IXueQ8I2PsrATcPBCSPyK/dDNa2iWOhKlfNnOjdAOTBU/nkFA==}
 
@@ -10747,6 +10792,9 @@ packages:
     resolution: {integrity: sha512-rX/d9f4MgRT3yK6cERPAkfavIxbpBZowDQpgvkYwGMGDQ0Nvw1nc0NVjruE76GrzXQqoxR1UpnmEP54vBARFHQ==}
     hasBin: true
 
+  tweetnacl@0.13.3:
+    resolution: {integrity: sha512-iNWodk4oBsZ03Qfw/Yvv0KB90uYrJqvL4Je7Gy4C5t/GS3sCXPRmIT1lxmId4RzvUp0XG62bcxJ2CBu/3L5DSg==}
+
   typanion@3.14.0:
     resolution: {integrity: sha512-ZW/lVMRabETuYCd9O9ZvMhAh8GslSqaUjxmK/JLPCh6l73CvLBiuXswj/+7LdnWOgYsQ130FqLzFz5aGT4I3Ug==}
 
@@ -10847,6 +10895,9 @@ packages:
 
   uid-promise@1.0.0:
     resolution: {integrity: sha512-R8375j0qwXyIu/7R0tjdF06/sElHqbmdmWC9M2qQHpEVbvE4I5+38KJI7LUUmQMp7NVq4tKHiBMkT0NFM453Ig==}
+
+  uint64be@1.0.1:
+    resolution: {integrity: sha512-w+VZSp8hSZ/xWZfZNMppWNF6iqY+dcMYtG5CpwRDgxi94HIE6ematSdkzHGzVC4SDEaTsG65zrajN+oKoWG6ew==}
 
   ultrahtml@1.5.3:
     resolution: {integrity: sha512-GykOvZwgDWZlTQMtp5jrD4BVL+gNn2NVlVafjcFUJ7taY20tqYdwdoWBFy6GBJsNTZe1GkGPkSl5knQAjtgceg==}
@@ -17055,6 +17106,7 @@ snapshots:
       inherits: 2.0.4
       minimalistic-assert: 1.0.1
       safer-buffer: 2.1.2
+    optional: true
 
   assert@2.1.0:
     dependencies:
@@ -17376,6 +17428,8 @@ snapshots:
 
   bn.js@5.2.1: {}
 
+  bn@1.0.5: {}
+
   body-parser@1.20.2:
     dependencies:
       bytes: 3.1.2
@@ -17558,6 +17612,8 @@ snapshots:
   bytes@3.1.0: {}
 
   bytes@3.1.2: {}
+
+  bzip-deflate@1.0.0: {}
 
   cac@6.7.14: {}
 
@@ -18266,6 +18322,15 @@ snapshots:
   deep-eql@4.1.3:
     dependencies:
       type-detect: 4.0.8
+
+  deep-equal@1.1.2:
+    dependencies:
+      is-arguments: 1.1.1
+      is-date-object: 1.0.5
+      is-regex: 1.1.4
+      object-is: 1.1.6
+      object-keys: 1.1.1
+      regexp.prototype.flags: 1.5.2
 
   deep-equal@2.2.3:
     dependencies:
@@ -19849,7 +19914,7 @@ snapshots:
       klona: 2.0.6
       moo: 0.5.2
 
-  google-auth-library@9.7.0(encoding@0.1.13):
+  google-auth-library@9.8.0(encoding@0.1.13):
     dependencies:
       base64-js: 1.5.1
       ecdsa-sig-formatter: 1.0.11
@@ -20196,6 +20261,14 @@ snapshots:
   humanize-ms@1.2.1:
     dependencies:
       ms: 2.1.3
+
+  iced-error@0.0.13: {}
+
+  iced-lock@1.1.0:
+    dependencies:
+      iced-runtime: 1.0.4
+
+  iced-runtime@1.0.4: {}
 
   iconv-lite@0.4.24:
     dependencies:
@@ -21108,6 +21181,32 @@ snapshots:
     dependencies:
       jwa: 2.0.0
       safe-buffer: 5.2.1
+
+  kbpgp@2.1.15:
+    dependencies:
+      bn: 1.0.5
+      bzip-deflate: 1.0.0
+      deep-equal: 1.1.2
+      iced-error: 0.0.13
+      iced-lock: 1.1.0
+      iced-runtime: 1.0.4
+      keybase-ecurve: 1.0.1
+      keybase-nacl: 1.1.4
+      minimist: 1.2.8
+      pgp-utils: 0.0.35
+      purepack: 1.0.6
+      triplesec: 4.0.3
+      tweetnacl: 0.13.3
+
+  keybase-ecurve@1.0.1:
+    dependencies:
+      bn: 1.0.5
+
+  keybase-nacl@1.1.4:
+    dependencies:
+      iced-runtime: 1.0.4
+      tweetnacl: 0.13.3
+      uint64be: 1.0.1
 
   keyv@4.5.4:
     dependencies:
@@ -22028,6 +22127,10 @@ snapshots:
 
   moo@0.5.2: {}
 
+  more-entropy@0.0.7:
+    dependencies:
+      iced-runtime: 1.0.4
+
   mri@1.2.0: {}
 
   mrmime@2.0.0: {}
@@ -22472,6 +22575,7 @@ snapshots:
   openpgp@5.11.1:
     dependencies:
       asn1.js: 5.4.1
+    optional: true
 
   optionator@0.9.3:
     dependencies:
@@ -22828,6 +22932,11 @@ snapshots:
       postgres-date: 1.0.7
       postgres-interval: 1.2.0
 
+  pgp-utils@0.0.35:
+    dependencies:
+      iced-error: 0.0.13
+      iced-runtime: 1.0.4
+
   picocolors@1.0.0: {}
 
   picomatch@2.3.1: {}
@@ -23043,6 +23152,8 @@ snapshots:
 
   process@0.11.10: {}
 
+  progress@1.1.8: {}
+
   progress@2.0.3: {}
 
   promise-inflight@1.0.1: {}
@@ -23147,6 +23258,8 @@ snapshots:
       - utf-8-validate
 
   pure-rand@6.1.0: {}
+
+  purepack@1.0.6: {}
 
   purify-ts@1.1.0:
     dependencies:
@@ -23649,7 +23762,7 @@ snapshots:
       lodash: 4.17.21
       strip-ansi: 6.0.1
 
-  renovate@37.316.2(encoding@0.1.13)(typanion@3.14.0):
+  renovate@37.318.1(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.363.0
       '@aws-sdk/client-ec2': 3.363.0
@@ -23711,7 +23824,7 @@ snapshots:
       glob: 10.3.12
       global-agent: 3.0.0
       good-enough-parser: 1.1.23
-      google-auth-library: 9.7.0(encoding@0.1.13)
+      google-auth-library: 9.8.0(encoding@0.1.13)
       got: 11.8.6
       graph-data-structure: 3.5.0
       handlebars: 4.7.8
@@ -23722,6 +23835,7 @@ snapshots:
       json-stringify-pretty-compact: 3.0.0
       json5: 2.2.3
       jsonata: 2.0.4
+      kbpgp: 2.1.15
       klona: 2.0.6
       lru-cache: 10.2.0
       luxon: 3.4.4
@@ -23732,7 +23846,6 @@ snapshots:
       ms: 2.1.3
       nanoid: 3.3.7
       node-html-parser: 6.1.13
-      openpgp: 5.11.1
       p-all: 3.0.0
       p-map: 4.0.0
       p-queue: 6.6.2
@@ -23760,6 +23873,7 @@ snapshots:
       xmldoc: 1.3.0
       zod: 3.22.4
     optionalDependencies:
+      openpgp: 5.11.1
       re2: 1.20.10
     transitivePeerDependencies:
       - '@aws-sdk/signature-v4-crt'
@@ -24814,6 +24928,15 @@ snapshots:
 
   trim-newlines@3.0.1: {}
 
+  triplesec@4.0.3:
+    dependencies:
+      iced-error: 0.0.13
+      iced-lock: 1.1.0
+      iced-runtime: 1.0.4
+      more-entropy: 0.0.7
+      progress: 1.1.8
+      uglify-js: 3.17.4
+
   trough@1.0.5: {}
 
   trough@2.2.0: {}
@@ -25008,6 +25131,8 @@ snapshots:
       turbo-windows-64: 1.13.2
       turbo-windows-arm64: 1.13.2
 
+  tweetnacl@0.13.3: {}
+
   typanion@3.14.0: {}
 
   type-check@0.4.0:
@@ -25098,10 +25223,11 @@ snapshots:
 
   ufo@1.5.3: {}
 
-  uglify-js@3.17.4:
-    optional: true
+  uglify-js@3.17.4: {}
 
   uid-promise@1.0.0: {}
+
+  uint64be@1.0.1: {}
 
   ultrahtml@1.5.3: {}
 
