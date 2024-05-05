@@ -369,9 +369,6 @@ importers:
       cpx2:
         specifier: ^7.0.0
         version: 7.0.1
-      cross-env:
-        specifier: ^7.0.3
-        version: 7.0.3
       esbuild:
         specifier: ^0.20.1
         version: 0.20.2
@@ -405,9 +402,6 @@ importers:
       cpx2:
         specifier: ^7.0.0
         version: 7.0.1
-      cross-env:
-        specifier: ^7.0.3
-        version: 7.0.3
       esbuild:
         specifier: ^0.20.1
         version: 0.20.2
@@ -5373,11 +5367,6 @@ packages:
     resolution: {integrity: sha512-p0SaNjrHOnQeR8/VnfGbmg9te2kfyYSQ7Sc/j/6DtPL3JQvKxmjO9TSjNFpujqV3vEYYBvNNvXSxzyksBWAx1Q==}
     engines: {node: '>=12.0.0'}
 
-  cross-env@7.0.3:
-    resolution: {integrity: sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==}
-    engines: {node: '>=10.14', npm: '>=6', yarn: '>=1'}
-    hasBin: true
-
   cross-spawn@7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
     engines: {node: '>= 8'}
@@ -8701,10 +8690,6 @@ packages:
   node-fetch@3.3.2:
     resolution: {integrity: sha512-dRB78srN/l6gqWulah9SrxeYnxeddIG30+GOqK/9OlLVyLg3HPnr6SqOWTWOXKRwC2eGYCkZ59NNuSgvSrpgOA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-
-  node-gyp-build@4.8.0:
-    resolution: {integrity: sha512-u6fs2AEUljNho3EYTJNBfImO5QTo/J/1Etd+NVdCj7qWKUSN/bSLkZwhDv7I+w/MSC6qJ4cknepkAYykDdK8og==}
-    hasBin: true
 
   node-gyp-build@4.8.1:
     resolution: {integrity: sha512-OSs33Z9yWr148JZcbZd5WiAXhh/n9z8TxQcdMhIOlpN9AhWpLfvVFO73+m77bBABQMaY9XSvIa+qk0jlI7Gcaw==}
@@ -18797,7 +18782,7 @@ snapshots:
 
   bufferutil@4.0.8:
     dependencies:
-      node-gyp-build: 4.8.0
+      node-gyp-build: 4.8.1
 
   builtin-status-codes@3.0.0: {}
 
@@ -19341,10 +19326,6 @@ snapshots:
   cron-parser@4.9.0:
     dependencies:
       luxon: 3.4.4
-
-  cross-env@7.0.3:
-    dependencies:
-      cross-spawn: 7.0.3
 
   cross-spawn@7.0.3:
     dependencies:
@@ -23535,8 +23516,6 @@ snapshots:
       fetch-blob: 3.2.0
       formdata-polyfill: 4.0.10
 
-  node-gyp-build@4.8.0: {}
-
   node-gyp-build@4.8.1: {}
 
   node-gyp@10.1.0:
@@ -26712,7 +26691,7 @@ snapshots:
 
   utf-8-validate@6.0.3:
     dependencies:
-      node-gyp-build: 4.8.0
+      node-gyp-build: 4.8.1
 
   util-deprecate@1.0.2: {}
 
