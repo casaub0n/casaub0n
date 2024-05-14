@@ -34,7 +34,7 @@ importers:
         version: 3.2.5
       renovate:
         specifier: ^37.208.0
-        version: 37.356.1(@aws-sdk/client-sso-oidc@3.574.0)(@aws-sdk/client-sts@3.565.0(@aws-sdk/client-sso-oidc@3.574.0))(encoding@0.1.13)(typanion@3.14.0)
+        version: 37.358.0(@aws-sdk/client-sso-oidc@3.574.0)(@aws-sdk/client-sts@3.565.0(@aws-sdk/client-sso-oidc@3.574.0))(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: ^14.0.3
         version: 14.0.4
@@ -3808,6 +3808,9 @@ packages:
 
   '@types/emscripten@1.39.11':
     resolution: {integrity: sha512-dOeX2BeNA7j6BTEqJQL3ut0bRCfsyQMd5i4FT8JfHfYhAOuJPCGh0dQFbxVJxUyQ+75x6enhDdndGb624/QszA==}
+
+  '@types/emscripten@1.39.12':
+    resolution: {integrity: sha512-AQImDBgudQfMqUBfrjZYilRxoHDzTBp+ejh+g1fY67eSMalwIKtBXofjpyI0JBgNpHGzxeGAR2QDya0wxW9zbA==}
 
   '@types/escodegen@0.0.6':
     resolution: {integrity: sha512-AjwI4MvWx3HAOaZqYsjKWyEObT9lcVV0Y0V8nXo6cXzN8ZiMxVhf6F3d/UNvXVGKrEzL/Dluc5p+y9GkzlTWig==}
@@ -9971,8 +9974,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@37.356.1:
-    resolution: {integrity: sha512-FONXIYbWTDh8e7ldTJYaBwb/+mVVfn1PGWsGuJ94uWsA75/K9rOinZwKDH7zbZiX8qQ+WYDpef/VVxhiczIj7w==}
+  renovate@37.358.0:
+    resolution: {integrity: sha512-n7GoVUXRXo9O3oGC2WMWYOAScWqn5IJ99ER7k0OlW8BeGW+UAj24hC02iHEk0ciIJpmyO5YorkR0f80PvMCFMA==}
     engines: {node: ^18.12.0 || >=20.0.0, pnpm: ^9.0.0}
     hasBin: true
 
@@ -16766,6 +16769,8 @@ snapshots:
 
   '@types/emscripten@1.39.11': {}
 
+  '@types/emscripten@1.39.12': {}
+
   '@types/escodegen@0.0.6': {}
 
   '@types/eslint-scope@3.7.7':
@@ -17594,7 +17599,7 @@ snapshots:
 
   '@yarnpkg/libzip@3.1.0(@yarnpkg/fslib@3.1.0)':
     dependencies:
-      '@types/emscripten': 1.39.11
+      '@types/emscripten': 1.39.12
       '@yarnpkg/fslib': 3.1.0
       tslib: 2.6.2
 
@@ -24587,7 +24592,7 @@ snapshots:
       lodash: 4.17.21
       strip-ansi: 6.0.1
 
-  renovate@37.356.1(@aws-sdk/client-sso-oidc@3.574.0)(@aws-sdk/client-sts@3.565.0(@aws-sdk/client-sso-oidc@3.574.0))(encoding@0.1.13)(typanion@3.14.0):
+  renovate@37.358.0(@aws-sdk/client-sso-oidc@3.574.0)(@aws-sdk/client-sts@3.565.0(@aws-sdk/client-sso-oidc@3.574.0))(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.565.0(@aws-sdk/client-sso-oidc@3.574.0)(@aws-sdk/client-sts@3.565.0(@aws-sdk/client-sso-oidc@3.574.0))
       '@aws-sdk/client-ec2': 3.565.0(@aws-sdk/client-sso-oidc@3.574.0)(@aws-sdk/client-sts@3.565.0(@aws-sdk/client-sso-oidc@3.574.0))
