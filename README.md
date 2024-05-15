@@ -18,6 +18,7 @@ Since then, my movie's adventure has started.
 
 - ![Twitch](https://img.shields.io/badge/Twitch-%239146FF.svg?style=for-the-badge&logo=Twitch&logoColor=white) - [casaub00n](https://www.twitch.tv/casaub0nn)
 - ![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white) - [casaub0n](https://twitter.com/casaub0n)
+- Pikmin Bloom frend's code: 465561226769
 
 ## Others
 
