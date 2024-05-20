@@ -24,11 +24,13 @@ type Props = ComponentPropsWithoutRef<"div">;
  *
  * local story
  * @see http://localhost:6006/?path=/story/casaub0n-page-atoms-myavatar--default
+ *
+ * @todo https://github.com/vercel/next.js/issues/65161
  */
-export const MyAvatar: FC<Props> = ({ className, ...props }) => {
+export const MyAvatar: FC<Props> = ({ className="avatar-img", ...props }) => {
   return (
     <div className={clsx(className, div)} {...props}>
-      <Image className={clsx(image)} alt='my picture' fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="/images/me.jpg" />
+      <Image className={clsx(image)} alt='my picture' fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src="/images/me.jpg" priority={true} />
     </div>
   );
 };

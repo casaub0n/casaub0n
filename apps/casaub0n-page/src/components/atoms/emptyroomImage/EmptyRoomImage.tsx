@@ -9,6 +9,7 @@ type Props = ComponentPropsWithoutRef<"div">;
 
 /**
  * This image by cloudinaryLoader
+ * @todo https://github.com/vercel/next.js/issues/65161
  */
 export const EmptyRoomImage: FC<Props> = ({ className }) => {
   return (
@@ -23,6 +24,7 @@ export const EmptyRoomImage: FC<Props> = ({ className }) => {
             loader={cloudinaryLoader("v1665804278")}
             src='/sakura-building-livingroom.jpg'
             width={480}
+            priority={true}
           />
         </div>
   );
