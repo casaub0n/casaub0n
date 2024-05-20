@@ -2,7 +2,7 @@
  * This test uses node test runner
  */
 
-import { strict as assert } from "assert";
+// import { strict as assert } from "assert";
 import { env } from "node:process";
 import { test } from "node:test";
 import path from "path";
@@ -20,26 +20,10 @@ test("Addon Test", async () => {
     args: [`--disable-extensions-except=${pathToExtension}`, `--load-extension=${pathToExtension}`],
   });
   const page = await browser.newPage();
-  await page.goto("chrome://extensions/");
+  await page.goto("chrome://extensions/", { waitUntil: ["networkidle0", "load"] });
 
-  // screenshot
-  page.setViewport({ width: 1200, height: 800 });
-  await page.screenshot({ path: "screenshot.png", fullPage: true });
+  const addonElement = await page.$("extensions-manager");
+  console.log(addonElement);
 
-  // /html/body/extensions-manager//div[2]/cr-view-manager/extensions-item-list//div/div/div[4]/extensions-item[1]//div[2]/div[1]/div[2]/div[1]/div/div
-  // TODO: wait
-  // await page.waitForSelector("body");
-  // it con't be gotten tree
-  const el = await page.$("html");
-
-  if (el) {
-    const hoge = await (await el.getProperty("textContent")).jsonValue();
-    console.log(`el: ${hoge}`);
-  }
-
-  const title = await page.title();
-  const uri = page.url();
-
-  // assert.deepStrictEqual(markdownLink(title, uri), "[拡張機能](chrome://extensions/)");
   await browser.close();
 });
