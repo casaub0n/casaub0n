@@ -8,7 +8,7 @@ import { div } from "./Pdialog.css";
 
 type Props = ComponentPropsWithoutRef<"div">;
 
-export const Pdialog: FC<Props> = ({...props}) => {
+export const Pdialog: FC<Props> = ({className="progress-dialog", ...props}) => {
    /** Dialog の開閉を管理する Flag */
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,7 +23,7 @@ export const Pdialog: FC<Props> = ({...props}) => {
   };
 
   return (
-    <div {...props}>
+    <div className={clsx(className)} {...props}>
       {/* Dialogを Openする Btn */}
       <div className={clsx(div)}>
         <button onClick={() => openDialog()}>Dialog Open</button>

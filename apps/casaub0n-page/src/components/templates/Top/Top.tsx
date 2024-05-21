@@ -15,7 +15,7 @@ type Props = ComponentPropsWithoutRef<"main">;
 /**
  * @see http://localhost:6006/?path=/story/casaub0n-page-templates-top--default
  */
-export const Top: FC<Props> = ({ className, ...props }) => {
+export const Top: FC<Props> = ({ className="top", ...props }) => {
   return (
     <main className={clsx(className)} {...props}>
       <section className={clsx(styledSection)}>

@@ -11,7 +11,7 @@ type Props = ComponentPropsWithoutRef<"div">;
  * This image by cloudinaryLoader
  * @todo https://github.com/vercel/next.js/issues/65161
  */
-export const EmptyRoomImage: FC<Props> = ({ className }) => {
+export const EmptyRoomImage: FC<Props> = ({ className="empty-room" }) => {
   return (
         <div className={clsx(className)}>
           <Image
