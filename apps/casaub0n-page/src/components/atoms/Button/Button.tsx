@@ -17,7 +17,7 @@ export const Button: FC<ButtonProps> = ({
   sizeVariant = "medium",
   visualVariant = "primary",
   children,
-  className,
+  className="simple-button",
   ...props
 }) => {
   return (

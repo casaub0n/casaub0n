@@ -12,7 +12,7 @@ type Props = ComponentPropsWithoutRef<"div">;
  * @description by recharts
  * @see https://zenn.dev/acha_n/articles/how-to-customize-recharts
  */
-export const StudyDataComponent: FC<Props> = ({ className, ...props }) => {
+export const StudyDataComponent: FC<Props> = ({ className="study-data", ...props }) => {
   return (
     <div className={clsx(className)} {...props} role="main">
       <LineChart

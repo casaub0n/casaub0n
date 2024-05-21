@@ -34,7 +34,7 @@ type Props = ComponentPropsWithoutRef<"form">;
  * @description currently, this form doesn't send any message to saver
  * @returns Question form component
  */
-export const QuestionForm: FC<Props> = ({ className, ...props }) => {
+export const QuestionForm: FC<Props> = ({ className="question-form", ...props }) => {
   const errorMessageId = useId();
 
   const { control, handleSubmit } = useForm<IForm>({
