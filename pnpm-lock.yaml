@@ -34,7 +34,7 @@ importers:
         version: 3.2.5
       renovate:
         specifier: ^37.208.0
-        version: 37.368.9(@aws-sdk/client-sso-oidc@3.577.0)(@aws-sdk/client-sts@3.565.0(@aws-sdk/client-sso-oidc@3.577.0))(encoding@0.1.13)(typanion@3.14.0)
+        version: 37.368.10(@aws-sdk/client-sso-oidc@3.577.0)(@aws-sdk/client-sts@3.565.0(@aws-sdk/client-sso-oidc@3.577.0))(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: ^14.0.3
         version: 14.0.4
@@ -4743,10 +4743,12 @@ packages:
   are-we-there-yet@2.0.0:
     resolution: {integrity: sha512-Ci/qENmwHnsYo9xKIcUJN5LeDKdJ6R1Z1j9V/J5wyq8nh/mYPEpIKJbBZXtZjG04HiK7zV/p6Vs9952MrMeUIw==}
     engines: {node: '>=10'}
+    deprecated: This package is no longer supported.
 
   are-we-there-yet@4.0.2:
     resolution: {integrity: sha512-ncSWAawFhKMJDTdoAeOV+jyW1VCMj5QIAwULIBV0SSR7B/RLPPEQiknKcg/RIIZlUQrxELpsxMiTUoAQ4sIUyg==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
+    deprecated: This package is no longer supported.
 
   arg@4.1.0:
     resolution: {integrity: sha512-ZWc51jO3qegGkVh8Hwpv636EkbesNV5ZNQPCtRa+0qytRYPEs9IYT9qITY9buezqUH5uqyzlWLcufrzU2rffdg==}
@@ -6972,10 +6974,12 @@ packages:
   gauge@3.0.2:
     resolution: {integrity: sha512-+5J6MS/5XksCuXq++uFRsnUd7Ovu1XenbeuIuNRJxYWjgQbPuFhT14lAvsWfqfAmnwluf1OwMjz39HjfLPci0Q==}
     engines: {node: '>=10'}
+    deprecated: This package is no longer supported.
 
   gauge@5.0.2:
     resolution: {integrity: sha512-pMaFftXPtiGIHCJHdcUUx9Rby/rFT/Kkt3fIIGCs+9PMDIljSyRiqraTlxNtBReJRDfUefpa263RQ3vnp5G/LQ==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
+    deprecated: This package is no longer supported.
 
   gaxios@6.6.0:
     resolution: {integrity: sha512-bpOZVQV5gthH/jVCSuYuokRo2bTKOcuBiVWpjmTn6C5Agl5zclGfTljuGsQZxwwDBkli+YhZhP4TdlqTnhOezQ==}
@@ -9099,10 +9103,12 @@ packages:
 
   npmlog@5.0.1:
     resolution: {integrity: sha512-AqZtDUWOMKs1G/8lwylVjrdYgqA4d9nu8hc+0gzRxlDb1I10+FHBGMXs6aiQHFdCUUlqH99MUMuLfzWDNDtfxw==}
+    deprecated: This package is no longer supported.
 
   npmlog@7.0.1:
     resolution: {integrity: sha512-uJ0YFk/mCQpLBt+bxN88AKd+gyqZvZDbtiNxk6Waqcj2aPRyfVx8ITawkyQynxUagInjdYT1+qj4NfA5KJJUxg==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
+    deprecated: This package is no longer supported.
 
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
@@ -10054,6 +10060,7 @@ packages:
   read-package-json@7.0.1:
     resolution: {integrity: sha512-8PcDiZ8DXUjLf687Ol4BR8Bpm2umR7vhoZOzNRt+uxD9GpBh/K+CAAALVIiYFknmvlmyg7hM7BSNUXPaCCqd0Q==}
     engines: {node: ^16.14.0 || >=18.0.0}
+    deprecated: This package is no longer supported. Please use @npmcli/package-json instead.
 
   read-pkg-up@10.1.0:
     resolution: {integrity: sha512-aNtBq4jR8NawpKJQldrQcSW9y/d+KWH4v24HWkHljOZ7H0av+YTGANBzRh9A5pw7v/bLVsLVPpOhJ7gHNVy8lA==}
@@ -10235,8 +10242,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@37.368.9:
-    resolution: {integrity: sha512-jIAJEIg5xvjuZD7TPc6Ism5Mw0S4r5sYhONbmXUkt5ox8d8FRwMJw7dF03ywhWpjZQlx5sxQZlmpjrmLu6YhNw==}
+  renovate@37.368.10:
+    resolution: {integrity: sha512-HqjiSXei6E61w+yWzk3BSktmrS8+0OMaxfAS9ozi/vH/5PirRh422OmrOQCwnVK+6paNu2kb9ORl/cEys355/g==}
     engines: {node: ^18.12.0 || >=20.0.0, pnpm: ^9.0.0}
     hasBin: true
 
@@ -25246,7 +25253,7 @@ snapshots:
       lodash: 4.17.21
       strip-ansi: 6.0.1
 
-  renovate@37.368.9(@aws-sdk/client-sso-oidc@3.577.0)(@aws-sdk/client-sts@3.565.0(@aws-sdk/client-sso-oidc@3.577.0))(encoding@0.1.13)(typanion@3.14.0):
+  renovate@37.368.10(@aws-sdk/client-sso-oidc@3.577.0)(@aws-sdk/client-sts@3.565.0(@aws-sdk/client-sso-oidc@3.577.0))(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.565.0(@aws-sdk/client-sso-oidc@3.577.0)(@aws-sdk/client-sts@3.565.0(@aws-sdk/client-sso-oidc@3.577.0))
       '@aws-sdk/client-ec2': 3.565.0(@aws-sdk/client-sso-oidc@3.577.0)(@aws-sdk/client-sts@3.565.0(@aws-sdk/client-sso-oidc@3.577.0))
