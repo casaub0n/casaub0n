@@ -14,10 +14,10 @@ on:
       - "apps/casaub0n-astro/**"
       - "apps/nextjs-dashboard/**"
       - "Cargo.*"
-      - "package.json"
-      - "pnpm-lock.yaml"
-      - ".github/**"
       - "crates/**"
+      # - "package.json"
+      # - "pnpm-lock.yaml"
+      # - ".github/**"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -42,51 +42,47 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Detect package manager
-        id: detect-package-manager
-        run: |
-          if [ -f "${{ github.workspace }}/pnpm-lock.yaml" ]; then
-            echo "manager=pnpm" >> $GITHUB_OUTPUT
-            echo "command=install" >> $GITHUB_OUTPUT
-            echo "runner=pnpm" >> $GITHUB_OUTPUT
-            exit 0
-          elif [ -f "${{ github.workspace }}/package.json" ]; then
-            echo "manager=npm" >> $GITHUB_OUTPUT
-            echo "command=ci" >> $GITHUB_OUTPUT
-            echo "runner=npx --no-install" >> $GITHUB_OUTPUT
-            exit 0
-          else
-            echo "Unable to determine packager manager"
-            exit 1
-          fi
-      - name: Setup Node
+        with:
+          fetch-depth: 2
+
+      - name: Install Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - uses: pnpm/action-setup@v2
-        name: Install pnpm
-        id: pnpm-install
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2
         with:
           version: 8
           run_install: false
 
+      # I used https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#caching-packages-data
+      # For now, it uses https://github.com/pnpm/action-setup/tree/v2/#use-cache-to-reduce-installation-time
       - name: Get pnpm store directory
-        id: pnpm-cache
         shell: bash
         run: |
-          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
       - uses: actions/cache@v4
         name: Setup pnpm cache
         with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          path: ${{ env.STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Install dependencies
-        run: pnpm install
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@v1
+        id: setup-chrome
+      - run: |
+          echo Installed chromium version: ${{ steps.setup-chrome.outputs.chrome-version }}
+          ${{ steps.setup-chrome.outputs.chrome-path }} --version
+
+      - name: Create dot env file
+        shell: bash
+        run: |
+          touch .env.ci
+          echo "CHROME=${{ steps.setup-chrome.outputs.chrome-path }}" >> .env.ci
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -97,11 +93,11 @@ jobs:
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: storybook
       - name: Install dependencies
-        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        run: pnpm install
       - name: Run tests
-        run: ${{ steps.detect-package-manager.outputs.runner }} test --filter=@casaub0n/casaub0n-page
+        run: pnpm test --filter=@casaub0n/casaub0n-page
       - name: Build static storybook
-        run: ${{ steps.detect-package-manager.outputs.runner }} build --filter=@casaub0n/catalog
+        run: pnpm build --filter=@casaub0n/catalog
         env:
           CI: true
           TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
