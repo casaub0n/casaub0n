@@ -20,14 +20,14 @@ on:
       # - ".github/**"
 
   # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  # workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
-  actions: read
+  # actions: read
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
@@ -86,22 +86,29 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        with:
-          # Automatically inject basePath in your Next.js configuration file and disable
-          # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
-          #
-          # You may remove this line if you want to manage the configuration yourself.
-          static_site_generator: storybook
+        # with:
+        # Automatically inject basePath in your Next.js configuration file and disable
+        # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
+        #
+        # You may remove this line if you want to manage the configuration yourself.
+        # static_site_generator: storybook
       - name: Install dependencies
         run: pnpm install
+
       - name: Run tests
         run: pnpm test --filter=@casaub0n/casaub0n-page
+        env:
+          CI: true
+          TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+          TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+
       - name: Build static storybook
         run: pnpm build --filter=@casaub0n/catalog
         env:
           CI: true
           TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
           TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
