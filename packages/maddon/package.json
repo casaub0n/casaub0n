@@ -20,7 +20,7 @@
     "build": "pnpm prebuild && pnpm copy",
     "test": "tsc --noEmit && node --env-file .env.windows --import tsx src/test.ts",
     "test:addon": "pnpm build && node --env-file .env.windows --import tsx src/addonTest.ts",
-    "test:ci": "node --env-file .env.gh --no-warnings --import tsx src/test.ts"
+    "test:ci": "node --env-file ../../.env.ci --no-warnings --import tsx src/test.ts"
   },
   "files": [
     "dist"
