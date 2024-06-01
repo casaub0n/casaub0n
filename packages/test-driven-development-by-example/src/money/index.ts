@@ -63,7 +63,11 @@ type Rate = {
 };
 
 export class Bank {
-  private rates: Rate | undefined;
+  /**
+   * Under the covers, these auto-accessors “de-sugar” to a get and set accessor with an unreachable private property.
+   * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html#auto-accessors-in-classes
+   */
+  #__rates: Rate | undefined;
 
   public reduce(source: Expression, to: string): Money {
     return source.reduce(this, to);
@@ -71,13 +75,13 @@ export class Bank {
 
   public rate(from: string, to: string): number {
     if (from === to) return 1;
-    const rate = this.rates?.rate;
+    const rate = this.#__rates?.rate;
     if (rate) return rate;
     return 1; // if no setting
   }
 
   public addRate(from: string, to: string, rate: number): void {
-    this.rates = {
+    this.#__rates = {
       pair: [from, to],
       rate: rate,
     };
@@ -85,16 +89,16 @@ export class Bank {
 }
 
 export class Sum implements Expression {
-  private _augend: Expression;
-  private _addend: Expression;
+  #__augend: Expression;
+  #__addend: Expression;
 
   constructor(augend: Expression, addend: Expression) {
-    this._augend = augend;
-    this._addend = addend;
+    this.#__augend = augend;
+    this.#__addend = addend;
   }
 
   public times(multiplier: number): Expression {
-    return new Sum(this._augend.times(multiplier), this._addend.times(multiplier));
+    return new Sum(this.#__augend.times(multiplier), this.#__addend.times(multiplier));
   }
 
   public plus(addend: Expression): Expression {
@@ -102,15 +106,15 @@ export class Sum implements Expression {
   }
 
   public reduce(bank: Bank, to: string): Money {
-    const amount = this._augend.reduce(bank, to).amount + this._addend.reduce(bank, to).amount;
+    const amount = this.#__augend.reduce(bank, to).amount + this.#__addend.reduce(bank, to).amount;
     return new Money(amount, to);
   }
 
   get augend() {
-    return this._addend;
+    return this.#__addend;
   }
 
   get addend() {
-    return this._addend;
+    return this.#__addend;
   }
 }
