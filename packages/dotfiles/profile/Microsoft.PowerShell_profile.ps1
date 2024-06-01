@@ -2,7 +2,7 @@
     DESKTOP-8VA90LC profile
 #>
 Invoke-Expression (&starship init powershell)
-fnm env --use-on-cd | Out-String | Invoke-Expression
+fnm env --use-on-cd --shell power-shell | Out-String | Invoke-Expression
 
 Import-Module posh-git
 Import-Module PSFzf
