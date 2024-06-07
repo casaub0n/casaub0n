@@ -15,17 +15,21 @@ pnpm test
 
 ## Test Environment
 
-I follow this link 👉
-[How to run the Node built-in testrunner for TypeScript files inside a specific directory? · Issue #3902 · nodejs/help](https://github.com/nodejs/help/issues/3902#issuecomment-1307124174)
+~~I follow this link 👉~~
+~~[How to run the Node built-in testrunner for TypeScript files inside a specific directory? · Issue #3902 · nodejs/help](https://github.com/nodejs/help/issues/3902#issuecomment-1307124174)~~
 
-This LTS version's Node.js shows the warning:
-`ExperimentalWarning: Custom ESM Loaders is an experimental feature and might change at any time`
+~~This LTS version's Node.js shows the warning:~~
+~~`ExperimentalWarning: Custom ESM Loaders is an experimental feature and might change at any time`~~
 
 That must be standard feature in the future.
 
 Node.js has to use loader to run TypeScript.
 
 [TypeScript runtime comparisons](https://github.com/privatenumber/ts-runtime-comparison)
+
+**:sparkles:[tsx](https://github.com/privatenumber/tsx):sparkles:**
+
+`tsx` can run TypeScript directly, it can use watch mode too.
 
 ### Motivation
 
