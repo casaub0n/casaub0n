@@ -9,8 +9,7 @@ import { err, ok, type Result } from "neverthrow";
 
 const readData = (filePath: string): Result<string, DoSomethingError> => {
   const htmlStr = path.join(process.cwd(), filePath);
-  if (htmlStr) return ok(htmlStr + "/*");
-  return err(new DoSomethingError());
+  return htmlStr ? ok(htmlStr + "/*") : err(new DoSomethingError());
 };
 
 /**
@@ -50,8 +49,7 @@ const getContent = (htmlText: string, month: number): Result<string, DoSomething
     resources: "usable",
   });
   const tableElement = dom.window.document.getElementById("scrTable");
-  if (tableElement) return ok(filterTable(tableElement, month));
-  return err(new DoSomethingError());
+  return tableElement ? ok(filterTable(tableElement, month)) : err(new DoSomethingError());
 };
 
 const preTag = '<div class="calc-table">' as const satisfies string;
