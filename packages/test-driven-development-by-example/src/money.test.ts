@@ -1,7 +1,7 @@
 import { strict as assert } from "assert";
 import { test } from "node:test";
 
-import { Bank, Money, Sum } from "./money";
+import { Bank, Money, Sum } from "./money/index.js";
 
 test("multiplication", () => {
   const five = Money.doller(5);
