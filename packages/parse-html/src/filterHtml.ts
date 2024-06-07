@@ -3,14 +3,14 @@ import path from "path";
 
 import { JSDOM } from "jsdom";
 
-import { DoSomethingError, Failure, Success } from "./utils/Result";
+import { DoSomethingError } from "./utils/somethingError";
 
-import type { Result } from "./utils/Result";
+import { err, ok, type Result } from "neverthrow";
 
 const readData = (filePath: string): Result<string, DoSomethingError> => {
   const htmlStr = path.join(process.cwd(), filePath);
-  if (htmlStr) return new Success(htmlStr + "/*");
-  return new Failure(new DoSomethingError());
+  if (htmlStr) return ok(htmlStr + "/*");
+  return err(new DoSomethingError());
 };
 
 /**
@@ -50,8 +50,8 @@ const getContent = (htmlText: string, month: number): Result<string, DoSomething
     resources: "usable",
   });
   const tableElement = dom.window.document.getElementById("scrTable");
-  if (tableElement) return new Success(filterTable(tableElement, month));
-  return new Failure(new DoSomethingError());
+  if (tableElement) return ok(filterTable(tableElement, month));
+  return err(new DoSomethingError());
 };
 
 const preTag = '<div class="calc-table">' as const satisfies string;
@@ -89,7 +89,7 @@ const makeHtmlFile = async (str: string): Promise<void> => {
 
 export const filterHtml = () => {
   const month_html = readData("./src/input_data");
-  if (month_html.isSuccess()) {
+  if (month_html.isOk()) {
     (async () => {
       let outPutString = "" + preHtmlTag;
       for (let i = 1; i < 13; i++) {
@@ -99,7 +99,7 @@ export const filterHtml = () => {
         const month = path.basename(file, ".html");
 
         const content = getContent(htmlFile, Number(month));
-        if (content.isSuccess()) {
+        if (content.isOk()) {
           outPutString = outPutString + preTag + "\n" + content.value + "\n" + endTag + "\n";
         }
       }
