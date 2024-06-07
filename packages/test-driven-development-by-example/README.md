@@ -27,7 +27,8 @@ Node.js has to use loader to run TypeScript.
 
 [TypeScript runtime comparisons](https://github.com/privatenumber/ts-runtime-comparison)
 
-**tsx :sparkles:**
+**:sparkles:[tsx](https://github.com/privatenumber/tsx):sparkles:**
+
 `tsx` can run TypeScript directly, it can use watch mode too.
 
 ### Motivation
