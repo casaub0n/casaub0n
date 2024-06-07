@@ -10,13 +10,13 @@ importers:
     devDependencies:
       '@lerna-lite/cli':
         specifier: ^3.4.0
-        version: 3.5.0(@lerna-lite/publish@3.5.0(typescript@5.4.5))(@lerna-lite/version@3.5.1(@lerna-lite/publish@3.5.0(typescript@5.4.5))(typescript@5.4.5))(typescript@5.4.5)
+        version: 3.5.0(@lerna-lite/publish@3.5.1(typescript@5.4.5))(@lerna-lite/version@3.5.1(@lerna-lite/publish@3.5.1(typescript@5.4.5))(typescript@5.4.5))(typescript@5.4.5)
       '@lerna-lite/publish':
         specifier: ^3.4.0
-        version: 3.5.0(typescript@5.4.5)
+        version: 3.5.1(typescript@5.4.5)
       '@lerna-lite/version':
         specifier: ^3.4.0
-        version: 3.5.1(@lerna-lite/publish@3.5.0(typescript@5.4.5))(typescript@5.4.5)
+        version: 3.5.1(@lerna-lite/publish@3.5.1(typescript@5.4.5))(typescript@5.4.5)
       dotenv-cli:
         specifier: ^7.4.2
         version: 7.4.2
@@ -2347,12 +2347,8 @@ packages:
     resolution: {integrity: sha512-N7p9ByH4OE/UaWUzz7BL51pnkNxU4tQetEMbn/4QFTh0EfFYP4OXF3zq2Y5Egs8l1Mx/iso9Ly68VHaE8aKPeQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
 
-  '@lerna-lite/publish@3.5.0':
-    resolution: {integrity: sha512-c+BsBAkIVWhtqCD/SeL6ikXLEGMI1m3WsbRJlBDmbM0Z/jPhc8yIHgTcjkBRM3hvhMdDL14lNsuLyAl8x1zZ8w==}
-    engines: {node: ^18.0.0 || >=20.0.0}
-
-  '@lerna-lite/version@3.5.0':
-    resolution: {integrity: sha512-FO6RDsMc2u7y6MlxNj9ZQADTqIEk117apyl23kYlzBxRo98a95S1fr+0ewfiYTiEBLJSJKu/gj/bMgOP3KhNYw==}
+  '@lerna-lite/publish@3.5.1':
+    resolution: {integrity: sha512-odDrME24EeKiNeLARn8aW79MJ0gEZlBevS5qvtQ189Gg1T0PbpR7iQeskRfwAFmIPfKJWdWMa6Q9vdbYG1FoEw==}
     engines: {node: ^18.0.0 || >=20.0.0}
 
   '@lerna-lite/version@3.5.1':
@@ -14324,7 +14320,7 @@ snapshots:
 
   '@lavadrop/ensure@1.0.0': {}
 
-  '@lerna-lite/cli@3.5.0(@lerna-lite/publish@3.5.0(typescript@5.4.5))(@lerna-lite/version@3.5.0(@lerna-lite/publish@3.5.0(typescript@5.4.5))(typescript@5.4.5))(typescript@5.4.5)':
+  '@lerna-lite/cli@3.5.0(@lerna-lite/publish@3.5.1(typescript@5.4.5))(@lerna-lite/version@3.5.1(@lerna-lite/publish@3.5.1(typescript@5.4.5))(typescript@5.4.5))(typescript@5.4.5)':
     dependencies:
       '@lerna-lite/core': 3.5.0(typescript@5.4.5)
       '@lerna-lite/init': 3.5.0(typescript@5.4.5)
@@ -14335,34 +14331,15 @@ snapshots:
       npmlog: 7.0.1
       yargs: 17.7.2
     optionalDependencies:
-      '@lerna-lite/publish': 3.5.0(typescript@5.4.5)
-      '@lerna-lite/version': 3.5.0(@lerna-lite/publish@3.5.0(typescript@5.4.5))(typescript@5.4.5)
+      '@lerna-lite/publish': 3.5.1(typescript@5.4.5)
+      '@lerna-lite/version': 3.5.1(@lerna-lite/publish@3.5.1(typescript@5.4.5))(typescript@5.4.5)
     transitivePeerDependencies:
       - babel-plugin-macros
       - bluebird
       - supports-color
       - typescript
 
-  '@lerna-lite/cli@3.5.0(@lerna-lite/publish@3.5.0(typescript@5.4.5))(@lerna-lite/version@3.5.1(@lerna-lite/publish@3.5.0(typescript@5.4.5))(typescript@5.4.5))(typescript@5.4.5)':
-    dependencies:
-      '@lerna-lite/core': 3.5.0(typescript@5.4.5)
-      '@lerna-lite/init': 3.5.0(typescript@5.4.5)
-      dedent: 1.5.3
-      dotenv: 16.4.5
-      import-local: 3.1.0
-      load-json-file: 7.0.1
-      npmlog: 7.0.1
-      yargs: 17.7.2
-    optionalDependencies:
-      '@lerna-lite/publish': 3.5.0(typescript@5.4.5)
-      '@lerna-lite/version': 3.5.1(@lerna-lite/publish@3.5.0(typescript@5.4.5))(typescript@5.4.5)
-    transitivePeerDependencies:
-      - babel-plugin-macros
-      - bluebird
-      - supports-color
-      - typescript
-
-  '@lerna-lite/cli@3.5.1(@lerna-lite/publish@3.5.0(typescript@5.4.5))(@lerna-lite/version@3.5.1(@lerna-lite/publish@3.5.0(typescript@5.4.5))(typescript@5.4.5))(typescript@5.4.5)':
+  '@lerna-lite/cli@3.5.1(@lerna-lite/publish@3.5.1(typescript@5.4.5))(@lerna-lite/version@3.5.1(@lerna-lite/publish@3.5.1(typescript@5.4.5))(typescript@5.4.5))(typescript@5.4.5)':
     dependencies:
       '@lerna-lite/core': 3.5.1(typescript@5.4.5)
       '@lerna-lite/init': 3.5.1(typescript@5.4.5)
@@ -14373,8 +14350,8 @@ snapshots:
       npmlog: 7.0.1
       yargs: 17.7.2
     optionalDependencies:
-      '@lerna-lite/publish': 3.5.0(typescript@5.4.5)
-      '@lerna-lite/version': 3.5.1(@lerna-lite/publish@3.5.0(typescript@5.4.5))(typescript@5.4.5)
+      '@lerna-lite/publish': 3.5.1(typescript@5.4.5)
+      '@lerna-lite/version': 3.5.1(@lerna-lite/publish@3.5.1(typescript@5.4.5))(typescript@5.4.5)
     transitivePeerDependencies:
       - babel-plugin-macros
       - bluebird
@@ -14473,11 +14450,11 @@ snapshots:
       - supports-color
       - typescript
 
-  '@lerna-lite/publish@3.5.0(typescript@5.4.5)':
+  '@lerna-lite/publish@3.5.1(typescript@5.4.5)':
     dependencies:
-      '@lerna-lite/cli': 3.5.0(@lerna-lite/publish@3.5.0(typescript@5.4.5))(@lerna-lite/version@3.5.0(@lerna-lite/publish@3.5.0(typescript@5.4.5))(typescript@5.4.5))(typescript@5.4.5)
-      '@lerna-lite/core': 3.5.0(typescript@5.4.5)
-      '@lerna-lite/version': 3.5.0(@lerna-lite/publish@3.5.0(typescript@5.4.5))(typescript@5.4.5)
+      '@lerna-lite/cli': 3.5.1(@lerna-lite/publish@3.5.1(typescript@5.4.5))(@lerna-lite/version@3.5.1(@lerna-lite/publish@3.5.1(typescript@5.4.5))(typescript@5.4.5))(typescript@5.4.5)
+      '@lerna-lite/core': 3.5.1(typescript@5.4.5)
+      '@lerna-lite/version': 3.5.1(@lerna-lite/publish@3.5.1(typescript@5.4.5))(typescript@5.4.5)
       byte-size: 8.1.1
       chalk: 5.3.0
       columnify: 1.6.0
@@ -14510,55 +14487,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@lerna-lite/version@3.5.0(@lerna-lite/publish@3.5.0(typescript@5.4.5))(typescript@5.4.5)':
+  '@lerna-lite/version@3.5.1(@lerna-lite/publish@3.5.1(typescript@5.4.5))(typescript@5.4.5)':
     dependencies:
-      '@lerna-lite/cli': 3.5.0(@lerna-lite/publish@3.5.0(typescript@5.4.5))(@lerna-lite/version@3.5.0(@lerna-lite/publish@3.5.0(typescript@5.4.5))(typescript@5.4.5))(typescript@5.4.5)
-      '@lerna-lite/core': 3.5.0(typescript@5.4.5)
-      '@octokit/plugin-enterprise-rest': 6.0.1
-      '@octokit/rest': 20.1.1
-      chalk: 5.3.0
-      conventional-changelog-angular: 7.0.0
-      conventional-changelog-core: 7.0.0
-      conventional-changelog-writer: 7.0.1
-      conventional-commits-parser: 5.0.0
-      conventional-recommended-bump: 9.0.0
-      dedent: 1.5.3
-      fs-extra: 11.2.0
-      get-stream: 9.0.1
-      git-url-parse: 14.0.0
-      graceful-fs: 4.2.11
-      is-stream: 4.0.1
-      load-json-file: 7.0.1
-      make-dir: 5.0.0
-      minimatch: 9.0.4
-      new-github-release-url: 2.0.0
-      node-fetch: 3.3.2
-      npm-package-arg: 11.0.2
-      npmlog: 7.0.1
-      p-limit: 5.0.0
-      p-map: 7.0.2
-      p-pipe: 4.0.0
-      p-reduce: 3.0.0
-      pify: 6.1.0
-      semver: 7.6.2
-      slash: 5.1.0
-      temp-dir: 3.0.0
-      uuid: 9.0.1
-      write-json-file: 5.0.0
-    transitivePeerDependencies:
-      - '@lerna-lite/exec'
-      - '@lerna-lite/list'
-      - '@lerna-lite/publish'
-      - '@lerna-lite/run'
-      - '@lerna-lite/watch'
-      - babel-plugin-macros
-      - bluebird
-      - supports-color
-      - typescript
-
-  '@lerna-lite/version@3.5.1(@lerna-lite/publish@3.5.0(typescript@5.4.5))(typescript@5.4.5)':
-    dependencies:
-      '@lerna-lite/cli': 3.5.1(@lerna-lite/publish@3.5.0(typescript@5.4.5))(@lerna-lite/version@3.5.1(@lerna-lite/publish@3.5.0(typescript@5.4.5))(typescript@5.4.5))(typescript@5.4.5)
+      '@lerna-lite/cli': 3.5.1(@lerna-lite/publish@3.5.1(typescript@5.4.5))(@lerna-lite/version@3.5.1(@lerna-lite/publish@3.5.1(typescript@5.4.5))(typescript@5.4.5))(typescript@5.4.5)
       '@lerna-lite/core': 3.5.1(typescript@5.4.5)
       '@octokit/plugin-enterprise-rest': 6.0.1
       '@octokit/rest': 20.1.1
@@ -23854,7 +23785,7 @@ snapshots:
     dependencies:
       '@babel/code-frame': 7.24.7
       index-to-position: 0.1.2
-      type-fest: 4.19.0
+      type-fest: 4.20.0
 
   parse-latin@5.0.1:
     dependencies:
@@ -24574,7 +24505,7 @@ snapshots:
       '@types/normalize-package-data': 2.4.4
       normalize-package-data: 6.0.1
       parse-json: 8.1.0
-      type-fest: 4.19.0
+      type-fest: 4.20.0
       unicorn-magic: 0.1.0
 
   read-yaml-file@2.1.0:
@@ -27055,7 +26986,7 @@ snapshots:
       deepmerge-ts: 5.1.0
       read-pkg: 9.0.1
       sort-keys: 5.0.0
-      type-fest: 4.19.0
+      type-fest: 4.20.0
       write-json-file: 5.0.0
 
   write-yaml-file@4.2.0:
