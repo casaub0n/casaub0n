@@ -380,7 +380,7 @@ importers:
         version: 29.7.0(ts-node@10.9.1(typescript@5.4.5))
       puppeteer:
         specifier: ^22.2.0
-        version: 22.10.0(bufferutil@4.0.8)(typescript@5.4.5)(utf-8-validate@6.0.3)
+        version: 22.10.1(bufferutil@4.0.8)(typescript@5.4.5)(utf-8-validate@6.0.3)
       rimraf:
         specifier: ^5.0.5
         version: 5.0.7
@@ -413,7 +413,7 @@ importers:
         version: 29.7.0(ts-node@10.9.1(typescript@5.4.5))
       puppeteer:
         specifier: ^22.2.0
-        version: 22.10.0(bufferutil@4.0.8)(typescript@5.4.5)(utf-8-validate@6.0.3)
+        version: 22.10.1(bufferutil@4.0.8)(typescript@5.4.5)(utf-8-validate@6.0.3)
       rimraf:
         specifier: ^5.0.5
         version: 5.0.7
@@ -5247,8 +5247,8 @@ packages:
     resolution: {integrity: sha512-rNjApaLzuwaOTjCiT8lSDdGN1APCiqkChLMJxJPWLunPAt5fy8xgU9/jNOchV84wfIxrA0lRQB7oCT8jrn/wrQ==}
     engines: {node: '>=6.0'}
 
-  chromium-bidi@0.5.19:
-    resolution: {integrity: sha512-UA6zL77b7RYCjJkZBsZ0wlvCTD+jTjllZ8f6wdO4buevXgTZYjV+XLB9CiEa2OuuTGGTLnI7eN9I60YxuALGQg==}
+  chromium-bidi@0.5.23:
+    resolution: {integrity: sha512-1o/gLU9wDqbN5nL2MtfjykjOuighGXc3/hnWueO1haiEoFgX8h5vbvcA4tgdQfjw1mkZ1OEF4x/+HVeqEX6NoA==}
     peerDependencies:
       devtools-protocol: '*'
 
@@ -9800,12 +9800,12 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
-  puppeteer-core@22.10.0:
-    resolution: {integrity: sha512-I54J4Vy4I07UHsgB1QSmuFoF7KNQjJWcvFBPhtY+ezMdBfwgGDr8dzYrJa11aPgP9kxIUHjhktcMmmfJkOAtTw==}
+  puppeteer-core@22.10.1:
+    resolution: {integrity: sha512-t98x55ohn6eioM/e1dmhy6bG9iuQ+mvpNXyr+UppB789uvNKKOvy9YnWpKp4mVyKxi9BGsceHAFuovQGqQKyCQ==}
     engines: {node: '>=18'}
 
-  puppeteer@22.10.0:
-    resolution: {integrity: sha512-ZOkZd6a6t0BdKcWb0wAYHWQqCfdlN1PPnXOmg/XNrbo6gJhYWFX4qCNb6ahSn8TpAqBqLCoD4Q010F7GwOM7mA==}
+  puppeteer@22.10.1:
+    resolution: {integrity: sha512-yFT7BlyIa4B1SnE6ccBVt+nYpDNTtZtwNh9tL79d6eWlGh94YrdzQDH+WtG88mCuQIcjjcJgvTRfm8uljuMgUQ==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -12027,9 +12027,6 @@ packages:
     resolution: {integrity: sha512-az0uJ243PxsRIa2x1WmNE/pnuA05gUq/JB8Lwe1EDCCL/Fz9MgjYQ0fPlyc2Tcv6aF2ZA7WM5TWaRZVEFaAIag==}
     peerDependencies:
       zod: ^3.23.3
-
-  zod@3.22.4:
-    resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
 
   zod@3.23.8:
     resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
@@ -18759,12 +18756,12 @@ snapshots:
 
   chrome-trace-event@1.0.4: {}
 
-  chromium-bidi@0.5.19(devtools-protocol@0.0.1286932):
+  chromium-bidi@0.5.23(devtools-protocol@0.0.1286932):
     dependencies:
       devtools-protocol: 0.0.1286932
       mitt: 3.0.1
       urlpattern-polyfill: 10.0.0
-      zod: 3.22.4
+      zod: 3.23.8
 
   ci-info@3.9.0: {}
 
@@ -24418,11 +24415,11 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  puppeteer-core@22.10.0(bufferutil@4.0.8)(utf-8-validate@6.0.3):
+  puppeteer-core@22.10.1(bufferutil@4.0.8)(utf-8-validate@6.0.3):
     dependencies:
       '@puppeteer/browsers': 2.2.3
-      chromium-bidi: 0.5.19(devtools-protocol@0.0.1286932)
-      debug: 4.3.4
+      chromium-bidi: 0.5.23(devtools-protocol@0.0.1286932)
+      debug: 4.3.5
       devtools-protocol: 0.0.1286932
       ws: 8.17.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
     transitivePeerDependencies:
@@ -24430,12 +24427,12 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  puppeteer@22.10.0(bufferutil@4.0.8)(typescript@5.4.5)(utf-8-validate@6.0.3):
+  puppeteer@22.10.1(bufferutil@4.0.8)(typescript@5.4.5)(utf-8-validate@6.0.3):
     dependencies:
       '@puppeteer/browsers': 2.2.3
       cosmiconfig: 9.0.0(typescript@5.4.5)
       devtools-protocol: 0.0.1286932
-      puppeteer-core: 22.10.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
+      puppeteer-core: 22.10.1(bufferutil@4.0.8)(utf-8-validate@6.0.3)
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -27279,8 +27276,6 @@ snapshots:
   zod-to-json-schema@3.23.0(zod@3.23.8):
     dependencies:
       zod: 3.23.8
-
-  zod@3.22.4: {}
 
   zod@3.23.8: {}
 
