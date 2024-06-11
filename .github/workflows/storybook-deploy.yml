@@ -47,10 +47,10 @@ jobs:
         with:
           node-version: 20
 
+      # Don't specific actual pnpm's version because renovate can't update pnpm's version, this action read pnpm version of root's packege.json
       - name: Set up pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 9.3.0
           run_install: false
 
       # I used https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#caching-packages-data
