@@ -1,4 +1,4 @@
-import { Money } from "./money/index.js";
+import { Money } from "./money";
 
 const init = () => {
   const five = Money.doller(10);
