@@ -137,7 +137,7 @@ importers:
         version: 0.2.2
       '@testing-library/jest-dom':
         specifier: ^6.4.5
-        version: 6.4.6(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@20.14.2)(ts-node@10.9.1(@types/node@20.14.2)(typescript@5.4.5)))(vitest@1.6.0(@types/node@20.14.2))
+        version: 6.4.6(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@20.14.2)(ts-node@10.9.1(@types/node@20.14.2)(typescript@5.4.5)))(vitest@1.6.0(@types/node@20.14.2)(terser@5.31.1))
       '@testing-library/react':
         specifier: ^16.0.0
         version: 16.0.0(@testing-library/dom@9.3.4)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -158,7 +158,7 @@ importers:
         version: 18.3.0
       '@vanilla-extract/next-plugin':
         specifier: ^2.4.1
-        version: 2.4.1(@types/node@20.14.2)(next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(webpack@5.91.0)
+        version: 2.4.2(@types/node@20.14.2)(next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(terser@5.31.1)(webpack@5.91.0)
       autoprefixer:
         specifier: ^10.4.19
         version: 10.4.19(postcss@8.4.38)
@@ -4176,19 +4176,30 @@ packages:
   '@vanilla-extract/css@1.15.2':
     resolution: {integrity: sha512-Bi61iCAtojCuqvV+FYaF5i69vBjuMQJpHPdpgKYyQvx+e2Hp79V0ELglyYOdcyg9Wh0k0MFwgCDipVd7EloTXQ==}
 
+  '@vanilla-extract/css@1.15.3':
+    resolution: {integrity: sha512-mxoskDAxdQAspbkmQRxBvolUi1u1jnyy9WZGm+GeH8V2wwhEvndzl1QoK7w8JfA0WFevTxbev5d+i+xACZlPhA==}
+
   '@vanilla-extract/dynamic@2.1.1':
     resolution: {integrity: sha512-iqf736036ujEIKsIq28UsBEMaLC2vR2DhwKyrG3NDb/fRy9qL9FKl1TqTtBV4daU30Uh3saeik4vRzN8bzQMbw==}
 
   '@vanilla-extract/integration@7.1.5':
     resolution: {integrity: sha512-UwwafgdaqDhF2n6ZvX6akNvSot1iiiCss/c+r6ofjnaJSzrI/3WUYhy7qX7NZsWdmG2omcajuPlqFZdo0pwzLA==}
 
-  '@vanilla-extract/next-plugin@2.4.1':
-    resolution: {integrity: sha512-2IOetmzN1u2VS9AmZL6UHVEswZPUC8OCNPA4AdZ24fLchRYeXjzChxHGQXn7G1x3RqtIfC7w00G1s/t189tE5A==}
+  '@vanilla-extract/integration@7.1.6':
+    resolution: {integrity: sha512-5fDhW0Bm/MBG9B63On3dHl1tExcmvzG5hdrS9J8LR5qTIHuT5wIxeZ4LEhLgfqgl4b7PglGP+ey7N9rXb/FlOA==}
+
+  '@vanilla-extract/next-plugin@2.4.2':
+    resolution: {integrity: sha512-kPTwd6T2aa8mjfked8Gd5sR5cB0te9A8n5qQ/UhsAiveqpABPoH76zJEoXOd4kMpeQaWYepA53O4/cgnzly9RQ==}
     peerDependencies:
       next: '>=12.1.7'
 
   '@vanilla-extract/private@1.0.5':
     resolution: {integrity: sha512-6YXeOEKYTA3UV+RC8DeAjFk+/okoNz/h88R+McnzA2zpaVqTR/Ep+vszkWYlGBcMNO7vEkqbq5nT/JMMvhi+tw==}
+
+  '@vanilla-extract/webpack-plugin@2.3.10':
+    resolution: {integrity: sha512-kE+sMfKXpqt91VlBnuDc9wYR+P4xKjot5Zbtl/rvAUwbPwbp6H85dEmoNTHpJv4H17UAKse65+uwnUFG9UrUhg==}
+    peerDependencies:
+      webpack: ^4.30.0 || ^5.20.2
 
   '@vanilla-extract/webpack-plugin@2.3.9':
     resolution: {integrity: sha512-8tMS8Dfq3+bVhM604mTsB4IjP3nWbI43eW0nMRgTqlwltZfT6qvRlWfhK8Z/ukskWwhTTm3Ttf88PjcGZzcDRg==}
@@ -11565,6 +11576,34 @@ packages:
       terser:
         optional: true
 
+  vite@5.3.0:
+    resolution: {integrity: sha512-hA6vAVK977NyW1Qw+fLvqSo7xDPej7von7C3DwwqPRmnnnK36XEBC/J3j1V5lP8fbt7y0TgTKJbpNGSwM+Bdeg==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    hasBin: true
+    peerDependencies:
+      '@types/node': ^18.0.0 || >=20.0.0
+      less: '*'
+      lightningcss: ^1.21.0
+      sass: '*'
+      stylus: '*'
+      sugarss: '*'
+      terser: ^5.4.0
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      less:
+        optional: true
+      lightningcss:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+
   vitefu@0.2.5:
     resolution: {integrity: sha512-SgHtMLoqaeeGnd2evZ849ZbACbnwQCIwRH57t18FxcXoZop0uQu0uzlIhJBlF/eWVzuce0sHeqPcDo+evVcg8Q==}
     peerDependencies:
@@ -16477,7 +16516,7 @@ snapshots:
       lz-string: 1.5.0
       pretty-format: 27.5.1
 
-  '@testing-library/jest-dom@6.4.6(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@20.14.2)(ts-node@10.9.1(@types/node@20.14.2)(typescript@5.4.5)))(vitest@1.6.0(@types/node@20.14.2))':
+  '@testing-library/jest-dom@6.4.6(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@20.14.2)(ts-node@10.9.1(@types/node@20.14.2)(typescript@5.4.5)))(vitest@1.6.0(@types/node@20.14.2)(terser@5.31.1))':
     dependencies:
       '@adobe/css-tools': 4.4.0
       '@babel/runtime': 7.24.7
@@ -16491,7 +16530,7 @@ snapshots:
       '@jest/globals': 29.7.0
       '@types/jest': 29.5.12
       jest: 29.7.0(@types/node@20.14.2)(ts-node@10.9.1(@types/node@20.14.2)(typescript@5.4.5))
-      vitest: 1.6.0(@types/node@20.14.2)
+      vitest: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@20.14.2)(@vitest/ui@1.6.0)(jsdom@24.1.0)(terser@5.31.1)
 
   '@testing-library/jest-dom@6.4.6(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@20.14.2))(vitest@1.6.0(@types/node@20.14.2)(terser@5.31.1))':
     dependencies:
@@ -17205,6 +17244,22 @@ snapshots:
     transitivePeerDependencies:
       - babel-plugin-macros
 
+  '@vanilla-extract/css@1.15.3':
+    dependencies:
+      '@emotion/hash': 0.9.1
+      '@vanilla-extract/private': 1.0.5
+      css-what: 6.1.0
+      cssesc: 3.0.0
+      csstype: 3.1.3
+      dedent: 1.5.3
+      deep-object-diff: 1.1.9
+      deepmerge: 4.3.1
+      media-query-parser: 2.0.2
+      modern-ahocorasick: 1.0.1
+      picocolors: 1.0.1
+    transitivePeerDependencies:
+      - babel-plugin-macros
+
   '@vanilla-extract/dynamic@2.1.1':
     dependencies:
       '@vanilla-extract/private': 1.0.5
@@ -17234,9 +17289,34 @@ snapshots:
       - supports-color
       - terser
 
-  '@vanilla-extract/next-plugin@2.4.1(@types/node@20.14.2)(next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(webpack@5.91.0)':
+  '@vanilla-extract/integration@7.1.6(@types/node@20.14.2)(terser@5.31.1)':
     dependencies:
-      '@vanilla-extract/webpack-plugin': 2.3.9(@types/node@20.14.2)(webpack@5.91.0)
+      '@babel/core': 7.24.7
+      '@babel/plugin-syntax-typescript': 7.24.7(@babel/core@7.24.7)
+      '@vanilla-extract/babel-plugin-debug-ids': 1.0.6
+      '@vanilla-extract/css': 1.15.3
+      dedent: 1.5.3
+      esbuild: 0.19.12
+      eval: 0.1.8
+      find-up: 5.0.0
+      javascript-stringify: 2.1.0
+      mlly: 1.7.1
+      vite: 5.3.0(@types/node@20.14.2)(terser@5.31.1)
+      vite-node: 1.6.0(@types/node@20.14.2)(terser@5.31.1)
+    transitivePeerDependencies:
+      - '@types/node'
+      - babel-plugin-macros
+      - less
+      - lightningcss
+      - sass
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+
+  '@vanilla-extract/next-plugin@2.4.2(@types/node@20.14.2)(next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(terser@5.31.1)(webpack@5.91.0)':
+    dependencies:
+      '@vanilla-extract/webpack-plugin': 2.3.10(@types/node@20.14.2)(terser@5.31.1)(webpack@5.91.0)
       next: 14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     transitivePeerDependencies:
       - '@types/node'
@@ -17252,13 +17332,13 @@ snapshots:
 
   '@vanilla-extract/private@1.0.5': {}
 
-  '@vanilla-extract/webpack-plugin@2.3.9(@types/node@20.14.2)(terser@5.31.1)(webpack@5.91.0(esbuild@0.20.2))':
+  '@vanilla-extract/webpack-plugin@2.3.10(@types/node@20.14.2)(terser@5.31.1)(webpack@5.91.0)':
     dependencies:
-      '@vanilla-extract/integration': 7.1.5(@types/node@20.14.2)(terser@5.31.1)
+      '@vanilla-extract/integration': 7.1.6(@types/node@20.14.2)(terser@5.31.1)
       debug: 4.3.5
       loader-utils: 2.0.4
       picocolors: 1.0.1
-      webpack: 5.91.0(esbuild@0.20.2)
+      webpack: 5.91.0
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -17270,13 +17350,13 @@ snapshots:
       - supports-color
       - terser
 
-  '@vanilla-extract/webpack-plugin@2.3.9(@types/node@20.14.2)(webpack@5.91.0)':
+  '@vanilla-extract/webpack-plugin@2.3.9(@types/node@20.14.2)(terser@5.31.1)(webpack@5.91.0(esbuild@0.20.2))':
     dependencies:
       '@vanilla-extract/integration': 7.1.5(@types/node@20.14.2)(terser@5.31.1)
       debug: 4.3.5
       loader-utils: 2.0.4
       picocolors: 1.0.1
-      webpack: 5.91.0
+      webpack: 5.91.0(esbuild@0.20.2)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -20677,7 +20757,7 @@ snapshots:
     dependencies:
       basic-ftp: 5.0.5
       data-uri-to-buffer: 6.0.2
-      debug: 4.3.5
+      debug: 4.3.4
       fs-extra: 11.2.0
     transitivePeerDependencies:
       - supports-color
@@ -23720,7 +23800,7 @@ snapshots:
     dependencies:
       '@tootallnate/quickjs-emscripten': 0.23.0
       agent-base: 7.1.1
-      debug: 4.3.5
+      debug: 4.3.4
       get-uri: 6.0.3
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.4
@@ -25403,7 +25483,7 @@ snapshots:
   socks-proxy-agent@8.0.3:
     dependencies:
       agent-base: 7.1.1
-      debug: 4.3.5
+      debug: 4.3.4
       socks: 2.8.3
     transitivePeerDependencies:
       - supports-color
@@ -26662,6 +26742,16 @@ snapshots:
       fsevents: 2.3.3
       terser: 5.31.1
 
+  vite@5.3.0(@types/node@20.14.2)(terser@5.31.1):
+    dependencies:
+      esbuild: 0.21.5
+      postcss: 8.4.38
+      rollup: 4.18.0
+    optionalDependencies:
+      '@types/node': 20.14.2
+      fsevents: 2.3.3
+      terser: 5.31.1
+
   vitefu@0.2.5(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1)):
     optionalDependencies:
       vite: 5.2.13(@types/node@20.14.2)(terser@5.31.1)
@@ -26701,40 +26791,6 @@ snapshots:
       - sugarss
       - supports-color
       - terser
-
-  vitest@1.6.0(@types/node@20.14.2):
-    dependencies:
-      '@vitest/expect': 1.6.0
-      '@vitest/runner': 1.6.0
-      '@vitest/snapshot': 1.6.0
-      '@vitest/spy': 1.6.0
-      '@vitest/utils': 1.6.0
-      acorn-walk: 8.3.2
-      chai: 4.4.1
-      debug: 4.3.5
-      execa: 8.0.1
-      local-pkg: 0.5.0
-      magic-string: 0.30.10
-      pathe: 1.1.2
-      picocolors: 1.0.1
-      std-env: 3.7.0
-      strip-literal: 2.1.0
-      tinybench: 2.8.0
-      tinypool: 0.8.4
-      vite: 5.2.13(@types/node@20.14.2)(terser@5.31.1)
-      vite-node: 1.6.0(@types/node@20.14.2)(terser@5.31.1)
-      why-is-node-running: 2.2.2
-    optionalDependencies:
-      '@types/node': 20.14.2
-    transitivePeerDependencies:
-      - less
-      - lightningcss
-      - sass
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
-    optional: true
 
   vm-browserify@1.1.2: {}
 
