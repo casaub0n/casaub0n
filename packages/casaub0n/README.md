@@ -14,11 +14,19 @@ This repository is experimental apps and profile readme
 - [Rust](https://www.rust-lang.org/)
 - [vscode](https://code.visualstudio.com/)
 
-### attention
+## Set up your development environment on Windows
 
-~turbo daemon process is failed on Windows: imformation👉 https://github.com/vercel/turbo/issues/2034~
+[Setup a development environment on Windows | Microsoft Learn](https://learn.microsoft.com/en-us/windows/dev-environment/)
 
-Currently, it's fine.
+### One Drive
+
+TODO
+
+### WinGet
+
+### Scoop
+
+### Dev Drive
 
 ## Why do I use rimraf
 
@@ -51,6 +59,7 @@ As they say, 'live and learn.'
 - [My web addon](../maddon/README.md)
 
 **rust project**
+
 - [direct2d](../crates/direct2d)
 
 ## storybook
