@@ -380,7 +380,7 @@ importers:
         version: 29.7.0(ts-node@10.9.1(typescript@5.4.5))
       puppeteer:
         specifier: ^22.2.0
-        version: 22.11.1(bufferutil@4.0.8)(typescript@5.4.5)(utf-8-validate@6.0.3)
+        version: 22.11.2(bufferutil@4.0.8)(typescript@5.4.5)(utf-8-validate@6.0.3)
       rimraf:
         specifier: ^5.0.5
         version: 5.0.7
@@ -413,7 +413,7 @@ importers:
         version: 29.7.0(ts-node@10.9.1(typescript@5.4.5))
       puppeteer:
         specifier: ^22.2.0
-        version: 22.11.1(bufferutil@4.0.8)(typescript@5.4.5)(utf-8-validate@6.0.3)
+        version: 22.11.2(bufferutil@4.0.8)(typescript@5.4.5)(utf-8-validate@6.0.3)
       rimraf:
         specifier: ^5.0.5
         version: 5.0.7
@@ -9672,12 +9672,12 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
-  puppeteer-core@22.11.1:
-    resolution: {integrity: sha512-lIMQrpbMlQ5GqXzD7fo/j74PhceRma+DrVFX+vAx3cwURsfDKyYx7fksTo1nUfLmKyXRyCDSa2peASa/DQ0R9Q==}
+  puppeteer-core@22.11.2:
+    resolution: {integrity: sha512-vQo+YDuePyvj+92Z9cdtxi/HalKf+k/R4tE80nGtQqJRNqU81eHaHkbVfnLszdaLlvwFF5tipnnSCzqWlEddtw==}
     engines: {node: '>=18'}
 
-  puppeteer@22.11.1:
-    resolution: {integrity: sha512-NhpLQC2NMXcNvCquRCeFWxu12ywfBeZ8wK9TyupOnSyaX2czeuqZdBVOQ33mBzmG8qTnM7DsStY8Z+TOgshMdA==}
+  puppeteer@22.11.2:
+    resolution: {integrity: sha512-8fjdQSgW0sq7471ftca24J7sXK+jXZ7OW7Gx+NEBFNyXrcTiBfukEI46gNq6hiMhbLEDT30NeylK/1ZoPdlKSA==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -11786,18 +11786,6 @@ packages:
 
   ws@8.14.2:
     resolution: {integrity: sha512-wEBG1ftX4jcglPxgFCMJmZ2PLtSbJ2Peg6TmpJFTbe9GZYOQCDPdMYu/Tm0/bGZkw8paZnJY45J4K2PZrLYq8g==}
-    engines: {node: '>=10.0.0'}
-    peerDependencies:
-      bufferutil: ^4.0.1
-      utf-8-validate: '>=5.0.2'
-    peerDependenciesMeta:
-      bufferutil:
-        optional: true
-      utf-8-validate:
-        optional: true
-
-  ws@8.17.0:
-    resolution: {integrity: sha512-uJq6108EgZMAl20KagGkzCKfMEjxmKvZHG7Tlq0Z6nOky7YF7aq4mOx6xK8TJ/i1LeK4Qus7INktacctDgY8Ow==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -24222,24 +24210,24 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  puppeteer-core@22.11.1(bufferutil@4.0.8)(utf-8-validate@6.0.3):
+  puppeteer-core@22.11.2(bufferutil@4.0.8)(utf-8-validate@6.0.3):
     dependencies:
       '@puppeteer/browsers': 2.2.3
       chromium-bidi: 0.5.23(devtools-protocol@0.0.1299070)
       debug: 4.3.5
       devtools-protocol: 0.0.1299070
-      ws: 8.17.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
+      ws: 8.17.1(bufferutil@4.0.8)(utf-8-validate@6.0.3)
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - utf-8-validate
 
-  puppeteer@22.11.1(bufferutil@4.0.8)(typescript@5.4.5)(utf-8-validate@6.0.3):
+  puppeteer@22.11.2(bufferutil@4.0.8)(typescript@5.4.5)(utf-8-validate@6.0.3):
     dependencies:
       '@puppeteer/browsers': 2.2.3
       cosmiconfig: 9.0.0(typescript@5.4.5)
       devtools-protocol: 0.0.1299070
-      puppeteer-core: 22.11.1(bufferutil@4.0.8)(utf-8-validate@6.0.3)
+      puppeteer-core: 22.11.2(bufferutil@4.0.8)(utf-8-validate@6.0.3)
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -27000,11 +26988,6 @@ snapshots:
       mkdirp: 0.5.6
 
   ws@8.14.2(bufferutil@4.0.8)(utf-8-validate@6.0.3):
-    optionalDependencies:
-      bufferutil: 4.0.8
-      utf-8-validate: 6.0.3
-
-  ws@8.17.0(bufferutil@4.0.8)(utf-8-validate@6.0.3):
     optionalDependencies:
       bufferutil: 4.0.8
       utf-8-validate: 6.0.3
