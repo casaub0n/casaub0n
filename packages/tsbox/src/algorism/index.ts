@@ -16,3 +16,21 @@ export const getSum = (myList: number[]) => {
   }
   return sum;
 };
+
+/**
+ * satisfies で exhaustiveness check
+ */
+type A = "a" | "b" | "c";
+
+export function exhaustive(v: A) {
+  switch (v) {
+    case "a":
+      return "A";
+    case "b":
+      return "B";
+    case "c":
+      return "C";
+    default:
+      return v satisfies never; // check exhaustiveness
+  }
+}
