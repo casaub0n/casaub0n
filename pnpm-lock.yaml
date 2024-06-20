@@ -49,7 +49,7 @@ importers:
         version: 3.6.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.3.1(@types/node@20.14.6)(terser@5.31.1))
       astro:
         specifier: ^4.4.2
-        version: 4.10.3(@types/node@20.14.6)(terser@5.31.1)(typescript@5.4.5)
+        version: 4.11.0(@types/node@20.14.6)(terser@5.31.1)(typescript@5.4.5)
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -70,7 +70,7 @@ importers:
         version: 3.6.0(react-hook-form@7.52.0(react@18.3.1))
       '@next-auth/prisma-adapter':
         specifier: ^1.0.7
-        version: 1.0.7(@prisma/client@5.15.1(prisma@5.15.1))(next-auth@4.24.7(next@14.2.4(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+        version: 1.0.7(@prisma/client@5.15.1(prisma@5.15.1))(next-auth@4.24.7(next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@prisma/client':
         specifier: ^5.14.0
         version: 5.15.1(prisma@5.15.1)
@@ -109,7 +109,7 @@ importers:
         version: 14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-auth:
         specifier: ^4.24.7
-        version: 4.24.7(next@14.2.4(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 4.24.7(next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-hook-form:
         specifier: ^7.51.5
         version: 7.52.0(react@18.3.1)
@@ -158,7 +158,7 @@ importers:
         version: 18.3.0
       '@vanilla-extract/next-plugin':
         specifier: ^2.4.1
-        version: 2.4.2(@types/node@20.14.6)(next@14.2.4(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(webpack@5.92.1)
+        version: 2.4.2(@types/node@20.14.6)(next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(webpack@5.92.1)
       autoprefixer:
         specifier: ^10.4.19
         version: 10.4.19(postcss@8.4.38)
@@ -377,7 +377,7 @@ importers:
         version: 1.0.11
       jest:
         specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.14.6)(ts-node@10.9.1(@types/node@20.14.6)(typescript@5.4.5))
+        version: 29.7.0(ts-node@10.9.1(typescript@5.4.5))
       puppeteer:
         specifier: ^22.2.0
         version: 22.11.2(bufferutil@4.0.8)(typescript@5.4.5)(utf-8-validate@6.0.3)
@@ -386,7 +386,7 @@ importers:
         version: 5.0.7
       ts-jest:
         specifier: ^29.1.2
-        version: 29.1.5(@babel/core@7.24.7)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.24.7))(esbuild@0.21.5)(jest@29.7.0(@types/node@20.14.6)(ts-node@10.9.1(@types/node@20.14.6)(typescript@5.4.5)))(typescript@5.4.5)
+        version: 29.1.5(@babel/core@7.24.7)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.24.7))(esbuild@0.21.5)(jest@29.7.0(ts-node@10.9.1(typescript@5.4.5)))(typescript@5.4.5)
       tsx:
         specifier: ^4.7.1
         version: 4.15.6
@@ -407,13 +407,13 @@ importers:
         version: 0.21.5
       evp-ts:
         specifier: ^1.0.5
-        version: 1.0.5(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.6)(typescript@5.4.5))(typescript@5.4.5)
+        version: 1.0.5(postcss@8.4.38)(ts-node@10.9.1(typescript@5.4.5))(typescript@5.4.5)
       header-inserter:
         specifier: 1.0.11
         version: 1.0.11
       jest:
         specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.14.6)(ts-node@10.9.1(@types/node@20.14.6)(typescript@5.4.5))
+        version: 29.7.0(ts-node@10.9.1(typescript@5.4.5))
       neverthrow:
         specifier: ^6.2.2
         version: 6.2.2
@@ -425,7 +425,7 @@ importers:
         version: 5.0.7
       ts-jest:
         specifier: ^29.1.2
-        version: 29.1.5(@babel/core@7.24.7)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.24.7))(esbuild@0.21.5)(jest@29.7.0(@types/node@20.14.6)(ts-node@10.9.1(@types/node@20.14.6)(typescript@5.4.5)))(typescript@5.4.5)
+        version: 29.1.5(@babel/core@7.24.7)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.24.7))(esbuild@0.21.5)(jest@29.7.0(ts-node@10.9.1(typescript@5.4.5)))(typescript@5.4.5)
       tsx:
         specifier: ^4.7.1
         version: 4.15.6
@@ -4656,8 +4656,8 @@ packages:
     resolution: {integrity: sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==}
     engines: {node: '>=8'}
 
-  astro@4.10.3:
-    resolution: {integrity: sha512-TWCJM+Vg+y0UoEz/H75rfp/u2N8yxeQQ2UrU9+fMcbjlzQJtGGDq3ApdundqPZgAuCryRuJnrKytStMZCFnlvQ==}
+  astro@4.11.0:
+    resolution: {integrity: sha512-3VWxz/08sChQIX68tuE7Y769DUdjsT3Zq2/y4SkrDRlwN9IZ/aebwcRWr5a2yMSdO2vpFxtEdobq0mKnMlLErg==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -14157,6 +14157,41 @@ snapshots:
       - supports-color
       - ts-node
 
+  '@jest/core@29.7.0(ts-node@10.9.1(typescript@5.4.5))':
+    dependencies:
+      '@jest/console': 29.7.0
+      '@jest/reporters': 29.7.0
+      '@jest/test-result': 29.7.0
+      '@jest/transform': 29.7.0
+      '@jest/types': 29.6.3
+      '@types/node': 20.14.6
+      ansi-escapes: 4.3.2
+      chalk: 4.1.2
+      ci-info: 3.9.0
+      exit: 0.1.2
+      graceful-fs: 4.2.11
+      jest-changed-files: 29.7.0
+      jest-config: 29.7.0(@types/node@20.14.6)(ts-node@10.9.1(typescript@5.4.5))
+      jest-haste-map: 29.7.0
+      jest-message-util: 29.7.0
+      jest-regex-util: 29.6.3
+      jest-resolve: 29.7.0
+      jest-resolve-dependencies: 29.7.0
+      jest-runner: 29.7.0
+      jest-runtime: 29.7.0
+      jest-snapshot: 29.7.0
+      jest-util: 29.7.0
+      jest-validate: 29.7.0
+      jest-watcher: 29.7.0
+      micromatch: 4.0.7
+      pretty-format: 29.7.0
+      slash: 3.0.0
+      strip-ansi: 6.0.1
+    transitivePeerDependencies:
+      - babel-plugin-macros
+      - supports-color
+      - ts-node
+
   '@jest/environment@29.7.0':
     dependencies:
       '@jest/fake-timers': 29.7.0
@@ -14495,10 +14530,10 @@ snapshots:
     dependencies:
       '@types/pg': 8.6.6
 
-  '@next-auth/prisma-adapter@1.0.7(@prisma/client@5.15.1(prisma@5.15.1))(next-auth@4.24.7(next@14.2.4(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))':
+  '@next-auth/prisma-adapter@1.0.7(@prisma/client@5.15.1(prisma@5.15.1))(next-auth@4.24.7(next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))':
     dependencies:
       '@prisma/client': 5.15.1(prisma@5.15.1)
-      next-auth: 4.24.7(next@14.2.4(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      next-auth: 4.24.7(next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
   '@next/env@14.2.4': {}
 
@@ -17129,7 +17164,7 @@ snapshots:
       - supports-color
       - terser
 
-  '@vanilla-extract/next-plugin@2.4.2(@types/node@20.14.6)(next@14.2.4(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(webpack@5.92.1)':
+  '@vanilla-extract/next-plugin@2.4.2(@types/node@20.14.6)(next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(webpack@5.92.1)':
     dependencies:
       '@vanilla-extract/webpack-plugin': 2.3.10(@types/node@20.14.6)(webpack@5.92.1)
       next: 14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -17869,7 +17904,7 @@ snapshots:
 
   astral-regex@2.0.0: {}
 
-  astro@4.10.3(@types/node@20.14.6)(terser@5.31.1)(typescript@5.4.5):
+  astro@4.11.0(@types/node@20.14.6)(terser@5.31.1)(typescript@5.4.5):
     dependencies:
       '@astrojs/compiler': 2.8.0
       '@astrojs/internal-helpers': 0.4.0
@@ -18838,6 +18873,21 @@ snapshots:
       exit: 0.1.2
       graceful-fs: 4.2.11
       jest-config: 29.7.0(@types/node@20.14.6)(ts-node@10.9.1(@types/node@20.14.6)(typescript@5.4.5))
+      jest-util: 29.7.0
+      prompts: 2.4.2
+    transitivePeerDependencies:
+      - '@types/node'
+      - babel-plugin-macros
+      - supports-color
+      - ts-node
+
+  create-jest@29.7.0(ts-node@10.9.1(typescript@5.4.5)):
+    dependencies:
+      '@jest/types': 29.6.3
+      chalk: 4.1.2
+      exit: 0.1.2
+      graceful-fs: 4.2.11
+      jest-config: 29.7.0(@types/node@20.14.6)(ts-node@10.9.1(typescript@5.4.5))
       jest-util: 29.7.0
       prompts: 2.4.2
     transitivePeerDependencies:
@@ -19845,7 +19895,7 @@ snapshots:
       eslint: 9.5.0
     optionalDependencies:
       '@typescript-eslint/eslint-plugin': 7.13.1(@typescript-eslint/parser@7.2.0(eslint@9.5.0)(typescript@5.4.5))(eslint@9.5.0)(typescript@5.4.5)
-      jest: 29.7.0(@types/node@20.14.6)(ts-node@10.9.1(@types/node@20.14.6)(typescript@5.4.5))
+      jest: 29.7.0(ts-node@10.9.1(typescript@5.4.5))
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -20029,7 +20079,7 @@ snapshots:
 
   events@3.3.0: {}
 
-  evp-ts@1.0.3(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.6)(typescript@5.4.5))(typescript@5.4.5):
+  evp-ts@1.0.3(postcss@8.4.38)(ts-node@10.9.1(typescript@5.4.5))(typescript@5.4.5):
     dependencies:
       picocolors: 1.0.1
       tsup: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.6)(typescript@5.4.5))(typescript@5.4.5)
@@ -20041,9 +20091,9 @@ snapshots:
       - ts-node
       - typescript
 
-  evp-ts@1.0.5(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.6)(typescript@5.4.5))(typescript@5.4.5):
+  evp-ts@1.0.5(postcss@8.4.38)(ts-node@10.9.1(typescript@5.4.5))(typescript@5.4.5):
     dependencies:
-      evp-ts: 1.0.3(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.6)(typescript@5.4.5))(typescript@5.4.5)
+      evp-ts: 1.0.3(postcss@8.4.38)(ts-node@10.9.1(typescript@5.4.5))(typescript@5.4.5)
       picocolors: 1.0.1
       tsup: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.6)(typescript@5.4.5))(typescript@5.4.5)
     transitivePeerDependencies:
@@ -21529,7 +21579,57 @@ snapshots:
       - supports-color
       - ts-node
 
+  jest-cli@29.7.0(ts-node@10.9.1(typescript@5.4.5)):
+    dependencies:
+      '@jest/core': 29.7.0(ts-node@10.9.1(typescript@5.4.5))
+      '@jest/test-result': 29.7.0
+      '@jest/types': 29.6.3
+      chalk: 4.1.2
+      create-jest: 29.7.0(ts-node@10.9.1(typescript@5.4.5))
+      exit: 0.1.2
+      import-local: 3.1.0
+      jest-config: 29.7.0(@types/node@20.14.6)(ts-node@10.9.1(typescript@5.4.5))
+      jest-util: 29.7.0
+      jest-validate: 29.7.0
+      yargs: 17.7.2
+    transitivePeerDependencies:
+      - '@types/node'
+      - babel-plugin-macros
+      - supports-color
+      - ts-node
+
   jest-config@29.7.0(@types/node@20.14.6)(ts-node@10.9.1(@types/node@20.14.6)(typescript@5.4.5)):
+    dependencies:
+      '@babel/core': 7.24.7
+      '@jest/test-sequencer': 29.7.0
+      '@jest/types': 29.6.3
+      babel-jest: 29.7.0(@babel/core@7.24.7)
+      chalk: 4.1.2
+      ci-info: 3.9.0
+      deepmerge: 4.3.1
+      glob: 7.2.3
+      graceful-fs: 4.2.11
+      jest-circus: 29.7.0
+      jest-environment-node: 29.7.0
+      jest-get-type: 29.6.3
+      jest-regex-util: 29.6.3
+      jest-resolve: 29.7.0
+      jest-runner: 29.7.0
+      jest-util: 29.7.0
+      jest-validate: 29.7.0
+      micromatch: 4.0.7
+      parse-json: 5.2.0
+      pretty-format: 29.7.0
+      slash: 3.0.0
+      strip-json-comments: 3.1.1
+    optionalDependencies:
+      '@types/node': 20.14.6
+      ts-node: 10.9.1(@types/node@20.14.6)(typescript@5.4.5)
+    transitivePeerDependencies:
+      - babel-plugin-macros
+      - supports-color
+
+  jest-config@29.7.0(@types/node@20.14.6)(ts-node@10.9.1(typescript@5.4.5)):
     dependencies:
       '@babel/core': 7.24.7
       '@jest/test-sequencer': 29.7.0
@@ -21807,6 +21907,18 @@ snapshots:
       '@jest/types': 29.6.3
       import-local: 3.1.0
       jest-cli: 29.7.0(@types/node@20.14.6)(ts-node@10.9.1(@types/node@20.14.6)(typescript@5.4.5))
+    transitivePeerDependencies:
+      - '@types/node'
+      - babel-plugin-macros
+      - supports-color
+      - ts-node
+
+  jest@29.7.0(ts-node@10.9.1(typescript@5.4.5)):
+    dependencies:
+      '@jest/core': 29.7.0(ts-node@10.9.1(typescript@5.4.5))
+      '@jest/types': 29.6.3
+      import-local: 3.1.0
+      jest-cli: 29.7.0(ts-node@10.9.1(typescript@5.4.5))
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -22999,7 +23111,7 @@ snapshots:
     dependencies:
       type-fest: 2.19.0
 
-  next-auth@4.24.7(next@14.2.4(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  next-auth@4.24.7(next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       '@babel/runtime': 7.24.7
       '@panva/hkdf': 1.2.0
@@ -23812,7 +23924,7 @@ snapshots:
       camelcase-css: 2.0.1
       postcss: 8.4.38
 
-  postcss-load-config@4.0.2(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.6)(typescript@5.4.5)):
+  postcss-load-config@4.0.2(postcss@8.4.38)(ts-node@10.9.1(typescript@5.4.5)):
     dependencies:
       lilconfig: 3.1.2
       yaml: 2.4.5
@@ -25531,7 +25643,7 @@ snapshots:
       postcss: 8.4.38
       postcss-import: 15.1.0(postcss@8.4.38)
       postcss-js: 4.0.1(postcss@8.4.38)
-      postcss-load-config: 4.0.2(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.6)(typescript@5.4.5))
+      postcss-load-config: 4.0.2(postcss@8.4.38)(ts-node@10.9.1(typescript@5.4.5))
       postcss-nested: 6.0.1(postcss@8.4.38)
       postcss-selector-parser: 6.1.0
       resolve: 1.22.8
@@ -25803,11 +25915,11 @@ snapshots:
 
   ts-interface-checker@0.1.13: {}
 
-  ts-jest@29.1.5(@babel/core@7.24.7)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.24.7))(esbuild@0.21.5)(jest@29.7.0(@types/node@20.14.6)(ts-node@10.9.1(@types/node@20.14.6)(typescript@5.4.5)))(typescript@5.4.5):
+  ts-jest@29.1.5(@babel/core@7.24.7)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.24.7))(esbuild@0.21.5)(jest@29.7.0(ts-node@10.9.1(typescript@5.4.5)))(typescript@5.4.5):
     dependencies:
       bs-logger: 0.2.6
       fast-json-stable-stringify: 2.1.0
-      jest: 29.7.0(@types/node@20.14.6)(ts-node@10.9.1(@types/node@20.14.6)(typescript@5.4.5))
+      jest: 29.7.0(ts-node@10.9.1(typescript@5.4.5))
       jest-util: 29.7.0
       json5: 2.2.3
       lodash.memoize: 4.1.2
@@ -25914,7 +26026,7 @@ snapshots:
       execa: 5.1.1
       globby: 11.1.0
       joycon: 3.1.1
-      postcss-load-config: 4.0.2(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.6)(typescript@5.4.5))
+      postcss-load-config: 4.0.2(postcss@8.4.38)(ts-node@10.9.1(typescript@5.4.5))
       resolve-from: 5.0.0
       rollup: 4.18.0
       source-map: 0.8.0-beta.0
