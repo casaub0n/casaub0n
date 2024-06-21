@@ -462,10 +462,10 @@ importers:
         version: 5.0.7
       tsup:
         specifier: ^8.0.2
-        version: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.4.5))(typescript@5.4.5)
+        version: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.5.2))(typescript@5.5.2)
       typescript:
         specifier: ^5.3.3
-        version: 5.4.5
+        version: 5.5.2
 
   packages/spidering:
     dependencies:
@@ -502,10 +502,10 @@ importers:
         version: 5.0.7
       tsup:
         specifier: ^8.0.2
-        version: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.4.5))(typescript@5.4.5)
+        version: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.5.2))(typescript@5.5.2)
       typescript:
         specifier: ^5.3.3
-        version: 5.4.5
+        version: 5.5.2
 
   packages/test-driven-development-by-example:
     devDependencies:
@@ -526,13 +526,13 @@ importers:
         version: 5.0.7
       tsup:
         specifier: ^8.0.2
-        version: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.4.5))(typescript@5.4.5)
+        version: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.5.2))(typescript@5.5.2)
       tsx:
         specifier: ^4.11.0
         version: 4.15.6
       typescript:
         specifier: ^5.4.5
-        version: 5.4.5
+        version: 5.5.2
 
   packages/tsbox:
     dependencies:
@@ -554,10 +554,10 @@ importers:
         version: 5.0.7
       tsup:
         specifier: ^8.0.2
-        version: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.4.5))(typescript@5.4.5)
+        version: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.5.2))(typescript@5.5.2)
       typescript:
         specifier: ^5.4.2
-        version: 5.4.5
+        version: 5.5.2
       vitest:
         specifier: ^1.4.0
         version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@20.14.7)(@vitest/ui@1.6.0)(jsdom@24.1.0)(terser@5.31.1)
@@ -583,10 +583,10 @@ importers:
         version: 5.0.7
       tsup:
         specifier: ^8.0.2
-        version: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.4.5))(typescript@5.4.5)
+        version: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.5.2))(typescript@5.5.2)
       typescript:
         specifier: ^5.3.3
-        version: 5.4.5
+        version: 5.5.2
 
 packages:
 
@@ -11232,11 +11232,6 @@ packages:
     engines: {node: '>=4.2.0'}
     hasBin: true
 
-  typescript@5.4.5:
-    resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
-    engines: {node: '>=14.17'}
-    hasBin: true
-
   typescript@5.5.2:
     resolution: {integrity: sha512-NcRtPEOsPFFWjobJEtfihkLCZCXZt/os3zf8nTxjVH3RvTSxjrCamJpbExGvYOF+tFHc3pA65qpdwPbzjohhew==}
     engines: {node: '>=14.17'}
@@ -20099,7 +20094,7 @@ snapshots:
   evp-ts@1.0.3(postcss@8.4.38)(ts-node@10.9.1(typescript@5.5.2))(typescript@5.5.2):
     dependencies:
       picocolors: 1.0.1
-      tsup: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(typescript@5.5.2))(typescript@5.5.2)
+      tsup: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.5.2))(typescript@5.5.2)
     transitivePeerDependencies:
       - '@microsoft/api-extractor'
       - '@swc/core'
@@ -20112,7 +20107,7 @@ snapshots:
     dependencies:
       evp-ts: 1.0.3(postcss@8.4.38)(ts-node@10.9.1(typescript@5.5.2))(typescript@5.5.2)
       picocolors: 1.0.1
-      tsup: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(typescript@5.5.2))(typescript@5.5.2)
+      tsup: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.5.2))(typescript@5.5.2)
     transitivePeerDependencies:
       - '@microsoft/api-extractor'
       - '@swc/core'
@@ -23945,15 +23940,7 @@ snapshots:
       camelcase-css: 2.0.1
       postcss: 8.4.38
 
-  postcss-load-config@4.0.2(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.4.5)):
-    dependencies:
-      lilconfig: 3.1.2
-      yaml: 2.4.5
-    optionalDependencies:
-      postcss: 8.4.38
-      ts-node: 10.9.1(@types/node@20.14.7)(typescript@5.4.5)
-
-  postcss-load-config@4.0.2(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.5.2)):
+  postcss-load-config@4.0.2(postcss@8.4.38)(ts-node@10.9.1(typescript@5.5.2)):
     dependencies:
       lilconfig: 3.1.2
       yaml: 2.4.5
@@ -25672,7 +25659,7 @@ snapshots:
       postcss: 8.4.38
       postcss-import: 15.1.0(postcss@8.4.38)
       postcss-js: 4.0.1(postcss@8.4.38)
-      postcss-load-config: 4.0.2(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.5.2))
+      postcss-load-config: 4.0.2(postcss@8.4.38)(ts-node@10.9.1(typescript@5.5.2))
       postcss-nested: 6.0.1(postcss@8.4.38)
       postcss-selector-parser: 6.1.0
       resolve: 1.22.8
@@ -25986,25 +25973,6 @@ snapshots:
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
 
-  ts-node@10.9.1(@types/node@20.14.7)(typescript@5.4.5):
-    dependencies:
-      '@cspotcode/source-map-support': 0.8.1
-      '@tsconfig/node10': 1.0.11
-      '@tsconfig/node12': 1.0.11
-      '@tsconfig/node14': 1.0.3
-      '@tsconfig/node16': 1.0.4
-      '@types/node': 20.14.7
-      acorn: 8.12.0
-      acorn-walk: 8.3.3
-      arg: 4.1.3
-      create-require: 1.1.1
-      diff: 4.0.2
-      make-error: 1.3.6
-      typescript: 5.4.5
-      v8-compile-cache-lib: 3.0.1
-      yn: 3.1.1
-    optional: true
-
   ts-node@10.9.1(@types/node@20.14.7)(typescript@5.5.2):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
@@ -26064,7 +26032,7 @@ snapshots:
 
   tslib@2.6.3: {}
 
-  tsup@8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.4.5))(typescript@5.4.5):
+  tsup@8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.5.2))(typescript@5.5.2):
     dependencies:
       bundle-require: 4.2.1(esbuild@0.21.5)
       cac: 6.7.14
@@ -26074,30 +26042,7 @@ snapshots:
       execa: 5.1.1
       globby: 11.1.0
       joycon: 3.1.1
-      postcss-load-config: 4.0.2(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.4.5))
-      resolve-from: 5.0.0
-      rollup: 4.18.0
-      source-map: 0.8.0-beta.0
-      sucrase: 3.35.0
-      tree-kill: 1.2.2
-    optionalDependencies:
-      postcss: 8.4.38
-      typescript: 5.4.5
-    transitivePeerDependencies:
-      - supports-color
-      - ts-node
-
-  tsup@8.1.0(postcss@8.4.38)(ts-node@10.9.1(typescript@5.5.2))(typescript@5.5.2):
-    dependencies:
-      bundle-require: 4.2.1(esbuild@0.21.5)
-      cac: 6.7.14
-      chokidar: 3.6.0
-      debug: 4.3.5
-      esbuild: 0.21.5
-      execa: 5.1.1
-      globby: 11.1.0
-      joycon: 3.1.1
-      postcss-load-config: 4.0.2(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.5.2))
+      postcss-load-config: 4.0.2(postcss@8.4.38)(ts-node@10.9.1(typescript@5.5.2))
       resolve-from: 5.0.0
       rollup: 4.18.0
       source-map: 0.8.0-beta.0
@@ -26253,8 +26198,6 @@ snapshots:
       typed-array-byte-offset: 1.0.2
 
   typescript@4.9.5: {}
-
-  typescript@5.4.5: {}
 
   typescript@5.5.2: {}
 
