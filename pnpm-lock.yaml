@@ -34,7 +34,7 @@ importers:
         version: 3.3.2
       renovate:
         specifier: ^37.374.3
-        version: 37.414.1(@aws-sdk/client-sso-oidc@3.588.0(@aws-sdk/client-sts@3.588.0))(encoding@0.1.13)(typanion@3.14.0)
+        version: 37.414.1(@aws-sdk/client-sso-oidc@3.588.0)(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: ^14.0.4
         version: 14.0.4
@@ -371,7 +371,7 @@ importers:
         version: 0.0.268
       evp-ts:
         specifier: ^1.0.5
-        version: 1.0.5(postcss@8.4.38)(typescript@5.5.2)
+        version: 1.0.5(postcss@8.4.38)(ts-node@10.9.1(typescript@5.5.2))(typescript@5.5.2)
       neverthrow:
         specifier: ^6.2.2
         version: 6.2.2
@@ -480,7 +480,7 @@ importers:
         version: 21.1.7
       '@types/node':
         specifier: ^20.11.19
-        version: 20.14.7
+        version: 20.14.8
       eslint-config-custom:
         specifier: workspace:^
         version: link:../eslint-config-custom
@@ -489,7 +489,7 @@ importers:
         version: 5.0.7
       tsup:
         specifier: ^8.0.2
-        version: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.5.2))(typescript@5.5.2)
+        version: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.8)(typescript@5.5.2))(typescript@5.5.2)
       typescript:
         specifier: ^5.3.3
         version: 5.5.2
@@ -520,7 +520,7 @@ importers:
         version: 21.1.7
       '@types/node':
         specifier: ^20.11.19
-        version: 20.14.7
+        version: 20.14.8
       eslint-config-custom:
         specifier: workspace:^
         version: link:../eslint-config-custom
@@ -529,7 +529,7 @@ importers:
         version: 5.0.7
       tsup:
         specifier: ^8.0.2
-        version: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.5.2))(typescript@5.5.2)
+        version: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.8)(typescript@5.5.2))(typescript@5.5.2)
       typescript:
         specifier: ^5.3.3
         version: 5.5.2
@@ -538,7 +538,7 @@ importers:
     devDependencies:
       '@types/node':
         specifier: ^20.13.0
-        version: 20.14.7
+        version: 20.14.8
       esbuild:
         specifier: ^0.21.4
         version: 0.21.5
@@ -553,7 +553,7 @@ importers:
         version: 5.0.7
       tsup:
         specifier: ^8.0.2
-        version: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.5.2))(typescript@5.5.2)
+        version: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.8)(typescript@5.5.2))(typescript@5.5.2)
       tsx:
         specifier: ^4.11.0
         version: 4.15.7
@@ -569,7 +569,7 @@ importers:
     devDependencies:
       '@types/node':
         specifier: ^20.11.28
-        version: 20.14.7
+        version: 20.14.8
       '@vitest/ui':
         specifier: ^1.4.0
         version: 1.6.0(vitest@1.6.0)
@@ -581,13 +581,13 @@ importers:
         version: 5.0.7
       tsup:
         specifier: ^8.0.2
-        version: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.5.2))(typescript@5.5.2)
+        version: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.8)(typescript@5.5.2))(typescript@5.5.2)
       typescript:
         specifier: ^5.4.2
         version: 5.5.2
       vitest:
         specifier: ^1.4.0
-        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@20.14.7)(@vitest/ui@1.6.0)(jsdom@24.1.0)(terser@5.31.1)
+        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@20.14.8)(@vitest/ui@1.6.0)(jsdom@24.1.0)(terser@5.31.1)
 
   packages/tsconfig: {}
 
@@ -601,7 +601,7 @@ importers:
     devDependencies:
       '@types/node':
         specifier: ^20.11.19
-        version: 20.14.7
+        version: 20.14.8
       eslint-config-custom:
         specifier: workspace:^
         version: link:../eslint-config-custom
@@ -610,7 +610,7 @@ importers:
         version: 5.0.7
       tsup:
         specifier: ^8.0.2
-        version: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.5.2))(typescript@5.5.2)
+        version: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.8)(typescript@5.5.2))(typescript@5.5.2)
       typescript:
         specifier: ^5.3.3
         version: 5.5.2
@@ -4020,8 +4020,8 @@ packages:
   '@types/node@18.19.38':
     resolution: {integrity: sha512-SApYXUF7si4JJ+lO2o6X60OPOnA6wPpbiB09GMCkQ+JAwpa9hxUVG8p7GzA08TKQn5OhzK57rj1wFj+185YsGg==}
 
-  '@types/node@20.14.7':
-    resolution: {integrity: sha512-uTr2m2IbJJucF3KUxgnGOZvYbN0QgkGyWxG6973HCpMYFy2KfcgYuIwkJQMQkt1VbBMlvWRbpshFTLxnxCZjKQ==}
+  '@types/node@18.19.39':
+    resolution: {integrity: sha512-nPwTRDKUctxw3di5b4TfT3I0sWDiWoPQCZjXhvdkINntwr8lcoVCKsTgnXeRubKIlfnV+eN/HYk6Jb40tbcEAQ==}
 
   '@types/node@20.14.8':
     resolution: {integrity: sha512-DO+2/jZinXfROG7j7WKFn/3C6nFwxy2lLpgLjEXJz+0XKphZlTLJ14mo8Vfg8X5BWN6XjyESXq+LcYdT7tR3bA==}
@@ -12181,8 +12181,8 @@ snapshots:
     dependencies:
       '@aws-crypto/sha256-browser': 3.0.0
       '@aws-crypto/sha256-js': 3.0.0
-      '@aws-sdk/client-sso-oidc': 3.588.0(@aws-sdk/client-sts@3.588.0)
-      '@aws-sdk/client-sts': 3.588.0
+      '@aws-sdk/client-sso-oidc': 3.588.0
+      '@aws-sdk/client-sts': 3.588.0(@aws-sdk/client-sso-oidc@3.588.0)
       '@aws-sdk/core': 3.588.0
       '@aws-sdk/credential-provider-node': 3.588.0(@aws-sdk/client-sso-oidc@3.588.0)(@aws-sdk/client-sts@3.588.0)
       '@aws-sdk/middleware-host-header': 3.577.0
@@ -12228,8 +12228,8 @@ snapshots:
     dependencies:
       '@aws-crypto/sha256-browser': 3.0.0
       '@aws-crypto/sha256-js': 3.0.0
-      '@aws-sdk/client-sso-oidc': 3.588.0(@aws-sdk/client-sts@3.588.0)
-      '@aws-sdk/client-sts': 3.588.0
+      '@aws-sdk/client-sso-oidc': 3.588.0
+      '@aws-sdk/client-sts': 3.588.0(@aws-sdk/client-sso-oidc@3.588.0)
       '@aws-sdk/core': 3.588.0
       '@aws-sdk/credential-provider-node': 3.588.0(@aws-sdk/client-sso-oidc@3.588.0)(@aws-sdk/client-sts@3.588.0)
       '@aws-sdk/middleware-host-header': 3.577.0
@@ -12274,8 +12274,8 @@ snapshots:
     dependencies:
       '@aws-crypto/sha256-browser': 3.0.0
       '@aws-crypto/sha256-js': 3.0.0
-      '@aws-sdk/client-sso-oidc': 3.588.0(@aws-sdk/client-sts@3.588.0)
-      '@aws-sdk/client-sts': 3.588.0
+      '@aws-sdk/client-sso-oidc': 3.588.0
+      '@aws-sdk/client-sts': 3.588.0(@aws-sdk/client-sso-oidc@3.588.0)
       '@aws-sdk/core': 3.588.0
       '@aws-sdk/credential-provider-node': 3.588.0(@aws-sdk/client-sso-oidc@3.588.0)(@aws-sdk/client-sts@3.588.0)
       '@aws-sdk/middleware-host-header': 3.577.0
@@ -12323,8 +12323,8 @@ snapshots:
     dependencies:
       '@aws-crypto/sha256-browser': 3.0.0
       '@aws-crypto/sha256-js': 3.0.0
-      '@aws-sdk/client-sso-oidc': 3.588.0(@aws-sdk/client-sts@3.588.0)
-      '@aws-sdk/client-sts': 3.588.0
+      '@aws-sdk/client-sso-oidc': 3.588.0
+      '@aws-sdk/client-sts': 3.588.0(@aws-sdk/client-sso-oidc@3.588.0)
       '@aws-sdk/core': 3.588.0
       '@aws-sdk/credential-provider-node': 3.588.0(@aws-sdk/client-sso-oidc@3.588.0)(@aws-sdk/client-sts@3.588.0)
       '@aws-sdk/middleware-host-header': 3.577.0
@@ -12370,8 +12370,8 @@ snapshots:
     dependencies:
       '@aws-crypto/sha256-browser': 3.0.0
       '@aws-crypto/sha256-js': 3.0.0
-      '@aws-sdk/client-sso-oidc': 3.588.0(@aws-sdk/client-sts@3.588.0)
-      '@aws-sdk/client-sts': 3.588.0
+      '@aws-sdk/client-sso-oidc': 3.588.0
+      '@aws-sdk/client-sts': 3.588.0(@aws-sdk/client-sso-oidc@3.588.0)
       '@aws-sdk/core': 3.588.0
       '@aws-sdk/credential-provider-node': 3.588.0(@aws-sdk/client-sso-oidc@3.588.0)(@aws-sdk/client-sts@3.588.0)
       '@aws-sdk/middleware-host-header': 3.577.0
@@ -12419,8 +12419,8 @@ snapshots:
       '@aws-crypto/sha1-browser': 3.0.0
       '@aws-crypto/sha256-browser': 3.0.0
       '@aws-crypto/sha256-js': 3.0.0
-      '@aws-sdk/client-sso-oidc': 3.588.0(@aws-sdk/client-sts@3.588.0)
-      '@aws-sdk/client-sts': 3.588.0
+      '@aws-sdk/client-sso-oidc': 3.588.0
+      '@aws-sdk/client-sts': 3.588.0(@aws-sdk/client-sso-oidc@3.588.0)
       '@aws-sdk/core': 3.588.0
       '@aws-sdk/credential-provider-node': 3.588.0(@aws-sdk/client-sso-oidc@3.588.0)(@aws-sdk/client-sts@3.588.0)
       '@aws-sdk/middleware-bucket-endpoint': 3.587.0
@@ -12477,11 +12477,11 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
 
-  '@aws-sdk/client-sso-oidc@3.588.0(@aws-sdk/client-sts@3.588.0)':
+  '@aws-sdk/client-sso-oidc@3.588.0':
     dependencies:
       '@aws-crypto/sha256-browser': 3.0.0
       '@aws-crypto/sha256-js': 3.0.0
-      '@aws-sdk/client-sts': 3.588.0
+      '@aws-sdk/client-sts': 3.588.0(@aws-sdk/client-sso-oidc@3.588.0)
       '@aws-sdk/core': 3.588.0
       '@aws-sdk/credential-provider-node': 3.588.0(@aws-sdk/client-sso-oidc@3.588.0)(@aws-sdk/client-sts@3.588.0)
       '@aws-sdk/middleware-host-header': 3.577.0
@@ -12520,7 +12520,6 @@ snapshots:
       '@smithy/util-utf8': 3.0.0
       tslib: 2.6.3
     transitivePeerDependencies:
-      - '@aws-sdk/client-sts'
       - aws-crt
 
   '@aws-sdk/client-sso@3.588.0':
@@ -12566,11 +12565,11 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
 
-  '@aws-sdk/client-sts@3.588.0':
+  '@aws-sdk/client-sts@3.588.0(@aws-sdk/client-sso-oidc@3.588.0)':
     dependencies:
       '@aws-crypto/sha256-browser': 3.0.0
       '@aws-crypto/sha256-js': 3.0.0
-      '@aws-sdk/client-sso-oidc': 3.588.0(@aws-sdk/client-sts@3.588.0)
+      '@aws-sdk/client-sso-oidc': 3.588.0
       '@aws-sdk/core': 3.588.0
       '@aws-sdk/credential-provider-node': 3.588.0(@aws-sdk/client-sso-oidc@3.588.0)(@aws-sdk/client-sts@3.588.0)
       '@aws-sdk/middleware-host-header': 3.577.0
@@ -12609,6 +12608,7 @@ snapshots:
       '@smithy/util-utf8': 3.0.0
       tslib: 2.6.3
     transitivePeerDependencies:
+      - '@aws-sdk/client-sso-oidc'
       - aws-crt
 
   '@aws-sdk/core@3.588.0':
@@ -12652,7 +12652,7 @@ snapshots:
 
   '@aws-sdk/credential-provider-ini@3.588.0(@aws-sdk/client-sso-oidc@3.588.0)(@aws-sdk/client-sts@3.588.0)':
     dependencies:
-      '@aws-sdk/client-sts': 3.588.0
+      '@aws-sdk/client-sts': 3.588.0(@aws-sdk/client-sso-oidc@3.588.0)
       '@aws-sdk/credential-provider-env': 3.587.0
       '@aws-sdk/credential-provider-http': 3.587.0
       '@aws-sdk/credential-provider-process': 3.587.0
@@ -12710,17 +12710,17 @@ snapshots:
 
   '@aws-sdk/credential-provider-web-identity@3.587.0(@aws-sdk/client-sts@3.588.0)':
     dependencies:
-      '@aws-sdk/client-sts': 3.588.0
+      '@aws-sdk/client-sts': 3.588.0(@aws-sdk/client-sso-oidc@3.588.0)
       '@aws-sdk/types': 3.577.0
       '@smithy/property-provider': 3.1.2
       '@smithy/types': 3.2.0
       tslib: 2.6.3
 
-  '@aws-sdk/credential-providers@3.588.0(@aws-sdk/client-sso-oidc@3.588.0(@aws-sdk/client-sts@3.588.0))':
+  '@aws-sdk/credential-providers@3.588.0(@aws-sdk/client-sso-oidc@3.588.0)':
     dependencies:
       '@aws-sdk/client-cognito-identity': 3.588.0
       '@aws-sdk/client-sso': 3.588.0
-      '@aws-sdk/client-sts': 3.588.0
+      '@aws-sdk/client-sts': 3.588.0(@aws-sdk/client-sso-oidc@3.588.0)
       '@aws-sdk/credential-provider-cognito-identity': 3.588.0
       '@aws-sdk/credential-provider-env': 3.587.0
       '@aws-sdk/credential-provider-http': 3.587.0
@@ -12869,7 +12869,7 @@ snapshots:
 
   '@aws-sdk/token-providers@3.587.0(@aws-sdk/client-sso-oidc@3.588.0)':
     dependencies:
-      '@aws-sdk/client-sso-oidc': 3.588.0(@aws-sdk/client-sts@3.588.0)
+      '@aws-sdk/client-sso-oidc': 3.588.0
       '@aws-sdk/types': 3.577.0
       '@smithy/property-provider': 3.1.2
       '@smithy/shared-ini-file-loader': 3.1.2
@@ -16203,7 +16203,7 @@ snapshots:
       '@storybook/types': 8.1.10
       '@types/detect-port': 1.3.5
       '@types/diff': 5.2.1
-      '@types/node': 18.19.38
+      '@types/node': 18.19.39
       '@types/pretty-hrtime': 1.0.3
       '@types/semver': 7.5.8
       better-opn: 3.0.2
@@ -16617,7 +16617,7 @@ snapshots:
       '@jest/globals': 29.7.0
       '@types/jest': 29.5.12
       jest: 29.7.0(@types/node@20.14.8)(ts-node@10.9.1(@types/node@20.14.8)(typescript@5.5.2))
-      vitest: 1.6.0(@types/node@20.14.8)
+      vitest: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@20.14.8)(@vitest/ui@1.6.0)(jsdom@24.1.0)(terser@5.31.1)
 
   '@testing-library/react@16.0.0(@testing-library/dom@9.3.4)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
@@ -17038,7 +17038,7 @@ snapshots:
     dependencies:
       undici-types: 5.26.5
 
-  '@types/node@20.14.7':
+  '@types/node@18.19.39':
     dependencies:
       undici-types: 5.26.5
 
@@ -17581,7 +17581,7 @@ snapshots:
       pathe: 1.1.2
       picocolors: 1.0.1
       sirv: 2.0.4
-      vitest: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@20.14.7)(@vitest/ui@1.6.0)(jsdom@24.1.0)(terser@5.31.1)
+      vitest: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@20.14.8)(@vitest/ui@1.6.0)(jsdom@24.1.0)(terser@5.31.1)
 
   '@vitest/utils@1.3.1':
     dependencies:
@@ -20282,36 +20282,11 @@ snapshots:
       - ts-node
       - typescript
 
-  evp-ts@1.0.3(postcss@8.4.38)(typescript@5.5.2):
-    dependencies:
-      picocolors: 1.0.1
-      tsup: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.5.2))(typescript@5.5.2)
-    transitivePeerDependencies:
-      - '@microsoft/api-extractor'
-      - '@swc/core'
-      - postcss
-      - supports-color
-      - ts-node
-      - typescript
-
   evp-ts@1.0.5(postcss@8.4.38)(ts-node@10.9.1(typescript@5.5.2))(typescript@5.5.2):
     dependencies:
       evp-ts: 1.0.3(postcss@8.4.38)(ts-node@10.9.1(typescript@5.5.2))(typescript@5.5.2)
       picocolors: 1.0.1
       tsup: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(typescript@5.5.2))(typescript@5.5.2)
-    transitivePeerDependencies:
-      - '@microsoft/api-extractor'
-      - '@swc/core'
-      - postcss
-      - supports-color
-      - ts-node
-      - typescript
-
-  evp-ts@1.0.5(postcss@8.4.38)(typescript@5.5.2):
-    dependencies:
-      evp-ts: 1.0.3(postcss@8.4.38)(typescript@5.5.2)
-      picocolors: 1.0.1
-      tsup: 8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.5.2))(typescript@5.5.2)
     transitivePeerDependencies:
       - '@microsoft/api-extractor'
       - '@swc/core'
@@ -21882,7 +21857,7 @@ snapshots:
       strip-json-comments: 3.1.1
     optionalDependencies:
       '@types/node': 20.14.8
-      ts-node: 10.9.1(@types/node@20.14.7)(typescript@5.5.2)
+      ts-node: 10.9.1(@types/node@20.14.8)(typescript@5.5.2)
     transitivePeerDependencies:
       - babel-plugin-macros
       - supports-color
@@ -22117,7 +22092,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 20.14.8
+      '@types/node': 18.19.38
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -24162,14 +24137,6 @@ snapshots:
       camelcase-css: 2.0.1
       postcss: 8.4.38
 
-  postcss-load-config@4.0.2(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.5.2)):
-    dependencies:
-      lilconfig: 3.1.2
-      yaml: 2.4.5
-    optionalDependencies:
-      postcss: 8.4.38
-      ts-node: 10.9.1(@types/node@20.14.7)(typescript@5.5.2)
-
   postcss-load-config@4.0.2(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.8)(typescript@5.5.2)):
     dependencies:
       lilconfig: 3.1.2
@@ -24184,7 +24151,7 @@ snapshots:
       yaml: 2.4.5
     optionalDependencies:
       postcss: 8.4.38
-      ts-node: 10.9.1(@types/node@20.14.7)(typescript@5.5.2)
+      ts-node: 10.9.1(@types/node@20.14.8)(typescript@5.5.2)
 
   postcss-loader@8.1.1(postcss@8.4.38)(typescript@5.5.2)(webpack@5.92.1(esbuild@0.20.2)):
     dependencies:
@@ -24986,14 +24953,14 @@ snapshots:
       lodash: 4.17.21
       strip-ansi: 6.0.1
 
-  renovate@37.414.1(@aws-sdk/client-sso-oidc@3.588.0(@aws-sdk/client-sts@3.588.0))(encoding@0.1.13)(typanion@3.14.0):
+  renovate@37.414.1(@aws-sdk/client-sso-oidc@3.588.0)(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.588.0
       '@aws-sdk/client-ec2': 3.588.0
       '@aws-sdk/client-ecr': 3.588.0
       '@aws-sdk/client-rds': 3.588.0
       '@aws-sdk/client-s3': 3.588.0
-      '@aws-sdk/credential-providers': 3.588.0(@aws-sdk/client-sso-oidc@3.588.0(@aws-sdk/client-sts@3.588.0))
+      '@aws-sdk/credential-providers': 3.588.0(@aws-sdk/client-sso-oidc@3.588.0)
       '@breejs/later': 4.2.0
       '@cdktf/hcl2json': 0.20.7
       '@opentelemetry/api': 1.9.0
@@ -26223,25 +26190,6 @@ snapshots:
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
 
-  ts-node@10.9.1(@types/node@20.14.7)(typescript@5.5.2):
-    dependencies:
-      '@cspotcode/source-map-support': 0.8.1
-      '@tsconfig/node10': 1.0.11
-      '@tsconfig/node12': 1.0.11
-      '@tsconfig/node14': 1.0.3
-      '@tsconfig/node16': 1.0.4
-      '@types/node': 20.14.7
-      acorn: 8.12.0
-      acorn-walk: 8.3.3
-      arg: 4.1.3
-      create-require: 1.1.1
-      diff: 4.0.2
-      make-error: 1.3.6
-      typescript: 5.5.2
-      v8-compile-cache-lib: 3.0.1
-      yn: 3.1.1
-    optional: true
-
   ts-node@10.9.1(@types/node@20.14.8)(typescript@5.5.2):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
@@ -26301,7 +26249,7 @@ snapshots:
 
   tslib@2.6.3: {}
 
-  tsup@8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.5.2))(typescript@5.5.2):
+  tsup@8.1.0(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.8)(typescript@5.5.2))(typescript@5.5.2):
     dependencies:
       bundle-require: 4.2.1(esbuild@0.21.5)
       cac: 6.7.14
@@ -26311,7 +26259,7 @@ snapshots:
       execa: 5.1.1
       globby: 11.1.0
       joycon: 3.1.1
-      postcss-load-config: 4.0.2(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.7)(typescript@5.5.2))
+      postcss-load-config: 4.0.2(postcss@8.4.38)(ts-node@10.9.1(@types/node@20.14.8)(typescript@5.5.2))
       resolve-from: 5.0.0
       rollup: 4.18.0
       source-map: 0.8.0-beta.0
@@ -26851,23 +26799,6 @@ snapshots:
       d3-time: 3.1.0
       d3-timer: 3.0.1
 
-  vite-node@1.6.0(@types/node@20.14.7)(terser@5.31.1):
-    dependencies:
-      cac: 6.7.14
-      debug: 4.3.5
-      pathe: 1.1.2
-      picocolors: 1.0.1
-      vite: 5.3.1(@types/node@20.14.7)(terser@5.31.1)
-    transitivePeerDependencies:
-      - '@types/node'
-      - less
-      - lightningcss
-      - sass
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
-
   vite-node@1.6.0(@types/node@20.14.8)(terser@5.31.1):
     dependencies:
       cac: 6.7.14
@@ -26885,16 +26816,6 @@ snapshots:
       - supports-color
       - terser
 
-  vite@5.3.1(@types/node@20.14.7)(terser@5.31.1):
-    dependencies:
-      esbuild: 0.21.5
-      postcss: 8.4.38
-      rollup: 4.18.0
-    optionalDependencies:
-      '@types/node': 20.14.7
-      fsevents: 2.3.3
-      terser: 5.31.1
-
   vite@5.3.1(@types/node@20.14.8)(terser@5.31.1):
     dependencies:
       esbuild: 0.21.5
@@ -26909,43 +26830,7 @@ snapshots:
     optionalDependencies:
       vite: 5.3.1(@types/node@20.14.8)(terser@5.31.1)
 
-  vitest@1.6.0(@edge-runtime/vm@3.2.0)(@types/node@20.14.7)(@vitest/ui@1.6.0)(jsdom@24.1.0)(terser@5.31.1):
-    dependencies:
-      '@vitest/expect': 1.6.0
-      '@vitest/runner': 1.6.0
-      '@vitest/snapshot': 1.6.0
-      '@vitest/spy': 1.6.0
-      '@vitest/utils': 1.6.0
-      acorn-walk: 8.3.3
-      chai: 4.4.1
-      debug: 4.3.5
-      execa: 8.0.1
-      local-pkg: 0.5.0
-      magic-string: 0.30.10
-      pathe: 1.1.2
-      picocolors: 1.0.1
-      std-env: 3.7.0
-      strip-literal: 2.1.0
-      tinybench: 2.8.0
-      tinypool: 0.8.4
-      vite: 5.3.1(@types/node@20.14.7)(terser@5.31.1)
-      vite-node: 1.6.0(@types/node@20.14.7)(terser@5.31.1)
-      why-is-node-running: 2.2.2
-    optionalDependencies:
-      '@edge-runtime/vm': 3.2.0
-      '@types/node': 20.14.7
-      '@vitest/ui': 1.6.0(vitest@1.6.0)
-      jsdom: 24.1.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
-    transitivePeerDependencies:
-      - less
-      - lightningcss
-      - sass
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
-
-  vitest@1.6.0(@types/node@20.14.8):
+  vitest@1.6.0(@edge-runtime/vm@3.2.0)(@types/node@20.14.8)(@vitest/ui@1.6.0)(jsdom@24.1.0)(terser@5.31.1):
     dependencies:
       '@vitest/expect': 1.6.0
       '@vitest/runner': 1.6.0
@@ -26968,7 +26853,10 @@ snapshots:
       vite-node: 1.6.0(@types/node@20.14.8)(terser@5.31.1)
       why-is-node-running: 2.2.2
     optionalDependencies:
+      '@edge-runtime/vm': 3.2.0
       '@types/node': 20.14.8
+      '@vitest/ui': 1.6.0(vitest@1.6.0)
+      jsdom: 24.1.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
     transitivePeerDependencies:
       - less
       - lightningcss
@@ -26977,7 +26865,6 @@ snapshots:
       - sugarss
       - supports-color
       - terser
-    optional: true
 
   vm-browserify@1.1.2: {}
 
