@@ -23,7 +23,7 @@
     "rmdist": "rimraf dist",
     "build": "pnpm rmdist && tsup src/index.ts --format cjs --dts",
     "start:tsbox": "pnpm build && node dist/index.js",
-    "lint": "eslint src"
+    "lint": "eslint src/"
   },
   "files": [
     "dist"
