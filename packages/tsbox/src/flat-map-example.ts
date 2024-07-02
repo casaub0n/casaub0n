@@ -1,5 +1,3 @@
-
-
 const array = ["hoge", ["fuga", 0], []];
 
 export const flatArray = array.flatMap((data) => {

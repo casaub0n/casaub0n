@@ -7,9 +7,9 @@ import {
   myFilter,
   isPositiveFunc,
   getSpeed,
-} from "./typeExercises";
+} from "./type-exercises";
 
-import type { PartialUser } from "./typeExercises";
+import type { PartialUser } from "./type-exercises";
 
 test("0 or more is true", () => {
   expect(isPositive(3)).toBe(true);
