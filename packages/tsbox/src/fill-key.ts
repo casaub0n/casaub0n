@@ -33,8 +33,8 @@ export type FillKeys<T> = (
           [K in AllKeys extends keyof T
             ? never
             : AllKeys extends string
-            ? AllKeys
-            : never]?: undefined;
+              ? AllKeys
+              : never]?: undefined;
         }
       : never
     : never

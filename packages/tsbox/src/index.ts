@@ -1,5 +1,5 @@
-import { filterArray, flatArray } from "./flatMapExample";
-import { foodList, myName, satisfiesExampleJson } from "./satisfiesExample";
+import { filterArray, flatArray } from "./flat-map-example";
+import { foodList, myName, satisfiesExampleJson } from "./satisfies-example";
 
 console.log(satisfiesExampleJson);
 
