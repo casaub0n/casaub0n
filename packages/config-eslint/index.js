@@ -5,7 +5,7 @@ const project = resolve(process.cwd(), "tsconfig.json");
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
   extends: ["eslint:recommended", "prettier", "turbo"],
-  plugins: ["only-warn"],
+  plugins: ["only-warn", "unicorn"],
   globals: {
     React: true,
     JSX: true,
@@ -35,5 +35,11 @@ module.exports = {
     "no-unused-vars": "off",
     // too much missing error
     "@typescript-eslint/no-unused-vars": ["off"],
+    "unicorn/filename-case": [
+      "error",
+      {
+        case: "kebabCase",
+      },
+    ],
   },
 };
