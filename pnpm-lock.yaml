@@ -360,7 +360,7 @@ importers:
         version: link:../config-eslint
       '@crxjs/vite-plugin':
         specifier: ^1.0.14
-        version: 1.0.14(vite@5.3.2(@types/node@20.14.9)(terser@5.31.1))
+        version: 1.0.14(vite@5.3.3(@types/node@20.14.9)(terser@5.31.1))
       '@types/chrome':
         specifier: ^0.0.268
         version: 0.0.268
@@ -381,7 +381,7 @@ importers:
         version: 5.5.3
       vite:
         specifier: ^5.3.1
-        version: 5.3.2(@types/node@20.14.9)(terser@5.31.1)
+        version: 5.3.3(@types/node@20.14.9)(terser@5.31.1)
 
   packages/maddon:
     devDependencies:
@@ -12044,6 +12044,34 @@ packages:
       terser:
         optional: true
 
+  vite@5.3.3:
+    resolution: {integrity: sha512-NPQdeCU0Dv2z5fu+ULotpuq5yfCS1BzKUIPhNbP3YBfAMGJXbt2nS+sbTFu+qchaqWTD+H3JK++nRwr6XIcp6A==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    hasBin: true
+    peerDependencies:
+      '@types/node': ^18.0.0 || >=20.0.0
+      less: '*'
+      lightningcss: ^1.21.0
+      sass: '*'
+      stylus: '*'
+      sugarss: '*'
+      terser: ^5.4.0
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      less:
+        optional: true
+      lightningcss:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+
   vitefu@0.2.5:
     resolution: {integrity: sha512-SgHtMLoqaeeGnd2evZ849ZbACbnwQCIwRH57t18FxcXoZop0uQu0uzlIhJBlF/eWVzuce0sHeqPcDo+evVcg8Q==}
     peerDependencies:
@@ -14199,7 +14227,7 @@ snapshots:
   '@colors/colors@1.5.0':
     optional: true
 
-  '@crxjs/vite-plugin@1.0.14(vite@5.3.2(@types/node@20.14.9)(terser@5.31.1))':
+  '@crxjs/vite-plugin@1.0.14(vite@5.3.3(@types/node@20.14.9)(terser@5.31.1))':
     dependencies:
       '@rollup/pluginutils': 4.2.1
       '@webcomponents/custom-elements': 1.6.0
@@ -14215,9 +14243,9 @@ snapshots:
       picocolors: 1.0.1
       react-refresh: 0.13.0
       rollup: 2.79.1
-      vite: 5.3.2(@types/node@20.14.9)(terser@5.31.1)
+      vite: 5.3.3(@types/node@20.14.9)(terser@5.31.1)
     optionalDependencies:
-      '@vitejs/plugin-react': 4.3.1(vite@5.3.2(@types/node@20.14.9)(terser@5.31.1))
+      '@vitejs/plugin-react': 4.3.1(vite@5.3.3(@types/node@20.14.9)(terser@5.31.1))
     transitivePeerDependencies:
       - supports-color
 
@@ -17834,7 +17862,7 @@ snapshots:
       find-up: 5.0.0
       javascript-stringify: 2.1.0
       mlly: 1.7.1
-      vite: 5.3.2(@types/node@20.14.9)(terser@5.31.1)
+      vite: 5.3.3(@types/node@20.14.9)(terser@5.31.1)
       vite-node: 1.6.0(@types/node@20.14.9)(terser@5.31.1)
     transitivePeerDependencies:
       - '@types/node'
@@ -18097,6 +18125,18 @@ snapshots:
       vite: 5.3.2(@types/node@20.14.9)(terser@5.31.1)
     transitivePeerDependencies:
       - supports-color
+
+  '@vitejs/plugin-react@4.3.1(vite@5.3.3(@types/node@20.14.9)(terser@5.31.1))':
+    dependencies:
+      '@babel/core': 7.24.7
+      '@babel/plugin-transform-react-jsx-self': 7.24.7(@babel/core@7.24.7)
+      '@babel/plugin-transform-react-jsx-source': 7.24.7(@babel/core@7.24.7)
+      '@types/babel__core': 7.20.5
+      react-refresh: 0.14.2
+      vite: 5.3.3(@types/node@20.14.9)(terser@5.31.1)
+    transitivePeerDependencies:
+      - supports-color
+    optional: true
 
   '@vitest/expect@1.6.0':
     dependencies:
@@ -27783,7 +27823,7 @@ snapshots:
       debug: 4.3.5
       pathe: 1.1.2
       picocolors: 1.0.1
-      vite: 5.3.2(@types/node@20.14.9)(terser@5.31.1)
+      vite: 5.3.3(@types/node@20.14.9)(terser@5.31.1)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -27795,6 +27835,16 @@ snapshots:
       - terser
 
   vite@5.3.2(@types/node@20.14.9)(terser@5.31.1):
+    dependencies:
+      esbuild: 0.21.5
+      postcss: 8.4.39
+      rollup: 4.18.0
+    optionalDependencies:
+      '@types/node': 20.14.9
+      fsevents: 2.3.3
+      terser: 5.31.1
+
+  vite@5.3.3(@types/node@20.14.9)(terser@5.31.1):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.39
@@ -27827,7 +27877,7 @@ snapshots:
       strip-literal: 2.1.0
       tinybench: 2.8.0
       tinypool: 0.8.4
-      vite: 5.3.2(@types/node@20.14.9)(terser@5.31.1)
+      vite: 5.3.3(@types/node@20.14.9)(terser@5.31.1)
       vite-node: 1.6.0(@types/node@20.14.9)(terser@5.31.1)
       why-is-node-running: 2.2.2
     optionalDependencies:
