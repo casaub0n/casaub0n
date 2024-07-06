@@ -10,13 +10,13 @@ importers:
     devDependencies:
       '@lerna-lite/cli':
         specifier: ^3.4.0
-        version: 3.7.0(@lerna-lite/publish@3.6.0(typescript@5.5.3))(@lerna-lite/version@3.6.0(@lerna-lite/publish@3.6.0(typescript@5.5.3))(typescript@5.5.3))(typescript@5.5.3)
+        version: 3.7.0(@lerna-lite/publish@3.6.0(typescript@5.5.3))(@lerna-lite/version@3.7.0(@lerna-lite/publish@3.6.0(typescript@5.5.3))(typescript@5.5.3))(typescript@5.5.3)
       '@lerna-lite/publish':
         specifier: ^3.4.0
         version: 3.6.0(typescript@5.5.3)
       '@lerna-lite/version':
         specifier: ^3.4.0
-        version: 3.6.0(@lerna-lite/publish@3.6.0(typescript@5.5.3))(typescript@5.5.3)
+        version: 3.7.0(@lerna-lite/publish@3.6.0(typescript@5.5.3))(typescript@5.5.3)
       dotenv-cli:
         specifier: ^7.4.2
         version: 7.4.2
@@ -2429,6 +2429,10 @@ packages:
 
   '@lerna-lite/version@3.6.0':
     resolution: {integrity: sha512-ahv+RcVtURDem8yjB8zc4cNdh2EqUevaH358HJ5uv+9IEtxGByGb00xpmCl7YNMHztACS07G3U8hLqDeRM1ZZw==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+
+  '@lerna-lite/version@3.7.0':
+    resolution: {integrity: sha512-Db/njqB10KQbO9OrA/d9ee65w5DuTVTPkytdU/bzN6RKe8P+jpB/czNvfnhEeQQ92QRC9rImrNDTyOUwB5RQJw==}
     engines: {node: ^18.0.0 || >=20.0.0}
 
   '@mapbox/node-pre-gyp@1.0.11':
@@ -9520,6 +9524,10 @@ packages:
     resolution: {integrity: sha512-/Eaoq+QyLSiXQ4lyYV23f14mZRQcXnxfHrN0vCai+ak9G0pp9iEQukIIZq5NccEvwRB8PUnZT0KsOoDCINS1qQ==}
     engines: {node: '>=18'}
 
+  p-limit@6.0.0:
+    resolution: {integrity: sha512-Dx+NzOuILWwjJE9OYtEKuQRy0i3c5QVAmDsVrvvRSgyNnPuB27D2DyEjl6QTNyeePaAHjaPk+ya0yA0Frld8RA==}
+    engines: {node: '>=18'}
+
   p-locate@2.0.0:
     resolution: {integrity: sha512-nQja7m7gSKuewoVRen45CtVfODR3crN3goVQ0DDZ9N3yHxgpkuBhZqsaiotSQRrADUrne346peY7kT3TSACykg==}
     engines: {node: '>=4'}
@@ -14932,7 +14940,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@lerna-lite/cli@3.7.0(@lerna-lite/publish@3.6.0(typescript@5.5.3))(@lerna-lite/version@3.6.0(@lerna-lite/publish@3.6.0(typescript@5.5.3))(typescript@5.5.3))(typescript@5.5.3)':
+  '@lerna-lite/cli@3.7.0(@lerna-lite/publish@3.6.0(typescript@5.5.3))(@lerna-lite/version@3.7.0(@lerna-lite/publish@3.6.0(typescript@5.5.3))(typescript@5.5.3))(typescript@5.5.3)':
     dependencies:
       '@lerna-lite/core': 3.7.0(typescript@5.5.3)
       '@lerna-lite/init': 3.7.0(typescript@5.5.3)
@@ -14944,7 +14952,7 @@ snapshots:
       yargs: 17.7.2
     optionalDependencies:
       '@lerna-lite/publish': 3.6.0(typescript@5.5.3)
-      '@lerna-lite/version': 3.6.0(@lerna-lite/publish@3.6.0(typescript@5.5.3))(typescript@5.5.3)
+      '@lerna-lite/version': 3.7.0(@lerna-lite/publish@3.6.0(typescript@5.5.3))(typescript@5.5.3)
     transitivePeerDependencies:
       - babel-plugin-macros
       - bluebird
@@ -15129,6 +15137,52 @@ snapshots:
       node-fetch: 3.3.2
       npm-package-arg: 11.0.2
       p-limit: 5.0.0
+      p-map: 7.0.2
+      p-pipe: 4.0.0
+      p-reduce: 3.0.0
+      pify: 6.1.0
+      semver: 7.6.2
+      slash: 5.1.0
+      temp-dir: 3.0.0
+      uuid: 10.0.0
+      write-json-file: 5.0.0
+    transitivePeerDependencies:
+      - '@lerna-lite/exec'
+      - '@lerna-lite/list'
+      - '@lerna-lite/publish'
+      - '@lerna-lite/run'
+      - '@lerna-lite/watch'
+      - babel-plugin-macros
+      - bluebird
+      - supports-color
+      - typescript
+
+  '@lerna-lite/version@3.7.0(@lerna-lite/publish@3.6.0(typescript@5.5.3))(typescript@5.5.3)':
+    dependencies:
+      '@lerna-lite/cli': 3.7.0(@lerna-lite/publish@3.6.0(typescript@5.5.3))(@lerna-lite/version@3.7.0(@lerna-lite/publish@3.6.0(typescript@5.5.3))(typescript@5.5.3))(typescript@5.5.3)
+      '@lerna-lite/core': 3.7.0(typescript@5.5.3)
+      '@lerna-lite/npmlog': 3.7.0
+      '@octokit/plugin-enterprise-rest': 6.0.1
+      '@octokit/rest': 21.0.0
+      chalk: 5.3.0
+      conventional-changelog-angular: 7.0.0
+      conventional-changelog-core: 7.0.0
+      conventional-changelog-writer: 7.0.1
+      conventional-commits-parser: 5.0.0
+      conventional-recommended-bump: 9.0.0
+      dedent: 1.5.3
+      fs-extra: 11.2.0
+      get-stream: 9.0.1
+      git-url-parse: 14.0.0
+      graceful-fs: 4.2.11
+      is-stream: 4.0.1
+      load-json-file: 7.0.1
+      make-dir: 5.0.0
+      minimatch: 9.0.5
+      new-github-release-url: 2.0.0
+      node-fetch: 3.3.2
+      npm-package-arg: 11.0.2
+      p-limit: 6.0.0
       p-map: 7.0.2
       p-pipe: 4.0.0
       p-reduce: 3.0.0
@@ -24856,6 +24910,10 @@ snapshots:
       yocto-queue: 1.1.1
 
   p-limit@5.0.0:
+    dependencies:
+      yocto-queue: 1.1.1
+
+  p-limit@6.0.0:
     dependencies:
       yocto-queue: 1.1.1
 
