@@ -1,4 +1,4 @@
-import { filterHtml } from "./filterHtml";
+import { filterHtml } from "./filter-html";
 
 const init = () => {
   filterHtml();
