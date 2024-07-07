@@ -1,15 +1,12 @@
-import fs from "fs/promises";
-import path from "path";
-
+import fs from "node:fs/promises";
+import path from "node:path";
 import { JSDOM } from "jsdom";
-
-import { DoSomethingError } from "./utils/somethingError";
-
 import { err, ok, type Result } from "neverthrow";
+import { DoSomethingError } from "./utils/something-error";
 
 const readData = (filePath: string): Result<string, DoSomethingError> => {
   const htmlStr = path.join(process.cwd(), filePath);
-  return htmlStr ? ok(htmlStr + "/*") : err(new DoSomethingError());
+  return htmlStr ? ok(`${htmlStr}/*`) : err(new DoSomethingError());
 };
 
 /**
@@ -85,20 +82,21 @@ const makeHtmlFile = async (str: string): Promise<void> => {
   await fs.writeFile(filePath, str, "utf-8");
 };
 
-export const filterHtml = () => {
-  const month_html = readData("./src/input_data");
-  if (month_html.isOk()) {
-    (async () => {
-      let outPutString = "" + preHtmlTag;
+export const filterHtml = (): void => {
+  const monthHtml = readData("./src/input_data");
+  if (monthHtml.isOk()) {
+    void (async () => {
+      let outPutString = "";
+      outPutString += preHtmlTag;
       for (let i = 1; i < 13; i++) {
-        const file = "src\\input_data\\" + i.toString() + ".html";
+        const file = `src\\input_data\\${i.toString()}.html`;
         const rawFile = await fs.readFile(file, "utf-8");
         const htmlFile = rawFile.replace(/id='liststd'/g, "class='listd'");
         const month = path.basename(file, ".html");
 
         const content = getContent(htmlFile, Number(month));
         if (content.isOk()) {
-          outPutString = outPutString + preTag + "\n" + content.value + "\n" + endTag + "\n";
+          outPutString = `${outPutString + preTag}\n${content.value}\n${endTag}\n`;
         }
       }
       outPutString = outPutString + endHtmlTag;

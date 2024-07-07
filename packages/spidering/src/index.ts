@@ -1,28 +1,27 @@
 import { JSDOM } from "jsdom";
 import fetch from "node-fetch";
-
 import type HTMLCollectionOf from "jsdom";
 import type Element from "jsdom";
 
 export const response = {
   hello: "world",
-} as const satisfies { [key: string]: string };
+} as const satisfies Record<string, string>;
 
-export type Program = {
+export interface Program {
   title: string;
   honDate: string;
   time: string[];
-};
+}
 
-export type ScheduleTxt = {
+export interface ScheduleTxt {
   contentDay: string;
   programs: Program[];
-};
+}
 
-export type ScheduleContent = {
+export interface ScheduleContent {
   img?: string[];
   txt?: ScheduleTxt[];
-};
+}
 
 /**
  * WIP
@@ -106,14 +105,14 @@ export const makePureTitle = (
   // }
 };
 
-const init = async () => {
+const init = async (): Promise<void> => {
   try {
     // const data = await got.get("https://www.shin-bungeiza.com/schedule.html");
 
-    let imgList: string[] = [];
-    let honDateList: string[] = [];
-    let discriptionList: string[] = [];
-    let titleList: string[] = [];
+    const imgList: string[] = [];
+    const honDateList: string[] = [];
+    const discriptionList: string[] = [];
+    const titleList: string[] = [];
 
     const response = await fetch("https://www.shin-bungeiza.com/schedule.html");
     const body = await response.text();
