@@ -16,11 +16,11 @@ const filterNum = [0, 1, 2, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 19, 20, 2
 
 /**
  * filter useful value and then, make a table html string
- * @param tableElement get table element like this: // dom.window.document.getElementById("somethingId")
- * @param month In this project, just use file suffix
+ * @param tableElement - get table element like this: // dom.window.document.getElementById("somethingId")
+ * @param month - In this project, just use file suffix
  */
 const filterTable = (tableElement: HTMLElement, month: number): string => {
-  let str = `<h2>${month}${process.env.TABLE_HEAD}</h2>\n<table id='scrTable' border="1" style="border-collapse:collapse; font-size:0.025em">\n`;
+  let str = `<h2>${month.toString()}${process.env.TABLE_HEAD}</h2>\n<table id='scrTable' border="1" style="border-collapse:collapse; font-size:0.025em">\n`;
   const trArray = tableElement.getElementsByTagName("tr");
   for (const tr of trArray) {
     str += "<tr align='center'height:20px;'>\n";

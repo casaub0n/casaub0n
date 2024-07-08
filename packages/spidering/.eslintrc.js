@@ -5,4 +5,8 @@ module.exports = {
   parserOptions: {
     project: true,
   },
+  rules: {
+    /* console.log is necessary */
+    "no-console": "off",
+  },
 };

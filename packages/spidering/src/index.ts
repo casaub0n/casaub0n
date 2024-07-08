@@ -43,17 +43,17 @@ export const makePureTitle = (
   titleList: string[],
   honDate?: Element,
   honDateList?: string[],
-) => {
+): void => {
   const discriptionDom = title.getElementsByTagName("small");
-  console.log(`discription length: ${discriptionDom.length}`);
+  console.log(`discription length: ${discriptionDom.length.toString()}`);
   for (const discription of discriptionDom) {
     const pureDiscription = discription.textContent;
-    if (pureDiscription != null) {
+    if (pureDiscription !== null) {
       console.log(`discription: ${pureDiscription}`);
       discriptionList.push(pureDiscription);
     }
   }
-  const removeDiscription = (dom: HTMLCollectionOf<HTMLElement>) => {
+  const removeDiscription = (dom: HTMLCollectionOf<HTMLElement>): void => {
     if (dom.length > 0) {
       dom.item(0)?.remove();
       removeDiscription(dom);
@@ -63,23 +63,24 @@ export const makePureTitle = (
 
   if (honDate && honDateList) {
     const pureHonDate = honDate.textContent;
-    if (pureHonDate != null) {
+    if (pureHonDate !== null) {
       honDateList.push(pureHonDate);
     }
     honDate.remove();
   }
   const hogeSmall = title.getElementsByTagName("small");
-  console.log(`small tag length: ${hogeSmall.length}`);
+  console.log(`small tag length: ${hogeSmall.length.toString()}`);
 
   for (const hoge of hogeSmall) {
-    console.log(`small tag value: ${hoge.textContent}`);
+    const textContent = hoge.textContent;
+    textContent ? console.log(`small tag value: ${textContent}`) : console.log("small tag is null");
   }
 
-  const pureTitle = title.textContent?.replace(/^\s+/, "").split("\n");
-  if (pureTitle != null) {
-    for (const title of pureTitle) {
-      console.log(`pure title: ${title}`);
-      titleList.push(title);
+  const pureTitles = title.textContent?.replace(/^\s+/, "").split("\n");
+  if (pureTitles != null) {
+    for (const pureTitle of pureTitles) {
+      console.log(`pure title: ${pureTitle}`);
+      titleList.push(pureTitle);
     }
   }
 
@@ -114,8 +115,8 @@ const init = async (): Promise<void> => {
     const discriptionList: string[] = [];
     const titleList: string[] = [];
 
-    const response = await fetch("https://www.shin-bungeiza.com/schedule.html");
-    const body = await response.text();
+    const bungeizaResponse = await fetch("https://www.shin-bungeiza.com/schedule.html");
+    const body = await bungeizaResponse.text();
 
     const dom = new JSDOM(body, {
       runScripts: "dangerously",
