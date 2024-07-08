@@ -17,6 +17,7 @@
     "node": ">=18"
   },
   "scripts": {
+    "lint:tsc": "tsc --noEmit",
     "test": "echo hello",
     "rmdist": "rimraf dist",
     "build": "pnpm rmdist && tsup src/index.ts --format esm --dts",
