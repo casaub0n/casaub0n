@@ -20,7 +20,12 @@ const filterNum = [0, 1, 2, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 19, 20, 2
  * @param month - In this project, just use file suffix
  */
 const filterTable = (tableElement: HTMLElement, month: number): string => {
-  let str = `<h2>${month.toString()}${process.env.TABLE_HEAD}</h2>\n<table id='scrTable' border="1" style="border-collapse:collapse; font-size:0.025em">\n`;
+  //  TODO: use evp-ts
+  let str = "";
+  const envTableHead = process.env.TABLE_HEAD;
+  envTableHead
+    ? (str = `<h2>${month.toString()}${envTableHead}</h2>\n<table id='scrTable' border="1" style="border-collapse:collapse; font-size:0.025em">\n`)
+    : (str = `<h2>${month.toString()}</h2>\n<table id='scrTable' border="1" style="border-collapse:collapse; font-size:0.025em">\n`);
   const trArray = tableElement.getElementsByTagName("tr");
   for (const tr of trArray) {
     str += "<tr align='center'height:20px;'>\n";

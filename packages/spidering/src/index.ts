@@ -160,4 +160,4 @@ const init = async (): Promise<void> => {
   }
 };
 
-init();
+void init();
