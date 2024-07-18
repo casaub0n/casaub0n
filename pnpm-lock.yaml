@@ -496,7 +496,7 @@ importers:
         version: 6.0.1
       tsup:
         specifier: ^8.1.1
-        version: 8.1.1(@swc/core@1.6.13)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5)
+        version: 8.1.2(@swc/core@1.6.13)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5)
       typescript:
         specifier: ^5.5.3
         version: 5.5.3
@@ -536,7 +536,7 @@ importers:
         version: 6.0.1
       tsup:
         specifier: ^8.0.2
-        version: 8.1.1(@swc/core@1.6.13)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5)
+        version: 8.1.2(@swc/core@1.6.13)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5)
       typescript:
         specifier: ^5.3.3
         version: 5.5.3
@@ -560,7 +560,7 @@ importers:
         version: 6.0.1
       tsup:
         specifier: ^8.0.2
-        version: 8.1.1(@swc/core@1.6.13)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5)
+        version: 8.1.2(@swc/core@1.6.13)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5)
       tsx:
         specifier: ^4.11.0
         version: 4.16.2
@@ -588,7 +588,7 @@ importers:
         version: 6.0.1
       tsup:
         specifier: ^8.0.2
-        version: 8.1.1(@swc/core@1.6.13)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5)
+        version: 8.1.2(@swc/core@1.6.13)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5)
       typescript:
         specifier: ^5.4.2
         version: 5.5.3
@@ -617,7 +617,7 @@ importers:
         version: 6.0.1
       tsup:
         specifier: ^8.0.2
-        version: 8.1.1(@swc/core@1.6.13)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5)
+        version: 8.1.2(@swc/core@1.6.13)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5)
       typescript:
         specifier: ^5.3.3
         version: 5.5.3
@@ -11589,6 +11589,25 @@ packages:
       typescript:
         optional: true
 
+  tsup@8.1.2:
+    resolution: {integrity: sha512-Gzw/PXSX/z0aYMNmkcI54bKKFVFJQbLne+EqTJZeQ3lNT3QpumjtMU4rl+ZwTTp8oRF3ahMbEAxT2sZPJLFSrg==}
+    engines: {node: '>=18'}
+    hasBin: true
+    peerDependencies:
+      '@microsoft/api-extractor': ^7.36.0
+      '@swc/core': ^1
+      postcss: ^8.4.12
+      typescript: '>=4.5.0'
+    peerDependenciesMeta:
+      '@microsoft/api-extractor':
+        optional: true
+      '@swc/core':
+        optional: true
+      postcss:
+        optional: true
+      typescript:
+        optional: true
+
   tsutils@3.21.0:
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
     engines: {node: '>= 6'}
@@ -21503,7 +21522,7 @@ snapshots:
   evp-ts@1.0.3(@swc/core@1.6.13(@swc/helpers@0.5.12))(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5):
     dependencies:
       picocolors: 1.0.1
-      tsup: 8.1.1(@swc/core@1.6.13)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5)
+      tsup: 8.1.1(@swc/core@1.6.13(@swc/helpers@0.5.12))(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5)
     transitivePeerDependencies:
       - '@microsoft/api-extractor'
       - '@swc/core'
@@ -21518,7 +21537,7 @@ snapshots:
     dependencies:
       evp-ts: 1.0.3(@swc/core@1.6.13(@swc/helpers@0.5.12))(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5)
       picocolors: 1.0.1
-      tsup: 8.1.1(@swc/core@1.6.13)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5)
+      tsup: 8.1.1(@swc/core@1.6.13(@swc/helpers@0.5.12))(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5)
     transitivePeerDependencies:
       - '@microsoft/api-extractor'
       - '@swc/core'
@@ -27812,7 +27831,34 @@ snapshots:
 
   tslib@2.6.3: {}
 
-  tsup@8.1.1(@swc/core@1.6.13)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5):
+  tsup@8.1.1(@swc/core@1.6.13(@swc/helpers@0.5.12))(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5):
+    dependencies:
+      bundle-require: 5.0.0(esbuild@0.23.0)
+      cac: 6.7.14
+      chokidar: 3.6.0
+      consola: 3.2.3
+      debug: 4.3.5
+      esbuild: 0.23.0
+      execa: 5.1.1
+      globby: 11.1.0
+      joycon: 3.1.1
+      postcss-load-config: 6.0.1(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(yaml@2.4.5)
+      resolve-from: 5.0.0
+      rollup: 4.18.1
+      source-map: 0.8.0-beta.0
+      sucrase: 3.35.0
+      tree-kill: 1.2.2
+    optionalDependencies:
+      '@swc/core': 1.6.13(@swc/helpers@0.5.12)
+      postcss: 8.4.39
+      typescript: 5.5.3
+    transitivePeerDependencies:
+      - jiti
+      - supports-color
+      - tsx
+      - yaml
+
+  tsup@8.1.2(@swc/core@1.6.13)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5):
     dependencies:
       bundle-require: 5.0.0(esbuild@0.23.0)
       cac: 6.7.14
