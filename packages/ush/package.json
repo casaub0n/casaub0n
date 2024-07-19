@@ -19,7 +19,7 @@
   "scripts": {
     "test": "echo hello",
     "rmdist": "rimraf dist",
-    "build": "pnpm rmdist && tsup src/index.ts --format cjs --dts",
+    "build": "pnpm rmdist && tsx build.ts",
     "lint": "eslint src/"
   },
   "files": [
@@ -34,8 +34,9 @@
   "devDependencies": {
     "@casaub0n/eslint-config": "workspace:*",
     "@types/node": "^20.14.11",
+    "esbuild": "^0.23.0",
     "rimraf": "^6.0.1",
-    "tsup": "^8.1.2",
+    "tsx": "^4.16.2",
     "typescript": "^5.5.3"
   },
   "dependencies": {
