@@ -1,6 +1,6 @@
-import { DoSomethingError, Failure, type Result, Success } from "../utils/result";
-import { getVersion } from "./get-version";
-import { readTemplate } from "./read-template";
+import { DoSomethingError, Failure, type Result, Success } from "../utils/result.ts";
+import { getVersion } from "./get-version.ts";
+import { readTemplate } from "./read-template.ts";
 
 export const makeHeader = (): Result<string, DoSomethingError> => {
   const configJson = readTemplate();
