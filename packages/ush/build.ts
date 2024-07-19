@@ -1,6 +1,3 @@
-/* eslint-disable no-console */
-
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { build } from "esbuild";
 
 const outDir = "dist";

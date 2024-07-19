@@ -18,6 +18,7 @@ export const firstLine = (path: fs.PathLike, useOpts?: any) => {
     let index;
     rs.on("data", (chunk) => {
       index = chunk.indexOf(opts.lineEnding);
+      // eslint-disable-next-line @typescript-eslint/restrict-plus-operands -- TODO
       acc += chunk;
       if (index === -1) {
         pos += chunk.length;
