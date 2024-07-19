@@ -1,5 +1,5 @@
-import { insertHeader } from "./insert-header.ts";
-import { makeHeader } from "./makeHeader/index.ts";
+import { insertHeader } from "./insert-header";
+import { makeHeader } from "./makeHeader/index";
 
 const init = (): void => {
   const header = makeHeader();
