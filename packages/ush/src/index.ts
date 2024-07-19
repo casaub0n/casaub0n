@@ -3,10 +3,10 @@ import { makeHeader } from "./makeHeader/index";
 
 const init = (): void => {
   const header = makeHeader();
-  if (header.isSuccess()) {
+  if (header.isOk()) {
     console.log(`config json: \n${header.value}`);
     const files = process.argv.slice(2);
-    files.map((f) => {
+    files.forEach((f) => {
       insertHeader(f, header.value);
     });
   }

@@ -3,7 +3,7 @@ import { firstLine } from "./utils/first-line";
 
 export const insertHeader = (file: string, comment: string): void => {
   const firstLineText = firstLine(file);
-  firstLineText.then(() => {
+  void firstLineText.then(() => {
     const data = fs.readFileSync(file);
     const fd = fs.openSync(file, "w+");
     const insert = Buffer.from(`${comment}\n`);
