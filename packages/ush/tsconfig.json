@@ -1,23 +1,32 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Default",
   "compilerOptions": {
-    "target": "ES2020",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "useDefineForClassFields": true,
-    "module": "ESNext",
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
+    "composite": false,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "allowImportingTsExtensions": true,
-
-    /* Linting */
-    "strict": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noEmit": true,
+    "inlineSources": false,
     "isolatedModules": true,
-    "skipLibCheck": true
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveWatchOutput": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "strictNullChecks": true,
+    "downlevelIteration": true,
+    "lib": ["DOM","DOM.Iterable","ESNext"],
+    "outDir": "./dist",
+    "types": ["node"],
+    "useDefineForClassFields": true,
+    "resolveJsonModule": true,
+    "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "*"]
+  "include": ["."],
+  "exclude": ["node_modules",  "dist"]
 }
