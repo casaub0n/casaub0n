@@ -1,6 +1,6 @@
-import path from "path";
-import fs from "fs";
-import { DoSomethingError, Failure, Result, Success } from "../utils/Result";
+import path from "node:path";
+import fs from "node:fs";
+import { DoSomethingError, Failure, type Result, Success } from "../utils/result";
 
 export const getVersion = (): Result<string, DoSomethingError> => {
   const packageJsonPath = path.join(process.cwd(), "package.json");
