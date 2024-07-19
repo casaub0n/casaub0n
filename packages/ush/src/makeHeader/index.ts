@@ -1,6 +1,6 @@
-import { DoSomethingError, Failure, Result, Success } from "../utils/Result";
-import { getVersion } from "./getVersion";
-import { readTemplate } from "./readTemplate";
+import { DoSomethingError, Failure, type Result, Success } from "../utils/result";
+import { getVersion } from "./get-version";
+import { readTemplate } from "./read-template";
 
 export const makeHeader = (): Result<string, DoSomethingError> => {
   const configJson = readTemplate();
@@ -10,11 +10,7 @@ export const makeHeader = (): Result<string, DoSomethingError> => {
   const userScriptHeader = `// ==UserScript==\n
 // @name         ${header.name}\n
 // @namespace    ${header.namespace}\n
-// @version      ${
-    packageJsonVersion.isFailure()
-      ? header.description
-      : packageJsonVersion.value
-  }\n
+// @version      ${packageJsonVersion.isFailure() ? header.description : packageJsonVersion.value}\n
 // @description  ${header.description}\n
 // @author       ${header.author}\n
 // @match        ${header.match}\n
