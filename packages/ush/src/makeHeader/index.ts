@@ -5,7 +5,10 @@ import { readTemplate } from "./read-template.ts";
 
 export const makeHeader = (): Result<string, DoSomethingError> => {
   const configJson = readTemplate();
-  if (configJson.isErr()) return err(new DoSomethingError());
+  if (configJson.isErr()) {
+    console.error(configJson);
+    return err(new DoSomethingError());
+  }
   const header = configJson.value;
   const packageJsonVersion = getVersion();
   const userScriptHeader = `// ==UserScript==\n
