@@ -1,25 +1,38 @@
 import path from "node:path";
 import fs from "node:fs";
-import { z } from "zod";
 import { err, ok, type Result } from "neverthrow";
-import { DoSomethingError } from "../utils/result";
+import * as v from "valibot";
 
-const UserScript = z.object({
-  name: z.string(),
-  namespace: z.string(),
-  version: z.string(),
-  description: z.string(),
-  author: z.string(),
-  match: z.string(),
-  grant: z.string(),
-  sameversion: z.string().optional(),
+/**
+ * userscript's meta block schema
+ * @see https://wiki.greasespot.net/Metadata_Block
+ * @see https://violentmonkey.github.io/api/metadata-block/
+ */
+const UserScriptSchema = v.object({
+  name: v.string(),
+  namespace: v.string(),
+  version: v.string(),
+  description: v.string(),
+  author: v.string(),
+  match: v.string(),
+  grant: v.string(),
+  sameversion: v.nullish(v.string()),
 });
 
-type UserScript = z.infer<typeof UserScript>;
+type UserScript = v.InferOutput<typeof UserScriptSchema>;
 
-export const readTemplate = (): Result<UserScript, DoSomethingError> => {
+/**
+ * read `userscript.json` in root project, and parsed value
+ * @returns parsed userscript's value object, Result type must be used `neverthrow`
+ */
+export const readTemplate = (): Result<UserScript, v.FlatErrors<typeof UserScriptSchema>> => {
   const configPath = path.join(process.cwd(), "userscript.json");
   console.log(configPath);
-  const userScript = UserScript.safeParse(JSON.parse(fs.readFileSync(configPath, "utf-8")));
-  return userScript.success ? ok(userScript.data) : err(new DoSomethingError());
+  const userScript = v.safeParse(
+    UserScriptSchema,
+    JSON.parse(fs.readFileSync(configPath, "utf-8")),
+  );
+  return userScript.success
+    ? ok(userScript.output)
+    : err(v.flatten<typeof UserScriptSchema>(userScript.issues));
 };
