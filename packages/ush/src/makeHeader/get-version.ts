@@ -1,18 +1,27 @@
 import path from "node:path";
 import fs from "node:fs";
 import { err, ok, type Result } from "neverthrow";
-import { DoSomethingError } from "../utils/result";
+import * as v from "valibot";
 
-export const getVersion = (): Result<string, DoSomethingError> => {
+const PackageJsonVersionSchema = v.object({
+  version: v.string(),
+});
+
+type PackageJsonVersion = v.InferOutput<typeof PackageJsonVersionSchema>;
+
+export const getVersion = (): Result<
+  PackageJsonVersion,
+  v.FlatErrors<typeof PackageJsonVersionSchema>
+> => {
   const packageJsonPath = path.join(process.cwd(), "package.json");
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- after this, check the type and value
-  const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8"));
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access -- after this, check the type and value
-  const version = packageJson.version;
 
-  if (version === "string" && version !== undefined) {
-    return ok(version);
-  }
+  const version = v.safeParse(
+    PackageJsonVersionSchema,
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- This json
+    JSON.parse(fs.readFileSync(packageJsonPath, "utf-8")).version,
+  );
 
-  return err(new DoSomethingError());
+  return version.success
+    ? ok(version.output)
+    : err(v.flatten<typeof PackageJsonVersionSchema>(version.issues));
 };
