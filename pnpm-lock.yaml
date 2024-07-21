@@ -612,12 +612,21 @@ importers:
       '@casaub0n/eslint-config':
         specifier: workspace:*
         version: link:../config-eslint
+      '@types/mock-fs':
+        specifier: ^4.13.4
+        version: 4.13.4
       '@types/node':
         specifier: ^20.14.11
         version: 20.14.11
+      '@vitest/ui':
+        specifier: ^2.0.0
+        version: 2.0.3(vitest@2.0.3)
       esbuild:
         specifier: ^0.23.0
         version: 0.23.0
+      mock-fs:
+        specifier: ^5.2.0
+        version: 5.2.0
       rimraf:
         specifier: ^6.0.1
         version: 6.0.1
@@ -627,6 +636,12 @@ importers:
       typescript:
         specifier: ^5.5.3
         version: 5.5.3
+      vite:
+        specifier: ^5.3.1
+        version: 5.3.4(@types/node@20.14.11)(terser@5.31.3)
+      vitest:
+        specifier: ^2.0.0
+        version: 2.0.3(@edge-runtime/vm@4.0.1)(@types/node@20.14.11)(@vitest/ui@2.0.3)(jsdom@24.1.0)(terser@5.31.3)
 
 packages:
 
@@ -4134,6 +4149,9 @@ packages:
 
   '@types/minimist@1.2.5':
     resolution: {integrity: sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==}
+
+  '@types/mock-fs@4.13.4':
+    resolution: {integrity: sha512-mXmM0o6lULPI8z3XNnQCpL0BGxPwx1Ul1wXYEPBGl4efShyxW2Rln0JOPEWGyZaYZMM6OVXM/15zUuFMY52ljg==}
 
   '@types/moo@0.5.5':
     resolution: {integrity: sha512-eXQpwnkI4Ntw5uJg6i2PINdRFWLr55dqjuYQaLHNjvqTzF14QdNWbCbml9sza0byyXNA0hZlHtcdN+VNDcgVHA==}
@@ -8984,6 +9002,10 @@ packages:
 
   mlly@1.7.1:
     resolution: {integrity: sha512-rrVRZRELyQzrIUAVMHxP97kv+G786pHmOKzuFII8zDYahFBS7qnHh2AlYSl1GAHhaMPCz6/oHjVMcfFYgFYHgA==}
+
+  mock-fs@5.2.0:
+    resolution: {integrity: sha512-2dF2R6YMSZbpip1V1WHKGLNjr/k48uQClqMVb5H3MOvwc9qhYis3/IWbj02qIg/Y8MDXKFF4c5v0rxx2o6xTZw==}
+    engines: {node: '>=12.0.0'}
 
   modern-ahocorasick@1.0.1:
     resolution: {integrity: sha512-yoe+JbhTClckZ67b2itRtistFKf8yPYelHLc7e5xAwtNAXxM6wJTUx2C7QeVSJFDzKT7bCIFyBVybPMKvmB9AA==}
@@ -17607,6 +17629,10 @@ snapshots:
 
   '@types/minimist@1.2.5': {}
 
+  '@types/mock-fs@4.13.4':
+    dependencies:
+      '@types/node': 20.14.11
+
   '@types/moo@0.5.5': {}
 
   '@types/ms@0.7.34': {}
@@ -19915,7 +19941,7 @@ snapshots:
 
   debug@4.1.1:
     dependencies:
-      ms: 2.1.1
+      ms: 2.1.3
 
   debug@4.3.5:
     dependencies:
@@ -24213,6 +24239,8 @@ snapshots:
       pathe: 1.1.2
       pkg-types: 1.1.3
       ufo: 1.5.3
+
+  mock-fs@5.2.0: {}
 
   modern-ahocorasick@1.0.1: {}
 
