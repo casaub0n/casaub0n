@@ -6,5 +6,5 @@ test("read test.json file", () => {
   const testJsonFile = readJsonFile("./test.json");
   testJsonFile.isOk()
     ? expect(testJsonFile.value).toEqual('{ "name": "hoge" }')
-    : console.error("error");
+    : console.error("read json file error");
 });
