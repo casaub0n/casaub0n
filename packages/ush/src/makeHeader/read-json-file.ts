@@ -3,6 +3,17 @@ import * as fs from "node:fs/promises";
 import { err, ok, type Result } from "neverthrow";
 import { DoSomethingError } from "../utils/result";
 
+/**
+ * @param jsonPath - read json file
+ * @returns Result type by neverthrow
+ * @example
+ * ```ts
+ * const packageJson = readJsonFile("package.json");
+ * if (packageJson.isOk()) {
+ *   console.log(packageJson.value);
+ * }
+ * ```
+ */
 export const readJsonFile = (jsonPath: string): Result<string, DoSomethingError> => {
   const jsonFullPath = path.join(process.cwd(), jsonPath);
   fs.readFile(jsonFullPath, { encoding: "utf8" })

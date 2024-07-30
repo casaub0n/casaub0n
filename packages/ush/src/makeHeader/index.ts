@@ -1,6 +1,6 @@
-import { packageJsonParser } from "./get-version.ts";
+import { parsePackageJson } from "./parse-package-json.ts";
 import { readJsonFile } from "./read-json-file.ts";
-import { readTemplate } from "./read-template.ts";
+import { parseUserScript } from "./parse-userscript-json.ts";
 
 export const makeHeader = (): string => {
   const packageJson = readJsonFile("package.json");
@@ -15,12 +15,12 @@ export const makeHeader = (): string => {
     process.exit(1);
   }
 
-  const parsedConfigJson = readTemplate();
+  const parsedUserScriptJson = parseUserScript(userScriptJson.value);
   // TODO filter version
-  const parsedPackageJsonVersion = packageJsonParser(packageJson.value);
+  const parsedPackageJsonVersion = parsePackageJson(packageJson.value);
 
-  if (parsedConfigJson.isErr()) {
-    console.error(parsedConfigJson.error);
+  if (parsedUserScriptJson.issues) {
+    console.error(parsedUserScriptJson.issues);
     process.exit(1);
   }
 
@@ -29,14 +29,14 @@ export const makeHeader = (): string => {
     process.exit(1);
   }
 
-  const header = parsedConfigJson.value;
+  const header = parsedUserScriptJson.output;
   const pkgVersion = parsedPackageJsonVersion.output;
 
   // TODO: make header
   const userScriptHeader = `// ==UserScript==\n
 // @name         ${header.name}\n
 // @namespace    ${header.namespace}\n
-// @version      ${header.sameversion ? pkgVersion : header.version}\n
+// @version      ${header.sameversion ? pkgVersion.version : header.version}\n
 // @description  ${header.description}\n
 // @author       ${header.author}\n
 // @match        ${header.match}\n

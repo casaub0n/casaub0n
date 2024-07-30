@@ -14,7 +14,7 @@ const packageJsonSchema = v.object({
  * parsedPackageJson.success ? console.log(parsedPackageJson.version) : console.error(parsedPackageJson.issues);
  * ```
  */
-export const packageJsonParser = (
+export const parsePackageJson = (
   packageJsonObjStr: string,
 ): v.SafeParseResult<typeof packageJsonSchema> => {
   const parsedPacageJson = v.safeParse(packageJsonSchema, JSON.parse(packageJsonObjStr));
