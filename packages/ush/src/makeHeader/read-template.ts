@@ -16,7 +16,7 @@ const UserScriptSchema = v.object({
   author: v.string(),
   match: v.string(),
   grant: v.string(),
-  sameversion: v.nullish(v.string()),
+  sameversion: v.nullish(v.boolean()),
 });
 
 type UserScript = v.InferOutput<typeof UserScriptSchema>;
