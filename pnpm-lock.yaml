@@ -366,7 +366,7 @@ importers:
         version: 0.0.269
       evp-ts:
         specifier: ^1.0.5
-        version: 1.0.5(@swc/core@1.7.3)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.4)(yaml@2.4.5)
+        version: 1.0.5(@swc/core@1.7.3(@swc/helpers@0.5.12))(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.4)(yaml@2.4.5)
       neverthrow:
         specifier: ^7.0.0
         version: 7.0.0
@@ -435,7 +435,7 @@ importers:
         version: 0.23.0
       evp-ts:
         specifier: ^1.0.5
-        version: 1.0.5(@swc/core@1.7.3)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.4)(yaml@2.4.5)
+        version: 1.0.5(@swc/core@1.7.3(@swc/helpers@0.5.12))(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.4)(yaml@2.4.5)
       header-inserter:
         specifier: 1.0.11
         version: 1.0.11
@@ -465,7 +465,7 @@ importers:
     dependencies:
       evp-ts:
         specifier: ^1.0.5
-        version: 1.0.5(@swc/core@1.7.3(@swc/helpers@0.5.12))(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5)
+        version: 1.0.5(@swc/core@1.7.3(@swc/helpers@0.5.12))(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.4)(yaml@2.4.5)
       glob:
         specifier: ^11.0.0
         version: 11.0.0
@@ -496,10 +496,10 @@ importers:
         version: 6.0.1
       tsup:
         specifier: ^8.1.1
-        version: 8.2.3(@swc/core@1.7.3)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5)
+        version: 8.2.3(@swc/core@1.7.3)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.4)(yaml@2.4.5)
       typescript:
         specifier: ^5.5.3
-        version: 5.5.3
+        version: 5.5.4
 
   packages/spidering:
     dependencies:
@@ -536,10 +536,10 @@ importers:
         version: 6.0.1
       tsup:
         specifier: ^8.0.2
-        version: 8.2.3(@swc/core@1.7.3)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5)
+        version: 8.2.3(@swc/core@1.7.3)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.4)(yaml@2.4.5)
       typescript:
         specifier: ^5.3.3
-        version: 5.5.3
+        version: 5.5.4
 
   packages/test-driven-development-by-example:
     devDependencies:
@@ -560,13 +560,13 @@ importers:
         version: 6.0.1
       tsup:
         specifier: ^8.0.2
-        version: 8.2.3(@swc/core@1.7.3)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5)
+        version: 8.2.3(@swc/core@1.7.3)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.4)(yaml@2.4.5)
       tsx:
         specifier: ^4.11.0
         version: 4.16.2
       typescript:
         specifier: ^5.4.5
-        version: 5.5.3
+        version: 5.5.4
 
   packages/tsbox:
     dependencies:
@@ -588,10 +588,10 @@ importers:
         version: 6.0.1
       tsup:
         specifier: ^8.0.2
-        version: 8.2.3(@swc/core@1.7.3)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5)
+        version: 8.2.3(@swc/core@1.7.3)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.4)(yaml@2.4.5)
       typescript:
         specifier: ^5.4.2
-        version: 5.5.3
+        version: 5.5.4
       vitest:
         specifier: ^2.0.0
         version: 2.0.3(@edge-runtime/vm@4.0.1)(@types/node@20.14.13)(@vitest/ui@2.0.3)(jsdom@24.1.1)(terser@5.31.3)
@@ -632,7 +632,7 @@ importers:
         version: 4.16.2
       typescript:
         specifier: ^5.5.3
-        version: 5.5.3
+        version: 5.5.4
       vite:
         specifier: ^5.3.1
         version: 5.3.4(@types/node@20.14.13)(terser@5.31.3)
@@ -11832,11 +11832,6 @@ packages:
     engines: {node: '>=4.2.0'}
     hasBin: true
 
-  typescript@5.5.3:
-    resolution: {integrity: sha512-/hreyEujaB0w76zKo6717l3L0o/qEUtRgdvUBvlkhoWeOVMjMuHNHk0BRBzikzuGDqNmPQbg5ifMEqsHLiIUcQ==}
-    engines: {node: '>=14.17'}
-    hasBin: true
-
   typescript@5.5.4:
     resolution: {integrity: sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==}
     engines: {node: '>=14.17'}
@@ -21078,7 +21073,7 @@ snapshots:
       eslint: 9.7.0
     optionalDependencies:
       '@typescript-eslint/eslint-plugin': 7.16.0(@typescript-eslint/parser@7.16.0(eslint@9.7.0)(typescript@5.5.4))(eslint@9.7.0)(typescript@5.5.4)
-      jest: 29.7.0
+      jest: 29.7.0(ts-node@10.9.2(@swc/core@1.7.3)(typescript@5.5.4))
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -21403,10 +21398,10 @@ snapshots:
 
   events@3.3.0: {}
 
-  evp-ts@1.0.3(@swc/core@1.7.3(@swc/helpers@0.5.12))(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5):
+  evp-ts@1.0.3(@swc/core@1.7.3(@swc/helpers@0.5.12))(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.4)(yaml@2.4.5):
     dependencies:
       picocolors: 1.0.1
-      tsup: 8.1.1(@swc/core@1.7.3(@swc/helpers@0.5.12))(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5)
+      tsup: 8.1.1(@swc/core@1.7.3(@swc/helpers@0.5.12))(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.4)(yaml@2.4.5)
     transitivePeerDependencies:
       - '@microsoft/api-extractor'
       - '@swc/core'
@@ -21417,40 +21412,11 @@ snapshots:
       - typescript
       - yaml
 
-  evp-ts@1.0.3(@swc/core@1.7.3)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.4)(yaml@2.4.5):
+  evp-ts@1.0.5(@swc/core@1.7.3(@swc/helpers@0.5.12))(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.4)(yaml@2.4.5):
     dependencies:
+      evp-ts: 1.0.3(@swc/core@1.7.3(@swc/helpers@0.5.12))(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.4)(yaml@2.4.5)
       picocolors: 1.0.1
-      tsup: 8.1.1(@swc/core@1.7.3)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.4)(yaml@2.4.5)
-    transitivePeerDependencies:
-      - '@microsoft/api-extractor'
-      - '@swc/core'
-      - jiti
-      - postcss
-      - supports-color
-      - tsx
-      - typescript
-      - yaml
-
-  evp-ts@1.0.5(@swc/core@1.7.3(@swc/helpers@0.5.12))(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5):
-    dependencies:
-      evp-ts: 1.0.3(@swc/core@1.7.3(@swc/helpers@0.5.12))(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5)
-      picocolors: 1.0.1
-      tsup: 8.1.1(@swc/core@1.7.3(@swc/helpers@0.5.12))(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5)
-    transitivePeerDependencies:
-      - '@microsoft/api-extractor'
-      - '@swc/core'
-      - jiti
-      - postcss
-      - supports-color
-      - tsx
-      - typescript
-      - yaml
-
-  evp-ts@1.0.5(@swc/core@1.7.3)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.4)(yaml@2.4.5):
-    dependencies:
-      evp-ts: 1.0.3(@swc/core@1.7.3)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.4)(yaml@2.4.5)
-      picocolors: 1.0.1
-      tsup: 8.1.1(@swc/core@1.7.3)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.4)(yaml@2.4.5)
+      tsup: 8.1.1(@swc/core@1.7.3(@swc/helpers@0.5.12))(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.4)(yaml@2.4.5)
     transitivePeerDependencies:
       - '@microsoft/api-extractor'
       - '@swc/core'
@@ -23312,19 +23278,6 @@ snapshots:
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
-
-  jest@29.7.0:
-    dependencies:
-      '@jest/core': 29.7.0(ts-node@10.9.2(@swc/core@1.7.3)(typescript@5.5.4))
-      '@jest/types': 29.6.3
-      import-local: 3.1.0
-      jest-cli: 29.7.0(ts-node@10.9.2(@swc/core@1.7.3)(typescript@5.5.4))
-    transitivePeerDependencies:
-      - '@types/node'
-      - babel-plugin-macros
-      - supports-color
-      - ts-node
-    optional: true
 
   jest@29.7.0(@types/node@20.14.13)(ts-node@10.9.2(@swc/core@1.7.3)(@types/node@20.14.13)(typescript@5.5.4)):
     dependencies:
@@ -27711,34 +27664,7 @@ snapshots:
 
   tslib@2.6.3: {}
 
-  tsup@8.1.1(@swc/core@1.7.3(@swc/helpers@0.5.12))(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5):
-    dependencies:
-      bundle-require: 5.0.0(esbuild@0.23.0)
-      cac: 6.7.14
-      chokidar: 3.6.0
-      consola: 3.2.3
-      debug: 4.3.5
-      esbuild: 0.23.0
-      execa: 5.1.1
-      globby: 11.1.0
-      joycon: 3.1.1
-      postcss-load-config: 6.0.1(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(yaml@2.4.5)
-      resolve-from: 5.0.0
-      rollup: 4.18.1
-      source-map: 0.8.0-beta.0
-      sucrase: 3.35.0
-      tree-kill: 1.2.2
-    optionalDependencies:
-      '@swc/core': 1.7.3(@swc/helpers@0.5.12)
-      postcss: 8.4.39
-      typescript: 5.5.3
-    transitivePeerDependencies:
-      - jiti
-      - supports-color
-      - tsx
-      - yaml
-
-  tsup@8.1.1(@swc/core@1.7.3)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.4)(yaml@2.4.5):
+  tsup@8.1.1(@swc/core@1.7.3(@swc/helpers@0.5.12))(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.4)(yaml@2.4.5):
     dependencies:
       bundle-require: 5.0.0(esbuild@0.23.0)
       cac: 6.7.14
@@ -27765,7 +27691,7 @@ snapshots:
       - tsx
       - yaml
 
-  tsup@8.2.3(@swc/core@1.7.3)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.3)(yaml@2.4.5):
+  tsup@8.2.3(@swc/core@1.7.3)(jiti@1.21.6)(postcss@8.4.39)(tsx@4.16.2)(typescript@5.5.4)(yaml@2.4.5):
     dependencies:
       bundle-require: 5.0.0(esbuild@0.23.0)
       cac: 6.7.14
@@ -27786,7 +27712,7 @@ snapshots:
     optionalDependencies:
       '@swc/core': 1.7.3(@swc/helpers@0.5.12)
       postcss: 8.4.39
-      typescript: 5.5.3
+      typescript: 5.5.4
     transitivePeerDependencies:
       - jiti
       - supports-color
@@ -27944,8 +27870,6 @@ snapshots:
   typedarray@0.0.6: {}
 
   typescript@4.9.5: {}
-
-  typescript@5.5.3: {}
 
   typescript@5.5.4: {}
 
