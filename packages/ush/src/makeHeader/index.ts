@@ -1,6 +1,7 @@
 import { parsePackageJson } from "./parse-package-json.ts";
 import { readJsonFile } from "./read-json-file.ts";
 import { parseUserScript } from "./parse-userscript-json.ts";
+import { makeUserscriptHeader } from "./make-userscript-header.ts";
 
 export const makeHeader = (): string => {
   const packageJson = readJsonFile("package.json");
@@ -32,15 +33,5 @@ export const makeHeader = (): string => {
   const header = parsedUserScriptJson.output;
   const pkgVersion = parsedPackageJsonVersion.output;
 
-  // TODO: make header
-  const userScriptHeader = `// ==UserScript==\n
-// @name         ${header.name}\n
-// @namespace    ${header.namespace}\n
-// @version      ${header.sameversion ? pkgVersion.version : header.version}\n
-// @description  ${header.description}\n
-// @author       ${header.author}\n
-// @match        ${header.match}\n
-// @grant        ${header.grant}\n
-// ==/UserScript==\n\n`;
-  return userScriptHeader;
+  return makeUserscriptHeader(header, pkgVersion.version);
 };

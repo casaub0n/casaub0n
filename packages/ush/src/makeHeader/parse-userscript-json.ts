@@ -16,6 +16,8 @@ const UserScriptSchema = v.object({
   sameversion: v.nullish(v.boolean()),
 });
 
+export type UserScript = v.InferOutput<typeof UserScriptSchema>;
+
 /**
  * read `userscript.json` in root project, and parsed value
  *

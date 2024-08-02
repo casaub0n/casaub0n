@@ -1,16 +1,6 @@
 import { expect, test } from "vitest";
 import { parsePackageJson } from "./parse-package-json";
 
-/**
- *   name: v.string(),
-  namespace: v.string(),
-  version: v.string(),
-  description: v.string(),
-  author: v.string(),
-  match: v.string(),
-  grant: v.string(),
-  sameversion: v.nullish(v.boolean()),
- */
 test("object", () => {
   const userScriptJson = `
   {
