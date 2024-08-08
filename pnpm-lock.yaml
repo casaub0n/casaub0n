@@ -360,7 +360,7 @@ importers:
         version: link:../config-eslint
       '@crxjs/vite-plugin':
         specifier: ^1.0.14
-        version: 1.0.14(vite@5.3.5(@types/node@22.1.0)(terser@5.31.3))
+        version: 1.0.14(vite@5.4.0(@types/node@22.1.0)(terser@5.31.3))
       '@types/chrome':
         specifier: ^0.0.269
         version: 0.0.269
@@ -381,7 +381,7 @@ importers:
         version: 5.5.4
       vite:
         specifier: ^5.3.1
-        version: 5.3.5(@types/node@22.1.0)(terser@5.31.3)
+        version: 5.4.0(@types/node@22.1.0)(terser@5.31.3)
 
   packages/maddon:
     devDependencies:
@@ -635,7 +635,7 @@ importers:
         version: 5.5.4
       vite:
         specifier: ^5.3.1
-        version: 5.3.5(@types/node@20.14.14)(terser@5.31.3)
+        version: 5.4.0(@types/node@20.14.14)(terser@5.31.3)
       vitest:
         specifier: ^2.0.0
         version: 2.0.5(@edge-runtime/vm@3.2.0)(@types/node@20.14.14)(@vitest/ui@2.0.5)(jsdom@24.1.1(bufferutil@4.0.8)(utf-8-validate@6.0.4))(terser@5.31.3)
@@ -11772,6 +11772,37 @@ packages:
       terser:
         optional: true
 
+  vite@5.4.0:
+    resolution: {integrity: sha512-5xokfMX0PIiwCMCMb9ZJcMyh5wbBun0zUzKib+L65vAZ8GY9ePZMXxFrHbr/Kyll2+LSCY7xtERPpxkBDKngwg==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    hasBin: true
+    peerDependencies:
+      '@types/node': ^18.0.0 || >=20.0.0
+      less: '*'
+      lightningcss: ^1.21.0
+      sass: '*'
+      sass-embedded: '*'
+      stylus: '*'
+      sugarss: '*'
+      terser: ^5.4.0
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      less:
+        optional: true
+      lightningcss:
+        optional: true
+      sass:
+        optional: true
+      sass-embedded:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+
   vitefu@0.2.5:
     resolution: {integrity: sha512-SgHtMLoqaeeGnd2evZ849ZbACbnwQCIwRH57t18FxcXoZop0uQu0uzlIhJBlF/eWVzuce0sHeqPcDo+evVcg8Q==}
     peerDependencies:
@@ -13911,7 +13942,7 @@ snapshots:
     dependencies:
       fs-extra: 11.2.0
 
-  '@crxjs/vite-plugin@1.0.14(vite@5.3.5(@types/node@22.1.0)(terser@5.31.3))':
+  '@crxjs/vite-plugin@1.0.14(vite@5.4.0(@types/node@22.1.0)(terser@5.31.3))':
     dependencies:
       '@rollup/pluginutils': 4.2.1
       '@webcomponents/custom-elements': 1.6.0
@@ -13927,9 +13958,9 @@ snapshots:
       picocolors: 1.0.1
       react-refresh: 0.13.0
       rollup: 2.79.1
-      vite: 5.3.5(@types/node@22.1.0)(terser@5.31.3)
+      vite: 5.4.0(@types/node@22.1.0)(terser@5.31.3)
     optionalDependencies:
-      '@vitejs/plugin-react': 4.3.1(vite@5.3.5(@types/node@22.1.0)(terser@5.31.3))
+      '@vitejs/plugin-react': 4.3.1(vite@5.4.0(@types/node@22.1.0)(terser@5.31.3))
     transitivePeerDependencies:
       - supports-color
 
@@ -17201,7 +17232,7 @@ snapshots:
       find-up: 5.0.0
       javascript-stringify: 2.1.0
       mlly: 1.7.1
-      vite: 5.3.5(@types/node@20.14.14)(terser@5.31.3)
+      vite: 5.4.0(@types/node@20.14.14)(terser@5.31.3)
       vite-node: 1.6.0(@types/node@20.14.14)(terser@5.31.3)
     transitivePeerDependencies:
       - '@types/node'
@@ -17209,6 +17240,7 @@ snapshots:
       - less
       - lightningcss
       - sass
+      - sass-embedded
       - stylus
       - sugarss
       - supports-color
@@ -17226,7 +17258,7 @@ snapshots:
       find-up: 5.0.0
       javascript-stringify: 2.1.0
       mlly: 1.7.1
-      vite: 5.3.5(@types/node@22.1.0)(terser@5.31.3)
+      vite: 5.4.0(@types/node@22.1.0)(terser@5.31.3)
       vite-node: 1.6.0(@types/node@22.1.0)(terser@5.31.3)
     transitivePeerDependencies:
       - '@types/node'
@@ -17234,6 +17266,7 @@ snapshots:
       - less
       - lightningcss
       - sass
+      - sass-embedded
       - stylus
       - sugarss
       - supports-color
@@ -17249,6 +17282,7 @@ snapshots:
       - less
       - lightningcss
       - sass
+      - sass-embedded
       - stylus
       - sugarss
       - supports-color
@@ -17270,6 +17304,7 @@ snapshots:
       - less
       - lightningcss
       - sass
+      - sass-embedded
       - stylus
       - sugarss
       - supports-color
@@ -17288,6 +17323,7 @@ snapshots:
       - less
       - lightningcss
       - sass
+      - sass-embedded
       - stylus
       - sugarss
       - supports-color
@@ -17491,6 +17527,18 @@ snapshots:
       vite: 5.3.5(@types/node@22.1.0)(terser@5.31.3)
     transitivePeerDependencies:
       - supports-color
+
+  '@vitejs/plugin-react@4.3.1(vite@5.4.0(@types/node@22.1.0)(terser@5.31.3))':
+    dependencies:
+      '@babel/core': 7.25.2
+      '@babel/plugin-transform-react-jsx-self': 7.24.7(@babel/core@7.25.2)
+      '@babel/plugin-transform-react-jsx-source': 7.24.7(@babel/core@7.25.2)
+      '@types/babel__core': 7.20.5
+      react-refresh: 0.14.2
+      vite: 5.4.0(@types/node@22.1.0)(terser@5.31.3)
+    transitivePeerDependencies:
+      - supports-color
+    optional: true
 
   '@vitest/expect@1.6.0':
     dependencies:
@@ -27062,12 +27110,13 @@ snapshots:
       debug: 4.3.6
       pathe: 1.1.2
       picocolors: 1.0.1
-      vite: 5.3.5(@types/node@20.14.14)(terser@5.31.3)
+      vite: 5.4.0(@types/node@20.14.14)(terser@5.31.3)
     transitivePeerDependencies:
       - '@types/node'
       - less
       - lightningcss
       - sass
+      - sass-embedded
       - stylus
       - sugarss
       - supports-color
@@ -27079,12 +27128,13 @@ snapshots:
       debug: 4.3.6
       pathe: 1.1.2
       picocolors: 1.0.1
-      vite: 5.3.5(@types/node@22.1.0)(terser@5.31.3)
+      vite: 5.4.0(@types/node@22.1.0)(terser@5.31.3)
     transitivePeerDependencies:
       - '@types/node'
       - less
       - lightningcss
       - sass
+      - sass-embedded
       - stylus
       - sugarss
       - supports-color
@@ -27096,12 +27146,13 @@ snapshots:
       debug: 4.3.6
       pathe: 1.1.2
       tinyrainbow: 1.2.0
-      vite: 5.3.5(@types/node@20.14.14)(terser@5.31.3)
+      vite: 5.4.0(@types/node@20.14.14)(terser@5.31.3)
     transitivePeerDependencies:
       - '@types/node'
       - less
       - lightningcss
       - sass
+      - sass-embedded
       - stylus
       - sugarss
       - supports-color
@@ -27113,19 +27164,30 @@ snapshots:
       debug: 4.3.6
       pathe: 1.1.2
       tinyrainbow: 1.2.0
-      vite: 5.3.5(@types/node@22.1.0)(terser@5.31.3)
+      vite: 5.4.0(@types/node@22.1.0)(terser@5.31.3)
     transitivePeerDependencies:
       - '@types/node'
       - less
       - lightningcss
       - sass
+      - sass-embedded
       - stylus
       - sugarss
       - supports-color
       - terser
     optional: true
 
-  vite@5.3.5(@types/node@20.14.14)(terser@5.31.3):
+  vite@5.3.5(@types/node@22.1.0)(terser@5.31.3):
+    dependencies:
+      esbuild: 0.21.5
+      postcss: 8.4.41
+      rollup: 4.20.0
+    optionalDependencies:
+      '@types/node': 22.1.0
+      fsevents: 2.3.3
+      terser: 5.31.3
+
+  vite@5.4.0(@types/node@20.14.14)(terser@5.31.3):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.41
@@ -27135,7 +27197,7 @@ snapshots:
       fsevents: 2.3.3
       terser: 5.31.3
 
-  vite@5.3.5(@types/node@22.1.0)(terser@5.31.3):
+  vite@5.4.0(@types/node@22.1.0)(terser@5.31.3):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.41
@@ -27167,7 +27229,7 @@ snapshots:
       tinybench: 2.9.0
       tinypool: 1.0.0
       tinyrainbow: 1.2.0
-      vite: 5.3.5(@types/node@20.14.14)(terser@5.31.3)
+      vite: 5.4.0(@types/node@20.14.14)(terser@5.31.3)
       vite-node: 2.0.5(@types/node@20.14.14)(terser@5.31.3)
       why-is-node-running: 2.3.0
     optionalDependencies:
@@ -27179,6 +27241,7 @@ snapshots:
       - less
       - lightningcss
       - sass
+      - sass-embedded
       - stylus
       - sugarss
       - supports-color
@@ -27202,7 +27265,7 @@ snapshots:
       tinybench: 2.9.0
       tinypool: 1.0.0
       tinyrainbow: 1.2.0
-      vite: 5.3.5(@types/node@22.1.0)(terser@5.31.3)
+      vite: 5.4.0(@types/node@22.1.0)(terser@5.31.3)
       vite-node: 2.0.5(@types/node@22.1.0)(terser@5.31.3)
       why-is-node-running: 2.3.0
     optionalDependencies:
@@ -27214,6 +27277,7 @@ snapshots:
       - less
       - lightningcss
       - sass
+      - sass-embedded
       - stylus
       - sugarss
       - supports-color
