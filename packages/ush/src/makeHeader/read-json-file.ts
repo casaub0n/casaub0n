@@ -1,7 +1,6 @@
 import path from "node:path";
-import * as fs from "node:fs/promises";
+import * as fs from "node:fs";
 import { err, ok, type Result } from "neverthrow";
-import { DoSomethingError } from "../utils/result";
 
 /**
  * @param jsonPath - read json file
@@ -14,16 +13,13 @@ import { DoSomethingError } from "../utils/result";
  * }
  * ```
  */
-export const readJsonFile = (jsonPath: string): Result<string, DoSomethingError> => {
+export const readJsonFile = (jsonPath: string): Result<string, unknown> => {
   const jsonFullPath = path.join(process.cwd(), jsonPath);
-  fs.readFile(jsonFullPath, { encoding: "utf8" })
-    .then((file) => {
-      return ok(file);
-    })
-    // eslint-disable-next-line @typescript-eslint/use-unknown-in-catch-callback-variable -- exception
-    .catch((error) => {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument -- exception
-      return err(new DoSomethingError(error));
-    });
-  return err(new DoSomethingError("error"));
+  console.log(jsonFullPath);
+  try {
+    const file = fs.readFileSync(jsonFullPath, { encoding: "utf8" });
+    return ok(file);
+  } catch (error) {
+    return err(error);
+  }
 };
