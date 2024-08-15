@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import { firstLine } from "./utils/first-line";
+import { logger } from "./utils/logger";
 
 export const insertHeader = (file: string, comment: string): void => {
   const firstLineText = firstLine(file);
@@ -11,7 +12,7 @@ export const insertHeader = (file: string, comment: string): void => {
     fs.writeSync(fd, data, 0, data.length, insert.length);
     fs.close(fd, (err) => {
       if (err) throw err;
-      console.log(`success to insert header：${file}`);
+      logger.info(`success to insert header：${file}`);
     });
   });
 };

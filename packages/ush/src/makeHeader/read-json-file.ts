@@ -1,6 +1,7 @@
 import path from "node:path";
 import * as fs from "node:fs";
 import { err, ok, type Result } from "neverthrow";
+import { logger } from "../utils/logger";
 
 /**
  * @param jsonPath - read json file
@@ -15,7 +16,7 @@ import { err, ok, type Result } from "neverthrow";
  */
 export const readJsonFile = (jsonPath: string): Result<string, unknown> => {
   const jsonFullPath = path.join(process.cwd(), jsonPath);
-  console.log(jsonFullPath);
+  logger.info(jsonFullPath);
   try {
     const file = fs.readFileSync(jsonFullPath, { encoding: "utf8" });
     return ok(file);
