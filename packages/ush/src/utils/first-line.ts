@@ -1,6 +1,7 @@
 import fs from "node:fs";
 
 // https://github.com/pensierinmusica/firstline/blob/master/index.js
+// eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-function-return-type -- this is utils function
 export const firstLine = (path: fs.PathLike, useOpts?: any) => {
   interface Opts {
     encoding: BufferEncoding;

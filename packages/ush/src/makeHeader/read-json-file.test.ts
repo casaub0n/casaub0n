@@ -1,3 +1,4 @@
+/* eslint-disable no-console -- this is test */
 import { expect, test } from "vitest";
 import { readJsonFile } from "./read-json-file";
 

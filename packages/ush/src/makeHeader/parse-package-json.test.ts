@@ -1,3 +1,4 @@
+/* eslint-disable no-console -- this is test */
 import { expect, test } from "vitest";
 import { parsePackageJson } from "./parse-package-json";
 
