@@ -444,8 +444,8 @@ importers:
         specifier: ^0.23.0
         version: 0.23.1
       header-inserter:
-        specifier: 1.0.11
-        version: 1.0.11
+        specifier: 1.0.12
+        version: 1.0.12(typescript@5.5.4)
       jest:
         specifier: ^29.7.0
         version: 29.7.0(@types/node@22.4.0)(ts-node@10.9.1(@swc/core@1.7.11(@swc/helpers@0.5.12))(@types/node@22.4.0)(typescript@5.5.4))
@@ -483,8 +483,8 @@ importers:
         specifier: ^1.0.5
         version: 1.0.6(@swc/core@1.7.11(@swc/helpers@0.5.12))(jiti@1.21.6)(postcss@8.4.41)(tsx@4.17.0)(typescript@5.5.4)(yaml@2.5.0)
       header-inserter:
-        specifier: 1.0.11
-        version: 1.0.11
+        specifier: 1.0.12
+        version: 1.0.12(typescript@5.5.4)
       jest:
         specifier: ^29.7.0
         version: 29.7.0(@types/node@22.4.0)(ts-node@10.9.1(@swc/core@1.7.11(@swc/helpers@0.5.12))(@types/node@22.4.0)(typescript@5.5.4))
@@ -6757,10 +6757,6 @@ packages:
   find-yarn-workspace-root2@1.2.16:
     resolution: {integrity: sha512-hr6hb1w8ePMpPVUK39S4RlwJzi+xPLuVuG8XlwXU3KD5Yn3qgBWVfy3AzNlDhWvE1EORCE65/Qm26rFQt3VLVA==}
 
-  firstline@2.0.2:
-    resolution: {integrity: sha512-8KcmfI0jgSECnzdhucm0i7vrwef3BWwgjimW2YkRC5eSFwjb5DibVoA0YvgkYwwxuJi9c+7M7X3b3lX8o9B6wg==}
-    engines: {node: '>=6.4.0'}
-
   flat-cache@2.0.1:
     resolution: {integrity: sha512-LoQe6yDuUMDzQAEH8sgmh4Md6oZnc/7PjtwjNFSzveXqSHt6ka9fPBuso7IGf9Rz4uqnSnWiFH2B/zj24a5ReA==}
     engines: {node: '>=4'}
@@ -7215,10 +7211,9 @@ packages:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
     hasBin: true
 
-  header-inserter@1.0.11:
-    resolution: {integrity: sha512-bL1lZKhiQizuYxwVD8ZcwAs57VKKpQDKM+NhWzon7HeJViDBmV3mQZYjnD96FKQ0tFdSPOax8+Fn46TL5cLW2g==}
-    engines: {node: '>=12'}
-    hasBin: true
+  header-inserter@1.0.12:
+    resolution: {integrity: sha512-vs/U3188EJxivBIVwAizFqIZnxZSbHRUOuf5ScGTR1PBuYS7ARXMf1mKbXe76LE4e9DwgWCoAyYaVEj7gjOKDA==}
+    engines: {node: '>=20'}
 
   hmac-drbg@1.0.1:
     resolution: {integrity: sha512-Tti3gMqLdZfhOQY1Mzf/AanLiqh1WTiJgEj26ZuYQ9fbkLomzGchCws4FyrSd4VkpBfiNhaE1On+lOz894jvXg==}
@@ -20681,8 +20676,6 @@ snapshots:
       micromatch: 4.0.7
       pkg-dir: 4.2.0
 
-  firstline@2.0.2: {}
-
   flat-cache@2.0.1:
     dependencies:
       flatted: 2.0.2
@@ -21272,10 +21265,13 @@ snapshots:
 
   he@1.2.0: {}
 
-  header-inserter@1.0.11:
+  header-inserter@1.0.12(typescript@5.5.4):
     dependencies:
-      ajv: 8.17.1
-      firstline: 2.0.2
+      neverthrow: 7.0.1
+      pino: 9.3.2
+      valibot: 0.37.0(typescript@5.5.4)
+    transitivePeerDependencies:
+      - typescript
 
   hmac-drbg@1.0.1:
     dependencies:
