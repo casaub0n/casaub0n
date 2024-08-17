@@ -20,7 +20,8 @@
     "test": "vitest run",
     "test:ci": "pnpm test",
     "rmdist": "rimraf dist",
-    "build": "pnpm rmdist && tsup",
+    "tsup:build": "pnpm rmdist && tsup",
+    "build": "pnpm rmdist && tsx build.ts",
     "lint": "eslint src/"
   },
   "files": [
