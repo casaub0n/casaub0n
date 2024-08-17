@@ -9,7 +9,7 @@ void (async () => {
     minify: true,
     platform: "node",
     target: "node20",
-    outfile: `${outDir}/main.js`,
+    outfile: `${outDir}/index.js`,
   });
 })();
 
