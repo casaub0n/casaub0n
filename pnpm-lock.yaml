@@ -165,7 +165,7 @@ importers:
         version: 18.3.0
       '@vanilla-extract/next-plugin':
         specifier: ^2.4.1
-        version: 2.4.3(@types/node@20.15.0)(next@14.2.5(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(terser@5.31.6)(webpack@5.93.0(@swc/core@1.7.12(@swc/helpers@0.5.12)))
+        version: 2.4.4(@types/node@20.15.0)(next@14.2.5(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(terser@5.31.6)(webpack@5.93.0(@swc/core@1.7.12(@swc/helpers@0.5.12)))
       autoprefixer:
         specifier: ^10.4.19
         version: 10.4.20(postcss@8.4.41)
@@ -4219,19 +4219,24 @@ packages:
   '@vanilla-extract/integration@7.1.7':
     resolution: {integrity: sha512-xKwrCtmiBq6QzRNj+IOg5cAMRQRXkFnnvcE374MROJPnVvDX0d+lrIQapFGt64F0H8Gjk4kVl4slvCiV3ECQ4w==}
 
-  '@vanilla-extract/next-plugin@2.4.3':
-    resolution: {integrity: sha512-PI/T6eFynyVQdbUhlh9BuggjtmrcKd6uADvDi+bknYL8u//oNUOaAF/KUvepiMEHAcUgxEfDlS4Id/IdP9Agpw==}
+  '@vanilla-extract/integration@7.1.8':
+    resolution: {integrity: sha512-qUZaD7SjbjIN6+rGS5fuQIfBtcdE3P8y9D7TEefyELa0oxXc/fHDaRWQVK5fzYadpILOsnbrdZX24cJlf7F0Ew==}
+
+  '@vanilla-extract/next-plugin@2.4.4':
+    resolution: {integrity: sha512-rOg3R8z4twJf63huSVWO2VPVeatgAOGGrihM7bB4eGc8BZtIUURPXvtGRZwxtrAuyCkd8A+z3dME+dQMT8Lllw==}
     peerDependencies:
       next: '>=12.1.7'
-
-  '@vanilla-extract/private@1.0.5':
-    resolution: {integrity: sha512-6YXeOEKYTA3UV+RC8DeAjFk+/okoNz/h88R+McnzA2zpaVqTR/Ep+vszkWYlGBcMNO7vEkqbq5nT/JMMvhi+tw==}
 
   '@vanilla-extract/private@1.0.6':
     resolution: {integrity: sha512-ytsG/JLweEjw7DBuZ/0JCN4WAQgM9erfSTdS1NQY778hFQSZ6cfCDEZZ0sgVm4k54uNz6ImKB33AYvSR//fjxw==}
 
   '@vanilla-extract/webpack-plugin@2.3.11':
     resolution: {integrity: sha512-DHHYZ3yT84FmDCgnIcgeB7gA3XtNbiHfk2/e3ugoWutKSakW6+zz0qVPV+HX7YVv9o+dlrFe0I17bCBkNaOYlA==}
+    peerDependencies:
+      webpack: ^4.30.0 || ^5.20.2
+
+  '@vanilla-extract/webpack-plugin@2.3.12':
+    resolution: {integrity: sha512-tmAg59wm/+63NFh/dn/34h69r49szrpi7Py2nVsLIBbHZQRs/GWKPXUo5Cebod520KKP+zb1494fb6bjwN2vrw==}
     peerDependencies:
       webpack: ^4.30.0 || ^5.20.2
 
@@ -17311,32 +17316,6 @@ snapshots:
     dependencies:
       '@vanilla-extract/private': 1.0.6
 
-  '@vanilla-extract/integration@7.1.7(@types/node@20.15.0)(terser@5.31.6)':
-    dependencies:
-      '@babel/core': 7.25.2
-      '@babel/plugin-syntax-typescript': 7.24.7(@babel/core@7.25.2)
-      '@vanilla-extract/babel-plugin-debug-ids': 1.0.6
-      '@vanilla-extract/css': 1.15.4
-      dedent: 1.5.3
-      esbuild: 0.21.5
-      eval: 0.1.8
-      find-up: 5.0.0
-      javascript-stringify: 2.1.0
-      mlly: 1.7.1
-      vite: 5.4.1(@types/node@20.15.0)(terser@5.31.6)
-      vite-node: 1.6.0(@types/node@20.15.0)(terser@5.31.6)
-    transitivePeerDependencies:
-      - '@types/node'
-      - babel-plugin-macros
-      - less
-      - lightningcss
-      - sass
-      - sass-embedded
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
-
   '@vanilla-extract/integration@7.1.7(@types/node@22.4.1)(terser@5.31.6)':
     dependencies:
       '@babel/core': 7.25.2
@@ -17363,9 +17342,35 @@ snapshots:
       - supports-color
       - terser
 
-  '@vanilla-extract/next-plugin@2.4.3(@types/node@20.15.0)(next@14.2.5(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(terser@5.31.6)(webpack@5.93.0(@swc/core@1.7.12(@swc/helpers@0.5.12)))':
+  '@vanilla-extract/integration@7.1.8(@types/node@20.15.0)(terser@5.31.6)':
     dependencies:
-      '@vanilla-extract/webpack-plugin': 2.3.11(@types/node@20.15.0)(terser@5.31.6)(webpack@5.93.0(@swc/core@1.7.12(@swc/helpers@0.5.12)))
+      '@babel/core': 7.25.2
+      '@babel/plugin-syntax-typescript': 7.24.7(@babel/core@7.25.2)
+      '@vanilla-extract/babel-plugin-debug-ids': 1.0.6
+      '@vanilla-extract/css': 1.15.4
+      dedent: 1.5.3
+      esbuild: 0.23.1
+      eval: 0.1.8
+      find-up: 5.0.0
+      javascript-stringify: 2.1.0
+      mlly: 1.7.1
+      vite: 5.4.1(@types/node@20.15.0)(terser@5.31.6)
+      vite-node: 1.6.0(@types/node@20.15.0)(terser@5.31.6)
+    transitivePeerDependencies:
+      - '@types/node'
+      - babel-plugin-macros
+      - less
+      - lightningcss
+      - sass
+      - sass-embedded
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+
+  '@vanilla-extract/next-plugin@2.4.4(@types/node@20.15.0)(next@14.2.5(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(terser@5.31.6)(webpack@5.93.0(@swc/core@1.7.12(@swc/helpers@0.5.12)))':
+    dependencies:
+      '@vanilla-extract/webpack-plugin': 2.3.12(@types/node@20.15.0)(terser@5.31.6)(webpack@5.93.0(@swc/core@1.7.12(@swc/helpers@0.5.12)))
       next: 14.2.5(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     transitivePeerDependencies:
       - '@types/node'
@@ -17380,17 +17385,15 @@ snapshots:
       - terser
       - webpack
 
-  '@vanilla-extract/private@1.0.5': {}
-
   '@vanilla-extract/private@1.0.6': {}
 
-  '@vanilla-extract/webpack-plugin@2.3.11(@types/node@20.15.0)(terser@5.31.6)(webpack@5.93.0(@swc/core@1.7.12(@swc/helpers@0.5.12)))':
+  '@vanilla-extract/webpack-plugin@2.3.11(@types/node@22.4.1)(terser@5.31.6)(webpack@5.93.0(esbuild@0.21.5))':
     dependencies:
-      '@vanilla-extract/integration': 7.1.7(@types/node@20.15.0)(terser@5.31.6)
+      '@vanilla-extract/integration': 7.1.7(@types/node@22.4.1)(terser@5.31.6)
       debug: 4.3.6
       loader-utils: 2.0.4
       picocolors: 1.0.1
-      webpack: 5.93.0(@swc/core@1.7.12(@swc/helpers@0.5.12))
+      webpack: 5.93.0(esbuild@0.21.5)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -17403,13 +17406,13 @@ snapshots:
       - supports-color
       - terser
 
-  '@vanilla-extract/webpack-plugin@2.3.11(@types/node@22.4.1)(terser@5.31.6)(webpack@5.93.0(esbuild@0.21.5))':
+  '@vanilla-extract/webpack-plugin@2.3.12(@types/node@20.15.0)(terser@5.31.6)(webpack@5.93.0(@swc/core@1.7.12(@swc/helpers@0.5.12)))':
     dependencies:
-      '@vanilla-extract/integration': 7.1.7(@types/node@22.4.1)(terser@5.31.6)
+      '@vanilla-extract/integration': 7.1.8(@types/node@20.15.0)(terser@5.31.6)
       debug: 4.3.6
       loader-utils: 2.0.4
       picocolors: 1.0.1
-      webpack: 5.93.0(esbuild@0.21.5)
+      webpack: 5.93.0(@swc/core@1.7.12(@swc/helpers@0.5.12))
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
