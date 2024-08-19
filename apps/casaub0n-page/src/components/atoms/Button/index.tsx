@@ -1,2 +1,2 @@
 /* istanbul ignore next */
-export * from "./Button";
+export * from "./button";
