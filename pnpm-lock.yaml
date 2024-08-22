@@ -418,7 +418,7 @@ importers:
         version: 7.0.1
       puppeteer:
         specifier: ^23.0.0
-        version: 23.1.0(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.4)
+        version: 23.1.1(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.4)
       tsx:
         specifier: ^4.7.1
         version: 4.17.0
@@ -451,7 +451,7 @@ importers:
         version: 29.7.0(@types/node@22.4.1)(ts-node@10.9.1(@swc/core@1.7.14(@swc/helpers@0.5.12))(@types/node@22.4.1)(typescript@5.5.4))
       puppeteer:
         specifier: ^23.0.0
-        version: 23.1.0(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.4)
+        version: 23.1.1(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.4)
       rimraf:
         specifier: ^6.0.0
         version: 6.0.1
@@ -493,7 +493,7 @@ importers:
         version: 7.0.1
       puppeteer:
         specifier: ^23.0.0
-        version: 23.1.0(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.4)
+        version: 23.1.1(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.4)
       rimraf:
         specifier: ^6.0.0
         version: 6.0.1
@@ -10006,12 +10006,12 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
-  puppeteer-core@23.1.0:
-    resolution: {integrity: sha512-SvAsu+xnLN2FMXE/59bp3s3WXp8ewqUGzVV4AQtml/2xmsciZnU/bXcCW+eETHPWQ6Agg2vTI7QzWXPpEARK2g==}
+  puppeteer-core@23.1.1:
+    resolution: {integrity: sha512-OeTqNiYGF9qZtwZU4Yc88DDqFJs4TJ4rnK81jkillh6MwDeQodyisM9xe5lBmPhwiDy92s5J5DQtQLjCKHFQ3g==}
     engines: {node: '>=18'}
 
-  puppeteer@23.1.0:
-    resolution: {integrity: sha512-m+CyicDlGN1AVUeOsCa6/+KQydJzxfsPowL7fQy+VGNeaWafB0m8G5aGfXdfZztKMxzCsdz7KNNzbJPeG9wwFw==}
+  puppeteer@23.1.1:
+    resolution: {integrity: sha512-giN4Ikwl5hkkouH/dVyxIPTPslWuqZ8fjALdSw5Cvt+r0LuDpLdfPxRADlB75YJ2UjPZhgok+xYBYk8ffzv4MA==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -10918,8 +10918,8 @@ packages:
     resolution: {integrity: sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==}
     engines: {node: '>=10.0.0'}
 
-  streamx@2.18.0:
-    resolution: {integrity: sha512-LLUC1TWdjVdn1weXGcSxyTR3T4+acB6tVGXT95y0nGbca4t4o/ng1wKAGTljm9VicuCVLvRlqFYXYy5GwgM7sQ==}
+  streamx@2.19.0:
+    resolution: {integrity: sha512-5z6CNR4gtkPbwlxyEqoDGDmWIzoNJqCBt4Eac1ICP9YaIT08ct712cFj0u1rx4F8luAuL+3Qc+RFIdI4OX00kg==}
 
   string-length@4.0.2:
     resolution: {integrity: sha512-+l6rNN5fYHNhZZy41RXsYptCjA2Igmq4EG7kZAYFQI1E1VTXarr6ZPXBg6eq7Y6eK4FEhY6AJlyuFIb/v/S0VQ==}
@@ -18543,7 +18543,7 @@ snapshots:
 
   bare-stream@2.1.3:
     dependencies:
-      streamx: 2.18.0
+      streamx: 2.19.0
     optional: true
 
   base-64@1.0.0: {}
@@ -24939,7 +24939,7 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  puppeteer-core@23.1.0(bufferutil@4.0.8)(utf-8-validate@6.0.4):
+  puppeteer-core@23.1.1(bufferutil@4.0.8)(utf-8-validate@6.0.4):
     dependencies:
       '@puppeteer/browsers': 2.3.1
       chromium-bidi: 0.6.4(devtools-protocol@0.0.1312386)
@@ -24952,13 +24952,13 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  puppeteer@23.1.0(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.4):
+  puppeteer@23.1.1(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@6.0.4):
     dependencies:
       '@puppeteer/browsers': 2.3.1
       chromium-bidi: 0.6.4(devtools-protocol@0.0.1312386)
       cosmiconfig: 9.0.0(typescript@5.5.4)
       devtools-protocol: 0.0.1312386
-      puppeteer-core: 23.1.0(bufferutil@4.0.8)(utf-8-validate@6.0.4)
+      puppeteer-core: 23.1.1(bufferutil@4.0.8)(utf-8-validate@6.0.4)
       typed-query-selector: 2.12.0
     transitivePeerDependencies:
       - bufferutil
@@ -26268,7 +26268,7 @@ snapshots:
 
   streamsearch@1.1.0: {}
 
-  streamx@2.18.0:
+  streamx@2.19.0:
     dependencies:
       fast-fifo: 1.3.2
       queue-tick: 1.0.1
@@ -26530,7 +26530,7 @@ snapshots:
     dependencies:
       b4a: 1.6.6
       fast-fifo: 1.3.2
-      streamx: 2.18.0
+      streamx: 2.19.0
 
   tar@4.4.18:
     dependencies:
