@@ -444,8 +444,8 @@ importers:
         specifier: ^0.24.0
         version: 0.24.0
       header-inserter:
-        specifier: 1.0.12
-        version: 1.0.12(typescript@5.6.2)
+        specifier: 1.0.13
+        version: 1.0.13(typescript@5.6.2)
       jest:
         specifier: ^29.7.0
         version: 29.7.0(@types/node@22.6.1)(ts-node@10.9.1(@swc/core@1.7.26(@swc/helpers@0.5.12))(@types/node@22.6.1)(typescript@5.6.2))
@@ -483,8 +483,8 @@ importers:
         specifier: ^1.0.5
         version: 1.0.6(@swc/core@1.7.26(@swc/helpers@0.5.12))(jiti@1.21.6)(postcss@8.4.47)(tsx@4.19.1)(typescript@5.6.2)(yaml@2.5.1)
       header-inserter:
-        specifier: 1.0.12
-        version: 1.0.12(typescript@5.6.2)
+        specifier: 1.0.13
+        version: 1.0.13(typescript@5.6.2)
       jest:
         specifier: ^29.7.0
         version: 29.7.0(@types/node@22.6.1)(ts-node@10.9.1(@swc/core@1.7.26(@swc/helpers@0.5.12))(@types/node@22.6.1)(typescript@5.6.2))
@@ -7508,8 +7508,8 @@ packages:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
     hasBin: true
 
-  header-inserter@1.0.12:
-    resolution: {integrity: sha512-vs/U3188EJxivBIVwAizFqIZnxZSbHRUOuf5ScGTR1PBuYS7ARXMf1mKbXe76LE4e9DwgWCoAyYaVEj7gjOKDA==}
+  header-inserter@1.0.13:
+    resolution: {integrity: sha512-+8L3TsUKMt3TafZATg9MEMQBaCNreSWXB2gCby1atU6Zdmaq019Cm627AAW8zS1EzySmXg9rj9CTyaPGC7nu/g==}
     engines: {node: '>=20'}
 
   hmac-drbg@1.0.1:
@@ -9165,10 +9165,6 @@ packages:
   netmask@2.0.2:
     resolution: {integrity: sha512-dBpDMdxv9Irdq66304OLfEmQ9tbNRFnFTuZiLo+bD+r332bBmMJ8GBLXklIXXgxd3+v9+KUnZaUR5PJMa75Gsg==}
     engines: {node: '>= 0.4.0'}
-
-  neverthrow@7.2.0:
-    resolution: {integrity: sha512-iGBUfFB7yPczHHtA8dksKTJ9E8TESNTAx1UQWW6TzMF280vo9jdPYpLUXrMN1BCkPdHFdNG3fxOt2CUad8KhAw==}
-    engines: {node: '>=18'}
 
   neverthrow@8.0.0:
     resolution: {integrity: sha512-SX2Z50+U27I+CF3NwHE9J8MB6+bYRRub3U+1nAKxnL6c+2vW2l/WsYEC0e3Wqg8DwiJvrquqE0YhxlVTzGJGsg==}
@@ -12000,14 +11996,6 @@ packages:
   v8-to-istanbul@9.3.0:
     resolution: {integrity: sha512-kiGUalWN+rgBJ/1OHZsBtU4rXZOfj/7rKQxULKlIzwzQSvMJUUNgPwJEEh7gU6xEVxC0ahoOBvN2YI8GH6FNgA==}
     engines: {node: '>=10.12.0'}
-
-  valibot@0.37.0:
-    resolution: {integrity: sha512-FQz52I8RXgFgOHym3XHYSREbNtkgSjF9prvMFH1nBsRyfL6SfCzoT1GuSDTlbsuPubM7/6Kbw0ZMQb8A+V+VsQ==}
-    peerDependencies:
-      typescript: '>=5'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
 
   valibot@0.42.1:
     resolution: {integrity: sha512-3keXV29Ar5b//Hqi4MbSdV7lfVp6zuYLZuA9V1PvQUsXqogr+u5lvLPLk3A4f74VUXDnf/JfWMN6sB+koJ/FFw==}
@@ -21761,11 +21749,11 @@ snapshots:
 
   he@1.2.0: {}
 
-  header-inserter@1.0.12(typescript@5.6.2):
+  header-inserter@1.0.13(typescript@5.6.2):
     dependencies:
-      neverthrow: 7.2.0
+      neverthrow: 8.0.0
       pino: 9.4.0
-      valibot: 0.37.0(typescript@5.6.2)
+      valibot: 0.42.1(typescript@5.6.2)
     transitivePeerDependencies:
       - typescript
 
@@ -24026,8 +24014,6 @@ snapshots:
   neotraverse@0.6.18: {}
 
   netmask@2.0.2: {}
-
-  neverthrow@7.2.0: {}
 
   neverthrow@8.0.0: {}
 
@@ -27482,10 +27468,6 @@ snapshots:
       '@jridgewell/trace-mapping': 0.3.25
       '@types/istanbul-lib-coverage': 2.0.6
       convert-source-map: 2.0.0
-
-  valibot@0.37.0(typescript@5.6.2):
-    optionalDependencies:
-      typescript: 5.6.2
 
   valibot@0.42.1(typescript@5.6.2):
     optionalDependencies:
