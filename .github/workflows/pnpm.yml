@@ -90,7 +90,7 @@ jobs:
 
       # pass nextjs-dashboard project because that is still WIP
       - name: Build
-        run: pnpm build --filter=!nextjs-dashboard
+        run: pnpm build
 
       - name: test
         run: pnpm test:ci
