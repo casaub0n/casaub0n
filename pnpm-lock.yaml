@@ -418,7 +418,7 @@ importers:
         version: 8.0.0
       puppeteer:
         specifier: ^23.0.0
-        version: 23.4.1(bufferutil@4.0.8)(typescript@5.6.2)(utf-8-validate@6.0.4)
+        version: 23.5.0(bufferutil@4.0.8)(typescript@5.6.2)(utf-8-validate@6.0.4)
       tsx:
         specifier: ^4.7.1
         version: 4.19.1
@@ -451,7 +451,7 @@ importers:
         version: 29.7.0(@types/node@22.7.4)(ts-node@10.9.2(@swc/core@1.7.28(@swc/helpers@0.5.13))(@types/node@22.7.4)(typescript@5.6.2))
       puppeteer:
         specifier: ^23.0.0
-        version: 23.4.1(bufferutil@4.0.8)(typescript@5.6.2)(utf-8-validate@6.0.4)
+        version: 23.5.0(bufferutil@4.0.8)(typescript@5.6.2)(utf-8-validate@6.0.4)
       rimraf:
         specifier: ^6.0.0
         version: 6.0.1
@@ -493,7 +493,7 @@ importers:
         version: 8.0.0
       puppeteer:
         specifier: ^23.0.0
-        version: 23.4.1(bufferutil@4.0.8)(typescript@5.6.2)(utf-8-validate@6.0.4)
+        version: 23.5.0(bufferutil@4.0.8)(typescript@5.6.2)(utf-8-validate@6.0.4)
       rimraf:
         specifier: ^6.0.0
         version: 6.0.1
@@ -5779,8 +5779,8 @@ packages:
     resolution: {integrity: sha512-rNjApaLzuwaOTjCiT8lSDdGN1APCiqkChLMJxJPWLunPAt5fy8xgU9/jNOchV84wfIxrA0lRQB7oCT8jrn/wrQ==}
     engines: {node: '>=6.0'}
 
-  chromium-bidi@0.6.5:
-    resolution: {integrity: sha512-RuLrmzYrxSb0s9SgpB+QN5jJucPduZQ/9SIe76MDxYJuecPW5mxMdacJ1f4EtgiV+R0p3sCkznTMvH0MPGFqjA==}
+  chromium-bidi@0.8.0:
+    resolution: {integrity: sha512-uJydbGdTw0DEUjhoogGveneJVWX/9YuqkWePzMmkBYwtdAqo5d3J/ovNKFr+/2hWXYmYCr6it8mSSTIj6SS6Ug==}
     peerDependencies:
       devtools-protocol: '*'
 
@@ -10482,12 +10482,12 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
-  puppeteer-core@23.4.1:
-    resolution: {integrity: sha512-uCxGtn8VE9PlKhdFJX/zZySi9K3Ufr3qUZe28jxJoZUqiMJOi+SFh2zhiFDSjWqZIDkc0FtnaCC+rewW3MYXmg==}
+  puppeteer-core@23.5.0:
+    resolution: {integrity: sha512-+5ed+625GuQ2emRHqYec8khT9LP14FWzv8hYl0HiM6hnnlNzdVU9uDJIPHeCPLIWxq15ost9MeF8kBk4R3eiFw==}
     engines: {node: '>=18'}
 
-  puppeteer@23.4.1:
-    resolution: {integrity: sha512-+wWfWTkQ8L9IB/3OVGSUp37c0eQ5za/85KdX+LAq2wTZkMdocgYGMCs+/91e2f/RXIYzve4x/uGxN8zG2sj8+w==}
+  puppeteer@23.5.0:
+    resolution: {integrity: sha512-jnUx5M0YtFva7vXr39qqsxgB46JiwXJavuM1Hgsqbd9WWiGTEUt9klGpTxyHi+ZQf3NUgleDhNsnI10IK8Ebsg==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -20241,7 +20241,7 @@ snapshots:
 
   chrome-trace-event@1.0.4: {}
 
-  chromium-bidi@0.6.5(devtools-protocol@0.0.1342118):
+  chromium-bidi@0.8.0(devtools-protocol@0.0.1342118):
     dependencies:
       devtools-protocol: 0.0.1342118
       mitt: 3.0.1
@@ -25680,7 +25680,7 @@ snapshots:
 
   parse-json@5.2.0:
     dependencies:
-      '@babel/code-frame': 7.24.7
+      '@babel/code-frame': 7.25.7
       error-ex: 1.3.2
       json-parse-even-better-errors: 2.3.1
       lines-and-columns: 1.2.4
@@ -26186,10 +26186,10 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  puppeteer-core@23.4.1(bufferutil@4.0.8)(utf-8-validate@6.0.4):
+  puppeteer-core@23.5.0(bufferutil@4.0.8)(utf-8-validate@6.0.4):
     dependencies:
       '@puppeteer/browsers': 2.4.0
-      chromium-bidi: 0.6.5(devtools-protocol@0.0.1342118)
+      chromium-bidi: 0.8.0(devtools-protocol@0.0.1342118)
       debug: 4.3.7
       devtools-protocol: 0.0.1342118
       typed-query-selector: 2.12.0
@@ -26199,13 +26199,13 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  puppeteer@23.4.1(bufferutil@4.0.8)(typescript@5.6.2)(utf-8-validate@6.0.4):
+  puppeteer@23.5.0(bufferutil@4.0.8)(typescript@5.6.2)(utf-8-validate@6.0.4):
     dependencies:
       '@puppeteer/browsers': 2.4.0
-      chromium-bidi: 0.6.5(devtools-protocol@0.0.1342118)
+      chromium-bidi: 0.8.0(devtools-protocol@0.0.1342118)
       cosmiconfig: 9.0.0(typescript@5.6.2)
       devtools-protocol: 0.0.1342118
-      puppeteer-core: 23.4.1(bufferutil@4.0.8)(utf-8-validate@6.0.4)
+      puppeteer-core: 23.5.0(bufferutil@4.0.8)(utf-8-validate@6.0.4)
       typed-query-selector: 2.12.0
     transitivePeerDependencies:
       - bufferutil
