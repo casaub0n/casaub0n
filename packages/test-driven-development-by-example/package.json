@@ -30,7 +30,7 @@
     "test:xml": "node --test --test-reporter=junit ./dist/money.test.js > ../../apps/casaub0n-astro/src/test-driven-development-by-example-report.xml",
     "build": "run-p build:module build:test",
     "start": "pnpm build && node dist/index.js",
-    "lint": "eslint src/"
+    "lint": "eslint"
   },
   "files": [
     "dist"
