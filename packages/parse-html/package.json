@@ -22,7 +22,7 @@
     "prebuild": "pnpm rmdist",
     "build": "tsup src/index.ts --format cjs --dts --env.TABLE_HEAD 月",
     "start:parse-html": "pnpm build && node dist/index.js",
-    "lint": "eslint src"
+    "lint": "eslint ./src"
   },
   "files": [
     "dist"

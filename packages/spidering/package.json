@@ -22,7 +22,7 @@
     "rmdist": "rimraf dist",
     "build": "pnpm rmdist && tsup src/index.ts --format esm --dts",
     "start:sp": "pnpm build && node dist/index.mjs",
-    "lint": "eslint src"
+    "lint": "eslint ./src"
   },
   "files": [
     "dist"
