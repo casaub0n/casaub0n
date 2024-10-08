@@ -1,4 +1,5 @@
-import next from "../../packages/config-eslint/next.mjs";
+// import next from "../../packages/config-eslint/next.mjs";
+import next from "../../packages/config-eslint/dist/index.mjs";
 
 const baseEslint = [
   {
