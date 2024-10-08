@@ -1,3 +1,10 @@
 import next from "../../packages/config-eslint/next.mjs";
 
-export default [...next];
+const baseEslint = [
+  {
+    ignores: ["**/.next/", "**/__reports__/", "coverage"],
+  },
+  ...next,
+];
+
+export default baseEslint;
