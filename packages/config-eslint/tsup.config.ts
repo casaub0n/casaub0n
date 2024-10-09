@@ -18,7 +18,7 @@ export default defineConfig({
   // https://github.com/egoist/tsup/issues/619
   // noExternal: [/(?:.*)/],
   splitting: false,
-  banner: {
-    js: 'import { createRequire } from "module";const require = createRequire(import.meta.url);',
-  },
+  // banner: {
+  //   js: 'import { createRequire } from "module";const require = createRequire(import.meta.url);',
+  // },
 });
