@@ -3,13 +3,12 @@
  */
 
 import { strict as assert } from "assert";
+import { EVP } from "evp-ts";
+import { err, ok } from "neverthrow";
+import type { Result } from "neverthrow";
 import { env } from "node:process";
 import { test } from "node:test";
-
 import puppeteer from "puppeteer";
-import { EVP } from "evp-ts";
-
-import { err, ok, type Result } from "neverthrow";
 
 /**
  * Chrome path from env file
@@ -34,6 +33,7 @@ test("Example Domain", async () => {
     const browser = await puppeteer.launch({
       headless: true,
       executablePath: env.CHROME,
+      args: ["--no-sandbox"],
     });
     const page = await browser.newPage();
     await page.goto("https://example.com/");

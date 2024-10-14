@@ -5,7 +5,6 @@
 import { strict as assert } from "assert";
 import { env } from "node:process";
 import { test } from "node:test";
-
 import puppeteer from "puppeteer";
 
 import { markdownLink } from "./markdownLink";
@@ -15,6 +14,7 @@ test("Example Domain", async () => {
   const browser = await puppeteer.launch({
     headless: true,
     executablePath: env.CHROME,
+    args: ["--no-sandbox"],
   });
   const page = await browser.newPage();
   await page.goto("https://example.com/");

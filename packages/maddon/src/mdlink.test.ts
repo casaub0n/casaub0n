@@ -3,7 +3,6 @@
  */
 
 import { env } from "node:process";
-
 import puppeteer from "puppeteer";
 
 import { markdownLink } from "./markdownLink";
@@ -14,6 +13,7 @@ describe("Example Domain", () => {
     const browser = await puppeteer.launch({
       headless: true,
       executablePath: env.CHROME,
+      args: ["--no-sandbox"],
     });
     const page = await browser.newPage();
     await page.goto("https://example.com/");
