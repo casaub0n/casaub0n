@@ -16,6 +16,7 @@ export default [
       {
         languageOptions: {
           parserOptions: {
+            warnOnUnsupportedTypeScriptVersion: false,
             projectService: true,
           },
         },
@@ -48,6 +49,8 @@ export default [
     files: ["**/*.d.ts", "**/*.d.*.ts"],
     rules: {
       "import/no-default-export": "off",
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/explicit-member-accessibility": "off",
     },
   },
 ];
