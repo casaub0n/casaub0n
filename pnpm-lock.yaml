@@ -204,7 +204,7 @@ importers:
         version: 5.6.3
       vercel:
         specifier: ^37.0.0
-        version: 37.11.0(@swc/core@1.7.36(@swc/helpers@0.5.13))(encoding@0.1.13)
+        version: 37.12.0(@swc/core@1.7.36(@swc/helpers@0.5.13))(encoding@0.1.13)
 
   apps/catalog:
     devDependencies:
@@ -4527,8 +4527,8 @@ packages:
   '@vercel/hydrogen@1.0.9':
     resolution: {integrity: sha512-IPAVaALuGAzt2apvTtBs5tB+8zZRzn/yG3AGp8dFyCsw/v5YOuk0Q5s8Z3fayLvJbFpjrKtqRNDZzVJBBU3MrQ==}
 
-  '@vercel/next@4.3.16':
-    resolution: {integrity: sha512-kSi4jYYW+szLaoNwsb3dzBOujuUSE1v8vvZ3gEjVXZLWWchEYzZHKGRmecBQjGe/7mqoMNJIrrDLVYS8oTMTQA==}
+  '@vercel/next@4.3.17':
+    resolution: {integrity: sha512-dMyAa4XMYMyzlemk1wH4Eo1eVkWfMDEokLqrIo2+haPUCesfQVovXSJOvHSulS7h7s6nBnEQvALhlGgFi1ig9g==}
 
   '@vercel/nft@0.27.3':
     resolution: {integrity: sha512-oySTdDSzUAFDXpsSLk9Q943o+/Yu/+TCFxnehpFQEf/3khi2stMpTHPVNwFdvZq/Z4Ky93lE+MGHpXCRpMkSCA==}
@@ -11993,8 +11993,8 @@ packages:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
 
-  vercel@37.11.0:
-    resolution: {integrity: sha512-LCTKg4zxfHFBYULLcIEEi9CxFnywd0y0cUd23wdajqBKSBcEqrR2z77v0uU1G5dzlvqmL7dpAHXYu55jNU1GeA==}
+  vercel@37.12.0:
+    resolution: {integrity: sha512-q4MxHfNHWeCijEMCcildxGWHDzAhrvdvQkXOqXhRsPJxK23x7AhptjKNHsz/MfGiDrhcjh6rJYhtAQZnfNEbzQ==}
     engines: {node: '>= 16'}
     hasBin: true
 
@@ -17052,7 +17052,7 @@ snapshots:
   '@types/body-parser@1.19.5':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 20.16.13
+      '@types/node': 22.7.7
 
   '@types/bunyan@1.8.9':
     dependencies:
@@ -17076,7 +17076,7 @@ snapshots:
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 20.16.13
+      '@types/node': 22.7.7
 
   '@types/cookie@0.6.0': {}
 
@@ -17137,7 +17137,7 @@ snapshots:
 
   '@types/express-serve-static-core@4.19.6':
     dependencies:
-      '@types/node': 20.16.13
+      '@types/node': 22.7.7
       '@types/qs': 6.9.16
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.4
@@ -17291,12 +17291,12 @@ snapshots:
   '@types/send@0.17.4':
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 20.16.13
+      '@types/node': 22.7.7
 
   '@types/serve-static@1.15.7':
     dependencies:
       '@types/http-errors': 2.0.4
-      '@types/node': 20.16.13
+      '@types/node': 22.7.7
       '@types/send': 0.17.4
 
   '@types/shimmer@1.2.0': {}
@@ -17802,7 +17802,7 @@ snapshots:
       '@vercel/static-config': 3.0.0
       ts-morph: 12.0.0
 
-  '@vercel/next@4.3.16(encoding@0.1.13)':
+  '@vercel/next@4.3.17(encoding@0.1.13)':
     dependencies:
       '@vercel/nft': 0.27.3(encoding@0.1.13)
     transitivePeerDependencies:
@@ -20822,7 +20822,7 @@ snapshots:
 
   eval@0.1.8:
     dependencies:
-      '@types/node': 20.16.13
+      '@types/node': 22.7.7
       require-like: 0.1.2
 
   event-target-shim@5.0.1: {}
@@ -22634,7 +22634,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 20.16.13
+      '@types/node': 22.7.7
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -27401,13 +27401,13 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vercel@37.11.0(@swc/core@1.7.36(@swc/helpers@0.5.13))(encoding@0.1.13):
+  vercel@37.12.0(@swc/core@1.7.36(@swc/helpers@0.5.13))(encoding@0.1.13):
     dependencies:
       '@vercel/build-utils': 8.4.11
       '@vercel/fun': 1.1.0(encoding@0.1.13)
       '@vercel/go': 3.2.0
       '@vercel/hydrogen': 1.0.9
-      '@vercel/next': 4.3.16(encoding@0.1.13)
+      '@vercel/next': 4.3.17(encoding@0.1.13)
       '@vercel/node': 3.2.23(@swc/core@1.7.36(@swc/helpers@0.5.13))(encoding@0.1.13)
       '@vercel/python': 4.3.1
       '@vercel/redwood': 2.1.8(encoding@0.1.13)
