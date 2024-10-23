@@ -436,7 +436,7 @@ importers:
     dependencies:
       neverthrow:
         specifier: ^8.0.0
-        version: 8.0.0
+        version: 8.1.0
       pino:
         specifier: ^9.3.2
         version: 9.5.0
@@ -497,7 +497,7 @@ importers:
         version: 1.0.6(@swc/core@1.7.39(@swc/helpers@0.5.13))(jiti@1.21.6)(postcss@8.4.47)(tsx@4.19.1)(typescript@5.6.3)(yaml@2.6.0)
       neverthrow:
         specifier: ^8.0.0
-        version: 8.0.0
+        version: 8.1.0
       puppeteer:
         specifier: ^23.0.0
         version: 23.6.0(bufferutil@4.0.8)(typescript@5.6.3)
@@ -572,7 +572,7 @@ importers:
         version: 29.7.0(@types/node@22.7.9)(ts-node@10.9.1(@swc/core@1.7.39(@swc/helpers@0.5.13))(@types/node@22.7.9)(typescript@5.6.3))
       neverthrow:
         specifier: ^8.0.0
-        version: 8.0.0
+        version: 8.1.0
       puppeteer:
         specifier: ^23.0.0
         version: 23.6.0(bufferutil@4.0.8)(typescript@5.6.3)
@@ -602,7 +602,7 @@ importers:
         version: 25.0.1(bufferutil@4.0.8)
       neverthrow:
         specifier: ^8.0.0
-        version: 8.0.0
+        version: 8.1.0
     devDependencies:
       '@casaub0n/eslint-config':
         specifier: workspace:*
@@ -9274,8 +9274,8 @@ packages:
     resolution: {integrity: sha512-dBpDMdxv9Irdq66304OLfEmQ9tbNRFnFTuZiLo+bD+r332bBmMJ8GBLXklIXXgxd3+v9+KUnZaUR5PJMa75Gsg==}
     engines: {node: '>= 0.4.0'}
 
-  neverthrow@8.0.0:
-    resolution: {integrity: sha512-SX2Z50+U27I+CF3NwHE9J8MB6+bYRRub3U+1nAKxnL6c+2vW2l/WsYEC0e3Wqg8DwiJvrquqE0YhxlVTzGJGsg==}
+  neverthrow@8.1.0:
+    resolution: {integrity: sha512-DV0klbzcsI0XOJvdGElzJ2sEXmEPwQLWio/ttq7D7CQApUduxqzNG2noc8ZPaAFc9XXINYVb0f5ozM0ZJKGF1w==}
     engines: {node: '>=18'}
 
   new-github-release-url@2.0.0:
@@ -22023,7 +22023,7 @@ snapshots:
 
   header-inserter@1.0.14(typescript@5.6.3):
     dependencies:
-      neverthrow: 8.0.0
+      neverthrow: 8.1.0
       pino: 9.5.0
       valibot: 0.42.1(typescript@5.6.3)
     transitivePeerDependencies:
@@ -24291,7 +24291,9 @@ snapshots:
 
   netmask@2.0.2: {}
 
-  neverthrow@8.0.0: {}
+  neverthrow@8.1.0:
+    optionalDependencies:
+      '@rollup/rollup-linux-x64-gnu': 4.24.0
 
   new-github-release-url@2.0.0:
     dependencies:
