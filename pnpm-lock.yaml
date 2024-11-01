@@ -31,7 +31,7 @@ importers:
         version: 3.3.3
       renovate:
         specifier: ^38.24.1
-        version: 38.138.6(@aws-sdk/client-sso-oidc@3.658.1(@aws-sdk/client-sts@3.658.1))(encoding@0.1.13)(typanion@3.14.0)
+        version: 38.141.1(@aws-sdk/client-sso-oidc@3.658.1(@aws-sdk/client-sts@3.658.1))(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: ^14.0.5
         version: 14.3.0
@@ -10359,8 +10359,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@38.138.6:
-    resolution: {integrity: sha512-BEwzclxR3Rcqo2XOapyjqnavsUjFkQKTrbpHYLzxBSVCMNNVnHIe4KXnB7woBvW6mqpdP4FfVs3u9n+Grq1xYg==}
+  renovate@38.141.1:
+    resolution: {integrity: sha512-I7mpnh5xubykcNjr0Vn5dSd3IpIi4O1fBPLoTp4kDoFYWSXRBPA6dcmbsp3ibWUjixug8QCrbgmulx+tFSRvew==}
     engines: {node: ^20.15.1, pnpm: ^9.0.0}
     hasBin: true
 
@@ -12315,13 +12315,13 @@ snapshots:
     dependencies:
       '@aws-crypto/util': 5.2.0
       '@aws-sdk/types': 3.654.0
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@aws-crypto/crc32c@5.2.0':
     dependencies:
       '@aws-crypto/util': 5.2.0
       '@aws-sdk/types': 3.654.0
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@aws-crypto/sha1-browser@5.2.0':
     dependencies:
@@ -12350,13 +12350,13 @@ snapshots:
 
   '@aws-crypto/supports-web-crypto@5.2.0':
     dependencies:
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@aws-crypto/util@5.2.0':
     dependencies:
       '@aws-sdk/types': 3.654.0
       '@smithy/util-utf8': 2.3.0
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@aws-sdk/client-codecommit@3.658.1':
     dependencies:
@@ -13054,7 +13054,7 @@ snapshots:
       '@smithy/property-provider': 3.1.8
       '@smithy/shared-ini-file-loader': 3.1.9
       '@smithy/types': 3.6.0
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@aws-sdk/types@3.654.0':
     dependencies:
@@ -13063,7 +13063,7 @@ snapshots:
 
   '@aws-sdk/util-arn-parser@3.568.0':
     dependencies:
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@aws-sdk/util-endpoints@3.654.0':
     dependencies:
@@ -13077,11 +13077,11 @@ snapshots:
       '@aws-sdk/types': 3.654.0
       '@smithy/querystring-builder': 3.0.8
       '@smithy/types': 3.6.0
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@aws-sdk/util-locate-window@3.679.0':
     dependencies:
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@aws-sdk/util-user-agent-browser@3.654.0':
     dependencies:
@@ -15813,16 +15813,16 @@ snapshots:
   '@smithy/abort-controller@3.1.6':
     dependencies:
       '@smithy/types': 3.6.0
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@smithy/chunked-blob-reader-native@3.0.1':
     dependencies:
       '@smithy/util-base64': 3.0.0
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@smithy/chunked-blob-reader@4.0.0':
     dependencies:
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@smithy/config-resolver@3.0.10':
     dependencies:
@@ -15856,7 +15856,7 @@ snapshots:
       '@aws-crypto/crc32': 5.2.0
       '@smithy/types': 3.6.0
       '@smithy/util-hex-encoding': 3.0.0
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@smithy/eventstream-serde-browser@3.0.11':
     dependencies:
@@ -15879,7 +15879,7 @@ snapshots:
     dependencies:
       '@smithy/eventstream-codec': 3.1.7
       '@smithy/types': 3.6.0
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@smithy/fetch-http-handler@3.2.9':
     dependencies:
@@ -15895,7 +15895,7 @@ snapshots:
       '@smithy/querystring-builder': 3.0.8
       '@smithy/types': 3.6.0
       '@smithy/util-base64': 3.0.0
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@smithy/hash-blob-browser@3.1.7':
     dependencies:
@@ -15924,11 +15924,11 @@ snapshots:
 
   '@smithy/is-array-buffer@2.2.0':
     dependencies:
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@smithy/is-array-buffer@3.0.0':
     dependencies:
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@smithy/md5-js@3.0.8':
     dependencies:
@@ -16004,12 +16004,12 @@ snapshots:
     dependencies:
       '@smithy/types': 3.6.0
       '@smithy/util-uri-escape': 3.0.0
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@smithy/querystring-parser@3.0.8':
     dependencies:
       '@smithy/types': 3.6.0
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@smithy/service-error-classification@3.0.8':
     dependencies:
@@ -16018,7 +16018,7 @@ snapshots:
   '@smithy/shared-ini-file-loader@3.1.9':
     dependencies:
       '@smithy/types': 3.6.0
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@smithy/signature-v4@4.2.1':
     dependencies:
@@ -16029,7 +16029,7 @@ snapshots:
       '@smithy/util-middleware': 3.0.8
       '@smithy/util-uri-escape': 3.0.0
       '@smithy/util-utf8': 3.0.0
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@smithy/smithy-client@3.4.2':
     dependencies:
@@ -16068,16 +16068,16 @@ snapshots:
   '@smithy/util-buffer-from@2.2.0':
     dependencies:
       '@smithy/is-array-buffer': 2.2.0
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@smithy/util-buffer-from@3.0.0':
     dependencies:
       '@smithy/is-array-buffer': 3.0.0
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@smithy/util-config-provider@3.0.0':
     dependencies:
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@smithy/util-defaults-mode-browser@3.0.25':
     dependencies:
@@ -16105,7 +16105,7 @@ snapshots:
 
   '@smithy/util-hex-encoding@3.0.0':
     dependencies:
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@smithy/util-middleware@3.0.8':
     dependencies:
@@ -16131,12 +16131,12 @@ snapshots:
 
   '@smithy/util-uri-escape@3.0.0':
     dependencies:
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@smithy/util-utf8@2.3.0':
     dependencies:
       '@smithy/util-buffer-from': 2.2.0
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@smithy/util-utf8@3.0.0':
     dependencies:
@@ -16760,7 +16760,7 @@ snapshots:
 
   '@thi.ng/checks@2.9.11':
     dependencies:
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@thi.ng/compare@1.3.34':
     dependencies:
@@ -16843,13 +16843,13 @@ snapshots:
 
   '@types/bunyan@1.8.9':
     dependencies:
-      '@types/node': 22.8.5
+      '@types/node': 22.8.6
 
   '@types/cacheable-request@6.0.3':
     dependencies:
       '@types/http-cache-semantics': 4.0.4
       '@types/keyv': 3.1.4
-      '@types/node': 22.8.5
+      '@types/node': 22.8.6
       '@types/responselike': 1.0.3
 
   '@types/chrome@0.0.279':
@@ -16859,7 +16859,7 @@ snapshots:
 
   '@types/concat-stream@2.0.3':
     dependencies:
-      '@types/node': 22.8.5
+      '@types/node': 22.8.6
 
   '@types/cookie@0.6.0': {}
 
@@ -16976,7 +16976,7 @@ snapshots:
 
   '@types/keyv@3.1.4':
     dependencies:
-      '@types/node': 22.8.5
+      '@types/node': 22.8.6
 
   '@types/mdast@3.0.15':
     dependencies:
@@ -17043,7 +17043,7 @@ snapshots:
 
   '@types/responselike@1.0.3':
     dependencies:
-      '@types/node': 22.8.5
+      '@types/node': 22.8.6
 
   '@types/semver@7.5.8': {}
 
@@ -17075,7 +17075,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 22.8.5
+      '@types/node': 22.8.6
     optional: true
 
   '@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@8.12.2(eslint@9.13.0(jiti@1.21.6))(typescript@5.6.3))(eslint@9.13.0(jiti@1.21.6))(typescript@5.6.3)':
@@ -24553,7 +24553,7 @@ snapshots:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
-      '@types/node': 22.8.5
+      '@types/node': 22.8.6
       long: 5.2.3
 
   protocols@2.0.1: {}
@@ -25112,7 +25112,7 @@ snapshots:
       lodash: 4.17.21
       strip-ansi: 6.0.1
 
-  renovate@38.138.6(@aws-sdk/client-sso-oidc@3.658.1(@aws-sdk/client-sts@3.658.1))(encoding@0.1.13)(typanion@3.14.0):
+  renovate@38.141.1(@aws-sdk/client-sso-oidc@3.658.1(@aws-sdk/client-sts@3.658.1))(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.658.1
       '@aws-sdk/client-ec2': 3.658.1
