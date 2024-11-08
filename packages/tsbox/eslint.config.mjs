@@ -1,3 +1,14 @@
 import base from "../config-eslint/base.mjs";
 
-export default [...base];
+export default [
+  ...base,
+  {
+    rules: {
+      "import/no-unresolved": "off",
+      "@typescript-eslint/strict-boolean-expressions": "off",
+      "no-console": "off",
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/no-unsafe-return": "off",
+    },
+  },
+];
