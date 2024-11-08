@@ -18,16 +18,20 @@ const getChromePathFromEnv = (): Result<string, Error> => {
   return chromePath ? ok(chromePath) : err(new Error("There is not env config"));
 };
 
-test("Example Domain", async () => {
-  const chrome_path = getChromePathFromEnv();
+/**
+ * run test by Puppeteer
+ * TODO: use using -> https://zenn.dev/mizchi/articles/practical-await-using
+ */
+void test("Example Domain", async () => {
+  const chromePath = getChromePathFromEnv();
 
-  if (chrome_path.isOk()) {
+  if (chromePath.isOk()) {
     const parser = EVP.object({
       CHROME: EVP.string(),
     });
 
     type Config = EVP.TypeOf<typeof parser>;
-    const result: Config = parser.parse({ CHROME: chrome_path.value });
+    const result: Config = parser.parse({ CHROME: chromePath.value });
     console.log(`chrome path: ${result.CHROME}`);
 
     const browser = await puppeteer.launch({
