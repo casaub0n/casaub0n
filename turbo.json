@@ -4,10 +4,10 @@
     "build": {
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**", "!.next/cache/**", "storybook-static"]
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**", "storybook-static/**"]
     },
     "test": {
-      "outputs": ["__report__/**"]
+      "outputs": ["__report__/**", "coverage/**", "dist/**"]
     },
     "test:ci": {},
     "dev": {
