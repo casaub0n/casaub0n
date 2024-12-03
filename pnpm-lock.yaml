@@ -34,7 +34,7 @@ importers:
         version: 3.4.1
       renovate:
         specifier: ^39.0.0
-        version: 39.45.2(@aws-sdk/client-sso-oidc@3.699.0(@aws-sdk/client-sts@3.699.0))(encoding@0.1.13)(typanion@3.14.0)
+        version: 39.46.0(@aws-sdk/client-sso-oidc@3.699.0(@aws-sdk/client-sts@3.699.0))(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: ^14.0.5
         version: 14.4.0
@@ -6335,6 +6335,10 @@ packages:
     resolution: {integrity: sha512-JhcR/+KIjkkjiU8yEpaB/USlzVi3i5whwOjpIRNGi9svKEXZSe+Qp6IWAjFjv+2GViAoDRCUv/QLNziQxsLqDg==}
     engines: {node: '>=12'}
 
+  dotenv@16.4.6:
+    resolution: {integrity: sha512-JhcR/+KIjkkjiU8yEpaB/USlzVi3i5whwOjpIRNGi9svKEXZSe+Qp6IWAjFjv+2GViAoDRCUv/QLNziQxsLqDg==}
+    engines: {node: '>=12'}
+
   dset@3.1.4:
     resolution: {integrity: sha512-2QF/g9/zTaPDc3BjNcVTGoBbXBgYfMTTceLaYcFJ/W9kggFUkhxD/hMEeuLKbugyef9SqAx8cpgwlIP/jinUTA==}
     engines: {node: '>=4'}
@@ -10523,8 +10527,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@39.45.2:
-    resolution: {integrity: sha512-2wLMQqEv8HkOmo/tMsF9OZjtKf6bN0ASjxg0IFYvw9sBaui03E8/a9uxyISEKcCmENI961ndd0Mw7umgRcn3GQ==}
+  renovate@39.46.0:
+    resolution: {integrity: sha512-4FG6hbQUL/oeKqW1UnJ4h5mlyxQTJgZyGbTTylmwt0XsmCLe+CPvWV0b47sNh37jCuy+SdmX19jqRuFwWfHVMg==}
     engines: {node: ^20.15.1 || ^22.11.0, pnpm: ^9.0.0}
     hasBin: true
 
@@ -19917,6 +19921,8 @@ snapshots:
 
   dotenv@16.4.6: {}
 
+  dotenv@16.4.6: {}
+
   dset@3.1.4: {}
 
   dtrace-provider@0.8.8:
@@ -25353,7 +25359,7 @@ snapshots:
       lodash: 4.17.21
       strip-ansi: 6.0.1
 
-  renovate@39.45.2(@aws-sdk/client-sso-oidc@3.699.0(@aws-sdk/client-sts@3.699.0))(encoding@0.1.13)(typanion@3.14.0):
+  renovate@39.46.0(@aws-sdk/client-sso-oidc@3.699.0(@aws-sdk/client-sts@3.699.0))(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.699.0
       '@aws-sdk/client-ec2': 3.701.0
