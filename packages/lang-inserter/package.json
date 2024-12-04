@@ -1,0 +1,54 @@
+{
+  "name": "lang-inserter",
+  "version": "1.0.17",
+  "description": "Inserting lang config in your md",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/casaub0n/casaub0n",
+    "directory": "packages/lang-inserter"
+  },
+  "author": {
+    "name": "casaub0n",
+    "email": "netzach.yoshida@gmail.com",
+    "url": "https://github.com/casaub0n"
+  },
+  "main": "./dist/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "rmdist": "rimraf dist",
+    "tsup:build": "pnpm rmdist && tsup",
+    "build": "pnpm rmdist && tsx build.ts",
+    "lint": "eslint ./src"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "userscript",
+    "schemer",
+    "node script"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@casaub0n/eslint-config": "workspace:*",
+    "@types/mock-fs": "^4.13.4",
+    "@types/node": "^22.0.0",
+    "@vitest/ui": "^2.0.0",
+    "esbuild": "^0.24.0",
+    "rimraf": "^6.0.1",
+    "tsup": "^8.2.4",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3",
+    "vite": "^6.0.0",
+    "vitest": "^2.0.0"
+  },
+  "dependencies": {
+    "neverthrow": "^8.0.0",
+    "pino": "^9.3.2",
+    "valibot": "^0.42.0"
+  }
+}
