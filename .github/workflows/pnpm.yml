@@ -49,7 +49,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       # Don't specific actual pnpm's version because renovate can't update pnpm's version, this action read pnpm version of root's packege.json
       - name: Set up pnpm
