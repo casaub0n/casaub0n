@@ -171,7 +171,7 @@ importers:
         version: 19.0.2(@types/react@19.0.2)
       '@vanilla-extract/next-plugin':
         specifier: ^2.4.1
-        version: 2.4.8(@types/node@22.10.2)(next@15.1.2(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(terser@5.37.0)(webpack@5.97.1(@swc/core@1.10.1(@swc/helpers@0.5.15)))
+        version: 2.4.8(@types/node@22.10.2)(next@15.1.2(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(webpack@5.97.1(@swc/core@1.10.1(@swc/helpers@0.5.15)))
       autoprefixer:
         specifier: ^10.4.19
         version: 10.4.20(postcss@8.4.49)
@@ -243,7 +243,7 @@ importers:
         version: 8.4.7(@storybook/test@8.4.7(storybook@8.4.7(bufferutil@4.0.8)(prettier@3.4.2)))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.4.7(bufferutil@4.0.8)(prettier@3.4.2))(typescript@5.7.2)
       '@vanilla-extract/webpack-plugin':
         specifier: ^2.3.9
-        version: 2.3.15(@types/node@22.10.2)(terser@5.37.0)(webpack@5.97.1(esbuild@0.24.0))
+        version: 2.3.16(@types/node@22.10.2)(terser@5.37.0)(webpack@5.97.1(esbuild@0.24.0))
       fs-extra:
         specifier: ^11.2.0
         version: 11.2.0
@@ -4594,9 +4594,6 @@ packages:
   '@ungap/structured-clone@1.2.1':
     resolution: {integrity: sha512-fEzPV3hSkSMltkw152tJKNARhOupqbH96MZWyRjNaYZOMIzbrTeQDG+MTc6Mr2pgzFQzFxAfmhGDNP5QK++2ZA==}
 
-  '@vanilla-extract/babel-plugin-debug-ids@1.1.0':
-    resolution: {integrity: sha512-Zy9bKjaL2P5zsrFYQJ8IjWGlFODmZrpvFmjFE0Zv8om55Pz1JtpJtL6DvlxlWUxbVaP1HKCqsmEfFOZN8fX/ZQ==}
-
   '@vanilla-extract/babel-plugin-debug-ids@1.2.0':
     resolution: {integrity: sha512-z5nx2QBnOhvmlmBKeRX5sPVLz437wV30u+GJL+Hzj1rGiJYVNvgIIlzUpRNjVQ0MgAgiQIqIUbqPnmMc6HmDlQ==}
 
@@ -4609,9 +4606,6 @@ packages:
   '@vanilla-extract/dynamic@2.1.2':
     resolution: {integrity: sha512-9BGMciD8rO1hdSPIAh1ntsG4LPD3IYKhywR7VOmmz9OO4Lx1hlwkSg3E6X07ujFx7YuBfx0GDQnApG9ESHvB2A==}
 
-  '@vanilla-extract/integration@7.1.11':
-    resolution: {integrity: sha512-IGRaLrpkjyVHTHDZQBQvFBl399yRfSMJoVI2KaocEZB33aP+H4Qup83od2hc6R5IxGWdvbiiCOJCYsnmFiy85Q==}
-
   '@vanilla-extract/integration@7.1.12':
     resolution: {integrity: sha512-71HFjnfL7qXM3hqyk7z9c8zrudfO9Sut6IhSmH8IKwmLk/tIMFIL86L6nYpItfUFUa/mrER6YUQPp/SfwjRvkw==}
 
@@ -4622,11 +4616,6 @@ packages:
 
   '@vanilla-extract/private@1.0.6':
     resolution: {integrity: sha512-ytsG/JLweEjw7DBuZ/0JCN4WAQgM9erfSTdS1NQY778hFQSZ6cfCDEZZ0sgVm4k54uNz6ImKB33AYvSR//fjxw==}
-
-  '@vanilla-extract/webpack-plugin@2.3.15':
-    resolution: {integrity: sha512-xU809X84B1B1MoHAHm6hg7PjdPTCz+mVElfEMrA5g0PzvF+PsyfDoqQpPBZjCNvu/DZ7pVhG/qefD0p4ZJ5+Ag==}
-    peerDependencies:
-      webpack: ^4.30.0 || ^5.20.2
 
   '@vanilla-extract/webpack-plugin@2.3.16':
     resolution: {integrity: sha512-/KkXlbQS+dXCKgxR0BhfjxNR/IZbxAPlj5VRI3ZKoUafJQ/WqUT7LEO7OUFhLQoqRj5oeMHYZ8YmkZk8na7mjQ==}
@@ -17993,12 +17982,6 @@ snapshots:
 
   '@ungap/structured-clone@1.2.1': {}
 
-  '@vanilla-extract/babel-plugin-debug-ids@1.1.0':
-    dependencies:
-      '@babel/core': 7.26.0
-    transitivePeerDependencies:
-      - supports-color
-
   '@vanilla-extract/babel-plugin-debug-ids@1.2.0':
     dependencies:
       '@babel/core': 7.26.0
@@ -18043,32 +18026,6 @@ snapshots:
     dependencies:
       '@vanilla-extract/private': 1.0.6
 
-  '@vanilla-extract/integration@7.1.11(@types/node@22.10.2)(terser@5.37.0)':
-    dependencies:
-      '@babel/core': 7.26.0
-      '@babel/plugin-syntax-typescript': 7.25.9(@babel/core@7.26.0)
-      '@vanilla-extract/babel-plugin-debug-ids': 1.1.0
-      '@vanilla-extract/css': 1.16.1
-      dedent: 1.5.3
-      esbuild: 0.23.1
-      eval: 0.1.8
-      find-up: 5.0.0
-      javascript-stringify: 2.1.0
-      mlly: 1.7.3
-      vite: 5.4.11(@types/node@22.10.2)(terser@5.37.0)
-      vite-node: 1.6.0(@types/node@22.10.2)(terser@5.37.0)
-    transitivePeerDependencies:
-      - '@types/node'
-      - babel-plugin-macros
-      - less
-      - lightningcss
-      - sass
-      - sass-embedded
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
-
   '@vanilla-extract/integration@7.1.12(@types/node@22.10.2)(terser@5.37.0)':
     dependencies:
       '@babel/core': 7.26.0
@@ -18095,9 +18052,9 @@ snapshots:
       - supports-color
       - terser
 
-  '@vanilla-extract/next-plugin@2.4.8(@types/node@22.10.2)(next@15.1.2(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(terser@5.37.0)(webpack@5.97.1(@swc/core@1.10.1(@swc/helpers@0.5.15)))':
+  '@vanilla-extract/next-plugin@2.4.8(@types/node@22.10.2)(next@15.1.2(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(webpack@5.97.1(@swc/core@1.10.1(@swc/helpers@0.5.15)))':
     dependencies:
-      '@vanilla-extract/webpack-plugin': 2.3.16(@types/node@22.10.2)(terser@5.37.0)(webpack@5.97.1(@swc/core@1.10.1(@swc/helpers@0.5.15)))
+      '@vanilla-extract/webpack-plugin': 2.3.16(@types/node@22.10.2)(webpack@5.97.1(@swc/core@1.10.1(@swc/helpers@0.5.15)))
       next: 15.1.2(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
     transitivePeerDependencies:
       - '@types/node'
@@ -18114,9 +18071,9 @@ snapshots:
 
   '@vanilla-extract/private@1.0.6': {}
 
-  '@vanilla-extract/webpack-plugin@2.3.15(@types/node@22.10.2)(terser@5.37.0)(webpack@5.97.1(esbuild@0.24.0))':
+  '@vanilla-extract/webpack-plugin@2.3.16(@types/node@22.10.2)(terser@5.37.0)(webpack@5.97.1(esbuild@0.24.0))':
     dependencies:
-      '@vanilla-extract/integration': 7.1.11(@types/node@22.10.2)(terser@5.37.0)
+      '@vanilla-extract/integration': 7.1.12(@types/node@22.10.2)(terser@5.37.0)
       debug: 4.4.0
       loader-utils: 2.0.4
       picocolors: 1.1.1
@@ -18133,7 +18090,7 @@ snapshots:
       - supports-color
       - terser
 
-  '@vanilla-extract/webpack-plugin@2.3.16(@types/node@22.10.2)(terser@5.37.0)(webpack@5.97.1(@swc/core@1.10.1(@swc/helpers@0.5.15)))':
+  '@vanilla-extract/webpack-plugin@2.3.16(@types/node@22.10.2)(webpack@5.97.1(@swc/core@1.10.1(@swc/helpers@0.5.15)))':
     dependencies:
       '@vanilla-extract/integration': 7.1.12(@types/node@22.10.2)(terser@5.37.0)
       debug: 4.4.0
