@@ -500,7 +500,7 @@ importers:
         version: 22.10.2
       evp-ts:
         specifier: ^1.0.5
-        version: 1.0.6(@swc/core@1.10.1(@swc/helpers@0.5.15))(jiti@2.4.2)(postcss@8.4.49)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1)
+        version: 1.0.7(@swc/core@1.10.1(@swc/helpers@0.5.15))(jiti@2.4.2)(postcss@8.4.49)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1)
       neverthrow:
         specifier: ^8.0.0
         version: 8.1.1
@@ -615,7 +615,7 @@ importers:
         version: 0.24.2
       evp-ts:
         specifier: ^1.0.5
-        version: 1.0.6(@swc/core@1.10.1(@swc/helpers@0.5.15))(jiti@2.4.2)(postcss@8.4.49)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1)
+        version: 1.0.7(@swc/core@1.10.1(@swc/helpers@0.5.15))(jiti@2.4.2)(postcss@8.4.49)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1)
       header-inserter:
         specifier: 1.0.17
         version: 1.0.17(typescript@5.7.2)
@@ -645,7 +645,7 @@ importers:
     dependencies:
       evp-ts:
         specifier: ^1.0.5
-        version: 1.0.6(@swc/core@1.10.1(@swc/helpers@0.5.15))(jiti@2.4.2)(postcss@8.4.49)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1)
+        version: 1.0.7(@swc/core@1.10.1(@swc/helpers@0.5.15))(jiti@2.4.2)(postcss@8.4.49)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1)
       glob:
         specifier: ^11.0.0
         version: 11.0.0
@@ -7092,11 +7092,8 @@ packages:
     resolution: {integrity: sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==}
     engines: {node: '>=0.8.x'}
 
-  evp-ts@1.0.3:
-    resolution: {integrity: sha512-yRpxZtF7PDcHAf2BGNBNySXIo++nyeYidxyfZOaCORHkGzWmmIGJnSaF4rKGQxGSB48p7ecyecpXXXbndNq4HQ==}
-
-  evp-ts@1.0.6:
-    resolution: {integrity: sha512-kq1DwXcbbYvc6bUnmjqbfdM8K+zkY+e/Rykpt5Dywum1MskHDsc6aOkQJWfp8w009xq6g6DonrFG1+kouDqNug==}
+  evp-ts@1.0.7:
+    resolution: {integrity: sha512-0Z+e2Bv2iTIMoEA9Y3tDuu5GEIjg50wBshH4Vjdevn1qS5Vbm6C7djxtScJvBKVbgrakqwtM4GYWTvtXZdoyQQ==}
 
   evp_bytestokey@1.0.3:
     resolution: {integrity: sha512-/f2Go4TognH/KvCISP7OUsHn85hT9nUkxxA9BEWxFn+Oj9o8ZNLm/40hdlgSLyuOimsrTKLUMEorQexp/aPQeA==}
@@ -21039,23 +21036,8 @@ snapshots:
 
   events@3.3.0: {}
 
-  evp-ts@1.0.3(@swc/core@1.10.1(@swc/helpers@0.5.15))(jiti@2.4.2)(postcss@8.4.49)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1):
+  evp-ts@1.0.7(@swc/core@1.10.1(@swc/helpers@0.5.15))(jiti@2.4.2)(postcss@8.4.49)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1):
     dependencies:
-      picocolors: 1.1.1
-      tsup: 8.3.5(@swc/core@1.10.1(@swc/helpers@0.5.15))(jiti@2.4.2)(postcss@8.4.49)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1)
-    transitivePeerDependencies:
-      - '@microsoft/api-extractor'
-      - '@swc/core'
-      - jiti
-      - postcss
-      - supports-color
-      - tsx
-      - typescript
-      - yaml
-
-  evp-ts@1.0.6(@swc/core@1.10.1(@swc/helpers@0.5.15))(jiti@2.4.2)(postcss@8.4.49)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1):
-    dependencies:
-      evp-ts: 1.0.3(@swc/core@1.10.1(@swc/helpers@0.5.15))(jiti@2.4.2)(postcss@8.4.49)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1)
       picocolors: 1.1.1
       tsup: 8.3.5(@swc/core@1.10.1(@swc/helpers@0.5.15))(jiti@2.4.2)(postcss@8.4.49)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1)
     transitivePeerDependencies:
