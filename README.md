@@ -22,9 +22,10 @@ Since then, my movie's adventure has started.
 - Pikmin Bloom frend's code: 465561226769
 - [Stream casaub0n](https://steamcommunity.com/id/casaub0n/)
 
-*[Duolingo](https://www.duolingo.com/profile/casaub00n?via=share_profile_link)*
+_[Duolingo](https://www.duolingo.com/profile/casaub00n?via=share_profile_link)_
 ![1000009215](https://github.com/user-attachments/assets/2c77b80c-e6b7-4367-848c-bc621b102be5)
 
+I major in Chinese.
 
 ## Others
 
