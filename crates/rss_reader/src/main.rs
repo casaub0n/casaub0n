@@ -1,5 +1,3 @@
-// https://github.com/microsoft/windows-rs/blob/master/crates/samples/windows/rss/src/main.rs
-
 use windows::{core::*, Foundation::Uri, Web::Syndication::SyndicationClient};
 
 fn main() -> Result<()> {
