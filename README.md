@@ -31,6 +31,8 @@ _[Duolingo](https://www.duolingo.com/profile/casaub00n?via=share_profile_link)_
 
 I major in Chinese.
 
+- iherb code: AIL1415
+
 ## Others
 
 - [What is this repository](./packages/casaub0n/README.md)
