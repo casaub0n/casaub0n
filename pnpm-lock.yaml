@@ -210,7 +210,7 @@ importers:
         version: 5.7.3
       vercel:
         specifier: ^39.0.0
-        version: 39.2.6(@swc/core@1.10.7(@swc/helpers@0.5.15))(encoding@0.1.13)(rollup@4.30.1)
+        version: 39.3.0(@swc/core@1.10.7(@swc/helpers@0.5.15))(encoding@0.1.13)(rollup@4.30.1)
 
   apps/catalog:
     devDependencies:
@@ -4617,8 +4617,8 @@ packages:
     resolution: {integrity: sha512-fSD23DxGND40IzSkXjcFcxr53t3Tiym59Is0jSYIFpG4/0f0KO9SGtcp1sXiebvPaGe7N/tU05cH4yt2S6/IPg==}
     engines: {node: '>=18.14'}
 
-  '@vercel/python@4.6.0':
-    resolution: {integrity: sha512-43bpxcas3d3ep+F5zdziva6gW1LBc71YGQiG/XmajGlDv4cCNO312Vf8BE5SYafb5ft6rwl69+WOoFwGkI26qA==}
+  '@vercel/python@4.7.0':
+    resolution: {integrity: sha512-mkHmzYYZBLFLdvSdgrnBl1Qc1+LI5YIafSNJOj8oW4YU8vvALLMbwgZp42pZnyXW0e/3uHcesiRp4P0jSB0wyg==}
 
   '@vercel/redwood@2.1.12':
     resolution: {integrity: sha512-9CLwF8QKmxWlt1CMxoVD5gxTfwnojo1UlFONRSoUfjpNC+nTHEMCADVyawmDkANXs7Olx4QQSwJqsaWT8A9Jgg==}
@@ -5738,6 +5738,10 @@ packages:
 
   consola@3.3.3:
     resolution: {integrity: sha512-Qil5KwghMzlqd51UXM0b6fyaGHtOC22scxrwrz4A2882LyUMwQjnvaedN1HAeXzphspQ6CpHkzMAWxBTUruDLg==}
+    engines: {node: ^14.18.0 || >=16.10.0}
+
+  consola@3.4.0:
+    resolution: {integrity: sha512-EiPU8G6dQG0GFHNR8ljnZFki/8a+cQwEQ+7wpxdChl02Q8HXlwEZWD5lqAF8vC2sEC3Tehr8hy7vErz88LHyUA==}
     engines: {node: ^14.18.0 || >=16.10.0}
 
   console-browserify@1.2.0:
@@ -12003,8 +12007,8 @@ packages:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
 
-  vercel@39.2.6:
-    resolution: {integrity: sha512-s3T8eEXeNcMcgU+NsHS2/1B7Pj1aWip+dy0IQqbDwy1ArFFI0S4IzpN2+XxfG8Y6fPJnLGUyywTe/nbFU7SWPg==}
+  vercel@39.3.0:
+    resolution: {integrity: sha512-VyGaH5tnVVsgACcbU4PCRyQBDg/SST7/HQBaIXNnmOW7Ngjcn04wamjPgYAdFUGroiTm+ZpmNbCO1DQXzNeTjQ==}
     engines: {node: '>= 16'}
     hasBin: true
 
@@ -15171,7 +15175,7 @@ snapshots:
 
   '@mapbox/node-pre-gyp@2.0.0-rc.0(encoding@0.1.13)':
     dependencies:
-      consola: 3.3.3
+      consola: 3.4.0
       detect-libc: 2.0.3
       https-proxy-agent: 7.0.6
       node-fetch: 2.7.0(encoding@0.1.13)
@@ -17162,13 +17166,13 @@ snapshots:
 
   '@types/bunyan@1.8.9':
     dependencies:
-      '@types/node': 22.10.5
+      '@types/node': 22.10.6
 
   '@types/cacheable-request@6.0.3':
     dependencies:
       '@types/http-cache-semantics': 4.0.4
       '@types/keyv': 3.1.4
-      '@types/node': 22.10.5
+      '@types/node': 22.10.6
       '@types/responselike': 1.0.3
 
   '@types/chrome@0.0.293':
@@ -17178,7 +17182,7 @@ snapshots:
 
   '@types/concat-stream@2.0.3':
     dependencies:
-      '@types/node': 22.10.5
+      '@types/node': 22.10.6
 
   '@types/cookie@0.6.0': {}
 
@@ -17300,7 +17304,7 @@ snapshots:
 
   '@types/keyv@3.1.4':
     dependencies:
-      '@types/node': 22.10.5
+      '@types/node': 22.10.6
 
   '@types/mdast@3.0.15':
     dependencies:
@@ -17362,7 +17366,7 @@ snapshots:
 
   '@types/responselike@1.0.3':
     dependencies:
-      '@types/node': 22.10.5
+      '@types/node': 22.10.6
 
   '@types/semver@7.5.8': {}
 
@@ -17394,7 +17398,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 22.10.5
+      '@types/node': 22.10.6
     optional: true
 
   '@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0(jiti@1.21.7))(typescript@5.7.3))(eslint@9.18.0(jiti@1.21.7))(typescript@5.7.3)':
@@ -17925,7 +17929,7 @@ snapshots:
     transitivePeerDependencies:
       - utf-8-validate
 
-  '@vercel/python@4.6.0': {}
+  '@vercel/python@4.7.0': {}
 
   '@vercel/redwood@2.1.12(encoding@0.1.13)(rollup@4.30.1)':
     dependencies:
@@ -19357,6 +19361,8 @@ snapshots:
       - supports-color
 
   consola@3.3.3: {}
+
+  consola@3.4.0: {}
 
   console-browserify@1.2.0: {}
 
@@ -20804,7 +20810,7 @@ snapshots:
 
   eval@0.1.8:
     dependencies:
-      '@types/node': 22.10.5
+      '@types/node': 22.10.6
       require-like: 0.1.2
 
   event-target-shim@5.0.1: {}
@@ -27065,7 +27071,7 @@ snapshots:
       '@types/concat-stream': 2.0.3
       '@types/debug': 4.1.12
       '@types/is-empty': 1.2.3
-      '@types/node': 22.10.5
+      '@types/node': 22.10.6
       '@types/unist': 3.0.3
       concat-stream: 2.0.0
       debug: 4.4.0
@@ -27303,7 +27309,7 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vercel@39.2.6(@swc/core@1.10.7(@swc/helpers@0.5.15))(encoding@0.1.13)(rollup@4.30.1):
+  vercel@39.3.0(@swc/core@1.10.7(@swc/helpers@0.5.15))(encoding@0.1.13)(rollup@4.30.1):
     dependencies:
       '@vercel/build-utils': 9.0.1
       '@vercel/fun': 1.1.2(encoding@0.1.13)
@@ -27311,7 +27317,7 @@ snapshots:
       '@vercel/hydrogen': 1.0.11
       '@vercel/next': 4.4.2(encoding@0.1.13)(rollup@4.30.1)
       '@vercel/node': 5.0.2(@swc/core@1.10.7(@swc/helpers@0.5.15))(encoding@0.1.13)(rollup@4.30.1)
-      '@vercel/python': 4.6.0
+      '@vercel/python': 4.7.0
       '@vercel/redwood': 2.1.12(encoding@0.1.13)(rollup@4.30.1)
       '@vercel/remix-builder': 5.0.2(encoding@0.1.13)(rollup@4.30.1)
       '@vercel/ruby': 2.1.0
