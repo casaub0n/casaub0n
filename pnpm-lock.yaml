@@ -246,7 +246,7 @@ importers:
         version: 2.3.16(@types/node@22.10.6)(terser@5.37.0)(webpack@5.97.1(esbuild@0.24.2))
       fs-extra:
         specifier: ^11.2.0
-        version: 11.2.0
+        version: 11.3.0
       mini-css-extract-plugin:
         specifier: ^2.9.0
         version: 2.9.2(webpack@5.97.1(esbuild@0.24.2))
@@ -7128,6 +7128,10 @@ packages:
 
   fs-extra@11.2.0:
     resolution: {integrity: sha512-PmDi3uwK5nFuXh7XDTlVnS17xJS7vW36is2+w3xcv8SVxiB4NyATf4ctkVY5bkSjX0Y4nbvZCq1/EjtEyr9ktw==}
+    engines: {node: '>=14.14'}
+
+  fs-extra@11.3.0:
+    resolution: {integrity: sha512-Z4XaCL6dUDHfP/jT25jJKMmtxvuwbkrD1vNSMFlo9lNLY2c5FHYSQgHPRZUjAB26TpDEoW9HCOgplrdbaPV/ew==}
     engines: {node: '>=14.14'}
 
   fs-extra@8.1.0:
@@ -14954,7 +14958,7 @@ snapshots:
       cosmiconfig: 9.0.0(typescript@5.7.3)
       dedent: 1.5.3
       execa: 8.0.1
-      fs-extra: 11.2.0
+      fs-extra: 11.3.0
       glob-parent: 6.0.2
       is-ci: 4.1.0
       json5: 2.2.3
@@ -14984,7 +14988,7 @@ snapshots:
   '@lerna-lite/init@3.11.0(@types/node@22.10.6)(typescript@5.7.3)':
     dependencies:
       '@lerna-lite/core': 3.11.0(@types/node@22.10.6)(typescript@5.7.3)
-      fs-extra: 11.2.0
+      fs-extra: 11.3.0
       p-map: 7.0.3
       write-json-file: 6.0.0
     transitivePeerDependencies:
@@ -15015,7 +15019,7 @@ snapshots:
       '@npmcli/package-json': 5.2.1
       byte-size: 9.0.1
       columnify: 1.6.0
-      fs-extra: 11.2.0
+      fs-extra: 11.3.0
       has-unicode: 2.0.1
       libnpmaccess: 8.0.6
       libnpmpublish: 9.0.9
@@ -15057,7 +15061,7 @@ snapshots:
       conventional-commits-parser: 5.0.0
       conventional-recommended-bump: 9.0.0
       dedent: 1.5.3
-      fs-extra: 11.2.0
+      fs-extra: 11.3.0
       get-stream: 9.0.1
       git-url-parse: 16.0.0
       graceful-fs: 4.2.11
@@ -19304,7 +19308,7 @@ snapshots:
       debounce: 2.2.0
       debug: 4.4.0
       duplexer: 0.1.2
-      fs-extra: 11.2.0
+      fs-extra: 11.3.0
       glob: 11.0.1
       glob2base: 0.0.12
       ignore: 6.0.2
@@ -20902,6 +20906,12 @@ snapshots:
       universalify: 2.0.1
 
   fs-extra@11.2.0:
+    dependencies:
+      graceful-fs: 4.2.11
+      jsonfile: 6.1.0
+      universalify: 2.0.1
+
+  fs-extra@11.3.0:
     dependencies:
       graceful-fs: 4.2.11
       jsonfile: 6.1.0
