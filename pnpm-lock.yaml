@@ -645,7 +645,7 @@ importers:
     dependencies:
       evp-ts:
         specifier: 1.0.5
-        version: 1.0.5(@swc/core@1.6.13(@swc/helpers@0.5.15))(jiti@1.21.7)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.5.3)(yaml@2.7.0)
+        version: 1.0.5(@swc/core@1.10.9(@swc/helpers@0.5.15))(jiti@1.21.7)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.5.3)(yaml@2.7.0)
       glob:
         specifier: 11.0.1
         version: 11.0.1
@@ -660,8 +660,8 @@ importers:
         specifier: workspace:*
         version: link:../config-eslint
       '@swc/core':
-        specifier: 1.6.13
-        version: 1.6.13(@swc/helpers@0.5.15)
+        specifier: 1.10.9
+        version: 1.10.9(@swc/helpers@0.5.15)
       '@types/glob':
         specifier: 8.1.0
         version: 8.1.0
@@ -676,7 +676,7 @@ importers:
         version: 6.0.1
       tsup:
         specifier: 8.1.1
-        version: 8.1.1(@swc/core@1.6.13(@swc/helpers@0.5.15))(jiti@1.21.7)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.5.3)(yaml@2.7.0)
+        version: 8.1.1(@swc/core@1.10.9(@swc/helpers@0.5.15))(jiti@1.21.7)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.5.3)(yaml@2.7.0)
       typescript:
         specifier: 5.5.3
         version: 5.5.3
@@ -4037,20 +4037,8 @@ packages:
     cpu: [arm64]
     os: [darwin]
 
-  '@swc/core-darwin-arm64@1.6.13':
-    resolution: {integrity: sha512-SOF4buAis72K22BGJ3N8y88mLNfxLNprTuJUpzikyMGrvkuBFNcxYtMhmomO0XHsgLDzOJ+hWzcgjRNzjMsUcQ==}
-    engines: {node: '>=10'}
-    cpu: [arm64]
-    os: [darwin]
-
   '@swc/core-darwin-x64@1.10.9':
     resolution: {integrity: sha512-bi3el9/FV/la8HIsolSjeDar+tM7m9AmSF1w7X6ZByW2qgc4Z1tmq0A4M4H9aH3TfHesZbfq8hgaNtc2/VtzzQ==}
-    engines: {node: '>=10'}
-    cpu: [x64]
-    os: [darwin]
-
-  '@swc/core-darwin-x64@1.6.13':
-    resolution: {integrity: sha512-AW8akFSC+tmPE6YQQvK9S2A1B8pjnXEINg+gGgw0KRUUXunvu1/OEOeC5L2Co1wAwhD7bhnaefi06Qi9AiwOag==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [darwin]
@@ -4061,20 +4049,8 @@ packages:
     cpu: [arm]
     os: [linux]
 
-  '@swc/core-linux-arm-gnueabihf@1.6.13':
-    resolution: {integrity: sha512-f4gxxvDXVUm2HLYXRd311mSrmbpQF2MZ4Ja6XCQz1hWAxXdhRl1gpnZ+LH/xIfGSwQChrtLLVrkxdYUCVuIjFg==}
-    engines: {node: '>=10'}
-    cpu: [arm]
-    os: [linux]
-
   '@swc/core-linux-arm64-gnu@1.10.9':
     resolution: {integrity: sha512-41hJgPoGhIa12U6Tud+yLF/m64YA3mGut3TmBEkj2R7rdJdE0mljdtR0tf4J2RoQaWZPPi0DBSqGdROiAEx9dg==}
-    engines: {node: '>=10'}
-    cpu: [arm64]
-    os: [linux]
-
-  '@swc/core-linux-arm64-gnu@1.6.13':
-    resolution: {integrity: sha512-Nf/eoW2CbG8s+9JoLtjl9FByBXyQ5cjdBsA4efO7Zw4p+YSuXDgc8HRPC+E2+ns0praDpKNZtLvDtmF2lL+2Gg==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [linux]
@@ -4085,20 +4061,8 @@ packages:
     cpu: [arm64]
     os: [linux]
 
-  '@swc/core-linux-arm64-musl@1.6.13':
-    resolution: {integrity: sha512-2OysYSYtdw79prJYuKIiux/Gj0iaGEbpS2QZWCIY4X9sGoETJ5iMg+lY+YCrIxdkkNYd7OhIbXdYFyGs/w5LDg==}
-    engines: {node: '>=10'}
-    cpu: [arm64]
-    os: [linux]
-
   '@swc/core-linux-x64-gnu@1.10.9':
     resolution: {integrity: sha512-xW0y88vQvmzYo3Gn7yFnY03TfHMwuca4aFH3ZmhwDNOYHmTOi6fmhAkg/13F/NrwjMYO+GnF5uJTjdjb3B6tdQ==}
-    engines: {node: '>=10'}
-    cpu: [x64]
-    os: [linux]
-
-  '@swc/core-linux-x64-gnu@1.6.13':
-    resolution: {integrity: sha512-PkR4CZYJNk5hcd2+tMWBpnisnmYsUzazI1O5X7VkIGFcGePTqJ/bWlfUIVVExWxvAI33PQFzLbzmN5scyIUyGQ==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [linux]
@@ -4109,20 +4073,8 @@ packages:
     cpu: [x64]
     os: [linux]
 
-  '@swc/core-linux-x64-musl@1.6.13':
-    resolution: {integrity: sha512-OdsY7wryTxCKwGQcwW9jwWg3cxaHBkTTHi91+5nm7hFPpmZMz1HivJrWAMwVE7iXFw+M4l6ugB/wCvpYrUAAjA==}
-    engines: {node: '>=10'}
-    cpu: [x64]
-    os: [linux]
-
   '@swc/core-win32-arm64-msvc@1.10.9':
     resolution: {integrity: sha512-Uhh5T3Fq3Nyom96Bm3ACBNASH3iqNc76in7ewZz8PooUqeTIO8aZpsghnncjctRNE9T819/8btpiFIhHo3sKtg==}
-    engines: {node: '>=10'}
-    cpu: [arm64]
-    os: [win32]
-
-  '@swc/core-win32-arm64-msvc@1.6.13':
-    resolution: {integrity: sha512-ap6uNmYjwk9M/+bFEuWRNl3hq4VqgQ/Lk+ID/F5WGqczNr0L7vEf+pOsRAn0F6EV+o/nyb3ePt8rLhE/wjHpPg==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [win32]
@@ -4133,35 +4085,14 @@ packages:
     cpu: [ia32]
     os: [win32]
 
-  '@swc/core-win32-ia32-msvc@1.6.13':
-    resolution: {integrity: sha512-IJ8KH4yIUHTnS/U1jwQmtbfQals7zWPG0a9hbEfIr4zI0yKzjd83lmtS09lm2Q24QBWOCFGEEbuZxR4tIlvfzA==}
-    engines: {node: '>=10'}
-    cpu: [ia32]
-    os: [win32]
-
   '@swc/core-win32-x64-msvc@1.10.9':
     resolution: {integrity: sha512-NwkuUNeBBQnAaXVvcGw8Zr6RR8kylyjFUnlYZZ3G0QkQZ4rYLXYTafAmiRjrfzgVb0LcMF/sBzJvGOk7SwtIDg==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [win32]
 
-  '@swc/core-win32-x64-msvc@1.6.13':
-    resolution: {integrity: sha512-f6/sx6LMuEnbuxtiSL/EkR0Y6qUHFw1XVrh6rwzKXptTipUdOY+nXpKoh+1UsBm/r7H0/5DtOdrn3q5ZHbFZjQ==}
-    engines: {node: '>=10'}
-    cpu: [x64]
-    os: [win32]
-
   '@swc/core@1.10.9':
     resolution: {integrity: sha512-MQ97YSXu2oibzm7wi4GNa7hhndjLuVt/lmO2sq53+P37oZmyg/JQ/IYYtSiC6UGK3+cHoiVAykrK+glxLjJbag==}
-    engines: {node: '>=10'}
-    peerDependencies:
-      '@swc/helpers': '*'
-    peerDependenciesMeta:
-      '@swc/helpers':
-        optional: true
-
-  '@swc/core@1.6.13':
-    resolution: {integrity: sha512-eailUYex6fkfaQTev4Oa3mwn0/e3mQU4H8y1WPuImYQESOQDtVrowwUGDSc19evpBbHpKtwM+hw8nLlhIsF+Tw==}
     engines: {node: '>=10'}
     peerDependencies:
       '@swc/helpers': '*'
@@ -17225,61 +17156,31 @@ snapshots:
   '@swc/core-darwin-arm64@1.10.9':
     optional: true
 
-  '@swc/core-darwin-arm64@1.6.13':
-    optional: true
-
   '@swc/core-darwin-x64@1.10.9':
-    optional: true
-
-  '@swc/core-darwin-x64@1.6.13':
     optional: true
 
   '@swc/core-linux-arm-gnueabihf@1.10.9':
     optional: true
 
-  '@swc/core-linux-arm-gnueabihf@1.6.13':
-    optional: true
-
   '@swc/core-linux-arm64-gnu@1.10.9':
-    optional: true
-
-  '@swc/core-linux-arm64-gnu@1.6.13':
     optional: true
 
   '@swc/core-linux-arm64-musl@1.10.9':
     optional: true
 
-  '@swc/core-linux-arm64-musl@1.6.13':
-    optional: true
-
   '@swc/core-linux-x64-gnu@1.10.9':
-    optional: true
-
-  '@swc/core-linux-x64-gnu@1.6.13':
     optional: true
 
   '@swc/core-linux-x64-musl@1.10.9':
     optional: true
 
-  '@swc/core-linux-x64-musl@1.6.13':
-    optional: true
-
   '@swc/core-win32-arm64-msvc@1.10.9':
-    optional: true
-
-  '@swc/core-win32-arm64-msvc@1.6.13':
     optional: true
 
   '@swc/core-win32-ia32-msvc@1.10.9':
     optional: true
 
-  '@swc/core-win32-ia32-msvc@1.6.13':
-    optional: true
-
   '@swc/core-win32-x64-msvc@1.10.9':
-    optional: true
-
-  '@swc/core-win32-x64-msvc@1.6.13':
     optional: true
 
   '@swc/core@1.10.9(@swc/helpers@0.5.15)':
@@ -17297,24 +17198,6 @@ snapshots:
       '@swc/core-win32-arm64-msvc': 1.10.9
       '@swc/core-win32-ia32-msvc': 1.10.9
       '@swc/core-win32-x64-msvc': 1.10.9
-      '@swc/helpers': 0.5.15
-    optional: true
-
-  '@swc/core@1.6.13(@swc/helpers@0.5.15)':
-    dependencies:
-      '@swc/counter': 0.1.3
-      '@swc/types': 0.1.17
-    optionalDependencies:
-      '@swc/core-darwin-arm64': 1.6.13
-      '@swc/core-darwin-x64': 1.6.13
-      '@swc/core-linux-arm-gnueabihf': 1.6.13
-      '@swc/core-linux-arm64-gnu': 1.6.13
-      '@swc/core-linux-arm64-musl': 1.6.13
-      '@swc/core-linux-x64-gnu': 1.6.13
-      '@swc/core-linux-x64-musl': 1.6.13
-      '@swc/core-win32-arm64-msvc': 1.6.13
-      '@swc/core-win32-ia32-msvc': 1.6.13
-      '@swc/core-win32-x64-msvc': 1.6.13
       '@swc/helpers': 0.5.15
 
   '@swc/counter@0.1.3': {}
@@ -21212,6 +21095,20 @@ snapshots:
 
   events@3.3.0: {}
 
+  evp-ts@1.0.3(@swc/core@1.10.9(@swc/helpers@0.5.15))(jiti@1.21.7)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.5.3)(yaml@2.7.0):
+    dependencies:
+      picocolors: 1.1.1
+      tsup: 8.3.5(@swc/core@1.10.9(@swc/helpers@0.5.15))(jiti@1.21.7)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.5.3)(yaml@2.7.0)
+    transitivePeerDependencies:
+      - '@microsoft/api-extractor'
+      - '@swc/core'
+      - jiti
+      - postcss
+      - supports-color
+      - tsx
+      - typescript
+      - yaml
+
   evp-ts@1.0.3(@swc/core@1.10.9(@swc/helpers@0.5.15))(jiti@1.21.7)(postcss@8.5.1)(tsx@4.7.1)(typescript@5.7.3)(yaml@2.7.0):
     dependencies:
       picocolors: 1.1.1
@@ -21226,10 +21123,11 @@ snapshots:
       - typescript
       - yaml
 
-  evp-ts@1.0.3(@swc/core@1.6.13(@swc/helpers@0.5.15))(jiti@1.21.7)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.5.3)(yaml@2.7.0):
+  evp-ts@1.0.5(@swc/core@1.10.9(@swc/helpers@0.5.15))(jiti@1.21.7)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.5.3)(yaml@2.7.0):
     dependencies:
+      evp-ts: 1.0.3(@swc/core@1.10.9(@swc/helpers@0.5.15))(jiti@1.21.7)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.5.3)(yaml@2.7.0)
       picocolors: 1.1.1
-      tsup: 8.3.5(@swc/core@1.6.13(@swc/helpers@0.5.15))(jiti@1.21.7)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.5.3)(yaml@2.7.0)
+      tsup: 8.3.5(@swc/core@1.10.9(@swc/helpers@0.5.15))(jiti@1.21.7)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.5.3)(yaml@2.7.0)
     transitivePeerDependencies:
       - '@microsoft/api-extractor'
       - '@swc/core'
@@ -21245,21 +21143,6 @@ snapshots:
       evp-ts: 1.0.3(@swc/core@1.10.9(@swc/helpers@0.5.15))(jiti@1.21.7)(postcss@8.5.1)(tsx@4.7.1)(typescript@5.7.3)(yaml@2.7.0)
       picocolors: 1.1.1
       tsup: 8.3.5(@swc/core@1.10.9(@swc/helpers@0.5.15))(jiti@1.21.7)(postcss@8.5.1)(tsx@4.7.1)(typescript@5.7.3)(yaml@2.7.0)
-    transitivePeerDependencies:
-      - '@microsoft/api-extractor'
-      - '@swc/core'
-      - jiti
-      - postcss
-      - supports-color
-      - tsx
-      - typescript
-      - yaml
-
-  evp-ts@1.0.5(@swc/core@1.6.13(@swc/helpers@0.5.15))(jiti@1.21.7)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.5.3)(yaml@2.7.0):
-    dependencies:
-      evp-ts: 1.0.3(@swc/core@1.6.13(@swc/helpers@0.5.15))(jiti@1.21.7)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.5.3)(yaml@2.7.0)
-      picocolors: 1.1.1
-      tsup: 8.3.5(@swc/core@1.6.13(@swc/helpers@0.5.15))(jiti@1.21.7)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.5.3)(yaml@2.7.0)
     transitivePeerDependencies:
       - '@microsoft/api-extractor'
       - '@swc/core'
@@ -27157,7 +27040,7 @@ snapshots:
       - supports-color
       - ts-node
 
-  tsup@8.1.1(@swc/core@1.6.13(@swc/helpers@0.5.15))(jiti@1.21.7)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.5.3)(yaml@2.7.0):
+  tsup@8.1.1(@swc/core@1.10.9(@swc/helpers@0.5.15))(jiti@1.21.7)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.5.3)(yaml@2.7.0):
     dependencies:
       bundle-require: 5.1.0(esbuild@0.23.1)
       cac: 6.7.14
@@ -27175,7 +27058,7 @@ snapshots:
       sucrase: 3.35.0
       tree-kill: 1.2.2
     optionalDependencies:
-      '@swc/core': 1.6.13(@swc/helpers@0.5.15)
+      '@swc/core': 1.10.9(@swc/helpers@0.5.15)
       postcss: 8.5.1
       typescript: 5.5.3
     transitivePeerDependencies:
@@ -27201,6 +27084,34 @@ snapshots:
       rollup: 4.31.0
       source-map: 0.8.0-beta.0
       sucrase: 3.35.0
+      tree-kill: 1.2.2
+    optionalDependencies:
+      '@swc/core': 1.10.9(@swc/helpers@0.5.15)
+      postcss: 8.5.1
+      typescript: 5.5.3
+    transitivePeerDependencies:
+      - jiti
+      - supports-color
+      - tsx
+      - yaml
+
+  tsup@8.3.5(@swc/core@1.10.9(@swc/helpers@0.5.15))(jiti@1.21.7)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.5.3)(yaml@2.7.0):
+    dependencies:
+      bundle-require: 5.1.0(esbuild@0.24.2)
+      cac: 6.7.14
+      chokidar: 4.0.3
+      consola: 3.4.0
+      debug: 4.4.0
+      esbuild: 0.24.2
+      joycon: 3.1.1
+      picocolors: 1.1.1
+      postcss-load-config: 6.0.1(jiti@1.21.7)(postcss@8.5.1)(tsx@4.19.2)(yaml@2.7.0)
+      resolve-from: 5.0.0
+      rollup: 4.31.0
+      source-map: 0.8.0-beta.0
+      sucrase: 3.35.0
+      tinyexec: 0.3.2
+      tinyglobby: 0.2.10
       tree-kill: 1.2.2
     optionalDependencies:
       '@swc/core': 1.10.9(@swc/helpers@0.5.15)
@@ -27262,34 +27173,6 @@ snapshots:
       '@swc/core': 1.10.9(@swc/helpers@0.5.15)
       postcss: 8.5.1
       typescript: 5.7.3
-    transitivePeerDependencies:
-      - jiti
-      - supports-color
-      - tsx
-      - yaml
-
-  tsup@8.3.5(@swc/core@1.6.13(@swc/helpers@0.5.15))(jiti@1.21.7)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.5.3)(yaml@2.7.0):
-    dependencies:
-      bundle-require: 5.1.0(esbuild@0.24.2)
-      cac: 6.7.14
-      chokidar: 4.0.3
-      consola: 3.4.0
-      debug: 4.4.0
-      esbuild: 0.24.2
-      joycon: 3.1.1
-      picocolors: 1.1.1
-      postcss-load-config: 6.0.1(jiti@1.21.7)(postcss@8.5.1)(tsx@4.19.2)(yaml@2.7.0)
-      resolve-from: 5.0.0
-      rollup: 4.31.0
-      source-map: 0.8.0-beta.0
-      sucrase: 3.35.0
-      tinyexec: 0.3.2
-      tinyglobby: 0.2.10
-      tree-kill: 1.2.2
-    optionalDependencies:
-      '@swc/core': 1.6.13(@swc/helpers@0.5.15)
-      postcss: 8.5.1
-      typescript: 5.5.3
     transitivePeerDependencies:
       - jiti
       - supports-color
