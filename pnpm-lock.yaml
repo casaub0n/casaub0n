@@ -441,8 +441,8 @@ importers:
   packages/header-inserter:
     dependencies:
       neverthrow:
-        specifier: 8.0.0
-        version: 8.0.0
+        specifier: 8.1.1
+        version: 8.1.1
       pino:
         specifier: 9.3.2
         version: 9.3.2
@@ -502,8 +502,8 @@ importers:
         specifier: 1.0.5
         version: 1.0.5(@swc/core@1.10.9(@swc/helpers@0.5.15))(jiti@1.21.7)(postcss@8.5.1)(tsx@4.7.1)(typescript@5.7.3)(yaml@2.7.0)
       neverthrow:
-        specifier: 8.0.0
-        version: 8.0.0
+        specifier: 8.1.1
+        version: 8.1.1
       puppeteer:
         specifier: 24.1.1
         version: 24.1.1(bufferutil@4.0.9)(typescript@5.7.3)
@@ -520,8 +520,8 @@ importers:
   packages/lang-inserter:
     dependencies:
       neverthrow:
-        specifier: 8.0.0
-        version: 8.0.0
+        specifier: 8.1.1
+        version: 8.1.1
       pino:
         specifier: 9.3.2
         version: 9.3.2
@@ -623,8 +623,8 @@ importers:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.10.10)(ts-node@10.9.1(@swc/core@1.10.9(@swc/helpers@0.5.15))(@types/node@22.10.10)(typescript@5.7.3))
       neverthrow:
-        specifier: 8.0.0
-        version: 8.0.0
+        specifier: 8.1.1
+        version: 8.1.1
       puppeteer:
         specifier: 24.1.1
         version: 24.1.1(bufferutil@4.0.9)(typescript@5.7.3)
@@ -653,8 +653,8 @@ importers:
         specifier: 26.0.0
         version: 26.0.0(bufferutil@4.0.9)
       neverthrow:
-        specifier: 8.0.0
-        version: 8.0.0
+        specifier: 8.1.1
+        version: 8.1.1
     devDependencies:
       '@casaub0n/eslint-config':
         specifier: workspace:*
@@ -9225,8 +9225,8 @@ packages:
     resolution: {integrity: sha512-dBpDMdxv9Irdq66304OLfEmQ9tbNRFnFTuZiLo+bD+r332bBmMJ8GBLXklIXXgxd3+v9+KUnZaUR5PJMa75Gsg==}
     engines: {node: '>= 0.4.0'}
 
-  neverthrow@8.0.0:
-    resolution: {integrity: sha512-SX2Z50+U27I+CF3NwHE9J8MB6+bYRRub3U+1nAKxnL6c+2vW2l/WsYEC0e3Wqg8DwiJvrquqE0YhxlVTzGJGsg==}
+  neverthrow@8.1.1:
+    resolution: {integrity: sha512-DpbZ/UDI0B+TxJB1JysXSfi1++3YK2xLBqQLTlRN0b4zxlZ2MoiB+dKKV8dMRzt1fAFjRKDknXOVJgpl+a4Amw==}
     engines: {node: '>=18'}
 
   new-github-release-url@2.0.0:
@@ -21651,7 +21651,7 @@ snapshots:
 
   header-inserter@1.0.17(typescript@5.7.3):
     dependencies:
-      neverthrow: 8.0.0
+      neverthrow: 8.1.1
       pino: 9.3.2
       valibot: 0.42.1(typescript@5.7.3)
     transitivePeerDependencies:
@@ -23807,7 +23807,9 @@ snapshots:
 
   netmask@2.0.2: {}
 
-  neverthrow@8.0.0: {}
+  neverthrow@8.1.1:
+    optionalDependencies:
+      '@rollup/rollup-linux-x64-gnu': 4.31.0
 
   new-github-release-url@2.0.0:
     dependencies:
