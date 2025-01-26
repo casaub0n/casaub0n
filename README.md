@@ -6,9 +6,9 @@ lang: en
 
 I live in Tokyo and I have my own business.
 
-![IMG_20210920_180030](https://github.com/casaub0n/casaub0n/assets/6220791/5277e375-9143-46de-97dd-18397784a891)
+[![IMG_20210920_180030](https://github.com/casaub0n/casaub0n/assets/6220791/5277e375-9143-46de-97dd-18397784a891)](https://maps.app.goo.gl/LAmsfYst8uxMWK9SA)
 
-Judges Bay Reserve is known as the historical Auckland landmark. It dramatically chnages the scenery by tide and sunshine.
+[Judges Bay Reserve](https://maps.app.goo.gl/LAmsfYst8uxMWK9SA) is known as the historical Auckland landmark. It dramatically chnages the scenery by tide and sunshine.
 
 ## My favourite movie🍿
 
