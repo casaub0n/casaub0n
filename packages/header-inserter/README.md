@@ -1,8 +1,10 @@
-# USH
+# Header Inserter
 
 Inserting header in your bundle JavaScript file.
 
-## parser
+## Usage
+
+## Parser
 
 I compared zod to validbot by after builded files.
 
