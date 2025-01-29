@@ -67,3 +67,11 @@ As they say, 'live and learn.'
 [storybook GitHub pages](https://casaub0n.github.io/casaub0n/)
 
 [README](./apps/catalog/README.md)
+
+## cspell
+
+Ref:
+
+- [VSCode に Code Spell Checker を導入して typo と戦う #VisualStudioCode - Qiita](https://qiita.com/diescake/items/98c5a099e85775cd917d)
+- [cSpell で特定のファイルやパスをスペルチェック非対象にする | DevelopersIO](https://dev.classmethod.jp/articles/excluding-specific-files-and-paths-from-spell-check-with-cspell/)
+- [docs/cspell.json at main · inkonchain/docs](https://github.com/inkonchain/docs/blob/main/cspell.json)
