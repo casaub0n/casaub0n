@@ -13,7 +13,9 @@
     "start": "turbo run start",
     "storybook": "turbo run storybook",
     "version:set": "pnpm exec lerna version",
-    "lint": "turbo run lint"
+    "lint": "turbo run lint",
+    "spellcheck:lint": "cspell lint \"**/*.mdx\"",
+    "spellcheck:fix": "cspell --words-only --unique \"**/*.mdx\" | sort --ignore-case | uniq"
   },
   "devDependencies": {
     "@lerna-lite/cli": "3.11.0",
