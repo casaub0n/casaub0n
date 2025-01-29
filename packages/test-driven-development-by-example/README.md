@@ -15,12 +15,6 @@ pnpm test
 
 ## Test Environment
 
-~~I follow this link 👉~~
-~~[How to run the Node built-in testrunner for TypeScript files inside a specific directory? · Issue #3902 · nodejs/help](https://github.com/nodejs/help/issues/3902#issuecomment-1307124174)~~
-
-~~This LTS version's Node.js shows the warning:~~
-~~`ExperimentalWarning: Custom ESM Loaders is an experimental feature and might change at any time`~~
-
 That must be standard feature in the future.
 
 Node.js has to use loader to run TypeScript.
@@ -37,7 +31,7 @@ Use standard Node.js's functions
 
 ### Notes
 
-This node version is expected over 20 currently. As tsup, `node:test` is not propper solving in build process.
+This node version is expected over 20 currently. As tsup, `node:test` is not proper solving in build process.
 
 I hope this:
 
@@ -108,7 +102,7 @@ In this project, I used tuple because it is easy as TypeScript.
 
 In TypeScript Class, member variable can't use method name.
 
-If you use member variable, you must specify `this` keyword because of distinguishing memeber variable from normal variable.
+If you use member variable, you must specify `this` keyword because of distinguishing member variable from normal variable.
 
 ## Down casting
 
@@ -116,4 +110,4 @@ I can't make sense that arg's type is often Object.
 
 Don't do down casting.
 
-## Extends class sets super constractor automatically
+## Extends class sets super constructor automatically

@@ -2,7 +2,7 @@
 
 [storybook GitHub pages](https://casaub0n.github.io/casaub0n/)
 
-This configure files is written by ES Modules. I dont't use TypeScript in this case because it must conflict loaded projects.
+This configure files is written by ES Modules. I don't use TypeScript in this case because it must conflict loaded projects.
 
 ## vanilla extract
 
