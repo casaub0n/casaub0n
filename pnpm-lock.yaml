@@ -133,8 +133,8 @@ importers:
         specifier: 1.1.2
         version: 1.1.2(typescript@5.7.3)
       type-fest:
-        specifier: 4.33.0
-        version: 4.33.0
+        specifier: 4.34.1
+        version: 4.34.1
       zod:
         specifier: 3.24.1
         version: 3.24.1
@@ -240,7 +240,7 @@ importers:
         version: 8.5.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.5.3(bufferutil@4.0.9)(prettier@3.5.0))
       '@storybook/nextjs':
         specifier: 8.5.3
-        version: 8.5.3(esbuild@0.24.2)(next@15.1.6(@babel/core@7.26.7)(@opentelemetry/api@1.9.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.5.3(bufferutil@4.0.9)(prettier@3.5.0))(type-fest@4.33.0)(typescript@5.7.3)(webpack-hot-middleware@2.26.1)(webpack@5.97.1(esbuild@0.24.2))
+        version: 8.5.3(esbuild@0.24.2)(next@15.1.6(@babel/core@7.26.7)(@opentelemetry/api@1.9.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.5.3(bufferutil@4.0.9)(prettier@3.5.0))(type-fest@4.34.1)(typescript@5.7.3)(webpack-hot-middleware@2.26.1)(webpack@5.97.1(esbuild@0.24.2))
       '@storybook/react':
         specifier: 8.5.3
         version: 8.5.3(@storybook/test@8.5.3(storybook@8.5.3(bufferutil@4.0.9)(prettier@3.5.0)))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.5.3(bufferutil@4.0.9)(prettier@3.5.0))(typescript@5.7.3)
@@ -11984,8 +11984,8 @@ packages:
     resolution: {integrity: sha512-tLq3bSNx+xSpwvAJnzrK0Ep5CLNWjvFTOp71URMaAEWBfRb9nnJiBoUe0tF8bI4ZFO3omgBR6NvnbzVUT3Ly4g==}
     engines: {node: '>=14.16'}
 
-  type-fest@4.33.0:
-    resolution: {integrity: sha512-s6zVrxuyKbbAsSAD5ZPTB77q4YIdRctkTbJ2/Dqlinwz+8ooH2gd+YA7VA6Pa93KML9GockVvoxjZ2vHP+mu8g==}
+  type-fest@4.34.1:
+    resolution: {integrity: sha512-6kSc32kT0rbwxD6QL1CYe8IqdzN/J/ILMrNK+HMQCKH3insCDRY/3ITb0vcBss0a3t72fzh2YSzj8ko1HgwT3g==}
     engines: {node: '>=16'}
 
   typed-array-buffer@1.0.3:
@@ -16100,7 +16100,7 @@ snapshots:
 
   '@pkgr/core@0.1.1': {}
 
-  '@pmmmwh/react-refresh-webpack-plugin@0.5.15(react-refresh@0.14.2)(type-fest@4.33.0)(webpack-hot-middleware@2.26.1)(webpack@5.97.1(esbuild@0.24.2))':
+  '@pmmmwh/react-refresh-webpack-plugin@0.5.15(react-refresh@0.14.2)(type-fest@4.34.1)(webpack-hot-middleware@2.26.1)(webpack@5.97.1(esbuild@0.24.2))':
     dependencies:
       ansi-html: 0.0.9
       core-js-pure: 3.40.0
@@ -16112,7 +16112,7 @@ snapshots:
       source-map: 0.7.4
       webpack: 5.97.1(esbuild@0.24.2)
     optionalDependencies:
-      type-fest: 4.33.0
+      type-fest: 4.34.1
       webpack-hot-middleware: 2.26.1
 
   '@pnpm/catalogs.protocol-parser@1000.0.0': {}
@@ -17151,7 +17151,7 @@ snapshots:
     dependencies:
       storybook: 8.5.3(bufferutil@4.0.9)(prettier@3.5.0)
 
-  '@storybook/nextjs@8.5.3(esbuild@0.24.2)(next@15.1.6(@babel/core@7.26.7)(@opentelemetry/api@1.9.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.5.3(bufferutil@4.0.9)(prettier@3.5.0))(type-fest@4.33.0)(typescript@5.7.3)(webpack-hot-middleware@2.26.1)(webpack@5.97.1(esbuild@0.24.2))':
+  '@storybook/nextjs@8.5.3(esbuild@0.24.2)(next@15.1.6(@babel/core@7.26.7)(@opentelemetry/api@1.9.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.5.3(bufferutil@4.0.9)(prettier@3.5.0))(type-fest@4.34.1)(typescript@5.7.3)(webpack-hot-middleware@2.26.1)(webpack@5.97.1(esbuild@0.24.2))':
     dependencies:
       '@babel/core': 7.26.7
       '@babel/plugin-syntax-bigint': 7.8.3(@babel/core@7.26.7)
@@ -17166,7 +17166,7 @@ snapshots:
       '@babel/preset-react': 7.26.3(@babel/core@7.26.7)
       '@babel/preset-typescript': 7.26.0(@babel/core@7.26.7)
       '@babel/runtime': 7.26.7
-      '@pmmmwh/react-refresh-webpack-plugin': 0.5.15(react-refresh@0.14.2)(type-fest@4.33.0)(webpack-hot-middleware@2.26.1)(webpack@5.97.1(esbuild@0.24.2))
+      '@pmmmwh/react-refresh-webpack-plugin': 0.5.15(react-refresh@0.14.2)(type-fest@4.34.1)(webpack-hot-middleware@2.26.1)(webpack@5.97.1(esbuild@0.24.2))
       '@storybook/builder-webpack5': 8.5.3(esbuild@0.24.2)(storybook@8.5.3(bufferutil@4.0.9)(prettier@3.5.0))(typescript@5.7.3)
       '@storybook/preset-react-webpack': 8.5.3(@storybook/test@8.5.3(storybook@8.5.3(bufferutil@4.0.9)(prettier@3.5.0)))(esbuild@0.24.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.5.3(bufferutil@4.0.9)(prettier@3.5.0))(typescript@5.7.3)
       '@storybook/react': 8.5.3(@storybook/test@8.5.3(storybook@8.5.3(bufferutil@4.0.9)(prettier@3.5.0)))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.5.3(bufferutil@4.0.9)(prettier@3.5.0))(typescript@5.7.3)
@@ -19204,7 +19204,7 @@ snapshots:
       chalk: 5.4.1
       cli-boxes: 3.0.0
       string-width: 7.2.0
-      type-fest: 4.33.0
+      type-fest: 4.34.1
       widest-line: 5.0.0
       wrap-ansi: 9.0.0
 
@@ -24746,7 +24746,7 @@ snapshots:
     dependencies:
       '@babel/code-frame': 7.26.2
       index-to-position: 0.1.2
-      type-fest: 4.33.0
+      type-fest: 4.34.1
 
   parse-latin@7.0.0:
     dependencies:
@@ -25409,7 +25409,7 @@ snapshots:
     dependencies:
       find-up: 6.3.0
       read-pkg: 8.1.0
-      type-fest: 4.33.0
+      type-fest: 4.34.1
 
   read-pkg-up@3.0.0:
     dependencies:
@@ -25446,14 +25446,14 @@ snapshots:
       '@types/normalize-package-data': 2.4.4
       normalize-package-data: 6.0.2
       parse-json: 7.1.1
-      type-fest: 4.33.0
+      type-fest: 4.34.1
 
   read-pkg@9.0.1:
     dependencies:
       '@types/normalize-package-data': 2.4.4
       normalize-package-data: 6.0.2
       parse-json: 8.1.0
-      type-fest: 4.33.0
+      type-fest: 4.34.1
       unicorn-magic: 0.1.0
 
   read-yaml-file@2.1.0:
@@ -25727,7 +25727,7 @@ snapshots:
 
   remeda@2.20.1:
     dependencies:
-      type-fest: 4.33.0
+      type-fest: 4.34.1
 
   renderkid@3.0.0:
     dependencies:
@@ -27171,7 +27171,7 @@ snapshots:
 
   type-fest@3.13.1: {}
 
-  type-fest@4.33.0: {}
+  type-fest@4.34.1: {}
 
   typed-array-buffer@1.0.3:
     dependencies:
@@ -27991,7 +27991,7 @@ snapshots:
       deepmerge-ts: 7.1.4
       read-pkg: 9.0.1
       sort-keys: 5.1.0
-      type-fest: 4.33.0
+      type-fest: 4.34.1
       write-json-file: 6.0.0
 
   write-yaml-file@4.2.0:
