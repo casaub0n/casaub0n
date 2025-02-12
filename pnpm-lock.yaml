@@ -245,8 +245,8 @@ importers:
         specifier: 8.5.4
         version: 8.5.4(@storybook/test@8.5.4(storybook@8.5.4(bufferutil@4.0.9)(prettier@3.5.0)))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.5.4(bufferutil@4.0.9)(prettier@3.5.0))(typescript@5.7.3)
       '@vanilla-extract/webpack-plugin':
-        specifier: 2.3.17
-        version: 2.3.17(webpack@5.97.1(esbuild@0.24.2))
+        specifier: 2.3.18
+        version: 2.3.18(webpack@5.97.1(esbuild@0.24.2))
       fs-extra:
         specifier: 11.3.0
         version: 11.3.0
@@ -4842,9 +4842,6 @@ packages:
   '@vanilla-extract/dynamic@2.1.2':
     resolution: {integrity: sha512-9BGMciD8rO1hdSPIAh1ntsG4LPD3IYKhywR7VOmmz9OO4Lx1hlwkSg3E6X07ujFx7YuBfx0GDQnApG9ESHvB2A==}
 
-  '@vanilla-extract/integration@8.0.0':
-    resolution: {integrity: sha512-hsu5Cqs30RDTRgaOCtvdZttKIaMImObcZmylxPp693mr1pyRk+WEIEAzQAJkXE/JQ47xyqf+a63UxdI0Sf3PZw==}
-
   '@vanilla-extract/integration@8.0.1':
     resolution: {integrity: sha512-ag64t+AM96XGOiloc5ryZHP5rbfleFyfoPKa42QqOuyAlLx/UpW5epSY+RUldizP4P/uLy5WFRiYlNddK1eQUQ==}
 
@@ -4855,11 +4852,6 @@ packages:
 
   '@vanilla-extract/private@1.0.6':
     resolution: {integrity: sha512-ytsG/JLweEjw7DBuZ/0JCN4WAQgM9erfSTdS1NQY778hFQSZ6cfCDEZZ0sgVm4k54uNz6ImKB33AYvSR//fjxw==}
-
-  '@vanilla-extract/webpack-plugin@2.3.17':
-    resolution: {integrity: sha512-gfy80YF9NkXx4V5vKgwLk7r7H6uonLLf5R5Rb0Seynt5BfFy0Anv7DjK7vIQDaTZ1UafNxhPkRdEeDmd3YbVOQ==}
-    peerDependencies:
-      webpack: ^4.30.0 || ^5.20.2
 
   '@vanilla-extract/webpack-plugin@2.3.18':
     resolution: {integrity: sha512-00AB9LQJZ5JM6jQCCn3upONPi4jqJnjXrN+uROgfixgxIpq0fMEfhnwOtAdECG7gRCy0T2jzpo1KO1Fh5wYsJg==}
@@ -18081,22 +18073,6 @@ snapshots:
     dependencies:
       '@vanilla-extract/private': 1.0.6
 
-  '@vanilla-extract/integration@8.0.0':
-    dependencies:
-      '@babel/core': 7.26.8
-      '@babel/plugin-syntax-typescript': 7.25.9(@babel/core@7.26.8)
-      '@vanilla-extract/babel-plugin-debug-ids': 1.2.0
-      '@vanilla-extract/css': 1.17.1
-      dedent: 1.5.3
-      esbuild: 0.24.2
-      eval: 0.1.8
-      find-up: 5.0.0
-      javascript-stringify: 2.1.0
-      mlly: 1.7.4
-    transitivePeerDependencies:
-      - babel-plugin-macros
-      - supports-color
-
   '@vanilla-extract/integration@8.0.1':
     dependencies:
       '@babel/core': 7.26.8
@@ -18124,17 +18100,6 @@ snapshots:
 
   '@vanilla-extract/private@1.0.6': {}
 
-  '@vanilla-extract/webpack-plugin@2.3.17(webpack@5.97.1(esbuild@0.24.2))':
-    dependencies:
-      '@vanilla-extract/integration': 8.0.0
-      debug: 4.4.0
-      loader-utils: 2.0.4
-      picocolors: 1.1.1
-      webpack: 5.97.1(esbuild@0.24.2)
-    transitivePeerDependencies:
-      - babel-plugin-macros
-      - supports-color
-
   '@vanilla-extract/webpack-plugin@2.3.18(webpack@5.97.1(@swc/core@1.10.15(@swc/helpers@0.5.15)))':
     dependencies:
       '@vanilla-extract/integration': 8.0.1
@@ -18142,6 +18107,17 @@ snapshots:
       loader-utils: 2.0.4
       picocolors: 1.1.1
       webpack: 5.97.1(@swc/core@1.10.15(@swc/helpers@0.5.15))
+    transitivePeerDependencies:
+      - babel-plugin-macros
+      - supports-color
+
+  '@vanilla-extract/webpack-plugin@2.3.18(webpack@5.97.1(esbuild@0.24.2))':
+    dependencies:
+      '@vanilla-extract/integration': 8.0.1
+      debug: 4.4.0
+      loader-utils: 2.0.4
+      picocolors: 1.1.1
+      webpack: 5.97.1(esbuild@0.24.2)
     transitivePeerDependencies:
       - babel-plugin-macros
       - supports-color
