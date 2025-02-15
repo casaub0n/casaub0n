@@ -12,7 +12,14 @@ const cspell = {
   ],
   dictionaries: ["project-words"],
   ignorePaths: ["node_modules", "/project-words.txt"],
-  ignoreRegExpList: ["\!\\[.+?\\]"],
+  ignoreRegExpList: [markdown_alt_ignore],
+  patterns: [
+    {
+      // alt should be checked
+      name: "markdown_alt_ignore",
+      pattern: "\!\\[.+?\\]",
+    },
+  ],
 };
 
 module.exports = cspell;
