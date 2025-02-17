@@ -31,8 +31,7 @@ export type IForm = z.infer<typeof FormSchema>;
 type Props = ComponentPropsWithoutRef<"form">;
 
 /**
- * Zod Transform does not work with Standard Schema Resolver; https://github.com/react-hook-form/resolvers/issues/742
- * This version is 4.1.0, that's downgrade to 4.0.0 for now
+ * https://github.com/react-hook-form/resolvers/blob/master/zod/src/__tests__/Form.tsx
  * Gemini; https://g.co/gemini/share/f8ba837ca14c
  * @description currently, this form doesn't send any message to saver
  * @returns Question form component
@@ -40,7 +39,7 @@ type Props = ComponentPropsWithoutRef<"form">;
 export const QuestionForm: FC<Props> = ({ className="question-form", ...props }) => {
   const errorMessageId = useId();
 
-  const { control, handleSubmit } = useForm<IForm>({
+  const { control, handleSubmit } = useForm({
     mode: "onChange",
     resolver: zodResolver(FormSchema),
   });
