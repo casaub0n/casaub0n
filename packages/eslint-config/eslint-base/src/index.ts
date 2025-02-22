@@ -29,6 +29,6 @@ const config = tseslint.config({
     // https://github.com/streetsidesoftware/cspell/tree/main/packages/cspell-eslint-plugin#configuration-new-eslintconfigjs
     "@cspell/spellchecker": ["warn", {}],
   },
-}) as TSESLint.TSESLint.FlatConfig.Config;
+}) satisfies TSESLint.TSESLint.FlatConfig.ConfigArray;
 
 export default config;
