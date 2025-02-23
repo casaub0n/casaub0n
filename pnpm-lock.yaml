@@ -39,8 +39,8 @@ importers:
         specifier: 3.5.2
         version: 3.5.2
       renovate:
-        specifier: 39.177.0
-        version: 39.177.0(encoding@0.1.13)(typanion@3.14.0)
+        specifier: 39.178.1
+        version: 39.178.1(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: 14.4.2
         version: 14.4.2
@@ -2947,10 +2947,6 @@ packages:
 
   '@one-ini/wasm@0.1.1':
     resolution: {integrity: sha512-XuySG1E38YScSJoMlqovLru4KTUNSjgVTIjyh7qMX6aNN5HY5Ct5LhRJdxO79JtTzKfzV/bnWpz+zquYrISsvw==}
-
-  '@opentelemetry/api-logs@0.57.1':
-    resolution: {integrity: sha512-I4PHczeujhQAQv6ZBzqHYEUiggZL4IdSMixtVD3EYqbdrjujE7kRfI5QohjlPoJm8BvenoW5YaTMWRrbpot6tg==}
-    engines: {node: '>=14'}
 
   '@opentelemetry/api-logs@0.57.2':
     resolution: {integrity: sha512-uIX52NnTM0iBh84MShlpouI7UKqkZ7MrUszTmaypHBu4r7NofznSnQRfJ+uUeDtQDj6w8eFGg5KBLDAwAPz1+A==}
@@ -10704,8 +10700,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@39.177.0:
-    resolution: {integrity: sha512-GhuKV8wL4Evb/E2/GjdnN1CbV3SmY7PQbEKG1iogPx3NXlbeVeOPqR4J7GJdrKSlvcERiTc+DFqZxj+pnqlYVQ==}
+  renovate@39.178.1:
+    resolution: {integrity: sha512-4+MQX2JQpDmDpIq4pMEgD1E5NbQvLeGZUS7mpi2xgfVWRTbeI4nCuXs2+ThMj+GChu7Y9TNM4NAoaVbQrGyRBA==}
     engines: {node: ^20.15.1 || ^22.11.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -15750,10 +15746,6 @@ snapshots:
 
   '@one-ini/wasm@0.1.1': {}
 
-  '@opentelemetry/api-logs@0.57.1':
-    dependencies:
-      '@opentelemetry/api': 1.9.0
-
   '@opentelemetry/api-logs@0.57.2':
     dependencies:
       '@opentelemetry/api': 1.9.0
@@ -15781,7 +15773,7 @@ snapshots:
   '@opentelemetry/instrumentation-bunyan@0.45.0(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
-      '@opentelemetry/api-logs': 0.57.1
+      '@opentelemetry/api-logs': 0.57.2
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
       '@types/bunyan': 1.8.9
     transitivePeerDependencies:
@@ -25605,7 +25597,7 @@ snapshots:
       lodash: 4.17.21
       strip-ansi: 6.0.1
 
-  renovate@39.177.0(encoding@0.1.13)(typanion@3.14.0):
+  renovate@39.178.1(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.738.0
       '@aws-sdk/client-ec2': 3.738.0
