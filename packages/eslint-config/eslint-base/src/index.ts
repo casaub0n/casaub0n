@@ -5,6 +5,7 @@ import tseslint from "typescript-eslint";
 import unuserdPlugin from "eslint-plugin-unused-imports";
 import type TSESLint from "@typescript-eslint/utils";
 import cspellPlugin from "@cspell/eslint-plugin";
+import eslintPluginUnicorn from "eslint-plugin-unicorn";
 
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = dirname(__filename);
@@ -22,12 +23,20 @@ const config = tseslint.config({
     ...tseslint.configs.strict,
     ...tseslint.configs.stylistic,
   ],
-  plugins: { "unused-imports": unuserdPlugin, "@cspell": cspellPlugin },
+  plugins: {
+    "unused-imports": unuserdPlugin,
+    "@cspell": cspellPlugin,
+    unicorn: eslintPluginUnicorn,
+  },
   rules: {
+    // ESlint core
+    curly: "off",
     "@typescript-eslint/no-unused-vars": "off",
     "unused-imports/no-unused-imports": "error",
     // https://github.com/streetsidesoftware/cspell/tree/main/packages/cspell-eslint-plugin#configuration-new-eslintconfigjs
     "@cspell/spellchecker": ["warn", {}],
+    // https://zenn.dev/yskn_sid25/articles/c309f804fde5a5#%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97
+    ...eslintPluginUnicorn.configs.recommended.rules,
   },
 }) satisfies TSESLint.TSESLint.FlatConfig.ConfigArray;
 
