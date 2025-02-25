@@ -11,7 +11,14 @@ const cspell = {
     },
   ],
   dictionaries: ["project-words"],
-  ignorePaths: ["node_modules", "/project-words.txt"],
+  ignorePaths: [
+    "node_modules",
+    "/project-words.txt",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.mdx",
+    "**/package.json",
+  ],
   ignoreRegExpList: ["\!\\[.+?\\]"],
 };
 
