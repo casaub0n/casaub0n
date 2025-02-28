@@ -32,8 +32,8 @@ const config = tseslint.config({
   },
   rules: {
     // ESlint core
-    curly: "off",
-    "@typescript-eslint/no-unused-vars": "off",
+    curly: "error",
+    "@typescript-eslint/no-unused-vars": "error",
     "unused-imports/no-unused-imports": "error",
     // https://github.com/streetsidesoftware/cspell/tree/main/packages/cspell-eslint-plugin#configuration-new-eslintconfigjs
     "@cspell/spellchecker": ["warn", {}],
