@@ -31,8 +31,8 @@ export type UserScript = v.InferOutput<typeof UserScriptSchema>;
  * ```
  */
 export const parseUserScript = (
-  userScriptJsonObjStr: string,
+  userScriptJsonObjectString: string,
 ): v.SafeParseResult<typeof UserScriptSchema> => {
-  const parsedUserScript = v.safeParse(UserScriptSchema, JSON.parse(userScriptJsonObjStr));
+  const parsedUserScript = v.safeParse(UserScriptSchema, JSON.parse(userScriptJsonObjectString));
   return parsedUserScript;
 };

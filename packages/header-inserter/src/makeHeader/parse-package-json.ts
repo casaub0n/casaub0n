@@ -15,8 +15,8 @@ const packageJsonSchema = v.object({
  * ```
  */
 export const parsePackageJson = (
-  packageJsonObjStr: string,
+  packageJsonObjectString: string,
 ): v.SafeParseResult<typeof packageJsonSchema> => {
-  const parsedPacageJson = v.safeParse(packageJsonSchema, JSON.parse(packageJsonObjStr));
+  const parsedPacageJson = v.safeParse(packageJsonSchema, JSON.parse(packageJsonObjectString));
   return parsedPacageJson;
 };
