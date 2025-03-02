@@ -1,6 +1,6 @@
-// import { dirname } from "path";
-// import { fileURLToPath } from "url";
-// import { FlatCompat } from "@eslint/eslintrc";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { FlatCompat } from "@eslint/eslintrc";
 import tseslint from "typescript-eslint";
 import unuserdPlugin from "eslint-plugin-unused-imports";
 import type TSESLint from "@typescript-eslint/utils";
@@ -8,12 +8,18 @@ import cspellPlugin from "@cspell/eslint-plugin";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import turboPlugin from "eslint-plugin-turbo";
 
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = dirname(__filename);
+/**
+ * by eslint rule
+ * https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/import-style.md#enforce-specific-import-styles-per-module
+ */
+const { dirname } = path;
 
-// const compat = new FlatCompat({
-//   baseDirectory: __dirname,
-// });
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+});
 
 /**
  * Gemini: https://g.co/gemini/share/5086f0d94b4e
@@ -21,6 +27,7 @@ import turboPlugin from "eslint-plugin-turbo";
 const config = tseslint.config({
   extends: [
     // ...compat.extends("next/core-web-vitals", "next/typescript"),
+    ...compat.extends(),
     ...tseslint.configs.strict,
     ...tseslint.configs.stylistic,
   ],
