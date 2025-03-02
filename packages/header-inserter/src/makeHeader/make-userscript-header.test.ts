@@ -3,7 +3,7 @@ import { type UserScript } from "./parse-userscript-json";
 import { makeUserscriptHeader } from "./make-userscript-header";
 
 test("the version in output string is package.json's version if sameversion true", () => {
-  const inputObj: UserScript = {
+  const inputObject: UserScript = {
     name: "test obj",
     namespace: "NONE",
     version: "1.0.0",
@@ -14,7 +14,7 @@ test("the version in output string is package.json's version if sameversion true
     sameversion: true,
   };
 
-  const outputStr = `// ==UserScript==
+  const outputString = `// ==UserScript==
 // @name         test obj
 // @namespace    NONE
 // @version      2.0.0
@@ -23,11 +23,11 @@ test("the version in output string is package.json's version if sameversion true
 // @match        true
 // @grant        NONE
 // ==/UserScript==\n`;
-  expect(makeUserscriptHeader(inputObj, "2.0.0")).toStrictEqual(outputStr);
+  expect(makeUserscriptHeader(inputObject, "2.0.0")).toStrictEqual(outputString);
 });
 
 test("the version in output string is userscript.json's version if sameversion false", () => {
-  const inputObj: UserScript = {
+  const inputObject: UserScript = {
     name: "test obj",
     namespace: "NONE",
     version: "1.0.0",
@@ -38,7 +38,7 @@ test("the version in output string is userscript.json's version if sameversion f
     sameversion: false,
   };
 
-  const outputStr = `// ==UserScript==
+  const outputString = `// ==UserScript==
 // @name         test obj
 // @namespace    NONE
 // @version      1.0.0
@@ -47,5 +47,5 @@ test("the version in output string is userscript.json's version if sameversion f
 // @match        true
 // @grant        NONE
 // ==/UserScript==\n`;
-  expect(makeUserscriptHeader(inputObj, "2.0.0")).toStrictEqual(outputStr);
+  expect(makeUserscriptHeader(inputObject, "2.0.0")).toStrictEqual(outputString);
 });

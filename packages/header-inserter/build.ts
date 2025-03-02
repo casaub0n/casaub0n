@@ -1,6 +1,6 @@
 import { build } from "esbuild";
 
-const outDir = "dist";
+const outDirectory = "dist";
 
 void (async () => {
   await build({
@@ -9,7 +9,7 @@ void (async () => {
     minify: true,
     platform: "node",
     target: "node20",
-    outfile: `${outDir}/index.js`,
+    outfile: `${outDirectory}/index.js`,
   });
 })();
 

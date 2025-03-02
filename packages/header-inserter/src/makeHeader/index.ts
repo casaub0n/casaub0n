@@ -3,6 +3,7 @@ import { parsePackageJson } from "./parse-package-json.ts";
 import { readJsonFile } from "./read-json-file.ts";
 import { parseUserScript } from "./parse-userscript-json.ts";
 import { makeUserscriptHeader } from "./make-userscript-header.ts";
+import { exit } from "node:process";
 
 export const makeHeader = (): string => {
   const packageJson = readJsonFile("package.json");
@@ -10,11 +11,11 @@ export const makeHeader = (): string => {
 
   if (packageJson.isErr()) {
     logger.error(packageJson.error);
-    process.exit(1);
+    exit(1);
   }
   if (userScriptJson.isErr()) {
     logger.error(userScriptJson.error);
-    process.exit(1);
+    exit(1);
   }
 
   const parsedUserScriptJson = parseUserScript(userScriptJson.value);
@@ -23,16 +24,16 @@ export const makeHeader = (): string => {
 
   if (parsedUserScriptJson.issues) {
     logger.error(parsedUserScriptJson.issues);
-    process.exit(1);
+    exit(1);
   }
 
   if (parsedPackageJsonVersion.issues) {
     logger.error(parsedPackageJsonVersion.issues);
-    process.exit(1);
+    exit(1);
   }
 
   const header = parsedUserScriptJson.output;
-  const pkgVersion = parsedPackageJsonVersion.output;
+  const packageVersion = parsedPackageJsonVersion.output;
 
-  return makeUserscriptHeader(header, pkgVersion.version);
+  return makeUserscriptHeader(header, packageVersion.version);
 };

@@ -6,9 +6,9 @@ const init = (): void => {
   const header = makeHeader();
   logger.info(`config json: \n${header}`);
   const files = process.argv.slice(2);
-  files.forEach((f) => {
+  for (const f of files) {
     insertHeader(f, header);
-  });
+  }
 };
 
 init();
