@@ -23,9 +23,17 @@ const compat = new FlatCompat({
 });
 
 /**
+ * TODO: check .gitignore
+ */
+const ignoreConfig = {
+  ignores: ["**/dist/**/*"],
+};
+
+/**
  * Gemini: https://g.co/gemini/share/5086f0d94b4e
  */
 const config = tseslint.config([
+  ignoreConfig,
   {
     extends: [
       // ...compat.extends("next/core-web-vitals", "next/typescript"),
