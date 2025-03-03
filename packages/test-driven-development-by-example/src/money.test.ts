@@ -1,89 +1,93 @@
-import { strict as assert } from "assert";
+import { strict as assert } from "node:assert";
 import { test } from "node:test";
 
 import { Bank, Money, Sum } from "./money";
 
 void test("multiplication", () => {
-  const five = Money.doller(5);
-  assert.deepStrictEqual(five.times(2), Money.doller(10));
-  assert.deepStrictEqual(five.times(3), Money.doller(15));
+  const five = Money.dollar(5);
+  assert.deepStrictEqual(five.times(2), Money.dollar(10));
+  assert.deepStrictEqual(five.times(3), Money.dollar(15));
 });
 
 void test("equality", () => {
-  assert.deepStrictEqual(Money.doller(5), Money.doller(5));
-  assert.notDeepStrictEqual(Money.doller(5), Money.doller(6));
-  assert.notDeepStrictEqual(Money.doller(5), Money.franc(5));
+  assert.deepStrictEqual(Money.dollar(5), Money.dollar(5));
+  assert.notDeepStrictEqual(Money.dollar(5), Money.dollar(6));
+  assert.notDeepStrictEqual(Money.dollar(5), Money.franc(5));
 });
 
 void test("currency", () => {
-  assert.deepStrictEqual(Money.doller(1).currency, "USD");
+  assert.deepStrictEqual(Money.dollar(1).currency, "USD");
   assert.deepStrictEqual(Money.franc(1).currency, "CHF");
 });
 
 void test("simple addition", () => {
-  const five = Money.doller(5);
+  const five = Money.dollar(5);
   const sum = five.plus(five);
   const bank = new Bank();
+  // eslint-disable-next-line unicorn/no-array-reduce, unicorn/no-array-callback-reference
   const reduced = bank.reduce(sum, "USD");
-  assert.deepStrictEqual(reduced, Money.doller(10));
+  assert.deepStrictEqual(reduced, Money.dollar(10));
 });
 
 void test("plus return sum", () => {
-  const five = Money.doller(5);
+  const five = Money.dollar(5);
   const sum = five.plus(five);
   assert.deepStrictEqual(five, sum.augend);
   assert.deepStrictEqual(five, sum.addend);
 });
 
 void test("reduce sum", () => {
-  const sum = new Sum(Money.doller(3), Money.doller(4));
+  const sum = new Sum(Money.dollar(3), Money.dollar(4));
   const bank = new Bank();
+  // eslint-disable-next-line unicorn/no-array-reduce, unicorn/no-array-callback-reference
   const result = bank.reduce(sum, "USD");
-  assert.deepStrictEqual(result, Money.doller(7));
+  assert.deepStrictEqual(result, Money.dollar(7));
 });
 
 void test("reduce money", () => {
   const bank = new Bank();
-  const result = bank.reduce(Money.doller(1), "USD");
-  assert.deepStrictEqual(result, Money.doller(1));
+  const result = bank.reduce(Money.dollar(1), "USD");
+  assert.deepStrictEqual(result, Money.dollar(1));
 });
 
 void test("reduce Money different Currency", () => {
   const bank = new Bank();
   bank.addRate("CHF", "USD", 2);
   const result = bank.reduce(Money.franc(2), "USD");
-  assert.deepStrictEqual(result, Money.doller(1));
+  assert.deepStrictEqual(result, Money.dollar(1));
 });
 
-void test("identy rate", () => {
+void test("identity rate", () => {
   assert.deepStrictEqual(new Bank().rate("USD", "USD"), 1);
 });
 
 void test("mixed addition", () => {
-  const fiveBucks = Money.doller(5);
+  const fiveBucks = Money.dollar(5);
   const tenFrancs = Money.franc(10);
   const bank = new Bank();
   bank.addRate("CHF", "USD", 2);
   const result = bank.reduce(fiveBucks.plus(tenFrancs), "USD");
-  assert.deepStrictEqual(result, Money.doller(10));
+  assert.deepStrictEqual(result, Money.dollar(10));
 });
 
 void test("sum plus money", () => {
-  const fiveBucks = Money.doller(5);
+  const fiveBucks = Money.dollar(5);
   const tenFrancs = Money.franc(10);
   const bank = new Bank();
   bank.addRate("CHF", "USD", 2);
   const sum = new Sum(fiveBucks, tenFrancs).plus(fiveBucks);
+  // eslint-disable-next-line unicorn/no-array-reduce, unicorn/no-array-callback-reference
   const result = bank.reduce(sum, "USD");
-  assert.deepStrictEqual(result, Money.doller(15));
+  assert.deepStrictEqual(result, Money.dollar(15));
 });
 
 void test("sum times", () => {
-  const fiveBucks = Money.doller(5);
+  const fiveBucks = Money.dollar(5);
   const tesFrancs = Money.franc(10);
   const bank = new Bank();
   bank.addRate("CHF", "USD", 2);
   const sum = new Sum(fiveBucks, tesFrancs).times(2);
+  // eslint-disable-next-line unicorn/no-array-reduce, unicorn/no-array-callback-reference
   const result = bank.reduce(sum, "USD");
-  assert.deepStrictEqual(result, Money.doller(20));
+  assert.deepStrictEqual(result, Money.dollar(20));
 });

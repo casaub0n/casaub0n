@@ -11,7 +11,7 @@ export class Money implements Expression {
   }
 
   /**
-   * amout * multiplier
+   * amount * multiplier
    */
   public times(multiplier: number): Expression {
     return new Money(this._amount * multiplier, this._currency);
@@ -42,7 +42,7 @@ export class Money implements Expression {
     return this._amount + " " + this.currency;
   }
 
-  static doller(amount: number): Money {
+  static dollar(amount: number): Money {
     return new Money(amount, "USD");
   }
 
@@ -83,7 +83,7 @@ export class Bank {
   public addRate(from: string, to: string, rate: number): void {
     this.#__rates = {
       pair: [from, to],
-      rate: rate,
+      rate,
     };
   }
 }
@@ -106,6 +106,7 @@ export class Sum implements Expression {
   }
 
   public reduce(bank: Bank, to: string): Money {
+    // eslint-disable-next-line unicorn/no-array-reduce, unicorn/no-array-callback-reference
     const amount = this.#__augend.reduce(bank, to).amount + this.#__addend.reduce(bank, to).amount;
     return new Money(amount, to);
   }
