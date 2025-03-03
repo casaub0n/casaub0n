@@ -1,10 +1,11 @@
 {
   "name": "header-inserter",
   "version": "1.0.19",
-  "description": "Inserting header in your bundle JavaScript file",
+  "description": "Inserting header in your bundle JavaScript file for userscript",
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/casaub0n/casaub0n",
+    "type": "git",
+    "url": "git+https://github.com/casaub0n/casaub0n.git",
     "directory": "packages/ush"
   },
   "author": {
@@ -14,7 +15,7 @@
   },
   "main": "./dist/index.js",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "scripts": {
     "test": "vitest run",
@@ -36,7 +37,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@casaub0n/eslint-config": "workspace:*",
+    "@casaub0n/eslint-base": "workspace:*",
     "@types/mock-fs": "4.13.4",
     "@types/node": "22.13.8",
     "@vitest/ui": "3.0.7",
