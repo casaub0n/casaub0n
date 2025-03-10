@@ -51,7 +51,7 @@ jobs:
         with:
           node-version: 22
 
-      # Don't specific actual pnpm's version because renovate can't update pnpm's version, this action read pnpm version of root's packege.json
+      # Don't specific actual pnpm's version because renovate can't update pnpm's version, this action read pnpm version of root's package.json
       - name: Set up pnpm
         uses: pnpm/action-setup@v4
         with:
@@ -94,3 +94,7 @@ jobs:
 
       - name: test
         run: pnpm test:ci
+
+      # check eslint
+      - name: lint check
+        run: pnpm lint --filter=@casaub0n/test-driven-development-by-example
