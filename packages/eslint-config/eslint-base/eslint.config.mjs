@@ -7,6 +7,7 @@ export default [
       "no-console": "off",
       "import/no-unresolved": "off",
       "@typescript-eslint/consistent-type-definitions": "off",
+      "unicorn/no-null": "off",
     },
   },
 ];
