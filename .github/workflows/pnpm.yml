@@ -94,3 +94,7 @@ jobs:
 
       - name: test
         run: pnpm test:ci
+
+      # check eslint
+      - name: lint check
+        run: pnpm lint --filter=@casaub0n/test-driven-development-by-example
