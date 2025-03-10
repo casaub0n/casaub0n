@@ -8,6 +8,8 @@ import cspellPlugin from "@cspell/eslint-plugin";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import turboPlugin from "eslint-plugin-turbo";
 import pluginConfigPrettier from "eslint-config-prettier";
+import typescriptEslintParser from "@typescript-eslint/parser";
+import globals from "globals";
 
 /**
  * by eslint rule
@@ -41,6 +43,18 @@ const config = tseslint.config([
       ...tseslint.configs.strict,
       ...tseslint.configs.stylistic,
     ],
+    // eslint-disable-next-line @cspell/spellchecker
+    files: ["*.cts", "*.ctsx", "*.mts", "*.mtsx", "*.ts", "*.tsx"],
+    languageOptions: {
+      parser: typescriptEslintParser,
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+      parserOptions: {
+        sourceType: "module",
+      },
+    },
     plugins: {
       "unused-imports": unuserdPlugin,
       "@cspell": cspellPlugin,
