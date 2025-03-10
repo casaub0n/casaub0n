@@ -18,6 +18,7 @@ const cspell = {
     "**/*.tsx",
     "**/*.mdx",
     "**/package.json",
+    "**/.gitignore",
   ],
   ignoreRegExpList: ["\!\\[.+?\\]"],
 };
