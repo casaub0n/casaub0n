@@ -1,25 +1,39 @@
 {
   "name": "@casaub0n/eslint-config-next",
   "version": "0.0.0",
-  "main": "index.js",
+  "main": "./dist/index.mjs",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "type:check": "tsc --noEmit",
+    "lint": "eslint ./src"
   },
   "peerDependencies": {
+    "@cspell/eslint-plugin": "8.17.5",
     "@eslint/compat": "1.2.7",
     "@eslint/eslintrc": "3.3.0",
     "@eslint/js": "9.22.0",
+    "@next/eslint-plugin-next": "15.2.1",
     "@vercel/style-guide": "6.0.0",
+    "eslint-config-next": "15.2.1",
+    "eslint-config-prettier": "10.1.1",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-react-hooks": "5.2.0",
+    "eslint-plugin-turbo": "2.4.4",
+    "eslint-plugin-unicorn": "57.0.0",
+    "eslint-plugin-unused-imports": "4.1.4",
     "typescript-eslint": "8.26.0"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "15.2.1",
+    "@types/eslint-config-prettier": "^6.11.3",
     "@types/node": "22.13.10",
+    "@typescript-eslint/utils": "8.26.0",
+    "eslint-config-next": "15.2.1",
+    "eslint-plugin-import": "2.31.0",
     "tsup": "8.4.0",
     "tsx": "4.19.3",
     "typescript": "5.8.2"
