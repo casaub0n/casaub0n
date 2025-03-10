@@ -42,6 +42,16 @@ const config = tseslint.config([
       ...compat.extends(),
       ...tseslint.configs.strict,
       ...tseslint.configs.stylistic,
+      // https://typescript-eslint.io/getting-started/typed-linting/
+      ...tseslint.configs.strictTypeChecked,
+      {
+        languageOptions: {
+          parserOptions: {
+            projectService: true,
+            tsconfigRootDir: import.meta.dirname,
+          },
+        },
+      },
     ],
     // eslint-disable-next-line @cspell/spellchecker
     files: ["*.cts", "*.ctsx", "*.mts", "*.mtsx", "*.ts", "*.tsx"],
