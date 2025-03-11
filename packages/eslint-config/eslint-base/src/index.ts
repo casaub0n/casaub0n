@@ -54,6 +54,10 @@ const ignoreConfig = {
   ],
 } as const satisfies TSESLint.TSESLint.FlatConfig.Config;
 
+/**
+ * Usage is at README because this eslint-config compile to ESM in dist.
+ * So, the user uses ESM file in dist.
+ */
 const config = tseslint.config([
   ignoreConfig,
   {
