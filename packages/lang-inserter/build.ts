@@ -1,7 +1,8 @@
 import { build } from "esbuild";
 
-const outDir = "dist";
+const outDirectory = "dist";
 
+// eslint-disable-next-line unicorn/prefer-top-level-await
 void (async () => {
   await build({
     entryPoints: ["src/index.ts"],
@@ -9,7 +10,7 @@ void (async () => {
     minify: true,
     platform: "node",
     target: "node20",
-    outfile: `${outDir}/index.js`,
+    outfile: `${outDirectory}/index.js`,
   });
 })();
 
