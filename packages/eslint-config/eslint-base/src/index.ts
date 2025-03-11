@@ -25,11 +25,21 @@ const compat = new FlatCompat({
 });
 
 /**
- * TODO: check .gitignore
+ * @todo move .gitignore to here
  */
 const ignoreConfig = {
-  ignores: ["**/dist/**/*"],
-};
+  ignores: [
+    /**
+     * output
+     */
+    "**/dist/**/*",
+
+    /**
+     * Logs
+     */
+    "**/*.log*",
+  ],
+} as const satisfies TSESLint.TSESLint.FlatConfig.Config;
 
 /**
  * Gemini: https://g.co/gemini/share/5086f0d94b4e
