@@ -38,6 +38,19 @@ const ignoreConfig = {
      * Logs
      */
     "**/*.log*",
+
+    /**
+     * Diagnostic reports (https://nodejs.org/api/report.html)
+     */
+    "**/report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json",
+
+    /**
+     * Runtime data
+     */
+    "**/pids",
+    "**/*.pid",
+    "**/*.seed",
+    "**/*.pid.lock",
   ],
 } as const satisfies TSESLint.TSESLint.FlatConfig.Config;
 
