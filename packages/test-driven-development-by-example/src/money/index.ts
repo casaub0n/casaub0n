@@ -39,6 +39,7 @@ export class Money implements Expression {
   }
 
   public toString(): string {
+    // eslint-disable-next-line @typescript-eslint/restrict-plus-operands
     return this._amount + " " + this.currency;
   }
 
@@ -106,7 +107,6 @@ export class Sum implements Expression {
   }
 
   public reduce(bank: Bank, to: string): Money {
-    // eslint-disable-next-line unicorn/no-array-reduce, unicorn/no-array-callback-reference
     const amount = this.#__augend.reduce(bank, to).amount + this.#__addend.reduce(bank, to).amount;
     return new Money(amount, to);
   }

@@ -24,7 +24,6 @@ void test("simple addition", () => {
   const five = Money.dollar(5);
   const sum = five.plus(five);
   const bank = new Bank();
-  // eslint-disable-next-line unicorn/no-array-reduce, unicorn/no-array-callback-reference
   const reduced = bank.reduce(sum, "USD");
   assert.deepStrictEqual(reduced, Money.dollar(10));
 });
@@ -39,7 +38,6 @@ void test("plus return sum", () => {
 void test("reduce sum", () => {
   const sum = new Sum(Money.dollar(3), Money.dollar(4));
   const bank = new Bank();
-  // eslint-disable-next-line unicorn/no-array-reduce, unicorn/no-array-callback-reference
   const result = bank.reduce(sum, "USD");
   assert.deepStrictEqual(result, Money.dollar(7));
 });
@@ -76,7 +74,6 @@ void test("sum plus money", () => {
   const bank = new Bank();
   bank.addRate("CHF", "USD", 2);
   const sum = new Sum(fiveBucks, tenFrancs).plus(fiveBucks);
-  // eslint-disable-next-line unicorn/no-array-reduce, unicorn/no-array-callback-reference
   const result = bank.reduce(sum, "USD");
   assert.deepStrictEqual(result, Money.dollar(15));
 });
@@ -87,7 +84,6 @@ void test("sum times", () => {
   const bank = new Bank();
   bank.addRate("CHF", "USD", 2);
   const sum = new Sum(fiveBucks, tesFrancs).times(2);
-  // eslint-disable-next-line unicorn/no-array-reduce, unicorn/no-array-callback-reference
   const result = bank.reduce(sum, "USD");
   assert.deepStrictEqual(result, Money.dollar(20));
 });

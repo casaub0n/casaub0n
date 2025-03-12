@@ -1,6 +1,7 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { FlatCompat } from "@eslint/eslintrc";
+// import pluginJs from "@eslint/eslintrc";
 import tseslint from "typescript-eslint";
 import unuserdPlugin from "eslint-plugin-unused-imports";
 import type TSESLint from "@typescript-eslint/utils";
@@ -15,6 +16,7 @@ import globals from "globals";
  * by eslint rule
  * https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/import-style.md#enforce-specific-import-styles-per-module
  */
+// eslint-disable-next-line
 const { dirname } = path;
 
 const __filename = fileURLToPath(import.meta.url);
@@ -86,25 +88,31 @@ const ignoreConfig = {
  */
 const config = tseslint.config([
   ignoreConfig,
+  ...tseslint.configs.strict,
+  // https://typescript-eslint.io/getting-started/typed-linting/
+  ...tseslint.configs.strictTypeChecked,
   {
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  },
+  {
+    /**
+     * https://typescript-eslint.io/troubleshooting/typed-linting/
+     */
+    files: ["**/*.mjs"],
+    extends: [tseslint.configs.disableTypeChecked],
+  },
+  {
+    files: ["*.cts", "*.ctsx", "*.mts", "*.mtsx", "*.ts", "*.tsx"],
     extends: [
       // ...compat.extends("next/core-web-vitals", "next/typescript"),
       ...compat.extends(),
-      ...tseslint.configs.strict,
-      ...tseslint.configs.stylistic,
-      // https://typescript-eslint.io/getting-started/typed-linting/
-      ...tseslint.configs.strictTypeChecked,
-      {
-        languageOptions: {
-          parserOptions: {
-            projectService: true,
-            tsconfigRootDir: import.meta.dirname,
-          },
-        },
-      },
+      // ...tseslint.configs.stylistic,
     ],
-    // eslint-disable-next-line @cspell/spellchecker
-    files: ["*.cts", "*.ctsx", "*.mts", "*.mtsx", "*.ts", "*.tsx"],
     languageOptions: {
       parser: typescriptEslintParser,
       globals: {
