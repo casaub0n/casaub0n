@@ -16,7 +16,6 @@ import globals from "globals";
  * by eslint rule
  * https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/import-style.md#enforce-specific-import-styles-per-module
  */
-// eslint-disable-next-line
 const { dirname } = path;
 
 const __filename = fileURLToPath(import.meta.url);
@@ -90,22 +89,6 @@ const config = tseslint.config([
   ignoreConfig,
   ...tseslint.configs.strict,
   // https://typescript-eslint.io/getting-started/typed-linting/
-  ...tseslint.configs.strictTypeChecked,
-  {
-    languageOptions: {
-      parserOptions: {
-        projectService: true,
-        tsconfigRootDir: import.meta.dirname,
-      },
-    },
-  },
-  {
-    /**
-     * https://typescript-eslint.io/troubleshooting/typed-linting/
-     */
-    files: ["**/*.mjs"],
-    extends: [tseslint.configs.disableTypeChecked],
-  },
   {
     files: ["*.cts", "*.ctsx", "*.mts", "*.mtsx", "*.ts", "*.tsx"],
     extends: [
@@ -116,11 +99,12 @@ const config = tseslint.config([
     languageOptions: {
       parser: typescriptEslintParser,
       globals: {
-        ...globals.browser,
-        ...globals.node,
+        ...globals.builtin,
       },
       parserOptions: {
         sourceType: "module",
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
       },
     },
     plugins: {
