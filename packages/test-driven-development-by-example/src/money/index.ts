@@ -39,7 +39,6 @@ export class Money implements Expression {
   }
 
   public toString(): string {
-    // eslint-disable-next-line @typescript-eslint/restrict-plus-operands
     return this._amount + " " + this.currency;
   }
 
