@@ -1,3 +1,4 @@
+/* eslint-disable @cspell/spellchecker -- The config include ignore file */
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { FlatCompat } from "@eslint/eslintrc";
@@ -5,7 +6,7 @@ import { FlatCompat } from "@eslint/eslintrc";
 import tseslint from "typescript-eslint";
 import unuserdPlugin from "eslint-plugin-unused-imports";
 import type TSESLint from "@typescript-eslint/utils";
-import cspellPlugin from "@cspell/eslint-plugin";
+import cspellESLintPluginRecommended from "@cspell/eslint-plugin/recommended";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import turboPlugin from "eslint-plugin-turbo";
 import pluginConfigPrettier from "eslint-config-prettier";
@@ -109,7 +110,6 @@ const config = tseslint.config([
     },
     plugins: {
       "unused-imports": unuserdPlugin,
-      "@cspell": cspellPlugin,
       unicorn: eslintPluginUnicorn,
       turbo: turboPlugin,
     },
@@ -283,8 +283,6 @@ const config = tseslint.config([
        * [最低限の flat config（まずは no-unused-imports を動かす）](https://zenn.dev/seventhseven07/articles/06a02c4048decf)
        */
       "unused-imports/no-unused-imports": "error",
-      // https://github.com/streetsidesoftware/cspell/tree/main/packages/cspell-eslint-plugin#configuration-new-eslintconfigjs
-      "@cspell/spellchecker": ["warn", {}],
       // https://zenn.dev/yskn_sid25/articles/c309f804fde5a5#%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97
       ...eslintPluginUnicorn.configs.recommended.rules,
       "turbo/no-undeclared-env-vars": [
@@ -295,6 +293,7 @@ const config = tseslint.config([
       ],
     },
   },
+  cspellESLintPluginRecommended,
   /**
    * https://zenn.dev/kazukix/articles/eslint-config-2024-09#eslint-config-prettier
    */
