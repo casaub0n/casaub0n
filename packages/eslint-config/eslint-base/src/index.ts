@@ -110,7 +110,6 @@ const config = tseslint.config([
     },
     plugins: {
       "unused-imports": unuserdPlugin,
-      unicorn: eslintPluginUnicorn,
       turbo: turboPlugin,
     },
     rules: {
@@ -209,10 +208,12 @@ const config = tseslint.config([
         },
         {
           selector: "objectLiteralMethod",
+          // eslint-disable-next-line unicorn/no-null
           format: null,
         },
         {
           selector: "objectLiteralProperty",
+          // eslint-disable-next-line unicorn/no-null
           format: null,
         },
         {
@@ -223,6 +224,7 @@ const config = tseslint.config([
         {
           selector: "parameter",
           modifiers: ["destructured"],
+          // eslint-disable-next-line unicorn/no-null
           format: null,
         },
         {
@@ -244,6 +246,7 @@ const config = tseslint.config([
         {
           selector: "variable",
           modifiers: ["destructured"],
+          // eslint-disable-next-line unicorn/no-null
           format: null,
         },
       ],
@@ -283,8 +286,6 @@ const config = tseslint.config([
        * [最低限の flat config（まずは no-unused-imports を動かす）](https://zenn.dev/seventhseven07/articles/06a02c4048decf)
        */
       "unused-imports/no-unused-imports": "error",
-      // https://zenn.dev/yskn_sid25/articles/c309f804fde5a5#%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97
-      ...eslintPluginUnicorn.configs.recommended.rules,
       "turbo/no-undeclared-env-vars": [
         "error",
         {
@@ -294,6 +295,12 @@ const config = tseslint.config([
     },
   },
   cspellESLintPluginRecommended,
+
+  /**
+   * @see https://github.com/sindresorhus/eslint-plugin-unicorn?tab=readme-ov-file#recommended-config
+   */
+  eslintPluginUnicorn.configs.all,
+
   /**
    * https://zenn.dev/kazukix/articles/eslint-config-2024-09#eslint-config-prettier
    */
