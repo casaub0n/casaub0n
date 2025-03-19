@@ -19,6 +19,8 @@ const cspell = {
     "**/*.mdx",
     "**/package.json",
     "**/.gitignore",
+    "**/*.rs",
+    "**/Cargo.toml",
   ],
   ignoreRegExpList: ["\!\\[.+?\\]"],
 };
