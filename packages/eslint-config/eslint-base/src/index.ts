@@ -110,7 +110,6 @@ const config = tseslint.config([
     },
     plugins: {
       "unused-imports": unuserdPlugin,
-      turbo: turboPlugin,
     },
     rules: {
       /**
@@ -286,12 +285,6 @@ const config = tseslint.config([
        * [最低限の flat config（まずは no-unused-imports を動かす）](https://zenn.dev/seventhseven07/articles/06a02c4048decf)
        */
       "unused-imports/no-unused-imports": "error",
-      "turbo/no-undeclared-env-vars": [
-        "error",
-        {
-          allowList: ["^ENV_[A-Z]+$"],
-        },
-      ],
     },
   },
   cspellESLintPluginRecommended,
@@ -300,6 +293,11 @@ const config = tseslint.config([
    * @see https://github.com/sindresorhus/eslint-plugin-unicorn?tab=readme-ov-file#recommended-config
    */
   eslintPluginUnicorn.configs.all,
+
+  /**
+   * @see https://github.com/vercel/turborepo/tree/main/packages/eslint-plugin-turbo#usage-flat-config-eslintconfigjs
+   */
+  turboPlugin.configs["flat/recommended"],
 
   /**
    * https://zenn.dev/kazukix/articles/eslint-config-2024-09#eslint-config-prettier
