@@ -2,7 +2,7 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { FlatCompat } from "@eslint/eslintrc";
-// import pluginJs from "@eslint/eslintrc";
+import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 import unuserdPlugin from "eslint-plugin-unused-imports";
 import type TSESLint from "@typescript-eslint/utils";
@@ -88,6 +88,10 @@ const ignoreConfig = {
  */
 const config = tseslint.config([
   ignoreConfig,
+  /**
+   * @see https://zenn.dev/yu_ta_9/articles/7001d66779ff3a#%40eslint%2Fjs
+   */
+  pluginJs.configs.recommended,
   ...tseslint.configs.strict,
   // https://typescript-eslint.io/getting-started/typed-linting/
   {
