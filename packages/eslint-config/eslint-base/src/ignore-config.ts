@@ -72,5 +72,20 @@ export const ignoreConfig = {
      * `node_modules/` is already ignored
      */
     "**/jspm_packages/**",
+
+    /**
+     * TypeScript v1 declaration files
+     */
+    "**/typings/**",
+
+    /**
+     * TypeScript cache
+     */
+    "**/*.tsbuildinfo",
+
+    /**
+     * Optional npm cache directory
+     */
+    "**/.npm",
   ],
 } as const satisfies TSESLint.TSESLint.FlatConfig.Config;
