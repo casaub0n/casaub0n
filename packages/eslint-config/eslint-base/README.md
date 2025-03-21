@@ -1,10 +1,10 @@
 # `@casaub0n/eslint-config`
 
-This config is flat config.
+This is flat config.
 
 ## Usage
 
-Make `eslint.config.mjs` on the root of your project.
+Make `eslint.config.mjs` on the root of a project.
 
 This is a example, be strict in the beginning.
 
