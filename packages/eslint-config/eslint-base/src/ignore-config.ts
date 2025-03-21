@@ -87,5 +87,23 @@ export const ignoreConfig = {
      * Optional npm cache directory
      */
     "**/.npm",
+
+    /**
+     * Optional eslint cache
+     */
+    "**/.eslintcache",
+
+    /**
+     * Microbundle cache
+     */
+    "**/.rpt2_cache/**",
+    "**/.rts2_cache_cjs/**",
+    "**/.rts2_cache_es/**",
+    "**/.rts2_cache_umd/**",
+
+    /**
+     * Optional REPL history
+     */
+    "**/.node_repl_history",
   ],
 } as const satisfies TSESLint.TSESLint.FlatConfig.Config;
