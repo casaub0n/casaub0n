@@ -33,6 +33,7 @@ const compat = new FlatCompat({
  */
 const config = tseslint.config([
   ignoreConfig,
+
   /**
    * @see https://zenn.dev/yu_ta_9/articles/7001d66779ff3a#%40eslint%2Fjs
    */
@@ -236,6 +237,9 @@ const config = tseslint.config([
       "unused-imports/no-unused-imports": "error",
     },
   },
+  /**
+   * @see https://github.com/streetsidesoftware/cspell/tree/main/packages/cspell-eslint-plugin#configuration-new-eslintconfigjs
+   */
   cspellESLintPluginRecommended,
 
   /**
