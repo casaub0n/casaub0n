@@ -1,6 +1,9 @@
 /* eslint-disable @cspell/spellchecker -- The config include ignore file */
 import type TSESLint from "@typescript-eslint/utils";
 
+/**
+ * @todo separate base and other ignores
+ */
 export const ignoreConfig = {
   ignores: [
     /**
