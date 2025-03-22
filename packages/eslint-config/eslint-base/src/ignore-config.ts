@@ -105,5 +105,27 @@ export const ignoreConfig = {
      * Optional REPL history
      */
     "**/.node_repl_history",
+
+    /**
+     * Output of `npm pack`
+     */
+    "**/*.tgz",
+
+    /**
+     * Yarn Integrity file
+     */
+    "**/.yarn-integrity",
+
+    /**
+     * dotenv environment variables file
+     * @todo Should `.env.*` be ignored ?
+     */
+    "**/.env",
+    ".env.test",
+
+    /**
+     * parcel-bundler cache
+     */
+    "**/.cache",
   ],
 } as const satisfies TSESLint.TSESLint.FlatConfig.Config;
