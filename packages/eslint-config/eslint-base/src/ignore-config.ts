@@ -130,5 +130,10 @@ export const ignoreConfig = {
      * parcel-bundler cache
      */
     "**/.cache",
+
+    /**
+     * turbo
+     */
+    "**/.turbo",
   ],
 } as const satisfies TSESLint.TSESLint.FlatConfig.Config;
