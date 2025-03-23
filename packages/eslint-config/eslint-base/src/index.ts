@@ -28,8 +28,9 @@ const compat = new FlatCompat({
 });
 
 /**
- * Usage is at README because this eslint-config compile to ESM in dist.
- * So, the user uses ESM file in dist.
+ * Usage is at README because this eslint-config compile to a ESM file in dist.
+ *
+ * So, the user will call a compiled ESM file into their `eslint.config.mjs`.
  */
 const config = tseslint.config([
   ignoreConfig,
