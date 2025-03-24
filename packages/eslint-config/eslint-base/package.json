@@ -3,9 +3,24 @@
   "version": "0.0.0",
   "main": "./dist/index.mjs",
   "license": "MIT",
+  "description": "base eslint config for casaub0n",
   "publishConfig": {
     "access": "public"
   },
+  "engines": {
+    "node": ">=22"
+  },
+  "author": {
+    "name": "casaub0n",
+    "email": "netzach.yoshida@gmail.com",
+    "url": "https://github.com/casaub0n"
+  },
+  "keywords": [
+    "ESLint",
+    "TypeScript",
+    "Node.js",
+    "JavaScript"
+  ],
   "scripts": {
     "build": "tsup",
     "type:check": "tsc --noEmit",
@@ -25,17 +40,13 @@
     "eslint-plugin-turbo": "2.4.4",
     "eslint-plugin-unicorn": "57.0.0",
     "eslint-plugin-unused-imports": "4.1.4",
-    "globals": "^16.0.0",
+    "globals": "16.0.0",
     "typescript-eslint": "8.27.0"
   },
   "devDependencies": {
     "@types/eslint-config-prettier": "6.11.3",
     "@types/node": "22.13.11",
-    "@typescript-eslint/eslint-plugin": "8.27.0",
-    "@typescript-eslint/parser": "8.27.0",
     "@typescript-eslint/utils": "8.27.0",
-    "eslint-plugin-import": "2.31.0",
-    "globals": "^16.0.0",
     "tsup": "8.4.0",
     "tsx": "4.19.3",
     "typescript": "5.8.2"
