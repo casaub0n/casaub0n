@@ -1,3 +1,4 @@
+/* eslint-disable @cspell/spellchecker */
 import { type UserScript } from "./parse-userscript-json";
 
 /**

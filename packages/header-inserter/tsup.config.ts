@@ -16,6 +16,7 @@ export default defineConfig({
   minify: true,
   bundle: true,
   // https://github.com/egoist/tsup/issues/619
+  // eslint-disable-next-line unicorn/better-regex -- @todo check [/(?:.*)/] is [/.*/]
   noExternal: [/(?:.*)/],
   splitting: false,
 });

@@ -13,6 +13,7 @@ const UserScriptSchema = v.object({
   author: v.string(),
   match: v.string(),
   grant: v.string(),
+  // eslint-disable-next-line @cspell/spellchecker
   sameversion: v.nullish(v.boolean()),
 });
 
@@ -21,11 +22,11 @@ export type UserScript = v.InferOutput<typeof UserScriptSchema>;
 /**
  * read `userscript.json` in root project, and parsed value
  *
- * @param userScriptJsonObjStr - usescript.json object's str
- * @returns parsed usescript.json object
+ * @param userScriptJsonObjStr - userscript.json object's str
+ * @returns parsed userscript.json object
  * @example
  * ```ts
- * // show version in usescript.json
+ * // show version in userscript.json
  * const parsedPackageJson = packageJsonParser('{"version": "1.0.0"}');
  * parsedPackageJson.success ? console.log(parsedPackageJson.version) : console.error(parsedPackageJson.issues);
  * ```
