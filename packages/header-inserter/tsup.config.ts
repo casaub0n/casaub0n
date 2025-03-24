@@ -11,7 +11,7 @@ export default defineConfig({
   shims: true,
   skipNodeModulesBundle: true,
   clean: true,
-  target: "node20",
+  target: "node22",
   platform: "node",
   minify: true,
   bundle: true,
