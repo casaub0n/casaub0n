@@ -6,7 +6,6 @@ export default [
     rules: {
       "no-console": "off",
       "import/no-unresolved": "off",
-      "@typescript-eslint/consistent-type-definitions": "off",
     },
   },
 ];

@@ -1,4 +1,4 @@
-/* eslint-disable no-console -- this is test */
+/* eslint-disable @cspell/spellchecker */
 import { expect, test } from "vitest";
 import { parsePackageJson } from "./parse-package-json";
 
