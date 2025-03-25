@@ -39,8 +39,8 @@ importers:
         specifier: 3.5.3
         version: 3.5.3
       renovate:
-        specifier: 39.213.3
-        version: 39.213.3(encoding@0.1.13)(typanion@3.14.0)
+        specifier: 39.213.4
+        version: 39.213.4(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: 14.5.0
         version: 14.5.0
@@ -5470,8 +5470,8 @@ packages:
     resolution: {integrity: sha512-aVNobHnJqLiUelTaHat9DZ1qM2w0C0Eym4LPI/3JxOnSokGVdsl1T1kN7TFvsEAD8G47A6VKQ0TVHqbBnYMJlQ==}
     engines: {node: '>=12.0.0'}
 
-  better-sqlite3@11.9.0:
-    resolution: {integrity: sha512-4b9xYnoaskj8eIkke9ZCB42p5bOPabptSku8Rl4Yww70Jf+aHeLvrIjXDJrKQxUEjdppsFb+fdJSjoH4TklROA==}
+  better-sqlite3@11.9.1:
+    resolution: {integrity: sha512-Ba0KR+Fzxh2jDRhdg6TSH0SJGzb8C0aBY4hR8w8madIdIzzC6Y1+kx5qR6eS1Z+Gy20h6ZU28aeyg0z1VIrShQ==}
 
   big.js@5.2.2:
     resolution: {integrity: sha512-vyL2OymJxmarO8gxMr0mhChsO9QGwhynfuu4+MHTAW6czfq9humCB7rKpUjDd9YUiDPU4mzpyupFSvOClAwbmQ==}
@@ -10776,8 +10776,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@39.213.3:
-    resolution: {integrity: sha512-cUEFRTD/eCVfQcrqWVjMAvUhWm3jFFFV6efiOCd+z+EpWuxeHBn1z1zliut+nIOxDm5c0y7eUWD6yq1QLJDj6Q==}
+  renovate@39.213.4:
+    resolution: {integrity: sha512-33HTQiUjKGJD93Lsh2rc4JoAI82++WlFiklXh6t8qUuBd9rvBW6rXbA0el9wx45uhgaqP7C43C5mXdNUH7jO3A==}
     engines: {node: ^20.15.1 || ^22.11.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -19385,7 +19385,7 @@ snapshots:
     dependencies:
       open: 8.4.2
 
-  better-sqlite3@11.9.0:
+  better-sqlite3@11.9.1:
     dependencies:
       bindings: 1.5.0
       prebuild-install: 7.1.3
@@ -25928,7 +25928,7 @@ snapshots:
       lodash: 4.17.21
       strip-ansi: 6.0.1
 
-  renovate@39.213.3(encoding@0.1.13)(typanion@3.14.0):
+  renovate@39.213.4(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.738.0
       '@aws-sdk/client-ec2': 3.738.0
@@ -26043,7 +26043,7 @@ snapshots:
       yaml: 2.7.0
       zod: 3.24.2
     optionalDependencies:
-      better-sqlite3: 11.9.0
+      better-sqlite3: 11.9.1
       openpgp: 6.1.0
       re2: 1.21.4
     transitivePeerDependencies:
