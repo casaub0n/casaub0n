@@ -5,7 +5,7 @@
 // import { strict as assert } from "assert";
 import { env } from "node:process";
 import { test } from "node:test";
-import path from "path";
+import path from "node:path";
 import puppeteer from "puppeteer";
 
 // import { markdownLink } from "./markdownLink";
@@ -23,6 +23,7 @@ test("Addon Test", async () => {
     ],
   });
   const page = await browser.newPage();
+  // eslint-disable-next-line @cspell/spellchecker
   await page.goto("chrome://extensions/", { waitUntil: ["networkidle0", "load"] });
 
   const addonElement = await page.$("extensions-manager");
