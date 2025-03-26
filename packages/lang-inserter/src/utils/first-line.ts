@@ -1,26 +1,26 @@
 import fs from "node:fs";
 
 // https://github.com/pensierinmusica/firstline/blob/master/index.js
-// eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-function-return-type -- this is utils function
+// eslint-disable-next-line @typescript-eslint/no-explicit-any, unicorn/prevent-abbreviations -- this is utils function
 export const firstLine = async (path: fs.PathLike, useOpts?: any) => {
-  interface Opts {
+  interface Options {
     encoding: BufferEncoding;
     lineEnding: string;
   }
-  const opts: Opts = {
-    encoding: "utf-8",
+  const options: Options = {
+    encoding: "utf8",
     lineEnding: "\n",
   };
-  Object.assign(opts, useOpts);
+  Object.assign(options, useOpts);
   return await new Promise((resolve, reject) => {
-    const rs = fs.createReadStream(path, { encoding: opts.encoding });
-    let acc = "";
+    const rs = fs.createReadStream(path, { encoding: options.encoding });
+    let accumulator = "";
     let pos = 0;
     let index;
     rs.on("data", (chunk) => {
-      index = chunk.indexOf(opts.lineEnding);
-      // eslint-disable-next-line @typescript-eslint/restrict-plus-operands -- TODO
-      acc += chunk;
+      index = chunk.indexOf(options.lineEnding);
+
+      accumulator += chunk;
       if (index === -1) {
         pos += chunk.length;
       } else {
@@ -29,10 +29,10 @@ export const firstLine = async (path: fs.PathLike, useOpts?: any) => {
       }
     })
       .on("close", () => {
-        resolve(acc.slice(acc.charCodeAt(0) === 0xfeff ? 1 : 0, pos));
+        resolve(accumulator.slice(accumulator.codePointAt(0) === 0xfe_ff ? 1 : 0, pos));
       })
-      .on("error", (err) => {
-        reject(err);
+      .on("error", (error) => {
+        reject(error);
       });
   });
 };
