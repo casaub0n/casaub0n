@@ -2,7 +2,7 @@
  * This test uses node test runner
  */
 
-import { strict as assert } from "assert";
+import { strict as assert } from "node:assert";
 import { EVP } from "evp-ts";
 import { err, ok } from "neverthrow";
 import type { Result } from "neverthrow";
@@ -13,7 +13,7 @@ import puppeteer from "puppeteer";
 /**
  * Chrome path from env file
  */
-const getChromePathFromEnv = (): Result<string, Error> => {
+const getChromePathFromEnvironment = (): Result<string, Error> => {
   const chromePath = env.CHROME;
   return chromePath ? ok(chromePath) : err(new Error("There is not env config"));
 };
@@ -23,7 +23,7 @@ const getChromePathFromEnv = (): Result<string, Error> => {
  * TODO: use using -> https://zenn.dev/mizchi/articles/practical-await-using
  */
 void test("Example Domain", async () => {
-  const chromePath = getChromePathFromEnv();
+  const chromePath = getChromePathFromEnvironment();
 
   if (chromePath.isOk()) {
     const parser = EVP.object({

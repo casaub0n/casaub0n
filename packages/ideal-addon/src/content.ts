@@ -1,3 +1,4 @@
+/* eslint-disable @cspell/spellchecker */
 import { MessageActionsId, ResponseMessageData, ZennArticleData } from "./types";
 
 const setupMessageListener = () => {
