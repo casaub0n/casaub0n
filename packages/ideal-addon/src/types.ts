@@ -1,3 +1,4 @@
+/* eslint-disable @cspell/spellchecker */
 export type MessageActionsId = {
   action: "get-zenn-articles";
 };
