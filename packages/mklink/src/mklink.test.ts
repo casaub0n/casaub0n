@@ -2,7 +2,7 @@
  * This test uses node test runner
  */
 
-import { strict as assert } from "assert";
+import { strict as assert } from "node:assert";
 import { EVP } from "evp-ts";
 import { err, ok } from "neverthrow";
 import type { Result } from "neverthrow";
@@ -13,13 +13,13 @@ import puppeteer from "puppeteer";
 /**
  * Chrome path from env file
  */
-const getChromePathFromEnv = (): Result<string, Error> => {
+const getChromePathFromEnvironment = (): Result<string, Error> => {
   const chromePath = env.CHROME;
   return chromePath ? ok(chromePath) : err(new Error("There is not env config"));
 };
 
 test("Example Domain", async () => {
-  const chrome_path = getChromePathFromEnv();
+  const chrome_path = getChromePathFromEnvironment();
 
   if (chrome_path.isOk()) {
     const parser = EVP.object({

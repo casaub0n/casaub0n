@@ -1,3 +1,5 @@
+/* eslint-disable unicorn/prefer-global-this */
+// eslint-disable-next-line @cspell/spellchecker
 console.log("loading mklink");
 
 // https://qiita.com/kim_t0814/items/084bb8c042defc1e232d
@@ -10,9 +12,11 @@ document.addEventListener("keydown", function (event) {
 });
 
 document.addEventListener("keyup", function (event) {
+  // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
   delete keysPressed[event.key];
 });
 
+// eslint-disable-next-line prefer-const
 let keysPressed = {};
 
 /**
@@ -27,7 +31,7 @@ const getTextAndUrl = () => {
 };
 
 const copyAsMarkdown = (text: string, url: string) => {
-  let markdownLink = `[${text}](${url})`;
+  const markdownLink = `[${text}](${url})`;
   navigator.clipboard.writeText(markdownLink);
 };
 
