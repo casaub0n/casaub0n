@@ -12,4 +12,5 @@ const config = {
   moduleNameMapper: { "^@/(.*)$": "<rootDir>/src/$1" },
 };
 
+// eslint-disable-next-line no-undef
 module.exports = config;

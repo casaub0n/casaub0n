@@ -2,13 +2,13 @@
  * This test uses node test runner
  */
 
-import { strict as assert } from "assert";
+import { strict as assert } from "node:assert";
 import { env } from "node:process";
 import { test } from "node:test";
-import path from "path";
+import path from "node:path";
 import puppeteer from "puppeteer";
 
-import { markdownLink } from "./markdownLink";
+import { markdownLink } from "./markdown-link";
 
 test("Addon Test", async () => {
   console.log(`chrome path: ${env.CHROME}`);
@@ -33,11 +33,12 @@ test("Addon Test", async () => {
   // TODO: wait
   // await page.waitForSelector("body");
   // it con't be gotten tree
-  const el = await page.$("html");
+  const element = await page.$("html");
 
-  if (el) {
-    const hoge = await (await el.getProperty("textContent")).jsonValue();
-    console.log(`el: ${hoge}`);
+  if (element) {
+    // eslint-disable-next-line unicorn/no-await-expression-member
+    const elementJsonValue = await (await element.getProperty("textContent")).jsonValue();
+    console.log(`el: ${elementJsonValue}`);
   }
 
   const title = await page.title();

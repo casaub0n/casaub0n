@@ -7,7 +7,7 @@ import { env } from "node:process";
 import { test } from "node:test";
 import puppeteer from "puppeteer";
 
-import { markdownLink } from "./markdownLink";
+import { markdownLink } from "./markdown-link";
 
 test("Example Domain", async () => {
   console.log(`chrome path: ${env.CHROME}`);
