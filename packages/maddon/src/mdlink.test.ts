@@ -5,7 +5,7 @@
 import { env } from "node:process";
 import puppeteer from "puppeteer";
 
-import { markdownLink } from "./markdownLink";
+import { markdownLink } from "./markdown-link";
 
 describe("Example Domain", () => {
   it("markdown link", async () => {
