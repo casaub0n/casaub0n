@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/prefer-query-selector */
 import { JSDOM } from "jsdom";
 import fetch from "node-fetch";
 import type HTMLCollectionOf from "jsdom";
@@ -39,7 +40,7 @@ export const domCalc = (
 
 export const makePureTitle = (
   title: HTMLParagraphElement,
-  discriptionList: string[],
+  descriptionList: string[],
   titleList: string[],
   honDate?: Element,
   honDateList?: string[],
@@ -50,7 +51,7 @@ export const makePureTitle = (
     const pureDiscription = discription.textContent;
     if (pureDiscription !== null) {
       console.log(`discription: ${pureDiscription}`);
-      discriptionList.push(pureDiscription);
+      descriptionList.push(pureDiscription);
     }
   }
   const removeDiscription = (dom: HTMLCollectionOf<HTMLElement>): void => {
@@ -73,37 +74,18 @@ export const makePureTitle = (
 
   for (const hoge of hogeSmall) {
     const textContent = hoge.textContent;
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     textContent ? console.log(`small tag value: ${textContent}`) : console.log("small tag is null");
   }
 
   const pureTitles = title.textContent?.replace(/^\s+/, "").split("\n");
+  // eslint-disable-next-line unicorn/no-null
   if (pureTitles != null) {
     for (const pureTitle of pureTitles) {
       console.log(`pure title: ${pureTitle}`);
       titleList.push(pureTitle);
     }
   }
-
-  // for (const discription of discriptionDom) {
-  //   console.log(`discription: ${discription.textContent}`);
-  //   const pureDiscription = discription.textContent;
-  //   if (pureDiscription) {
-  //     discriptionList.push(pureDiscription);
-  //   }
-  //   if (honDate && honDateList) {
-  //     const pureHonDate = honDate.textContent;
-  //     if (pureHonDate) {
-  //       honDateList.push(pureHonDate);
-  //     }
-  //     honDate.remove();
-  //   }
-  //   discription.remove();
-  //   const pureTitle = title.textContent?.replace(/^\s+/, "");
-  //   console.log(`pure title: ${pureTitle}`);
-  //   if (pureTitle) {
-  //     titleList.push(pureTitle);
-  //   }
-  // }
 };
 
 const init = async (): Promise<void> => {
@@ -112,7 +94,7 @@ const init = async (): Promise<void> => {
 
     const imgList: string[] = [];
     const honDateList: string[] = [];
-    const discriptionList: string[] = [];
+    const descriptionList: string[] = [];
     const titleList: string[] = [];
 
     const bungeizaResponse = await fetch("https://www.shin-bungeiza.com/schedule.html");
@@ -142,10 +124,10 @@ const init = async (): Promise<void> => {
           if (honDateDom.length > 0) {
             for (const honDate of honDateDom) {
               console.log(honDate.textContent);
-              makePureTitle(title, discriptionList, titleList, honDate, honDateList);
+              makePureTitle(title, descriptionList, titleList, honDate, honDateList);
             }
           } else {
-            makePureTitle(title, discriptionList, titleList);
+            makePureTitle(title, descriptionList, titleList);
           }
         }
         const timelist = scheduleProgram.getElementsByTagName("li");
