@@ -83,7 +83,7 @@ test('"ABC" much "ABC" by Option "i"', () => {
   if (optionI_regExp) expect(optionI_regExp[0]).toBe("ABC");
 });
 
-test('"ABC\\nDEF" much "D" by Option "m"', () => {
+test(String.raw`"ABC\nDEF" much "D" by Option "m"`, () => {
   if (optionM_regExp) expect(optionM_regExp[0]).toBe("D");
 });
 

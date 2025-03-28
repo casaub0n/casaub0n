@@ -3,13 +3,13 @@
  * https://qiita.com/suin/items/2653fea448fd6246437a
  */
 export function isFutureDate(
-  ...args: [year: number, month: number, day: number] | [date: Date] | [isoDateString: string]
+  ...arguments_: [year: number, month: number, day: number] | [date: Date] | [isoDateString: string]
 ): boolean {
-  if (args.length === 3) {
-    const [year, month, day] = args;
+  if (arguments_.length === 3) {
+    const [year, month, day] = arguments_;
     return new Date(year, month, day) > new Date();
   }
-  const dateOrString = args[0];
+  const dateOrString = arguments_[0];
   if (dateOrString instanceof Date) {
     return dateOrString > new Date();
   }

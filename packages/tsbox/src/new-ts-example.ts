@@ -10,11 +10,11 @@ const requestExternalApi = async ({
     limit: `${number}`;
   };
 }) => {
-  const res = await fetch("https://example.com", {
+  const response = await fetch("https://example.com", {
     method: "POST",
     body: JSON.stringify(data),
   });
-  return await res.json();
+  return await response.json();
 };
 
 await requestExternalApi({
@@ -48,28 +48,29 @@ const localizeDataJP = {
  * Recursive Type
  * @see https://zenn.dev/ficilcom/articles/940ecce71e45a6#%E5%86%8D%E5%B8%B0%E7%9A%84
  */
-type RecursiveObj = { [key: string]: string | RecursiveObj };
+type RecursiveObject = { [key: string]: string | RecursiveObject };
 
 type UnionWithDot<
   Prefix extends string,
   Key,
 > = `${Prefix}${Prefix extends "" ? "" : "."}${Key extends string ? Key : ""}`;
 
-type DotKeys<Obj extends RecursiveObj, Prefix extends string = ""> = {
-  [Key in keyof Obj]: Obj[Key] extends object
-    ? DotKeys<Obj[Key], UnionWithDot<Prefix, Key>>
+type DotKeys<Object_ extends RecursiveObject, Prefix extends string = ""> = {
+  [Key in keyof Object_]: Object_[Key] extends object
+    ? DotKeys<Object_[Key], UnionWithDot<Prefix, Key>>
     : UnionWithDot<Prefix, Key>;
-}[keyof Obj];
+}[keyof Object_];
 
 const localize = (key: ExtractedDotKeys) => {
   const splittedKey = key.split(".");
 
-  const stringOrObj = splittedKey.reduce<RecursiveObj | string>((obj, key) => {
-    if (typeof obj === "string") {
-      return obj;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars, unicorn/prevent-abbreviations, unicorn/no-array-reduce
+  const stringOrObj = splittedKey.reduce<RecursiveObject | string>((object, key) => {
+    if (typeof object === "string") {
+      return object;
     }
 
-    return obj[key];
+    return object[key];
   }, localizeDataJP);
 };
 

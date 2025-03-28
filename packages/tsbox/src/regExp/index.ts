@@ -1,16 +1,16 @@
 // regexp
-export const regExpObjectMethod = (val: string) => {
-  return /BC/.exec(val);
+export const regExpObjectMethod = (value: string) => {
+  return /BC/.exec(value);
 };
 
-export const stringExpObjectMethod = (val: string) => {
-  return val.match(/BC/);
+export const stringExpObjectMethod = (value: string) => {
+  return value.match(/BC/);
 };
 
 export const ConstractaWithOptionG = new RegExp("ABC", "g");
 export const LiteralWithOptionG = /ABC/g;
 
-export const optionI_regExp = "ABC".match(/ABC/i);
+export const optionI_regExp = "ABC".match(/abc/i);
 export const optionM_regExp = "ABC\nDEF".match(/^D/m);
 
 /**
@@ -21,7 +21,7 @@ export const optionY_regExp = /ABC/y;
 /**
  * combine i and g option
  */
-export const optionGI_regExp = "ABC_abc_ABC".match(/ABC/gi);
+export const optionGI_regExp = "ABC_abc_ABC".match(/abc/gi);
 
 export const metaRegExp = "?!?!?!".match(/\?/g);
 
