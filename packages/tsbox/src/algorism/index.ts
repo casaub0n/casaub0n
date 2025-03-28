@@ -24,13 +24,17 @@ type A = "a" | "b" | "c";
 
 export function exhaustive(v: A) {
   switch (v) {
-    case "a":
+    case "a": {
       return "A";
-    case "b":
+    }
+    case "b": {
       return "B";
-    case "c":
+    }
+    case "c": {
       return "C";
-    default:
-      return v satisfies never; // check exhaustiveness
+    }
+    default: {
+      return v satisfies never;
+    } // check exhaustiveness
   }
 }

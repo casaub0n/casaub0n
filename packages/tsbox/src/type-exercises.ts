@@ -1,8 +1,8 @@
 /**
  * 0 or more is true
  */
-export const isPositive = (num: number): boolean => {
-  return num >= 0;
+export const isPositive = (number_: number): boolean => {
+  return number_ >= 0;
 };
 
 type User = {
@@ -25,16 +25,18 @@ type User = {
  */
 export const userName = (user: User): string => user.name;
 
-type IsPositiveFunc = (arg: number) => boolean;
-export const isPositiveFunc: IsPositiveFunc = (num) => num >= 0;
+type IsPositiveFunction = (argument: number) => boolean;
+export const isPositiveFunction: IsPositiveFunction = (number_) => number_ >= 0;
 
-export const sumOfPos = (arr: number[]) => {
-  return arr.filter((num) => num >= 0).reduce((acc, num) => acc + num, 0);
+export const sumOfPos = (array: number[]) => {
+  return array
+    .filter((number_) => number_ >= 0)
+    .reduce((accumulator, number_) => accumulator + number_, 0);
 };
 
-export const myFilter = <T>(arr: T[], predicate: (elm: T) => boolean): T[] => {
+export const myFilter = <T>(array: T[], predicate: (elm: T) => boolean): T[] => {
   const result: T[] = [];
-  for (const elm of arr) {
+  for (const elm of array) {
     if (predicate(elm)) {
       result.push(elm);
     }
@@ -49,12 +51,15 @@ type Speed = "slow" | "medium" | "fast";
  */
 export const getSpeed = (speed: Speed): number => {
   switch (speed) {
-    case "slow":
+    case "slow": {
       return 10;
-    case "medium":
+    }
+    case "medium": {
       return 50;
-    case "fast":
+    }
+    case "fast": {
       return 200;
+    }
   }
 };
 
@@ -64,13 +69,13 @@ type AddEventListener = {
 };
 
 export declare function addEventListener(
-  arg: string,
-  arg2: () => void,
-  arg3?: boolean | AddEventListener,
+  argument: string,
+  argument2: () => void,
+  argument3?: boolean | AddEventListener,
 ): void;
 
-type UseStateUpdate<T> = T | ((oldVal: T) => T);
+type UseStateUpdate<T> = T | ((oldValue: T) => T);
 
-export declare function useState<T>(initVal: T): [T, (updator: UseStateUpdate<T>) => void];
+export declare function useState<T>(initValue: T): [T, (updator: UseStateUpdate<T>) => void];
 
 export type PartialUser = Partial<User>;

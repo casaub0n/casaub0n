@@ -5,7 +5,7 @@ import {
   userName,
   sumOfPos,
   myFilter,
-  isPositiveFunc,
+  isPositiveFunction,
   getSpeed,
 } from "./type-exercises";
 
@@ -25,8 +25,8 @@ test("Object type makes User object", () => {
 });
 
 test("0 or more is true, otherwise false", () => {
-  expect(isPositiveFunc(5)).toBe(true);
-  expect(isPositiveFunc(-1)).toBe(false);
+  expect(isPositiveFunction(5)).toBe(true);
+  expect(isPositiveFunction(-1)).toBe(false);
 });
 
 test("0 or more number summation", () => {
@@ -34,7 +34,7 @@ test("0 or more number summation", () => {
 });
 
 test("make a double number's array", () => {
-  expect(myFilter([1, 2, 3, 4, 5], (num) => num % 2 === 0)).toEqual([2, 4]);
+  expect(myFilter([1, 2, 3, 4, 5], (number_) => number_ % 2 === 0)).toEqual([2, 4]);
 });
 
 test("each velocities level answer actual mount", () => {
