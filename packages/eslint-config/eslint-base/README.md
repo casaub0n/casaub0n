@@ -1,4 +1,4 @@
-# `@casaub0n/eslint-config`
+# `@casaub0n/eslint-config` ![badge](https://img.shields.io/badge/ESLint-3A33D1?logo=eslint)
 
 This is flat config.
 
@@ -25,7 +25,7 @@ export default [
 
 ## Development
 
-### Warning
+[!Warning]
 
 ESLint can't run in this project when the script command is `"lint": "eslint"` in `package.json`
 
