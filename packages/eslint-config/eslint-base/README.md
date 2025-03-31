@@ -1,4 +1,6 @@
-# `@casaub0n/eslint-config` ![badge](https://img.shields.io/badge/ESLint-3A33D1?logo=eslint)
+# `@casaub0n/eslint-config`
+
+[![badge](https://img.shields.io/badge/ESLint-3A33D1?logo=eslint)](https://eslint.org/docs/latest/use/configure/)
 
 This is flat config.
 
