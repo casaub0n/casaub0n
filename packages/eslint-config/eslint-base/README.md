@@ -23,7 +23,11 @@ export default [
 ];
 ```
 
-## Warning
+## Development
+
+### Warning
+
+ESLint can't run in this project when the script command is `"lint": "eslint"` in `package.json`
 
 ```console
 > @casaub0n/eslint-base@0.0.0 lint casaub0n\packages\eslint-config\eslint-base
@@ -47,3 +51,9 @@ Error: Cannot find module 'casaub0n\node_modules\.pnpm\eslint@9.22.0_jiti@1.21.7
 Node.js v22.14.0
  ELIFECYCLE  Command failed with exit code 1.
 ```
+
+[**pnpm dlx**](https://pnpm.io/cli/dlx)
+
+> Fetches a package from the registry without installing it as a dependency, hotloads it, and runs whatever default command binary it exposes.
+
+So it uses `"lint": "pnpm dlx eslint"` instead of direct running.
