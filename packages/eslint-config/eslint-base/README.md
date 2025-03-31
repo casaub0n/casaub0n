@@ -27,9 +27,9 @@ export default [
 
 ## Development
 
-[!Warning]
-
-ESLint can't run in this project when the script command is `"lint": "eslint"` in `package.json`
+> [!WARNING]
+>
+> ESLint can't run in this project when the script command is `"lint": "eslint"` in `package.json`
 
 ```console
 > @casaub0n/eslint-base@0.0.0 lint casaub0n\packages\eslint-config\eslint-base
