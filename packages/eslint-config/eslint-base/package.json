@@ -23,7 +23,8 @@
   ],
   "scripts": {
     "build": "tsup",
-    "type:check": "tsc --noEmit"
+    "type:check": "tsc --noEmit",
+    "lint": "pnpm dlx eslint"
   },
   "peerDependencies": {
     "@cspell/eslint-plugin": "8.18.1",
