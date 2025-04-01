@@ -43,7 +43,7 @@ test("each velocities level answer actual mount", () => {
   expect(getSpeed("fast")).toBe(200);
 });
 
-describe("Advenced Type", () => {
+describe("Advanced Type", () => {
   test("User is optional", () => {
     const user: PartialUser = { name: "Optional太郎" };
     expect(user.name).toBe("Optional太郎");
