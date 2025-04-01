@@ -76,6 +76,6 @@ export declare function addEventListener(
 
 type UseStateUpdate<T> = T | ((oldValue: T) => T);
 
-export declare function useState<T>(initValue: T): [T, (updator: UseStateUpdate<T>) => void];
+export declare function useState<T>(initValue: T): [T, (updater: UseStateUpdate<T>) => void];
 
 export type PartialUser = Partial<User>;

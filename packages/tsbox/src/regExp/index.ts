@@ -7,7 +7,7 @@ export const stringExpObjectMethod = (value: string) => {
   return value.match(/BC/);
 };
 
-export const ConstractaWithOptionG = new RegExp("ABC", "g");
+export const ConstructorWithOptionG = new RegExp("ABC", "g");
 export const LiteralWithOptionG = /ABC/g;
 
 export const optionI_regExp = "ABC".match(/abc/i);
@@ -33,7 +33,7 @@ export const singleMatcher = "ABC".match(/./);
 /**
  * single word with g Option
  */
-export const singleMatcherGoption = "ABC".match(/./g);
+export const singleMatcherGOption = "ABC".match(/./g);
 
 /**
  * continued word
@@ -43,7 +43,7 @@ export const continuedWordMatcher = "ABC".match(/../);
 /**
  * continued word with G Option
  */
-export const continuedWordMatcherGoption = "ABC".match(/../g);
+export const continuedWordMatcherGOption = "ABC".match(/../g);
 
 /**
  * combine word

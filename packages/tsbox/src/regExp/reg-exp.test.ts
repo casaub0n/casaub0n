@@ -2,7 +2,7 @@ import { test, expect } from "vitest";
 
 import {
   regExpObjectMethod,
-  ConstractaWithOptionG,
+  ConstructorWithOptionG,
   stringExpObjectMethod,
   LiteralWithOptionG,
   optionI_regExp,
@@ -11,9 +11,9 @@ import {
   optionGI_regExp,
   metaRegExp,
   singleMatcher,
-  singleMatcherGoption,
+  singleMatcherGOption,
   continuedWordMatcher,
-  continuedWordMatcherGoption,
+  continuedWordMatcherGOption,
   combineMatcherA,
   combineMatcherD,
 } from "./index";
@@ -63,8 +63,8 @@ test("Same result between RegExp object's method and String object's method", ()
     expect(resultRegExpObjectMethod).toStrictEqual(resultStringExpObjectMethod);
 });
 
-test('Search with "g" option by specify constracta', () => {
-  const resultRegExp = "ABC_ABC_ABC".match(ConstractaWithOptionG);
+test('Search with "g" option by specify constructor', () => {
+  const resultRegExp = "ABC_ABC_ABC".match(ConstructorWithOptionG);
   expect(resultRegExp).toStrictEqual(["ABC", "ABC", "ABC"]);
 });
 
@@ -73,10 +73,10 @@ test('Search with "g" option by specify literal', () => {
   expect(resultRegExp).toStrictEqual(["ABC", "ABC", "ABC"]);
 });
 
-test('Same result between specify constracta and specify literal with "g" option', () => {
+test('Same result between specify constructor and specify literal with "g" option', () => {
   const resultRegExpLiteral = "ABC_ABC_ABC".match(LiteralWithOptionG);
-  const resultRegExpConstracta = "ABC_ABC_ABC".match(ConstractaWithOptionG);
-  expect(resultRegExpLiteral).toStrictEqual(resultRegExpConstracta);
+  const resultRegExpConstructor = "ABC_ABC_ABC".match(ConstructorWithOptionG);
+  expect(resultRegExpLiteral).toStrictEqual(resultRegExpConstructor);
 });
 
 test('"ABC" much "ABC" by Option "i"', () => {
@@ -92,11 +92,13 @@ test('By Option "y", Last index of "ABC" is 0', () => {
 });
 
 test('By Option "y", the regexp much "ABC"', () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-expressions
   expect(optionY_regExp.test("ABC")).toBeTruthy;
 });
 
 test("When from second word", () => {
   optionY_regExp.lastIndex = 1;
+  // eslint-disable-next-line @typescript-eslint/no-unused-expressions
   expect(optionY_regExp.test("ABC")).toBeFalsy;
 });
 
@@ -110,16 +112,16 @@ test("combine g with i option", () => {
   if (optionGI_regExp) expect(optionGI_regExp).toStrictEqual(["ABC", "abc", "ABC"]);
 });
 
-test("it matchs meta char", () => {
+test("it matches meta char", () => {
   if (metaRegExp) expect(metaRegExp).toStrictEqual(["?", "?", "?"]);
 });
 
-test("it matchs single word", () => {
+test("it matches single word", () => {
   if (singleMatcher) expect(singleMatcher[0]).toBe("A");
 });
 
-test("it matchs single word with G Option", () => {
-  if (singleMatcherGoption) expect(singleMatcherGoption).toStrictEqual(["A", "B", "C"]);
+test("it matches single word with G Option", () => {
+  if (singleMatcherGOption) expect(singleMatcherGOption).toStrictEqual(["A", "B", "C"]);
 });
 
 test("it matches continued word", () => {
@@ -127,7 +129,7 @@ test("it matches continued word", () => {
 });
 
 test("it matches continued word with G Option", () => {
-  if (continuedWordMatcherGoption) expect(continuedWordMatcherGoption[0]).toBe("AB");
+  if (continuedWordMatcherGOption) expect(continuedWordMatcherGOption[0]).toBe("AB");
 });
 
 test('it matches "AB" by combine word matcher that\'s "ABCD"', () => {
