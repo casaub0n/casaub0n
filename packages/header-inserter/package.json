@@ -20,7 +20,7 @@
   "scripts": {
     "test": "vitest run",
     "test:ci": "pnpm test",
-    "rmdist": "rimraf dist",
+    "rmdist": "node --import tsx scripts/rrm.ts",
     "tsup:build": "pnpm rmdist && tsup",
     "build": "pnpm rmdist && tsx build.ts",
     "lint": "eslint"
@@ -42,7 +42,6 @@
     "@types/node": "22.14.0",
     "@vitest/ui": "3.1.1",
     "esbuild": "0.25.2",
-    "rimraf": "6.0.1",
     "tsup": "8.4.0",
     "tsx": "4.19.3",
     "typescript": "5.8.2",
