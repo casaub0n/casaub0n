@@ -14,7 +14,7 @@
     "node": ">=20"
   },
   "scripts": {
-    "rmdist": "rimraf dist",
+    "rmdist": "node --import tsx scripts/rrm.ts",
     "prebuild": "pnpm rmdist && esbuild src/index.ts --bundle --define:process.env.NODE_ENV=\\\"production\\\" --minify --platform=node --target=node17 --outfile=dist/index.js",
     "copy": "cpx -u src/static/**/*.{json,html,js} dist/",
     "build": "pnpm prebuild && pnpm copy",
@@ -38,7 +38,6 @@
     "jest": "29.7.0",
     "neverthrow": "8.2.0",
     "puppeteer": "24.6.0",
-    "rimraf": "6.0.1",
     "ts-jest": "29.3.1",
     "tsx": "4.19.3",
     "typescript": "5.8.2"
