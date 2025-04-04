@@ -1,20 +1,20 @@
-import { logger } from "../utils/logger.ts";
 import { parsePackageJson } from "./parse-package-json.ts";
 import { readJsonFile } from "./read-json-file.ts";
 import { parseUserScript } from "./parse-userscript-json.ts";
 import { makeUserscriptHeader } from "./make-userscript-header.ts";
 import { exit } from "node:process";
+import consola from "consola";
 
 export const makeHeader = (): string => {
   const packageJson = readJsonFile("package.json");
   const userScriptJson = readJsonFile("userscript.json");
 
   if (packageJson.isErr()) {
-    logger.error(packageJson.error);
+    consola.error(packageJson.error);
     exit(1);
   }
   if (userScriptJson.isErr()) {
-    logger.error(userScriptJson.error);
+    consola.error(userScriptJson.error);
     exit(1);
   }
 
@@ -23,12 +23,12 @@ export const makeHeader = (): string => {
   const parsedPackageJsonVersion = parsePackageJson(packageJson.value);
 
   if (parsedUserScriptJson.issues) {
-    logger.error(parsedUserScriptJson.issues);
+    consola.error(parsedUserScriptJson.issues);
     exit(1);
   }
 
   if (parsedPackageJsonVersion.issues) {
-    logger.error(parsedPackageJsonVersion.issues);
+    consola.error(parsedPackageJsonVersion.issues);
     exit(1);
   }
 

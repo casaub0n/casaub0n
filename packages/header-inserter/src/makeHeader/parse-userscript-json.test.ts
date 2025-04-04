@@ -1,6 +1,7 @@
 /* eslint-disable @cspell/spellchecker */
 import { expect, test } from "vitest";
 import { parsePackageJson } from "./parse-package-json";
+import consola from "consola";
 
 test("object", () => {
   const userScriptJson = `
@@ -17,10 +18,10 @@ test("object", () => {
   `;
   const parsedUserScriptJson = parsePackageJson(userScriptJson);
   if (parsedUserScriptJson.success) {
-    console.log(`version: ${parsedUserScriptJson.output.version}`);
+    consola.log(`version: ${parsedUserScriptJson.output.version}`);
     expect(parsedUserScriptJson.output.version).toEqual("1.0.0");
   } else {
-    console.error("userscriptjson error");
-    console.error(parsedUserScriptJson.issues);
+    consola.error("userscriptjson error");
+    consola.error(parsedUserScriptJson.issues);
   }
 });
