@@ -21,7 +21,7 @@
     "test": "vitest run",
     "test:ci": "pnpm test",
     "test:export": "vitest --reporter=html",
-    "rmdist": "rimraf dist",
+    "rmdist": "node --import tsx scripts/rrm.ts",
     "build": "pnpm rmdist && tsup src/index.ts --format cjs --dts",
     "start:tsbox": "pnpm build && node dist/index.js",
     "lint": "eslint"
@@ -41,8 +41,8 @@
     "@casaub0n/eslint-base": "workspace:*",
     "@types/node": "22.14.0",
     "@vitest/ui": "3.1.1",
-    "rimraf": "6.0.1",
     "tsup": "8.4.0",
+    "tsx": "4.19.3",
     "typescript": "5.8.2",
     "vitest": "3.1.1"
   },
