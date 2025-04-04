@@ -1,5 +1,6 @@
 import { expect, test } from "vitest";
 import { readJsonFile } from "./read-json-file";
+import consola from "consola";
 
 test("read test.json file", () => {
   const testJsonFile = readJsonFile("./test.json");
@@ -7,5 +8,5 @@ test("read test.json file", () => {
   testJsonFile.isOk()
     ? // eslint-disable-next-line @cspell/spellchecker
       expect(testJsonFile.value).toEqual('{ "name": "hoge" }\n')
-    : console.error("read json file error");
+    : consola.error("read json file error");
 });

@@ -1,3 +1,4 @@
+import consola from "consola";
 import { build } from "esbuild";
 
 const outDirectory = "dist";
@@ -14,4 +15,4 @@ void (async () => {
   });
 })();
 
-console.log("Build completed!");
+consola.log("Build completed!");
