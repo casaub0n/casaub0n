@@ -21,7 +21,8 @@
     "test": "vitest run",
     "test:ci": "pnpm test",
     "rmdist": "node --import tsx scripts/rrm.ts",
-    "tsup:build": "pnpm rmdist && tsup",
+    "build:tsup": "pnpm rmdist && tsup",
+    "build:rolldown": "pnpm rmdist && rolldown -c rolldown.config.ts",
     "build": "pnpm rmdist && tsx build.ts",
     "lint": "eslint"
   },
@@ -42,6 +43,7 @@
     "@types/node": "22.14.0",
     "@vitest/ui": "3.1.1",
     "esbuild": "0.25.2",
+    "rolldown": "1.0.0-beta.7",
     "tsup": "8.4.0",
     "tsx": "4.19.3",
     "typescript": "5.8.3",
