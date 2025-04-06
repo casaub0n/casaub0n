@@ -135,5 +135,10 @@ export const ignoreConfig = {
      * turbo
      */
     "**/.turbo",
+
+    /**
+     * tsbox
+     */
+    "**/tsbox/html/**",
   ],
 } as const satisfies TSESLint.TSESLint.FlatConfig.Config;
