@@ -61,3 +61,7 @@ Ref:
 ### protobufjs
 
 renovate requires protobufjs, this is annoyed.
+
+## textlint
+
+https://zenn.dev/yamane_yuta/articles/65886897cefa1e
