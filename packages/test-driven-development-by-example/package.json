@@ -22,7 +22,7 @@
     "test:watch": "node --watch --no-warnings --import tsx src/money.test.ts",
     "test:ci": "pnpm test",
     "test:purenode": "pnpm build:test && pnpm node dist/money.test.js",
-    "rmdist": "rimraf dist",
+    "rmdist": "node --import tsx scripts/rrm.ts",
     "prebuild": "pnpm rmdist",
     "build:module": "tsup src/index.ts --format cjs --dts --env.TABLE_HEAD something",
     "build:test": "esbuild src/money.test.ts --bundle --define:process.env.NODE_ENV=\\\"production\\\" --minify --platform=node --target=node20 --outfile=dist/money.test.js",
@@ -49,7 +49,6 @@
     "@types/node": "22.14.0",
     "esbuild": "0.25.2",
     "npm-run-all2": "7.0.2",
-    "rimraf": "6.0.1",
     "tsup": "8.4.0",
     "tsx": "4.19.3",
     "typescript": "5.8.3"
