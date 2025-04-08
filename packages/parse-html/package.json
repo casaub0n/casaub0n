@@ -18,7 +18,7 @@
   },
   "scripts": {
     "test": "echo hello",
-    "rmdist": "rimraf dist",
+    "rmdist": "node --import tsx scripts/rrm.ts",
     "prebuild": "pnpm rmdist",
     "build": "tsup src/index.ts --format cjs --dts --env.TABLE_HEAD 月",
     "start:parse-html": "pnpm build && node dist/index.js",
@@ -39,8 +39,8 @@
     "@types/glob": "8.1.0",
     "@types/jsdom": "21.1.7",
     "@types/node": "22.14.0",
-    "rimraf": "6.0.1",
     "tsup": "8.4.0",
+    "tsx": "4.19.3",
     "typescript": "5.8.3"
   },
   "dependencies": {
