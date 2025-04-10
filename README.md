@@ -35,5 +35,5 @@ I major in Chinese.
 
 ## Others
 
-- [What is this repository](./packages/casaub0n/README.md)
+- [What is this repository](./devdoc.md)
 - [diary](./packages/diary/)
