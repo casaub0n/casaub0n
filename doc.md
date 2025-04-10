@@ -31,7 +31,11 @@ TODO
 ## rm command
 use TypeScript via tsx.
 
-- make scripts directory in the root of package
+- Make scripts directory in the root of package
+- Add rrm.ts in scripts directory
+- Add scripts directory in tsconfig.json
+
+**rrm.ts**
 
 ```typescript
 /**
@@ -46,6 +50,18 @@ import fs from "node:fs";
   await fs.promises.rm("../dist", { recursive: true, force: true });
 })();
 ```
+
+**tsconfig.json**
+
+```json
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  ...,
+  "include": ["./src", "./scripts"]
+}
+```
+
+## PowerShell
 
 **Input**
 
