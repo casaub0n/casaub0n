@@ -28,13 +28,56 @@ TODO
 
 ### Dev Drive
 
-## Why do I use rimraf
+## rm command
 
-As `Node.js >= v14.14.0`, it can replace rimraf with `node -e 'fs.rmSync(`dist`, {recursive:true, force:true})'`
+use TypeScript via tsx.
 
-[npm scripts で rimraf を使わずディレクトリを再帰的に削除する](https://zenn.dev/aumy/articles/node-e-fs-promises-rm-rimraf-recursive-true)
+- Make `scripts` directory in the root of package
+- Add `rrm.ts` in `scripts` directory
+- Add `scripts` directory in `tsconfig.json`
+- Add `rmdist` command in `scripts` of `package.json`
 
-But in PowerShell, a single-quoted string in a double-quoted string works different
+**rrm.ts**
+
+```typescript
+/**
+ * rm command
+ * @see https://qiita.com/munieru_jp/items/7131bb2617041388622d#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%82%92%E5%86%8D%E5%B8%B0%E7%9A%84%E3%81%AB%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95
+ */
+
+import fs from "node:fs";
+
+// eslint-disable-next-line unicorn/prefer-top-level-await -- if your tsconfig can allow top-level await, use top-level await
+(async () => {
+  await fs.promises.rm("../dist", { recursive: true, force: true });
+})();
+```
+
+**tsconfig.json**
+
+```json
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  ...,
+  "include": ["./src", "./scripts"]
+}
+```
+
+**package.json**
+
+```json
+{
+  ...,
+  "scripts": {
+    ...,
+    "rmdist": "node --import tsx scripts/rrm.ts",
+    "build": "pnpm rmdist && tsup src/index.ts --format cjs --dts",
+  }
+  ...
+}
+```
+
+## PowerShell
 
 **Input**
 
