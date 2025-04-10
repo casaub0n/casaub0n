@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "rimraf .next && next build",
+    "rmdist": "node --import tsx scripts/rrm.ts",
+    "build": "rmdist && next build",
     "start": "next start",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
@@ -57,8 +58,8 @@
     "prisma": "6.6.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "rimraf": "6.0.1",
     "serve": "14.2.4",
+    "tsx": "4.19.3",
     "typescript": "5.8.3",
     "vercel": "41.5.0"
   }
