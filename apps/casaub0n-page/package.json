@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "rmdist": "node --import tsx scripts/rrm.ts",
-    "build": "rmdist && next build",
+    "build": "pnpm rmdist && next build",
     "start": "next start",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
