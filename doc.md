@@ -29,11 +29,13 @@ TODO
 ### Dev Drive
 
 ## rm command
+
 use TypeScript via tsx.
 
-- Make scripts directory in the root of package
-- Add rrm.ts in scripts directory
-- Add scripts directory in tsconfig.json
+- Make `scripts` directory in the root of package
+- Add `rrm.ts` in `scripts` directory
+- Add `scripts` directory in `tsconfig.json`
+- Add `rmdist` command in `scripts` of `package.json`
 
 **rrm.ts**
 
@@ -45,7 +47,7 @@ use TypeScript via tsx.
 
 import fs from "node:fs";
 
-// eslint-disable-next-line unicorn/prefer-top-level-await
+// eslint-disable-next-line unicorn/prefer-top-level-await -- if your tsconfig can allow top-level await, use top-level await
 (async () => {
   await fs.promises.rm("../dist", { recursive: true, force: true });
 })();
@@ -58,6 +60,20 @@ import fs from "node:fs";
   "$schema": "https://json.schemastore.org/tsconfig",
   ...,
   "include": ["./src", "./scripts"]
+}
+```
+
+**package.json**
+
+```json
+{
+  ...,
+  "scripts": {
+    ...,
+    "rmdist": "node --import tsx scripts/rrm.ts",
+    "build": "pnpm rmdist && tsup src/index.ts --format cjs --dts",
+  }
+  ...
 }
 ```
 
