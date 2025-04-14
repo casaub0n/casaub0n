@@ -32,8 +32,7 @@ TODO
 
 use TypeScript via tsx.
 
-- Make `scripts` directory in the root of package
-- Add `rrm.ts` in `scripts` directory
+- Make `scripts/rrm.ts` in the root of package
 - Add `scripts` directory in `tsconfig.json`
 - Add `rmdist` command in `scripts` of `package.json`
 
