@@ -681,8 +681,8 @@ importers:
         specifier: 0.25.2
         version: 0.25.2
       header-inserter:
-        specifier: 1.0.20
-        version: 1.0.20(typescript@5.8.3)
+        specifier: 1.0.21
+        version: 1.0.21(typescript@5.8.3)
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.14.1)(ts-node@10.9.1(@swc/core@1.11.21)(@types/node@22.14.1)(typescript@5.8.3))
@@ -717,8 +717,8 @@ importers:
         specifier: 1.1.1
         version: 1.1.1
       header-inserter:
-        specifier: 1.0.20
-        version: 1.0.20(typescript@5.8.3)
+        specifier: 1.0.21
+        version: 1.0.21(typescript@5.8.3)
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.14.1)(ts-node@10.9.1(@swc/core@1.11.21)(@types/node@22.14.1)(typescript@5.8.3))
@@ -8025,8 +8025,8 @@ packages:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
     hasBin: true
 
-  header-inserter@1.0.20:
-    resolution: {integrity: sha512-4PpO/zJV2piZvMQD5NAEYXmKtgr11ULLd04gdrP7/ku80MtpGOCrIDWmuOIh4nYyBuHWWG8krbN6KXNi4vM4zA==}
+  header-inserter@1.0.21:
+    resolution: {integrity: sha512-HYqnj6XB0N90a6R9BoHcVgJ16apkjG4kB7d+iSZSiIxZVnP7iOShQ26RQes+/il2S+PCfCUYmb0TJADL+vNXFA==}
     engines: {node: '>=22'}
 
   hmac-drbg@1.0.1:
@@ -12678,14 +12678,6 @@ packages:
   v8-to-istanbul@9.3.0:
     resolution: {integrity: sha512-kiGUalWN+rgBJ/1OHZsBtU4rXZOfj/7rKQxULKlIzwzQSvMJUUNgPwJEEh7gU6xEVxC0ahoOBvN2YI8GH6FNgA==}
     engines: {node: '>=10.12.0'}
-
-  valibot@0.42.1:
-    resolution: {integrity: sha512-3keXV29Ar5b//Hqi4MbSdV7lfVp6zuYLZuA9V1PvQUsXqogr+u5lvLPLk3A4f74VUXDnf/JfWMN6sB+koJ/FFw==}
-    peerDependencies:
-      typescript: '>=5'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
 
   valibot@1.0.0:
     resolution: {integrity: sha512-1Hc0ihzWxBar6NGeZv7fPLY0QuxFMyxwYR2sF1Blu7Wq7EnremwY2W02tit2ij2VJT8HcSkHAQqmFfl77f73Yw==}
@@ -22643,11 +22635,11 @@ snapshots:
 
   he@1.2.0: {}
 
-  header-inserter@1.0.20(typescript@5.8.3):
+  header-inserter@1.0.21(typescript@5.8.3):
     dependencies:
+      consola: 3.4.2
       neverthrow: 8.2.0
-      pino: 9.6.0
-      valibot: 0.42.1(typescript@5.8.3)
+      valibot: 1.0.0(typescript@5.8.3)
     transitivePeerDependencies:
       - typescript
 
@@ -28578,10 +28570,6 @@ snapshots:
       '@jridgewell/trace-mapping': 0.3.25
       '@types/istanbul-lib-coverage': 2.0.6
       convert-source-map: 2.0.0
-
-  valibot@0.42.1(typescript@5.8.3):
-    optionalDependencies:
-      typescript: 5.8.3
 
   valibot@1.0.0(typescript@5.8.3):
     optionalDependencies:
