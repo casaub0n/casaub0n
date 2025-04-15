@@ -25,7 +25,9 @@
     "types": ["node"],
     "useDefineForClassFields": true,
     "resolveJsonModule": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true
   },
   "include": ["./tsup.config.ts", "./src"],
   "exclude": ["node_modules",  "dist"]
