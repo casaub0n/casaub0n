@@ -107,3 +107,60 @@ renovate requires protobufjs, this is annoyed.
 ## textlint
 
 https://zenn.dev/yamane_yuta/articles/65886897cefa1e
+
+## TypeScript
+
+[4 ステップでモダンな tsconfig.json を作る - mizdra's blog](https://www.mizdra.net/entry/2025/04/02/093100)
+
+This is for ESM, and no bundle node_modules.
+
+**import things**
+
+- specific unused flag
+- be strict
+
+There is a [eslint-base config](./packages/config-eslint/tsconfig.json)
+
+```json
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Default",
+  "compilerOptions": {
+    "composite": false,
+    "inlineSources": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "exactOptionalPropertyTypes": false,
+    "checkJs": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitReturns": true,
+    "allowUnusedLabels": true,
+    "allowUnreachableCode": true,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "preserveWatchOutput": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "strictNullChecks": true,
+    "downlevelIteration": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "outDir": "./dist",
+    "types": ["node"],
+    "useDefineForClassFields": true,
+    "resolveJsonModule": true,
+    "noFallthroughCasesInSwitch": true,
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true
+  },
+  "include": ["./tsup.config.ts", "./src"],
+  "exclude": ["node_modules", "dist"]
+}
+```
