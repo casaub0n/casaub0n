@@ -21,7 +21,7 @@
     "rmdist": "node --import tsx scripts/rrm.ts",
     "tsup:build": "pnpm rmdist && tsup",
     "build": "pnpm rmdist && tsx build.ts",
-    "lint": "eslint"
+    "lint": "eslint src/**"
   },
   "files": [
     "dist"
