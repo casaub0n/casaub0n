@@ -24,7 +24,7 @@
     "rmdist": "node --import tsx scripts/rrm.ts",
     "build": "pnpm rmdist && tsup src/index.ts --format cjs --dts",
     "start:tsbox": "pnpm build && node dist/index.js",
-    "lint": "eslint"
+    "lint": "eslint src/**"
   },
   "files": [
     "dist"
