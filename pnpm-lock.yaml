@@ -39,8 +39,8 @@ importers:
         specifier: 3.5.3
         version: 3.5.3
       renovate:
-        specifier: 39.252.0
-        version: 39.252.0(encoding@0.1.13)(typanion@3.14.0)
+        specifier: 39.253.2
+        version: 39.253.2(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: 14.6.0
         version: 14.6.0
@@ -5189,16 +5189,16 @@ packages:
   '@xtuc/long@4.2.2':
     resolution: {integrity: sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==}
 
-  '@yarnpkg/core@4.4.0':
-    resolution: {integrity: sha512-ZT+dPniRDJEyH+z0oOXS+nNkrssJ2jsmqoKDP5y8wQpbHlG+bxqEq8Ri1uDQGLh+43LkEh1Brih9QMs9p3f5/A==}
+  '@yarnpkg/core@4.4.1':
+    resolution: {integrity: sha512-iWCcc7BVN2SPZahM55FoOL36NvfOnw8j90G5PqOyjBwfCJngj7jTeT16cj27fFfHYlq+gwuu4I/tkHYzZ2mplQ==}
     engines: {node: '>=18.12.0'}
 
   '@yarnpkg/fslib@3.1.2':
     resolution: {integrity: sha512-FpB2F1Lrm43F94klS9UN0ceOpe/PHZSpJB7bIkvReF/ba890bSdu1NokSKr998yaFee7yqeD9Wkid5ye7azF3A==}
     engines: {node: '>=18.12.0'}
 
-  '@yarnpkg/libzip@3.2.0':
-    resolution: {integrity: sha512-g5HgJFxQpUG3dMWrX0bHHnKN50V934IpaaH0rIJQd/lTSvOu5fyMUgTfIeNaC24ZGS/lunxBSbJC6/6HqJe7Ag==}
+  '@yarnpkg/libzip@3.2.1':
+    resolution: {integrity: sha512-xPdiZxwCXGXxc1GDEyPjRQ5KqkgoOmieDNszLozbqghaeXIaokRbMKLUNx0Mr0LAnzII64kN3gl5qVyzfMxnIg==}
     engines: {node: '>=18.12.0'}
     peerDependencies:
       '@yarnpkg/fslib': ^3.1.2
@@ -11181,8 +11181,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@39.252.0:
-    resolution: {integrity: sha512-b0KazOYynirDsPZ7bgNsBNw+IkEmAIT9JLxKrvLgu5KOVv9/9rCYRqPnlTWD0lSG3+L9sKkZYSF4EtNwSk1Y7w==}
+  renovate@39.253.2:
+    resolution: {integrity: sha512-K5S8ZAUTRzXcQdVsXWdVoVZf3t/Znh/huvot779ou2oJdk59wHv+LoTMJbWOXQF11omTgy+oa0jv10cuyFcggA==}
     engines: {node: ^20.15.1 || ^22.11.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -19355,13 +19355,13 @@ snapshots:
 
   '@xtuc/long@4.2.2': {}
 
-  '@yarnpkg/core@4.4.0(typanion@3.14.0)':
+  '@yarnpkg/core@4.4.1(typanion@3.14.0)':
     dependencies:
       '@arcanis/slice-ansi': 1.1.1
       '@types/semver': 7.7.0
       '@types/treeify': 1.0.3
       '@yarnpkg/fslib': 3.1.2
-      '@yarnpkg/libzip': 3.2.0(@yarnpkg/fslib@3.1.2)
+      '@yarnpkg/libzip': 3.2.1(@yarnpkg/fslib@3.1.2)
       '@yarnpkg/parsers': 3.0.3
       '@yarnpkg/shell': 4.1.2(typanion@3.14.0)
       camelcase: 5.3.1
@@ -19390,7 +19390,7 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@yarnpkg/libzip@3.2.0(@yarnpkg/fslib@3.1.2)':
+  '@yarnpkg/libzip@3.2.1(@yarnpkg/fslib@3.1.2)':
     dependencies:
       '@types/emscripten': 1.40.1
       '@yarnpkg/fslib': 3.1.2
@@ -26766,7 +26766,7 @@ snapshots:
       lodash: 4.17.21
       strip-ansi: 6.0.1
 
-  renovate@39.252.0(encoding@0.1.13)(typanion@3.14.0):
+  renovate@39.253.2(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.777.0
       '@aws-sdk/client-ec2': 3.779.0
@@ -26800,7 +26800,7 @@ snapshots:
       '@renovatebot/pep440': 4.1.0
       '@renovatebot/ruby-semver': 4.0.0
       '@sindresorhus/is': 4.6.0
-      '@yarnpkg/core': 4.4.0(typanion@3.14.0)
+      '@yarnpkg/core': 4.4.1(typanion@3.14.0)
       '@yarnpkg/parsers': 3.0.3
       agentkeepalive: 4.6.0
       aggregate-error: 3.1.0
