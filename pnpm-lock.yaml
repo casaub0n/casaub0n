@@ -378,8 +378,8 @@ importers:
         specifier: 2.31.0
         version: 2.31.0(@typescript-eslint/parser@8.31.0(eslint@9.25.1(jiti@1.21.7))(typescript@5.8.3))(eslint@9.25.1(jiti@1.21.7))
       eslint-plugin-mdx:
-        specifier: 3.4.0
-        version: 3.4.0(eslint@9.25.1(jiti@1.21.7))
+        specifier: 3.4.1
+        version: 3.4.1(eslint@9.25.1(jiti@1.21.7))
       eslint-plugin-only-warn:
         specifier: 1.1.0
         version: 1.1.0
@@ -3159,10 +3159,6 @@ packages:
 
   '@pkgr/core@0.1.2':
     resolution: {integrity: sha512-fdDH1LSGfZdTH2sxdpVMw31BanV28K/Gry0cVFxaNP77neJSkd82mM8ErPNYs9e+0O7SdHBLTDzDgwUuy18RnQ==}
-    engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
-
-  '@pkgr/core@0.2.2':
-    resolution: {integrity: sha512-25L86MyPvnlQoX2MTIV2OiUcb6vJ6aRbFa9pbwByn95INKD5mFH2smgjDhq+fwJoqAgvgbdJLj6Tz7V9X5CFAQ==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
   '@pkgr/core@0.2.4':
@@ -7277,8 +7273,8 @@ packages:
       eslint-plugin-import-x:
         optional: true
 
-  eslint-mdx@3.4.0:
-    resolution: {integrity: sha512-sNffDEvt3fAEkrCntX0Kk/IWhHkfp0fhQ7/n30gQuIRm/FeUjLMkKkgAwlOFqxIMD4XJ03Iidmkf18EC8zTyYw==}
+  eslint-mdx@3.4.1:
+    resolution: {integrity: sha512-/Pt9D5TIAZwAUnCJA24i+uE9NuqulmLI58a1oU1eRb5jeUNOR23FpIt4xuBE9CFR50nd4FkLnuyox7dSNSZ5Tg==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       eslint: '>=8.0.0'
@@ -7343,8 +7339,8 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9
 
-  eslint-plugin-mdx@3.4.0:
-    resolution: {integrity: sha512-f/ot8rSp/telkW1joqe0y9XQigTrE99sQHqyqLYYVgGLtQvl54suDidepbiGsDF7Z5V9uyQPWpmY0Qu/ZMRzmg==}
+  eslint-plugin-mdx@3.4.1:
+    resolution: {integrity: sha512-dfQ7LthK/Kmfw2d5XrR4CS1ScmFOa1S9vPjBUxtKgCEl6mNnYVfA/yg50xLyab0pI/GEfGEmvlajs2biDHJBsA==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       eslint: '>=8.0.0'
@@ -11929,10 +11925,6 @@ packages:
 
   symbol-tree@3.2.4:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
-
-  synckit@0.11.3:
-    resolution: {integrity: sha512-szhWDqNNI9etJUvbZ1/cx1StnZx8yMmFxme48SwR4dty4ioSY50KEZlpv0qAfgc1fpRzuh9hBXEzoCpJ779dLg==}
-    engines: {node: ^14.18.0 || >=16.0.0}
 
   synckit@0.11.4:
     resolution: {integrity: sha512-Q/XQKRaJiLiFIBNN+mndW7S/RHxvwzuZS6ZwmRzUBqJBv/5QIKCEwkBC8GBf8EQJKYnaFs0wOZbKTXBPj8L9oQ==}
@@ -16721,8 +16713,6 @@ snapshots:
     optional: true
 
   '@pkgr/core@0.1.2': {}
-
-  '@pkgr/core@0.2.2': {}
 
   '@pkgr/core@0.2.4': {}
 
@@ -21834,7 +21824,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-mdx@3.4.0(eslint@9.25.1(jiti@1.21.7)):
+  eslint-mdx@3.4.1(eslint@9.25.1(jiti@1.21.7)):
     dependencies:
       acorn: 8.14.1
       acorn-jsx: 5.3.2(acorn@8.14.1)
@@ -21844,7 +21834,7 @@ snapshots:
       remark-mdx: 3.1.0
       remark-parse: 11.0.0
       remark-stringify: 11.0.0
-      synckit: 0.11.3
+      synckit: 0.11.4
       tslib: 2.8.1
       unified: 11.0.5
       unified-engine: 11.2.2
@@ -22010,17 +22000,17 @@ snapshots:
       safe-regex-test: 1.1.0
       string.prototype.includes: 2.0.1
 
-  eslint-plugin-mdx@3.4.0(eslint@9.25.1(jiti@1.21.7)):
+  eslint-plugin-mdx@3.4.1(eslint@9.25.1(jiti@1.21.7)):
     dependencies:
       eslint: 9.25.1(jiti@1.21.7)
-      eslint-mdx: 3.4.0(eslint@9.25.1(jiti@1.21.7))
+      eslint-mdx: 3.4.1(eslint@9.25.1(jiti@1.21.7))
       mdast-util-from-markdown: 2.0.2
       mdast-util-mdx: 3.0.0
       micromark-extension-mdxjs: 3.0.0
       remark-mdx: 3.1.0
       remark-parse: 11.0.0
       remark-stringify: 11.0.0
-      synckit: 0.11.3
+      synckit: 0.11.4
       tslib: 2.8.1
       unified: 11.0.5
       vfile: 6.0.3
@@ -27917,11 +27907,6 @@ snapshots:
       use-sync-external-store: 1.5.0(react@19.1.0)
 
   symbol-tree@3.2.4: {}
-
-  synckit@0.11.3:
-    dependencies:
-      '@pkgr/core': 0.2.2
-      tslib: 2.8.1
 
   synckit@0.11.4:
     dependencies:
