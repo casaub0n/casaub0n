@@ -24,5 +24,13 @@ export default defineConfig({
      */
     inlineDynamicImports: true,
     file: "dist/index.js",
+
+    /**
+     * `iife` opiton miss node native packages that's `node:something`
+     * ```
+     * [MISSING_GLOBAL_NAME] Warning: No name was provided for external module "node:util" in "output.globals" – guessing "node_util".
+     * ```
+     */
+    format: "esm",
   },
 });
