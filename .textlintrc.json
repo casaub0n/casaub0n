@@ -7,8 +7,11 @@
     }
   },
   "rules": {
-    "preset-ja-technical-writing": true,
     "no-todo": true,
-    "ja-technical-writing/sentence-length": "off"
+    "preset-ja-technical-writing": {
+      "sentence-length": {
+        "max": 200
+      }
+    }
   }
 }
