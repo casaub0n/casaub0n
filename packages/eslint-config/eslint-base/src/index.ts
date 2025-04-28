@@ -1,6 +1,5 @@
 /* eslint-disable @cspell/spellchecker -- The config include ignore file */
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+
 import { FlatCompat } from "@eslint/eslintrc";
 import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
@@ -17,11 +16,18 @@ import { ignoreConfig } from "./ignore-config";
 /**
  * by eslint rule
  * https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/import-style.md#enforce-specific-import-styles-per-module
+ *
+ * fixed __dirname by eslint [eslint-plugin-unicorn/docs/rules/prefer-import-meta-properties.md at v59.0.0 · sindresorhus/eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/v59.0.0/docs/rules/prefer-import-meta-properties.md#examples)
+ * ```typescript
+ * import path from "node:path";
+ * import { fileURLToPath } from "node:url";
+ *
+ * const { dirname } = path;
+ * const __filename = fileURLToPath(import.meta.url);
+ * const __dirname = dirname(__filename);
+ * ```
  */
-const { dirname } = path;
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __dirname = import.meta.dirname;
 
 const compat = new FlatCompat({
   baseDirectory: __dirname,
