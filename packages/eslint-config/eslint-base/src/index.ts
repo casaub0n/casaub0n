@@ -57,7 +57,6 @@ const config = ({
     ...tseslint.configs.strict,
     // https://typescript-eslint.io/getting-started/typed-linting/
     {
-      // eslint-disable-next-line @cspell/spellchecker -- This is file extension
       files: ["*.cts", "*.ctsx", "*.mts", "*.mtsx", "*.ts", "*.tsx"],
       extends: [
         // ...compat.extends("next/core-web-vitals", "next/typescript"),
@@ -68,14 +67,18 @@ const config = ({
         ecmaVersion: "latest",
         parser: typescriptEslintParser,
         globals: {
-          ...globals.builtin,
+          ...globals.browser,
+          ...globals.es2025,
+          ...globals.node,
+          document: "readonly",
+          navigator: "readonly",
+          window: "readonly",
         },
         parserOptions: {
           project: tsconfigFileName,
           tsconfigRootDir,
           sourceType: "module",
           projectService: true,
-          // tsconfigRootDir: import.meta.dirname,
           ecmaVersion: "latest",
           // eslint-disable-next-line unicorn/no-null
           jsxPragma: null, // for @typescript/eslint-parser
