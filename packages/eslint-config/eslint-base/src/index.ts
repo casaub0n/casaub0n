@@ -1,9 +1,11 @@
-/* eslint-disable @cspell/spellchecker -- The config include ignore file */
-
 import { FlatCompat } from "@eslint/eslintrc";
 import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
-import unuserdPlugin from "eslint-plugin-unused-imports";
+
+/**
+ * @see https://github.com/sweepline/eslint-plugin-unused-imports/tree/master?tab=readme-ov-file#usage
+ */
+import unusedImports from "eslint-plugin-unused-imports";
 import type TSESLint from "@typescript-eslint/utils";
 import cspellESLintPluginRecommended from "@cspell/eslint-plugin/recommended";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
@@ -13,20 +15,6 @@ import typescriptEslintParser from "@typescript-eslint/parser";
 import globals from "globals";
 import { ignoreConfig } from "./ignore-config";
 
-/**
- * by eslint rule
- * https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/import-style.md#enforce-specific-import-styles-per-module
- *
- * fixed __dirname by eslint [eslint-plugin-unicorn/docs/rules/prefer-import-meta-properties.md at v59.0.0 · sindresorhus/eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/v59.0.0/docs/rules/prefer-import-meta-properties.md#examples)
- * ```typescript
- * import path from "node:path";
- * import { fileURLToPath } from "node:url";
- *
- * const { dirname } = path;
- * const __filename = fileURLToPath(import.meta.url);
- * const __dirname = dirname(__filename);
- * ```
- */
 const __dirname = import.meta.dirname;
 
 const compat = new FlatCompat({
@@ -34,7 +22,7 @@ const compat = new FlatCompat({
 });
 
 /**
- * Usage is at README because this eslint-config compile to a ESM file in dist.
+ * **Usage** is at README because this eslint-config compile to a ESM file in dist.
  *
  * So, the user will call a compiled ESM file into their `eslint.config.mjs`.
  */
@@ -48,6 +36,7 @@ const config = tseslint.config([
   ...tseslint.configs.strict,
   // https://typescript-eslint.io/getting-started/typed-linting/
   {
+    // eslint-disable-next-line @cspell/spellchecker -- This is file extension
     files: ["*.cts", "*.ctsx", "*.mts", "*.mtsx", "*.ts", "*.tsx"],
     extends: [
       // ...compat.extends("next/core-web-vitals", "next/typescript"),
@@ -66,7 +55,7 @@ const config = tseslint.config([
       },
     },
     plugins: {
-      "unused-imports": unuserdPlugin,
+      "unused-imports": unusedImports,
     },
     rules: {
       /**
