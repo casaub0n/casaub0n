@@ -1,16 +1,10 @@
 import base from "../eslint-config/eslint-base/dist/index.mjs";
 
 const baseEslint = [
-  // {
-  //   settings: {
-  //     "import/resolver": {
-  //       node: {
-  //         extensions: [".js", ".jsx", ".ts", ".tsx"],
-  //       },
-  //     },
-  //   },
-  // },
-  ...base,
+  ...base({
+    tsconfigRootDir: import.meta.dirname,
+    tsconfigFileName: "./tsconfig.json",
+  }),
 ];
 
 export default baseEslint;
