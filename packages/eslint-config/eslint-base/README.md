@@ -8,18 +8,23 @@ This is flat config.
 
 Make `eslint.config.mjs` on the root of a project.
 
-This is a example, be strict in the beginning.
+This is a example eslint config.
+
+Use `tsconfigRootDir` and `tsconfigFileName` to point tsconfig.json location.
 
 ```js
 import base from "../eslint-config/eslint-base/dist/index.mjs";
 
 export default [
-  ...base,
+  ...base({
+    tsconfigRootDir: import.meta.dirname,
+    tsconfigFileName: "./tsconfig.json",
+  }),
   {
     rules: {
-      "no-console": "off",
       "import/no-unresolved": "off",
-      "@typescript-eslint/consistent-type-definitions": "off",
+      "@typescript-eslint/strict-boolean-expressions": "off",
+      "no-console": "off",
     },
   },
 ];
