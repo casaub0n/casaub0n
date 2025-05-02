@@ -25,24 +25,23 @@ const compat = new FlatCompat({
  * **Usage** is at README because this eslint-config compile to a ESM file in dist.
  *
  * So, the user will call a compiled ESM file into their `eslint.config.mjs`.
- * @param tsconfigFileName tsconfig.json
- * @param tsconfigRootDir importMetaUrl
+ * @param tsconfigFileName `./tsconfig.json`
+ * @param tsconfigRootDir `import.meta.dirname` [The directory name of the current module. This is the same as the `path.dirname()` of the `import.meta.filename`.](https://nodejs.org/api/esm.html#importmetadirname)
  * @example ```javascript
- * import * as nodePath from 'node:path';
+ * import base from "../eslint-config/eslint-base/dist/index.mjs";
  *
- * const defineConfig = () => [
- *   {
- *     ...eslintFlatConfigForTypeScript({
- *       tsconfigRootDir: thisDir,
- *       tsconfigFileName: "./tsconfig.json",
- *     }),
- *   },
- * ];
+ * export default [
+ *   ...base({
+ *     tsconfigRootDir: import.meta.dirname,
+ *     tsconfigFileName: "./tsconfig.json",
+ *   }),
+ * ]
  * ```
  */
 const config = ({
-  tsconfigFileName,
-  tsconfigRootDir,
+  tsconfigFileName = "./tsconfig.json",
+  // eslint-disable-next-line unicorn/prevent-abbreviations
+  tsconfigRootDir = import.meta.dirname,
 }: Readonly<{
   tsconfigFileName: string;
   tsconfigRootDir: string;
