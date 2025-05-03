@@ -10,7 +10,7 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "test:ci": "jest --ci",
-    "lint": "eslint ."
+    "lint": "eslint ./src/**"
   },
   "dependencies": {
     "@hookform/resolvers": "5.0.1",
@@ -37,7 +37,7 @@
     "zod": "3.24.3"
   },
   "devDependencies": {
-    "@casaub0n/eslint-config": "workspace:*",
+    "@casaub0n/eslint-config-next": "workspace:*",
     "@next/eslint-plugin-next": "15.3.1",
     "@storybook/react": "8.6.12",
     "@storybook/test": "8.6.12",

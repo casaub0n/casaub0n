@@ -6,10 +6,25 @@
   "publishConfig": {
     "access": "public"
   },
+  "engines": {
+    "node": ">=22"
+  },
+  "author": {
+    "name": "casaub0n",
+    "email": "netzach.yoshida@gmail.com",
+    "url": "https://github.com/casaub0n"
+  },
+  "keywords": [
+    "ESLint",
+    "TypeScript",
+    "Node.js",
+    "JavaScript"
+  ],
   "scripts": {
     "build": "tsup",
+    "build:watch": "tsup --watch src",
     "type:check": "tsc --noEmit",
-    "lint": "eslint"
+    "lint": "pnpm dlx eslint"
   },
   "peerDependencies": {
     "@cspell/eslint-plugin": "8.19.3",
@@ -17,6 +32,8 @@
     "@eslint/eslintrc": "3.3.1",
     "@eslint/js": "9.26.0",
     "@next/eslint-plugin-next": "15.3.1",
+    "@typescript-eslint/eslint-plugin": "8.31.1",
+    "@typescript-eslint/parser": "8.31.1",
     "@vercel/style-guide": "6.0.0",
     "eslint-config-next": "15.3.1",
     "eslint-config-prettier": "10.1.2",
@@ -25,16 +42,15 @@
     "eslint-plugin-turbo": "2.5.2",
     "eslint-plugin-unicorn": "59.0.0",
     "eslint-plugin-unused-imports": "4.1.4",
+    "globals": "16.0.0",
     "typescript-eslint": "8.31.1"
   },
   "devDependencies": {
     "@casaub0n/eslint-base": "workspace:*",
-    "@next/eslint-plugin-next": "15.3.1",
     "@types/eslint-config-prettier": "6.11.3",
     "@types/node": "22.15.3",
     "@typescript-eslint/utils": "8.31.1",
-    "eslint-config-next": "15.3.1",
-    "eslint-plugin-import": "2.31.0",
+    "rolldown": "1.0.0-beta.8",
     "tsup": "8.4.0",
     "tsx": "4.19.4",
     "typescript": "5.8.3"
