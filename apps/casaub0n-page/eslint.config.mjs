@@ -1,11 +1,9 @@
-// import next from "../../packages/config-eslint/next.mjs";
-import next from "../../packages/config-eslint/dist/index.mjs";
+import base from "../../packages/eslint-config/next/dist/index.mjs";
 
-const baseEslint = [
-  {
-    ignores: ["**/.next/", "**/__reports__/", "coverage"],
-  },
-  ...next,
+export default [
+  ...base({
+    tsconfigRootDir: import.meta.dirname,
+    tsconfigFileName: "./tsconfig.json",
+    rootDirectory: import.meta.dirname,
+  }),
 ];
-
-export default baseEslint;
