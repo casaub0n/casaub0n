@@ -28,14 +28,15 @@ const compat = new FlatCompat({
  * @param tsconfigFileName `./tsconfig.json`
  * @param tsconfigRootDir `import.meta.dirname` [The directory name of the current module. This is the same as the `path.dirname()` of the `import.meta.filename`.](https://nodejs.org/api/esm.html#importmetadirname)
  * @example ```javascript
- * import base from "../eslint-config/eslint-base/dist/index.mjs";
+ * import { defineConfig } from "eslint/config";
+ * import base from "@casaub0n/eslint-base";
  *
- * export default [
+ * export default defineConfig([
  *   ...base({
  *     tsconfigRootDir: import.meta.dirname,
  *     tsconfigFileName: "./tsconfig.json",
  *   }),
- * ]
+ * ]);
  * ```
  */
 const config = ({

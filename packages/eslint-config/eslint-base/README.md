@@ -2,32 +2,27 @@
 
 [![badge](https://img.shields.io/badge/ESLint-3A33D1?logo=eslint)](https://eslint.org/docs/latest/use/configure/)
 
-This is flat config.
+This is flat config. Check [peerDependencies](./package.json).
 
 ## Usage
 
-Make `eslint.config.mjs` on the root of a project.
+1. Add `"@casaub0n/eslint-base": "workspace:*"` in devDependencies in `package.json`, and then `pnpm install` on a root directory.
+1. Make `eslint.config.mjs` on the root of a project.
 
 This is a example eslint config.
 
 Use `tsconfigRootDir` and `tsconfigFileName` to point tsconfig.json location.
 
 ```js
-import base from "../eslint-config/eslint-base/dist/index.mjs";
+import { defineConfig } from "eslint/config";
+import base from "@casaub0n/eslint-base";
 
-export default [
+export default defineConfig([
   ...base({
     tsconfigRootDir: import.meta.dirname,
     tsconfigFileName: "./tsconfig.json",
   }),
-  {
-    rules: {
-      "import/no-unresolved": "off",
-      "@typescript-eslint/strict-boolean-expressions": "off",
-      "no-console": "off",
-    },
-  },
-];
+]);
 ```
 
 ## Development
