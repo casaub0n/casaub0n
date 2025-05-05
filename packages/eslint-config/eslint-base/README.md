@@ -1,4 +1,4 @@
-# `@casaub0n/eslint-config`
+# `@casaub0n/eslint-base`
 
 [![badge](https://img.shields.io/badge/ESLint-3A33D1?logo=eslint)](https://eslint.org/docs/latest/use/configure/)
 

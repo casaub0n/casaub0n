@@ -57,6 +57,7 @@ const config = ({
     ...tseslint.configs.strict,
     // https://typescript-eslint.io/getting-started/typed-linting/
     {
+      // eslint-disable-next-line @cspell/spellchecker -- @todo add unknown words in `.cspell.json` but @cspell/eslint-plugin does not read .cspell.json right now
       files: ["*.cts", "*.ctsx", "*.mts", "*.mtsx", "*.ts", "*.tsx"],
       extends: [
         // ...compat.extends("next/core-web-vitals", "next/typescript"),
