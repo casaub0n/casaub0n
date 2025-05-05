@@ -10,6 +10,7 @@ import type TSESLint from "@typescript-eslint/utils";
 import cspellESLintPluginRecommended from "@cspell/eslint-plugin/recommended";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import turboPlugin from "eslint-plugin-turbo";
+import storybook from "eslint-plugin-storybook";
 import pluginConfigPrettier from "eslint-config-prettier";
 import typescriptEslintParser from "@typescript-eslint/parser";
 import globals from "globals";
@@ -25,6 +26,7 @@ const compat = new FlatCompat({
  * So, the user will call a compiled ESM file into their `eslint.config.mjs`.
  * @param tsconfigFileName `./tsconfig.json`
  * @param tsconfigRootDir `import.meta.dirname` [The directory name of the current module. This is the same as the `path.dirname()` of the `import.meta.filename`.](https://nodejs.org/api/esm.html#importmetadirname)
+ * @param rootDirectory `import.meta.dirname` [The directory name of the current module. This is the same as the `path.dirname()` of the `import.meta.filename`.](https://nodejs.org/api/esm.html#importmetadirname)
  * @example ```javascript
  * import base from "../eslint-config/eslint-base/dist/index.mjs";
  *
@@ -32,6 +34,7 @@ const compat = new FlatCompat({
  *   ...base({
  *     tsconfigRootDir: import.meta.dirname,
  *     tsconfigFileName: "./tsconfig.json",
+ *     rootDirectory: import.meta.dirname,
  *   }),
  * ]
  * ```
@@ -41,7 +44,7 @@ const config = ({
   tsconfigFileName = "./tsconfig.json",
   // eslint-disable-next-line unicorn/prevent-abbreviations
   tsconfigRootDir = import.meta.dirname,
-  rootDirectory,
+  rootDirectory = import.meta.dirname,
 }: Readonly<{
   tsconfigFileName: string;
   tsconfigRootDir: string;
@@ -289,6 +292,11 @@ const config = ({
      * @see https://github.com/vercel/turborepo/tree/main/packages/eslint-plugin-turbo#usage-flat-config-eslintconfigjs
      */
     turboPlugin.configs["flat/recommended"],
+
+    /**
+     * @see https://github.com/storybookjs/eslint-plugin-storybook?tab=readme-ov-file#configuration-eslintconfigcmjs
+     */
+    storybook.configs["flat/recommended"],
 
     /**
      * https://zenn.dev/kazukix/articles/eslint-config-2024-09#eslint-config-prettier
