@@ -35,6 +35,7 @@ const compat = new FlatCompat({
  *   }),
  * ]
  * ```
+ * @see https://github.com/vercel/turborepo/blob/main/examples/kitchen-sink/packages/config-eslint/next.js
  */
 const config = ({
   tsconfigFileName = "./tsconfig.json",
