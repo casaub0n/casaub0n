@@ -1,8 +1,9 @@
-import base from "../../eslint-config/next/dist/index.mjs";
+import { defineConfig } from "eslint/config";
+import base from "@casaub0n/eslint-base";
 
-export default [
+export default defineConfig([
   ...base({
     tsconfigRootDir: import.meta.dirname,
     tsconfigFileName: "./tsconfig.json",
   }),
-];
+]);
