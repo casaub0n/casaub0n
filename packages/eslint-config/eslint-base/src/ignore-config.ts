@@ -1,8 +1,6 @@
 import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint";
 
-type IgnoreConfig = FlatConfig.Config["ignores"];
-
-export const ignoreConfig: IgnoreConfig = [
+export const ignoreConfig: FlatConfig.Config["ignores"] = [
   /**
    * output
    */
