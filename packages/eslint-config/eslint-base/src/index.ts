@@ -48,7 +48,9 @@ const config = ({
   tsconfigRootDir: string;
 }>): TSESLint.TSESLint.FlatConfig.ConfigArray =>
   tseslint.config([
-    ignoreConfig,
+    {
+      ignores: ignoreConfig,
+    },
 
     /**
      * @see https://zenn.dev/yu_ta_9/articles/7001d66779ff3a#%40eslint%2Fjs
