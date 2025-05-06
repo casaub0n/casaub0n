@@ -276,6 +276,14 @@ const config = ({
          * [最低限の flat config（まずは no-unused-imports を動かす）](https://zenn.dev/seventhseven07/articles/06a02c4048decf)
          */
         "unused-imports/no-unused-imports": "error",
+
+        /**
+         * React
+         * @see https://github.com/herp-inc/eslint-config/blob/master/react/index.js
+         */
+        "react/jsx-no-target-blank": "off",
+        "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off",
       },
     },
     /**
