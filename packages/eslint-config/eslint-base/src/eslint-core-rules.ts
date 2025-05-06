@@ -1,12 +1,11 @@
 import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint";
 
-type EslintCoreRules = FlatConfig.Config["rules"];
-
-export const eslintCoreRules: EslintCoreRules = {
-  /**
-   * [eslint-config/base/index.js at master · herp-inc/eslint-config](https://github.com/herp-inc/eslint-config/blob/master/base/index.js)
-   */
-  // ESlint core
+/**
+ * ESlint core
+ *
+ * [eslint-config/base/index.js at master · herp-inc/eslint-config](https://github.com/herp-inc/eslint-config/blob/master/base/index.js)
+ */
+export const eslintCoreRules: FlatConfig.Config["rules"] = {
   curly: "error",
   "default-case-last": "error",
   eqeqeq: "error",
