@@ -1,4 +1,4 @@
-import base from "../../packages/eslint-config/eslint-base/dist/index.mjs";
+import base from "@casaub0n/eslint-config-astro";
 
 export default [
   ...base({
