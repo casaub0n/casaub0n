@@ -1,0 +1,68 @@
+{
+  "name": "@casaub0n/eslint-config-astro",
+  "version": "0.0.0",
+  "main": "./dist/index.mjs",
+  "license": "MIT",
+  "description": "Astro eslint config for casaub0n",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    "types": "./dist/index.d.mts",
+    "default": "./dist/index.mjs"
+  },
+  "sideEffects": false,
+  "files": [
+    "./dist/index.d.mts",
+    "./dist/index.mjs"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "author": {
+    "name": "casaub0n",
+    "email": "netzach.yoshida@gmail.com",
+    "url": "https://github.com/casaub0n"
+  },
+  "keywords": [
+    "ESLint",
+    "TypeScript",
+    "Node.js",
+    "JavaScript"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "build:watch": "tsup --watch src",
+    "type:check": "tsc --noEmit",
+    "lint": "pnpm dlx eslint src/**"
+  },
+  "peerDependencies": {
+    "@cspell/eslint-plugin": "9.0.0",
+    "@eslint/compat": "1.2.9",
+    "@eslint/eslintrc": "3.3.1",
+    "@eslint/js": "9.26.0",
+    "@eslint/json": "0.12.0",
+    "@eslint/markdown": "6.4.0",
+    "@typescript-eslint/eslint-plugin": "8.32.0",
+    "@typescript-eslint/parser": "8.32.0",
+    "eslint-config-prettier": "10.1.2",
+    "eslint-plugin-astro": "1.3.1",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-react-hooks": "5.2.0",
+    "eslint-plugin-turbo": "2.5.2",
+    "eslint-plugin-unicorn": "59.0.1",
+    "eslint-plugin-unused-imports": "4.1.4",
+    "globals": "16.0.0",
+    "typescript-eslint": "8.32.0"
+  },
+  "devDependencies": {
+    "@casaub0n/eslint-base": "workspace:*",
+    "@types/eslint-config-prettier": "6.11.3",
+    "@types/node": "22.15.12",
+    "@typescript-eslint/utils": "8.32.0",
+    "rolldown": "1.0.0-beta.8",
+    "tsup": "8.4.0",
+    "tsx": "4.19.4",
+    "typescript": "5.8.3"
+  }
+}
