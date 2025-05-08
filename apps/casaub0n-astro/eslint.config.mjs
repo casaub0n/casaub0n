@@ -1,8 +1,4 @@
+import { defineConfig } from "eslint/config";
 import base from "@casaub0n/eslint-config-astro";
 
-export default [
-  ...base({
-    tsconfigRootDir: import.meta.dirname,
-    tsconfigFileName: "./tsconfig.json",
-  }),
-];
+export default defineConfig([...base]);
