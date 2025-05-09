@@ -587,6 +587,30 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
 
+  packages/eslint-config/utils:
+    devDependencies:
+      '@casaub0n/eslint-base':
+        specifier: workspace:*
+        version: link:../eslint-base
+      '@types/node':
+        specifier: 22.15.17
+        version: 22.15.17
+      '@typescript-eslint/utils':
+        specifier: 8.32.0
+        version: 8.32.0(eslint@9.26.0(jiti@1.21.7))(typescript@5.8.3)
+      rolldown:
+        specifier: 1.0.0-beta.8
+        version: 1.0.0-beta.8(typescript@5.8.3)
+      tsup:
+        specifier: 8.4.0
+        version: 8.4.0(@swc/core@1.11.24)(jiti@1.21.7)(postcss@8.5.3)(tsx@4.19.4)(typescript@5.8.3)(yaml@2.7.1)
+      tsx:
+        specifier: 4.19.4
+        version: 4.19.4
+      typescript:
+        specifier: 5.8.3
+        version: 5.8.3
+
   packages/header-inserter:
     dependencies:
       consola:
