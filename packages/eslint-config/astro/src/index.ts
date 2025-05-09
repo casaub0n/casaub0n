@@ -10,8 +10,8 @@ import eslintConfigPrettier from "eslint-config-prettier";
  */
 const config: TSESLint.TSESLint.FlatConfig.ConfigArray = [
   js.configs.recommended,
-  ...eslintPluginAstro.configs["flat/recommended"],
-  ...eslintPluginAstro.configs["flat/jsx-a11y-recommended"],
+  ...eslintPluginAstro.configs.recommended,
+  ...eslintPluginAstro.configs["jsx-a11y-recommended"],
   {
     languageOptions: {
       globals: {
