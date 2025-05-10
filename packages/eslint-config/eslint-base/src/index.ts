@@ -13,7 +13,7 @@ import turboPlugin from "eslint-plugin-turbo";
 import pluginConfigPrettier from "eslint-config-prettier";
 import typescriptEslintParser from "@typescript-eslint/parser";
 import globals from "globals";
-import { ignoreConfig } from "./ignore-config";
+import { ignoreConfig } from "@casaub0n/eslint-config-utils";
 import { eslintCoreRules } from "./eslint-core-rules";
 import { typescriptRules } from "./typescript-rules";
 
