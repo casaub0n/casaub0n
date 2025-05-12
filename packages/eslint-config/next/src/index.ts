@@ -14,7 +14,7 @@ import storybook from "eslint-plugin-storybook";
 import pluginConfigPrettier from "eslint-config-prettier";
 import typescriptEslintParser from "@typescript-eslint/parser";
 import globals from "globals";
-import { ignoreConfig } from "./ignore-config";
+import { ignoreConfig } from "../../utils/src/ignore-config";
 
 const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
@@ -51,7 +51,9 @@ const config = ({
   rootDirectory: string;
 }>): TSESLint.TSESLint.FlatConfig.ConfigArray =>
   tseslint.config([
-    ignoreConfig,
+    {
+      ignores: ignoreConfig,
+    },
 
     /**
      * @see https://zenn.dev/yu_ta_9/articles/7001d66779ff3a#%40eslint%2Fjs

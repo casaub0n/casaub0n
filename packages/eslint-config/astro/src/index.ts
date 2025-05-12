@@ -4,11 +4,15 @@ import globals from "globals";
 import eslintPluginAstro from "eslint-plugin-astro";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import eslintConfigPrettier from "eslint-config-prettier";
+import { ignoreConfig } from "../../utils/src/ignore-config";
 
 /**
  * @see https://zenn.dev/suree/articles/71591ec903463d
  */
 const config: TSESLint.TSESLint.FlatConfig.ConfigArray = [
+  {
+    ignores: ignoreConfig,
+  },
   js.configs.recommended,
   ...eslintPluginAstro.configs.recommended,
   ...eslintPluginAstro.configs["jsx-a11y-recommended"],
