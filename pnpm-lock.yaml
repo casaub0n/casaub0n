@@ -188,8 +188,8 @@ importers:
         specifier: 19.1.4
         version: 19.1.4(@types/react@19.1.4)
       '@vanilla-extract/next-plugin':
-        specifier: 2.4.10
-        version: 2.4.10(next@15.3.2(@babel/core@7.26.10)(@opentelemetry/api@1.9.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(webpack@5.99.5(@swc/core@1.11.24)(esbuild@0.25.4))
+        specifier: 2.4.11
+        version: 2.4.11(next@15.3.2(@babel/core@7.26.10)(@opentelemetry/api@1.9.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(webpack@5.99.5(@swc/core@1.11.24)(esbuild@0.25.4))
       autoprefixer:
         specifier: 10.4.21
         version: 10.4.21(postcss@8.5.3)
@@ -4968,14 +4968,11 @@ packages:
   '@vanilla-extract/dynamic@2.1.2':
     resolution: {integrity: sha512-9BGMciD8rO1hdSPIAh1ntsG4LPD3IYKhywR7VOmmz9OO4Lx1hlwkSg3E6X07ujFx7YuBfx0GDQnApG9ESHvB2A==}
 
-  '@vanilla-extract/integration@8.0.1':
-    resolution: {integrity: sha512-ag64t+AM96XGOiloc5ryZHP5rbfleFyfoPKa42QqOuyAlLx/UpW5epSY+RUldizP4P/uLy5WFRiYlNddK1eQUQ==}
-
   '@vanilla-extract/integration@8.0.2':
     resolution: {integrity: sha512-w9OvWwsYkqyuyHf9NLnOJ8ap0FGTy2pAeWftgxAEkKE3tF1aYeyEtYRHKxfVH6JRgi8JIeQqELHGMSwz+BxwiA==}
 
-  '@vanilla-extract/next-plugin@2.4.10':
-    resolution: {integrity: sha512-Ic2MWJj53PVhJMkboKZOmS7UsYfEdjqZqA0P5YxDStG8d5mOxXo1D4cYPL5ljsNAbODbunuDwt6kgUS46Wog2Q==}
+  '@vanilla-extract/next-plugin@2.4.11':
+    resolution: {integrity: sha512-xfrwHTZKujMPGvo8SK8jKdQCkZtGo05mLhVnY4nPy0BnSiBnY0FoCQ4gSwvgukN7FUqtLlNd4A3lzWEitZIOtw==}
     peerDependencies:
       next: '>=12.1.7'
 
@@ -4984,11 +4981,6 @@ packages:
 
   '@vanilla-extract/private@1.0.7':
     resolution: {integrity: sha512-v9Yb0bZ5H5Kr8ciwPXyEToOFD7J/fKKH93BYP7NCSZg02VYsA/pNFrLeVDJM2OO/vsygduPKuiEI6ORGQ4IcBw==}
-
-  '@vanilla-extract/webpack-plugin@2.3.18':
-    resolution: {integrity: sha512-00AB9LQJZ5JM6jQCCn3upONPi4jqJnjXrN+uROgfixgxIpq0fMEfhnwOtAdECG7gRCy0T2jzpo1KO1Fh5wYsJg==}
-    peerDependencies:
-      webpack: ^4.30.0 || ^5.20.2
 
   '@vanilla-extract/webpack-plugin@2.3.19':
     resolution: {integrity: sha512-GDphiVib3EMeNkMNyzc7zOs35lBs1GzlALi93dawl/V4e6CsCsGKBNrPzGpDSFvzf4Vq51MNuUkyzwAdfbayPQ==}
@@ -10254,6 +10246,7 @@ packages:
 
   path-match@1.2.4:
     resolution: {integrity: sha512-UWlehEdqu36jmh4h5CWJ7tARp1OEVKGHKm6+dg9qMq5RKUTV5WJrGgaZ3dN2m7WFAXDbjlHzvJvL/IUpy84Ktw==}
+    deprecated: This package is archived and no longer maintained. For support, visit https://github.com/expressjs/express/discussions
 
   path-parse@1.0.7:
     resolution: {integrity: sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==}
@@ -18550,22 +18543,6 @@ snapshots:
     dependencies:
       '@vanilla-extract/private': 1.0.6
 
-  '@vanilla-extract/integration@8.0.1':
-    dependencies:
-      '@babel/core': 7.26.10
-      '@babel/plugin-syntax-typescript': 7.25.9(@babel/core@7.26.10)
-      '@vanilla-extract/babel-plugin-debug-ids': 1.2.0
-      '@vanilla-extract/css': 1.17.2
-      dedent: 1.5.3
-      esbuild: 0.25.4
-      eval: 0.1.8
-      find-up: 5.0.0
-      javascript-stringify: 2.1.0
-      mlly: 1.7.4
-    transitivePeerDependencies:
-      - babel-plugin-macros
-      - supports-color
-
   '@vanilla-extract/integration@8.0.2':
     dependencies:
       '@babel/core': 7.26.10
@@ -18582,9 +18559,9 @@ snapshots:
       - babel-plugin-macros
       - supports-color
 
-  '@vanilla-extract/next-plugin@2.4.10(next@15.3.2(@babel/core@7.26.10)(@opentelemetry/api@1.9.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(webpack@5.99.5(@swc/core@1.11.24)(esbuild@0.25.4))':
+  '@vanilla-extract/next-plugin@2.4.11(next@15.3.2(@babel/core@7.26.10)(@opentelemetry/api@1.9.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(webpack@5.99.5(@swc/core@1.11.24)(esbuild@0.25.4))':
     dependencies:
-      '@vanilla-extract/webpack-plugin': 2.3.18(webpack@5.99.5(@swc/core@1.11.24)(esbuild@0.25.4))
+      '@vanilla-extract/webpack-plugin': 2.3.19(webpack@5.99.5(@swc/core@1.11.24)(esbuild@0.25.4))
       next: 15.3.2(@babel/core@7.26.10)(@opentelemetry/api@1.9.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
     transitivePeerDependencies:
       - babel-plugin-macros
@@ -18595,9 +18572,9 @@ snapshots:
 
   '@vanilla-extract/private@1.0.7': {}
 
-  '@vanilla-extract/webpack-plugin@2.3.18(webpack@5.99.5(@swc/core@1.11.24)(esbuild@0.25.4))':
+  '@vanilla-extract/webpack-plugin@2.3.19(webpack@5.99.5(@swc/core@1.11.24)(esbuild@0.25.4))':
     dependencies:
-      '@vanilla-extract/integration': 8.0.1
+      '@vanilla-extract/integration': 8.0.2
       debug: 4.4.0
       loader-utils: 2.0.4
       picocolors: 1.1.1
