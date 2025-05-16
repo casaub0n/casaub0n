@@ -8,6 +8,8 @@ export default defineConfig({
   format: ["esm"],
   entry: {
     "ignore-config": "./src/ignore-config.ts",
+    "eslint-core-rules": "./src/eslint-core-rules.ts",
+    "typescript-rules": "./src/typescript-rules.ts",
   },
   dts: true,
   shims: true,
