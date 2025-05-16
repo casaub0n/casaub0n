@@ -14,8 +14,8 @@ import pluginConfigPrettier from "eslint-config-prettier";
 import typescriptEslintParser from "@typescript-eslint/parser";
 import globals from "globals";
 import { ignoreConfig } from "../../utils/src/ignore-config";
-import { eslintCoreRules } from "./eslint-core-rules";
-import { typescriptRules } from "./typescript-rules";
+import { eslintCoreRules } from "../../utils/src/eslint-core-rules";
+import { typescriptRules } from "../../utils/src/typescript-rules";
 
 const __dirname = import.meta.dirname;
 

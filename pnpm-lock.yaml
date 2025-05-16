@@ -358,6 +358,9 @@ importers:
 
   packages/eslint-config/astro:
     dependencies:
+      '@casaub0n/eslint-config-utils':
+        specifier: workspace:*
+        version: link:../utils
       '@cspell/eslint-plugin':
         specifier: 9.0.1
         version: 9.0.1(eslint@9.26.0(jiti@2.4.2))
@@ -437,6 +440,9 @@ importers:
 
   packages/eslint-config/eslint-base:
     dependencies:
+      '@casaub0n/eslint-config-utils':
+        specifier: workspace:*
+        version: link:../utils
       '@cspell/eslint-plugin':
         specifier: 9.0.1
         version: 9.0.1(eslint@9.26.0(jiti@2.4.2))
@@ -510,6 +516,9 @@ importers:
 
   packages/eslint-config/next:
     dependencies:
+      '@casaub0n/eslint-config-utils':
+        specifier: workspace:*
+        version: link:../utils
       '@cspell/eslint-plugin':
         specifier: 9.0.1
         version: 9.0.1(eslint@9.26.0(jiti@2.4.2))
