@@ -1,4 +1,3 @@
-import { FlatCompat } from "@eslint/eslintrc";
 import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 
@@ -16,12 +15,6 @@ import globals from "globals";
 import { ignoreConfig } from "../../utils/src/ignore-config";
 import { eslintCoreRules } from "../../utils/src/eslint-core-rules";
 import { typescriptRules } from "../../utils/src/typescript-rules";
-
-const __dirname = import.meta.dirname;
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
 
 /**
  * **Usage** is at README because this eslint-config compile to a ESM file in dist.
@@ -62,11 +55,6 @@ const config = ({
     // https://typescript-eslint.io/getting-started/typed-linting/
     {
       files: ["*.cts", "*.ctsx", "*.mts", "*.mtsx", "*.ts", "*.tsx"],
-      extends: [
-        // ...compat.extends("next/core-web-vitals", "next/typescript"),
-        ...compat.extends(),
-        // ...tseslint.configs.stylistic,
-      ],
       languageOptions: {
         ecmaVersion: "latest",
         parser: typescriptEslintParser,
