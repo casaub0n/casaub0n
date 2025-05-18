@@ -113,7 +113,9 @@ const config = ({
 
     json.configs.recommended,
 
-    ...markdown.configs.recommended,
+    {
+      ...markdown.configs.recommended,
+    },
 
     /**
      * https://zenn.dev/kazukix/articles/eslint-config-2024-09#eslint-config-prettier
