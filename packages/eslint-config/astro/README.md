@@ -29,7 +29,7 @@ export default defineConfig([
 
 > [!WARNING]
 >
-> ESLint can't run in this project when the script command is `"lint": "eslint"` in `package.json`
+> ESLint can't run in this project when the script command is `"lint": "eslint src/**"` in `package.json`
 
 ```console
 > @casaub0n/eslint-base@0.0.0 lint casaub0n\packages\eslint-config\eslint-base
