@@ -24,7 +24,7 @@
     "build:tsup": "pnpm rmdist && tsup",
     "build:rolldown": "pnpm rmdist && rolldown -c rolldown.config.ts",
     "build": "pnpm rmdist && tsx build.ts",
-    "lint": "eslint"
+    "lint": "eslint src/**"
   },
   "files": [
     "dist"
