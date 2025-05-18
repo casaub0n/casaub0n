@@ -45,22 +45,22 @@ export const makePureTitle = (
   honDate?: Element,
   honDateList?: string[],
 ): void => {
-  const discriptionDom = title.getElementsByTagName("small");
-  console.log(`discription length: ${discriptionDom.length.toString()}`);
-  for (const discription of discriptionDom) {
-    const pureDiscription = discription.textContent;
-    if (pureDiscription !== null) {
-      console.log(`discription: ${pureDiscription}`);
-      descriptionList.push(pureDiscription);
+  const descriptionDom = title.getElementsByTagName("small");
+  console.log(`description length: ${descriptionDom.length.toString()}`);
+  for (const description of descriptionDom) {
+    const pureDescription = description.textContent;
+    if (pureDescription !== null) {
+      console.log(`description: ${pureDescription}`);
+      descriptionList.push(pureDescription);
     }
   }
-  const removeDiscription = (dom: HTMLCollectionOf<HTMLElement>): void => {
+  const removeDescription = (dom: HTMLCollectionOf<HTMLElement>): void => {
     if (dom.length > 0) {
       dom.item(0)?.remove();
-      removeDiscription(dom);
+      removeDescription(dom);
     }
   };
-  removeDiscription(discriptionDom);
+  removeDescription(descriptionDom);
 
   if (honDate && honDateList) {
     const pureHonDate = honDate.textContent;
@@ -69,11 +69,11 @@ export const makePureTitle = (
     }
     honDate.remove();
   }
-  const hogeSmall = title.getElementsByTagName("small");
-  console.log(`small tag length: ${hogeSmall.length.toString()}`);
+  const smallTags = title.getElementsByTagName("small");
+  console.log(`small tag length: ${smallTags.length.toString()}`);
 
-  for (const hoge of hogeSmall) {
-    const textContent = hoge.textContent;
+  for (const smallTag of smallTags) {
+    const textContent = smallTag.textContent;
     // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     textContent ? console.log(`small tag value: ${textContent}`) : console.log("small tag is null");
   }
@@ -130,8 +130,8 @@ const init = async (): Promise<void> => {
             makePureTitle(title, descriptionList, titleList);
           }
         }
-        const timelist = scheduleProgram.getElementsByTagName("li");
-        for (const time of timelist) {
+        const timeList = scheduleProgram.getElementsByTagName("li");
+        for (const time of timeList) {
           console.log(time.textContent);
         }
       }
