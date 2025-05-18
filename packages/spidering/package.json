@@ -20,7 +20,7 @@
     "lint:tsc": "tsc --noEmit",
     "test": "echo hello",
     "rmdist": "node --import tsx scripts/rrm.ts",
-    "build": "pnpm rmdist && tsup src/index.ts --format esm --dts",
+    "build": "pnpm rmdist && tsup",
     "start:sp": "pnpm build && node dist/index.mjs",
     "lint": "eslint src/**"
   },

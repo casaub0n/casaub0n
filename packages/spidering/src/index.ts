@@ -38,6 +38,24 @@ export const domCalc = (
   }
 };
 
+/**
+ * @todo don't show description right now
+ */
+export const showElementText = (
+  elements: HTMLCollectionOf<HTMLElement>,
+  whatShow: string,
+  state: string[],
+) => {
+  for (const element of elements) {
+    const elementText = element.textContent;
+    if (elementText !== null) {
+      console.log(`${whatShow}: ${elementText}`);
+      // WIP
+      state.push(elementText);
+    }
+  }
+};
+
 export const makePureTitle = (
   title: HTMLParagraphElement,
   descriptionList: string[],
@@ -47,13 +65,7 @@ export const makePureTitle = (
 ): void => {
   const descriptionDom = title.getElementsByTagName("small");
   console.log(`description length: ${descriptionDom.length.toString()}`);
-  for (const description of descriptionDom) {
-    const pureDescription = description.textContent;
-    if (pureDescription !== null) {
-      console.log(`description: ${pureDescription}`);
-      descriptionList.push(pureDescription);
-    }
-  }
+  showElementText(descriptionDom, "description", descriptionList);
   const removeDescription = (dom: HTMLCollectionOf<HTMLElement>): void => {
     if (dom.length > 0) {
       dom.item(0)?.remove();
