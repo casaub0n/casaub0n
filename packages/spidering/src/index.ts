@@ -56,6 +56,13 @@ export const showElementText = (
   }
 };
 
+const removeDescription = (elements: HTMLCollectionOf<HTMLElement>): void => {
+  if (elements.length > 0) {
+    elements.item(0)?.remove();
+    removeDescription(elements);
+  }
+};
+
 export const makePureTitle = (
   title: HTMLParagraphElement,
   descriptionList: string[],
@@ -66,12 +73,6 @@ export const makePureTitle = (
   const descriptionDom = title.getElementsByTagName("small");
   console.log(`description length: ${descriptionDom.length.toString()}`);
   showElementText(descriptionDom, "description", descriptionList);
-  const removeDescription = (dom: HTMLCollectionOf<HTMLElement>): void => {
-    if (dom.length > 0) {
-      dom.item(0)?.remove();
-      removeDescription(dom);
-    }
-  };
   removeDescription(descriptionDom);
 
   if (honDate && honDateList) {
