@@ -56,7 +56,7 @@ const config = ({
     ...tseslint.configs.strict,
     // https://typescript-eslint.io/getting-started/typed-linting/
     {
-      files: ["*.cts", "*.ctsx", "*.mts", "*.mtsx", "*.ts", "*.tsx"],
+      files: ["**/*.cts", "**/*.ctsx", "**/*.mts", "**/*.mtsx", "**/*.ts", "**/*.tsx"],
       languageOptions: {
         ecmaVersion: "latest",
         parser: typescriptEslintParser,
