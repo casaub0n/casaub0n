@@ -45,10 +45,6 @@ const config = ({
   tsconfigRootDir: string;
 }>): TSESLint.TSESLint.FlatConfig.ConfigArray =>
   tseslint.config([
-    {
-      ignores: ignoreConfig,
-    },
-
     /**
      * @see https://zenn.dev/yu_ta_9/articles/7001d66779ff3a#%40eslint%2Fjs
      */
@@ -57,6 +53,7 @@ const config = ({
     // https://typescript-eslint.io/getting-started/typed-linting/
     {
       files: ["**/*.cts", "**/*.ctsx", "**/*.mts", "**/*.mtsx", "**/*.ts", "**/*.tsx"],
+      ignores: ignoreConfig,
       languageOptions: {
         ecmaVersion: "latest",
         parser: typescriptEslintParser,
@@ -91,9 +88,21 @@ const config = ({
         ...typescriptRules,
 
         /**
+         * unused-config
          * [最低限の flat config（まずは no-unused-imports を動かす）](https://zenn.dev/seventhseven07/articles/06a02c4048decf)
+         * [sweepline/eslint-plugin-unused-imports: Package to separate no-unused-vars and no-unused-imports for eslint as well as providing an autofixer for the latter.](https://github.com/sweepline/eslint-plugin-unused-imports/tree/master?tab=readme-ov-file#usage)
          */
+        "no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
         "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": [
+          "warn",
+          {
+            vars: "all",
+            varsIgnorePattern: "^_",
+            args: "after-used",
+            argsIgnorePattern: "^_",
+          },
+        ],
       },
     },
     /**
