@@ -89,8 +89,8 @@ export class Bank {
 }
 
 export class Sum implements Expression {
-  #__augend: Expression;
-  #__addend: Expression;
+  readonly #__augend: Expression;
+  readonly #__addend: Expression;
 
   constructor(augend: Expression, addend: Expression) {
     this.#__augend = augend;
