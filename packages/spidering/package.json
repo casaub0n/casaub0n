@@ -20,7 +20,7 @@
     "lint:tsc": "tsc --noEmit",
     "test": "echo hello",
     "rmdist": "node --import tsx scripts/rrm.ts",
-    "build": "pnpm rmdist && tsup",
+    "build": "tsdown",
     "start:sp": "pnpm build && node dist/index.mjs",
     "lint": "eslint src/**"
   },
@@ -39,6 +39,7 @@
     "@types/jsdom": "21.1.7",
     "@types/node": "22.15.21",
     "msw": "2.8.4",
+    "tsdown": "0.12.2",
     "tsup": "8.5.0",
     "tsx": "4.19.4",
     "typescript": "5.8.3"
