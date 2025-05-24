@@ -9,21 +9,21 @@ export const response = {
   hello: "world",
 } as const satisfies Record<string, string>;
 
-export interface Program {
+export type Program = {
   title: string;
   honDate: string;
   time: string[];
-}
+};
 
-export interface ScheduleTxt {
+export type ScheduleTxt = {
   contentDay: string;
   programs: Program[];
-}
+};
 
-export interface ScheduleContent {
+export type ScheduleContent = {
   img?: string[];
   txt?: ScheduleTxt[];
-}
+};
 
 /**
  * WIP
@@ -64,6 +64,14 @@ const removeDescription = (elements: HTMLCollectionOf<HTMLElement>): void => {
   }
 };
 
+export const showSmallTagElement = (smallTags: HTMLCollectionOf<HTMLElement>): void => {
+  for (const smallTag of smallTags) {
+    const textContent = smallTag.textContent;
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+    textContent ? consola.log(`small tag value: ${textContent}`) : consola.log("small tag is null");
+  }
+};
+
 export const makePureTitle = (
   title: HTMLParagraphElement,
   descriptionList: string[],
@@ -86,11 +94,7 @@ export const makePureTitle = (
   const smallTags = title.getElementsByTagName("small");
   consola.log(`small tag length: ${smallTags.length.toString()}`);
 
-  for (const smallTag of smallTags) {
-    const textContent = smallTag.textContent;
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    textContent ? consola.log(`small tag value: ${textContent}`) : consola.log("small tag is null");
-  }
+  showSmallTagElement(smallTags);
 
   const pureTitles = title.textContent?.replace(/^\s+/, "").split("\n");
   // eslint-disable-next-line unicorn/no-null, eqeqeq
