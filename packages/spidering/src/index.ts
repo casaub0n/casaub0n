@@ -46,11 +46,11 @@ export const showElementText = (
   elements: HTMLCollectionOf<HTMLElement>,
   whatShow: string,
   state: string[],
-) => {
+): void => {
   for (const element of elements) {
     const elementText = element.textContent;
     if (elementText !== null) {
-      consola.info(`${whatShow}: ${elementText}`);
+      consola.log(`${whatShow}: ${elementText}`);
       // WIP
       state.push(elementText);
     }
@@ -72,7 +72,7 @@ export const makePureTitle = (
   honDateList?: string[],
 ): void => {
   const descriptionDom = title.getElementsByTagName("small");
-  consola.info(`description length: ${descriptionDom.length.toString()}`);
+  consola.log(`description length: ${descriptionDom.length.toString()}`);
   showElementText(descriptionDom, "description", descriptionList);
   removeDescription(descriptionDom);
 
@@ -84,21 +84,19 @@ export const makePureTitle = (
     honDate.remove();
   }
   const smallTags = title.getElementsByTagName("small");
-  consola.info(`small tag length: ${smallTags.length.toString()}`);
+  consola.log(`small tag length: ${smallTags.length.toString()}`);
 
   for (const smallTag of smallTags) {
     const textContent = smallTag.textContent;
     // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    textContent
-      ? consola.info(`small tag value: ${textContent}`)
-      : consola.info("small tag is null");
+    textContent ? consola.log(`small tag value: ${textContent}`) : consola.log("small tag is null");
   }
 
   const pureTitles = title.textContent?.replace(/^\s+/, "").split("\n");
-  // eslint-disable-next-line unicorn/no-null
+  // eslint-disable-next-line unicorn/no-null, eqeqeq
   if (pureTitles != null) {
     for (const pureTitle of pureTitles) {
-      consola.info(`pure title: ${pureTitle}`);
+      consola.log(`pure title: ${pureTitle}`);
       titleList.push(pureTitle);
     }
   }
@@ -126,11 +124,11 @@ const init = async (): Promise<void> => {
       const images = element.getElementsByTagName("img");
       const schedulePrograms = element.getElementsByClassName("schedule-program");
       for (const img of images) {
-        consola.info(`https://www.shin-bungeiza.com${img.src}`);
+        consola.log(`https://www.shin-bungeiza.com${img.src}`);
         imgList.push(`https://www.shin-bungeiza.com${img.src}`);
       }
       for (const h2 of h2collections) {
-        consola.info(h2.textContent);
+        consola.log(h2.textContent);
         // TODO: convert h2.textContent to date type
       }
       for (const scheduleProgram of schedulePrograms) {
@@ -139,7 +137,7 @@ const init = async (): Promise<void> => {
           const honDateDom = title.getElementsByClassName("hon-date");
           if (honDateDom.length > 0) {
             for (const honDate of honDateDom) {
-              consola.info(honDate.textContent);
+              consola.log(honDate.textContent);
               makePureTitle(title, descriptionList, titleList, honDate, honDateList);
             }
           } else {
@@ -148,10 +146,10 @@ const init = async (): Promise<void> => {
         }
         const timeList = scheduleProgram.getElementsByTagName("li");
         for (const time of timeList) {
-          consola.info(time.textContent);
+          consola.log(time.textContent);
         }
       }
-      consola.info("\n\n");
+      consola.log("\n\n");
     }
   } catch (error) {
     consola.error(error);
