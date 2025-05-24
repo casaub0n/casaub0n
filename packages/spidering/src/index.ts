@@ -1,29 +1,30 @@
 /* eslint-disable unicorn/prefer-query-selector */
 import { JSDOM } from "jsdom";
-import fetch from "node-fetch";
+// import fetch from "node-fetch";
 import type HTMLCollectionOf from "jsdom";
 import type Element from "jsdom";
 import { consola } from "consola";
+import { err, ok, type Result } from "neverthrow";
 
 export const response = {
   hello: "world",
 } as const satisfies Record<string, string>;
 
-export interface Program {
+export type Program = {
   title: string;
   honDate: string;
   time: string[];
-}
+};
 
-export interface ScheduleTxt {
+export type ScheduleTxt = {
   contentDay: string;
   programs: Program[];
-}
+};
 
-export interface ScheduleContent {
+export type ScheduleContent = {
   img?: string[];
   txt?: ScheduleTxt[];
-}
+};
 
 /**
  * WIP
@@ -64,6 +65,24 @@ const removeDescription = (elements: HTMLCollectionOf<HTMLElement>): void => {
   }
 };
 
+const showSmallTagElement = (smallTags: HTMLCollectionOf<HTMLElement>): void => {
+  for (const smallTag of smallTags) {
+    const textContent = smallTag.textContent;
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+    textContent ? consola.log(`small tag value: ${textContent}`) : consola.log("small tag is null");
+  }
+};
+
+const showPureTitle = (pureTitles: string[] | undefined, titleList: string[]): void => {
+  // eslint-disable-next-line unicorn/no-null, eqeqeq
+  if (pureTitles != null) {
+    for (const pureTitle of pureTitles) {
+      consola.log(`pure title: ${pureTitle}`);
+      titleList.push(pureTitle);
+    }
+  }
+};
+
 export const makePureTitle = (
   title: HTMLParagraphElement,
   descriptionList: string[],
@@ -85,21 +104,19 @@ export const makePureTitle = (
   }
   const smallTags = title.getElementsByTagName("small");
   consola.log(`small tag length: ${smallTags.length.toString()}`);
-
-  for (const smallTag of smallTags) {
-    const textContent = smallTag.textContent;
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    textContent ? consola.log(`small tag value: ${textContent}`) : consola.log("small tag is null");
-  }
-
+  showSmallTagElement(smallTags);
   const pureTitles = title.textContent?.replace(/^\s+/, "").split("\n");
-  // eslint-disable-next-line unicorn/no-null, eqeqeq
-  if (pureTitles != null) {
-    for (const pureTitle of pureTitles) {
-      consola.log(`pure title: ${pureTitle}`);
-      titleList.push(pureTitle);
-    }
-  }
+  showPureTitle(pureTitles, titleList);
+};
+
+/**
+ * WIP
+ */
+export const getBungeizaText = async (): Promise<Result<string, string>> => {
+  const bungeizaResponse = await fetch("https://www.shin-bungeiza.com/schedule.html");
+  const body = await bungeizaResponse.text();
+  if (body) return ok(body);
+  return err("error");
 };
 
 const init = async (): Promise<void> => {
