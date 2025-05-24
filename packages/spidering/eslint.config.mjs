@@ -6,4 +6,9 @@ export default defineConfig([
     tsconfigRootDir: import.meta.dirname,
     tsconfigFileName: "./tsconfig.json",
   }),
+  {
+    rules: {
+      "@typescript-eslint/strict-boolean-expressions": "off",
+    },
+  },
 ]);
