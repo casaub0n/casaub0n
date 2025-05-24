@@ -1,9 +1,10 @@
 /* eslint-disable unicorn/prefer-query-selector */
 import { JSDOM } from "jsdom";
-import fetch from "node-fetch";
+// import fetch from "node-fetch";
 import type HTMLCollectionOf from "jsdom";
 import type Element from "jsdom";
 import { consola } from "consola";
+import { err, ok, type Result } from "neverthrow";
 
 export const response = {
   hello: "world",
@@ -72,6 +73,16 @@ const showSmallTagElement = (smallTags: HTMLCollectionOf<HTMLElement>): void => 
   }
 };
 
+const showPureTitle = (pureTitles: string[] | undefined, titleList: string[]): void => {
+  // eslint-disable-next-line unicorn/no-null, eqeqeq
+  if (pureTitles != null) {
+    for (const pureTitle of pureTitles) {
+      consola.log(`pure title: ${pureTitle}`);
+      titleList.push(pureTitle);
+    }
+  }
+};
+
 export const makePureTitle = (
   title: HTMLParagraphElement,
   descriptionList: string[],
@@ -93,17 +104,19 @@ export const makePureTitle = (
   }
   const smallTags = title.getElementsByTagName("small");
   consola.log(`small tag length: ${smallTags.length.toString()}`);
-
   showSmallTagElement(smallTags);
-
   const pureTitles = title.textContent?.replace(/^\s+/, "").split("\n");
-  // eslint-disable-next-line unicorn/no-null, eqeqeq
-  if (pureTitles != null) {
-    for (const pureTitle of pureTitles) {
-      consola.log(`pure title: ${pureTitle}`);
-      titleList.push(pureTitle);
-    }
-  }
+  showPureTitle(pureTitles, titleList);
+};
+
+/**
+ * WIP
+ */
+export const getBungeizaText = async (): Promise<Result<string, string>> => {
+  const bungeizaResponse = await fetch("https://www.shin-bungeiza.com/schedule.html");
+  const body = await bungeizaResponse.text();
+  if (body) return ok(body);
+  return err("error");
 };
 
 const init = async (): Promise<void> => {
