@@ -64,7 +64,7 @@ const removeDescription = (elements: HTMLCollectionOf<HTMLElement>): void => {
   }
 };
 
-export const showSmallTagElement = (smallTags: HTMLCollectionOf<HTMLElement>): void => {
+const showSmallTagElement = (smallTags: HTMLCollectionOf<HTMLElement>): void => {
   for (const smallTag of smallTags) {
     const textContent = smallTag.textContent;
     // eslint-disable-next-line @typescript-eslint/no-unused-expressions
