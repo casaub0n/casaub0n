@@ -6,4 +6,8 @@ export default defineConfig({
   dts: true,
   clean: true,
   format: ["esm"],
+  target: "esnext",
+  platform: "node",
+  minify: true,
+  skipNodeModulesBundle: true,
 });
