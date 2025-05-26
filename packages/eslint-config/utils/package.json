@@ -35,8 +35,8 @@
     "JavaScript"
   ],
   "scripts": {
-    "build": "tsup",
-    "build:watch": "tsup --watch src",
+    "build": "tsdown",
+    "build:watch": "tsdown --watch src",
     "type:check": "tsc --noEmit",
     "lint": "eslint src/**"
   },
@@ -45,7 +45,7 @@
     "@types/node": "catalog:",
     "@typescript-eslint/utils": "catalog:",
     "rolldown": "catalog:",
-    "tsup": "catalog:",
+    "tsdown": "catalog:",
     "tsx": "catalog:",
     "typescript": "catalog:"
   }
