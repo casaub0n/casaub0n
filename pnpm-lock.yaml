@@ -30,6 +30,9 @@ catalogs:
     '@types/eslint-config-prettier':
       specifier: 6.11.3
       version: 6.11.3
+    '@types/mock-fs':
+      specifier: 4.13.4
+      version: 4.13.4
     '@types/node':
       specifier: 22.15.21
       version: 22.15.21
@@ -42,6 +45,9 @@ catalogs:
     '@typescript-eslint/utils':
       specifier: 8.32.1
       version: 8.32.1
+    '@vitest/ui':
+      specifier: 3.1.4
+      version: 3.1.4
     eslint-config-next:
       specifier: 15.3.2
       version: 15.3.2
@@ -263,7 +269,7 @@ importers:
         specifier: 29.5.14
         version: 29.5.14
       '@types/node':
-        specifier: 22.15.21
+        specifier: 'catalog:'
         version: 22.15.21
       '@types/react':
         specifier: 19.1.5
@@ -380,7 +386,7 @@ importers:
         specifier: 0.5.10
         version: 0.5.10(tailwindcss@4.1.7)
       '@types/node':
-        specifier: 22.15.21
+        specifier: 'catalog:'
         version: 22.15.21
       '@vercel/postgres':
         specifier: 0.10.0
@@ -711,13 +717,13 @@ importers:
         specifier: workspace:*
         version: link:../eslint-config/eslint-base
       '@types/mock-fs':
-        specifier: 4.13.4
+        specifier: 'catalog:'
         version: 4.13.4
       '@types/node':
-        specifier: 22.15.21
+        specifier: 'catalog:'
         version: 22.15.21
       '@vitest/ui':
-        specifier: 3.1.4
+        specifier: 'catalog:'
         version: 3.1.4(vitest@3.1.4)
       esbuild:
         specifier: 0.25.4
@@ -753,7 +759,7 @@ importers:
         specifier: 0.0.323
         version: 0.0.323
       '@types/node':
-        specifier: 22.15.21
+        specifier: 'catalog:'
         version: 22.15.21
       evp-ts:
         specifier: 1.1.1
@@ -790,13 +796,13 @@ importers:
         specifier: workspace:*
         version: link:../eslint-config/eslint-base
       '@types/mock-fs':
-        specifier: 4.13.4
+        specifier: 'catalog:'
         version: 4.13.4
       '@types/node':
-        specifier: 22.15.21
+        specifier: 'catalog:'
         version: 22.15.21
       '@vitest/ui':
-        specifier: 3.1.4
+        specifier: 'catalog:'
         version: 3.1.4(vitest@3.1.4)
       esbuild:
         specifier: 0.25.4
@@ -917,7 +923,7 @@ importers:
         specifier: 21.1.7
         version: 21.1.7
       '@types/node':
-        specifier: 22.15.21
+        specifier: 'catalog:'
         version: 22.15.21
       tsup:
         specifier: 8.5.0
@@ -966,7 +972,7 @@ importers:
         specifier: 21.1.7
         version: 21.1.7
       '@types/node':
-        specifier: 22.15.21
+        specifier: 'catalog:'
         version: 22.15.21
       msw:
         specifier: 2.8.4
@@ -991,7 +997,7 @@ importers:
         specifier: workspace:*
         version: link:../eslint-config/eslint-base
       '@types/node':
-        specifier: 22.15.21
+        specifier: 'catalog:'
         version: 22.15.21
       esbuild:
         specifier: 0.25.4
@@ -1019,10 +1025,10 @@ importers:
         specifier: workspace:*
         version: link:../eslint-config/eslint-base
       '@types/node':
-        specifier: 22.15.21
+        specifier: 'catalog:'
         version: 22.15.21
       '@vitest/ui':
-        specifier: 3.1.4
+        specifier: 'catalog:'
         version: 3.1.4(vitest@3.1.4)
       tsup:
         specifier: 8.5.0
