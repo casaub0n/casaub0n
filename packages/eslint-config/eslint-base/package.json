@@ -37,31 +37,33 @@
     "lint": "pnpm dlx eslint src/**"
   },
   "peerDependencies": {
-    "@casaub0n/eslint-config-utils": "workspace:*",
-    "@cspell/eslint-plugin": "9.0.2",
-    "@eslint/compat": "1.2.9",
-    "@eslint/eslintrc": "3.3.1",
-    "@eslint/js": "9.27.0",
-    "@eslint/json": "0.12.0",
-    "@eslint/markdown": "6.4.0",
-    "@typescript-eslint/eslint-plugin": "8.32.1",
-    "@typescript-eslint/parser": "8.32.1",
-    "eslint-config-prettier": "10.1.5",
-    "eslint-plugin-import": "2.31.0",
-    "eslint-plugin-react-hooks": "5.2.0",
-    "eslint-plugin-turbo": "2.5.3",
-    "eslint-plugin-unicorn": "59.0.1",
-    "eslint-plugin-unused-imports": "4.1.4",
-    "globals": "16.2.0",
-    "typescript-eslint": "8.32.1"
+    "@cspell/eslint-plugin": "catalog:",
+    "@eslint/compat": "catalog:",
+    "@eslint/eslintrc": "catalog:",
+    "@eslint/js": "catalog:",
+    "@eslint/json": "catalog:",
+    "@eslint/markdown": "catalog:",
+    "@typescript-eslint/eslint-plugin": "catalog:",
+    "@typescript-eslint/parser": "catalog:",
+    "eslint-config-prettier": "catalog:",
+    "eslint-plugin-import": "catalog:",
+    "eslint-plugin-react-hooks": "catalog:",
+    "eslint-plugin-turbo": "catalog:",
+    "eslint-plugin-unicorn": "catalog:",
+    "eslint-plugin-unused-imports": "catalog:",
+    "globals": "catalog:",
+    "typescript-eslint": "catalog:"
+  },
+  "dependencies": {
+    "@casaub0n/eslint-config-utils": "workspace:*"
   },
   "devDependencies": {
-    "@types/eslint-config-prettier": "6.11.3",
-    "@types/node": "22.15.21",
-    "@typescript-eslint/utils": "8.32.1",
-    "rolldown": "1.0.0-beta.9",
-    "tsup": "8.5.0",
-    "tsx": "4.19.4",
-    "typescript": "5.8.3"
+    "@types/eslint-config-prettier": "catalog:",
+    "@types/node": "catalog:",
+    "@typescript-eslint/utils": "catalog:",
+    "rolldown": "catalog:",
+    "tsup": "catalog:",
+    "tsx": "catalog:",
+    "typescript": "catalog:"
   }
 }
