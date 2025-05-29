@@ -27,6 +27,9 @@ catalogs:
     '@eslint/markdown':
       specifier: 6.4.0
       version: 6.4.0
+    '@formkit/tempo':
+      specifier: 0.1.2
+      version: 0.1.2
     '@next/eslint-plugin-next':
       specifier: 15.3.2
       version: 15.3.2
@@ -36,9 +39,15 @@ catalogs:
     '@types/eslint-config-prettier':
       specifier: 6.11.3
       version: 6.11.3
+    '@types/glob':
+      specifier: 8.1.0
+      version: 8.1.0
     '@types/jest':
       specifier: 29.5.14
       version: 29.5.14
+    '@types/jsdom':
+      specifier: 21.1.7
+      version: 21.1.7
     '@types/mock-fs':
       specifier: 4.13.4
       version: 4.13.4
@@ -63,6 +72,9 @@ catalogs:
     cpx2:
       specifier: 8.0.0
       version: 8.0.0
+    es-toolkit:
+      specifier: 1.38.0
+      version: 1.38.0
     esbuild:
       specifier: 0.25.5
       version: 0.25.5
@@ -96,15 +108,30 @@ catalogs:
     evp-ts:
       specifier: 1.1.1
       version: 1.1.1
+    glob:
+      specifier: 11.0.2
+      version: 11.0.2
     globals:
       specifier: 16.2.0
       version: 16.2.0
     jest:
       specifier: 29.7.0
       version: 29.7.0
+    jsdom:
+      specifier: 26.1.0
+      version: 26.1.0
+    msw:
+      specifier: 2.8.5
+      version: 2.8.5
     neverthrow:
       specifier: 8.2.0
       version: 8.2.0
+    node-fetch:
+      specifier: 3.3.2
+      version: 3.3.2
+    npm-run-all2:
+      specifier: 8.0.4
+      version: 8.0.4
     pino:
       specifier: 9.7.0
       version: 9.7.0
@@ -141,6 +168,9 @@ catalogs:
     vitest:
       specifier: 3.1.4
       version: 3.1.4
+    zod:
+      specifier: 3.25.34
+      version: 3.25.34
 
 importers:
 
@@ -171,7 +201,7 @@ importers:
         specifier: 4.9.0
         version: 4.9.0
       npm-run-all2:
-        specifier: 8.0.4
+        specifier: 'catalog:'
         version: 8.0.4
       prettier:
         specifier: 3.5.3
@@ -289,7 +319,7 @@ importers:
         specifier: 4.41.0
         version: 4.41.0
       zod:
-        specifier: 3.25.34
+        specifier: 'catalog:'
         version: 3.25.34
     devDependencies:
       '@casaub0n/eslint-config-next':
@@ -467,7 +497,7 @@ importers:
         specifier: 'catalog:'
         version: 5.8.3
       zod:
-        specifier: 3.25.34
+        specifier: 'catalog:'
         version: 3.25.34
     devDependencies:
       '@types/bcrypt':
@@ -946,10 +976,10 @@ importers:
         specifier: 'catalog:'
         version: 1.1.1
       glob:
-        specifier: 11.0.2
+        specifier: 'catalog:'
         version: 11.0.2
       jsdom:
-        specifier: 26.1.0
+        specifier: 'catalog:'
         version: 26.1.0(bufferutil@4.0.9)
       neverthrow:
         specifier: 'catalog:'
@@ -959,10 +989,10 @@ importers:
         specifier: workspace:*
         version: link:../eslint-config/eslint-base
       '@types/glob':
-        specifier: 8.1.0
+        specifier: 'catalog:'
         version: 8.1.0
       '@types/jsdom':
-        specifier: 21.1.7
+        specifier: 'catalog:'
         version: 21.1.7
       '@types/node':
         specifier: 'catalog:'
@@ -980,44 +1010,44 @@ importers:
   packages/spidering:
     dependencies:
       '@formkit/tempo':
-        specifier: 0.1.2
+        specifier: 'catalog:'
         version: 0.1.2
       consola:
-        specifier: 3.4.2
+        specifier: 'catalog:'
         version: 3.4.2
       es-toolkit:
-        specifier: 1.38.0
+        specifier: 'catalog:'
         version: 1.38.0
       glob:
-        specifier: 11.0.2
+        specifier: 'catalog:'
         version: 11.0.2
       jsdom:
-        specifier: 26.1.0
+        specifier: 'catalog:'
         version: 26.1.0(bufferutil@4.0.9)
       neverthrow:
         specifier: 'catalog:'
         version: 8.2.0
       node-fetch:
-        specifier: 3.3.2
+        specifier: 'catalog:'
         version: 3.3.2
       zod:
-        specifier: 3.25.34
+        specifier: 'catalog:'
         version: 3.25.34
     devDependencies:
       '@casaub0n/eslint-base':
         specifier: workspace:*
         version: link:../eslint-config/eslint-base
       '@types/glob':
-        specifier: 8.1.0
+        specifier: 'catalog:'
         version: 8.1.0
       '@types/jsdom':
-        specifier: 21.1.7
+        specifier: 'catalog:'
         version: 21.1.7
       '@types/node':
         specifier: 'catalog:'
         version: 22.15.24
       msw:
-        specifier: 2.8.5
+        specifier: 'catalog:'
         version: 2.8.5(@types/node@22.15.24)(typescript@5.8.3)
       tsdown:
         specifier: 'catalog:'
@@ -1032,7 +1062,7 @@ importers:
   packages/test-driven-development-by-example:
     dependencies:
       consola:
-        specifier: 3.4.2
+        specifier: 'catalog:'
         version: 3.4.2
     devDependencies:
       '@casaub0n/eslint-base':
@@ -1045,7 +1075,7 @@ importers:
         specifier: 'catalog:'
         version: 0.25.5
       npm-run-all2:
-        specifier: 8.0.4
+        specifier: 'catalog:'
         version: 8.0.4
       tsup:
         specifier: 'catalog:'
@@ -1060,7 +1090,7 @@ importers:
   packages/tsbox:
     dependencies:
       zod:
-        specifier: 3.25.34
+        specifier: 'catalog:'
         version: 3.25.34
     devDependencies:
       '@casaub0n/eslint-base':
@@ -5138,9 +5168,6 @@ packages:
 
   '@types/node@16.18.11':
     resolution: {integrity: sha512-3oJbGBUWuS6ahSnEq1eN2XrCyf4YsWI8OyCvo7c64zQJNplk3mO84t53o8lfTk+2ji59g5ycfc6qQ3fdHliHuA==}
-
-  '@types/node@22.15.23':
-    resolution: {integrity: sha512-7Ec1zaFPF4RJ0eXu1YT/xgiebqwqoJz8rYPDi/O2BcZ++Wpt0Kq9cl0eg6NN6bYbPnR67ZLo7St5Q3UK0SnARw==}
 
   '@types/node@22.15.24':
     resolution: {integrity: sha512-w9CZGm9RDjzTh/D+hFwlBJ3ziUaVw7oufKA3vOFSOZlzmW9AkZnfjPb+DLnrV6qtgL/LNmP0/2zBNCFHL3F0ng==}
@@ -18593,7 +18620,7 @@ snapshots:
 
   '@types/fontkit@2.0.8':
     dependencies:
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
 
   '@types/glob@8.1.0':
     dependencies:
@@ -18678,10 +18705,6 @@ snapshots:
       '@types/unist': 3.0.3
 
   '@types/node@16.18.11': {}
-
-  '@types/node@22.15.23':
-    dependencies:
-      undici-types: 6.21.0
 
   '@types/node@22.15.24':
     dependencies:
@@ -21651,7 +21674,7 @@ snapshots:
       '@typescript-eslint/parser': 8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
       eslint: 9.27.0(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.27.0(jiti@2.4.2)))(eslint@9.27.0(jiti@2.4.2))
+      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.31.0)(eslint@9.27.0(jiti@2.4.2))
       eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.27.0(jiti@2.4.2))
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.27.0(jiti@2.4.2))
       eslint-plugin-react: 7.37.5(eslint@9.27.0(jiti@2.4.2))
@@ -21675,7 +21698,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.27.0(jiti@2.4.2)))(eslint@9.27.0(jiti@2.4.2)):
+  eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0)(eslint@9.27.0(jiti@2.4.2)):
     dependencies:
       '@nolyfill/is-core-module': 1.0.39
       debug: 4.4.1
@@ -21690,14 +21713,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.27.0(jiti@2.4.2)))(eslint@9.27.0(jiti@2.4.2)))(eslint@9.27.0(jiti@2.4.2)):
+  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@9.27.0(jiti@2.4.2)):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
       eslint: 9.27.0(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.27.0(jiti@2.4.2)))(eslint@9.27.0(jiti@2.4.2))
+      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.31.0)(eslint@9.27.0(jiti@2.4.2))
     transitivePeerDependencies:
       - supports-color
 
@@ -21736,7 +21759,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.27.0(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.27.0(jiti@2.4.2)))(eslint@9.27.0(jiti@2.4.2)))(eslint@9.27.0(jiti@2.4.2))
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@9.27.0(jiti@2.4.2))
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
@@ -21959,7 +21982,7 @@ snapshots:
 
   eval@0.1.8:
     dependencies:
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       require-like: 0.1.2
 
   event-target-shim@5.0.1: {}
