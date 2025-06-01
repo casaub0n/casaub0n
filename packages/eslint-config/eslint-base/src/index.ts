@@ -15,8 +15,9 @@ import globals from "globals";
 import { ignoreConfig } from "../../utils/src/ignore-config";
 import { eslintCoreRules } from "../../utils/src/eslint-core-rules";
 import { typescriptRules } from "../../utils/src/typescript-rules";
-import json from "@eslint/json";
-import markdown from "@eslint/markdown";
+// import json from "@eslint/json";
+// import markdown from "@eslint/markdown";
+import eslintPluginYml from "eslint-plugin-yml";
 
 /**
  * **Usage** is at README because this eslint-config compile to a ESM file in dist.
@@ -120,9 +121,30 @@ const config = ({
      */
     turboPlugin.configs["flat/recommended"],
 
-    json.configs.recommended,
+    // json.configs.recommended,
 
-    markdown.configs.recommended,
+    // markdown.configs.recommended,
+
+    /**
+     * This config for pnpm-workspace.yaml
+     */
+    ...eslintPluginYml.configs["flat/recommended"],
+    {
+      rules: {
+        // 'yml/rule-name': 'error'
+        "yml/sort-keys": [
+          "warn",
+          {
+            pathPattern: "^$",
+            order: ["root", "packages", "catalog"],
+          },
+          {
+            pathPattern: "^catalog$",
+            order: { type: "asc" },
+          },
+        ],
+      },
+    },
 
     /**
      * https://zenn.dev/kazukix/articles/eslint-config-2024-09#eslint-config-prettier
