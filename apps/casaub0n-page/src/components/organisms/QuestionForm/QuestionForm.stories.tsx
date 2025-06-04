@@ -2,7 +2,7 @@ import { userEvent, within } from "storybook/test";
 
 import { QuestionForm } from "./QuestionForm";
 
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 
 const meta = {
   title: "organisms/question form",

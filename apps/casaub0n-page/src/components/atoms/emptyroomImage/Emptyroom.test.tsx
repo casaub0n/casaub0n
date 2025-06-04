@@ -1,4 +1,4 @@
-import { composeStories } from "@storybook/react";
+import { composeStories } from "@storybook/nextjs";
 import { render, screen } from "@testing-library/react";
 
 import * as stories from "./EmptyRoomImage.stories";

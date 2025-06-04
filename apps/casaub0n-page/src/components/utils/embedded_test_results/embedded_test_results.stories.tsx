@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 
 const embeddedTestResults = () => (
   <iframe src="https://casaub0n.github.io/casaub0n/__reports__/jest.html" allow="fullscreen" height={800} width={800} />

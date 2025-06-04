@@ -7,4 +7,15 @@ export default defineConfig([
     tsconfigFileName: "./tsconfig.json",
     rootDirectory: import.meta.dirname,
   }),
+  {
+    rules: {
+      "unicorn/filename-case": [
+        "off",
+        {
+          case: "kebabCase",
+          ignore: [String.raw`/./.tsx$`],
+        },
+      ],
+    },
+  },
 ]);

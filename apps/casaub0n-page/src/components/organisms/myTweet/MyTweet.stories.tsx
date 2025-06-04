@@ -1,6 +1,6 @@
 import { MyTweet } from "./MyTweet";
 
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs";
 
 const meta = {
   title: "organisms/MyTweet",

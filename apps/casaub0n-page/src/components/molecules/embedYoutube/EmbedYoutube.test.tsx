@@ -1,4 +1,4 @@
-import { composeStories } from "@storybook/react";
+import { composeStories } from "@storybook/nextjs";
 import { render } from "@testing-library/react";
 
 import * as stories from "./EmbedYoutube.stories";
