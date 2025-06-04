@@ -130,8 +130,8 @@ catalogs:
       specifier: 3.2.1
       version: 3.2.1
     astro:
-      specifier: 5.8.1
-      version: 5.8.1
+      specifier: 5.8.2
+      version: 5.8.2
     autoprefixer:
       specifier: 10.4.21
       version: 10.4.21
@@ -367,7 +367,7 @@ importers:
         version: 4.3.0(@types/node@22.15.29)(@types/react-dom@19.1.5(@types/react@19.1.6))(@types/react@19.1.6)(jiti@2.4.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(terser@5.39.1)(tsx@4.19.4)(yaml@2.8.0)
       astro:
         specifier: 'catalog:'
-        version: 5.8.1(@types/node@22.15.29)(encoding@0.1.13)(jiti@2.4.2)(rollup@4.40.2)(terser@5.39.1)(tsx@4.19.4)(typescript@5.8.3)(yaml@2.8.0)
+        version: 5.8.2(@types/node@22.15.29)(encoding@0.1.13)(jiti@2.4.2)(rollup@4.40.2)(terser@5.39.1)(tsx@4.19.4)(typescript@5.8.3)(yaml@2.8.0)
       react:
         specifier: 'catalog:'
         version: 19.1.0
@@ -5886,8 +5886,8 @@ packages:
     resolution: {integrity: sha512-JepyLROIad6f44uyqMF6HKE2QbunNzp3mYKRcPoDGt0QkxXmH222FAFC64WTyQu2Kg8NNEXHTN/sWuUId9sSxw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  astro@5.8.1:
-    resolution: {integrity: sha512-lkBg1smMRFW+FQ6i92SgEN53o4+ItRjlRt6Ck+rEjmTcb57Bid7faTNKUQNYuNnxiesTWw3NJDyVPQPbfKDyfw==}
+  astro@5.8.2:
+    resolution: {integrity: sha512-t0TBpBdVluA2QVmbFBwpIqmTvBwNhIz1XTIT1BWPkDkoIgsiEMf6BOZqcoGG7f4GVKkUB9bTgMOhPgU3tbJ6vQ==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -13383,12 +13383,6 @@ packages:
   zod@3.25.32:
     resolution: {integrity: sha512-OSm2xTIRfW8CV5/QKgngwmQW/8aPfGdaQFlrGoErlgg/Epm7cjb6K6VEyExfe65a3VybUOnu381edLb0dfJl0g==}
 
-  zod@3.25.36:
-    resolution: {integrity: sha512-eRFS3i8T0IrpGdL8HQyqFAugGOn7jOjyGgGdtv5NY4Wkhi7lJDk732bNZ609YMIGFbLoaj6J69O1Mura23gfIw==}
-
-  zod@3.25.49:
-    resolution: {integrity: sha512-JMMPMy9ZBk3XFEdbM3iL1brx4NUSejd6xr3ELrrGEfGb355gjhiAWtG3K5o+AViV/3ZfkIrCzXsZn6SbLwTR8Q==}
-
   zod@3.25.50:
     resolution: {integrity: sha512-VstOnRxf4tlSq0raIwbn0n+LA34SxVoZ8r3pkwSUM0jqNiA/HCMQEVjTuS5FZmHsge+9MDGTiAuHyml5T0um6A==}
 
@@ -16979,7 +16973,7 @@ snapshots:
       fs-extra: 11.3.0
       toml-eslint-parser: 0.10.0
       upath: 2.0.1
-      zod: 3.25.49
+      zod: 3.25.50
 
   '@renovatebot/kbpgp@4.0.1':
     dependencies:
@@ -19614,7 +19608,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro@5.8.1(@types/node@22.15.29)(encoding@0.1.13)(jiti@2.4.2)(rollup@4.40.2)(terser@5.39.1)(tsx@4.19.4)(typescript@5.8.3)(yaml@2.8.0):
+  astro@5.8.2(@types/node@22.15.29)(encoding@0.1.13)(jiti@2.4.2)(rollup@4.40.2)(terser@5.39.1)(tsx@4.19.4)(typescript@5.8.3)(yaml@2.8.0):
     dependencies:
       '@astrojs/compiler': 2.12.0
       '@astrojs/internal-helpers': 0.6.1
@@ -19674,9 +19668,9 @@ snapshots:
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.2
-      zod: 3.25.36
-      zod-to-json-schema: 3.24.5(zod@3.25.36)
-      zod-to-ts: 1.2.0(typescript@5.8.3)(zod@3.25.36)
+      zod: 3.25.50
+      zod-to-json-schema: 3.24.5(zod@3.25.50)
+      zod-to-ts: 1.2.0(typescript@5.8.3)(zod@3.25.50)
     optionalDependencies:
       sharp: 0.33.5
     transitivePeerDependencies:
@@ -20305,7 +20299,7 @@ snapshots:
     dependencies:
       devtools-protocol: 0.0.1452169
       mitt: 3.0.1
-      zod: 3.25.49
+      zod: 3.25.50
 
   ci-info@3.9.0: {}
 
@@ -28875,20 +28869,16 @@ snapshots:
 
   zlibjs@0.3.1: {}
 
-  zod-to-json-schema@3.24.5(zod@3.25.36):
+  zod-to-json-schema@3.24.5(zod@3.25.50):
     dependencies:
-      zod: 3.25.36
+      zod: 3.25.50
 
-  zod-to-ts@1.2.0(typescript@5.8.3)(zod@3.25.36):
+  zod-to-ts@1.2.0(typescript@5.8.3)(zod@3.25.50):
     dependencies:
       typescript: 5.8.3
-      zod: 3.25.36
+      zod: 3.25.50
 
   zod@3.25.32: {}
-
-  zod@3.25.36: {}
-
-  zod@3.25.49: {}
 
   zod@3.25.50: {}
 
