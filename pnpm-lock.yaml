@@ -118,8 +118,8 @@ catalogs:
       specifier: 3.2.2
       version: 3.2.2
     astro:
-      specifier: 5.9.0
-      version: 5.9.0
+      specifier: 5.9.1
+      version: 5.9.1
     autoprefixer:
       specifier: 10.4.21
       version: 10.4.21
@@ -361,7 +361,7 @@ importers:
         version: 4.3.0(@types/node@22.15.30)(@types/react-dom@19.1.6(@types/react@19.1.6))(@types/react@19.1.6)(jiti@2.4.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(terser@5.39.1)(tsx@4.19.4)(yaml@2.8.0)
       astro:
         specifier: 'catalog:'
-        version: 5.9.0(@types/node@22.15.30)(encoding@0.1.13)(jiti@2.4.2)(rollup@4.40.2)(terser@5.39.1)(tsx@4.19.4)(typescript@5.8.3)(yaml@2.8.0)
+        version: 5.9.1(@types/node@22.15.30)(encoding@0.1.13)(jiti@2.4.2)(rollup@4.40.2)(terser@5.39.1)(tsx@4.19.4)(typescript@5.8.3)(yaml@2.8.0)
       react:
         specifier: 'catalog:'
         version: 19.1.0
@@ -1256,6 +1256,9 @@ packages:
 
   '@astrojs/compiler@2.12.0':
     resolution: {integrity: sha512-7bCjW6tVDpUurQLeKBUN9tZ5kSv5qYrGmcn0sG0IwacL7isR2ZbyyA3AdZ4uxsuUFOS2SlgReTH7wkxO6zpqWA==}
+
+  '@astrojs/compiler@2.12.1':
+    resolution: {integrity: sha512-WDSyVIiz7sNcJcCJxJFITu6XjfGhJ50Z0auyaWsrM+xb07IlhBLFtQuDkNy0caVHWNcKTM2LISAaHhgkRqGAVg==}
 
   '@astrojs/internal-helpers@0.6.1':
     resolution: {integrity: sha512-l5Pqf6uZu31aG+3Lv8nl/3s4DbUzdlxTWDof4pEpto6GUJNhhCbelVi9dEyurOVyqaelwmS9oSyOWOENSfgo9A==}
@@ -5707,8 +5710,8 @@ packages:
     resolution: {integrity: sha512-JepyLROIad6f44uyqMF6HKE2QbunNzp3mYKRcPoDGt0QkxXmH222FAFC64WTyQu2Kg8NNEXHTN/sWuUId9sSxw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  astro@5.9.0:
-    resolution: {integrity: sha512-AHF7oZDBQRwggHUG0bwBhRQjrDD+vJpCtPd0/GVxDB1hGRV0SQuFWS0UHX5bYczIqFcao1z9o9o0r2rQtHrTMg==}
+  astro@5.9.1:
+    resolution: {integrity: sha512-wxoJcTbuDZNFSv6EaL0PAlrp0Wx6VnOAULCXvy0scsV70oWMeUkdxuBxfO54JxO5Qgyvwj9h99y6E0elqOpGtA==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -13221,6 +13224,8 @@ snapshots:
 
   '@astrojs/compiler@2.12.0': {}
 
+  '@astrojs/compiler@2.12.1': {}
+
   '@astrojs/internal-helpers@0.6.1': {}
 
   '@astrojs/markdown-remark@6.3.2':
@@ -19278,9 +19283,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro@5.9.0(@types/node@22.15.30)(encoding@0.1.13)(jiti@2.4.2)(rollup@4.40.2)(terser@5.39.1)(tsx@4.19.4)(typescript@5.8.3)(yaml@2.8.0):
+  astro@5.9.1(@types/node@22.15.30)(encoding@0.1.13)(jiti@2.4.2)(rollup@4.40.2)(terser@5.39.1)(tsx@4.19.4)(typescript@5.8.3)(yaml@2.8.0):
     dependencies:
-      '@astrojs/compiler': 2.12.0
+      '@astrojs/compiler': 2.12.1
       '@astrojs/internal-helpers': 0.6.1
       '@astrojs/markdown-remark': 6.3.2
       '@astrojs/telemetry': 3.3.0
