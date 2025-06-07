@@ -1,6 +1,6 @@
-import { Title, Subtitle, Description, Primary, Controls, Stories } from "@storybook/blocks";
+import { Title, Subtitle, Description, Primary, Controls, Stories } from "@storybook/addon-docs/blocks";
 
-/** @type { import('@storybook/react').Preview } */
+/** @type { import('@storybook/nextjs').Preview } */
 const preview = {
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },

@@ -1,12 +1,15 @@
+import { createRequire } from "node:module";
 // @ts-check
 
 /**
  * @see https://github.com/storybookjs/storybook/blob/a4b91eaf33dd38d6223aaf43fada8db94cf3ac77/code/frameworks/nextjs/README.md#getting-started
  */
-import path from "path";
+import path, { dirname, join } from "path";
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 import { VanillaExtractPlugin } from "@vanilla-extract/webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+
+const require = createRequire(import.meta.url);
 
 // https://github.com/storybookjs/storybook/tree/next/code/frameworks/nextjs
 
@@ -23,12 +26,10 @@ const config = {
     },
   ],
   addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
-    "@storybook/addon-docs",
+    getAbsolutePath("@storybook/addon-links"),
+    getAbsolutePath("@storybook/addon-docs"),
     {
-      name: "@storybook/addon-styling-webpack",
+      name: getAbsolutePath("@storybook/addon-styling-webpack"),
       options: {
         plugins: [new VanillaExtractPlugin(), new MiniCssExtractPlugin()],
         rules: [
@@ -61,16 +62,15 @@ const config = {
           },
         ],
       },
-    },
+    }
   ],
   staticDirs: ["../../casaub0n-page/public"],
-  framework: "@storybook/nextjs",
+  framework: getAbsolutePath("@storybook/nextjs"),
   core: {
     disableTelemetry: true,
   },
   docs: {
-    autodocs: "tag",
-    defaultName: "Documentation",
+    defaultName: "Documentation"
   },
   // ignore type because this is dynamic config
   webpackFinal: async (config) => {
@@ -89,3 +89,7 @@ const config = {
 };
 
 export default config;
+
+function getAbsolutePath(value) {
+  return dirname(require.resolve(join(value, "package.json")));
+}
