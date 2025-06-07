@@ -1,5 +1,3 @@
-import { userEvent, within } from "@storybook/test";
-
 import { QuestionForm } from "./QuestionForm";
 
 import type { Meta, StoryObj } from "@storybook/react";
@@ -27,7 +25,7 @@ export const Default: Story = {
 
 export const EmptyName: Story = {
   name: "empty name",
-  play: async ({ canvasElement }) => {
+  play: async ({ canvasElement, userEvent, within }) => {
     const canvas = within(canvasElement);
     await userEvent.click(canvas.getByRole("button", { name: "Post question" }));
   },
