@@ -210,6 +210,9 @@ catalogs:
     eslint-plugin-unused-imports:
       specifier: 4.1.4
       version: 4.1.4
+    eslint-plugin-yml:
+      specifier: 1.18.0
+      version: 1.18.0
     evp-ts:
       specifier: 1.1.1
       version: 1.1.1
@@ -356,6 +359,9 @@ importers:
 
   .:
     devDependencies:
+      '@casaub0n/eslint-config-yaml':
+        specifier: workspace:*
+        version: link:packages/eslint-config/yaml
       '@cspell/cspell-types':
         specifier: 9.0.2
         version: 9.0.2
@@ -819,7 +825,7 @@ importers:
         specifier: 'catalog:'
         version: 4.1.4(@typescript-eslint/eslint-plugin@8.33.1(@typescript-eslint/parser@8.33.1(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.28.0(jiti@2.4.2))
       eslint-plugin-yml:
-        specifier: ^1.18.0
+        specifier: 'catalog:'
         version: 1.18.0(eslint@9.28.0(jiti@2.4.2))
       globals:
         specifier: 'catalog:'
@@ -930,6 +936,34 @@ importers:
         version: 5.8.3
 
   packages/eslint-config/utils:
+    devDependencies:
+      '@casaub0n/eslint-base':
+        specifier: workspace:*
+        version: link:../eslint-base
+      '@types/node':
+        specifier: 'catalog:'
+        version: 22.15.30
+      '@typescript-eslint/utils':
+        specifier: 'catalog:'
+        version: 8.33.1(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3)
+      rolldown:
+        specifier: 'catalog:'
+        version: 1.0.0-beta.13
+      tsdown:
+        specifier: 'catalog:'
+        version: 0.12.7(typescript@5.8.3)
+      tsx:
+        specifier: 'catalog:'
+        version: 4.19.4
+      typescript:
+        specifier: 'catalog:'
+        version: 5.8.3
+
+  packages/eslint-config/yaml:
+    dependencies:
+      eslint-plugin-yml:
+        specifier: 'catalog:'
+        version: 1.18.0(eslint@9.28.0(jiti@2.4.2))
     devDependencies:
       '@casaub0n/eslint-base':
         specifier: workspace:*

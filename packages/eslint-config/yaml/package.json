@@ -1,9 +1,9 @@
 {
-  "name": "@casaub0n/eslint-base",
+  "name": "@casaub0n/eslint-config-yaml",
   "version": "0.0.0",
   "main": "./dist/index.mjs",
   "license": "MIT",
-  "description": "base eslint config for casaub0n",
+  "description": "yaml config for casaub0n",
   "publishConfig": {
     "access": "public"
   },
@@ -34,29 +34,13 @@
     "build": "tsdown",
     "build:watch": "tsdown --watch src",
     "type:check": "tsc --noEmit",
-    "lint": "pnpm dlx eslint src/**"
+    "lint": "eslint src/**"
   },
   "peerDependencies": {
-    "@cspell/eslint-plugin": "catalog:",
-    "@eslint/compat": "catalog:",
-    "@eslint/eslintrc": "catalog:",
-    "@eslint/js": "catalog:",
-    "@eslint/json": "catalog:",
-    "@eslint/markdown": "catalog:",
-    "@typescript-eslint/eslint-plugin": "catalog:",
-    "@typescript-eslint/parser": "catalog:",
-    "eslint-config-prettier": "catalog:",
-    "eslint-plugin-import": "catalog:",
-    "eslint-plugin-react-hooks": "catalog:",
-    "eslint-plugin-turbo": "catalog:",
-    "eslint-plugin-unicorn": "catalog:",
-    "eslint-plugin-unused-imports": "catalog:",
-    "eslint-plugin-yml": "catalog:",
-    "globals": "catalog:",
-    "typescript-eslint": "catalog:"
+    "eslint-plugin-yml": "catalog:"
   },
   "devDependencies": {
-    "@types/eslint-config-prettier": "catalog:",
+    "@casaub0n/eslint-base": "workspace:*",
     "@types/node": "catalog:",
     "@typescript-eslint/utils": "catalog:",
     "rolldown": "catalog:",
