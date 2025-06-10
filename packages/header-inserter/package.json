@@ -22,7 +22,6 @@
     "test:ci": "pnpm test",
     "rmdist": "node --import tsx scripts/rrm.ts",
     "build:tsup": "pnpm rmdist && tsup",
-    "build:rolldown": "pnpm rmdist && rolldown -c rolldown.config.ts",
     "build": "pnpm rmdist && tsx build.ts",
     "lint": "eslint src/**"
   },
@@ -43,7 +42,6 @@
     "@types/node": "catalog:",
     "@vitest/ui": "catalog:",
     "esbuild": "catalog:",
-    "rolldown": "catalog:",
     "tsup": "catalog:",
     "tsx": "catalog:",
     "typescript": "catalog:",
