@@ -12,6 +12,9 @@ catalogs:
     '@crxjs/vite-plugin':
       specifier: 1.0.14
       version: 1.0.14
+    '@cspell/cspell-types':
+      specifier: 9.0.2
+      version: 9.0.2
     '@cspell/eslint-plugin':
       specifier: 9.0.2
       version: 9.0.2
@@ -39,6 +42,15 @@ catalogs:
     '@hookform/resolvers':
       specifier: 5.1.1
       version: 5.1.1
+    '@lerna-lite/cli':
+      specifier: 4.3.0
+      version: 4.3.0
+    '@lerna-lite/publish':
+      specifier: 4.3.0
+      version: 4.3.0
+    '@lerna-lite/version':
+      specifier: 4.3.0
+      version: 4.3.0
     '@next-auth/prisma-adapter':
       specifier: 1.0.7
       version: 1.0.7
@@ -168,12 +180,18 @@ catalogs:
     cpx2:
       specifier: 8.0.0
       version: 8.0.0
+    cspell:
+      specifier: 9.0.2
+      version: 9.0.2
     css-loader:
       specifier: 7.1.2
       version: 7.1.2
     dotenv:
       specifier: 16.5.0
       version: 16.5.0
+    dotenv-cli:
+      specifier: 8.0.0
+      version: 8.0.0
     es-toolkit:
       specifier: 1.39.3
       version: 1.39.3
@@ -219,6 +237,9 @@ catalogs:
     fs-extra:
       specifier: 11.3.0
       version: 11.3.0
+    git-cz:
+      specifier: 4.9.0
+      version: 4.9.0
     glob:
       specifier: 11.0.2
       version: 11.0.2
@@ -294,6 +315,9 @@ catalogs:
     recharts:
       specifier: 2.15.3
       version: 2.15.3
+    renovate:
+      specifier: 40.48.11
+      version: 40.48.11
     rolldown:
       specifier: 1.0.0-beta.13
       version: 1.0.0-beta.13
@@ -312,6 +336,21 @@ catalogs:
     tailwindcss:
       specifier: 4.1.8
       version: 4.1.8
+    textlint:
+      specifier: 14.8.0
+      version: 14.8.0
+    textlint-filter-rule-allowlist:
+      specifier: 4.0.0
+      version: 4.0.0
+    textlint-filter-rule-comments:
+      specifier: 1.2.2
+      version: 1.2.2
+    textlint-rule-no-todo:
+      specifier: 2.0.1
+      version: 2.0.1
+    textlint-rule-preset-ja-technical-writing:
+      specifier: 12.0.2
+      version: 12.0.2
     ts-jest:
       specifier: 29.3.4
       version: 29.3.4
@@ -327,6 +366,9 @@ catalogs:
     tsx:
       specifier: 4.19.4
       version: 4.19.4
+    turbo:
+      specifier: 2.5.4
+      version: 2.5.4
     type-fest:
       specifier: 4.41.0
       version: 4.41.0
@@ -359,59 +401,59 @@ importers:
 
   .:
     devDependencies:
-      '@casaub0n/eslint-config-yaml':
-        specifier: workspace:*
-        version: link:packages/eslint-config/yaml
       '@cspell/cspell-types':
-        specifier: 9.0.2
+        specifier: 'catalog:'
         version: 9.0.2
       '@lerna-lite/cli':
-        specifier: 4.3.0
+        specifier: 'catalog:'
         version: 4.3.0(@lerna-lite/publish@4.3.0(@types/node@22.15.31)(conventional-commits-filter@5.0.0)(typescript@5.8.3))(@lerna-lite/version@4.3.0(@lerna-lite/publish@4.3.0(@types/node@22.15.31)(conventional-commits-filter@5.0.0)(typescript@5.8.3))(@types/node@22.15.31)(conventional-commits-filter@5.0.0)(typescript@5.8.3))(@types/node@22.15.31)(typescript@5.8.3)
       '@lerna-lite/publish':
-        specifier: 4.3.0
+        specifier: 'catalog:'
         version: 4.3.0(@types/node@22.15.31)(conventional-commits-filter@5.0.0)(typescript@5.8.3)
       '@lerna-lite/version':
-        specifier: 4.3.0
+        specifier: 'catalog:'
         version: 4.3.0(@lerna-lite/publish@4.3.0(@types/node@22.15.31)(conventional-commits-filter@5.0.0)(typescript@5.8.3))(@types/node@22.15.31)(conventional-commits-filter@5.0.0)(typescript@5.8.3)
       cspell:
-        specifier: 9.0.2
+        specifier: 'catalog:'
         version: 9.0.2
       dotenv-cli:
-        specifier: 8.0.0
+        specifier: 'catalog:'
         version: 8.0.0
       eslint:
-        specifier: 9.28.0
+        specifier: 'catalog:'
         version: 9.28.0(jiti@2.4.2)
+      eslint-plugin-yml:
+        specifier: 'catalog:'
+        version: 1.18.0(eslint@9.28.0(jiti@2.4.2))
       git-cz:
-        specifier: 4.9.0
+        specifier: 'catalog:'
         version: 4.9.0
       npm-run-all2:
         specifier: 'catalog:'
         version: 8.0.4
       prettier:
-        specifier: 3.5.3
+        specifier: 'catalog:'
         version: 3.5.3
       renovate:
-        specifier: 40.48.11
+        specifier: 'catalog:'
         version: 40.48.11(encoding@0.1.13)(typanion@3.14.0)
       textlint:
-        specifier: 14.8.0
+        specifier: 'catalog:'
         version: 14.8.0
       textlint-filter-rule-allowlist:
-        specifier: 4.0.0
+        specifier: 'catalog:'
         version: 4.0.0(textlint@14.8.0)
       textlint-filter-rule-comments:
-        specifier: 1.2.2
+        specifier: 'catalog:'
         version: 1.2.2(textlint@14.8.0)
       textlint-rule-no-todo:
-        specifier: 2.0.1
+        specifier: 'catalog:'
         version: 2.0.1
       textlint-rule-preset-ja-technical-writing:
-        specifier: 12.0.2
+        specifier: 'catalog:'
         version: 12.0.2
       turbo:
-        specifier: 2.5.4
+        specifier: 'catalog:'
         version: 2.5.4
 
   apps/casaub0n-astro:
@@ -936,34 +978,6 @@ importers:
         version: 5.8.3
 
   packages/eslint-config/utils:
-    devDependencies:
-      '@casaub0n/eslint-base':
-        specifier: workspace:*
-        version: link:../eslint-base
-      '@types/node':
-        specifier: 'catalog:'
-        version: 22.15.31
-      '@typescript-eslint/utils':
-        specifier: 'catalog:'
-        version: 8.34.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3)
-      rolldown:
-        specifier: 'catalog:'
-        version: 1.0.0-beta.13
-      tsdown:
-        specifier: 'catalog:'
-        version: 0.12.7(typescript@5.8.3)
-      tsx:
-        specifier: 'catalog:'
-        version: 4.19.4
-      typescript:
-        specifier: 'catalog:'
-        version: 5.8.3
-
-  packages/eslint-config/yaml:
-    dependencies:
-      eslint-plugin-yml:
-        specifier: 'catalog:'
-        version: 1.18.0(eslint@9.28.0(jiti@2.4.2))
     devDependencies:
       '@casaub0n/eslint-base':
         specifier: workspace:*
@@ -4813,9 +4827,6 @@ packages:
 
   '@textlint/markdown-to-ast@14.8.0':
     resolution: {integrity: sha512-KxvogGH8BPfR4eP5TNlRiR7KcPWzFjk1k8TX0WBnqWTzQeYbDYulYslVyiq06qc1NkTHvpK34zbS8UWZyzIQKA==}
-
-  '@textlint/module-interop@14.7.2':
-    resolution: {integrity: sha512-rDQhFERa2+xMqhyrPFvAL9d5Tb4RpQGKQExwrezvtCTREh6Zsp/nKxtK0r6o0P9xn1+zq2sZHW9NZjpe7av3xw==}
 
   '@textlint/module-interop@14.8.0':
     resolution: {integrity: sha512-SGeojZIpjP58RrnUAIjKO5xokloHfXJWcc3dh/QP9pDHRCI97yPJhyEXzOD3FiY9zFG2KNIYwUTyrIGnnBm9xQ==}
@@ -16393,8 +16404,8 @@ snapshots:
       express-rate-limit: 7.5.0(express@5.1.0)
       pkce-challenge: 5.0.0
       raw-body: 3.0.0
-      zod: 3.25.56
-      zod-to-json-schema: 3.24.5(zod@3.25.56)
+      zod: 3.25.57
+      zod-to-json-schema: 3.24.5(zod@3.25.57)
     transitivePeerDependencies:
       - supports-color
 
@@ -18288,8 +18299,6 @@ snapshots:
       unified: 9.2.2
     transitivePeerDependencies:
       - supports-color
-
-  '@textlint/module-interop@14.7.2': {}
 
   '@textlint/module-interop@14.8.0': {}
 
@@ -20412,7 +20421,7 @@ snapshots:
     dependencies:
       devtools-protocol: 0.0.1452169
       mitt: 3.0.1
-      zod: 3.25.56
+      zod: 3.25.57
 
   ci-info@3.9.0: {}
 
@@ -21628,7 +21637,7 @@ snapshots:
       '@typescript-eslint/parser': 8.33.1(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3)
       eslint: 9.28.0(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.33.1(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2))
+      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.31.0)(eslint@9.28.0(jiti@2.4.2))
       eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.33.1(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.28.0(jiti@2.4.2))
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.28.0(jiti@2.4.2))
       eslint-plugin-react: 7.37.5(eslint@9.28.0(jiti@2.4.2))
@@ -21652,7 +21661,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.33.1(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2)):
+  eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0)(eslint@9.28.0(jiti@2.4.2)):
     dependencies:
       '@nolyfill/is-core-module': 1.0.39
       debug: 4.4.1
@@ -21667,14 +21676,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.33.1(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.33.1(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2)):
+  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.33.1(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@9.28.0(jiti@2.4.2)):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 8.33.1(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3)
       eslint: 9.28.0(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.33.1(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2))
+      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.31.0)(eslint@9.28.0(jiti@2.4.2))
     transitivePeerDependencies:
       - supports-color
 
@@ -21713,7 +21722,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.28.0(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.33.1(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.33.1(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2))
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.33.1(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@9.28.0(jiti@2.4.2))
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
@@ -27803,7 +27812,7 @@ snapshots:
     dependencies:
       '@textlint-rule/textlint-rule-no-invalid-control-character': 3.0.0
       '@textlint-rule/textlint-rule-no-unmatched-pair': 2.0.4
-      '@textlint/module-interop': 14.7.2
+      '@textlint/module-interop': 14.8.0
       textlint-rule-ja-no-abusage: 3.0.0
       textlint-rule-ja-no-mixed-period: 3.0.1
       textlint-rule-ja-no-redundant-expression: 4.0.1
@@ -27903,7 +27912,7 @@ snapshots:
       read-pkg-up: 3.0.0
       structured-source: 4.0.0
       unique-concat: 0.2.2
-      zod: 3.25.56
+      zod: 3.25.57
     transitivePeerDependencies:
       - supports-color
 
@@ -29215,6 +29224,10 @@ snapshots:
   zod-to-json-schema@3.24.5(zod@3.25.56):
     dependencies:
       zod: 3.25.56
+
+  zod-to-json-schema@3.24.5(zod@3.25.57):
+    dependencies:
+      zod: 3.25.57
 
   zod-to-ts@1.2.0(typescript@5.8.3)(zod@3.25.56):
     dependencies:

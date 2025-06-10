@@ -1,7 +1,25 @@
 import { defineConfig } from "eslint/config";
-import base from "@casaub0n/eslint-config-yaml";
+import eslintPluginYml from "eslint-plugin-yml";
 
 /**
  * only for pnpm-workspace.yaml
  */
-export default defineConfig([...base]);
+export default defineConfig([
+  ...eslintPluginYml.configs["flat/recommended"],
+  {
+    rules: {
+      // 'yml/rule-name': 'error'
+      "yml/sort-keys": [
+        "warn",
+        {
+          pathPattern: "^$",
+          order: ["root", "packages", "catalog"],
+        },
+        {
+          pathPattern: "^catalog$",
+          order: { type: "asc" },
+        },
+      ],
+    },
+  },
+]);
