@@ -125,26 +125,7 @@ const config = ({
 
     // markdown.configs.recommended,
 
-    /**
-     * This config for pnpm-workspace.yaml
-     */
     ...eslintPluginYml.configs["flat/recommended"],
-    {
-      rules: {
-        // 'yml/rule-name': 'error'
-        "yml/sort-keys": [
-          "warn",
-          {
-            pathPattern: "^$",
-            order: ["root", "packages", "catalog"],
-          },
-          {
-            pathPattern: "^catalog$",
-            order: { type: "asc" },
-          },
-        ],
-      },
-    },
 
     /**
      * https://zenn.dev/kazukix/articles/eslint-config-2024-09#eslint-config-prettier
