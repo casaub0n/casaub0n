@@ -316,8 +316,8 @@ catalogs:
       specifier: 2.15.3
       version: 2.15.3
     renovate:
-      specifier: 40.49.10
-      version: 40.49.10
+      specifier: 40.49.12
+      version: 40.49.12
     schema-dts:
       specifier: 1.1.5
       version: 1.1.5
@@ -439,7 +439,7 @@ importers:
         version: 3.5.3
       renovate:
         specifier: 'catalog:'
-        version: 40.49.10(encoding@0.1.13)(typanion@3.14.0)
+        version: 40.49.12(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: 'catalog:'
         version: 14.8.0
@@ -2232,8 +2232,8 @@ packages:
   '@capsizecss/unpack@2.4.0':
     resolution: {integrity: sha512-GrSU71meACqcmIUxPYOJvGKF0yryjN/L1aCuE9DViCTJI7bfkjgYDPD1zbNDcINJwSSP6UaBZY9GAbYDO7re0Q==}
 
-  '@cdktf/hcl2json@0.20.12':
-    resolution: {integrity: sha512-0kisly/cb4UK/cFhMAWMMEq+/FNFwPmDVoZ9ZphvDlXH62eytQcY5gaCxUrztKhncj2EYKovsTPbRq9C8GlRwg==}
+  '@cdktf/hcl2json@0.21.0':
+    resolution: {integrity: sha512-cwX3i/mSJI/cRrtqwEPRfawB7pXgNioriSlkvou8LWiCrrcDe9ZtTbAbu8W1tEJQpe1pnX9VEgpzf/BbM7xF8Q==}
 
   '@conventional-changelog/git-client@2.5.1':
     resolution: {integrity: sha512-lAw7iA5oTPWOLjiweb7DlGEMDEvzqzLLa6aWOly2FSZ64IwLE8T458rC+o+WvI31Doz6joM7X2DoNog7mX8r4A==}
@@ -4277,8 +4277,8 @@ packages:
     resolution: {integrity: sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==}
     engines: {node: '>=10'}
 
-  '@sindresorhus/is@7.0.1':
-    resolution: {integrity: sha512-QWLl2P+rsCJeofkDNIT3WFmb6NrRud1SUYW8dIhXK/46XFV8Q/g7Bsvib0Askb0reRLe+WYPeeE+l5cH7SlkuQ==}
+  '@sindresorhus/is@7.0.2':
+    resolution: {integrity: sha512-d9xRovfKNz1SKieM0qJdO+PQonjnnIfSNWfHYnBSJ9hkjm0ZPw6HlxscDXYstp3z+7V2GOFHc+J0CYrYTjqCJw==}
     engines: {node: '>=18'}
 
   '@sindresorhus/merge-streams@4.0.0':
@@ -11129,8 +11129,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@40.49.10:
-    resolution: {integrity: sha512-eI/gue+qk7HCobcrLKSMv1DZvQk3bpWG1pC9bCOmeUpzW6Du/vbpVK7U7z+7Ch0Xz8uJ0+p2vbzy3czcc1nIiw==}
+  renovate@40.49.12:
+    resolution: {integrity: sha512-gEflxB91z5Ja5k/Qg+IFbiH/eT5DWmhTpErbRRtr7pEuGQxdGODrtjMprQke0hWNStetlPmC0YAVdrRdb4mR+g==}
     engines: {node: ^22.13.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -14958,7 +14958,7 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@cdktf/hcl2json@0.20.12':
+  '@cdktf/hcl2json@0.21.0':
     dependencies:
       fs-extra: 11.3.0
 
@@ -17173,7 +17173,7 @@ snapshots:
 
   '@sindresorhus/is@4.6.0': {}
 
-  '@sindresorhus/is@7.0.1': {}
+  '@sindresorhus/is@7.0.2': {}
 
   '@sindresorhus/merge-streams@4.0.0': {}
 
@@ -26110,7 +26110,7 @@ snapshots:
       lodash: 4.17.21
       strip-ansi: 6.0.1
 
-  renovate@40.49.10(encoding@0.1.13)(typanion@3.14.0):
+  renovate@40.49.12(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.821.0
       '@aws-sdk/client-ec2': 3.821.0
@@ -26121,7 +26121,7 @@ snapshots:
       '@aws-sdk/credential-providers': 3.821.0
       '@baszalmstra/rattler': 0.2.1
       '@breejs/later': 4.2.0
-      '@cdktf/hcl2json': 0.20.12
+      '@cdktf/hcl2json': 0.21.0
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/context-async-hooks': 2.0.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/exporter-trace-otlp-http': 0.202.0(@opentelemetry/api@1.9.0)
@@ -26143,7 +26143,7 @@ snapshots:
       '@renovatebot/osv-offline': 1.6.5
       '@renovatebot/pep440': 4.1.0
       '@renovatebot/ruby-semver': 4.0.0
-      '@sindresorhus/is': 7.0.1
+      '@sindresorhus/is': 7.0.2
       '@yarnpkg/core': 4.4.2(typanion@3.14.0)
       '@yarnpkg/parsers': 3.0.3
       agentkeepalive: 4.6.0
