@@ -154,8 +154,8 @@ catalogs:
       specifier: 2.4.13
       version: 2.4.13
     '@vanilla-extract/webpack-plugin':
-      specifier: 2.3.20
-      version: 2.3.20
+      specifier: 2.3.21
+      version: 2.3.21
     '@vercel/postgres':
       specifier: 0.10.0
       version: 0.10.0
@@ -636,7 +636,7 @@ importers:
         version: 9.1.0-alpha.5(next@15.3.3(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(storybook@9.1.0-alpha.5(@testing-library/dom@10.4.0)(bufferutil@4.0.9)(prettier@3.5.3))(type-fest@4.41.0)(typescript@5.8.3)(webpack-hot-middleware@2.26.1)(webpack@5.99.9)
       '@vanilla-extract/webpack-plugin':
         specifier: 'catalog:'
-        version: 2.3.20(webpack@5.99.9)
+        version: 2.3.21(webpack@5.99.9)
       css-loader:
         specifier: 'catalog:'
         version: 7.1.2(webpack@5.99.9)
@@ -5235,11 +5235,6 @@ packages:
 
   '@vanilla-extract/private@1.0.8':
     resolution: {integrity: sha512-oRAbUlq1SyTWCo7dQnTVm+xgJMqNl8K1dEempQHXzQvUuyEfBabMt0wNGf+VCHzvKbx/Bzr9p/2wy8WA9+2z2g==}
-
-  '@vanilla-extract/webpack-plugin@2.3.20':
-    resolution: {integrity: sha512-I/tQQdpGLVXiLFB3/yORzhA5etK+8gNr3e+mwFLYWNClcoAjAIJ6ywADqbkqxEaRCX5pvqKNJodwxhvsdELHMw==}
-    peerDependencies:
-      webpack: ^4.30.0 || ^5.20.2
 
   '@vanilla-extract/webpack-plugin@2.3.21':
     resolution: {integrity: sha512-Z+Cr3MhcI7TdLAxrdjYnO9fWeEWArXEoErObaJ/g1I74Y/A+gSmuOiYI2foQwDhp8o8V8+Y+946xHLo+Ulhbtg==}
@@ -18629,17 +18624,6 @@ snapshots:
 
   '@vanilla-extract/private@1.0.8': {}
 
-  '@vanilla-extract/webpack-plugin@2.3.20(webpack@5.99.9)':
-    dependencies:
-      '@vanilla-extract/integration': 8.0.3
-      debug: 4.4.1
-      loader-utils: 2.0.4
-      picocolors: 1.1.1
-      webpack: 5.99.9
-    transitivePeerDependencies:
-      - babel-plugin-macros
-      - supports-color
-
   '@vanilla-extract/webpack-plugin@2.3.21(webpack@5.99.9(esbuild@0.25.5))':
     dependencies:
       '@vanilla-extract/integration': 8.0.3
@@ -18647,6 +18631,17 @@ snapshots:
       loader-utils: 2.0.4
       picocolors: 1.1.1
       webpack: 5.99.9(esbuild@0.25.5)
+    transitivePeerDependencies:
+      - babel-plugin-macros
+      - supports-color
+
+  '@vanilla-extract/webpack-plugin@2.3.21(webpack@5.99.9)':
+    dependencies:
+      '@vanilla-extract/integration': 8.0.3
+      debug: 4.4.1
+      loader-utils: 2.0.4
+      picocolors: 1.1.1
+      webpack: 5.99.9
     transitivePeerDependencies:
       - babel-plugin-macros
       - supports-color
