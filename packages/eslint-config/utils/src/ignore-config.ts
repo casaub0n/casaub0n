@@ -5,6 +5,7 @@ export const ignoreConfig: FlatConfig.Config["ignores"] = [
    * output
    */
   "**/dist/**/*",
+  "**/dist/*",
 
   /**
    * Logs
