@@ -15,8 +15,6 @@ import globals from "globals";
 import { ignoreConfig } from "../../utils/src/ignore-config";
 import { eslintCoreRules } from "../../utils/src/eslint-core-rules";
 import { typescriptRules } from "../../utils/src/typescript-rules";
-// import json from "@eslint/json";
-// import markdown from "@eslint/markdown";
 import eslintPluginYml from "eslint-plugin-yml";
 
 /**
@@ -120,10 +118,6 @@ const config = ({
      * @see https://github.com/vercel/turborepo/tree/main/packages/eslint-plugin-turbo#usage-flat-config-eslintconfigjs
      */
     turboPlugin.configs["flat/recommended"],
-
-    // json.configs.recommended,
-
-    // markdown.configs.recommended,
 
     ...eslintPluginYml.configs["flat/recommended"],
 
