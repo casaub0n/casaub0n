@@ -241,8 +241,8 @@ catalogs:
       specifier: 4.9.0
       version: 4.9.0
     glob:
-      specifier: 11.0.2
-      version: 11.0.2
+      specifier: 11.0.3
+      version: 11.0.3
     globals:
       specifier: 16.2.0
       version: 16.2.0
@@ -1181,7 +1181,7 @@ importers:
         version: 1.1.1
       glob:
         specifier: 'catalog:'
-        version: 11.0.2
+        version: 11.0.3
       jsdom:
         specifier: 'catalog:'
         version: 26.1.0(bufferutil@4.0.9)
@@ -1224,7 +1224,7 @@ importers:
         version: 1.39.3
       glob:
         specifier: 'catalog:'
-        version: 11.0.2
+        version: 11.0.3
       jsdom:
         specifier: 'catalog:'
         version: 26.1.0(bufferutil@4.0.9)
@@ -3073,6 +3073,14 @@ packages:
     peerDependenciesMeta:
       '@types/node':
         optional: true
+
+  '@isaacs/balanced-match@4.0.1':
+    resolution: {integrity: sha512-yzMTt9lEb8Gv7zRioUilSglI0c0smZ9k5D65677DLWLtWJaXIS3CqcGyUFByYKlnUj6TkjLVs54fBl6+TiGQDQ==}
+    engines: {node: 20 || >=22}
+
+  '@isaacs/brace-expansion@5.0.0':
+    resolution: {integrity: sha512-ZT55BDLV0yv0RBm2czMiZ+SqCGO7AvmOM3G/w2xhVPH+te0aKgFjmBvGlL1dH+ql2tgGO3MVrbb3jCKyvpgnxA==}
+    engines: {node: 20 || >=22}
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -8016,6 +8024,11 @@ packages:
     engines: {node: 20 || >=22}
     hasBin: true
 
+  glob@11.0.3:
+    resolution: {integrity: sha512-2Nim7dha1KVkaiF4q6Dj+ngPPMdfvLJEOpZk/jKiUAkqKebpGAWQXAq9z1xu9HKu5lWfqw/FASuccEjyznjPaA==}
+    engines: {node: 20 || >=22}
+    hasBin: true
+
   glob@6.0.4:
     resolution: {integrity: sha512-MKZeRNyYZAVVVG1oZeLaWie1uweH40m9AZwIwxyPbTSX4hHrVYSzLg0Ro5Z5R7XKkIX+Cc6oD1rqeDJnwsB8/A==}
     deprecated: Glob versions prior to v9 are no longer supported
@@ -9620,6 +9633,10 @@ packages:
 
   minimatch@10.0.1:
     resolution: {integrity: sha512-ethXTt3SGGR+95gudmqJ1eNhRO7eGEGIgYA9vnPatK4/etz2MEVDno5GMCibdMTuBMyElzIlgxMna3K94XDIDQ==}
+    engines: {node: 20 || >=22}
+
+  minimatch@10.0.3:
+    resolution: {integrity: sha512-IPZ167aShDZZUMdRk66cyQAW3qr0WzbHkPdMYa8bzZhlHhO3jALbKdxcaak7W9FfT2rZNpQuUu4Od7ILEpXSaw==}
     engines: {node: 20 || >=22}
 
   minimatch@3.1.2:
@@ -15671,6 +15688,12 @@ snapshots:
     optionalDependencies:
       '@types/node': 24.0.0
 
+  '@isaacs/balanced-match@4.0.1': {}
+
+  '@isaacs/brace-expansion@5.0.0':
+    dependencies:
+      '@isaacs/balanced-match': 4.0.1
+
   '@isaacs/cliui@8.0.2':
     dependencies:
       string-width: 5.1.2
@@ -21225,7 +21248,7 @@ snapshots:
       '@typescript-eslint/parser': 8.34.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3)
       eslint: 9.28.0(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.34.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2))
+      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.31.0)(eslint@9.28.0(jiti@2.4.2))
       eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.34.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.28.0(jiti@2.4.2))
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.28.0(jiti@2.4.2))
       eslint-plugin-react: 7.37.5(eslint@9.28.0(jiti@2.4.2))
@@ -21249,7 +21272,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.34.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2)):
+  eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0)(eslint@9.28.0(jiti@2.4.2)):
     dependencies:
       '@nolyfill/is-core-module': 1.0.39
       debug: 4.4.1
@@ -21264,14 +21287,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.34.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.34.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2)):
+  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.34.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@9.28.0(jiti@2.4.2)):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 8.34.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3)
       eslint: 9.28.0(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.34.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2))
+      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.31.0)(eslint@9.28.0(jiti@2.4.2))
     transitivePeerDependencies:
       - supports-color
 
@@ -21300,7 +21323,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.28.0(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.34.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.34.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2))
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.34.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@9.28.0(jiti@2.4.2))
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
@@ -22096,6 +22119,15 @@ snapshots:
       foreground-child: 3.3.1
       jackspeak: 4.1.1
       minimatch: 10.0.1
+      minipass: 7.1.2
+      package-json-from-dist: 1.0.1
+      path-scurry: 2.0.0
+
+  glob@11.0.3:
+    dependencies:
+      foreground-child: 3.3.1
+      jackspeak: 4.1.1
+      minimatch: 10.0.3
       minipass: 7.1.2
       package-json-from-dist: 1.0.1
       path-scurry: 2.0.0
@@ -24349,6 +24381,10 @@ snapshots:
   minimatch@10.0.1:
     dependencies:
       brace-expansion: 2.0.2
+
+  minimatch@10.0.3:
+    dependencies:
+      '@isaacs/brace-expansion': 5.0.0
 
   minimatch@3.1.2:
     dependencies:
