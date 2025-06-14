@@ -14,6 +14,9 @@ import storybook from "eslint-plugin-storybook";
 import pluginConfigPrettier from "eslint-config-prettier";
 import typescriptEslintParser from "@typescript-eslint/parser";
 import globals from "globals";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+import pluginNext from "@next/eslint-plugin-next";
 import { ignoreConfig } from "../../utils/src/ignore-config";
 import { eslintCoreRules } from "../../utils/src/eslint-core-rules";
 import { typescriptRules } from "../../utils/src/typescript-rules";
@@ -46,7 +49,7 @@ const config = ({
   tsconfigFileName = "./tsconfig.json",
   // eslint-disable-next-line unicorn/prevent-abbreviations
   tsconfigRootDir = import.meta.dirname,
-  rootDirectory = import.meta.dirname,
+  rootDirectory = "apps/next-casaub0n/",
 }: Readonly<{
   tsconfigFileName: string;
   tsconfigRootDir: string;
@@ -63,6 +66,14 @@ const config = ({
     pluginJs.configs.recommended,
     ...tseslint.configs.strict,
     // https://typescript-eslint.io/getting-started/typed-linting/
+    ...compat.config({
+      extends: ["next", "next/core-web-vitals", "next/typescript"],
+      settings: {
+        next: {
+          rootDir: rootDirectory,
+        },
+      },
+    }),
     {
       files: ["**/*.cts", "**/*.ctsx", "**/*.mts", "**/*.mtsx", "**/*.ts", "**/*.tsx"],
       extends: [
@@ -105,10 +116,14 @@ const config = ({
       },
       plugins: {
         "unused-imports": unusedImports,
+        "@next/next": pluginNext,
       },
       rules: {
         ...eslintCoreRules,
         ...typescriptRules,
+
+        ...pluginNext.configs.recommended.rules,
+        ...pluginNext.configs["core-web-vitals"].rules,
 
         /**
          * [最低限の flat config（まずは no-unused-imports を動かす）](https://zenn.dev/seventhseven07/articles/06a02c4048decf)
