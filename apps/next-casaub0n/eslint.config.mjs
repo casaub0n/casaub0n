@@ -7,4 +7,9 @@ export default defineConfig([
     tsconfigFileName: import.meta.dirname + "/tsconfig.json",
     rootDirectory: import.meta.dirname,
   }),
+  {
+    rules: {
+      "@typescript-eslint/explicit-function-return-type": "off",
+    },
+  },
 ]);
