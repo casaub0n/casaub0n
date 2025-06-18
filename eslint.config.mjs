@@ -37,7 +37,7 @@ export default defineConfig([
     language: "json/json",
     rules: {
       "json/no-duplicate-keys": "error",
-      "json/sort-keys": "warn",
+      // "json/sort-keys": "warn",
     },
   },
 
