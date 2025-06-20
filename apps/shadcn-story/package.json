@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "prebuild": "tsdown",
-    "build": "pnpm prebuild"
+    "build": "pnpm prebuild",
+    "lint": "eslint ./src"
   },
   "dependencies": {
     "@casaub0n/ui": "workspace:*",

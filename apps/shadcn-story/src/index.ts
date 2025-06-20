@@ -1,12 +1,11 @@
-// eslint-disable-next-line unicorn/import-style
-import { dirname, join } from "node:path";
+import path from "node:path";
 
-export function getAbsolutePath(value: string): string {
-  return dirname(import.meta.resolve(join(value, "package.json")));
+function getAbsolutePath(value: string): string {
+  return path.dirname(import.meta.resolve(path.join(value, "package.json")));
 }
 
 const config = {
-  stories: ["../stories/*.stories.tsx", "../stories/**/*.stories.tsx"],
+  stories: ["../**/*.mdx", "../**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
     getAbsolutePath("@storybook/addon-links"),
     getAbsolutePath("@storybook/addon-essentials"),
