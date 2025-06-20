@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "type": "module",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "prebuild": "tsdown"
+  },
   "dependencies": {
     "@casaub0n/ui": "workspace:*",
     "react": "catalog:",
@@ -21,6 +23,7 @@
     "serve": "catalog:",
     "storybook": "catalog:",
     "typescript": "catalog:",
-    "vite": "catalog:"
+    "vite": "catalog:",
+    "tsdown": "catalog:"
   }
 }
