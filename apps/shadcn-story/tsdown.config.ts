@@ -1,7 +1,10 @@
 import { defineConfig } from "tsdown";
 
 export default defineConfig({
-  entry: ["./src/index.ts"],
+  entry: {
+    main: "./src/index.ts",
+    preview: "./src/preview.ts",
+  },
   outDir: ".storybook",
   shims: true,
   clean: true,
