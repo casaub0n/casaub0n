@@ -88,18 +88,13 @@ export const makePureTitle = (
   descriptionList: string[],
   titleList: string[],
   honDate?: Element,
-  honDateList?: string[],
 ): void => {
   const descriptionDom = title.getElementsByTagName("small");
   consola.log(`description length: ${descriptionDom.length.toString()}`);
   showElementText(descriptionDom, "description", descriptionList);
   removeDescription(descriptionDom);
 
-  if (honDate && honDateList) {
-    const pureHonDate = honDate.textContent;
-    if (pureHonDate !== null) {
-      honDateList.push(pureHonDate);
-    }
+  if (honDate) {
     honDate.remove();
   }
   const smallTags = title.getElementsByTagName("small");
@@ -111,6 +106,7 @@ export const makePureTitle = (
 
 /**
  * WIP
+ * @todo error
  */
 export const getBungeizaText = async (): Promise<Result<string, string>> => {
   const bungeizaResponse = await fetch("https://www.shin-bungeiza.com/schedule.html");
@@ -119,14 +115,29 @@ export const getBungeizaText = async (): Promise<Result<string, string>> => {
   return err("error");
 };
 
+/**
+ * WIP
+ * @todo error
+ */
+export const getScheduleContents = async (
+  body: string,
+): Promise<Result<HTMLCollectionOf<Element>, string>> => {
+  const dom = new JSDOM(body, {
+    runScripts: "dangerously",
+    resources: "usable",
+  });
+  const scheduleContents = dom.window.document.getElementsByClassName("schedule-content");
+  if (scheduleContents.length > 0) return ok(scheduleContents);
+  return err("err");
+};
+
 const init = async (): Promise<void> => {
   try {
-    // const data = await got.get("https://www.shin-bungeiza.com/schedule.html");
-
     const imgList: string[] = [];
-    const honDateList: string[] = [];
     const descriptionList: string[] = [];
     const titleList: string[] = [];
+
+    // use getBungeizaText and getScheduleContents
 
     const bungeizaResponse = await fetch("https://www.shin-bungeiza.com/schedule.html");
     const body = await bungeizaResponse.text();
@@ -135,8 +146,8 @@ const init = async (): Promise<void> => {
       runScripts: "dangerously",
       resources: "usable",
     });
-    const scheduleContentDom = dom.window.document.getElementsByClassName("schedule-content");
-    for (const element of scheduleContentDom) {
+    const scheduleContents = dom.window.document.getElementsByClassName("schedule-content");
+    for (const element of scheduleContents) {
       const h2collections = element.getElementsByTagName("h2");
       const images = element.getElementsByTagName("img");
       const schedulePrograms = element.getElementsByClassName("schedule-program");
@@ -155,7 +166,7 @@ const init = async (): Promise<void> => {
           if (honDateDom.length > 0) {
             for (const honDate of honDateDom) {
               consola.log(honDate.textContent);
-              makePureTitle(title, descriptionList, titleList, honDate, honDateList);
+              makePureTitle(title, descriptionList, titleList, honDate);
             }
           } else {
             makePureTitle(title, descriptionList, titleList);
