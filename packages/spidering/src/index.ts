@@ -119,16 +119,14 @@ export const getBungeizaText = async (): Promise<Result<string, string>> => {
  * WIP
  * @todo error
  */
-export const getScheduleContents = async (
-  body: string,
-): Promise<Result<HTMLCollectionOf<Element>, string>> => {
+export const getScheduleContents = (body: string): Result<HTMLCollectionOf<Element>, Error> => {
   const dom = new JSDOM(body, {
     runScripts: "dangerously",
     resources: "usable",
   });
   const scheduleContents = dom.window.document.getElementsByClassName("schedule-content");
   if (scheduleContents.length > 0) return ok(scheduleContents);
-  return err("err");
+  return err(new Error("schedule-content is nothing"));
 };
 
 const init = async (): Promise<void> => {
@@ -142,42 +140,42 @@ const init = async (): Promise<void> => {
     const bungeizaResponse = await fetch("https://www.shin-bungeiza.com/schedule.html");
     const body = await bungeizaResponse.text();
 
-    const dom = new JSDOM(body, {
-      runScripts: "dangerously",
-      resources: "usable",
-    });
-    const scheduleContents = dom.window.document.getElementsByClassName("schedule-content");
-    for (const element of scheduleContents) {
-      const h2collections = element.getElementsByTagName("h2");
-      const images = element.getElementsByTagName("img");
-      const schedulePrograms = element.getElementsByClassName("schedule-program");
-      for (const img of images) {
-        consola.log(`https://www.shin-bungeiza.com${img.src}`);
-        imgList.push(`https://www.shin-bungeiza.com${img.src}`);
-      }
-      for (const h2 of h2collections) {
-        consola.log(h2.textContent);
-        // TODO: convert h2.textContent to date type
-      }
-      for (const scheduleProgram of schedulePrograms) {
-        const titles = scheduleProgram.getElementsByTagName("p");
-        for (const title of titles) {
-          const honDateDom = title.getElementsByClassName("hon-date");
-          if (honDateDom.length > 0) {
-            for (const honDate of honDateDom) {
-              consola.log(honDate.textContent);
-              makePureTitle(title, descriptionList, titleList, honDate);
+    const maybeScheduleContents = getScheduleContents(body);
+
+    if (maybeScheduleContents.isOk()) {
+      const scheduleContents = maybeScheduleContents.value;
+      for (const element of scheduleContents) {
+        const h2collections = element.getElementsByTagName("h2");
+        const images = element.getElementsByTagName("img");
+        const schedulePrograms = element.getElementsByClassName("schedule-program");
+        for (const img of images) {
+          consola.log(`https://www.shin-bungeiza.com${img.src}`);
+          imgList.push(`https://www.shin-bungeiza.com${img.src}`);
+        }
+        for (const h2 of h2collections) {
+          consola.log(h2.textContent);
+          // TODO: convert h2.textContent to date type
+        }
+        for (const scheduleProgram of schedulePrograms) {
+          const titles = scheduleProgram.getElementsByTagName("p");
+          for (const title of titles) {
+            const honDateDom = title.getElementsByClassName("hon-date");
+            if (honDateDom.length > 0) {
+              for (const honDate of honDateDom) {
+                consola.log(honDate.textContent);
+                makePureTitle(title, descriptionList, titleList, honDate);
+              }
+            } else {
+              makePureTitle(title, descriptionList, titleList);
             }
-          } else {
-            makePureTitle(title, descriptionList, titleList);
+          }
+          const timeList = scheduleProgram.getElementsByTagName("li");
+          for (const time of timeList) {
+            consola.log(time.textContent);
           }
         }
-        const timeList = scheduleProgram.getElementsByTagName("li");
-        for (const time of timeList) {
-          consola.log(time.textContent);
-        }
+        consola.log("\n\n");
       }
-      consola.log("\n\n");
     }
   } catch (error) {
     consola.error(error);
