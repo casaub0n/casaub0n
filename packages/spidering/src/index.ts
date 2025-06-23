@@ -46,14 +46,11 @@ export const domCalc = (
 export const showElementText = (
   elements: HTMLCollectionOf<HTMLElement>,
   whatShow: string,
-  state: string[],
 ): void => {
   for (const element of elements) {
     const elementText = element.textContent;
     if (elementText !== null) {
       consola.log(`${whatShow}: ${elementText}`);
-      // WIP
-      state.push(elementText);
     }
   }
 };
@@ -85,26 +82,25 @@ const showPureTitle = (pureTitles: string[] | undefined, titleList: string[]): v
 
 export const makePureTitle = (
   title: HTMLParagraphElement,
-  descriptionList: string[],
   titleList: string[],
   honDate?: Element,
 ): void => {
   const descriptionDom = title.getElementsByTagName("small");
-  consola.log(`description length: ${descriptionDom.length.toString()}`);
-  showElementText(descriptionDom, "description", descriptionList);
+  showElementText(descriptionDom, "description");
   removeDescription(descriptionDom);
 
   if (honDate) {
     honDate.remove();
   }
   const smallTags = title.getElementsByTagName("small");
-  consola.log(`small tag length: ${smallTags.length.toString()}`);
   showSmallTagElement(smallTags);
   const pureTitles = title.textContent?.replace(/^\s+/, "").split("\n");
   showPureTitle(pureTitles, titleList);
 };
 
 /**
+ * [fetch](https://nodejs.org/ja/learn/getting-started/fetch) is pure Node.js library.
+ * This function call [shin-bungeiza schedule](https://www.shin-bungeiza.com/schedule.html)
  * @returns `shin-bungeiza` html string
  */
 export const getBungeizaText = async (): Promise<Result<string, Error>> => {
@@ -115,6 +111,7 @@ export const getBungeizaText = async (): Promise<Result<string, Error>> => {
 };
 
 /**
+ * [JSDOM](https://github.com/jsdom/jsdom) parses html text in this function
  * @param body html string
  * @returns `<div class="schedule-content">` elements. Check the elements, follow this example;
  * @example ```
@@ -143,8 +140,6 @@ const init = async (): Promise<void> => {
   try {
     const imgList: string[] = [];
     const descriptionList: string[] = [];
-    const titleList: string[] = [];
-
     const body = await getBungeizaText();
 
     if (body.isOk()) {
@@ -171,10 +166,10 @@ const init = async (): Promise<void> => {
               if (honDateDom.length > 0) {
                 for (const honDate of honDateDom) {
                   consola.log(honDate.textContent);
-                  makePureTitle(title, descriptionList, titleList, honDate);
+                  makePureTitle(title, descriptionList);
                 }
               } else {
-                makePureTitle(title, descriptionList, titleList);
+                makePureTitle(title, descriptionList);
               }
             }
             const timeList = scheduleProgram.getElementsByTagName("li");
