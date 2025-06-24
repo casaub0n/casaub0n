@@ -1,4 +1,4 @@
-import { Money } from "./money";
+import Money from "./money/money";
 import consola from "consola";
 
 const init = (): void => {
