@@ -3,7 +3,9 @@
 import { strict as assert } from "node:assert";
 import { test } from "node:test";
 
-import { Bank, Money, Sum } from "./money";
+import Bank from "./money/bank";
+import Money from "./money/money";
+import { Sum } from "./money/sum";
 
 void test("multiplication", () => {
   const five = Money.dollar(5);
