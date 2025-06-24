@@ -18,17 +18,16 @@
     "node": ">=22"
   },
   "scripts": {
-    "test": "tsc --noEmit && pnpm tsx src/money.test.ts",
+    "ts:check": "tsc --noEmit",
+    "test": "pnpm tsx src/money.test.ts",
     "test:watch": "node --watch --no-warnings --import tsx src/money.test.ts",
     "test:ci": "pnpm test",
-    "test:purenode": "pnpm build:test && pnpm node dist/money.test.js",
+    "test:purenode": "pnpm build && pnpm node dist/test.mjs",
     "rmdist": "node --import tsx scripts/rrm.ts",
     "prebuild": "pnpm rmdist",
-    "build:module": "tsup src/index.ts --format cjs --dts --env.TABLE_HEAD something",
-    "build:test": "esbuild src/money.test.ts --bundle --define:process.env.NODE_ENV=\\\"production\\\" --minify --platform=node --target=node20 --outfile=dist/money.test.js",
-    "test:coverage": "node --test --experimental-test-coverage ./dist/money.test.js",
-    "test:xml": "node --test --test-reporter=junit ./dist/money.test.js > ../../apps/casaub0n-astro/src/test-driven-development-by-example-report.xml",
-    "build": "run-p build:module build:test",
+    "build": "tsdown",
+    "test:coverage": "node --test --experimental-test-coverage ./dist/test.mjs",
+    "test:xml": "node --test --test-reporter=junit ./dist/test.mjs > ../../apps/casaub0n-astro/src/test-driven-development-by-example-report.xml",
     "start": "pnpm build && node dist/index.js",
     "lint": "eslint src/**",
     "lint:turbo": "turbo lint"
@@ -47,9 +46,7 @@
   "devDependencies": {
     "@casaub0n/eslint-base": "workspace:*",
     "@types/node": "catalog:",
-    "esbuild": "catalog:",
-    "npm-run-all2": "catalog:",
-    "tsup": "catalog:",
+    "tsdown": "catalog:",
     "tsx": "catalog:",
     "typescript": "catalog:"
   },
