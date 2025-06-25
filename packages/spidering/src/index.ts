@@ -1,14 +1,9 @@
 /* eslint-disable unicorn/prefer-query-selector */
 import { JSDOM } from "jsdom";
-// import fetch from "node-fetch";
 import type HTMLCollectionOf from "jsdom";
 import type Element from "jsdom";
 import { consola } from "consola";
 import { err, ok, type Result } from "neverthrow";
-
-export const response = {
-  hello: "world",
-} as const satisfies Record<string, string>;
 
 export type Program = {
   title: string;
@@ -102,6 +97,12 @@ export const makePureTitle = (
  * [fetch](https://nodejs.org/ja/learn/getting-started/fetch) is pure Node.js library.
  * This function call [shin-bungeiza schedule](https://www.shin-bungeiza.com/schedule.html)
  * @returns `shin-bungeiza` html string
+ * @example ```
+ * const htmlText = await getBungeizaText();
+ * if (htmlText.isOk()) {
+ *   console.log(htmlText.value);
+ * }
+ * ```
  */
 export const getBungeizaText = async (): Promise<Result<string, Error>> => {
   const bungeizaResponse = await fetch("https://www.shin-bungeiza.com/schedule.html");
