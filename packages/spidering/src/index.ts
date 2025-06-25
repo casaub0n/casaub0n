@@ -107,6 +107,7 @@ export const makePureTitle = (
 export const getBungeizaText = async (): Promise<Result<string, Error>> => {
   const bungeizaResponse = await fetch("https://www.shin-bungeiza.com/schedule.html");
   const body = await bungeizaResponse.text();
+  if (body === "") return err(new Error("body is nothing"));
   if (body) return ok(body);
   return err(new Error("can't get"));
 };
