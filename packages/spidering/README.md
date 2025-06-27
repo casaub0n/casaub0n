@@ -7,6 +7,10 @@ https://chaika.hatenablog.com/entry/2020/08/17/083000
 
 ## Utility Library
 
+### neverthrow
+
+It's like Either
+
 ### tempo
 
 Date library
