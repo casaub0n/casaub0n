@@ -114,6 +114,35 @@ export const getBungeizaText = async (): Promise<Result<string, Error>> => {
 
 /**
  * [JSDOM](https://github.com/jsdom/jsdom) parses html text in this function
+ * @param html html string
+ * @returns `<body>`
+ */
+export const getBody = (html: string): Result<HTMLElement, Error> => {
+  const dom = new JSDOM(html, {
+    runScripts: "dangerously",
+    resources: "usable",
+  });
+  const maybeBody = dom.window.document.body;
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, unicorn/no-null, eqeqeq
+  if (maybeBody == null) return err(new Error("schedule-content is nothing"));
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, eqeqeq
+  if (maybeBody == undefined) return err(new Error("schedule-content is nothing"));
+  return ok(maybeBody);
+};
+
+/**
+ * @returns `<div class="schedule-box-main">`
+ */
+export const getScheduleBoxMain = (body: HTMLElement): Result<HTMLCollectionOf<Element>, Error> => {
+  const scheduleBoxMain = body.getElementsByClassName("schedule-box-main");
+  if (scheduleBoxMain.item.length === 0) return err(new Error("schedule-box-main is nothing"));
+  if (scheduleBoxMain.namedItem.length === 0) return err(new Error("schedule-box-main is nothing"));
+  if (scheduleBoxMain.length === 0) return err(new Error("schedule-box-main is nothing"));
+  return ok(scheduleBoxMain);
+};
+
+/**
+ * [JSDOM](https://github.com/jsdom/jsdom) parses html text in this function
  * @param body html string
  * @returns `<div class="schedule-content">` elements. Check the elements, follow this example;
  * @example ```
@@ -142,17 +171,18 @@ const init = async (): Promise<void> => {
   try {
     const imgList: string[] = [];
     const descriptionList: string[] = [];
-    const body = await getBungeizaText();
+    const maybeBody = await getBungeizaText();
 
-    if (body.isOk()) {
-      const maybeScheduleContents = getScheduleContents(body.value);
+    if (maybeBody.isOk()) {
+      const body = maybeBody.value;
+      const maybeScheduleContents = getScheduleContents(body);
 
       if (maybeScheduleContents.isOk()) {
         const scheduleContents = maybeScheduleContents.value;
-        for (const element of scheduleContents) {
-          const h2collections = element.getElementsByTagName("h2");
-          const images = element.getElementsByTagName("img");
-          const schedulePrograms = element.getElementsByClassName("schedule-program");
+        for (const scheduleContent of scheduleContents) {
+          const h2collections = scheduleContent.getElementsByTagName("h2");
+          const images = scheduleContent.getElementsByTagName("img");
+          const schedulePrograms = scheduleContent.getElementsByClassName("schedule-program");
           for (const img of images) {
             consola.log(`https://www.shin-bungeiza.com${img.src}`);
             imgList.push(`https://www.shin-bungeiza.com${img.src}`);
