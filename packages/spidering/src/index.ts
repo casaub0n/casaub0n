@@ -4,6 +4,7 @@ import type HTMLCollectionOf from "jsdom";
 import type Element from "jsdom";
 import { consola } from "consola";
 import { err, ok, type Result } from "neverthrow";
+import { z } from "zod";
 
 export type Program = {
   title: string;
@@ -140,6 +141,10 @@ export const getScheduleBoxMain = (body: HTMLElement): Result<HTMLCollectionOf<E
   if (scheduleBoxMain.length === 0) return err(new Error("schedule-box-main is nothing"));
   return ok(scheduleBoxMain);
 };
+
+export const scheduleSchema = z.object({
+  scheduleboximg: z.array(z.string()),
+});
 
 /**
  * [JSDOM](https://github.com/jsdom/jsdom) parses html text in this function
