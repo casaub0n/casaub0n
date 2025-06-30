@@ -61,6 +61,7 @@ const getImageList = (scheduleBoxMain: Element): string[] => {
 
   const slickSlideCollection = scheduleBoxImgElement.item(0)?.getElementsByClassName("slick-slide");
 
+  // null check
   if (
     // eslint-disable-next-line eqeqeq, unicorn/no-null
     slickSlideCollection == null ||
@@ -112,10 +113,10 @@ export const getSubTitle = (scheduleBoxMain: Element): string => {
 };
 
 export const getData = async (): Promise<void> => {
-  const maybeText = await getBungeizaText();
-  if (maybeText.isOk()) {
-    const text = maybeText.value;
-    const maybeScheduleBoxMainList = getScheduleBoxMainList(text);
+  const maybeHtmlText = await getBungeizaText();
+  if (maybeHtmlText.isOk()) {
+    const htmlText = maybeHtmlText.value;
+    const maybeScheduleBoxMainList = getScheduleBoxMainList(htmlText);
     if (maybeScheduleBoxMainList.isOk()) {
       const scheduleBoxMainList = maybeScheduleBoxMainList.value;
       // do schedule-box-main
