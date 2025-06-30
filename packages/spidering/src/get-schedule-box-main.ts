@@ -1,4 +1,5 @@
 /* eslint-disable unicorn/prefer-query-selector */
+import consola from "consola";
 import { JSDOM } from "jsdom";
 import { err, ok, type Result } from "neverthrow";
 import z from "zod";
@@ -68,17 +69,40 @@ const getImageList = (scheduleBoxMain: Element): string[] => {
   return imageList;
 };
 
-export const getDate = async (): Promise<void> => {
+export const getTitle = (scheduleBoxMain: Element): string => {
+  const scheduleH1Collection = scheduleBoxMain.getElementsByTagName("h1");
+  let title = "";
+  for (const scheduleH1 of scheduleH1Collection) {
+    title += scheduleH1.textContent + "\n";
+  }
+  return title;
+};
+
+export const getSubTitle = (scheduleBoxMain: Element): string => {
+  const scheduleTxtCatchCollection = scheduleBoxMain.getElementsByClassName("schedule-txt-catch");
+  let subTitle = "";
+  for (const scheduleTxtCatch of scheduleTxtCatchCollection) {
+    subTitle += scheduleTxtCatch.textContent;
+  }
+  return subTitle;
+};
+
+export const getData = async (): Promise<void> => {
   const maybeText = await getBungeizaText();
   if (maybeText.isOk()) {
     const text = maybeText.value;
     const maybeScheduleBoxMainList = getScheduleBoxMainList(text);
     if (maybeScheduleBoxMainList.isOk()) {
       const scheduleBoxMainList = maybeScheduleBoxMainList.value;
+      // do schedule-box-main
       for (const scheduleBoxMain of scheduleBoxMainList) {
+        // push data into object
         const schedule: ScheduleMain = {
           images: getImageList(scheduleBoxMain),
+          subTitle: getSubTitle(scheduleBoxMain),
+          title: getTitle(scheduleBoxMain),
         };
+        consola.log(schedule);
       }
     }
   }
@@ -86,6 +110,8 @@ export const getDate = async (): Promise<void> => {
 
 export const scheduleMainSchema = z.object({
   images: z.array(z.string()),
+  subTitle: z.string(),
+  title: z.string(),
 });
 
 type ScheduleMain = z.infer<typeof scheduleMainSchema>;
