@@ -51,20 +51,44 @@ export const getScheduleBoxMainList = (html: string): Result<HTMLCollectionOf<El
   return ok(maybeScheduleBoxMain);
 };
 
+/**
+ * @param scheduleBoxMain parsed JSDOM
+ * @returns
+ */
 const getImageList = (scheduleBoxMain: Element): string[] => {
   const scheduleBoxImgElement = scheduleBoxMain.getElementsByClassName("schedule-box-img");
   const imageList: string[] = [];
-  for (const scheduleBoxImg of scheduleBoxImgElement) {
-    const slickSlideElement = scheduleBoxImg.getElementsByClassName("slick-slide");
-    for (const slickSlide of slickSlideElement) {
-      const imgElement = slickSlide.getElementsByTagName("img");
-      for (const image of imgElement) {
-        const imageUrl = image.getAttribute("src");
-        if (imageUrl !== null) {
-          imageList.push(imageUrl);
-        }
-      }
+
+  const slickSlideCollection = scheduleBoxImgElement.item(0)?.getElementsByClassName("slick-slide");
+
+  if (
+    // eslint-disable-next-line eqeqeq, unicorn/no-null
+    slickSlideCollection == null ||
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, eqeqeq
+    slickSlideCollection == undefined ||
+    slickSlideCollection.length === 0 ||
+    slickSlideCollection.item.length === 0 ||
+    slickSlideCollection.namedItem.length === 0
+  ) {
+    return imageList;
+  }
+
+  for (const slickSlide of slickSlideCollection) {
+    const image = slickSlide.getElementsByTagName("img").item(0);
+
+    // eslint-disable-next-line eqeqeq, @typescript-eslint/no-unnecessary-condition, unicorn/no-null
+    if (image == null || image == undefined) {
+      return imageList;
     }
+
+    const imageUrl = image.getAttribute("src");
+
+    // eslint-disable-next-line eqeqeq, @typescript-eslint/no-unnecessary-condition, unicorn/no-null
+    if (imageUrl == null || imageUrl == undefined) {
+      return imageList;
+    }
+
+    imageList.push("https://www.shin-bungeiza.com" + imageUrl);
   }
   return imageList;
 };
