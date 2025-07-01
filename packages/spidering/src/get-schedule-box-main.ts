@@ -112,6 +112,16 @@ export const getSubTitle = (scheduleBoxMain: Element): string => {
   return subTitle;
 };
 
+export const getScheduleMain = (scheduleBoxMain: Element): ScheduleMain => {
+  const schedule: ScheduleMain = {
+    images: getImageList(scheduleBoxMain),
+    subTitle: getSubTitle(scheduleBoxMain),
+    title: getTitle(scheduleBoxMain),
+  };
+  consola.log(schedule);
+  return schedule;
+};
+
 export const getData = async (): Promise<void> => {
   const maybeHtmlText = await getBungeizaText();
   if (maybeHtmlText.isOk()) {
@@ -121,22 +131,23 @@ export const getData = async (): Promise<void> => {
       const scheduleBoxMainList = maybeScheduleBoxMainList.value;
       // do schedule-box-main
       for (const scheduleBoxMain of scheduleBoxMainList) {
-        // push data into object
-        const schedule: ScheduleMain = {
-          images: getImageList(scheduleBoxMain),
-          subTitle: getSubTitle(scheduleBoxMain),
-          title: getTitle(scheduleBoxMain),
-        };
-        consola.log(schedule);
+        getScheduleMain(scheduleBoxMain);
+        // TODO merge datalist
       }
     }
   }
 };
 
-export const scheduleMainSchema = z.object({
+/**
+ * `<div class="schedule-box-main">` [zod](https://github.com/colinhacks/zod) schema
+ */
+export const scheduleMain = z.object({
   images: z.array(z.string()),
   subTitle: z.string(),
   title: z.string(),
 });
 
-type ScheduleMain = z.infer<typeof scheduleMainSchema>;
+/**
+ * `<div class="schedule-box-main">` object
+ */
+type ScheduleMain = z.infer<typeof scheduleMain>;
