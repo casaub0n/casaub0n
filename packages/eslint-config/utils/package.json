@@ -38,7 +38,7 @@
     "build": "tsdown",
     "build:watch": "tsdown --watch src",
     "type:check": "tsc --noEmit",
-    "lint": "eslint src/**"
+    "lint": "pnpm dlx eslint src/**"
   },
   "devDependencies": {
     "@casaub0n/eslint-base": "workspace:*",
