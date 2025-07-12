@@ -2,6 +2,7 @@
 import { err, ok, type Result } from "neverthrow";
 import z from "zod";
 import { JSDOM } from "jsdom";
+import { parse } from "@formkit/tempo";
 
 /**
  * [fetch](https://nodejs.org/ja/learn/getting-started/fetch) is pure Node.js library.
@@ -77,6 +78,15 @@ const hasDate = (wrapperElement: HTMLHeadingElement): Result<string, Error> => {
     return err(new Error("date is nothing"));
   }
   return ok(date);
+};
+
+export const hasMonth = (maybeDate: string): boolean => {
+  try {
+    parse(maybeDate, "MM/DD");
+    return true;
+  } catch {
+    return false;
+  }
 };
 
 /**
