@@ -50,41 +50,51 @@ export const getScheduleContentList = (
   return ok(maybeScheduleBoxMain);
 };
 
+const hasDate = (wrapperElement: HTMLHeadingElement): Result<string, Error> => {
+  const dateElement = wrapperElement.getElementsByTagName("em");
+  // eslint-disable-next-line unicorn/no-null, eqeqeq, @typescript-eslint/no-unnecessary-condition
+  if (dateElement == null || dateElement == undefined) {
+    return err(new Error("date is nothing"));
+  }
+  if (dateElement.length === 0) {
+    return err(new Error("date is nothing"));
+  }
+  if (dateElement.item.length === 0) {
+    return err(new Error("date is nothing"));
+  }
+  if (dateElement.namedItem.length === 0) {
+    return err(new Error("date is nothing"));
+  }
+  const date = dateElement.item(0)?.nodeValue;
+  if (
+    // eslint-disable-next-line eqeqeq, unicorn/no-null
+    date == null ||
+    // eslint-disable-next-line eqeqeq, @typescript-eslint/no-unnecessary-condition
+    date == undefined ||
+    // eslint-disable-next-line eqeqeq
+    date == ""
+  ) {
+    return err(new Error("date is nothing"));
+  }
+  return ok(date);
+};
+
 /**
  * @todo parse date list
  * @param scheduleContent
  * @returns
  */
 export const getDate = (scheduleContent: Element): Result<string[], Error> => {
-  const dateList = scheduleContent.getElementsByTagName("h2");
-  const h2List: string[] = [];
-  for (const eigeDate of dateList) {
-    const h2 = eigeDate.getElementsByTagName("em");
-    // eslint-disable-next-line unicorn/no-null, eqeqeq, @typescript-eslint/no-unnecessary-condition
-    if (h2 == null || h2 == undefined) {
-      return err(new Error("date is nothing"));
+  const wrapperElementList = scheduleContent.getElementsByTagName("h2");
+  const dateList: string[] = [];
+  for (const wrapperElement of wrapperElementList) {
+    const maybeDate = hasDate(wrapperElement);
+    if (maybeDate.isOk()) {
+      const date = maybeDate.value;
+      dateList.push(date);
     }
-    if (h2.length === 0) {
-      return err(new Error("date is nothing"));
-    }
-    if (h2.item.length === 0) {
-      return err(new Error("date is nothing"));
-    }
-    if (h2.namedItem.length === 0) {
-      return err(new Error("date is nothing"));
-    }
-    // eslint-disable-next-line unicorn/no-null, eqeqeq
-    if (h2.item(0) == null || h2.item(0) == undefined || h2.item(0)?.nodeValue == "") {
-      return err(new Error("date is nothing"));
-    }
-    const h2Value = h2.item(0)?.nodeValue;
-    // eslint-disable-next-line unicorn/no-null, eqeqeq, @typescript-eslint/no-unnecessary-condition
-    if (h2Value == null || h2Value == undefined) {
-      return err(new Error("date is nothing"));
-    }
-    h2List.push(h2Value);
   }
-  return ok(h2List);
+  return ok(dateList);
 };
 
 export const getData = async (): Promise<void> => {
