@@ -2,7 +2,7 @@
 import { err, ok, type Result } from "neverthrow";
 import z from "zod";
 import { JSDOM } from "jsdom";
-import { parse } from "@formkit/tempo";
+import { addMonth, addYear, parse } from "@formkit/tempo";
 
 /**
  * [fetch](https://nodejs.org/ja/learn/getting-started/fetch) is pure Node.js library.
@@ -89,19 +89,39 @@ export const hasMonth = (maybeDate: string): boolean => {
   }
 };
 
+export const haveMonth = (maybeDate: string): Result<Date, Date> => {
+  try {
+    const date = parse(maybeDate, "MM/DD");
+    const fullDate = addYear(date, 2015);
+    return ok(fullDate);
+  } catch {
+    const date = parse(maybeDate, "DD");
+    return err(date);
+  }
+};
+
 /**
  * @todo parse date list
  * @param scheduleContent
  * @returns
  */
-export const getDate = (scheduleContent: Element): Result<string[], Error> => {
+export const getDate = (scheduleContent: Element): Result<Date[], Error> => {
   const wrapperElementList = scheduleContent.getElementsByTagName("h2");
-  const dateList: string[] = [];
+  const dateList: Date[] = [];
+  let month: number = 0;
   for (const wrapperElement of wrapperElementList) {
     const maybeDate = hasDate(wrapperElement);
     if (maybeDate.isOk()) {
-      const date = maybeDate.value;
-      dateList.push(date);
+      const dateRaw = maybeDate.value;
+      const resultDate = haveMonth(dateRaw);
+      if (resultDate.isOk()) {
+        month = resultDate.value.getMonth();
+        dateList.push(resultDate.value);
+      }
+      if (resultDate.isErr()) {
+        const fullDate = addYear(addMonth(resultDate.error, month), 2015);
+        dateList.push(fullDate);
+      }
     }
   }
   return ok(dateList);
