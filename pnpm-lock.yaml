@@ -181,8 +181,8 @@ catalogs:
       specifier: 3.2.4
       version: 3.2.4
     astro:
-      specifier: 5.11.0
-      version: 5.11.0
+      specifier: 5.11.1
+      version: 5.11.1
     autoprefixer:
       specifier: 10.4.21
       version: 10.4.21
@@ -508,7 +508,7 @@ importers:
         version: 4.3.0(@types/node@24.0.13)(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(jiti@2.4.2)(lightningcss@1.30.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(terser@5.43.1)(tsx@4.20.3)(yaml@2.8.0)
       astro:
         specifier: 'catalog:'
-        version: 5.11.0(@types/node@24.0.13)(@vercel/blob@1.0.2)(encoding@0.1.13)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.44.2)(terser@5.43.1)(tsx@4.20.3)(typescript@5.8.3)(yaml@2.8.0)
+        version: 5.11.1(@types/node@24.0.13)(@vercel/blob@1.0.2)(encoding@0.1.13)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.44.2)(terser@5.43.1)(tsx@4.20.3)(typescript@5.8.3)(yaml@2.8.0)
       react:
         specifier: 'catalog:'
         version: 19.1.0
@@ -6187,8 +6187,8 @@ packages:
     resolution: {integrity: sha512-JepyLROIad6f44uyqMF6HKE2QbunNzp3mYKRcPoDGt0QkxXmH222FAFC64WTyQu2Kg8NNEXHTN/sWuUId9sSxw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  astro@5.11.0:
-    resolution: {integrity: sha512-MEICntERthUxJPSSDsDiZuwiCMrsaYy3fnDhp4c6ScUfldCB8RBnB/myYdpTFXpwYBy6SgVsHQ1H4MuuA7ro/Q==}
+  astro@5.11.1:
+    resolution: {integrity: sha512-32dpUh0tXSV/FR2q2/z7LOA6IXl7RqET9J51IA0pPSSi3exhRP3EOSQGjBq10DzXT7VrvplDrFqwfiiWBS8oYA==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -14024,9 +14024,6 @@ packages:
   zod@3.25.74:
     resolution: {integrity: sha512-J8poo92VuhKjNknViHRAIuuN6li/EwFbAC8OedzI8uxpEPGiXHGQu9wemIAioIpqgfB4SySaJhdk0mH5Y4ICBg==}
 
-  zod@3.25.75:
-    resolution: {integrity: sha512-OhpzAmVzabPOL6C3A3gpAifqr9MqihV/Msx3gor2b2kviCgcb+HM9SEOpMWwwNp9MRunWnhtAKUoo0AHhjyPPg==}
-
   zod@3.25.76:
     resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
 
@@ -20427,7 +20424,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro@5.11.0(@types/node@24.0.13)(@vercel/blob@1.0.2)(encoding@0.1.13)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.44.2)(terser@5.43.1)(tsx@4.20.3)(typescript@5.8.3)(yaml@2.8.0):
+  astro@5.11.1(@types/node@24.0.13)(@vercel/blob@1.0.2)(encoding@0.1.13)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.44.2)(terser@5.43.1)(tsx@4.20.3)(typescript@5.8.3)(yaml@2.8.0):
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.6.1
@@ -20487,9 +20484,9 @@ snapshots:
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.3
-      zod: 3.25.75
-      zod-to-json-schema: 3.24.6(zod@3.25.75)
-      zod-to-ts: 1.2.0(typescript@5.8.3)(zod@3.25.75)
+      zod: 3.25.76
+      zod-to-json-schema: 3.24.6(zod@3.25.76)
+      zod-to-ts: 1.2.0(typescript@5.8.3)(zod@3.25.76)
     optionalDependencies:
       sharp: 0.33.5
     transitivePeerDependencies:
@@ -30254,22 +30251,16 @@ snapshots:
 
   zlibjs@0.3.1: {}
 
-  zod-to-json-schema@3.24.6(zod@3.25.75):
-    dependencies:
-      zod: 3.25.75
-
   zod-to-json-schema@3.24.6(zod@3.25.76):
     dependencies:
       zod: 3.25.76
 
-  zod-to-ts@1.2.0(typescript@5.8.3)(zod@3.25.75):
+  zod-to-ts@1.2.0(typescript@5.8.3)(zod@3.25.76):
     dependencies:
       typescript: 5.8.3
-      zod: 3.25.75
+      zod: 3.25.76
 
   zod@3.25.74: {}
-
-  zod@3.25.75: {}
 
   zod@3.25.76: {}
 
