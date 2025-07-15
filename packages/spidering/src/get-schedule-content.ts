@@ -80,6 +80,9 @@ const hasDate = (wrapperElement: HTMLHeadingElement): Result<string, Error> => {
   return ok(date);
 };
 
+/**
+ * @deprecated only for test
+ */
 export const hasMonth = (maybeDate: string): boolean => {
   try {
     parse(maybeDate, "MM/DD");
@@ -89,6 +92,11 @@ export const hasMonth = (maybeDate: string): boolean => {
   }
 };
 
+/**
+ *
+ * @param maybeDate
+ * @returns ok is full date that's `YYYY/MM/DD`, error is only day that's `DD`
+ */
 export const haveMonth = (maybeDate: string): Result<Date, Date> => {
   try {
     const date = parse(maybeDate, "MM/DD");
@@ -101,11 +109,10 @@ export const haveMonth = (maybeDate: string): Result<Date, Date> => {
 };
 
 /**
- * @todo parse date list
- * @param scheduleContent
+ * @param scheduleContent `<div class="schedule-content">`
  * @returns
  */
-export const getDate = (scheduleContent: Element): Result<Date[], Error> => {
+export const getDate = (scheduleContent: Element): Date[] => {
   const wrapperElementList = scheduleContent.getElementsByTagName("h2");
   const dateList: Date[] = [];
   let month: number = 0;
@@ -124,7 +131,7 @@ export const getDate = (scheduleContent: Element): Result<Date[], Error> => {
       }
     }
   }
-  return ok(dateList);
+  return dateList;
 };
 
 export const getData = async (): Promise<void> => {
