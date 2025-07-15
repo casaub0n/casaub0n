@@ -134,6 +134,26 @@ export const getDate = (scheduleContent: Element): Date[] => {
   return dateList;
 };
 
+export const getTime = (scheduleContent: Element): void => {
+  const wrapperElementList = scheduleContent.getElementsByClassName("schedule-content-txt");
+  for (const element of wrapperElementList) {
+    const inHtml = element.children;
+    for (const element of inHtml) {
+      const tagName = element.tagName;
+      // eslint-disable-next-line unicorn/no-keyword-prefix
+      const className = element.className;
+      // eslint-disable-next-line eqeqeq
+      if (tagName == "h2") {
+        // TODO: do h2
+      }
+      // eslint-disable-next-line eqeqeq, unicorn/no-keyword-prefix
+      if (tagName == "div" && className == "schedule-program") {
+        // TODO: div
+      }
+    }
+  }
+};
+
 export const getData = async (): Promise<void> => {
   const maybeHtmlText = await getBungeizaText();
   if (maybeHtmlText.isOk()) {
