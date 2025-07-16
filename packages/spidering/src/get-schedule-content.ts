@@ -80,9 +80,6 @@ const hasDate = (wrapperElement: HTMLHeadingElement): Result<string, Error> => {
   return ok(date);
 };
 
-/**
- * @deprecated only for test
- */
 export const hasMonth = (maybeDate: string): boolean => {
   try {
     parse(maybeDate, "MM/DD");
@@ -134,10 +131,35 @@ export const getDate = (scheduleContent: Element): Date[] => {
   return dateList;
 };
 
-export const getTime = (scheduleContent: Element): void => {
+/**
+ * @todo WIP
+ */
+const getH2 = (element: Element): number | undefined => {
+  const wrapperElementList = element.getElementsByTagName("h2");
+  const maybeElement = wrapperElementList.item(0);
+
+  if (maybeElement !== null) {
+    const maybeDate = hasDate(maybeElement);
+    if (maybeDate.isOk()) {
+      const dateRaw = maybeDate.value;
+      const resultDate = haveMonth(dateRaw);
+      if (resultDate.isOk()) {
+        const month = resultDate.value.getMonth();
+        return month;
+      }
+      if (resultDate.isErr()) {
+        const day = resultDate.error.getDay();
+        return day;
+      }
+    }
+  }
+};
+
+export const getTimeData = (scheduleContent: Element): void => {
   const wrapperElementList = scheduleContent.getElementsByClassName("schedule-content-txt");
   for (const element of wrapperElementList) {
     const inHtml = element.children;
+    let month: number = 0;
     for (const element of inHtml) {
       const tagName = element.tagName;
       // eslint-disable-next-line unicorn/no-keyword-prefix
@@ -145,6 +167,19 @@ export const getTime = (scheduleContent: Element): void => {
       // eslint-disable-next-line eqeqeq
       if (tagName == "h2") {
         // TODO: do h2
+        const em = element.getElementsByTagName("em").item(0)?.nodeValue;
+        // eslint-disable-next-line eqeqeq, unicorn/no-null
+        if (em != null) {
+          const monthOrDay = haveMonth(em);
+          if (monthOrDay.isOk()) {
+            month = monthOrDay.value.getMonth();
+            // push date
+          }
+          if (monthOrDay.isErr()) {
+            const date = addYear(addMonth(monthOrDay.error, month), 2015);
+            // push date
+          }
+        }
       }
       // eslint-disable-next-line eqeqeq, unicorn/no-keyword-prefix
       if (tagName == "div" && className == "schedule-program") {
