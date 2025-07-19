@@ -2,7 +2,7 @@ import clsx from "clsx";
 
 import { cherry_bomb_one } from "@/app/fonts";
 
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-webpack5";
 
 
 const CherryBombOneText = () => (
