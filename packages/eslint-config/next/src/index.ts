@@ -14,8 +14,6 @@ import storybook from "eslint-plugin-storybook";
 import pluginConfigPrettier from "eslint-config-prettier";
 import typescriptEslintParser from "@typescript-eslint/parser";
 import globals from "globals";
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
 import pluginNext from "@next/eslint-plugin-next";
 import { ignoreConfig } from "../../utils/src/ignore-config";
 import { eslintCoreRules } from "../../utils/src/eslint-core-rules";
@@ -30,14 +28,14 @@ const compat = new FlatCompat({
  *
  * So, the user will call a compiled ESM file into their `eslint.config.mjs`.
  * @param tsconfigFileName `./tsconfig.json`
- * @param tsconfigRootDir `import.meta.dirname` [The directory name of the current module. This is the same as the `path.dirname()` of the `import.meta.filename`.](https://nodejs.org/api/esm.html#importmetadirname)
+ * @param tsConfigurationRootDirectory `import.meta.dirname` [The directory name of the current module. This is the same as the `path.dirname()` of the `import.meta.filename`.](https://nodejs.org/api/esm.html#importmetadirname)
  * @param rootDirectory `import.meta.dirname` [The directory name of the current module. This is the same as the `path.dirname()` of the `import.meta.filename`.](https://nodejs.org/api/esm.html#importmetadirname)
  * @example ```javascript
  * import base from "../eslint-config/eslint-base/dist/index.mjs";
  *
  * export default [
  *   ...base({
- *     tsconfigRootDir: import.meta.dirname,
+ *     tsConfigurationRootDirectory: import.meta.dirname,
  *     tsconfigFileName: "./tsconfig.json",
  *     rootDirectory: import.meta.dirname,
  *   }),
@@ -47,12 +45,11 @@ const compat = new FlatCompat({
  */
 const config = ({
   tsconfigFileName = "./tsconfig.json",
-  // eslint-disable-next-line unicorn/prevent-abbreviations
-  tsconfigRootDir = import.meta.dirname,
+  tsConfigurationRootDirectory = import.meta.dirname,
   rootDirectory = "apps/next-casaub0n/",
 }: Readonly<{
   tsconfigFileName: string;
-  tsconfigRootDir: string;
+  tsConfigurationRootDirectory: string;
   rootDirectory: string;
 }>): TSESLint.TSESLint.FlatConfig.ConfigArray =>
   tseslint.config([
@@ -101,7 +98,7 @@ const config = ({
         },
         parserOptions: {
           project: tsconfigFileName,
-          tsconfigRootDir,
+          tsconfigRootDir: tsConfigurationRootDirectory,
           sourceType: "module",
           projectService: true,
           ecmaVersion: "latest",
@@ -117,13 +114,22 @@ const config = ({
       plugins: {
         "unused-imports": unusedImports,
         "@next/next": pluginNext,
+        /**
+         * SyntaxError: Named export 'flatConfig' not found. The requested module '@next/eslint-plugin-next' is a CommonJS module, which may not support all module.exports as named exports.
+CommonJS modules can always be imported via the default export, for example using:
+         */
+        // "@next/next": flatConfig.recommended.plugins["@next/next"], // This package is CommonJS style
       },
       rules: {
         ...eslintCoreRules,
         ...typescriptRules,
 
-        ...pluginNext.configs.recommended.rules,
-        ...pluginNext.configs["core-web-vitals"].rules,
+        ...(pluginNext.configs.recommended.rules as TSESLint.TSESLint.FlatConfig.Rules),
+        ...(pluginNext.configs["core-web-vitals"].rules as TSESLint.TSESLint.FlatConfig.Rules),
+
+        // ...(flatConfig.recommended.plugins["@next/next"].configs.recommended
+        //   .rules as TSESLint.TSESLint.FlatConfig.Rules),
+        // ...(flatConfig.coreWebVitals.rules as TSESLint.TSESLint.FlatConfig.Rules),
 
         /**
          * [最低限の flat config（まずは no-unused-imports を動かす）](https://zenn.dev/seventhseven07/articles/06a02c4048decf)

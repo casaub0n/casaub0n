@@ -3,7 +3,10 @@ import storybook from "eslint-plugin-storybook";
 
 import base from "../../packages/eslint-config/eslint-base/dist/index.mjs";
 
-export default [...base({
-  tsconfigRootDir: import.meta.dirname,
-  tsconfigFileName: "./tsconfig.json",
-}), ...storybook.configs["flat/recommended"]];
+export default [
+  ...base({
+    tsConfigurationRootDirectory: import.meta.dirname,
+    tsconfigFileName: "./tsconfig.json",
+  }),
+  ...storybook.configs["flat/recommended"],
+];

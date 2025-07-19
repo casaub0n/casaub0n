@@ -36,7 +36,8 @@ const config = tseslint.config([
   },
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  pluginReact.configs.flat.recommended as any,
+  ...(pluginReact.configs.flat.recommended as any),
+  pluginReact.configs.flat["jsx-runtime"],
   {
     languageOptions: {
       // @ts-expect-error https://github.com/jsx-eslint/eslint-plugin-react/issues/3878

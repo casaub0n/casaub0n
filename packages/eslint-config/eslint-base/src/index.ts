@@ -22,14 +22,14 @@ import eslintPluginYml from "eslint-plugin-yml";
  *
  * So, the user will call a compiled ESM file into their `eslint.config.mjs`.
  * @param tsconfigFileName `./tsconfig.json`
- * @param tsconfigRootDir `import.meta.dirname` [The directory name of the current module. This is the same as the `path.dirname()` of the `import.meta.filename`.](https://nodejs.org/api/esm.html#importmetadirname)
+ * @param tsConfigurationRootDirectory `import.meta.dirname` [The directory name of the current module. This is the same as the `path.dirname()` of the `import.meta.filename`.](https://nodejs.org/api/esm.html#importmetadirname)
  * @example ```javascript
  * import { defineConfig } from "eslint/config";
  * import base from "@casaub0n/eslint-base";
  *
  * export default defineConfig([
  *   ...base({
- *     tsconfigRootDir: import.meta.dirname,
+ *     tsConfigurationRootDirectory: import.meta.dirname,
  *     tsconfigFileName: "./tsconfig.json",
  *   }),
  * ]);
@@ -37,11 +37,10 @@ import eslintPluginYml from "eslint-plugin-yml";
  */
 const config = ({
   tsconfigFileName = "./tsconfig.json",
-  // eslint-disable-next-line unicorn/prevent-abbreviations
-  tsconfigRootDir = import.meta.dirname,
+  tsConfigurationRootDirectory = import.meta.dirname,
 }: Readonly<{
   tsconfigFileName: string;
-  tsconfigRootDir: string;
+  tsConfigurationRootDirectory: string;
 }>): TSESLint.TSESLint.FlatConfig.ConfigArray =>
   tseslint.config([
     /**
@@ -66,7 +65,7 @@ const config = ({
         },
         parserOptions: {
           project: tsconfigFileName,
-          tsconfigRootDir,
+          tsconfigRootDir: tsConfigurationRootDirectory,
           sourceType: "module",
           projectService: true,
           ecmaVersion: "latest",

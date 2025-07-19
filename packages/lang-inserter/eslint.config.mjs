@@ -2,7 +2,7 @@ import base from "@casaub0n/eslint-base";
 
 const baseEslint = [
   ...base({
-    tsconfigRootDir: import.meta.dirname,
+    tsConfigurationRootDirectory: import.meta.dirname,
     tsconfigFileName: "./tsconfig.json",
   }),
 ];
