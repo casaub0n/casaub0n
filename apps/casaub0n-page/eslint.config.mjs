@@ -16,8 +16,8 @@ export default defineConfig([
           ignore: [String.raw`/./.tsx$`],
         },
       ],
-      "@typescript-eslint/explicit-function-return-type": off,
-      "unicorn/no-keyword-prefix": ["error", { className: false }],
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "unicorn/no-keyword-prefix": "off",
     },
   },
 ]);
