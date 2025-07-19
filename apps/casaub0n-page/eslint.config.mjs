@@ -2,8 +2,12 @@ import { defineConfig } from "eslint/config";
 import base from "@casaub0n/eslint-config-next";
 
 export default defineConfig([
+  // VSCode ESLint extension can't find `tsconfigRootDir`
+  {
+    ignores: ["**/eslint.config.mjs"],
+  },
   ...base({
-    tsconfigRootDir: import.meta.dirname,
+    tsConfigurationRootDirectory: import.meta.dirname,
     tsconfigFileName: "./tsconfig.json",
     rootDirectory: import.meta.dirname,
   }),

@@ -3,7 +3,7 @@ import base from "@casaub0n/eslint-base";
 
 export default defineConfig([
   ...base({
-    tsconfigRootDir: import.meta.dirname,
+    tsConfigurationRootDirectory: import.meta.dirname,
     tsconfigFileName: "./tsconfig.json",
   }),
 ]);

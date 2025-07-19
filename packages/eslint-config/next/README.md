@@ -11,7 +11,7 @@ This eslint config is for Next.js, and the config is flat config. Check [peerDep
 
 This is a example eslint config.
 
-Use `tsconfigRootDir` and `tsconfigFileName` to point tsconfig.json location. `rootDirectory` points current working directory.
+Use `tsConfigurationRootDirectory` and `tsconfigFileName` to point tsconfig.json location. `rootDirectory` points current working directory.
 
 ```js
 import { defineConfig } from "eslint/config";
@@ -19,7 +19,7 @@ import base from "@casaub0n/eslint-base";
 
 export default defineConfig([
   ...base({
-    tsconfigRootDir: import.meta.dirname,
+    tsConfigurationRootDirectory: import.meta.dirname,
     tsconfigFileName: "./tsconfig.json",
     rootDirectory: import.meta.dirname,
   }),
