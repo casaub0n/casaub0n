@@ -4,7 +4,7 @@ import base from "./dist/index.mjs";
 export default defineConfig([
   // VSCode ESLint extension can't find `tsconfigRootDir`
   {
-    ignores: ["**/eslint.config.mjs", "**/dist/**"],
+    ignores: ["**/*.mjs"],
   },
   ...base({
     tsConfigurationRootDirectory: import.meta.dirname,
