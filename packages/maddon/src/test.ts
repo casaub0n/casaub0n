@@ -2,15 +2,16 @@
  * This test uses node test runner
  */
 
-import { strict as assert } from "assert";
+import { strict as assert } from "node:assert";
 import { env } from "node:process";
 import { test } from "node:test";
 import puppeteer from "puppeteer";
 
 import { markdownLink } from "./markdown-link";
+import { consola } from "consola";
 
-test("Example Domain", async () => {
-  console.log(`chrome path: ${env.CHROME}`);
+void test("Example Domain", async () => {
+  consola.log(`chrome path: ${env.CHROME}`);
   const browser = await puppeteer.launch({
     headless: true,
     executablePath: env.CHROME,

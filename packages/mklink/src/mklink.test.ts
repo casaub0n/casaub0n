@@ -9,26 +9,31 @@ import type { Result } from "neverthrow";
 import { env } from "node:process";
 import { test } from "node:test";
 import puppeteer from "puppeteer";
+import { consola } from "consola";
 
 /**
  * Chrome path from env file
  */
 const getChromePathFromEnvironment = (): Result<string, Error> => {
   const chromePath = env.CHROME;
+  // eslint-disable-next-line eqeqeq, unicorn/no-null
+  if (chromePath == null || chromePath == "") {
+    return err(new Error("There is not env config"));
+  }
   return chromePath ? ok(chromePath) : err(new Error("There is not env config"));
 };
 
-test("Example Domain", async () => {
-  const chrome_path = getChromePathFromEnvironment();
+void test("Example Domain", async () => {
+  const chromePath = getChromePathFromEnvironment();
 
-  if (chrome_path.isOk()) {
+  if (chromePath.isOk()) {
     const parser = EVP.object({
       CHROME: EVP.string(),
     });
 
     type Config = EVP.TypeOf<typeof parser>;
-    const result: Config = parser.parse({ CHROME: chrome_path.value });
-    console.log(`chrome path: ${result.CHROME}`);
+    const result: Config = parser.parse({ CHROME: chromePath.value });
+    consola.log(`chrome path: ${result.CHROME}`);
 
     const browser = await puppeteer.launch({
       headless: true,

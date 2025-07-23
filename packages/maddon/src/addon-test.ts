@@ -7,11 +7,12 @@ import { env } from "node:process";
 import { test } from "node:test";
 import path from "node:path";
 import puppeteer from "puppeteer";
+import { consola } from "consola";
 
 import { markdownLink } from "./markdown-link";
 
-test("Addon Test", async () => {
-  console.log(`chrome path: ${env.CHROME}`);
+void test("Addon Test", async () => {
+  consola.log(`chrome path: ${env.CHROME}`);
   const pathToExtension = path.join(process.cwd(), "dist");
   const browser = await puppeteer.launch({
     headless: true,
@@ -26,7 +27,7 @@ test("Addon Test", async () => {
   await page.goto("chrome://extensions/");
 
   // screenshot
-  page.setViewport({ width: 1200, height: 800 });
+  void page.setViewport({ width: 1200, height: 800 });
   await page.screenshot({ path: "screenshot.png", fullPage: true });
 
   // /html/body/extensions-manager//div[2]/cr-view-manager/extensions-item-list//div/div/div[4]/extensions-item[1]//div[2]/div[1]/div[2]/div[1]/div/div
@@ -38,7 +39,7 @@ test("Addon Test", async () => {
   if (element) {
     // eslint-disable-next-line unicorn/no-await-expression-member
     const elementJsonValue = await (await element.getProperty("textContent")).jsonValue();
-    console.log(`el: ${elementJsonValue}`);
+    consola.log(`el: ${elementJsonValue}`);
   }
 
   const title = await page.title();
