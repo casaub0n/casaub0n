@@ -51,7 +51,7 @@ const config = ({
     // https://typescript-eslint.io/getting-started/typed-linting/
     {
       files: ["**/*.cts", "**/*.ctsx", "**/*.mts", "**/*.mtsx", "**/*.ts", "**/*.tsx"],
-      ignores: ignoreConfig,
+      ignores: ignoreConfig?.concat(["**/*.mjs", "**/*.js"]),
       languageOptions: {
         ecmaVersion: "latest",
         parser: typescriptEslintParser,
@@ -101,6 +101,26 @@ const config = ({
             argsIgnorePattern: "^_",
           },
         ],
+      },
+    },
+    {
+      files: ["**/*.mjs", "**/*.js"],
+      ignores: ignoreConfig,
+      languageOptions: {
+        ecmaVersion: "latest",
+        globals: {
+          ...globals.browser,
+          ...globals.es2025,
+          ...globals.node,
+          document: "readonly",
+          navigator: "readonly",
+          window: "readonly",
+        },
+      },
+      plugins: { js: pluginJs },
+      rules: {
+        ...pluginJs.configs.recommended.rules,
+        ...eslintCoreRules,
       },
     },
     /**
