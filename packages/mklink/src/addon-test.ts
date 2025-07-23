@@ -7,11 +7,12 @@ import { env } from "node:process";
 import { test } from "node:test";
 import path from "node:path";
 import puppeteer from "puppeteer";
+import { consola } from "consola";
 
 // import { markdownLink } from "./markdownLink";
 
-test("Addon Test", async () => {
-  console.log(`chrome path: ${env.CHROME}`);
+void test("Addon Test", async () => {
+  consola.log(`chrome path: ${env.CHROME}`);
   const pathToExtension = path.join(process.cwd(), "dist");
   const browser = await puppeteer.launch({
     headless: true,
@@ -27,7 +28,7 @@ test("Addon Test", async () => {
   await page.goto("chrome://extensions/", { waitUntil: ["networkidle0", "load"] });
 
   const addonElement = await page.$("extensions-manager");
-  console.log(addonElement);
+  consola.log(addonElement);
 
   await browser.close();
 });
