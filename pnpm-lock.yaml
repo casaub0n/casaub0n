@@ -421,8 +421,8 @@ catalogs:
       specifier: 1.1.0
       version: 1.1.0
     vercel:
-      specifier: 44.5.3
-      version: 44.5.3
+      specifier: 44.5.5
+      version: 44.5.5
     vite:
       specifier: 7.0.5
       version: 7.0.5
@@ -666,7 +666,7 @@ importers:
         version: 5.8.3
       vercel:
         specifier: 'catalog:'
-        version: 44.5.3(encoding@0.1.13)(rollup@4.45.1)
+        version: 44.5.5(encoding@0.1.13)(rollup@4.45.1)
 
   apps/catalog:
     devDependencies:
@@ -5826,8 +5826,8 @@ packages:
   '@vercel/hydrogen@1.2.3':
     resolution: {integrity: sha512-sU0HWHabNxlTdKQWPMDqwr+3MqnhXc4Tvnl4i9cbdEYn5061SEKhdfpl2RhuvPByQJ8sZL8soVXFHIjFBJAR4w==}
 
-  '@vercel/next@4.10.5':
-    resolution: {integrity: sha512-fA+9vlNN7LINtl7Q/1rRFy11GT4zSeopAR8xq9CHdGYdzErlHmeV6nuVyAdD5NFgJygukYS95wGqNW9MmQgDug==}
+  '@vercel/next@4.10.7':
+    resolution: {integrity: sha512-m7GyeW5qWWayPqFKdsOhe6pimvS1J1H21mZmmp4VaEP9tNlV84HoY3zO5Dpy/o82sA/VNfTGfBA0Cz47a0YF6g==}
 
   '@vercel/nft@0.29.2':
     resolution: {integrity: sha512-A/Si4mrTkQqJ6EXJKv5EYCDQ3NL6nJXxG8VGXePsaiQigsomHYQC9xSpX8qGk7AEZk4b1ssbYIqJ0ISQQ7bfcA==}
@@ -13577,8 +13577,8 @@ packages:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
 
-  vercel@44.5.3:
-    resolution: {integrity: sha512-8NddNtBRb789GqGci9lhH1nSrZY5qgJGeGdD3KEVhMqRMW+C+sEmcxCfa/epJ45H4hcOzb5PEUwOg/8B63vJyQ==}
+  vercel@44.5.5:
+    resolution: {integrity: sha512-x+4YN8vGc1AbFtMA/EcUkBwzgv1SaQG1o943ucAWalwqFZKYyd1Hkq75TQ29ZyyvLEqhYjbiCkFqGFle6znQnQ==}
     engines: {node: '>= 18'}
     hasBin: true
 
@@ -19597,7 +19597,7 @@ snapshots:
 
   '@types/minimatch@6.0.0':
     dependencies:
-      minimatch: 9.0.5
+      minimatch: 10.0.3
 
   '@types/minimist@1.2.5': {}
 
@@ -19633,7 +19633,7 @@ snapshots:
 
   '@types/pg@8.11.6':
     dependencies:
-      '@types/node': 22.16.5
+      '@types/node': 24.1.0
       pg-protocol: 1.10.3
       pg-types: 4.0.2
 
@@ -19971,7 +19971,7 @@ snapshots:
       '@vercel/static-config': 3.1.1
       ts-morph: 12.0.0
 
-  '@vercel/next@4.10.5(encoding@0.1.13)(rollup@4.45.1)':
+  '@vercel/next@4.10.7(encoding@0.1.13)(rollup@4.45.1)':
     dependencies:
       '@vercel/nft': 0.29.2(encoding@0.1.13)(rollup@4.45.1)
     transitivePeerDependencies:
@@ -22595,7 +22595,7 @@ snapshots:
       '@typescript-eslint/parser': 8.38.0(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3)
       eslint: 9.31.0(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.38.0(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.31.0(jiti@2.4.2)))(eslint@9.31.0(jiti@2.4.2))
+      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0)(eslint@9.31.0(jiti@2.4.2))
       eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.38.0(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.31.0(jiti@2.4.2))
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.31.0(jiti@2.4.2))
       eslint-plugin-react: 7.37.5(eslint@9.31.0(jiti@2.4.2))
@@ -22619,7 +22619,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.38.0(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.31.0(jiti@2.4.2)))(eslint@9.31.0(jiti@2.4.2)):
+  eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@9.31.0(jiti@2.4.2)):
     dependencies:
       '@nolyfill/is-core-module': 1.0.39
       debug: 4.4.1
@@ -22634,14 +22634,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.1(@typescript-eslint/parser@8.38.0(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.38.0(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.31.0(jiti@2.4.2)))(eslint@9.31.0(jiti@2.4.2)))(eslint@9.31.0(jiti@2.4.2)):
+  eslint-module-utils@2.12.1(@typescript-eslint/parser@8.38.0(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@9.31.0(jiti@2.4.2)):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 8.38.0(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3)
       eslint: 9.31.0(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.38.0(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.31.0(jiti@2.4.2)))(eslint@9.31.0(jiti@2.4.2))
+      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0)(eslint@9.31.0(jiti@2.4.2))
     transitivePeerDependencies:
       - supports-color
 
@@ -22670,7 +22670,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.31.0(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.38.0(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.38.0(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.31.0(jiti@2.4.2)))(eslint@9.31.0(jiti@2.4.2)))(eslint@9.31.0(jiti@2.4.2))
+      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.38.0(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@9.31.0(jiti@2.4.2))
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
@@ -29896,14 +29896,14 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vercel@44.5.3(encoding@0.1.13)(rollup@4.45.1):
+  vercel@44.5.5(encoding@0.1.13)(rollup@4.45.1):
     dependencies:
       '@vercel/blob': 1.0.2
       '@vercel/build-utils': 10.6.7
       '@vercel/fun': 1.1.6(encoding@0.1.13)
       '@vercel/go': 3.2.2
       '@vercel/hydrogen': 1.2.3
-      '@vercel/next': 4.10.5(encoding@0.1.13)(rollup@4.45.1)
+      '@vercel/next': 4.10.7(encoding@0.1.13)(rollup@4.45.1)
       '@vercel/node': 5.3.6(encoding@0.1.13)(rollup@4.45.1)
       '@vercel/python': 4.8.0
       '@vercel/redwood': 2.3.4(encoding@0.1.13)(rollup@4.45.1)
