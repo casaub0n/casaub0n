@@ -1,6 +1,6 @@
 import { filterHtml } from "./filter-html";
 
-const init = () => {
+const init = (): void => {
   filterHtml();
 };
 

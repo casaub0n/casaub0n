@@ -6,6 +6,6 @@
 import fs from "node:fs";
 
 // eslint-disable-next-line unicorn/prefer-top-level-await
-(async () => {
+void (async () => {
   await fs.promises.rm("./dist", { recursive: true, force: true });
 })();

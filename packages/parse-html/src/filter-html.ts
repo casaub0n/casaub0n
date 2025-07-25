@@ -2,11 +2,10 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { JSDOM } from "jsdom";
 import { err, ok, type Result } from "neverthrow";
-import { DoSomethingError } from "./utils/something-error";
 
-const readData = (filePath: string): Result<string, DoSomethingError> => {
+const readData = (filePath: string): Result<string, Error> => {
   const htmlString = path.join(process.cwd(), filePath);
-  return htmlString ? ok(`${htmlString}/*`) : err(new DoSomethingError());
+  return htmlString ? ok(`${htmlString}/*`) : err(new Error("no file here"));
 };
 
 /**
@@ -21,38 +20,41 @@ const filterNumber = new Set([0, 1, 2, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
  */
 const filterTable = (tableElement: HTMLElement, month: number): string => {
   //  TODO: use evp-ts
-  let string_ = "";
+  let resultHtml = "";
   const environmentTableHead = process.env.TABLE_HEAD;
-  // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-  environmentTableHead
-    ? (string_ = `<h2>${month.toString()}${environmentTableHead}</h2>\n<table id='scrTable' border="1" style="border-collapse:collapse; font-size:0.025em">\n`)
-    : (string_ = `<h2>${month.toString()}</h2>\n<table id='scrTable' border="1" style="border-collapse:collapse; font-size:0.025em">\n`);
+
+  resultHtml =
+    // eslint-disable-next-line eqeqeq
+    environmentTableHead == undefined || environmentTableHead == ""
+      ? `<h2>${month.toString()}</h2>\n<table id='scrTable' border="1" style="border-collapse:collapse; font-size:0.025em">\n`
+      : `<h2>${month.toString()}${environmentTableHead}</h2>\n<table id='scrTable' border="1" style="border-collapse:collapse; font-size:0.025em">\n`;
+
   const trArray = tableElement.querySelectorAll("tr");
   for (const tr of trArray) {
-    string_ += "<tr align='center'height:20px;'>\n";
+    resultHtml += "<tr align='center'height:20px;'>\n";
     const tdArray = tr.querySelectorAll("td");
     for (const [index, td] of tdArray.entries()) {
       if (filterNumber.has(index)) {
-        string_ += `<td>${td.textContent}</td>\n`;
+        resultHtml += `<td>${td.textContent}</td>\n`;
       }
     }
-    string_ += "</tr>\n";
+    resultHtml += "</tr>\n";
   }
-  string_ += "</table>\n";
-  return string_;
+  resultHtml += "</table>\n";
+  return resultHtml;
 };
 
 /**
  * read html file
  */
-const getContent = (htmlText: string, month: number): Result<string, DoSomethingError> => {
+const getContent = (htmlText: string, month: number): Result<string, Error> => {
   const dom = new JSDOM(htmlText, {
     runScripts: "dangerously",
     resources: "usable",
   });
   // eslint-disable-next-line unicorn/prefer-query-selector
   const tableElement = dom.window.document.getElementById("scrTable");
-  return tableElement ? ok(filterTable(tableElement, month)) : err(new DoSomethingError());
+  return tableElement ? ok(filterTable(tableElement, month)) : err(new Error("no tableElement"));
 };
 
 const preTag = '<div class="calc-table">' as const satisfies string;
@@ -83,9 +85,9 @@ const endHtmlTag = `
 </html>
 ` as const satisfies string;
 
-const makeHtmlFile = async (string_: string): Promise<void> => {
+const makeHtmlFile = async (resultHtml: string): Promise<void> => {
   const filePath = path.join(process.cwd(), "./dist/hello.html");
-  await fs.writeFile(filePath, string_, "utf8");
+  await fs.writeFile(filePath, resultHtml, "utf8");
 };
 
 export const filterHtml = (): void => {
