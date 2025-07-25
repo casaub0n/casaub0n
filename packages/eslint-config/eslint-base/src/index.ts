@@ -81,6 +81,7 @@ const config = ({
       plugins: {
         "unused-imports": unusedImports,
         unicorn: eslintPluginUnicorn,
+        turbo: turboPlugin.configs["flat/recommended"].plugins.turbo,
       },
       rules: {
         ...eslintCoreRules,
@@ -103,6 +104,7 @@ const config = ({
           },
         ],
         ...eslintPluginUnicorn.configs.all.rules,
+        ...turboPlugin.configs["flat/recommended"].rules,
       },
     },
     {
@@ -119,11 +121,16 @@ const config = ({
           window: "readonly",
         },
       },
-      plugins: { js: pluginJs, unicorn: eslintPluginUnicorn },
+      plugins: {
+        js: pluginJs,
+        unicorn: eslintPluginUnicorn,
+        turbo: turboPlugin.configs["flat/recommended"].plugins.turbo,
+      },
       rules: {
         ...pluginJs.configs.recommended.rules,
         ...eslintCoreRules,
         ...eslintPluginUnicorn.configs.all.rules,
+        ...turboPlugin.configs["flat/recommended"].rules,
       },
     },
     /**
@@ -131,12 +138,7 @@ const config = ({
      */
     cspellESLintPluginRecommended,
 
-    /**
-     * @see https://github.com/vercel/turborepo/tree/main/packages/eslint-plugin-turbo#usage-flat-config-eslintconfigjs
-     */
-    turboPlugin.configs["flat/recommended"],
-
-    ...eslintPluginYml.configs["flat/recommended"],
+    eslintPluginYml.configs["flat/recommended"],
 
     /**
      * https://zenn.dev/kazukix/articles/eslint-config-2024-09#eslint-config-prettier
