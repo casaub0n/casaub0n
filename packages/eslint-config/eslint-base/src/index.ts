@@ -80,6 +80,7 @@ const config = ({
       },
       plugins: {
         "unused-imports": unusedImports,
+        unicorn: eslintPluginUnicorn,
       },
       rules: {
         ...eslintCoreRules,
@@ -101,6 +102,7 @@ const config = ({
             argsIgnorePattern: "^_",
           },
         ],
+        ...eslintPluginUnicorn.configs.all.rules,
       },
     },
     {
@@ -117,21 +119,17 @@ const config = ({
           window: "readonly",
         },
       },
-      plugins: { js: pluginJs },
+      plugins: { js: pluginJs, unicorn: eslintPluginUnicorn },
       rules: {
         ...pluginJs.configs.recommended.rules,
         ...eslintCoreRules,
+        ...eslintPluginUnicorn.configs.all.rules,
       },
     },
     /**
      * @see https://github.com/streetsidesoftware/cspell/tree/main/packages/cspell-eslint-plugin#configuration-new-eslintconfigjs
      */
     cspellESLintPluginRecommended,
-
-    /**
-     * @see https://github.com/sindresorhus/eslint-plugin-unicorn?tab=readme-ov-file#recommended-config
-     */
-    eslintPluginUnicorn.configs.all,
 
     /**
      * @see https://github.com/vercel/turborepo/tree/main/packages/eslint-plugin-turbo#usage-flat-config-eslintconfigjs

@@ -53,10 +53,6 @@ const config = ({
   rootDirectory: string;
 }>): TSESLint.TSESLint.FlatConfig.ConfigArray =>
   tseslint.config([
-    {
-      ignores: ignoreConfig,
-    },
-
     /**
      * @see https://zenn.dev/yu_ta_9/articles/7001d66779ff3a#%40eslint%2Fjs
      */
@@ -73,6 +69,7 @@ const config = ({
     }),
     {
       files: ["**/*.cts", "**/*.ctsx", "**/*.mts", "**/*.mtsx", "**/*.ts", "**/*.tsx"],
+      ignores: ignoreConfig?.concat(["**/*.mjs", "**/*.js"]),
       extends: [
         // ...compat.extends("next/core-web-vitals", "next/typescript"),
         ...compat.config({
@@ -119,6 +116,7 @@ const config = ({
 CommonJS modules can always be imported via the default export, for example using:
          */
         // "@next/next": flatConfig.recommended.plugins["@next/next"], // This package is CommonJS style
+        unicorn: eslintPluginUnicorn,
       },
       rules: {
         ...eslintCoreRules,
@@ -143,6 +141,28 @@ CommonJS modules can always be imported via the default export, for example usin
         "react/jsx-no-target-blank": "off",
         "react/prop-types": "off",
         "react/react-in-jsx-scope": "off",
+        ...eslintPluginUnicorn.configs.all.rules,
+      },
+    },
+    {
+      files: ["**/*.mjs", "**/*.js"],
+      ignores: ignoreConfig,
+      languageOptions: {
+        ecmaVersion: "latest",
+        globals: {
+          ...globals.browser,
+          ...globals.es2025,
+          ...globals.node,
+          document: "readonly",
+          navigator: "readonly",
+          window: "readonly",
+        },
+      },
+      plugins: { js: pluginJs, unicorn: eslintPluginUnicorn },
+      rules: {
+        ...pluginJs.configs.recommended.rules,
+        ...eslintCoreRules,
+        ...eslintPluginUnicorn.configs.all.rules,
       },
     },
     /**
@@ -153,7 +173,7 @@ CommonJS modules can always be imported via the default export, for example usin
     /**
      * @see https://github.com/sindresorhus/eslint-plugin-unicorn?tab=readme-ov-file#recommended-config
      */
-    eslintPluginUnicorn.configs.all,
+    // eslintPluginUnicorn.configs.all,
 
     /**
      * @see https://github.com/vercel/turborepo/tree/main/packages/eslint-plugin-turbo#usage-flat-config-eslintconfigjs
@@ -169,6 +189,10 @@ CommonJS modules can always be imported via the default export, for example usin
      * https://zenn.dev/kazukix/articles/eslint-config-2024-09#eslint-config-prettier
      */
     pluginConfigPrettier,
+
+    {
+      ignores: ignoreConfig,
+    },
   ]);
 
 export default config;
