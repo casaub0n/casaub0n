@@ -1,7 +1,7 @@
 // For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
 import storybook from "eslint-plugin-storybook";
 
-import base from "../../packages/eslint-config/eslint-base/dist/index.mjs";
+import base from "@casaub0n/eslint-base";
 
 export default [
   ...base({
