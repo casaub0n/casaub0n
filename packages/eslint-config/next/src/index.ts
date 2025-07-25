@@ -117,6 +117,7 @@ CommonJS modules can always be imported via the default export, for example usin
          */
         // "@next/next": flatConfig.recommended.plugins["@next/next"], // This package is CommonJS style
         unicorn: eslintPluginUnicorn,
+        turbo: turboPlugin.configs["flat/recommended"].plugins.turbo,
       },
       rules: {
         ...eslintCoreRules,
@@ -142,6 +143,7 @@ CommonJS modules can always be imported via the default export, for example usin
         "react/prop-types": "off",
         "react/react-in-jsx-scope": "off",
         ...eslintPluginUnicorn.configs.all.rules,
+        ...turboPlugin.configs["flat/recommended"].rules,
       },
     },
     {
@@ -158,27 +160,22 @@ CommonJS modules can always be imported via the default export, for example usin
           window: "readonly",
         },
       },
-      plugins: { js: pluginJs, unicorn: eslintPluginUnicorn },
+      plugins: {
+        js: pluginJs,
+        unicorn: eslintPluginUnicorn,
+        turbo: turboPlugin.configs["flat/recommended"].plugins.turbo,
+      },
       rules: {
         ...pluginJs.configs.recommended.rules,
         ...eslintCoreRules,
         ...eslintPluginUnicorn.configs.all.rules,
+        ...turboPlugin.configs["flat/recommended"].rules,
       },
     },
     /**
      * @see https://github.com/streetsidesoftware/cspell/tree/main/packages/cspell-eslint-plugin#configuration-new-eslintconfigjs
      */
     cspellESLintPluginRecommended,
-
-    /**
-     * @see https://github.com/sindresorhus/eslint-plugin-unicorn?tab=readme-ov-file#recommended-config
-     */
-    // eslintPluginUnicorn.configs.all,
-
-    /**
-     * @see https://github.com/vercel/turborepo/tree/main/packages/eslint-plugin-turbo#usage-flat-config-eslintconfigjs
-     */
-    turboPlugin.configs["flat/recommended"],
 
     /**
      * @see https://github.com/storybookjs/eslint-plugin-storybook?tab=readme-ov-file#configuration-eslintconfigcmjs
