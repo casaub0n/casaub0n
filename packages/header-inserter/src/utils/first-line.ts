@@ -2,7 +2,7 @@ import fs from "node:fs";
 
 // https://github.com/pensierinmusica/firstline/blob/master/index.js
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const firstLine = (path: fs.PathLike, useOptions?: any) => {
+export const firstLine = async (path: fs.PathLike, useOptions?: any): Promise<unknown> => {
   interface Options {
     encoding: BufferEncoding;
     lineEnding: string;
@@ -12,7 +12,7 @@ export const firstLine = (path: fs.PathLike, useOptions?: any) => {
     lineEnding: "\n",
   };
   Object.assign(options, useOptions);
-  return new Promise((resolve, reject) => {
+  return await new Promise((resolve, reject) => {
     const rs = fs.createReadStream(path, { encoding: options.encoding });
     let accumulator = "";
     let pos = 0;
