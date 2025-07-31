@@ -421,8 +421,8 @@ catalogs:
       specifier: 1.1.0
       version: 1.1.0
     vercel:
-      specifier: 44.6.4
-      version: 44.6.4
+      specifier: 44.6.5
+      version: 44.6.5
     vite:
       specifier: 7.0.6
       version: 7.0.6
@@ -666,7 +666,7 @@ importers:
         version: 5.8.3
       vercel:
         specifier: 'catalog:'
-        version: 44.6.4(encoding@0.1.13)(rollup@4.45.1)
+        version: 44.6.5(encoding@0.1.13)(rollup@4.45.1)
 
   apps/catalog:
     devDependencies:
@@ -5551,9 +5551,6 @@ packages:
   '@types/node@16.18.11':
     resolution: {integrity: sha512-3oJbGBUWuS6ahSnEq1eN2XrCyf4YsWI8OyCvo7c64zQJNplk3mO84t53o8lfTk+2ji59g5ycfc6qQ3fdHliHuA==}
 
-  '@types/node@22.16.5':
-    resolution: {integrity: sha512-bJFoMATwIGaxxx8VJPeM8TonI8t579oRvgAuT8zFugJsJZgzqv0Fu8Mhp68iecjzG7cnN3mO2dJQ5uUM2EFrgQ==}
-
   '@types/node@22.17.0':
     resolution: {integrity: sha512-bbAKTCqX5aNVryi7qXVMi+OkB3w/OyblodicMbvE38blyAz7GxXf6XYhklokijuPwwVg9sDLKRxt0ZHXQwZVfQ==}
 
@@ -5834,14 +5831,14 @@ packages:
   '@vercel/go@3.2.2':
     resolution: {integrity: sha512-yYIU3OXkuoxzr47vf+HZnVGujzkVW/e5hrUK0jzCzzmjgo4+5ECrXDSA1bTB6qmWEy6HVsSovnKoHkwDqNIN6Q==}
 
-  '@vercel/hono@0.0.4':
-    resolution: {integrity: sha512-seH+eaHEooC8EWVKGRtPtFMrl7n2dvO1OJ3YCt1Fou6tRBfi4spErGs2sdC4raogAWO645BK2bepH5Fo/wJFZw==}
+  '@vercel/hono@0.0.5':
+    resolution: {integrity: sha512-y+bmKJq9OcSMwtGbvpzXCIrwPrM1t3XkDQMo9KamVtDF9qK3V8NteX09wBeEZzObovFkfUwhneOth1HUVhqC0w==}
 
   '@vercel/hydrogen@1.2.3':
     resolution: {integrity: sha512-sU0HWHabNxlTdKQWPMDqwr+3MqnhXc4Tvnl4i9cbdEYn5061SEKhdfpl2RhuvPByQJ8sZL8soVXFHIjFBJAR4w==}
 
-  '@vercel/next@4.10.8':
-    resolution: {integrity: sha512-2con6J6uj4IAs+3SU55ZjH6flskDpi6zCRH4XmfnR0SUrsGiy6hmDbZAvfJnSHKxLFQpmP0+cn5XC+hoUAUQLg==}
+  '@vercel/next@4.10.9':
+    resolution: {integrity: sha512-QtXJaOl2GyDYac3Bzgt6YqYgBb90KG5fLC4D2dC9KAxq2NNBt7y8yEakaWYrIyXCw0bhyX/TjcYf7VneIrHVpg==}
 
   '@vercel/nft@0.29.2':
     resolution: {integrity: sha512-A/Si4mrTkQqJ6EXJKv5EYCDQ3NL6nJXxG8VGXePsaiQigsomHYQC9xSpX8qGk7AEZk4b1ssbYIqJ0ISQQ7bfcA==}
@@ -13637,8 +13634,8 @@ packages:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
 
-  vercel@44.6.4:
-    resolution: {integrity: sha512-BfZelATWvXMhjta0LgaUU+HTB3YOk1a3iCuRkJwPDRB8SIKjCgIJSRNA3lzW/sDswpVGb3ZxWo4HLp9TYERM1w==}
+  vercel@44.6.5:
+    resolution: {integrity: sha512-a5fJkYbWEVUgzxPU9depZlWZir/8PAPo4pHCzykQ6NAubNSWmYZE0rZBYrw+jSAhzGJKdbS0ATVbti1MF/e/xA==}
     engines: {node: '>= 18'}
     hasBin: true
 
@@ -18128,11 +18125,11 @@ snapshots:
   '@simple-libs/child-process-utils@1.0.1':
     dependencies:
       '@simple-libs/stream-utils': 1.1.0
-      '@types/node': 22.16.5
+      '@types/node': 22.17.0
 
   '@simple-libs/stream-utils@1.1.0':
     dependencies:
-      '@types/node': 22.16.5
+      '@types/node': 22.17.0
 
   '@sinclair/typebox@0.25.24': {}
 
@@ -19686,10 +19683,6 @@ snapshots:
 
   '@types/node@16.18.11': {}
 
-  '@types/node@22.16.5':
-    dependencies:
-      undici-types: 6.21.0
-
   '@types/node@22.17.0':
     dependencies:
       undici-types: 6.21.0
@@ -19708,7 +19701,7 @@ snapshots:
 
   '@types/pg@8.11.6':
     dependencies:
-      '@types/node': 22.17.0
+      '@types/node': 24.1.0
       pg-protocol: 1.10.3
       pg-types: 4.0.2
 
@@ -20041,7 +20034,7 @@ snapshots:
 
   '@vercel/go@3.2.2': {}
 
-  '@vercel/hono@0.0.4(encoding@0.1.13)(rollup@4.45.1)':
+  '@vercel/hono@0.0.5(encoding@0.1.13)(rollup@4.45.1)':
     dependencies:
       '@vercel/node': 5.3.7(encoding@0.1.13)(rollup@4.45.1)
       '@vercel/static-config': 3.1.1
@@ -20058,7 +20051,7 @@ snapshots:
       '@vercel/static-config': 3.1.1
       ts-morph: 12.0.0
 
-  '@vercel/next@4.10.8(encoding@0.1.13)(rollup@4.45.1)':
+  '@vercel/next@4.10.9(encoding@0.1.13)(rollup@4.45.1)':
     dependencies:
       '@vercel/nft': 0.29.2(encoding@0.1.13)(rollup@4.45.1)
     transitivePeerDependencies:
@@ -22714,7 +22707,7 @@ snapshots:
       '@typescript-eslint/parser': 8.38.0(eslint@9.32.0(jiti@2.4.2))(typescript@5.8.3)
       eslint: 9.32.0(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.38.0(eslint@9.32.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.32.0(jiti@2.4.2)))(eslint@9.32.0(jiti@2.4.2))
+      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0)(eslint@9.32.0(jiti@2.4.2))
       eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.38.0(eslint@9.32.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.32.0(jiti@2.4.2))
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.32.0(jiti@2.4.2))
       eslint-plugin-react: 7.37.5(eslint@9.32.0(jiti@2.4.2))
@@ -22738,7 +22731,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.38.0(eslint@9.32.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.32.0(jiti@2.4.2)))(eslint@9.32.0(jiti@2.4.2)):
+  eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@9.32.0(jiti@2.4.2)):
     dependencies:
       '@nolyfill/is-core-module': 1.0.39
       debug: 4.4.1
@@ -22753,14 +22746,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.1(@typescript-eslint/parser@8.38.0(eslint@9.32.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.38.0(eslint@9.32.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.32.0(jiti@2.4.2)))(eslint@9.32.0(jiti@2.4.2)))(eslint@9.32.0(jiti@2.4.2)):
+  eslint-module-utils@2.12.1(@typescript-eslint/parser@8.38.0(eslint@9.32.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@9.32.0(jiti@2.4.2)):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 8.38.0(eslint@9.32.0(jiti@2.4.2))(typescript@5.8.3)
       eslint: 9.32.0(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.38.0(eslint@9.32.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.32.0(jiti@2.4.2)))(eslint@9.32.0(jiti@2.4.2))
+      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0)(eslint@9.32.0(jiti@2.4.2))
     transitivePeerDependencies:
       - supports-color
 
@@ -22789,7 +22782,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.32.0(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.38.0(eslint@9.32.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.38.0(eslint@9.32.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.32.0(jiti@2.4.2)))(eslint@9.32.0(jiti@2.4.2)))(eslint@9.32.0(jiti@2.4.2))
+      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.38.0(eslint@9.32.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@9.32.0(jiti@2.4.2))
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
@@ -30058,15 +30051,15 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vercel@44.6.4(encoding@0.1.13)(rollup@4.45.1):
+  vercel@44.6.5(encoding@0.1.13)(rollup@4.45.1):
     dependencies:
       '@vercel/blob': 1.0.2
       '@vercel/build-utils': 11.0.0
       '@vercel/fun': 1.1.6(encoding@0.1.13)
       '@vercel/go': 3.2.2
-      '@vercel/hono': 0.0.4(encoding@0.1.13)(rollup@4.45.1)
+      '@vercel/hono': 0.0.5(encoding@0.1.13)(rollup@4.45.1)
       '@vercel/hydrogen': 1.2.3
-      '@vercel/next': 4.10.8(encoding@0.1.13)(rollup@4.45.1)
+      '@vercel/next': 4.10.9(encoding@0.1.13)(rollup@4.45.1)
       '@vercel/node': 5.3.7(encoding@0.1.13)(rollup@4.45.1)
       '@vercel/python': 5.0.0
       '@vercel/redwood': 2.3.4(encoding@0.1.13)(rollup@4.45.1)
