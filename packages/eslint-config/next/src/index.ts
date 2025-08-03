@@ -18,6 +18,8 @@ import pluginNext from "@next/eslint-plugin-next";
 import { ignoreConfig } from "../../utils/src/ignore-config";
 import { eslintCoreRules } from "../../utils/src/eslint-core-rules";
 import { typescriptRules } from "../../utils/src/typescript-rules";
+import { importX } from "eslint-plugin-import-x";
+import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 
 const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
@@ -106,6 +108,10 @@ const config = ({
             impliedStrict: true,
             jsx: true,
           },
+          /**
+           * https://stackoverflow.com/a/78997913
+           */
+          warnOnUnsupportedTypeScriptVersion: false,
         },
       },
       plugins: {
@@ -118,6 +124,7 @@ CommonJS modules can always be imported via the default export, for example usin
         // "@next/next": flatConfig.recommended.plugins["@next/next"], // This package is CommonJS style
         unicorn: eslintPluginUnicorn,
         turbo: turboPlugin.configs["flat/recommended"].plugins.turbo,
+        "import-x": importX,
       },
       rules: {
         ...eslintCoreRules,
@@ -144,6 +151,13 @@ CommonJS modules can always be imported via the default export, for example usin
         "react/react-in-jsx-scope": "off",
         ...eslintPluginUnicorn.configs.all.rules,
         ...turboPlugin.configs["flat/recommended"].rules,
+        ...importX.flatConfigs.recommended.rules,
+        ...importX.flatConfigs.typescript.rules,
+      },
+      settings: {
+        "import-x/resolver-next": createTypeScriptImportResolver({
+          project: "tsconfig.{app,node}.json",
+        }),
       },
     },
     {

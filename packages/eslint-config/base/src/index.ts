@@ -16,6 +16,8 @@ import { ignoreConfig } from "../../utils/src/ignore-config";
 import { eslintCoreRules } from "../../utils/src/eslint-core-rules";
 import { typescriptRules } from "../../utils/src/typescript-rules";
 import eslintPluginYml from "eslint-plugin-yml";
+import { importX } from "eslint-plugin-import-x";
+import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 
 /**
  * **Usage** is at README because this eslint-config compile to a ESM file in dist.
@@ -76,12 +78,17 @@ const config = ({
             impliedStrict: true,
             jsx: true,
           },
+          /**
+           * https://stackoverflow.com/a/78997913
+           */
+          warnOnUnsupportedTypeScriptVersion: false,
         },
       },
       plugins: {
         "unused-imports": unusedImports,
         unicorn: eslintPluginUnicorn,
         turbo: turboPlugin.configs["flat/recommended"].plugins.turbo,
+        "import-x": importX,
       },
       rules: {
         ...eslintCoreRules,
@@ -105,6 +112,16 @@ const config = ({
         ],
         ...eslintPluginUnicorn.configs.all.rules,
         ...turboPlugin.configs["flat/recommended"].rules,
+        ...importX.flatConfigs.recommended.rules,
+        ...importX.flatConfigs.typescript.rules,
+      },
+      /**
+       * https://github.com/un-ts/eslint-plugin-import-x/issues/229#issuecomment-2654512757
+       */
+      settings: {
+        "import-x/resolver-next": createTypeScriptImportResolver({
+          project: "tsconfig.{app,node}.json",
+        }),
       },
     },
     {

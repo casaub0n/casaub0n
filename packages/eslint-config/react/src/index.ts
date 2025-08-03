@@ -18,6 +18,8 @@ import { typescriptRules } from "../../utils/src/typescript-rules";
 import eslintPluginYml from "eslint-plugin-yml";
 import pluginReact from "eslint-plugin-react";
 import pluginReactHooks from "eslint-plugin-react-hooks";
+import { importX } from "eslint-plugin-import-x";
+import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 
 /**
  *
@@ -79,6 +81,10 @@ const config = ({
             impliedStrict: true,
             jsx: true,
           },
+          /**
+           * https://stackoverflow.com/a/78997913
+           */
+          warnOnUnsupportedTypeScriptVersion: false,
         },
       },
       plugins: {
@@ -87,6 +93,7 @@ const config = ({
         turbo: turboPlugin.configs["flat/recommended"].plugins.turbo,
         react: pluginReact,
         "react-hooks": pluginReactHooks,
+        "import-x": importX,
       },
       rules: {
         ...eslintCoreRules,
@@ -116,6 +123,13 @@ const config = ({
         "react/react-in-jsx-scope": "off",
         "react/prop-types": "off",
         ...eslintPluginUnicorn.configs.all.rules,
+        ...importX.flatConfigs.recommended.rules,
+        ...importX.flatConfigs.typescript.rules,
+      },
+      settings: {
+        "import-x/resolver-next": createTypeScriptImportResolver({
+          project: "tsconfig.{app,node}.json",
+        }),
       },
     },
     {
