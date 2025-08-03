@@ -20,11 +20,13 @@ import { importX } from "eslint-plugin-import-x";
 import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 
 /**
- * **Usage** is at README because this eslint-config compile to a ESM file in dist.
+ * This config compatible with TypeScript project, YAML file, JavaScript file.
  *
- * So, the user will call a compiled ESM file into their `eslint.config.mjs`.
  * @param tsconfigFileName `./tsconfig.json`
  * @param tsConfigurationRootDirectory `import.meta.dirname` [The directory name of the current module. This is the same as the `path.dirname()` of the `import.meta.filename`.](https://nodejs.org/api/esm.html#importmetadirname)
+ *
+ * `eslint` is needed at root directory. Use [defineConfig](https://eslint.org/docs/latest/use/configure/configuration-files)
+ *
  * @example ```javascript
  * import { defineConfig } from "eslint/config";
  * import base from "@casaub0n/eslint-base";

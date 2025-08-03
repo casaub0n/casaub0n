@@ -26,12 +26,14 @@ const compat = new FlatCompat({
 });
 
 /**
- * **Usage** is at README because this eslint-config compile to a ESM file in dist.
+ * This config compatible with TypeScript project, YAML file, JavaScript file.
  *
- * So, the user will call a compiled ESM file into their `eslint.config.mjs`.
  * @param tsconfigFileName `./tsconfig.json`
  * @param tsConfigurationRootDirectory `import.meta.dirname` [The directory name of the current module. This is the same as the `path.dirname()` of the `import.meta.filename`.](https://nodejs.org/api/esm.html#importmetadirname)
  * @param rootDirectory `import.meta.dirname` [The directory name of the current module. This is the same as the `path.dirname()` of the `import.meta.filename`.](https://nodejs.org/api/esm.html#importmetadirname)
+ *
+ * `eslint` is needed at root directory. Use [defineConfig](https://eslint.org/docs/latest/use/configure/configuration-files)
+ *
  * @example ```javascript
  * import base from "../eslint-config/eslint-base/dist/index.mjs";
  *
@@ -43,7 +45,7 @@ const compat = new FlatCompat({
  *   }),
  * ]
  * ```
- * @see https://github.com/vercel/turborepo/blob/main/examples/kitchen-sink/packages/config-eslint/next.js
+ * @see [turborepo/examples/kitchen-sink/packages/config-eslint/next.js at main · vercel/turborepo](https://github.com/vercel/turborepo/blob/main/examples/kitchen-sink/packages/config-eslint/next.js)
  */
 const config = ({
   tsconfigFileName = "./tsconfig.json",
