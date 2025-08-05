@@ -19,6 +19,9 @@ export default defineConfig([
             props: {
               properties: false,
             },
+            utils: {
+              utilities: false,
+            },
           },
         },
       ],
