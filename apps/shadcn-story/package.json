@@ -6,12 +6,16 @@
   "scripts": {
     "prebuild": "tsdown",
     "build": "pnpm prebuild",
-    "lint": "eslint ./src"
+    "lint": "eslint ./src/**",
+    "storybook": "pnpm prebuild && storybook dev -p 6006"
   },
   "dependencies": {
     "@casaub0n/ui": "workspace:*",
+    "@tailwindcss/postcss": "catalog:",
+    "autoprefixer": "catalog:",
     "react": "catalog:",
-    "react-dom": "catalog:"
+    "react-dom": "catalog:",
+    "tailwindcss": "catalog:"
   },
   "devDependencies": {
     "@casaub0n/eslint-base": "workspace:*",
@@ -24,8 +28,8 @@
     "@vitejs/plugin-react": "catalog:",
     "serve": "catalog:",
     "storybook": "catalog:",
+    "tsdown": "catalog:",
     "typescript": "catalog:",
-    "vite": "catalog:",
-    "tsdown": "catalog:"
+    "vite": "catalog:"
   }
 }
