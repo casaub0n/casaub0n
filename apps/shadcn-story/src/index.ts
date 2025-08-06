@@ -1,6 +1,5 @@
 import path from "node:path";
 import type { StorybookConfig } from "@storybook/react-vite";
-// eslint-disable-next-line import-x/no-unresolved
 import tailwindcss from "@tailwindcss/postcss";
 import autoprefixer from "autoprefixer";
 
