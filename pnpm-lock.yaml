@@ -364,8 +364,8 @@ catalogs:
       specifier: 3.1.2
       version: 3.1.2
     renovate:
-      specifier: 41.55.2
-      version: 41.55.2
+      specifier: 41.56.1
+      version: 41.56.1
     schema-dts:
       specifier: 1.1.5
       version: 1.1.5
@@ -493,7 +493,7 @@ importers:
         version: 3.6.2
       renovate:
         specifier: 'catalog:'
-        version: 41.55.2(encoding@0.1.13)(typanion@3.14.0)
+        version: 41.56.1(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: 'catalog:'
         version: 15.2.1
@@ -9838,8 +9838,8 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
 
-  jsonata@2.0.6:
-    resolution: {integrity: sha512-WhQB5tXQ32qjkx2GYHFw2XbL90u+LLzjofAYwi+86g6SyZeXHz9F1Q0amy3dWRYczshOC3Haok9J4pOCgHtwyQ==}
+  jsonata@2.1.0:
+    resolution: {integrity: sha512-OCzaRMK8HobtX8fp37uIVmL8CY1IGc/a6gLsDqz3quExFR09/U78HUzWYr7T31UEB6+Eu0/8dkVD5fFDOl9a8w==}
     engines: {node: '>= 8'}
 
   jsonc-parser@3.3.1:
@@ -12024,8 +12024,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@41.55.2:
-    resolution: {integrity: sha512-0LQbDjVCCFyYXg+oLBn80x+9eau5//zmT3vb8LuXnJ7xpRRMle2XjqWN/5dcdl/GDRAEaW/2v2U/AU+YgyNOVg==}
+  renovate@41.56.1:
+    resolution: {integrity: sha512-YVp/4mrRwz8CGyQio7T2hT1fZj2vcFhfGxxttLKX8ZD6pDVENcXAjY1lV3dk/y+LbxPGBNgp+MwYoj0mg/sfLQ==}
     engines: {node: ^22.13.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -18050,7 +18050,7 @@ snapshots:
 
   '@renovatebot/detect-tools@1.1.0':
     dependencies:
-      fs-extra: 11.3.0
+      fs-extra: 11.3.1
       toml-eslint-parser: 0.10.0
       upath: 2.0.1
       zod: 3.25.76
@@ -18078,7 +18078,7 @@ snapshots:
     dependencies:
       '@renovatebot/osv-offline-db': 1.7.4
       adm-zip: 0.5.16
-      fs-extra: 11.3.0
+      fs-extra: 11.3.1
       got: 11.8.6
       luxon: 3.7.1
 
@@ -19702,7 +19702,7 @@ snapshots:
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 6.0.0
-      '@types/node': 22.17.0
+      '@types/node': 24.2.0
 
   '@types/har-format@1.2.16': {}
 
@@ -19822,7 +19822,7 @@ snapshots:
 
   '@types/through@0.0.33':
     dependencies:
-      '@types/node': 22.17.0
+      '@types/node': 24.2.0
 
   '@types/tinycolor2@1.4.6': {}
 
@@ -24727,7 +24727,7 @@ snapshots:
       '@jest/expect': 30.0.5
       '@jest/test-result': 30.0.5
       '@jest/types': 30.0.5
-      '@types/node': 22.17.0
+      '@types/node': 24.2.0
       chalk: 4.1.2
       co: 4.6.0
       dedent: 1.6.0
@@ -24923,7 +24923,7 @@ snapshots:
       '@jest/environment': 30.0.5
       '@jest/fake-timers': 30.0.5
       '@jest/types': 30.0.5
-      '@types/node': 22.17.0
+      '@types/node': 24.2.0
       jest-mock: 30.0.5
       jest-util: 30.0.5
       jest-validate: 30.0.5
@@ -25119,7 +25119,7 @@ snapshots:
 
   jest-worker@30.0.5:
     dependencies:
-      '@types/node': 22.17.0
+      '@types/node': 24.2.0
       '@ungap/structured-clone': 1.3.0
       jest-util: 30.0.5
       merge-stream: 2.0.0
@@ -25258,7 +25258,7 @@ snapshots:
 
   json5@2.2.3: {}
 
-  jsonata@2.0.6: {}
+  jsonata@2.1.0: {}
 
   jsonc-parser@3.3.1: {}
 
@@ -28020,7 +28020,7 @@ snapshots:
       lodash: 4.17.21
       strip-ansi: 6.0.1
 
-  renovate@41.55.2(encoding@0.1.13)(typanion@3.14.0):
+  renovate@41.56.1(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.858.0
       '@aws-sdk/client-ec2': 3.858.0
@@ -28097,7 +28097,7 @@ snapshots:
       json-dup-key-validator: 1.0.3
       json-stringify-pretty-compact: 4.0.0
       json5: 2.2.3
-      jsonata: 2.0.6
+      jsonata: 2.1.0
       jsonc-parser: 3.3.1
       klona: 2.0.6
       luxon: 3.7.1
