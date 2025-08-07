@@ -34,7 +34,8 @@
     "build": "tsdown",
     "build:watch": "tsdown --watch src",
     "type:check": "tsc --noEmit",
-    "lint": "pnpm dlx eslint src/**"
+    "lint": "pnpm dlx eslint src/**",
+    "dev": "eslint-config-inspector"
   },
   "peerDependencies": {
     "@cspell/eslint-plugin": "catalog:",
@@ -56,9 +57,11 @@
     "typescript-eslint": "catalog:"
   },
   "devDependencies": {
+    "@eslint/config-inspector": "catalog:",
     "@types/eslint-config-prettier": "catalog:",
     "@types/node": "catalog:",
     "@typescript-eslint/utils": "catalog:",
+    "eslint-typegen": "catalog:",
     "tsdown": "catalog:",
     "tsx": "catalog:",
     "typescript": "catalog:"
