@@ -107,7 +107,7 @@ export const typescriptRules: FlatConfig.Config["rules"] = {
   "@typescript-eslint/no-array-delete": "error",
   "@typescript-eslint/no-confusing-void-expression": "error",
   "@typescript-eslint/no-dynamic-delete": "error",
-  "@typescript-eslint/no-empty-interface": ["error", { allowSingleExtends: true }],
+  // "@typescript-eslint/no-empty-interface": ["error", { allowSingleExtends: true }],
   "@typescript-eslint/no-extraneous-class": "error",
   "@typescript-eslint/no-floating-promises": ["error", { ignoreVoid: true }],
   "@typescript-eslint/no-invalid-void-type": ["error", { allowAsThisParameter: true }],

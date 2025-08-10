@@ -15,7 +15,7 @@ export const eslintCoreRules: FlatConfig.Config["rules"] = {
   "no-multi-assign": "error",
   "no-negated-condition": "error",
   "no-new": "error",
-  "no-new-object": "error",
+  // "no-new-object": "error",
   "no-new-wrappers": "error",
   "no-param-reassign": "error",
   "no-return-assign": "error",
