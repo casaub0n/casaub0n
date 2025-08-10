@@ -1,5 +1,6 @@
 /* eslint-disable unicorn/prefer-query-selector */
 import consola from "consola";
+import { isNull } from "es-toolkit";
 import { JSDOM } from "jsdom";
 import { err, ok, type Result } from "neverthrow";
 import z from "zod";
@@ -35,8 +36,8 @@ export const getScheduleBoxMainList = (html: string): Result<HTMLCollectionOf<El
   });
 
   const maybeScheduleBoxMain = dom.window.document.getElementsByClassName("schedule-box-main");
-  // eslint-disable-next-line unicorn/no-null, eqeqeq, @typescript-eslint/no-unnecessary-condition
-  if (maybeScheduleBoxMain == null || maybeScheduleBoxMain == undefined) {
+  // eslint-disable-next-line eqeqeq, @typescript-eslint/no-unnecessary-condition
+  if (isNull(maybeScheduleBoxMain) || maybeScheduleBoxMain == undefined) {
     return err(new Error("schedule-content is nothing"));
   }
   if (maybeScheduleBoxMain.length === 0) {
@@ -63,9 +64,8 @@ const getImageList = (scheduleBoxMain: Element): string[] => {
 
   // null check
   if (
-    // eslint-disable-next-line eqeqeq, unicorn/no-null
-    slickSlideCollection == null ||
-    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, eqeqeq
+    isNull(slickSlideCollection) ||
+    // eslint-disable-next-line eqeqeq
     slickSlideCollection == undefined ||
     slickSlideCollection.length === 0 ||
     slickSlideCollection.item.length === 0 ||
@@ -77,15 +77,15 @@ const getImageList = (scheduleBoxMain: Element): string[] => {
   for (const slickSlide of slickSlideCollection) {
     const image = slickSlide.getElementsByTagName("img").item(0);
 
-    // eslint-disable-next-line eqeqeq, @typescript-eslint/no-unnecessary-condition, unicorn/no-null
-    if (image == null || image == undefined) {
+    // eslint-disable-next-line eqeqeq, @typescript-eslint/no-unnecessary-condition
+    if (isNull(image) || image == undefined) {
       return imageList;
     }
 
     const imageUrl = image.getAttribute("src");
 
-    // eslint-disable-next-line eqeqeq, @typescript-eslint/no-unnecessary-condition, unicorn/no-null
-    if (imageUrl == null || imageUrl == undefined) {
+    // eslint-disable-next-line eqeqeq, @typescript-eslint/no-unnecessary-condition
+    if (isNull(imageUrl) || imageUrl == undefined) {
       return imageList;
     }
 
