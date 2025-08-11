@@ -5,6 +5,7 @@ import type Element from "jsdom";
 import { consola } from "consola";
 import { err, ok, type Result } from "neverthrow";
 import { z } from "zod";
+import { isNull } from "es-toolkit";
 
 export type Program = {
   title: string;
@@ -45,9 +46,7 @@ export const showElementText = (
 ): void => {
   for (const element of elements) {
     const elementText = element.textContent;
-    if (elementText !== null) {
-      consola.log(`${whatShow}: ${elementText}`);
-    }
+    consola.log(`${whatShow}: ${elementText}`);
   }
 };
 
@@ -90,7 +89,7 @@ export const makePureTitle = (
   }
   const smallTags = title.getElementsByTagName("small");
   showSmallTagElement(smallTags);
-  const pureTitles = title.textContent?.replace(/^\s+/, "").split("\n");
+  const pureTitles = title.textContent.replace(/^\s+/, "").split("\n");
   showPureTitle(pureTitles, titleList);
 };
 
@@ -124,8 +123,7 @@ export const getBody = (html: string): Result<HTMLElement, Error> => {
     resources: "usable",
   });
   const maybeBody = dom.window.document.body;
-  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, unicorn/no-null, eqeqeq
-  if (maybeBody == null) return err(new Error("schedule-content is nothing"));
+  if (isNull(maybeBody)) return err(new Error("schedule-content is nothing"));
   // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, eqeqeq
   if (maybeBody == undefined) return err(new Error("schedule-content is nothing"));
   return ok(maybeBody);
