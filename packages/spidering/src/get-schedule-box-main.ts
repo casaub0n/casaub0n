@@ -3,7 +3,7 @@ import consola from "consola";
 import { isNull } from "es-toolkit";
 import { JSDOM } from "jsdom";
 import { err, ok, type Result } from "neverthrow";
-import z from "zod";
+import z from "zod/mini";
 
 /**
  * [fetch](https://nodejs.org/ja/learn/getting-started/fetch) is pure Node.js library.

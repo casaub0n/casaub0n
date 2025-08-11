@@ -4,7 +4,7 @@ import type HTMLCollectionOf from "jsdom";
 import type Element from "jsdom";
 import { consola } from "consola";
 import { err, ok, type Result } from "neverthrow";
-import { z } from "zod";
+import { z } from "zod/mini";
 import { isNull } from "es-toolkit";
 
 export type Program = {
@@ -141,7 +141,7 @@ export const getScheduleBoxMain = (body: HTMLElement): Result<HTMLCollectionOf<E
 };
 
 export const scheduleSchema = z.object({
-  scheduleboximg: z.array(z.string()),
+  scheduleBoxImg: z.array(z.string()),
 });
 
 /**
