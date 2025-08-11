@@ -1,6 +1,6 @@
 /* eslint-disable unicorn/prefer-query-selector */
 import { err, ok, type Result } from "neverthrow";
-import z from "zod";
+import z from "zod/mini";
 import { JSDOM } from "jsdom";
 import { addMonth, addYear, parse } from "@formkit/tempo";
 import { isNull } from "es-toolkit";

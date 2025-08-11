@@ -9,6 +9,7 @@ export default defineConfig([
   {
     rules: {
       "@typescript-eslint/strict-boolean-expressions": "off",
+      "import-x/no-duplicates": "off",
     },
   },
 ]);
