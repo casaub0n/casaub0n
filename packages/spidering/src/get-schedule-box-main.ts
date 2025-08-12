@@ -1,6 +1,5 @@
-/* eslint-disable unicorn/prefer-query-selector */
 import consola from "consola";
-import { isNull } from "es-toolkit";
+import { isNil } from "es-toolkit/predicate";
 import { JSDOM } from "jsdom";
 import { err, ok, type Result } from "neverthrow";
 import z from "zod/mini";
@@ -36,8 +35,7 @@ export const getScheduleBoxMainList = (html: string): Result<HTMLCollectionOf<El
   });
 
   const maybeScheduleBoxMain = dom.window.document.getElementsByClassName("schedule-box-main");
-  // eslint-disable-next-line eqeqeq, @typescript-eslint/no-unnecessary-condition
-  if (isNull(maybeScheduleBoxMain) || maybeScheduleBoxMain == undefined) {
+  if (isNil(maybeScheduleBoxMain)) {
     return err(new Error("schedule-content is nothing"));
   }
   if (maybeScheduleBoxMain.length === 0) {
@@ -64,9 +62,7 @@ const getImageList = (scheduleBoxMain: Element): string[] => {
 
   // null check
   if (
-    isNull(slickSlideCollection) ||
-    // eslint-disable-next-line eqeqeq
-    slickSlideCollection == undefined ||
+    isNil(slickSlideCollection) ||
     slickSlideCollection.length === 0 ||
     slickSlideCollection.item.length === 0 ||
     slickSlideCollection.namedItem.length === 0
@@ -77,15 +73,13 @@ const getImageList = (scheduleBoxMain: Element): string[] => {
   for (const slickSlide of slickSlideCollection) {
     const image = slickSlide.getElementsByTagName("img").item(0);
 
-    // eslint-disable-next-line eqeqeq, @typescript-eslint/no-unnecessary-condition
-    if (isNull(image) || image == undefined) {
+    if (isNil(image)) {
       return imageList;
     }
 
     const imageUrl = image.getAttribute("src");
 
-    // eslint-disable-next-line eqeqeq, @typescript-eslint/no-unnecessary-condition
-    if (isNull(imageUrl) || imageUrl == undefined) {
+    if (isNil(imageUrl)) {
       return imageList;
     }
 

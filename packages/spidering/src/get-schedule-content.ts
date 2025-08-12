@@ -1,9 +1,7 @@
-/* eslint-disable unicorn/prefer-query-selector */
 import { err, ok, type Result } from "neverthrow";
-import z from "zod/mini";
 import { JSDOM } from "jsdom";
 import { addMonth, addYear, parse } from "@formkit/tempo";
-import { isNull } from "es-toolkit";
+import { isNil } from "es-toolkit/predicate";
 
 /**
  * [fetch](https://nodejs.org/ja/learn/getting-started/fetch) is pure Node.js library.
@@ -36,8 +34,7 @@ export const getScheduleContentList = (
 
   const SCHEDULE_CONTENT_ERROR = "schedule-content is nothing";
 
-  // eslint-disable-next-line eqeqeq, @typescript-eslint/no-unnecessary-condition
-  if (isNull(maybeScheduleBoxMain) || maybeScheduleBoxMain == undefined) {
+  if (isNil(maybeScheduleBoxMain)) {
     return err(new Error(SCHEDULE_CONTENT_ERROR));
   }
   if (maybeScheduleBoxMain.length === 0) {
@@ -54,8 +51,7 @@ export const getScheduleContentList = (
 
 const hasDate = (wrapperElement: HTMLHeadingElement): Result<string, Error> => {
   const dateElement = wrapperElement.getElementsByTagName("em");
-  // eslint-disable-next-line eqeqeq, @typescript-eslint/no-unnecessary-condition
-  if (isNull(dateElement) || dateElement == undefined) {
+  if (isNil(dateElement)) {
     return err(new Error("date is nothing"));
   }
   if (dateElement.length === 0) {
@@ -69,9 +65,7 @@ const hasDate = (wrapperElement: HTMLHeadingElement): Result<string, Error> => {
   }
   const date = dateElement.item(0)?.nodeValue;
   if (
-    isNull(date) ||
-    // eslint-disable-next-line eqeqeq
-    date == undefined ||
+    isNil(date) ||
     // eslint-disable-next-line eqeqeq
     date == ""
   ) {
@@ -138,7 +132,7 @@ const getH2 = (element: Element): number | undefined => {
   const wrapperElementList = element.getElementsByTagName("h2");
   const maybeElement = wrapperElementList.item(0);
 
-  if (maybeElement !== null) {
+  if (!isNil(maybeElement)) {
     const maybeDate = hasDate(maybeElement);
     if (maybeDate.isOk()) {
       const dateRaw = maybeDate.value;
@@ -205,16 +199,16 @@ export const getData = async (): Promise<void> => {
   }
 };
 
-/**
- * `<div class="schedule-box-main">` [zod](https://github.com/colinhacks/zod) schema
- */
-export const scheduleDetail = z.object({
-  images: z.array(z.string()),
-  subTitle: z.string(),
-  title: z.string(),
-});
+// /**
+//  * `<div class="schedule-box-main">` [zod](https://github.com/colinhacks/zod) schema
+//  */
+// export const scheduleDetail = z.object({
+//   images: z.array(z.string()),
+//   subTitle: z.string(),
+//   title: z.string(),
+// });
 
-/**
- * `<div class="schedule-box-main">` object
- */
-type ScheduleDetail = z.infer<typeof scheduleDetail>;
+// /**
+//  * `<div class="schedule-box-main">` object
+//  */
+// type ScheduleDetail = z.infer<typeof scheduleDetail>;
