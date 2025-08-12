@@ -1,3 +1,1 @@
-import * as pino from "pino";
-
-export const logger = pino.pino();
+export { default as logger } from "consola";
