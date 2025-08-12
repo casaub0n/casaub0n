@@ -3,6 +3,7 @@
   "version": "1.0.17",
   "description": "Inserting lang config in your md",
   "license": "MIT",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git@github.com:casaub0n/casaub0n.git",
@@ -19,8 +20,7 @@
   },
   "scripts": {
     "rmdist": "node --import tsx scripts/rrm.ts",
-    "tsup:build": "pnpm rmdist && tsup",
-    "build": "pnpm rmdist && tsx build.ts",
+    "build": "tsdown",
     "lint": "eslint src/**"
   },
   "files": [
@@ -39,8 +39,7 @@
     "@types/mock-fs": "catalog:",
     "@types/node": "catalog:",
     "@vitest/ui": "catalog:",
-    "esbuild": "catalog:",
-    "tsup": "catalog:",
+    "tsdown": "catalog:",
     "tsx": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
