@@ -1,11 +1,10 @@
-/* eslint-disable unicorn/prefer-query-selector */
 import { JSDOM } from "jsdom";
 import type HTMLCollectionOf from "jsdom";
 import type Element from "jsdom";
 import { consola } from "consola";
 import { err, ok, type Result } from "neverthrow";
 import { z } from "zod/mini";
-import { isNull } from "es-toolkit";
+import { isNil } from "es-toolkit/predicate";
 
 export type Program = {
   title: string;
@@ -66,8 +65,7 @@ const showSmallTagElement = (smallTags: HTMLCollectionOf<HTMLElement>): void => 
 };
 
 const showPureTitle = (pureTitles: string[] | undefined, titleList: string[]): void => {
-  // eslint-disable-next-line unicorn/no-null, eqeqeq
-  if (pureTitles != null) {
+  if (!isNil(pureTitles)) {
     for (const pureTitle of pureTitles) {
       consola.log(`pure title: ${pureTitle}`);
       titleList.push(pureTitle);
@@ -123,9 +121,7 @@ export const getBody = (html: string): Result<HTMLElement, Error> => {
     resources: "usable",
   });
   const maybeBody = dom.window.document.body;
-  if (isNull(maybeBody)) return err(new Error("schedule-content is nothing"));
-  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, eqeqeq
-  if (maybeBody == undefined) return err(new Error("schedule-content is nothing"));
+  if (isNil(maybeBody)) return err(new Error("schedule-content is nothing"));
   return ok(maybeBody);
 };
 
