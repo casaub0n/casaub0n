@@ -1,24 +1,45 @@
 {
   "name": "@casaub0n/eslint-config-utils",
   "version": "0.0.0",
-  "main": "./dist/index.mjs",
   "license": "MIT",
   "description": "base eslint config for casaub0n",
   "publishConfig": {
     "access": "public"
   },
+  "type": "module",
+  "homepage": "https://github.com/casaub0n/casaub0n/tree/main/packages/eslint-config/utils#readme",
   "exports": {
-    "types": "./dist/*.d.mts",
-    "default": "./dist/*.mjs"
+    "./ignore-config": {
+      "types": "./dist/ignore-config.d.ts",
+      "default": "./dist/ignore-config.js"
+    },
+    "./eslint-core-rules": {
+      "types": "./dist/eslint-core-rules.d.ts",
+      "default": "./dist/eslint-core-rules.js"
+    },
+    "./typescript-rules": {
+      "types": "./dist/typescript-rules.d.ts",
+      "default": "./dist/typescript-rules.js"
+    }
+  },
+  "module": "./dist/*.js",
+  "types": "./dist/*.d.ts",
+  "typesVersions": {
+    "*": {
+      "ignore-config": [
+        "./src/ignore-config.ts"
+      ],
+      "eslint-core-rules": [
+        "./src/eslint-core-rules.ts"
+      ],
+      "typescript-rules": [
+        "./src/typescript-rules.ts"
+      ]
+    }
   },
   "sideEffects": false,
   "files": [
-    "./dist/ignore-config.d.mts",
-    "./dist/ignore-config.mjs",
-    "./dist/eslint-core-rules.d.mts",
-    "./dist/eslint-core-rules.mjs",
-    "./dist/typescript-rules.d.mts",
-    "./dist/typescript-rules.mjs"
+    "dist"
   ],
   "engines": {
     "node": ">=22"

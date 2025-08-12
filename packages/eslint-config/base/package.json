@@ -1,20 +1,23 @@
 {
   "name": "@casaub0n/eslint-base",
   "version": "0.0.0",
-  "main": "./dist/index.mjs",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "license": "MIT",
+  "homepage": "https://github.com/casaub0n/casaub0n/tree/main/packages/eslint-config/base#readme",
   "description": "base eslint config for casaub0n",
   "publishConfig": {
     "access": "public"
   },
   "exports": {
-    "types": "./dist/index.d.mts",
-    "default": "./dist/index.mjs"
+    "types": "./dist/index.d.ts",
+    "default": "./dist/index.js"
   },
   "sideEffects": false,
   "files": [
-    "./dist/index.d.mts",
-    "./dist/index.mjs"
+    "dist"
   ],
   "engines": {
     "node": ">=22"
