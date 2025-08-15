@@ -1,6 +1,6 @@
 import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint";
 
-export const ignoreConfig: FlatConfig.Config["ignores"] = [
+export const ignoreConfig = [
   /**
    * output
    */
@@ -136,4 +136,4 @@ export const ignoreConfig: FlatConfig.Config["ignores"] = [
    * tsbox
    */
   "**/tsbox/html/**",
-];
+] as const satisfies FlatConfig.Config["ignores"];
