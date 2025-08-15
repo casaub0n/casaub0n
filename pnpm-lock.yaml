@@ -982,6 +982,9 @@ importers:
 
   packages/eslint-config/base:
     dependencies:
+      '@casaub0n/eslint-config-utils':
+        specifier: workspace:*
+        version: link:../utils
       '@cspell/eslint-plugin':
         specifier: 'catalog:'
         version: 9.2.0(eslint@9.33.0(jiti@2.5.1))
@@ -1061,6 +1064,9 @@ importers:
 
   packages/eslint-config/next:
     dependencies:
+      '@casaub0n/eslint-config-utils':
+        specifier: workspace:*
+        version: link:../utils
       '@cspell/eslint-plugin':
         specifier: 'catalog:'
         version: 9.2.0(eslint@9.33.0(jiti@2.5.1))
@@ -1149,6 +1155,9 @@ importers:
 
   packages/eslint-config/react:
     dependencies:
+      '@casaub0n/eslint-config-utils':
+        specifier: workspace:*
+        version: link:../utils
       '@cspell/eslint-plugin':
         specifier: 'catalog:'
         version: 9.2.0(eslint@9.33.0(jiti@2.5.1))
@@ -1237,9 +1246,6 @@ importers:
 
   packages/eslint-config/utils:
     devDependencies:
-      '@casaub0n/eslint-base':
-        specifier: workspace:*
-        version: link:../base
       '@types/node':
         specifier: 'catalog:'
         version: 22.17.1

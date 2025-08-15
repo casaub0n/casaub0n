@@ -58,11 +58,9 @@
   "scripts": {
     "build": "tsdown",
     "build:watch": "tsdown --watch src",
-    "type:check": "tsc --noEmit",
-    "lint": "eslint src/**"
+    "type:check": "tsc --noEmit"
   },
   "devDependencies": {
-    "@casaub0n/eslint-base": "workspace:*",
     "@types/node": "catalog:",
     "@typescript-eslint/utils": "catalog:",
     "eslint-typegen": "catalog:",

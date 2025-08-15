@@ -12,9 +12,9 @@ import turboPlugin from "eslint-plugin-turbo";
 import pluginConfigPrettier from "eslint-config-prettier";
 import typescriptEslintParser from "@typescript-eslint/parser";
 import globals from "globals";
-import { ignoreConfig } from "../../utils/src/ignore-config";
-import { eslintCoreRules } from "../../utils/src/eslint-core-rules";
-import { typescriptRules } from "../../utils/src/typescript-rules";
+import { ignoreConfig } from "@casaub0n/eslint-config-utils/ignore-config";
+import { eslintCoreRules } from "@casaub0n/eslint-config-utils/eslint-core-rules";
+import { typescriptRules } from "@casaub0n/eslint-config-utils/typescript-rules";
 import eslintPluginYml from "eslint-plugin-yml";
 import { importX } from "eslint-plugin-import-x";
 import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
@@ -55,7 +55,7 @@ const config = ({
     // https://typescript-eslint.io/getting-started/typed-linting/
     {
       files: ["**/*.cts", "**/*.ctsx", "**/*.mts", "**/*.mtsx", "**/*.ts", "**/*.tsx"],
-      ignores: ignoreConfig?.concat(["**/*.mjs", "**/*.js"]),
+      ignores: [...ignoreConfig, "**/*.mjs", "**/*.js"],
       languageOptions: {
         ecmaVersion: "latest",
         parser: typescriptEslintParser,
