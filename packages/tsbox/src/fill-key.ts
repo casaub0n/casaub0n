@@ -24,7 +24,7 @@ type Failure = {
 /**
  * utility type
  */
-// eslint-disable-next-line @typescript-eslint/no-unused-vars -- T is type variable
+// eslint-disable-next-line unused-imports/no-unused-vars
 export type FillKeys<T> = (
   (T extends T ? keyof T : never) extends infer AllKeys
     ? // ↑ユニオン型の全要素のキーを洗い出し、AllKeysに代入する

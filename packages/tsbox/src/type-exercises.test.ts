@@ -1,12 +1,12 @@
-import { test, expect, describe } from "vitest";
+import { describe, expect, test } from "vitest";
 
 import {
-  isPositive,
-  userName,
-  sumOfPos,
-  myFilter,
-  isPositiveFunction,
   getSpeed,
+  isPositive,
+  isPositiveFunction,
+  myFilter,
+  sumOfPos,
+  userName,
 } from "./type-exercises";
 
 import type { PartialUser } from "./type-exercises";
@@ -34,6 +34,7 @@ test("0 or more number summation", () => {
 });
 
 test("make a double number's array", () => {
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   expect(myFilter([1, 2, 3, 4, 5], (number_) => number_ % 2 === 0)).toEqual([2, 4]);
 });
 

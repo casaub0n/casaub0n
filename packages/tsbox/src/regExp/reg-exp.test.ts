@@ -1,21 +1,21 @@
-import { test, expect } from "vitest";
+import { expect, test } from "vitest";
 
 import {
-  regExpObjectMethod,
-  ConstructorWithOptionG,
-  stringExpObjectMethod,
-  LiteralWithOptionG,
-  optionI_regExp,
-  optionM_regExp,
-  optionY_regExp,
-  optionGI_regExp,
-  metaRegExp,
-  singleMatcher,
-  singleMatcherGOption,
-  continuedWordMatcher,
-  continuedWordMatcherGOption,
   combineMatcherA,
   combineMatcherD,
+  ConstructorWithOptionG,
+  continuedWordMatcher,
+  continuedWordMatcherGOption,
+  LiteralWithOptionG,
+  metaRegExp,
+  optionGIRegExp,
+  optionIRegExp,
+  optionMRegExp,
+  optionYRegExp,
+  regExpObjectMethod,
+  singleMatcher,
+  singleMatcherGOption,
+  stringExpObjectMethod,
 } from "./index";
 
 const INPUT_VALUE = "ABCDE";
@@ -80,36 +80,36 @@ test('Same result between specify constructor and specify literal with "g" optio
 });
 
 test('"ABC" much "ABC" by Option "i"', () => {
-  if (optionI_regExp) expect(optionI_regExp[0]).toBe("ABC");
+  if (optionIRegExp) expect(optionIRegExp[0]).toBe("ABC");
 });
 
 test(String.raw`"ABC\nDEF" much "D" by Option "m"`, () => {
-  if (optionM_regExp) expect(optionM_regExp[0]).toBe("D");
+  if (optionMRegExp) expect(optionMRegExp[0]).toBe("D");
 });
 
 test('By Option "y", Last index of "ABC" is 0', () => {
-  expect(optionY_regExp.lastIndex).toBe(0);
+  expect(optionYRegExp.lastIndex).toBe(0);
 });
 
 test('By Option "y", the regexp much "ABC"', () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-  expect(optionY_regExp.test("ABC")).toBeTruthy;
+  expect(optionYRegExp.test("ABC")).toBeTruthy;
 });
 
 test("When from second word", () => {
-  optionY_regExp.lastIndex = 1;
+  optionYRegExp.lastIndex = 1;
   // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-  expect(optionY_regExp.test("ABC")).toBeFalsy;
+  expect(optionYRegExp.test("ABC")).toBeFalsy;
 });
 
 test('When from second word and Option "y", the regexp much "ABC"', () => {
-  optionY_regExp.lastIndex = 1;
-  const abcMatchResult = "ABC".match(optionY_regExp);
+  optionYRegExp.lastIndex = 1;
+  const abcMatchResult = "ABC".match(optionYRegExp);
   if (abcMatchResult) expect(abcMatchResult[0]).toBe("ABC");
 });
 
 test("combine g with i option", () => {
-  if (optionGI_regExp) expect(optionGI_regExp).toStrictEqual(["ABC", "abc", "ABC"]);
+  if (optionGIRegExp) expect(optionGIRegExp).toStrictEqual(["ABC", "abc", "ABC"]);
 });
 
 test("it matches meta char", () => {
