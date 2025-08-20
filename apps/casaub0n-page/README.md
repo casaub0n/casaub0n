@@ -8,6 +8,18 @@
 
 This project is my Next.js boilerplate.
 
+## Type in package.json
+
+```console
+ ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error
+
+> Build error occurred
+ReferenceError: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and '/home/runner/work/***/***/apps/***-page/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at <unknown> (next.config.js:1:40)
+ ELIFECYCLE  Command failed with exit code 1.
+```
+
 ## Getting Started
 
 First, run the development server:

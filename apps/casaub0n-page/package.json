@@ -1,11 +1,10 @@
 {
   "name": "@casaub0n/casaub0n-page",
   "version": "0.1.0",
-  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "rmdist": "node scripts/rrm.ts",
+    "rmdist": "node --import tsx scripts/rrm.ts",
     "build": "pnpm rmdist && next build",
     "start": "next start",
     "test": "jest --coverage",
