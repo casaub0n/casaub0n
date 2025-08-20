@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "test driven development by example for TypeScript",
   "license": "MIT",
+  "type": "module",
   "repository": {
     "url": "git@github.com:casaub0n/casaub0n.git",
     "type": "git",
@@ -23,7 +24,7 @@
     "test:watch": "node --watch --no-warnings --import tsx src/money.test.ts",
     "test:ci": "pnpm test",
     "test:purenode": "pnpm build && pnpm node dist/test.mjs",
-    "rmdist": "node --import tsx scripts/rrm.ts",
+    "rmdist": "node scripts/rrm.ts",
     "prebuild": "pnpm rmdist",
     "build": "tsdown",
     "test:coverage": "node --test --experimental-test-coverage ./dist/test.mjs",
