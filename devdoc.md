@@ -30,11 +30,11 @@ TODO
 
 ## rm command
 
-use TypeScript via tsx.
+use TypeScript scripts by running Node.js.
 
 - Make `scripts/rrm.ts` in the root of package
 - Add `scripts` directory in `tsconfig.json`
-- Add `rmdist` command in `scripts` of `package.json`
+- Add `rmdist` command in `scripts` of `package.json` and set `type`
 
 **rrm.ts**
 
@@ -67,9 +67,10 @@ import fs from "node:fs";
 ```json
 {
   ...,
+  "type": "module",
   "scripts": {
     ...,
-    "rmdist": "node --import tsx scripts/rrm.ts",
+    "rmdist": "node scripts/rrm.ts",
     "build": "pnpm rmdist && tsup src/index.ts --format cjs --dts",
   }
   ...

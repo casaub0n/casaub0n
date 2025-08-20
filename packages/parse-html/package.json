@@ -16,9 +16,10 @@
   "engines": {
     "node": ">=22"
   },
+  "type": "module",
   "scripts": {
     "test": "echo hello",
-    "rmdist": "node --import tsx scripts/rrm.ts",
+    "rmdist": "node scripts/rrm.ts",
     "prebuild": "pnpm rmdist",
     "build": "tsup src/index.ts --format cjs --dts --env.TABLE_HEAD 月",
     "start:parse-html": "pnpm build && node dist/index.js",

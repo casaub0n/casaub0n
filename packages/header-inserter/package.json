@@ -3,6 +3,7 @@
   "version": "1.0.27",
   "description": "Inserting header in your bundle JavaScript file for userscript",
   "license": "MIT",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git@github.com:casaub0n/casaub0n.git",
@@ -20,7 +21,7 @@
   "scripts": {
     "test": "vitest run",
     "test:ci": "pnpm test",
-    "rmdist": "node --import tsx scripts/rrm.ts",
+    "rmdist": "node scripts/rrm.ts",
     "build:tsup": "pnpm rmdist && tsup",
     "build": "pnpm rmdist && tsx build.ts",
     "lint": "eslint src/**"
