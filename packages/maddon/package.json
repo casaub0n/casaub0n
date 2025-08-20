@@ -14,7 +14,7 @@
     "node": ">=22"
   },
   "scripts": {
-    "rmdist": "node --import tsx scripts/rrm.ts",
+    "rmdist": "node scripts/rrm.ts",
     "prebuild": "pnpm rmdist && esbuild src/index.ts --bundle --define:process.env.NODE_ENV=\\\"production\\\" --minify --platform=node --target=node17 --outfile=dist/index.js",
     "copy": "cpx -u src/static/**/*.{json,html,js} dist/",
     "build": "pnpm prebuild && pnpm copy",
