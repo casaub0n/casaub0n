@@ -1,6 +1,7 @@
 /**
  * 0 or more is true
  */
+// eslint-disable-next-line @typescript-eslint/naming-convention
 export const isPositive = (number_: number): boolean => {
   return number_ >= 0;
 };
@@ -26,12 +27,17 @@ type User = {
 export const userName = (user: User): string => user.name;
 
 type IsPositiveFunction = (argument: number) => boolean;
+// eslint-disable-next-line @typescript-eslint/naming-convention
 export const isPositiveFunction: IsPositiveFunction = (number_) => number_ >= 0;
 
-export const sumOfPos = (array: number[]) => {
-  return array
-    .filter((number_) => number_ >= 0)
-    .reduce((accumulator, number_) => accumulator + number_, 0);
+export const sumOfPos = (array: number[]): number => {
+  return (
+    array
+      // eslint-disable-next-line @typescript-eslint/naming-convention
+      .filter((number_) => number_ >= 0)
+      // eslint-disable-next-line @typescript-eslint/naming-convention
+      .reduce((accumulator, number_) => accumulator + number_, 0)
+  );
 };
 
 export const myFilter = <T>(array: T[], predicate: (elm: T) => boolean): T[] => {

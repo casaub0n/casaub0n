@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 /**
  * Template literals
  * @see https://zenn.dev/ficilcom/articles/940ecce71e45a6#%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%AA%E3%83%86%E3%83%A9%E3%83%AB%E5%9E%8B
@@ -55,6 +56,7 @@ type UnionWithDot<
   Key,
 > = `${Prefix}${Prefix extends "" ? "" : "."}${Key extends string ? Key : ""}`;
 
+// eslint-disable-next-line @typescript-eslint/naming-convention
 type DotKeys<Object_ extends RecursiveObject, Prefix extends string = ""> = {
   [Key in keyof Object_]: Object_[Key] extends object
     ? DotKeys<Object_[Key], UnionWithDot<Prefix, Key>>
@@ -64,7 +66,7 @@ type DotKeys<Object_ extends RecursiveObject, Prefix extends string = ""> = {
 const localize = (key: ExtractedDotKeys) => {
   const splittedKey = key.split(".");
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars, unicorn/prevent-abbreviations, unicorn/no-array-reduce
+  // eslint-disable-next-line unicorn/prevent-abbreviations, unicorn/no-array-reduce
   const stringOrObj = splittedKey.reduce<RecursiveObject | string>((object, key) => {
     if (typeof object === "string") {
       return object;
@@ -78,5 +80,3 @@ const localize = (key: ExtractedDotKeys) => {
 localize("novel.chapter");
 
 export type ExtractedDotKeys = DotKeys<typeof localizeDataJP>;
-
-export {};

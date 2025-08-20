@@ -3,6 +3,7 @@
  * https://qiita.com/suin/items/2653fea448fd6246437a
  */
 export function isFutureDate(
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   ...arguments_: [year: number, month: number, day: number] | [date: Date] | [isoDateString: string]
 ): boolean {
   if (arguments_.length === 3) {
