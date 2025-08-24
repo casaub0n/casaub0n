@@ -1,4 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "../../packages/tsconfig/astro/strict.json"
+  "extends": "../../packages/tsconfig/astro/strict.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js"
+  }
 }
