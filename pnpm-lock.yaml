@@ -367,8 +367,8 @@ catalogs:
       specifier: 3.1.2
       version: 3.1.2
     renovate:
-      specifier: 41.87.1
-      version: 41.87.1
+      specifier: 41.87.4
+      version: 41.87.4
     schema-dts:
       specifier: 1.1.5
       version: 1.1.5
@@ -502,7 +502,7 @@ importers:
         version: 3.6.2
       renovate:
         specifier: 'catalog:'
-        version: 41.87.1(encoding@0.1.13)(typanion@3.14.0)
+        version: 41.87.4(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: 'catalog:'
         version: 15.2.2
@@ -6154,8 +6154,8 @@ packages:
   '@xtuc/long@4.2.2':
     resolution: {integrity: sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==}
 
-  '@yarnpkg/core@4.4.2':
-    resolution: {integrity: sha512-Gf2p9WUygkcT8GobVjrQpFGE7A/GWXPXjDSIFTnZKTiq/W8giN3jqhWpIrpVa2XfPMguXzdEvb2brNYeW3IwdQ==}
+  '@yarnpkg/core@4.4.3':
+    resolution: {integrity: sha512-PMyCPTsA39Mw4WApfoIpAPnYjSDki7uMGPVYjvTtF5fTKoqxWTJN1toBzxmrFmqonC3sL33e55wgaCrerkzakQ==}
     engines: {node: '>=18.12.0'}
 
   '@yarnpkg/fslib@3.1.2':
@@ -12200,8 +12200,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@41.87.1:
-    resolution: {integrity: sha512-VlkDIzlD6b+U2mSJZfiFM+pve/aRmDLSEbdg4/H77lw0EkP0EiLogfe7p72zCcM1CGdTQtzGwg9y9L+4OxILug==}
+  renovate@41.87.4:
+    resolution: {integrity: sha512-6Lc1wnpXDSq4ZIzBwvj1t6o94AAP94o4PRivgtBUlMkLHLeiRl3ScbZK84S1i7cAmnsvQvKcOJvkpHiOtGbXTA==}
     engines: {node: ^22.13.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -20788,7 +20788,7 @@ snapshots:
 
   '@xtuc/long@4.2.2': {}
 
-  '@yarnpkg/core@4.4.2(typanion@3.14.0)':
+  '@yarnpkg/core@4.4.3(typanion@3.14.0)':
     dependencies:
       '@arcanis/slice-ansi': 1.1.1
       '@types/semver': 7.7.0
@@ -20804,10 +20804,10 @@ snapshots:
       cross-spawn: 7.0.6
       diff: 5.2.0
       dotenv: 16.6.1
+      es-toolkit: 1.39.10
       fast-glob: 3.3.3
       got: 11.8.6
       hpagent: 1.2.0
-      lodash: 4.17.21
       micromatch: 4.0.8
       p-limit: 2.3.0
       semver: 7.7.2
@@ -28385,7 +28385,7 @@ snapshots:
       lodash: 4.17.21
       strip-ansi: 6.0.1
 
-  renovate@41.87.1(encoding@0.1.13)(typanion@3.14.0):
+  renovate@41.87.4(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.858.0
       '@aws-sdk/client-ec2': 3.858.0
@@ -28419,7 +28419,7 @@ snapshots:
       '@renovatebot/pep440': 4.2.0
       '@renovatebot/ruby-semver': 4.1.0
       '@sindresorhus/is': 7.0.2
-      '@yarnpkg/core': 4.4.2(typanion@3.14.0)
+      '@yarnpkg/core': 4.4.3(typanion@3.14.0)
       '@yarnpkg/parsers': 3.0.3
       agentkeepalive: 4.6.0
       async-mutex: 0.5.0
