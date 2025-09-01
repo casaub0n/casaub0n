@@ -6,9 +6,4 @@ import UnoCSS from "unocss/astro";
 // https://astro.build/config
 export default defineConfig({
   integrations: [solidJs(), UnoCSS({ injectReset: true })],
-  vite: {
-    ssr: {
-      noExternal: ["@unocss/reset/normalize.css"],
-    },
-  },
 });
