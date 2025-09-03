@@ -373,8 +373,8 @@ catalogs:
       specifier: 3.1.2
       version: 3.1.2
     renovate:
-      specifier: 41.92.1
-      version: 41.92.1
+      specifier: 41.93.3
+      version: 41.93.3
     schema-dts:
       specifier: 1.1.5
       version: 1.1.5
@@ -511,7 +511,7 @@ importers:
         version: 3.6.2
       renovate:
         specifier: 'catalog:'
-        version: 41.92.1(encoding@0.1.13)(typanion@3.14.0)
+        version: 41.93.3(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: 'catalog:'
         version: 15.2.2
@@ -11787,8 +11787,8 @@ packages:
   openid-client@5.7.1:
     resolution: {integrity: sha512-jDBPgSVfTnkIh71Hg9pRvtJc6wTwqjRkN88+gCFtYWrlP4Yx2Dsrow8uPi3qLr/aeymPF3o2+dS+wOpglK04ew==}
 
-  openpgp@6.2.0:
-    resolution: {integrity: sha512-zKbgazxMeGrTqUEWicKufbdcjv2E0om3YVxw+I3hRykp8ODp+yQOJIDqIr1UXJjP8vR2fky3bNQwYoQXyFkYMA==}
+  openpgp@6.2.1:
+    resolution: {integrity: sha512-5vkqxQWgyrfY0shygqJTaCoa4SbPdjrpmtfREyXBBDrXjoRT25edEMQbdKH5/WxDXlLVn9TxPsVrKP72Jjuz2A==}
     engines: {node: '>= 18.0.0'}
 
   optionator@0.9.4:
@@ -12761,8 +12761,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@41.92.1:
-    resolution: {integrity: sha512-zYZ9uGhlaqrrw/elx0E1VRTsP+NUipoCRUi6PNddMTWB7jaeIxg8F561j1iMcKwiwdMauxvZN+d5XmNbp6WURQ==}
+  renovate@41.93.3:
+    resolution: {integrity: sha512-HPuD/h1qGUGaYvAtSiX+dryqBgIlyVC1JKfsMruD4RdoH/tLt5m/1Evdpk/bgOlTaeLGtlEfGwcEna+PR/7IeA==}
     engines: {node: ^22.13.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -28334,7 +28334,7 @@ snapshots:
       object-hash: 2.2.0
       oidc-token-hash: 5.1.1
 
-  openpgp@6.2.0:
+  openpgp@6.2.1:
     optional: true
 
   optionator@0.9.4:
@@ -29507,7 +29507,7 @@ snapshots:
       lodash: 4.17.21
       strip-ansi: 6.0.1
 
-  renovate@41.92.1(encoding@0.1.13)(typanion@3.14.0):
+  renovate@41.93.3(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.879.0
       '@aws-sdk/client-ec2': 3.879.0
@@ -29629,7 +29629,7 @@ snapshots:
       zod: 3.25.76
     optionalDependencies:
       better-sqlite3: 12.2.0
-      openpgp: 6.2.0
+      openpgp: 6.2.1
       re2: 1.22.1
     transitivePeerDependencies:
       - aws-crt
