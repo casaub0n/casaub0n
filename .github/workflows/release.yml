@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [20]
+        node-version: [22]
     env:
       CI: true
       TURBO_TOKEN: ${{ secrets.USERSCRIPT_TURBO_TOKEN }}
