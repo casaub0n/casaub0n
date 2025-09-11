@@ -131,6 +131,7 @@ CommonJS modules can always be imported via the default export, for example usin
       rules: {
         ...eslintCoreRules,
         ...typescriptRules,
+        "@typescript-eslint/explicit-function-return-type": "off",
 
         ...(pluginNext.configs.recommended.rules as TSESLint.TSESLint.FlatConfig.Rules),
         ...(pluginNext.configs["core-web-vitals"].rules as TSESLint.TSESLint.FlatConfig.Rules),
