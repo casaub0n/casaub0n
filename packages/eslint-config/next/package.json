@@ -1,19 +1,20 @@
 {
   "name": "@casaub0n/eslint-config-next",
   "version": "0.0.0",
-  "main": "./dist/index.mjs",
+  "main": "./dist/index.js",
   "license": "MIT",
+  "type": "module",
   "publishConfig": {
     "access": "public"
   },
   "exports": {
-    "types": "./dist/index.d.mts",
-    "default": "./dist/index.mjs"
+    "types": "./dist/index.d.ts",
+    "default": "./dist/index.js"
   },
   "sideEffects": false,
   "files": [
-    "./dist/index.d.mts",
-    "./dist/index.mjs"
+    "./dist/index.d.ts",
+    "./dist/index.js"
   ],
   "engines": {
     "node": ">=22"

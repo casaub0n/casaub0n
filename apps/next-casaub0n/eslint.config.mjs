@@ -8,8 +8,13 @@ export default defineConfig([
     rootDirectory: import.meta.dirname,
   }),
   {
-    rules: {
-      "@typescript-eslint/explicit-function-return-type": "off",
-    },
+    ignores: [
+      /**
+       * Next.js
+       */
+      "**/.next/",
+      "**/.tubo/",
+      "**/next-env.d.ts",
+    ],
   },
 ]);
