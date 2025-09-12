@@ -373,8 +373,8 @@ catalogs:
       specifier: 3.2.0
       version: 3.2.0
     renovate:
-      specifier: 41.103.0
-      version: 41.103.0
+      specifier: 41.107.2
+      version: 41.107.2
     schema-dts:
       specifier: 1.1.5
       version: 1.1.5
@@ -511,7 +511,7 @@ importers:
         version: 3.6.2
       renovate:
         specifier: 'catalog:'
-        version: 41.103.0(encoding@0.1.13)(typanion@3.14.0)
+        version: 41.107.2(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: 'catalog:'
         version: 15.2.2
@@ -4277,12 +4277,6 @@ packages:
     peerDependencies:
       '@opentelemetry/api': '>=1.0.0 <1.10.0'
 
-  '@opentelemetry/core@2.0.1':
-    resolution: {integrity: sha512-MaZk9SJIDgo1peKevlbhP6+IwIiNPNmswNL4AF0WaQJLbHXjr9SrZMgS12+iqr9ToV4ZVosCcc0f8Rg67LXjxw==}
-    engines: {node: ^18.19.0 || >=20.6.0}
-    peerDependencies:
-      '@opentelemetry/api': '>=1.0.0 <1.10.0'
-
   '@opentelemetry/core@2.1.0':
     resolution: {integrity: sha512-RMEtHsxJs/GiHHxYT58IY57UXAQTuUnZVco6ymDEqTNlJKTimM4qPUPVe8InNFyBjhHBEAx4k3Q8LtNayBsbUQ==}
     engines: {node: ^18.19.0 || >=20.6.0}
@@ -6622,6 +6616,9 @@ packages:
   adm-zip@0.5.16:
     resolution: {integrity: sha512-TGw5yVi4saajsSEgz25grObGHEUaDrniwvA2qwSC060KfqGPdglhvPMA2lPIoxs3PQIItj2iag35fONcQqgUaQ==}
     engines: {node: '>=12.0'}
+
+  ae-cvss-calculator@1.0.8:
+    resolution: {integrity: sha512-ud8g+BQTSJoeuB4nOnbhu/Fd7TnGEnnr1AYOA+uFaEDQB0IOgjxHA2ds5iOmLh5Os6ziGCJJqjEFOFeWMOVQ4Q==}
 
   agent-base@6.0.2:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
@@ -10737,8 +10734,8 @@ packages:
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
-  luxon@3.7.1:
-    resolution: {integrity: sha512-RkRWjA926cTvz5rAb1BqyWkKbbjzCGchDUIKMCUvNi17j6f6j8uHGDV82Aqcqtzd+icoYpELmG3ksgGiFNNcNg==}
+  luxon@3.7.2:
+    resolution: {integrity: sha512-vtEhXh/gNjI9Yg1u4jX/0YVPMvxzHuGgCm6tC5kZyb08yjGWGnqAjGJvcXbqQR2P3MyMEFnRbpcdFS6PBcLqew==}
     engines: {node: '>=12'}
 
   lz-string@1.5.0:
@@ -12668,8 +12665,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@41.103.0:
-    resolution: {integrity: sha512-1ir5u3bB1jWZOLtmYxePp6CS5+IImZHInI/rUG08tBX2G4Z46q+V2LOkJsiCJKIIWzDucu5Ezj8my5uxe8Iyuw==}
+  renovate@41.107.2:
+    resolution: {integrity: sha512-/ZDFgOfvSoXVpFM7H2WUtx1I80XcFYTZs/C7emqC8NOjfsRIabHRg9YP1U9ei1AWrNyDInDs2/oAmzBFpimPPw==}
     engines: {node: ^22.13.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -14625,9 +14622,6 @@ packages:
 
   vue-flow-layout@0.2.0:
     resolution: {integrity: sha512-zKgsWWkXq0xrus7H4Mc+uFs1ESrmdTXlO0YNbR6wMdPaFvosL3fMB8N7uTV308UhGy9UvTrGhIY7mVz9eN+L0Q==}
-
-  vuln-vects@1.1.0:
-    resolution: {integrity: sha512-LGDwn9nRz94YoeqOn2TZqQXzyonBc5FJppSgH34S/1U+3bgPONq/vvfiCbCQ4MeBll58xx+kDmhS73ac+EHBBw==}
 
   w3c-xmlserializer@5.0.0:
     resolution: {integrity: sha512-o8qghlI8NZHU1lLPrpi2+Uq7abh4GGPpYANlalzWxyWteJOCsr/P+oPBA49TOLu5FTZO4d3F9MnWJfiMo4BkmA==}
@@ -18634,11 +18628,6 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
 
-  '@opentelemetry/core@2.0.1(@opentelemetry/api@1.9.0)':
-    dependencies:
-      '@opentelemetry/api': 1.9.0
-      '@opentelemetry/semantic-conventions': 1.37.0
-
   '@opentelemetry/core@2.1.0(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
@@ -18710,21 +18699,21 @@ snapshots:
   '@opentelemetry/resource-detector-aws@2.3.0(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
-      '@opentelemetry/core': 2.0.1(@opentelemetry/api@1.9.0)
+      '@opentelemetry/core': 2.1.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.1.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/semantic-conventions': 1.37.0
 
   '@opentelemetry/resource-detector-azure@0.10.0(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
-      '@opentelemetry/core': 2.0.1(@opentelemetry/api@1.9.0)
+      '@opentelemetry/core': 2.1.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.1.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/semantic-conventions': 1.37.0
 
   '@opentelemetry/resource-detector-gcp@0.37.0(@opentelemetry/api@1.9.0)(encoding@0.1.13)':
     dependencies:
       '@opentelemetry/api': 1.9.0
-      '@opentelemetry/core': 2.0.1(@opentelemetry/api@1.9.0)
+      '@opentelemetry/core': 2.1.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.1.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/semantic-conventions': 1.37.0
       gcp-metadata: 6.1.1(encoding@0.1.13)
@@ -19159,7 +19148,7 @@ snapshots:
       adm-zip: 0.5.16
       fs-extra: 11.3.1
       got: 11.8.6
-      luxon: 3.7.1
+      luxon: 3.7.2
 
   '@renovatebot/pep440@4.2.0': {}
 
@@ -21816,6 +21805,8 @@ snapshots:
       regex-parser: 2.3.1
 
   adm-zip@0.5.16: {}
+
+  ae-cvss-calculator@1.0.8: {}
 
   agent-base@6.0.2:
     dependencies:
@@ -26870,7 +26861,7 @@ snapshots:
     dependencies:
       react: 19.1.1
 
-  luxon@3.7.1: {}
+  luxon@3.7.2: {}
 
   lz-string@1.5.0: {}
 
@@ -29530,7 +29521,7 @@ snapshots:
       lodash: 4.17.21
       strip-ansi: 6.0.1
 
-  renovate@41.103.0(encoding@0.1.13)(typanion@3.14.0):
+  renovate@41.107.2(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.879.0
       '@aws-sdk/client-ec2': 3.879.0
@@ -29566,6 +29557,7 @@ snapshots:
       '@sindresorhus/is': 7.0.2
       '@yarnpkg/core': 4.4.3(typanion@3.14.0)
       '@yarnpkg/parsers': 3.0.3
+      ae-cvss-calculator: 1.0.8
       agentkeepalive: 4.6.0
       async-mutex: 0.5.0
       auth-header: 1.0.0
@@ -29610,7 +29602,7 @@ snapshots:
       jsonata: 2.1.0
       jsonc-parser: 3.3.1
       klona: 2.0.6
-      luxon: 3.7.1
+      luxon: 3.7.2
       markdown-it: 14.1.0
       markdown-table: 3.0.4
       minimatch: 10.0.3
@@ -29646,7 +29638,6 @@ snapshots:
       upath: 2.0.1
       url-join: 5.0.0
       validate-npm-package-name: 6.0.2
-      vuln-vects: 1.1.0
       xmldoc: 2.0.2
       yaml: 2.8.1
       zod: 3.25.76
@@ -32071,8 +32062,6 @@ snapshots:
   vscode-uri@3.1.0: {}
 
   vue-flow-layout@0.2.0: {}
-
-  vuln-vects@1.1.0: {}
 
   w3c-xmlserializer@5.0.0:
     dependencies:
