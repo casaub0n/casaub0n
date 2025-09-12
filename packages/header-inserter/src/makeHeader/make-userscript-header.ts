@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/strict-boolean-expressions -- This comment should be the appropriate sources, but it is in template. */
 /* eslint-disable @cspell/spellchecker */
 import { type UserScript } from "./parse-userscript-json";
 
