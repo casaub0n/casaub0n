@@ -418,8 +418,8 @@ catalogs:
       specifier: 4.2.0
       version: 4.2.0
     tsdown:
-      specifier: 0.15.0
-      version: 0.15.0
+      specifier: 0.15.1
+      version: 0.15.1
     tsup:
       specifier: 8.5.0
       version: 8.5.0
@@ -915,7 +915,7 @@ importers:
         version: 9.1.5(@testing-library/dom@10.4.1)(bufferutil@4.0.9)(msw@2.11.2(@types/node@22.18.1)(typescript@5.9.2))(prettier@3.6.2)(vite@7.1.5(@types/node@22.18.1)(jiti@2.5.1)(lightningcss@1.30.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1))
       tsdown:
         specifier: 'catalog:'
-        version: 0.15.0(typescript@5.9.2)
+        version: 0.15.1(typescript@5.9.2)
       typescript:
         specifier: 'catalog:'
         version: 5.9.2
@@ -1002,7 +1002,7 @@ importers:
         version: 2.3.0(eslint@9.35.0(jiti@2.5.1))
       tsdown:
         specifier: 'catalog:'
-        version: 0.15.0(typescript@5.9.2)
+        version: 0.15.1(typescript@5.9.2)
       tsx:
         specifier: 'catalog:'
         version: 4.20.5
@@ -1084,7 +1084,7 @@ importers:
         version: 2.3.0(eslint@9.35.0(jiti@2.5.1))
       tsdown:
         specifier: 'catalog:'
-        version: 0.15.0(typescript@5.9.2)
+        version: 0.15.1(typescript@5.9.2)
       tsx:
         specifier: 'catalog:'
         version: 4.20.5
@@ -1175,7 +1175,7 @@ importers:
         version: 2.3.0(eslint@9.35.0(jiti@2.5.1))
       tsdown:
         specifier: 'catalog:'
-        version: 0.15.0(typescript@5.9.2)
+        version: 0.15.1(typescript@5.9.2)
       tsx:
         specifier: 'catalog:'
         version: 4.20.5
@@ -1266,7 +1266,7 @@ importers:
         version: 2.3.0(eslint@9.35.0(jiti@2.5.1))
       tsdown:
         specifier: 'catalog:'
-        version: 0.15.0(typescript@5.9.2)
+        version: 0.15.1(typescript@5.9.2)
       tsx:
         specifier: 'catalog:'
         version: 4.20.5
@@ -1287,7 +1287,7 @@ importers:
         version: 2.3.0(eslint@9.35.0(jiti@2.5.1))
       tsdown:
         specifier: 'catalog:'
-        version: 0.15.0(typescript@5.9.2)
+        version: 0.15.1(typescript@5.9.2)
       tsx:
         specifier: 'catalog:'
         version: 4.20.5
@@ -1397,7 +1397,7 @@ importers:
         version: 3.2.4(vitest@3.2.4)
       tsdown:
         specifier: 'catalog:'
-        version: 0.15.0(typescript@5.9.2)
+        version: 0.15.1(typescript@5.9.2)
       tsx:
         specifier: 'catalog:'
         version: 4.20.5
@@ -1572,7 +1572,7 @@ importers:
         version: 2.11.2(@types/node@22.18.1)(typescript@5.9.2)
       tsdown:
         specifier: 'catalog:'
-        version: 0.15.0(typescript@5.9.2)
+        version: 0.15.1(typescript@5.9.2)
       tsx:
         specifier: 'catalog:'
         version: 4.20.5
@@ -1597,7 +1597,7 @@ importers:
         version: 22.18.1
       tsdown:
         specifier: 'catalog:'
-        version: 0.15.0(typescript@5.9.2)
+        version: 0.15.1(typescript@5.9.2)
       tsx:
         specifier: 'catalog:'
         version: 4.20.5
@@ -10745,6 +10745,9 @@ packages:
   magic-string@0.30.18:
     resolution: {integrity: sha512-yi8swmWbO17qHhwIBNeeZxTceJMeBvWJaId6dyvTSOwTipqeHhMhOrz6513r1sOKnpvQ7zkhlG8tPrpilwTxHQ==}
 
+  magic-string@0.30.19:
+    resolution: {integrity: sha512-2N21sPY9Ws53PZvsEpVtNuSW+ScYbQdp4b9qUaL+9QkHUrGFKo56Lg9Emg5s9V/qrtNBmiR01sYhUOwu3H+VOw==}
+
   magicast@0.3.5:
     resolution: {integrity: sha512-L0WhttDl+2BOsybvEOLK7fW3UA0OQ0IQ2d6Zl2x/a6vVRs3bAY0ECOSHHeL5jD+SbOpOCUEi0y1DgHEn9Qn1AQ==}
 
@@ -12784,15 +12787,18 @@ packages:
     resolution: {integrity: sha512-CHhPh+UNHD2GTXNYhPWLnU8ONHdI+5DI+4EYIAOaiD63rHeYlZvyh8P+in5999TTSFgUYuKUAjzRI4mdh/p+2A==}
     engines: {node: '>=8.0'}
 
-  rolldown-plugin-dts@0.16.1:
-    resolution: {integrity: sha512-bEfJpvhHm+h2cldNUbj8dT5tF9BJrJawPquScFdodob/55DqYkBis7iar8nkn8wSNIFKxwd2jP9ly/Z7lRME2w==}
+  rolldown-plugin-dts@0.16.5:
+    resolution: {integrity: sha512-bOAfJ7Tc11xK/Uou7KWYha25/Sy80G0DZkhX8WMYx6l8PUalR+bvVzQNuEqXafpKEisZfUHQrkhS2gZG76Xntw==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
+      '@ts-macro/tsc': ^0.3.6
       '@typescript/native-preview': '>=7.0.0-dev.20250601.1'
       rolldown: ^1.0.0-beta.9
       typescript: ^5.0.0
       vue-tsc: ~3.0.3
     peerDependenciesMeta:
+      '@ts-macro/tsc':
+        optional: true
       '@typescript/native-preview':
         optional: true
       typescript:
@@ -13911,8 +13917,8 @@ packages:
     resolution: {integrity: sha512-NoZ4roiN7LnbKn9QqE1amc9DJfzvZXxF4xDavcOWt1BPkdx+m+0gJuPM+S0vCe7zTJMYUP0R8pO2XMr+Y8oLIg==}
     engines: {node: '>=6'}
 
-  tsdown@0.15.0:
-    resolution: {integrity: sha512-xbz8tvdlB2wspocZWcJQhZNDLJC+sKV+sTIpiRgfUiQCUxLFGnUZUPc9KoKp3nfMeXQqTyMi6FM9/SasSj+csQ==}
+  tsdown@0.15.1:
+    resolution: {integrity: sha512-USTr2wS5OIyohR8Sp09rp5mXVwOX4YvVRqarS9I9jIhF+PqgtVSMXG4vBrHGY1OficNcLT5Z75pSoxd2uU+BYg==}
     engines: {node: '>=20.19.0'}
     hasBin: true
     peerDependencies:
@@ -24192,8 +24198,8 @@ snapshots:
       '@typescript-eslint/parser': 8.43.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2)
       eslint: 9.35.0(jiti@2.5.1)
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import-x@4.16.1(@typescript-eslint/utils@8.43.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2))(eslint-import-resolver-node@0.3.9)(eslint@9.35.0(jiti@2.5.1)))(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.43.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2))(eslint@9.35.0(jiti@2.5.1)))(eslint@9.35.0(jiti@2.5.1))
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.43.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2))(eslint-import-resolver-typescript@3.10.1)(eslint@9.35.0(jiti@2.5.1))
+      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import-x@4.16.1(@typescript-eslint/utils@8.43.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2))(eslint-import-resolver-node@0.3.9)(eslint@9.35.0(jiti@2.5.1)))(eslint-plugin-import@2.32.0)(eslint@9.35.0(jiti@2.5.1))
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.43.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2))(eslint@9.35.0(jiti@2.5.1))
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.35.0(jiti@2.5.1))
       eslint-plugin-react: 7.37.5(eslint@9.35.0(jiti@2.5.1))
       eslint-plugin-react-hooks: 5.2.0(eslint@9.35.0(jiti@2.5.1))
@@ -24223,7 +24229,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.10.1(eslint-plugin-import-x@4.16.1(@typescript-eslint/utils@8.43.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2))(eslint-import-resolver-node@0.3.9)(eslint@9.35.0(jiti@2.5.1)))(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.43.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2))(eslint@9.35.0(jiti@2.5.1)))(eslint@9.35.0(jiti@2.5.1)):
+  eslint-import-resolver-typescript@3.10.1(eslint-plugin-import-x@4.16.1(@typescript-eslint/utils@8.43.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2))(eslint-import-resolver-node@0.3.9)(eslint@9.35.0(jiti@2.5.1)))(eslint-plugin-import@2.32.0)(eslint@9.35.0(jiti@2.5.1)):
     dependencies:
       '@nolyfill/is-core-module': 1.0.39
       debug: 4.4.1
@@ -24234,7 +24240,7 @@ snapshots:
       tinyglobby: 0.2.15
       unrs-resolver: 1.11.1
     optionalDependencies:
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.43.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2))(eslint-import-resolver-typescript@3.10.1)(eslint@9.35.0(jiti@2.5.1))
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.43.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2))(eslint@9.35.0(jiti@2.5.1))
       eslint-plugin-import-x: 4.16.1(@typescript-eslint/utils@8.43.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2))(eslint-import-resolver-node@0.3.9)(eslint@9.35.0(jiti@2.5.1))
     transitivePeerDependencies:
       - supports-color
@@ -24252,17 +24258,6 @@ snapshots:
     optionalDependencies:
       eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.43.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2))(eslint-import-resolver-typescript@4.4.4)(eslint@9.35.0(jiti@2.5.1))
       eslint-plugin-import-x: 4.16.1(@typescript-eslint/utils@8.43.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2))(eslint-import-resolver-node@0.3.9)(eslint@9.35.0(jiti@2.5.1))
-    transitivePeerDependencies:
-      - supports-color
-
-  eslint-module-utils@2.12.1(@typescript-eslint/parser@8.43.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@9.35.0(jiti@2.5.1)):
-    dependencies:
-      debug: 3.2.7
-    optionalDependencies:
-      '@typescript-eslint/parser': 8.43.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2)
-      eslint: 9.35.0(jiti@2.5.1)
-      eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import-x@4.16.1(@typescript-eslint/utils@8.43.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2))(eslint-import-resolver-node@0.3.9)(eslint@9.35.0(jiti@2.5.1)))(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.43.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2))(eslint@9.35.0(jiti@2.5.1)))(eslint@9.35.0(jiti@2.5.1))
     transitivePeerDependencies:
       - supports-color
 
@@ -24317,35 +24312,6 @@ snapshots:
       '@typescript-eslint/utils': 8.43.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2)
       eslint-import-resolver-node: 0.3.9
     transitivePeerDependencies:
-      - supports-color
-
-  eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.43.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2))(eslint-import-resolver-typescript@3.10.1)(eslint@9.35.0(jiti@2.5.1)):
-    dependencies:
-      '@rtsao/scc': 1.1.0
-      array-includes: 3.1.9
-      array.prototype.findlastindex: 1.2.6
-      array.prototype.flat: 1.3.3
-      array.prototype.flatmap: 1.3.3
-      debug: 3.2.7
-      doctrine: 2.1.0
-      eslint: 9.35.0(jiti@2.5.1)
-      eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.43.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@9.35.0(jiti@2.5.1))
-      hasown: 2.0.2
-      is-core-module: 2.16.1
-      is-glob: 4.0.3
-      minimatch: 3.1.2
-      object.fromentries: 2.0.8
-      object.groupby: 1.0.3
-      object.values: 1.2.1
-      semver: 6.3.1
-      string.prototype.trimend: 1.0.9
-      tsconfig-paths: 3.15.0
-    optionalDependencies:
-      '@typescript-eslint/parser': 8.43.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2)
-    transitivePeerDependencies:
-      - eslint-import-resolver-typescript
-      - eslint-import-resolver-webpack
       - supports-color
 
   eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.43.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2))(eslint-import-resolver-typescript@4.4.4)(eslint@9.35.0(jiti@2.5.1)):
@@ -26870,6 +26836,10 @@ snapshots:
   lz-string@1.5.0: {}
 
   magic-string@0.30.18:
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.5.5
+
+  magic-string@0.30.19:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
 
@@ -29779,7 +29749,7 @@ snapshots:
       semver-compare: 1.0.0
       sprintf-js: 1.1.3
 
-  rolldown-plugin-dts@0.16.1(rolldown@1.0.0-beta.37)(typescript@5.9.2):
+  rolldown-plugin-dts@0.16.5(rolldown@1.0.0-beta.37)(typescript@5.9.2):
     dependencies:
       '@babel/generator': 7.28.3
       '@babel/parser': 7.28.4
@@ -29789,6 +29759,7 @@ snapshots:
       debug: 4.4.1
       dts-resolver: 2.1.2
       get-tsconfig: 4.10.1
+      magic-string: 0.30.19
       rolldown: 1.0.0-beta.37
     optionalDependencies:
       typescript: 5.9.2
@@ -31279,7 +31250,7 @@ snapshots:
       minimist: 1.2.8
       strip-bom: 3.0.0
 
-  tsdown@0.15.0(typescript@5.9.2):
+  tsdown@0.15.1(typescript@5.9.2):
     dependencies:
       ansis: 4.1.0
       cac: 6.7.14
@@ -31289,7 +31260,7 @@ snapshots:
       empathic: 2.0.0
       hookable: 5.5.3
       rolldown: 1.0.0-beta.37
-      rolldown-plugin-dts: 0.16.1(rolldown@1.0.0-beta.37)(typescript@5.9.2)
+      rolldown-plugin-dts: 0.16.5(rolldown@1.0.0-beta.37)(typescript@5.9.2)
       semver: 7.7.2
       tinyexec: 1.0.1
       tinyglobby: 0.2.15
@@ -31298,6 +31269,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.2
     transitivePeerDependencies:
+      - '@ts-macro/tsc'
       - '@typescript/native-preview'
       - oxc-resolver
       - supports-color
