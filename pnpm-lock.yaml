@@ -373,8 +373,8 @@ catalogs:
       specifier: 3.2.1
       version: 3.2.1
     renovate:
-      specifier: 41.119.5
-      version: 41.119.5
+      specifier: 41.121.1
+      version: 41.121.1
     schema-dts:
       specifier: 1.1.5
       version: 1.1.5
@@ -511,7 +511,7 @@ importers:
         version: 3.6.2
       renovate:
         specifier: 'catalog:'
-        version: 41.119.5(encoding@0.1.13)(typanion@3.14.0)
+        version: 41.121.1(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: 'catalog:'
         version: 15.2.2
@@ -4602,16 +4602,16 @@ packages:
     resolution: {integrity: sha512-xRf72lk7xHNvbenA4sp4Of/90QDdRW0CRYT+V+EbqpUXu1xsXtedHai34cTU6VGe7C1hUukxxE9eYTtIpYrx5g==}
     engines: {node: '>=18.12'}
 
-  '@pnpm/constants@1001.3.0':
-    resolution: {integrity: sha512-ZFRekNHbDlu//67Byg+mG8zmtmCsfBhNsg1wKBLRtF7VjH+Q5TDGMX0+8aJYSikQDuzM2FOhvQcDwyjILKshJQ==}
+  '@pnpm/constants@1001.3.1':
+    resolution: {integrity: sha512-2hf0s4pVrVEH8RvdJJ7YRKjQdiG8m0iAT26TTqXnCbK30kKwJW69VLmP5tED5zstmDRXcOeH5eRcrpkdwczQ9g==}
     engines: {node: '>=18.12'}
 
   '@pnpm/constants@6.1.0':
     resolution: {integrity: sha512-L6AiU3OXv9kjKGTJN9j8n1TeJGDcLX9atQlZvAkthlvbXjvKc5SKNWESc/eXhr5nEfuMWhQhiKHDJCpYejmeCQ==}
     engines: {node: '>=14.19'}
 
-  '@pnpm/error@1000.0.4':
-    resolution: {integrity: sha512-22mG/Mq4u2r7gr2+XY5j4GlN7J4Mg4WiCfT9flvsUc1uZecShocv6WkyoA20qs14M64f6I+aaWB6b6xsDiITlg==}
+  '@pnpm/error@1000.0.5':
+    resolution: {integrity: sha512-GjH0TPjbVNrPnl/BAGoFuBLJ2sFfXNKbS33lll/Ehe9yw0fyc8Kdw7kO9if37yQqn6vaa4dAHKkPllum7f/IPQ==}
     engines: {node: '>=18.12'}
 
   '@pnpm/error@4.0.0':
@@ -4622,8 +4622,8 @@ packages:
     resolution: {integrity: sha512-ogUZCGf0/UILZt6d8PsO4gA4pXh7f0BumXeFkcCe4AQ65PXPKfAkHC0C30Lheh2EgFOpLZm3twDP1Eiww18gew==}
     engines: {node: '>=14.19'}
 
-  '@pnpm/parse-overrides@1001.0.2':
-    resolution: {integrity: sha512-1GgUm9XJpEKQvaWGd8N55c9SlGzViN16vSC/F6FU2o28SPwOgw1aOs1A8v5hcQOWL3iEk1N/s9z0Zruq+2pqzw==}
+  '@pnpm/parse-overrides@1001.0.3':
+    resolution: {integrity: sha512-Ctu3m3cnGscQM9SQjnBVzrw6C4ZI4DBkotEOYv1dyRF0xc+aktGNDnrx59O/hnWU8PbsQ9PT5LmAO/GkdlrM/Q==}
     engines: {node: '>=18.12'}
 
   '@pnpm/parse-wanted-dependency@1001.0.0':
@@ -12976,8 +12976,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@41.119.5:
-    resolution: {integrity: sha512-z9y86GdE3K6AlFd7ue7jaIETEya/o8oBTPKBEVeXI3JYZXB3wEkh9gazXEZZytL6x/5rEbSIi9gBaDQwQ78zvw==}
+  renovate@41.121.1:
+    resolution: {integrity: sha512-ZpatVDPexxRbMJ9mwMGZvU3+IQ+hxN89kTb1AmO8eE9Ks/60W0dk9f2Rsr0vqAF1ITSm7KSn2csmqkSObDh+3w==}
     engines: {node: ^22.13.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -19218,17 +19218,17 @@ snapshots:
   '@pnpm/catalogs.resolver@1000.0.5':
     dependencies:
       '@pnpm/catalogs.protocol-parser': 1001.0.0
-      '@pnpm/error': 1000.0.4
+      '@pnpm/error': 1000.0.5
 
   '@pnpm/catalogs.types@1000.0.0': {}
 
-  '@pnpm/constants@1001.3.0': {}
+  '@pnpm/constants@1001.3.1': {}
 
   '@pnpm/constants@6.1.0': {}
 
-  '@pnpm/error@1000.0.4':
+  '@pnpm/error@1000.0.5':
     dependencies:
-      '@pnpm/constants': 1001.3.0
+      '@pnpm/constants': 1001.3.1
 
   '@pnpm/error@4.0.0':
     dependencies:
@@ -19238,11 +19238,11 @@ snapshots:
     dependencies:
       graceful-fs: 4.2.11
 
-  '@pnpm/parse-overrides@1001.0.2':
+  '@pnpm/parse-overrides@1001.0.3':
     dependencies:
       '@pnpm/catalogs.resolver': 1000.0.5
       '@pnpm/catalogs.types': 1000.0.0
-      '@pnpm/error': 1000.0.4
+      '@pnpm/error': 1000.0.5
       '@pnpm/parse-wanted-dependency': 1001.0.0
 
   '@pnpm/parse-wanted-dependency@1001.0.0':
@@ -30065,7 +30065,7 @@ snapshots:
       lodash: 4.17.21
       strip-ansi: 6.0.1
 
-  renovate@41.119.5(encoding@0.1.13)(typanion@3.14.0):
+  renovate@41.121.1(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.879.0
       '@aws-sdk/client-ec2': 3.879.0
@@ -30091,7 +30091,7 @@ snapshots:
       '@opentelemetry/sdk-trace-base': 2.1.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-node': 2.1.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/semantic-conventions': 1.37.0
-      '@pnpm/parse-overrides': 1001.0.2
+      '@pnpm/parse-overrides': 1001.0.3
       '@qnighy/marshal': 0.1.3
       '@renovatebot/detect-tools': 1.1.0
       '@renovatebot/kbpgp': 4.0.3
