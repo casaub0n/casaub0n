@@ -373,8 +373,8 @@ catalogs:
       specifier: 3.2.1
       version: 3.2.1
     renovate:
-      specifier: 41.118.0
-      version: 41.118.0
+      specifier: 41.119.5
+      version: 41.119.5
     schema-dts:
       specifier: 1.1.5
       version: 1.1.5
@@ -511,7 +511,7 @@ importers:
         version: 3.6.2
       renovate:
         specifier: 'catalog:'
-        version: 41.118.0(encoding@0.1.13)(typanion@3.14.0)
+        version: 41.119.5(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: 'catalog:'
         version: 15.2.2
@@ -7794,6 +7794,10 @@ packages:
     resolution: {integrity: sha512-2uM9rYjPvyq39NwLRqaiLtWHyDC1FvryJDa2ATTVims5YAS4PupsEQsDvP14FqhFr0P49CYDugi59xaxJlTXRA==}
     engines: {node: '>=20'}
 
+  commander@14.0.1:
+    resolution: {integrity: sha512-2JkV3gUZUVrbNA+1sjBOYLsMZ5cEEl8GTFP2a4AVz5hvasAMCQ1D2l2le/cX+pV4N6ZU17zjUahLpIXRrnWL8A==}
+    engines: {node: '>=20'}
+
   commander@2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
 
@@ -12903,8 +12907,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@41.118.0:
-    resolution: {integrity: sha512-geufHyxHqQFHOysUgEKnOLU0EcjiDjB2HbBssyYSMLvi8QJaS7Y1vav14mz6IyK0pHDNOTfuWPYDm3wnWks0Hw==}
+  renovate@41.119.5:
+    resolution: {integrity: sha512-z9y86GdE3K6AlFd7ue7jaIETEya/o8oBTPKBEVeXI3JYZXB3wEkh9gazXEZZytL6x/5rEbSIi9gBaDQwQ78zvw==}
     engines: {node: ^22.13.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -23384,6 +23388,8 @@ snapshots:
 
   commander@14.0.0: {}
 
+  commander@14.0.1: {}
+
   commander@2.20.3: {}
 
   commander@4.1.1: {}
@@ -24172,7 +24178,7 @@ snapshots:
   editorconfig@3.0.1:
     dependencies:
       '@one-ini/wasm': 0.2.0
-      commander: 14.0.0
+      commander: 14.0.1
       minimatch: 10.0.1
       semver: 7.7.2
 
@@ -29881,7 +29887,7 @@ snapshots:
       lodash: 4.17.21
       strip-ansi: 6.0.1
 
-  renovate@41.118.0(encoding@0.1.13)(typanion@3.14.0):
+  renovate@41.119.5(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.879.0
       '@aws-sdk/client-ec2': 3.879.0
@@ -29928,7 +29934,7 @@ snapshots:
       chalk: 5.6.2
       changelog-filename-regex: 2.0.1
       clean-git-ref: 2.0.1
-      commander: 14.0.0
+      commander: 14.0.1
       conventional-commits-detector: 1.0.3
       croner: 9.1.0
       cronstrue: 3.3.0
