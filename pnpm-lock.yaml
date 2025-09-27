@@ -460,8 +460,8 @@ catalogs:
       specifier: 6.0.1
       version: 6.0.1
     wrangler:
-      specifier: 4.40.0
-      version: 4.40.0
+      specifier: 4.40.2
+      version: 4.40.2
     zod:
       specifier: 4.1.11
       version: 4.1.11
@@ -560,7 +560,7 @@ importers:
         version: 66.5.2(postcss@8.5.6)(vite@7.1.7(@types/node@24.3.0)(jiti@2.5.1)(lightningcss@1.30.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1))
       wrangler:
         specifier: 'catalog:'
-        version: 4.40.0(@cloudflare/workers-types@4.20250922.0)(bufferutil@4.0.9)
+        version: 4.40.2(@cloudflare/workers-types@4.20250922.0)(bufferutil@4.0.9)
 
   apps/casaub0n-page:
     dependencies:
@@ -5332,10 +5332,6 @@ packages:
   '@sindresorhus/is@4.6.0':
     resolution: {integrity: sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==}
     engines: {node: '>=10'}
-
-  '@sindresorhus/is@7.0.2':
-    resolution: {integrity: sha512-d9xRovfKNz1SKieM0qJdO+PQonjnnIfSNWfHYnBSJ9hkjm0ZPw6HlxscDXYstp3z+7V2GOFHc+J0CYrYTjqCJw==}
-    engines: {node: '>=18'}
 
   '@sindresorhus/is@7.1.0':
     resolution: {integrity: sha512-7F/yz2IphV39hiS2zB4QYVkivrptHHh0K8qJJd9HhuWSdvf8AN7NpebW3CcDZDBQsUPMoDKWsY2WWgW7bqOcfA==}
@@ -15165,8 +15161,8 @@ packages:
       '@cloudflare/workers-types':
         optional: true
 
-  wrangler@4.40.0:
-    resolution: {integrity: sha512-HCPNUz599h9emi6qjppn92kxS6E12QvD0A3K087CZFEysw6lO1saZUdJ8azk0LsYGYDnrkBs5TzUOEfpuccwWA==}
+  wrangler@4.40.2:
+    resolution: {integrity: sha512-wcev8GF6GU4ME5AsYY/gUehHrGdRiUCkifuyCeuVvpOtha3TMK4/s39x+jLuJBRtibpgejDekO68rqxfamf16A==}
     engines: {node: '>=18.0.0'}
     hasBin: true
     peerDependencies:
@@ -19320,7 +19316,7 @@ snapshots:
   '@poppinss/dumper@0.6.4':
     dependencies:
       '@poppinss/colors': 4.1.5
-      '@sindresorhus/is': 7.0.2
+      '@sindresorhus/is': 7.1.0
       supports-color: 10.2.0
 
   '@poppinss/exception@1.2.2': {}
@@ -19886,8 +19882,6 @@ snapshots:
   '@sinclair/typebox@0.34.41': {}
 
   '@sindresorhus/is@4.6.0': {}
-
-  '@sindresorhus/is@7.0.2': {}
 
   '@sindresorhus/is@7.1.0': {}
 
@@ -32860,7 +32854,7 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  wrangler@4.40.0(@cloudflare/workers-types@4.20250922.0)(bufferutil@4.0.9):
+  wrangler@4.40.2(@cloudflare/workers-types@4.20250922.0)(bufferutil@4.0.9):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.4.0
       '@cloudflare/unenv-preset': 2.7.4(unenv@2.0.0-rc.21)(workerd@1.20250924.0)
