@@ -373,8 +373,8 @@ catalogs:
       specifier: 3.2.1
       version: 3.2.1
     renovate:
-      specifier: 41.132.0
-      version: 41.132.0
+      specifier: 41.132.2
+      version: 41.132.2
     schema-dts:
       specifier: 1.1.5
       version: 1.1.5
@@ -511,7 +511,7 @@ importers:
         version: 3.6.2
       renovate:
         specifier: 'catalog:'
-        version: 41.132.0(encoding@0.1.13)(typanion@3.14.0)
+        version: 41.132.2(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: 'catalog:'
         version: 15.2.2
@@ -7158,8 +7158,8 @@ packages:
     resolution: {integrity: sha512-aVNobHnJqLiUelTaHat9DZ1qM2w0C0Eym4LPI/3JxOnSokGVdsl1T1kN7TFvsEAD8G47A6VKQ0TVHqbBnYMJlQ==}
     engines: {node: '>=12.0.0'}
 
-  better-sqlite3@12.3.0:
-    resolution: {integrity: sha512-FFf+rsghyvXQIPV/6PDUj05EsuZA1b0drGLzNgtrELkXnJKUH6NNM2h7Ce7dkA6vvPOM4SOoUIDGRPy3yRKmqw==}
+  better-sqlite3@12.4.1:
+    resolution: {integrity: sha512-3yVdyZhklTiNrtg+4WqHpJpFDd+WHTg2oM7UcR80GqL05AOV0xEJzc6qNvFYoEtE+hRp1n9MpN6/+4yhlGkDXQ==}
     engines: {node: 20.x || 22.x || 23.x || 24.x}
 
   bidi-js@1.0.3:
@@ -12880,8 +12880,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@41.132.0:
-    resolution: {integrity: sha512-jr1jLG1gK3X3fM2i942JgxLoMwAH7oSCO8OwUGEFcMWw5HHdR7VBwLQujtvaaztjl2ZWvFI8c/MHmVGc2u1Ukg==}
+  renovate@41.132.2:
+    resolution: {integrity: sha512-7gUhugQIsiyO/ACMdwHSsEy6wCHJhXihNaQmpHiQAUCdYGgeySFKx1YKr+lj2W0pUH6j72iuIhikMhj1VEo9xA==}
     engines: {node: ^22.13.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -22714,7 +22714,7 @@ snapshots:
     dependencies:
       open: 8.4.2
 
-  better-sqlite3@12.3.0:
+  better-sqlite3@12.4.1:
     dependencies:
       bindings: 1.5.0
       prebuild-install: 7.1.3
@@ -29886,7 +29886,7 @@ snapshots:
       lodash: 4.17.21
       strip-ansi: 6.0.1
 
-  renovate@41.132.0(encoding@0.1.13)(typanion@3.14.0):
+  renovate@41.132.2(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.879.0
       '@aws-sdk/client-ec2': 3.879.0
@@ -30007,7 +30007,7 @@ snapshots:
       yaml: 2.8.1
       zod: 3.25.76
     optionalDependencies:
-      better-sqlite3: 12.3.0
+      better-sqlite3: 12.4.1
       openpgp: 6.2.2
       re2: 1.22.1
     transitivePeerDependencies:
