@@ -142,8 +142,8 @@ catalogs:
       specifier: 30.0.0
       version: 30.0.0
     '@types/jsdom':
-      specifier: 21.1.7
-      version: 21.1.7
+      specifier: 27.0.0
+      version: 27.0.0
     '@types/mock-fs':
       specifier: 4.13.4
       version: 4.13.4
@@ -1511,7 +1511,7 @@ importers:
         version: link:../eslint-config/base
       '@types/jsdom':
         specifier: 'catalog:'
-        version: 21.1.7
+        version: 27.0.0
       '@types/node':
         specifier: 'catalog:'
         version: 22.18.7
@@ -1560,7 +1560,7 @@ importers:
         version: link:../eslint-config/base
       '@types/jsdom':
         specifier: 'catalog:'
-        version: 21.1.7
+        version: 27.0.0
       '@types/node':
         specifier: 'catalog:'
         version: 22.18.7
@@ -6028,6 +6028,9 @@ packages:
   '@types/jsdom@21.1.7':
     resolution: {integrity: sha512-yOriVnggzrnQ3a9OKOCxaVuSug3w3/SbOj5i7VwXWZEyUNl3bLF9V3MfxGbZKuwqJOQyRfqXyROBB1CoZLFWzA==}
 
+  '@types/jsdom@27.0.0':
+    resolution: {integrity: sha512-NZyFl/PViwKzdEkQg96gtnB8wm+1ljhdDay9ahn4hgb+SfVtPCbm3TlmDUFXTA+MGN3CijicnMhG18SI5H3rFw==}
+
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
@@ -6067,9 +6070,6 @@ packages:
 
   '@types/node@16.18.11':
     resolution: {integrity: sha512-3oJbGBUWuS6ahSnEq1eN2XrCyf4YsWI8OyCvo7c64zQJNplk3mO84t53o8lfTk+2ji59g5ycfc6qQ3fdHliHuA==}
-
-  '@types/node@22.18.6':
-    resolution: {integrity: sha512-r8uszLPpeIWbNKtvWRt/DbVi5zbqZyj1PTmhRMqBMvDnaz1QpmSKujUtJLrqGZeoM8v72MfYggDceY4K1itzWQ==}
 
   '@types/node@22.18.7':
     resolution: {integrity: sha512-3E97nlWEVp2V6J7aMkR8eOnw/w0pArPwf/5/W0865f+xzBoGL/ZuHkTAKAGN7cOWNwd+sG+hZOqj+fjzeHS75g==}
@@ -18244,7 +18244,7 @@ snapshots:
       '@jest/schemas': 30.0.5
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 22.18.7
+      '@types/node': 24.3.0
       '@types/yargs': 17.0.33
       chalk: 4.1.2
 
@@ -19619,11 +19619,11 @@ snapshots:
   '@simple-libs/child-process-utils@1.0.1':
     dependencies:
       '@simple-libs/stream-utils': 1.1.0
-      '@types/node': 22.18.6
+      '@types/node': 22.18.7
 
   '@simple-libs/stream-utils@1.1.0':
     dependencies:
-      '@types/node': 22.18.6
+      '@types/node': 22.18.7
 
   '@sinclair/typebox@0.25.24': {}
 
@@ -21035,7 +21035,7 @@ snapshots:
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 6.0.0
-      '@types/node': 22.18.7
+      '@types/node': 24.3.0
 
   '@types/har-format@1.2.16': {}
 
@@ -21070,6 +21070,12 @@ snapshots:
   '@types/jsdom@21.1.7':
     dependencies:
       '@types/node': 22.18.7
+      '@types/tough-cookie': 4.0.5
+      parse5: 7.3.0
+
+  '@types/jsdom@27.0.0':
+    dependencies:
+      '@types/node': 24.3.0
       '@types/tough-cookie': 4.0.5
       parse5: 7.3.0
 
@@ -21111,10 +21117,6 @@ snapshots:
 
   '@types/node@16.18.11': {}
 
-  '@types/node@22.18.6':
-    dependencies:
-      undici-types: 6.21.0
-
   '@types/node@22.18.7':
     dependencies:
       undici-types: 6.21.0
@@ -21133,7 +21135,7 @@ snapshots:
 
   '@types/pg@8.11.6':
     dependencies:
-      '@types/node': 22.18.7
+      '@types/node': 24.3.0
       pg-protocol: 1.10.3
       pg-types: 4.1.0
 
@@ -21159,7 +21161,7 @@ snapshots:
 
   '@types/through@0.0.33':
     dependencies:
-      '@types/node': 22.18.7
+      '@types/node': 24.3.0
 
   '@types/tinycolor2@1.4.6': {}
 
@@ -26500,7 +26502,7 @@ snapshots:
       '@jest/expect': 30.2.0
       '@jest/test-result': 30.2.0
       '@jest/types': 30.2.0
-      '@types/node': 22.18.7
+      '@types/node': 24.3.0
       chalk: 4.1.2
       co: 4.6.0
       dedent: 1.7.0
@@ -26616,7 +26618,7 @@ snapshots:
       '@jest/environment': 30.2.0
       '@jest/fake-timers': 30.2.0
       '@jest/types': 30.2.0
-      '@types/node': 22.18.7
+      '@types/node': 24.3.0
       jest-mock: 30.2.0
       jest-util: 30.2.0
       jest-validate: 30.2.0
@@ -26840,13 +26842,13 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.18.7
+      '@types/node': 24.3.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
   jest-worker@30.2.0:
     dependencies:
-      '@types/node': 22.18.7
+      '@types/node': 24.3.0
       '@ungap/structured-clone': 1.3.0
       jest-util: 30.2.0
       merge-stream: 2.0.0
