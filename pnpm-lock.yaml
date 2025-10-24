@@ -457,8 +457,8 @@ catalogs:
       specifier: 6.0.1
       version: 6.0.1
     wrangler:
-      specifier: 4.44.0
-      version: 4.44.0
+      specifier: 4.45.0
+      version: 4.45.0
     zod:
       specifier: 4.1.12
       version: 4.1.12
@@ -557,7 +557,7 @@ importers:
         version: 66.5.4(postcss@8.5.6)(vite@7.1.12(@types/node@24.3.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(tsx@4.20.6)(yaml@2.8.1))
       wrangler:
         specifier: 'catalog:'
-        version: 4.44.0(@cloudflare/workers-types@4.20251008.0)(bufferutil@4.0.9)
+        version: 4.45.0(@cloudflare/workers-types@4.20251008.0)(bufferutil@4.0.9)
 
   apps/casaub0n-page:
     dependencies:
@@ -11548,8 +11548,8 @@ packages:
     engines: {node: '>=18.0.0'}
     hasBin: true
 
-  miniflare@4.20251011.0:
-    resolution: {integrity: sha512-DlZ7vR5q/RE9eLsxsrXzfSZIF2f6O5k0YsFrSKhWUtdefyGtJt4sSpR6V+Af/waaZ6+zIFy9lsknHBCm49sEYA==}
+  miniflare@4.20251011.1:
+    resolution: {integrity: sha512-Qbw1Z8HTYM1adWl6FAtzhrj34/6dPRDPwdYOx21dkae8a/EaxbMzRIPbb4HKVGMVvtqbK1FaRCgDLVLolNzGHg==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -15271,8 +15271,8 @@ packages:
       '@cloudflare/workers-types':
         optional: true
 
-  wrangler@4.44.0:
-    resolution: {integrity: sha512-BLOUigckcWZ0r4rm7b5PuaTpb9KP9as0XeCRSJ8kqcNgXcKoUD3Ij8FlPvN25KybLnFnetaO0ZdfRYUPWle4qw==}
+  wrangler@4.45.0:
+    resolution: {integrity: sha512-2qM6bHw8l7r89Z9Y5A7Wn4L9U+dFoLjYgEUVpqy7CcmXpppL3QIYqU6rU5lre7/SRzBuPu/H93Vwfh538gZ3iw==}
     engines: {node: '>=18.0.0'}
     hasBin: true
     peerDependencies:
@@ -28294,7 +28294,7 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  miniflare@4.20251011.0(bufferutil@4.0.9):
+  miniflare@4.20251011.1(bufferutil@4.0.9):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       acorn: 8.14.0
@@ -33044,13 +33044,13 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  wrangler@4.44.0(@cloudflare/workers-types@4.20251008.0)(bufferutil@4.0.9):
+  wrangler@4.45.0(@cloudflare/workers-types@4.20251008.0)(bufferutil@4.0.9):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.4.0
       '@cloudflare/unenv-preset': 2.7.8(unenv@2.0.0-rc.21)(workerd@1.20251011.0)
       blake3-wasm: 2.1.5
       esbuild: 0.25.4
-      miniflare: 4.20251011.0(bufferutil@4.0.9)
+      miniflare: 4.20251011.1(bufferutil@4.0.9)
       path-to-regexp: 6.3.0
       unenv: 2.0.0-rc.21
       workerd: 1.20251011.0
