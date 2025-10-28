@@ -1,4 +1,3 @@
-import { FlatCompat } from "@eslint/eslintrc";
 import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 
@@ -21,9 +20,9 @@ import { typescriptRules } from "@casaub0n/eslint-config-utils/typescript-rules"
 import { importX } from "eslint-plugin-import-x";
 import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 
-const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
-});
+// const compat = new FlatCompat({
+//   baseDirectory: import.meta.dirname,
+// });
 
 /**
  * This config compatible with TypeScript project, YAML file, JavaScript file.
@@ -63,29 +62,29 @@ const config = ({
     pluginJs.configs.recommended,
     ...tseslint.configs.strict,
     // https://typescript-eslint.io/getting-started/typed-linting/
-    ...compat.config({
-      extends: ["next", "next/core-web-vitals", "next/typescript"],
-      settings: {
-        next: {
-          rootDir: rootDirectory,
-        },
-      },
-    }),
+    // ...compat.config({
+    //   extends: ["next", "next/core-web-vitals", "next/typescript"],
+    //   settings: {
+    //     next: {
+    //       rootDir: rootDirectory,
+    //     },
+    //   },
+    // }),
     {
       files: ["**/*.cts", "**/*.ctsx", "**/*.mts", "**/*.mtsx", "**/*.ts", "**/*.tsx"],
       ignores: [...ignoreConfig, "**/*.mjs", "**/*.js"],
-      extends: [
-        // ...compat.extends("next/core-web-vitals", "next/typescript"),
-        ...compat.config({
-          extends: ["next", "next/core-web-vitals", "next/typescript"],
-          settings: {
-            next: {
-              rootDir: rootDirectory,
-            },
-          },
-        }),
-        // ...tseslint.configs.stylistic,
-      ],
+      // extends: [
+      //   // ...compat.extends("next/core-web-vitals", "next/typescript"),
+      //   ...compat.config({
+      //     extends: ["next", "next/core-web-vitals", "next/typescript"],
+      //     settings: {
+      //       next: {
+      //         rootDir: rootDirectory,
+      //       },
+      //     },
+      //   }),
+      //   // ...tseslint.configs.stylistic,
+      // ],
       languageOptions: {
         ecmaVersion: "latest",
         parser: typescriptEslintParser,
@@ -118,7 +117,7 @@ const config = ({
       },
       plugins: {
         "unused-imports": unusedImports,
-        "@next/next": pluginNext,
+        next: pluginNext,
         /**
          * SyntaxError: Named export 'flatConfig' not found. The requested module '@next/eslint-plugin-next' is a CommonJS module, which may not support all module.exports as named exports.
 CommonJS modules can always be imported via the default export, for example using:
@@ -133,8 +132,8 @@ CommonJS modules can always be imported via the default export, for example usin
         ...typescriptRules,
         "@typescript-eslint/explicit-function-return-type": "off",
 
-        ...(pluginNext.configs.recommended.rules as TSESLint.TSESLint.FlatConfig.Rules),
-        ...(pluginNext.configs["core-web-vitals"].rules as TSESLint.TSESLint.FlatConfig.Rules),
+        // ...(pluginNext.configs.recommended.rules as TSESLint.TSESLint.FlatConfig.Rules),
+        // ...(pluginNext.configs["core-web-vitals"].rules as TSESLint.TSESLint.FlatConfig.Rules),
 
         // ...(flatConfig.recommended.plugins["@next/next"].configs.recommended
         //   .rules as TSESLint.TSESLint.FlatConfig.Rules),
@@ -161,6 +160,9 @@ CommonJS modules can always be imported via the default export, for example usin
         "import-x/resolver-next": createTypeScriptImportResolver({
           project: "tsconfig.{app,node}.json",
         }),
+        next: {
+          rootDir: rootDirectory,
+        },
       },
     },
     {
