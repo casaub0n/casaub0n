@@ -5,11 +5,15 @@ import { createRequire } from "node:module";
  * @see https://github.com/storybookjs/storybook/blob/a4b91eaf33dd38d6223aaf43fada8db94cf3ac77/code/frameworks/nextjs/README.md#getting-started
  */
 import path, { dirname, join } from "path";
+import { fileURLToPath } from "url";
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 import { VanillaExtractPlugin } from "@vanilla-extract/webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 const require = createRequire(import.meta.url);
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // https://github.com/storybookjs/storybook/tree/next/code/frameworks/nextjs
 
@@ -62,7 +66,7 @@ const config = {
           },
         ],
       },
-    }
+    },
   ],
   staticDirs: ["../../casaub0n-page/public"],
   framework: getAbsolutePath("@storybook/nextjs"),
@@ -70,7 +74,7 @@ const config = {
     disableTelemetry: true,
   },
   docs: {
-    defaultName: "Documentation"
+    defaultName: "Documentation",
   },
   // ignore type because this is dynamic config
   webpackFinal: async (config) => {
