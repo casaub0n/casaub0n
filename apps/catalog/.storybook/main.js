@@ -1,4 +1,4 @@
-import { createRequire } from "node:module";
+// import { createRequire } from "node:module";
 // @ts-check
 
 /**
@@ -10,7 +10,7 @@ import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 import { VanillaExtractPlugin } from "@vanilla-extract/webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
-const require = createRequire(import.meta.url);
+// const require = createRequire(import.meta.url);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -41,9 +41,9 @@ const config = {
             test: /\.css$/,
             sideEffects: true,
             use: [
-              require.resolve("style-loader"),
+              "style-loader",
               {
-                loader: require.resolve("css-loader"),
+                loader: "css-loader",
                 options: {},
               },
             ],
@@ -56,7 +56,7 @@ const config = {
             use: [
               MiniCssExtractPlugin.loader,
               {
-                loader: require.resolve("css-loader"),
+                loader: "css-loader",
                 options: {
                   // Required as image imports should be handled via JS/TS import statements
                   url: false,
@@ -95,5 +95,5 @@ const config = {
 export default config;
 
 function getAbsolutePath(value) {
-  return dirname(require.resolve(join(value, "package.json")));
+  return dirname(join(value, "package.json"));
 }
