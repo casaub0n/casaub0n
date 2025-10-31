@@ -1,4 +1,4 @@
-// import { createRequire } from "node:module";
+import { createRequire } from "node:module";
 // @ts-check
 
 /**
@@ -10,7 +10,7 @@ import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 import { VanillaExtractPlugin } from "@vanilla-extract/webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
-// const require = createRequire(import.meta.url);
+const requireNode = createRequire(import.meta.url);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -95,5 +95,5 @@ const config = {
 export default config;
 
 function getAbsolutePath(value) {
-  return dirname(join(value, "package.json"));
+  return dirname(requireNode.resolve(join(value, "package.json")));
 }
