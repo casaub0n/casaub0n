@@ -1,16 +1,14 @@
-import { createRequire } from "node:module";
-// @ts-check
-
 /**
  * @see https://github.com/storybookjs/storybook/blob/a4b91eaf33dd38d6223aaf43fada8db94cf3ac77/code/frameworks/nextjs/README.md#getting-started
  */
+// import { createRequire } from "node:module";
 import path, { dirname, join } from "path";
 import { fileURLToPath } from "url";
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 import { VanillaExtractPlugin } from "@vanilla-extract/webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
-const requireNode = createRequire(import.meta.url);
+// const requireNode = createRequire(import.meta.url);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -41,9 +39,9 @@ const config = {
             test: /\.css$/,
             sideEffects: true,
             use: [
-              "style-loader",
+              import.meta.resolve("style-loader"),
               {
-                loader: "css-loader",
+                loader: import.meta.resolve("css-loader"),
                 options: {},
               },
             ],
@@ -56,7 +54,7 @@ const config = {
             use: [
               MiniCssExtractPlugin.loader,
               {
-                loader: "css-loader",
+                loader: import.meta.resolve("css-loader"),
                 options: {
                   // Required as image imports should be handled via JS/TS import statements
                   url: false,
@@ -95,5 +93,5 @@ const config = {
 export default config;
 
 function getAbsolutePath(value) {
-  return dirname(requireNode.resolve(join(value, "package.json")));
+  return dirname(import.meta.resolve(join(value, "package.json")));
 }
