@@ -220,8 +220,8 @@ catalogs:
       specifier: 11.0.0
       version: 11.0.0
     effect:
-      specifier: 3.18.4
-      version: 3.18.4
+      specifier: 3.19.0
+      version: 3.19.0
     es-toolkit:
       specifier: 1.41.0
       version: 1.41.0
@@ -1532,7 +1532,7 @@ importers:
         version: 3.4.2
       effect:
         specifier: 'catalog:'
-        version: 3.18.4
+        version: 3.19.0
       es-toolkit:
         specifier: 'catalog:'
         version: 1.41.0
@@ -1609,7 +1609,7 @@ importers:
         version: 3.4.2
       effect:
         specifier: 'catalog:'
-        version: 3.18.4
+        version: 3.19.0
       es-toolkit:
         specifier: 'catalog:'
         version: 1.41.0
@@ -9031,6 +9031,9 @@ packages:
 
   effect@3.18.4:
     resolution: {integrity: sha512-b1LXQJLe9D11wfnOKAk3PKxuqYshQ0Heez+y5pnkd3jLj1yx9QhM72zZ9uUrOQyNvrs2GZZd/3maL0ZV18YuDA==}
+
+  effect@3.19.0:
+    resolution: {integrity: sha512-eFvvryWkbXvQ4Gak1Nadv9CW6U35+UUS/fIkF4c/Th8rs2u47g+tNkViYeVGliglNnR6Ai5Otl9tLbav3yZjXg==}
 
   electron-to-chromium@1.5.213:
     resolution: {integrity: sha512-xr9eRzSLNa4neDO0xVFrkXu3vyIzG4Ay08dApecw42Z1NbmCt+keEpXdvlYGVe0wtvY5dhW0Ay0lY0IOfsCg0Q==}
@@ -25114,6 +25117,11 @@ snapshots:
   ee-first@1.1.1: {}
 
   effect@3.18.4:
+    dependencies:
+      '@standard-schema/spec': 1.0.0
+      fast-check: 3.23.2
+
+  effect@3.19.0:
     dependencies:
       '@standard-schema/spec': 1.0.0
       fast-check: 3.23.2
