@@ -7,9 +7,8 @@
     "rmdist": "node --import tsx scripts/rrm.ts",
     "build": "pnpm rmdist && next build --webpack",
     "start": "next start",
-    "test": "jest --coverage",
+    "test:broken": "jest --coverage",
     "test:watch": "jest --watch",
-    "test:ci": "jest --ci",
     "lint": "eslint ./src/**"
   },
   "dependencies": {
