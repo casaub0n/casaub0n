@@ -1,15 +1,17 @@
-import { createRequire } from "node:module";
-// @ts-check
-
 /**
  * @see https://github.com/storybookjs/storybook/blob/a4b91eaf33dd38d6223aaf43fada8db94cf3ac77/code/frameworks/nextjs/README.md#getting-started
  */
 import path, { dirname, join } from "path";
+import { fileURLToPath } from "url";
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 import { VanillaExtractPlugin } from "@vanilla-extract/webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import { createRequire } from "node:module";
 
-const require = createRequire(import.meta.url);
+const requireNode = createRequire(import.meta.url);
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirnameNode = path.dirname(__filename);
 
 // https://github.com/storybookjs/storybook/tree/next/code/frameworks/nextjs
 
@@ -37,9 +39,9 @@ const config = {
             test: /\.css$/,
             sideEffects: true,
             use: [
-              require.resolve("style-loader"),
+              requireNode.resolve("style-loader"),
               {
-                loader: require.resolve("css-loader"),
+                loader: requireNode.resolve("css-loader"),
                 options: {},
               },
             ],
@@ -52,7 +54,7 @@ const config = {
             use: [
               MiniCssExtractPlugin.loader,
               {
-                loader: require.resolve("css-loader"),
+                loader: requireNode.resolve("css-loader"),
                 options: {
                   // Required as image imports should be handled via JS/TS import statements
                   url: false,
@@ -62,7 +64,7 @@ const config = {
           },
         ],
       },
-    }
+    },
   ],
   staticDirs: ["../../casaub0n-page/public"],
   framework: getAbsolutePath("@storybook/nextjs"),
@@ -70,7 +72,7 @@ const config = {
     disableTelemetry: true,
   },
   docs: {
-    defaultName: "Documentation"
+    defaultName: "Documentation",
   },
   // ignore type because this is dynamic config
   webpackFinal: async (config) => {
@@ -80,7 +82,7 @@ const config = {
     config.resolve.plugins.push(
       // @ts-ignore
       new TsconfigPathsPlugin({
-        configFile: path.resolve(__dirname, "../../casaub0n-page/tsconfig.json"),
+        configFile: path.resolve(__dirnameNode, "../../casaub0n-page/tsconfig.json"),
       }),
     );
 
@@ -91,5 +93,5 @@ const config = {
 export default config;
 
 function getAbsolutePath(value) {
-  return dirname(require.resolve(join(value, "package.json")));
+  return dirname(requireNode.resolve(join(value, "package.json")));
 }
