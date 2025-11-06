@@ -373,8 +373,8 @@ catalogs:
       specifier: 3.3.0
       version: 3.3.0
     renovate:
-      specifier: 41.171.4
-      version: 41.171.4
+      specifier: 41.173.0
+      version: 41.173.0
     schema-dts:
       specifier: 1.1.5
       version: 1.1.5
@@ -511,7 +511,7 @@ importers:
         version: 3.6.2
       renovate:
         specifier: 'catalog:'
-        version: 41.171.4(encoding@0.1.13)(typanion@3.14.0)
+        version: 41.173.0(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: 'catalog:'
         version: 15.2.3
@@ -10481,6 +10481,10 @@ packages:
     resolution: {integrity: sha512-+N0ngpO3e7cRUWOJAS7qw0IZIVc6XPrW4MlFBdD066F2L4k1L6ker3hLqSq7iXxU5tgS4WGkIUElWn5vogAEnw==}
     engines: {node: ^18.17.0 || >=20.5.0}
 
+  ini@6.0.0:
+    resolution: {integrity: sha512-IBTdIkzZNOpqm7q3dRqJvMaldXjDHWkEDfrwGEQTs5eaQMWV+djAhR+wahyNNMAa+qpbDUhBMVt4ZKNwpPm7xQ==}
+    engines: {node: ^20.17.0 || >=22.9.0}
+
   inquirer@7.3.3:
     resolution: {integrity: sha512-JG3eIAj5V9CwcGvuOmoo6LB9kbAYT8HXffUl6memuszlwDC/qvFAJw49XJ5NROSFNPxp3iQg1GqkFhaY/CR0IA==}
     engines: {node: '>=8.0.0'}
@@ -13397,8 +13401,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@41.171.4:
-    resolution: {integrity: sha512-AjrJzue7RKB7+UBCozZ2HD8jmAF1k42svjQmRq23R60VKi/EtkALp4C91z2Mxcs3ltDTvpTOxClcrh2FvlUQRg==}
+  renovate@41.173.0:
+    resolution: {integrity: sha512-znw6sYwp8tV3yipTxeKNI10Ao0pmDNnLMJ68gvLxnM3I0bnfVzg5TQYbiY1vwG24+K42jRDtKIudYeNzq/06aQ==}
     engines: {node: ^22.13.0 || ^24.10.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -15242,6 +15246,10 @@ packages:
   validate-npm-package-name@6.0.2:
     resolution: {integrity: sha512-IUoow1YUtvoBBC06dXs8bR8B9vuA3aJfmQNKMoaPG/OFsPmoQvw8xh+6Ye25Gx9DQhoEom3Pcu9MKHerm/NpUQ==}
     engines: {node: ^18.17.0 || >=20.5.0}
+
+  validate-npm-package-name@7.0.0:
+    resolution: {integrity: sha512-bwVk/OK+Qu108aJcMAEiU4yavHUI7aN20TgZNBj9MR2iU1zPUl1Z1Otr7771ExfYTPTvfN8ZJ1pbr5Iklgt4xg==}
+    engines: {node: ^20.17.0 || >=22.9.0}
 
   vary@1.1.2:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
@@ -26907,6 +26915,8 @@ snapshots:
 
   ini@5.0.0: {}
 
+  ini@6.0.0: {}
+
   inquirer@7.3.3:
     dependencies:
       ansi-escapes: 4.3.2
@@ -30602,7 +30612,7 @@ snapshots:
       lodash: 4.17.21
       strip-ansi: 6.0.1
 
-  renovate@41.171.4(encoding@0.1.13)(typanion@3.14.0):
+  renovate@41.173.0(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.922.0
       '@aws-sdk/client-ec2': 3.922.0
@@ -30676,7 +30686,7 @@ snapshots:
       graph-data-structure: 4.5.0
       handlebars: 4.7.8
       ignore: 7.0.5
-      ini: 5.0.0
+      ini: 6.0.0
       json-dup-key-validator: 1.0.3
       json-stringify-pretty-compact: 4.0.0
       json5: 2.2.3
@@ -30694,7 +30704,7 @@ snapshots:
       node-html-parser: 7.0.1
       p-all: 5.0.1
       p-map: 7.0.3
-      p-queue: 8.1.1
+      p-queue: 9.0.0
       p-throttle: 8.0.0
       parse-link-header: 2.0.0
       prettier: 3.6.2
@@ -30718,7 +30728,7 @@ snapshots:
       tslib: 2.8.1
       upath: 2.0.1
       url-join: 5.0.0
-      validate-npm-package-name: 6.0.2
+      validate-npm-package-name: 7.0.0
       xmldoc: 2.0.2
       yaml: 2.8.1
       zod: 3.25.76
@@ -32935,6 +32945,8 @@ snapshots:
   validate-npm-package-name@5.0.1: {}
 
   validate-npm-package-name@6.0.2: {}
+
+  validate-npm-package-name@7.0.0: {}
 
   vary@1.1.2: {}
 
