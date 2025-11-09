@@ -1,5 +1,5 @@
 import { defineConfig } from "eslint/config";
-import base from "./dist/index.js";
+import base from "./dist/index.mjs";
 
 export default defineConfig([
   ...base({
