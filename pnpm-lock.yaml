@@ -373,8 +373,8 @@ catalogs:
       specifier: 3.4.1
       version: 3.4.1
     renovate:
-      specifier: 42.5.2
-      version: 42.5.2
+      specifier: 42.6.1
+      version: 42.6.1
     schema-dts:
       specifier: 1.1.5
       version: 1.1.5
@@ -511,7 +511,7 @@ importers:
         version: 3.6.2
       renovate:
         specifier: 'catalog:'
-        version: 42.5.2(encoding@0.1.13)(typanion@3.14.0)
+        version: 42.6.1(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: 'catalog:'
         version: 15.3.0
@@ -13547,8 +13547,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@42.5.2:
-    resolution: {integrity: sha512-xQ1z1+jWPxJVWnExzU4cdJi6O6yN9gXgTaD6fi1wuAtt/qksiJwhxw0shQAjcEtDQsIOmbTytexBQkWDrngg0A==}
+  renovate@42.6.1:
+    resolution: {integrity: sha512-pNyzUBczTxxUSR6HbBhV7B5SoYx5ooRHTQs0xMZqzW+74pDZRA/Mot15ROJqYz+wh7C0UZXh6GCA+uQPyr7WyQ==}
     engines: {node: ^22.13.0 || ^24.11.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -13788,8 +13788,8 @@ packages:
       webpack:
         optional: true
 
-  sax@1.4.2:
-    resolution: {integrity: sha512-FySGAa0RGcFiN6zfrO9JvK1r7TB59xuzCcTHOBXBNoKgDejlOQCR2KL/FGk3/iDlsqyYg1ELZpOmlg09B01Czw==}
+  sax@1.4.3:
+    resolution: {integrity: sha512-yqYn1JhPczigF94DMS+shiDMjDowYO6y9+wB/4WgO0Y19jWYk0lQ4tuG5KI7kj4FTp1wxPj5IFfcrz/s1c3jjQ==}
 
   saxes@6.0.0:
     resolution: {integrity: sha512-xAg7SOnEhrm5zI3puOOKyy1OMcMlIJZYNJY7xLBwSze0UjhPLnWfj2GF2EpT0jmzaJKIWKHLsaSSajf35bcYnA==}
@@ -30832,7 +30832,7 @@ snapshots:
       lodash: 4.17.21
       strip-ansi: 6.0.1
 
-  renovate@42.5.2(encoding@0.1.13)(typanion@3.14.0):
+  renovate@42.6.1(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.922.0
       '@aws-sdk/client-ec2': 3.922.0
@@ -30935,7 +30935,7 @@ snapshots:
       remark-gfm: 4.0.1
       remark-github: 12.0.0
       safe-stable-stringify: 2.5.0
-      sax: 1.4.2
+      sax: 1.4.3
       semver: 7.7.2
       semver-stable: 3.0.0
       semver-utils: 1.1.4
@@ -31253,7 +31253,7 @@ snapshots:
     optionalDependencies:
       webpack: 5.102.1(esbuild@0.27.0)
 
-  sax@1.4.2: {}
+  sax@1.4.3: {}
 
   saxes@6.0.0:
     dependencies:
@@ -33702,7 +33702,7 @@ snapshots:
 
   xmldoc@2.0.2:
     dependencies:
-      sax: 1.4.2
+      sax: 1.4.3
 
   xtend@4.0.2: {}
 
