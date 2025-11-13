@@ -40,7 +40,6 @@ import { createTypeScriptImportResolver } from "eslint-import-resolver-typescrip
  * ```
  */
 const config = ({
-  tsconfigFileName = "./tsconfig.json",
   tsConfigurationRootDirectory = import.meta.dirname,
 }: Readonly<{
   tsconfigFileName: string;
@@ -68,7 +67,6 @@ const config = ({
           window: "readonly",
         },
         parserOptions: {
-          project: tsconfigFileName,
           tsconfigRootDir: tsConfigurationRootDirectory,
           sourceType: "module",
           projectService: true,
