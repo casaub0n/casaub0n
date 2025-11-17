@@ -47,11 +47,9 @@ import { createTypeScriptImportResolver } from "eslint-import-resolver-typescrip
  * @see [turborepo/examples/kitchen-sink/packages/config-eslint/next.js at main · vercel/turborepo](https://github.com/vercel/turborepo/blob/main/examples/kitchen-sink/packages/config-eslint/next.js)
  */
 const config = ({
-  tsconfigFileName = "./tsconfig.json",
   tsConfigurationRootDirectory = import.meta.dirname,
   rootDirectory = "apps/next-casaub0n/",
 }: Readonly<{
-  tsconfigFileName: string;
   tsConfigurationRootDirectory: string;
   rootDirectory: string;
 }>): TSESLint.TSESLint.FlatConfig.ConfigArray =>
@@ -61,30 +59,9 @@ const config = ({
      */
     pluginJs.configs.recommended,
     ...tseslint.configs.strict,
-    // https://typescript-eslint.io/getting-started/typed-linting/
-    // ...compat.config({
-    //   extends: ["next", "next/core-web-vitals", "next/typescript"],
-    //   settings: {
-    //     next: {
-    //       rootDir: rootDirectory,
-    //     },
-    //   },
-    // }),
     {
       files: ["**/*.cts", "**/*.ctsx", "**/*.mts", "**/*.mtsx", "**/*.ts", "**/*.tsx"],
       ignores: [...ignoreConfig, "**/*.mjs", "**/*.js"],
-      // extends: [
-      //   // ...compat.extends("next/core-web-vitals", "next/typescript"),
-      //   ...compat.config({
-      //     extends: ["next", "next/core-web-vitals", "next/typescript"],
-      //     settings: {
-      //       next: {
-      //         rootDir: rootDirectory,
-      //       },
-      //     },
-      //   }),
-      //   // ...tseslint.configs.stylistic,
-      // ],
       languageOptions: {
         ecmaVersion: "latest",
         parser: typescriptEslintParser,
@@ -97,7 +74,6 @@ const config = ({
           window: "readonly",
         },
         parserOptions: {
-          project: tsconfigFileName,
           tsconfigRootDir: tsConfigurationRootDirectory,
           sourceType: "module",
           projectService: true,
@@ -117,7 +93,10 @@ const config = ({
       },
       plugins: {
         "unused-imports": unusedImports,
-        next: pluginNext,
+        /**
+         * A configuration object specifies rule "@next/next/google-font-display", but could not find plugin "@next/next".
+         */
+        "@next/next": pluginNext,
         /**
          * SyntaxError: Named export 'flatConfig' not found. The requested module '@next/eslint-plugin-next' is a CommonJS module, which may not support all module.exports as named exports.
 CommonJS modules can always be imported via the default export, for example using:
@@ -131,13 +110,6 @@ CommonJS modules can always be imported via the default export, for example usin
         ...eslintCoreRules,
         ...typescriptRules,
         "@typescript-eslint/explicit-function-return-type": "off",
-
-        // ...(pluginNext.configs.recommended.rules as TSESLint.TSESLint.FlatConfig.Rules),
-        // ...(pluginNext.configs["core-web-vitals"].rules as TSESLint.TSESLint.FlatConfig.Rules),
-
-        // ...(flatConfig.recommended.plugins["@next/next"].configs.recommended
-        //   .rules as TSESLint.TSESLint.FlatConfig.Rules),
-        // ...(flatConfig.coreWebVitals.rules as TSESLint.TSESLint.FlatConfig.Rules),
 
         /**
          * [最低限の flat config（まずは no-unused-imports を動かす）](https://zenn.dev/seventhseven07/articles/06a02c4048decf)
@@ -155,6 +127,8 @@ CommonJS modules can always be imported via the default export, for example usin
         ...turboPlugin.configs["flat/recommended"].rules,
         ...importX.flatConfigs.recommended.rules,
         ...importX.flatConfigs.typescript.rules,
+        ...pluginNext.configs.recommended.rules,
+        ...pluginNext.configs["core-web-vitals"].rules,
       },
       settings: {
         "import-x/resolver-next": createTypeScriptImportResolver({
