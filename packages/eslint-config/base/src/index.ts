@@ -22,7 +22,6 @@ import { createTypeScriptImportResolver } from "eslint-import-resolver-typescrip
 /**
  * This config compatible with TypeScript project, YAML file, JavaScript file.
  *
- * @param tsconfigFileName `./tsconfig.json`
  * @param tsConfigurationRootDirectory `import.meta.dirname` [The directory name of the current module. This is the same as the `path.dirname()` of the `import.meta.filename`.](https://nodejs.org/api/esm.html#importmetadirname)
  *
  * `eslint` is needed at root directory. Use [defineConfig](https://eslint.org/docs/latest/use/configure/configuration-files)
@@ -32,9 +31,11 @@ import { createTypeScriptImportResolver } from "eslint-import-resolver-typescrip
  * import base from "@casaub0n/eslint-base";
  *
  * export default defineConfig([
+ *   {
+ *      ignores: ["**\/eslint.config.mjs"],
+ *   }
  *   ...base({
  *     tsConfigurationRootDirectory: import.meta.dirname,
- *     tsconfigFileName: "./tsconfig.json",
  *   }),
  * ]);
  * ```
@@ -42,7 +43,6 @@ import { createTypeScriptImportResolver } from "eslint-import-resolver-typescrip
 const config = ({
   tsConfigurationRootDirectory = import.meta.dirname,
 }: Readonly<{
-  tsconfigFileName: string;
   tsConfigurationRootDirectory: string;
 }>): TSESLint.TSESLint.FlatConfig.ConfigArray =>
   tseslint.config([
