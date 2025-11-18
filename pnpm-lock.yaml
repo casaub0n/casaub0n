@@ -292,8 +292,8 @@ catalogs:
       specifier: 4.9.0
       version: 4.9.0
     glob:
-      specifier: 11.1.0
-      version: 11.1.0
+      specifier: 12.0.0
+      version: 12.0.0
     globals:
       specifier: 16.5.0
       version: 16.5.0
@@ -1501,7 +1501,7 @@ importers:
         version: 1.1.1
       glob:
         specifier: 'catalog:'
-        version: 11.1.0
+        version: 12.0.0
       jsdom:
         specifier: 'catalog:'
         version: 27.2.0(bufferutil@4.0.9)(postcss@8.5.6)
@@ -1544,7 +1544,7 @@ importers:
         version: 1.41.0
       glob:
         specifier: 'catalog:'
-        version: 11.1.0
+        version: 12.0.0
       jsdom:
         specifier: 'catalog:'
         version: 27.2.0(bufferutil@4.0.9)(postcss@8.5.6)
@@ -10184,6 +10184,11 @@ packages:
 
   glob@11.1.0:
     resolution: {integrity: sha512-vuNwKSaKiqm7g0THUBu2x7ckSs3XJLXE+2ssL7/MfTGPLLcrJQ/4Uq1CjPTtO5cCIiRxqvN6Twy1qOwhL0Xjcw==}
+    engines: {node: 20 || >=22}
+    hasBin: true
+
+  glob@12.0.0:
+    resolution: {integrity: sha512-5Qcll1z7IKgHr5g485ePDdHcNQY0k2dtv/bjYy0iuyGxQw2qSOiiXUXJ+AYQpg3HNoUMHqAruX478Jeev7UULw==}
     engines: {node: 20 || >=22}
     hasBin: true
 
@@ -19686,7 +19691,7 @@ snapshots:
     dependencies:
       '@npmcli/name-from-folder': 4.0.0
       '@npmcli/package-json': 7.0.2
-      glob: 11.0.3
+      glob: 11.1.0
       minimatch: 10.1.1
 
   '@npmcli/metavuln-calculator@9.0.3':
@@ -19710,7 +19715,7 @@ snapshots:
   '@npmcli/package-json@7.0.2':
     dependencies:
       '@npmcli/git': 7.0.0
-      glob: 11.0.3
+      glob: 11.1.0
       hosted-git-info: 9.0.2
       json-parse-even-better-errors: 5.0.0
       proc-log: 6.0.0
@@ -23810,7 +23815,7 @@ snapshots:
     dependencies:
       '@npmcli/fs': 4.0.0
       fs-minipass: 3.0.3
-      glob: 11.0.3
+      glob: 11.1.0
       lru-cache: 11.2.2
       minipass: 7.1.2
       minipass-collect: 2.0.1
@@ -26562,6 +26567,15 @@ snapshots:
       path-scurry: 2.0.0
 
   glob@11.1.0:
+    dependencies:
+      foreground-child: 3.3.1
+      jackspeak: 4.1.1
+      minimatch: 10.1.1
+      minipass: 7.1.2
+      package-json-from-dist: 1.0.1
+      path-scurry: 2.0.0
+
+  glob@12.0.0:
     dependencies:
       foreground-child: 3.3.1
       jackspeak: 4.1.1
