@@ -1,3 +1,4 @@
+import { defineConfig } from "eslint/config";
 import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 
@@ -45,7 +46,7 @@ const config = ({
 }: Readonly<{
   tsConfigurationRootDirectory: string;
 }>): TSESLint.TSESLint.FlatConfig.ConfigArray =>
-  tseslint.config([
+  defineConfig([
     /**
      * @see https://zenn.dev/yu_ta_9/articles/7001d66779ff3a#%40eslint%2Fjs
      */
@@ -88,7 +89,8 @@ const config = ({
         "unused-imports": unusedImports,
         unicorn: eslintPluginUnicorn,
         turbo: turboPlugin.configs["flat/recommended"].plugins.turbo,
-        "import-x": importX,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        "import-x": importX as any,
       },
       rules: {
         ...eslintCoreRules,
