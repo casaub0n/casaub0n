@@ -1,3 +1,4 @@
+import { defineConfig } from "eslint/config";
 import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 
@@ -24,7 +25,6 @@ import { createTypeScriptImportResolver } from "eslint-import-resolver-typescrip
 /**
  * This config compatible with TypeScript project, YAML file, JavaScript file.
  *
- * @param tsconfigFileName `./tsconfig.json`
  * @param tsConfigurationRootDirectory `import.meta.dirname` [The directory name of the current module. This is the same as the `path.dirname()` of the `import.meta.filename`.](https://nodejs.org/api/esm.html#importmetadirname)
  *
  * `eslint` is needed at root directory. Use [defineConfig](https://eslint.org/docs/latest/use/configure/configuration-files)
@@ -36,19 +36,16 @@ import { createTypeScriptImportResolver } from "eslint-import-resolver-typescrip
  * export default defineConfig([
  *   ...base({
  *     tsConfigurationRootDirectory: import.meta.dirname,
- *     tsconfigFileName: "./tsconfig.json",
  *   }),
  * ]);
  * ```
  */
 const config = ({
-  tsconfigFileName = "./tsconfig.json",
   tsConfigurationRootDirectory = import.meta.dirname,
 }: Readonly<{
-  tsconfigFileName: string;
   tsConfigurationRootDirectory: string;
 }>): TSESLint.TSESLint.FlatConfig.ConfigArray =>
-  tseslint.config([
+  defineConfig([
     /**
      * @see https://zenn.dev/yu_ta_9/articles/7001d66779ff3a#%40eslint%2Fjs
      */
@@ -70,7 +67,6 @@ const config = ({
           window: "readonly",
         },
         parserOptions: {
-          project: tsconfigFileName,
           tsconfigRootDir: tsConfigurationRootDirectory,
           sourceType: "module",
           projectService: true,
@@ -89,12 +85,15 @@ const config = ({
         },
       },
       plugins: {
-        "unused-imports": unusedImports,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        "unused-imports": unusedImports as any,
         unicorn: eslintPluginUnicorn,
         turbo: turboPlugin.configs["flat/recommended"].plugins.turbo,
         react: pluginReact,
-        "react-hooks": pluginReactHooks,
-        "import-x": importX,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        "react-hooks": pluginReactHooks as any,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        "import-x": importX as any,
       },
       rules: {
         ...eslintCoreRules,
@@ -152,7 +151,8 @@ const config = ({
         unicorn: eslintPluginUnicorn,
         turbo: turboPlugin.configs["flat/recommended"].plugins.turbo,
         react: pluginReact,
-        "react-hooks": pluginReactHooks,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        "react-hooks": pluginReactHooks as any,
       },
       rules: {
         ...pluginJs.configs.recommended.rules,
