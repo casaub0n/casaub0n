@@ -175,11 +175,11 @@ catalogs:
       specifier: 2.1.5
       version: 2.1.5
     '@vanilla-extract/next-plugin':
-      specifier: 2.4.14
-      version: 2.4.14
+      specifier: 2.4.15
+      version: 2.4.15
     '@vanilla-extract/webpack-plugin':
-      specifier: 2.3.22
-      version: 2.3.22
+      specifier: 2.3.23
+      version: 2.3.23
     '@vercel/postgres':
       specifier: 0.10.0
       version: 0.10.0
@@ -669,7 +669,7 @@ importers:
         version: 19.2.3(@types/react@19.2.6)
       '@vanilla-extract/next-plugin':
         specifier: 'catalog:'
-        version: 2.4.14(next@16.0.3(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(webpack@5.102.1(esbuild@0.27.0))
+        version: 2.4.15(next@16.0.3(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(webpack@5.102.1(esbuild@0.27.0))
       autoprefixer:
         specifier: 'catalog:'
         version: 10.4.22(postcss@8.5.6)
@@ -726,7 +726,7 @@ importers:
         version: 10.0.8(esbuild@0.27.0)(next@16.0.3(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(storybook@10.0.8(@testing-library/dom@10.4.1)(bufferutil@4.0.9)(msw@2.12.3(@types/node@24.10.1)(typescript@5.9.3))(prettier@3.6.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(tsx@4.20.6)(yaml@2.8.1)))(type-fest@4.41.0)(typescript@5.9.3)(webpack-hot-middleware@2.26.1)(webpack@5.102.1(esbuild@0.27.0))
       '@vanilla-extract/webpack-plugin':
         specifier: 'catalog:'
-        version: 2.3.22(webpack@5.102.1(esbuild@0.27.0))
+        version: 2.3.23(webpack@5.102.1(esbuild@0.27.0))
       css-loader:
         specifier: 'catalog:'
         version: 7.1.2(webpack@5.102.1(esbuild@0.27.0))
@@ -6983,19 +6983,19 @@ packages:
   '@vanilla-extract/dynamic@2.1.5':
     resolution: {integrity: sha512-QGIFGb1qyXQkbzx6X6i3+3LMc/iv/ZMBttMBL+Wm/DetQd36KsKsFg5CtH3qy+1hCA/5w93mEIIAiL4fkM8ycw==}
 
-  '@vanilla-extract/integration@8.0.4':
-    resolution: {integrity: sha512-cmOb7tR+g3ulKvFtSbmdw3YUyIS1d7MQqN+FcbwNhdieyno5xzUyfDCMjeWJhmCSMvZ6WlinkrOkgs6SHB+FRg==}
+  '@vanilla-extract/integration@8.0.5':
+    resolution: {integrity: sha512-Lt+HPwN1X4aHHT+Klw5bxvCT9k88ZegQqoLLpPmqIFFdYZeEvqPZAI/mZvtHD0ceoIHuNg6onEYQC5hfO1cBwQ==}
 
-  '@vanilla-extract/next-plugin@2.4.14':
-    resolution: {integrity: sha512-5GRgVZayLNvXJVHwVWNZp7rDAgXmF5DAyVtp9O5ZxPoOuokLWwTaIw1bYALXs/uCaeAUwilK5p14peagzFbe2w==}
+  '@vanilla-extract/next-plugin@2.4.15':
+    resolution: {integrity: sha512-8CZGJFDS4XTrg03noNk09aykJYcD3G3YGYknBFXHCQVR6+tpAwPjropQUkBSxjNr3dW+dXdLfKNYtcCOlj1Z8w==}
     peerDependencies:
       next: '>=12.1.7'
 
   '@vanilla-extract/private@1.0.9':
     resolution: {integrity: sha512-gT2jbfZuaaCLrAxwXbRgIhGhcXbRZCG3v4TTUnjw0EJ7ArdBRxkq4msNJkbuRkCgfIK5ATmprB5t9ljvLeFDEA==}
 
-  '@vanilla-extract/webpack-plugin@2.3.22':
-    resolution: {integrity: sha512-3Cx8DkbX3EeLHGbD049jjj6/bWB0VK4YFfWWsf8VXBI8dgf5SvEef1VfET22IOcT9GzLl8MqfsLr/XSo9iv67Q==}
+  '@vanilla-extract/webpack-plugin@2.3.23':
+    resolution: {integrity: sha512-b43sqGG7xuFIXfAtMIdr6UWuFAHvVPiK37MYjtBB5P0nwbuTcjnEIKQWTm9Csrx8Bu6CMimzK9m1LU6q/RNJrw==}
     peerDependencies:
       webpack: ^4.30.0 || ^5.20.2
 
@@ -22434,14 +22434,14 @@ snapshots:
     dependencies:
       '@vanilla-extract/private': 1.0.9
 
-  '@vanilla-extract/integration@8.0.4':
+  '@vanilla-extract/integration@8.0.5':
     dependencies:
       '@babel/core': 7.28.5
       '@babel/plugin-syntax-typescript': 7.27.1(@babel/core@7.28.5)
       '@vanilla-extract/babel-plugin-debug-ids': 1.2.2
       '@vanilla-extract/css': 1.17.4
       dedent: 1.7.0
-      esbuild: 0.25.12
+      esbuild: 0.27.0
       eval: 0.1.8
       find-up: 5.0.0
       javascript-stringify: 2.1.0
@@ -22450,9 +22450,9 @@ snapshots:
       - babel-plugin-macros
       - supports-color
 
-  '@vanilla-extract/next-plugin@2.4.14(next@16.0.3(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(webpack@5.102.1(esbuild@0.27.0))':
+  '@vanilla-extract/next-plugin@2.4.15(next@16.0.3(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(webpack@5.102.1(esbuild@0.27.0))':
     dependencies:
-      '@vanilla-extract/webpack-plugin': 2.3.22(webpack@5.102.1(esbuild@0.27.0))
+      '@vanilla-extract/webpack-plugin': 2.3.23(webpack@5.102.1(esbuild@0.27.0))
       next: 16.0.3(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
     transitivePeerDependencies:
       - babel-plugin-macros
@@ -22461,9 +22461,9 @@ snapshots:
 
   '@vanilla-extract/private@1.0.9': {}
 
-  '@vanilla-extract/webpack-plugin@2.3.22(webpack@5.102.1(esbuild@0.27.0))':
+  '@vanilla-extract/webpack-plugin@2.3.23(webpack@5.102.1(esbuild@0.27.0))':
     dependencies:
-      '@vanilla-extract/integration': 8.0.4
+      '@vanilla-extract/integration': 8.0.5
       debug: 4.4.3
       loader-utils: 2.0.4
       picocolors: 1.1.1
