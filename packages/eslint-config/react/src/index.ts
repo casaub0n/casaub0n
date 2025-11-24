@@ -130,6 +130,9 @@ const config = ({
         "import-x/resolver-next": createTypeScriptImportResolver({
           project: "tsconfig.{app,node}.json",
         }),
+        react: {
+          version: "detect",
+        },
       },
     },
     {
