@@ -1,3 +1,4 @@
+import { defineConfig } from "eslint/config";
 import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 
@@ -20,26 +21,20 @@ import { typescriptRules } from "@casaub0n/eslint-config-utils/typescript-rules"
 import { importX } from "eslint-plugin-import-x";
 import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 
-// const compat = new FlatCompat({
-//   baseDirectory: import.meta.dirname,
-// });
-
 /**
  * This config compatible with TypeScript project, YAML file, JavaScript file.
  *
- * @param tsconfigFileName `./tsconfig.json`
  * @param tsConfigurationRootDirectory `import.meta.dirname` [The directory name of the current module. This is the same as the `path.dirname()` of the `import.meta.filename`.](https://nodejs.org/api/esm.html#importmetadirname)
  * @param rootDirectory `import.meta.dirname` [The directory name of the current module. This is the same as the `path.dirname()` of the `import.meta.filename`.](https://nodejs.org/api/esm.html#importmetadirname)
  *
  * `eslint` is needed at root directory. Use [defineConfig](https://eslint.org/docs/latest/use/configure/configuration-files)
  *
  * @example ```javascript
- * import base from "../eslint-config/eslint-base/dist/index.mjs";
+ * import base from "@casaub0n/eslint-config-next";
  *
  * export default [
  *   ...base({
  *     tsConfigurationRootDirectory: import.meta.dirname,
- *     tsconfigFileName: "./tsconfig.json",
  *     rootDirectory: import.meta.dirname,
  *   }),
  * ]
@@ -53,7 +48,7 @@ const config = ({
   tsConfigurationRootDirectory: string;
   rootDirectory: string;
 }>): TSESLint.TSESLint.FlatConfig.ConfigArray =>
-  tseslint.config([
+  defineConfig([
     /**
      * @see https://zenn.dev/yu_ta_9/articles/7001d66779ff3a#%40eslint%2Fjs
      */
@@ -96,7 +91,8 @@ const config = ({
         /**
          * A configuration object specifies rule "@next/next/google-font-display", but could not find plugin "@next/next".
          */
-        "@next/next": pluginNext,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        "@next/next": pluginNext as any,
         /**
          * SyntaxError: Named export 'flatConfig' not found. The requested module '@next/eslint-plugin-next' is a CommonJS module, which may not support all module.exports as named exports.
 CommonJS modules can always be imported via the default export, for example using:
@@ -104,7 +100,8 @@ CommonJS modules can always be imported via the default export, for example usin
         // "@next/next": flatConfig.recommended.plugins["@next/next"], // This package is CommonJS style
         unicorn: eslintPluginUnicorn,
         turbo: turboPlugin.configs["flat/recommended"].plugins.turbo,
-        "import-x": importX,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        "import-x": importX as any,
       },
       rules: {
         ...eslintCoreRules,
@@ -173,7 +170,8 @@ CommonJS modules can always be imported via the default export, for example usin
     /**
      * @see https://github.com/storybookjs/eslint-plugin-storybook?tab=readme-ov-file#configuration-eslintconfigcmjs
      */
-    storybook.configs["flat/recommended"],
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    storybook.configs["flat/recommended"] as any,
 
     /**
      * https://zenn.dev/kazukix/articles/eslint-config-2024-09#eslint-config-prettier
