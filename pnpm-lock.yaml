@@ -373,8 +373,8 @@ catalogs:
       specifier: 3.5.0
       version: 3.5.0
     renovate:
-      specifier: 42.19.3
-      version: 42.19.3
+      specifier: 42.19.7
+      version: 42.19.7
     schema-dts:
       specifier: 1.1.5
       version: 1.1.5
@@ -511,7 +511,7 @@ importers:
         version: 3.6.2
       renovate:
         specifier: 'catalog:'
-        version: 42.19.3(encoding@0.1.13)(typanion@3.14.0)
+        version: 42.19.7(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: 'catalog:'
         version: 15.4.0
@@ -5373,8 +5373,8 @@ packages:
     resolution: {integrity: sha512-2FK1hF93Fuf1laSdfiEmJvSJPVIDHEUTz68D3Fi9s0IZrrpaEcj6pTFBTbYvsgC5du4ogrtf5re7yMMvrKNgkw==}
     engines: {node: ^20.9.0 || ^22.11.0 || ^24, pnpm: ^10.0.0}
 
-  '@renovatebot/pgp@1.1.1':
-    resolution: {integrity: sha512-KDXMOeO/jCWBUawIynvTL2YKXjuJ8QjWF16soH9YQOEVRnoly6e6R0m3vrdlZgKuR+fxDoWSw1OXcqTyWapObQ==}
+  '@renovatebot/pgp@1.2.0':
+    resolution: {integrity: sha512-RCmU57Elj5sVpfLeo5Y3l7mKzEvqoRyPTpGu12Va0GAPNUd56GcuotiLw2EimeWF24cBVj7eWr89U6Pksv+jlw==}
     engines: {node: ^22.11.0 || >=24.10.0, pnpm: ^10.0.0}
 
   '@renovatebot/ruby-semver@4.1.2':
@@ -7909,6 +7909,10 @@ packages:
 
   cacache@20.0.1:
     resolution: {integrity: sha512-+7LYcYGBYoNqTp1Rv7Ny1YjUo5E0/ftkQtraH3vkfAGgVHc+ouWdC8okAwQgQR7EVIdW6JTzTmhKFwzb+4okAQ==}
+    engines: {node: ^20.17.0 || >=22.9.0}
+
+  cacache@20.0.2:
+    resolution: {integrity: sha512-rVWvqtWcgSzB22wImrVto+7PmE+lUqv5dYzRHD0QJsfpSwTkW+GIqA4ykSt/CCjQlQle8USn8CO8vcWNrIqktg==}
     engines: {node: ^20.17.0 || >=22.9.0}
 
   cacheable-lookup@5.0.4:
@@ -13519,8 +13523,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@42.19.3:
-    resolution: {integrity: sha512-xDMJXEMYS+mMQlN9CamwygTG4+qVH+jq3Ivj4TymK01sThcCDCVvRJ9sXZsenrYuCpCKdsXeM+xrkQUaqX3HtA==}
+  renovate@42.19.7:
+    resolution: {integrity: sha512-pSxiMnhBbwpiOjxe18dQqrKlhIF3FguqA7dweEgicigQlzeoBov9hTku75gs0XpVMApjfL8H/OQCj8iMDbu/mw==}
     engines: {node: ^22.13.0 || ^24.11.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -20351,7 +20355,7 @@ snapshots:
 
   '@renovatebot/pep440@4.2.1': {}
 
-  '@renovatebot/pgp@1.1.1': {}
+  '@renovatebot/pgp@1.2.0': {}
 
   '@renovatebot/ruby-semver@4.1.2': {}
 
@@ -23809,6 +23813,20 @@ snapshots:
       minipass-pipeline: 1.2.4
       p-map: 7.0.4
       ssri: 12.0.0
+      unique-filename: 4.0.0
+
+  cacache@20.0.2:
+    dependencies:
+      '@npmcli/fs': 4.0.0
+      fs-minipass: 3.0.3
+      glob: 11.1.0
+      lru-cache: 11.2.2
+      minipass: 7.1.2
+      minipass-collect: 2.0.1
+      minipass-flush: 1.0.5
+      minipass-pipeline: 1.2.4
+      p-map: 7.0.4
+      ssri: 13.0.0
       unique-filename: 4.0.0
 
   cacheable-lookup@5.0.4: {}
@@ -30859,7 +30877,7 @@ snapshots:
       lodash: 4.17.21
       strip-ansi: 6.0.1
 
-  renovate@42.19.3(encoding@0.1.13)(typanion@3.14.0):
+  renovate@42.19.7(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.922.0
       '@aws-sdk/client-ec2': 3.922.0
@@ -30891,7 +30909,7 @@ snapshots:
       '@renovatebot/detect-tools': 1.2.4
       '@renovatebot/osv-offline': 1.8.0
       '@renovatebot/pep440': 4.2.1
-      '@renovatebot/pgp': 1.1.1
+      '@renovatebot/pgp': 1.2.0
       '@renovatebot/ruby-semver': 4.1.2
       '@sindresorhus/is': 7.1.1
       '@yarnpkg/core': 4.5.0(typanion@3.14.0)
@@ -30903,7 +30921,7 @@ snapshots:
       aws4: 1.13.2
       azure-devops-node-api: 15.1.1
       bunyan: 1.8.15
-      cacache: 20.0.1
+      cacache: 20.0.2
       chalk: 5.6.2
       changelog-filename-regex: 2.0.1
       clean-git-ref: 2.0.1
