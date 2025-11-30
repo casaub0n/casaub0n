@@ -4,7 +4,7 @@ lang: en
 
 # 👋
 
-Casaub0n was a good person, please note that.
+Hi, it's me.
 
 - [What is this repository](./devdoc.md)
 - [My profile](./my-profile.md)
