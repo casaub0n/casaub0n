@@ -11,21 +11,37 @@ This is flat config. Check [peerDependencies](./package.json).
 
 This is a example eslint config.
 
-Use `tsConfigurationRootDirectory` and `tsconfigFileName` to point tsconfig.json location.
+Use `tsConfigurationRootDirectory` to point tsconfig.json location.
 
 ```js
 import { defineConfig } from "eslint/config";
 import base from "@casaub0n/eslint-base";
 
 export default defineConfig([
+  {
+    ignores: ["**/eslint.config.mjs"],
+  },
   ...base({
-    tsConfigurationRootDirectory: import.meta.dirname,
-    tsconfigFileName: "./tsconfig.json",
+    tsConfigurationRootDirectory: import.meta.dirname
   }),
 ]);
 ```
 
 ## Development
+
+### Build
+
+```console
+pnpm buid
+```
+
+[tsdown](./tsdown.config.ts) compiles files in `dist` directory.
+
+### Lint
+
+```console
+pnpm lint
+```
 
 > [!WARNING]
 >
