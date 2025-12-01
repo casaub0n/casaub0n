@@ -4,7 +4,7 @@ import base from "@casaub0n/eslint-config-react";
 export default defineConfig([
   {
     files: ["**/*.ts", "**/*.cts", "**.*.mts"],
-    ignores: ["**/eslint.config.mjs", "**/src/styles/**", "**/*css"],
+    ignores: ["**/eslint.config.mjs", "**/*css"],
   },
   ...base({
     tsConfigurationRootDirectory: import.meta.dirname,
