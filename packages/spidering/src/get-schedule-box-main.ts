@@ -1,4 +1,5 @@
 import consola from "consola";
+import { Effect } from "effect";
 import { isNil } from "es-toolkit/predicate";
 import { JSDOM } from "jsdom";
 import { err, ok, type Result } from "neverthrow";
@@ -28,7 +29,9 @@ export const getBungeizaText = async (): Promise<Result<string, Error>> => {
  * @param html html string
  * @returns `<div class="schedule-box-main">`
  */
-export const getScheduleBoxMainList = (html: string): Result<HTMLCollectionOf<Element>, Error> => {
+export const getScheduleBoxMainList = (
+  html: string,
+): Effect.Effect<HTMLCollectionOf<Element>, Error, never> => {
   const dom = new JSDOM(html, {
     runScripts: "dangerously",
     resources: "usable",
@@ -36,18 +39,18 @@ export const getScheduleBoxMainList = (html: string): Result<HTMLCollectionOf<El
 
   const maybeScheduleBoxMain = dom.window.document.getElementsByClassName("schedule-box-main");
   if (isNil(maybeScheduleBoxMain)) {
-    return err(new Error("schedule-content is nothing"));
+    return Effect.fail(new Error("schedule-content is nothing"));
   }
   if (maybeScheduleBoxMain.length === 0) {
-    return err(new Error("schedule-content is nothing"));
+    return Effect.fail(new Error("schedule-content is nothing"));
   }
   if (maybeScheduleBoxMain.item.length === 0) {
-    return err(new Error("schedule-content is nothing"));
+    return Effect.fail(new Error("schedule-content is nothing"));
   }
   if (maybeScheduleBoxMain.namedItem.length === 0) {
-    return err(new Error("schedule-content is nothing"));
+    return Effect.fail(new Error("schedule-content is nothing"));
   }
-  return ok(maybeScheduleBoxMain);
+  return Effect.succeed(maybeScheduleBoxMain);
 };
 
 /**
@@ -121,14 +124,18 @@ export const getData = async (): Promise<void> => {
   if (maybeHtmlText.isOk()) {
     const htmlText = maybeHtmlText.value;
     const maybeScheduleBoxMainList = getScheduleBoxMainList(htmlText);
-    if (maybeScheduleBoxMainList.isOk()) {
-      const scheduleBoxMainList = maybeScheduleBoxMainList.value;
-      // do schedule-box-main
-      for (const scheduleBoxMain of scheduleBoxMainList) {
-        getScheduleMain(scheduleBoxMain);
-        // TODO merge datalist
-      }
-    }
+
+    Effect.runSync(
+      maybeScheduleBoxMainList.pipe(
+        Effect.map((scheduleBoxMainList) => {
+          // do schedule-box-main
+          for (const scheduleBoxMain of scheduleBoxMainList) {
+            getScheduleMain(scheduleBoxMain);
+            // TODO merge datalist
+          }
+        }),
+      ),
+    );
   }
 };
 
