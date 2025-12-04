@@ -2,7 +2,6 @@ import consola from "consola";
 import { Effect } from "effect";
 import { isNil } from "es-toolkit/predicate";
 import { JSDOM } from "jsdom";
-import { err, ok, type Result } from "neverthrow";
 import z from "zod/mini";
 
 /**
@@ -16,12 +15,12 @@ import z from "zod/mini";
  * }
  * ```
  */
-export const getBungeizaText = async (): Promise<Result<string, Error>> => {
+export const getBungeizaText = async (): Promise<Effect.Effect<string, Error, never>> => {
   const bungeizaResponse = await fetch("https://www.shin-bungeiza.com/schedule.html");
   const body = await bungeizaResponse.text();
-  if (body === "") return err(new Error("body is nothing"));
-  if (body) return ok(body);
-  return err(new Error("can't get"));
+  if (body === "") return Effect.fail(new Error("body is nothing"));
+  if (body) return Effect.succeed(body);
+  return Effect.fail(new Error("can't get"));
 };
 
 /**
@@ -121,22 +120,25 @@ export const getScheduleMain = (scheduleBoxMain: Element): ScheduleMain => {
 
 export const getData = async (): Promise<void> => {
   const maybeHtmlText = await getBungeizaText();
-  if (maybeHtmlText.isOk()) {
-    const htmlText = maybeHtmlText.value;
-    const maybeScheduleBoxMainList = getScheduleBoxMainList(htmlText);
+  Effect.runSync(
+    maybeHtmlText.pipe(
+      Effect.map((htmlText) => {
+        const maybeScheduleBoxMainList = getScheduleBoxMainList(htmlText);
 
-    Effect.runSync(
-      maybeScheduleBoxMainList.pipe(
-        Effect.map((scheduleBoxMainList) => {
-          // do schedule-box-main
-          for (const scheduleBoxMain of scheduleBoxMainList) {
-            getScheduleMain(scheduleBoxMain);
-            // TODO merge datalist
-          }
-        }),
-      ),
-    );
-  }
+        Effect.runSync(
+          maybeScheduleBoxMainList.pipe(
+            Effect.map((scheduleBoxMainList) => {
+              // do schedule-box-main
+              for (const scheduleBoxMain of scheduleBoxMainList) {
+                getScheduleMain(scheduleBoxMain);
+                // TODO merge datalist
+              }
+            }),
+          ),
+        );
+      }),
+    ),
+  );
 };
 
 /**
