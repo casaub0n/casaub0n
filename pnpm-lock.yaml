@@ -61,8 +61,8 @@ catalogs:
       specifier: 1.0.7
       version: 1.0.7
     '@next/eslint-plugin-next':
-      specifier: 16.0.6
-      version: 16.0.6
+      specifier: 16.0.7
+      version: 16.0.7
     '@prisma/client':
       specifier: 7.1.0
       version: 7.1.0
@@ -636,7 +636,7 @@ importers:
         version: link:../../packages/eslint-config/next
       '@next/eslint-plugin-next':
         specifier: 'catalog:'
-        version: 16.0.6
+        version: 16.0.7
       '@storybook/nextjs':
         specifier: 'catalog:'
         version: 10.1.4(msw@2.12.4(@types/node@24.10.1)(typescript@5.9.3))(next@16.0.7(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(storybook@10.1.4(@testing-library/dom@10.4.1)(bufferutil@4.0.9)(prettier@3.7.4)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(type-fest@5.3.0)(typescript@5.9.3)(vite@7.2.6(@types/node@24.10.1)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1)(tsx@4.21.0)(yaml@2.8.2))(webpack-hot-middleware@2.26.1)(webpack@5.103.0)
@@ -1117,7 +1117,7 @@ importers:
         version: 9.39.1
       '@next/eslint-plugin-next':
         specifier: 'catalog:'
-        version: 16.0.6
+        version: 16.0.7
       '@typescript-eslint/eslint-plugin':
         specifier: 'catalog:'
         version: 8.48.1(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
@@ -4432,9 +4432,6 @@ packages:
 
   '@next/env@16.0.7':
     resolution: {integrity: sha512-gpaNgUh5nftFKRkRQGnVi5dpcYSKGcZZkQffZ172OrG/XkrnS7UBTQ648YY+8ME92cC4IojpI2LqTC8sTDhAaw==}
-
-  '@next/eslint-plugin-next@16.0.6':
-    resolution: {integrity: sha512-9INsBF3/4XL0/tON8AGsh0svnTtDMLwv3iREGWnWkewGdOnd790tguzq9rX8xwrVthPyvaBHhw1ww0GZz0jO5Q==}
 
   '@next/eslint-plugin-next@16.0.7':
     resolution: {integrity: sha512-hFrTNZcMEG+k7qxVxZJq3F32Kms130FAhG8lvw2zkKBgAcNOJIxlljNiCjGygvBshvaGBdf88q2CqWtnqezDHA==}
@@ -19156,10 +19153,6 @@ snapshots:
       next-auth: 4.24.13(next@16.0.7(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
 
   '@next/env@16.0.7': {}
-
-  '@next/eslint-plugin-next@16.0.6':
-    dependencies:
-      fast-glob: 3.3.1
 
   '@next/eslint-plugin-next@16.0.7':
     dependencies:
