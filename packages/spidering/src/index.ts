@@ -2,9 +2,9 @@ import { JSDOM } from "jsdom";
 import type HTMLCollectionOf from "jsdom";
 import type Element from "jsdom";
 import { consola } from "consola";
-import { err, ok, type Result } from "neverthrow";
 import { z } from "zod/mini";
 import { isNil } from "es-toolkit/predicate";
+import { Effect } from "effect";
 
 export type Program = {
   title: string;
@@ -102,12 +102,12 @@ export const makePureTitle = (
  * }
  * ```
  */
-export const getBungeizaText = async (): Promise<Result<string, Error>> => {
+export const getBungeizaText = async (): Promise<Effect.Effect<string, Error, never>> => {
   const bungeizaResponse = await fetch("https://www.shin-bungeiza.com/schedule.html");
   const body = await bungeizaResponse.text();
-  if (body === "") return err(new Error("body is nothing"));
-  if (body) return ok(body);
-  return err(new Error("can't get"));
+  if (body === "") return Effect.fail(new Error("body is nothing"));
+  if (body) return Effect.succeed(body);
+  return Effect.fail(new Error("can't get"));
 };
 
 /**
@@ -115,25 +115,29 @@ export const getBungeizaText = async (): Promise<Result<string, Error>> => {
  * @param html html string
  * @returns `<body>`
  */
-export const getBody = (html: string): Result<HTMLElement, Error> => {
+export const getBody = (html: string): Effect.Effect<HTMLElement, Error, never> => {
   const dom = new JSDOM(html, {
     runScripts: "dangerously",
     resources: "usable",
   });
   const maybeBody = dom.window.document.body;
-  if (isNil(maybeBody)) return err(new Error("schedule-content is nothing"));
-  return ok(maybeBody);
+  if (isNil(maybeBody)) return Effect.fail(new Error("schedule-content is nothing"));
+  return Effect.succeed(maybeBody);
 };
 
 /**
  * @returns `<div class="schedule-box-main">`
  */
-export const getScheduleBoxMain = (body: HTMLElement): Result<HTMLCollectionOf<Element>, Error> => {
+export const getScheduleBoxMain = (
+  body: HTMLElement,
+): Effect.Effect<HTMLCollectionOf<Element>, Error, never> => {
   const scheduleBoxMain = body.getElementsByClassName("schedule-box-main");
-  if (scheduleBoxMain.item.length === 0) return err(new Error("schedule-box-main is nothing"));
-  if (scheduleBoxMain.namedItem.length === 0) return err(new Error("schedule-box-main is nothing"));
-  if (scheduleBoxMain.length === 0) return err(new Error("schedule-box-main is nothing"));
-  return ok(scheduleBoxMain);
+  if (scheduleBoxMain.item.length === 0)
+    return Effect.fail(new Error("schedule-box-main is nothing"));
+  if (scheduleBoxMain.namedItem.length === 0)
+    return Effect.fail(new Error("schedule-box-main is nothing"));
+  if (scheduleBoxMain.length === 0) return Effect.fail(new Error("schedule-box-main is nothing"));
+  return Effect.succeed(scheduleBoxMain);
 };
 
 export const scheduleSchema = z.object({
@@ -154,16 +158,18 @@ export const scheduleSchema = z.object({
  * }
  * ```
  */
-export const getScheduleContents = (body: string): Result<HTMLCollectionOf<Element>, Error> => {
+export const getScheduleContents = (
+  body: string,
+): Effect.Effect<HTMLCollectionOf<Element>, Error, never> => {
   const dom = new JSDOM(body, {
     runScripts: "dangerously",
     resources: "usable",
   });
   const scheduleContents = dom.window.document.getElementsByClassName("schedule-content");
-  if (scheduleContents.length > 0) return ok(scheduleContents);
-  if (scheduleContents.item.length > 0) return ok(scheduleContents);
-  if (scheduleContents.namedItem.length > 0) return ok(scheduleContents);
-  return err(new Error("schedule-content is nothing"));
+  if (scheduleContents.length > 0) return Effect.succeed(scheduleContents);
+  if (scheduleContents.item.length > 0) return Effect.succeed(scheduleContents);
+  if (scheduleContents.namedItem.length > 0) return Effect.succeed(scheduleContents);
+  return Effect.fail(new Error("schedule-content is nothing"));
 };
 
 const init = async (): Promise<void> => {
@@ -172,46 +178,101 @@ const init = async (): Promise<void> => {
     const descriptionList: string[] = [];
     const maybeBody = await getBungeizaText();
 
-    if (maybeBody.isOk()) {
-      const body = maybeBody.value;
-      const maybeScheduleContents = getScheduleContents(body);
+    Effect.runSync(
+      maybeBody.pipe(
+        Effect.map((body) => {
+          const maybeScheduleContents = getScheduleContents(body);
 
-      if (maybeScheduleContents.isOk()) {
-        const scheduleContents = maybeScheduleContents.value;
-        for (const scheduleContent of scheduleContents) {
-          const h2collections = scheduleContent.getElementsByTagName("h2");
-          const images = scheduleContent.getElementsByTagName("img");
-          const schedulePrograms = scheduleContent.getElementsByClassName("schedule-program");
-          for (const img of images) {
-            consola.log(`https://www.shin-bungeiza.com${img.src}`);
-            imgList.push(`https://www.shin-bungeiza.com${img.src}`);
-          }
-          for (const h2 of h2collections) {
-            consola.log(h2.textContent);
-            // TODO: convert h2.textContent to date type
-          }
-          for (const scheduleProgram of schedulePrograms) {
-            const titles = scheduleProgram.getElementsByTagName("p");
-            for (const title of titles) {
-              const honDateDom = title.getElementsByClassName("hon-date");
-              if (honDateDom.length > 0) {
-                for (const honDate of honDateDom) {
-                  consola.log(honDate.textContent);
-                  makePureTitle(title, descriptionList);
+          Effect.runSync(
+            maybeScheduleContents.pipe(
+              Effect.map((scheduleContents) => {
+                for (const scheduleContent of scheduleContents) {
+                  const h2collections = scheduleContent.getElementsByTagName("h2");
+                  const images = scheduleContent.getElementsByTagName("img");
+                  const schedulePrograms =
+                    scheduleContent.getElementsByClassName("schedule-program");
+                  for (const img of images) {
+                    consola.log(`https://www.shin-bungeiza.com${img.src}`);
+                    imgList.push(`https://www.shin-bungeiza.com${img.src}`);
+                  }
+                  for (const h2 of h2collections) {
+                    consola.log(h2.textContent);
+                    // TODO: convert h2.textContent to date type
+                  }
+                  for (const scheduleProgram of schedulePrograms) {
+                    const titles = scheduleProgram.getElementsByTagName("p");
+                    for (const title of titles) {
+                      const honDateDom = title.getElementsByClassName("hon-date");
+                      if (honDateDom.length > 0) {
+                        for (const honDate of honDateDom) {
+                          consola.log(honDate.textContent);
+                          makePureTitle(title, descriptionList);
+                        }
+                      } else {
+                        makePureTitle(title, descriptionList);
+                      }
+                    }
+                    const timeList = scheduleProgram.getElementsByTagName("li");
+                    for (const time of timeList) {
+                      consola.log(time.textContent);
+                    }
+                  }
+                  consola.log("\n\n");
                 }
-              } else {
-                makePureTitle(title, descriptionList);
-              }
-            }
-            const timeList = scheduleProgram.getElementsByTagName("li");
-            for (const time of timeList) {
-              consola.log(time.textContent);
-            }
-          }
-          consola.log("\n\n");
-        }
-      }
-    }
+              }),
+            ),
+          );
+        }),
+      ),
+    );
+
+    Effect.runSync(
+      maybeBody.pipe(
+        Effect.map((body) => {
+          const maybeScheduleContents = getScheduleContents(body);
+
+          Effect.runSync(
+            maybeScheduleContents.pipe(
+              Effect.map((scheduleContents) => {
+                for (const scheduleContent of scheduleContents) {
+                  const h2collections = scheduleContent.getElementsByTagName("h2");
+                  const images = scheduleContent.getElementsByTagName("img");
+                  const schedulePrograms =
+                    scheduleContent.getElementsByClassName("schedule-program");
+                  for (const img of images) {
+                    consola.log(`https://www.shin-bungeiza.com${img.src}`);
+                    imgList.push(`https://www.shin-bungeiza.com${img.src}`);
+                  }
+                  for (const h2 of h2collections) {
+                    consola.log(h2.textContent);
+                    // TODO: convert h2.textContent to date type
+                  }
+                  for (const scheduleProgram of schedulePrograms) {
+                    const titles = scheduleProgram.getElementsByTagName("p");
+                    for (const title of titles) {
+                      const honDateDom = title.getElementsByClassName("hon-date");
+                      if (honDateDom.length > 0) {
+                        for (const honDate of honDateDom) {
+                          consola.log(honDate.textContent);
+                          makePureTitle(title, descriptionList);
+                        }
+                      } else {
+                        makePureTitle(title, descriptionList);
+                      }
+                    }
+                    const timeList = scheduleProgram.getElementsByTagName("li");
+                    for (const time of timeList) {
+                      consola.log(time.textContent);
+                    }
+                  }
+                  consola.log("\n\n");
+                }
+              }),
+            ),
+          );
+        }),
+      ),
+    );
   } catch (error) {
     consola.error(error);
   }

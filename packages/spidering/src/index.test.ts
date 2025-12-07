@@ -1,14 +1,33 @@
 import { expect, test } from "vitest";
 import { getBungeizaText, getScheduleContents } from "./index";
+import { Effect } from "effect";
 
 test("Get Bungeiza html text", async () => {
   const htmlText = await getBungeizaText();
-  expect(htmlText.isOk()).toBe(true);
+
+  Effect.runSync(
+    htmlText.pipe(
+      Effect.map((body) => {
+        expect(body.length).toBeGreaterThanOrEqual(0);
+      }),
+    ),
+  );
 });
 
 test("Parse got html text", async () => {
   const htmlText = await getBungeizaText();
-  if (htmlText.isOk()) {
-    expect(getScheduleContents(htmlText.value).isOk()).toBe(true);
-  }
+
+  Effect.runSync(
+    htmlText.pipe(
+      Effect.map((value) => {
+        Effect.runSync(
+          getScheduleContents(value).pipe(
+            Effect.map((scheduleContents) => {
+              expect(scheduleContents.length).toBeGreaterThanOrEqual(0);
+            }),
+          ),
+        );
+      }),
+    ),
+  );
 });
