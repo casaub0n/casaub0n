@@ -66,7 +66,7 @@ type DotKeys<Object_ extends RecursiveObject, Prefix extends string = ""> = {
 const localize = (key: ExtractedDotKeys) => {
   const splittedKey = key.split(".");
 
-  // eslint-disable-next-line unicorn/prevent-abbreviations, unicorn/no-array-reduce
+  // eslint-disable-next-line unicorn/prevent-abbreviations, unicorn/no-array-reduce, unused-imports/no-unused-vars
   const stringOrObj = splittedKey.reduce<RecursiveObject | string>((object, key) => {
     if (typeof object === "string") {
       return object;
