@@ -21,6 +21,8 @@ const cspell = {
     "**/.gitignore",
     "**/*.rs",
     "**/Cargo.toml",
+    "**/winget_apps.json",
+    "**/cspell.config.cjs",
 
     /**
      * output
