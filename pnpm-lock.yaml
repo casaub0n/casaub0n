@@ -373,8 +373,8 @@ catalogs:
       specifier: 3.5.1
       version: 3.5.1
     renovate:
-      specifier: 42.42.2
-      version: 42.42.2
+      specifier: 42.43.0
+      version: 42.43.0
     schema-dts:
       specifier: 1.1.5
       version: 1.1.5
@@ -511,7 +511,7 @@ importers:
         version: 3.7.4
       renovate:
         specifier: 'catalog:'
-        version: 42.42.2(encoding@0.1.13)(typanion@3.14.0)
+        version: 42.43.0(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: 'catalog:'
         version: 15.5.0
@@ -5376,8 +5376,8 @@ packages:
     resolution: {integrity: sha512-2FK1hF93Fuf1laSdfiEmJvSJPVIDHEUTz68D3Fi9s0IZrrpaEcj6pTFBTbYvsgC5du4ogrtf5re7yMMvrKNgkw==}
     engines: {node: ^20.9.0 || ^22.11.0 || ^24, pnpm: ^10.0.0}
 
-  '@renovatebot/pgp@1.2.1':
-    resolution: {integrity: sha512-P5K1l5pLXGN+ErgGSq+Z97GJVogumqeWNxVJ5Dos3YEYTvrJZQcx0FIY/nfzpX5/t3qXQPdDT0ttyIzMRb7EFA==}
+  '@renovatebot/pgp@1.2.2':
+    resolution: {integrity: sha512-NZDZPajoCCInqu3nrX4O09N0dM+8OhFITAh1s9nuPlAaonkppM625r+t7UIGmlgOAZ9Klh+bcv40Q6MFzEkA3A==}
     engines: {node: ^22.11.0 || >=24.10.0, pnpm: ^10.0.0}
 
   '@renovatebot/ruby-semver@4.1.2':
@@ -13496,8 +13496,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@42.42.2:
-    resolution: {integrity: sha512-aULAIHg7+/nByY4c88EdW7ldanK/c8abmlNVQau+BoDThdVKymrvZ4NPhQ+E+ijFYc+e8i1MrGdIYsMnmA4qAw==}
+  renovate@42.43.0:
+    resolution: {integrity: sha512-5+EnhDqZyb+0pEmvVtcnyULU/1wtYdxi9aFGrlIZ7YEEn5Vl6NzKzUleVnB5xssXIqQfNLZ7Wft7Ub8RpuUPrQ==}
     engines: {node: ^22.13.0 || ^24.11.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -20329,7 +20329,7 @@ snapshots:
 
   '@renovatebot/pep440@4.2.1': {}
 
-  '@renovatebot/pgp@1.2.1': {}
+  '@renovatebot/pgp@1.2.2': {}
 
   '@renovatebot/ruby-semver@4.1.2': {}
 
@@ -31003,7 +31003,7 @@ snapshots:
       lodash: 4.17.21
       strip-ansi: 6.0.1
 
-  renovate@42.42.2(encoding@0.1.13)(typanion@3.14.0):
+  renovate@42.43.0(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.940.0
       '@aws-sdk/client-ec2': 3.940.0
@@ -31035,7 +31035,7 @@ snapshots:
       '@renovatebot/detect-tools': 1.2.4
       '@renovatebot/osv-offline': 2.0.0
       '@renovatebot/pep440': 4.2.1
-      '@renovatebot/pgp': 1.2.1
+      '@renovatebot/pgp': 1.2.2
       '@renovatebot/ruby-semver': 4.1.2
       '@sindresorhus/is': 7.1.1
       '@yarnpkg/core': 4.5.0(typanion@3.14.0)
