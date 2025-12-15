@@ -11,6 +11,7 @@ export const firstLine = async (path: fs.PathLike, useOptions?: any): Promise<un
     encoding: "utf8",
     lineEnding: "\n",
   };
+  // eslint-disable-next-line unicorn/no-immediate-mutation -- ...useOptions
   Object.assign(options, useOptions);
   return await new Promise((resolve, reject) => {
     const rs = fs.createReadStream(path, { encoding: options.encoding });

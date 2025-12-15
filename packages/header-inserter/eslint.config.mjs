@@ -3,7 +3,7 @@ import base from "@casaub0n/eslint-base";
 
 export default defineConfig([
   {
-    ignores: ["**/dist/**"],
+    ignores: ["**/eslint.config.mjs", "**/dist/**"],
   },
   ...base({
     tsConfigurationRootDirectory: import.meta.dirname,
