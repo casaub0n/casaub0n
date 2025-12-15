@@ -14,16 +14,17 @@
     "email": "netzach.yoshida@gmail.com",
     "url": "https://github.com/casaub0n"
   },
-  "main": "./dist/index.js",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   },
   "scripts": {
     "test": "vitest run",
     "test:ci": "pnpm test",
-    "rmdist": "node scripts/rrm.ts",
-    "build:tsup": "pnpm rmdist && tsup",
-    "build": "pnpm rmdist && tsx build.ts",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
     "lint": "eslint src/**"
   },
   "files": [
@@ -42,8 +43,6 @@
     "@types/mock-fs": "catalog:",
     "@types/node": "catalog:",
     "@vitest/ui": "catalog:",
-    "esbuild": "catalog:",
-    "tsup": "catalog:",
     "tsdown": "catalog:",
     "tsx": "catalog:",
     "typescript": "catalog:",
