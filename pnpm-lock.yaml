@@ -463,8 +463,8 @@ catalogs:
       specifier: 4.54.0
       version: 4.54.0
     zod:
-      specifier: 4.2.0
-      version: 4.2.0
+      specifier: 4.2.1
+      version: 4.2.1
 
 importers:
 
@@ -629,7 +629,7 @@ importers:
         version: 5.3.1
       zod:
         specifier: 'catalog:'
-        version: 4.2.0
+        version: 4.2.1
     devDependencies:
       '@casaub0n/eslint-config-next':
         specifier: workspace:*
@@ -841,7 +841,7 @@ importers:
         version: 5.9.3
       zod:
         specifier: 'catalog:'
-        version: 4.2.0
+        version: 4.2.1
     devDependencies:
       '@types/bcrypt':
         specifier: 'catalog:'
@@ -1565,7 +1565,7 @@ importers:
         version: 3.3.2
       zod:
         specifier: 'catalog:'
-        version: 4.2.0
+        version: 4.2.1
     devDependencies:
       '@casaub0n/eslint-base':
         specifier: workspace:*
@@ -1633,7 +1633,7 @@ importers:
         version: 9.2.3(encoding@0.1.13)
       zod:
         specifier: 'catalog:'
-        version: 4.2.0
+        version: 4.2.1
     devDependencies:
       '@casaub0n/eslint-base':
         specifier: workspace:*
@@ -1692,7 +1692,7 @@ importers:
         version: 1.4.0
       zod:
         specifier: 'catalog:'
-        version: 4.2.0
+        version: 4.2.1
     devDependencies:
       '@casaub0n/eslint-config-react':
         specifier: workspace:*
@@ -16104,11 +16104,11 @@ packages:
   zod@3.25.76:
     resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
 
-  zod@4.1.13:
-    resolution: {integrity: sha512-AvvthqfqrAhNH9dnfmrfKzX5upOdjUVJYFqNSlkmGf64gRaTzlPwz99IHYnVs28qYAybvAlBV+H7pn0saFY4Ig==}
-
   zod@4.2.0:
     resolution: {integrity: sha512-Bd5fw9wlIhtqCCxotZgdTOMwGm1a0u75wARVEY9HMs1X17trvA/lMi4+MGK5EUfYkXVTbX8UDiDKW4OgzHVUZw==}
+
+  zod@4.2.1:
+    resolution: {integrity: sha512-0wZ1IRqGGhMP76gLqz8EyfBXKk0J2qo2+H3fi4mcUP/KtTocoX08nmIAHl1Z2kJIZbZee8KOpBCSNPRgauucjw==}
 
   zwitch@1.0.5:
     resolution: {integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==}
@@ -26135,8 +26135,8 @@ snapshots:
       '@babel/parser': 7.28.5
       eslint: 9.39.2(jiti@2.6.1)
       hermes-parser: 0.25.1
-      zod: 4.1.13
-      zod-validation-error: 4.0.2(zod@4.1.13)
+      zod: 4.2.0
+      zod-validation-error: 4.0.2(zod@4.2.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -34375,9 +34375,9 @@ snapshots:
       typescript: 5.9.3
       zod: 3.25.76
 
-  zod-validation-error@4.0.2(zod@4.1.13):
+  zod-validation-error@4.0.2(zod@4.2.0):
     dependencies:
-      zod: 4.1.13
+      zod: 4.2.0
 
   zod@3.22.3: {}
 
@@ -34385,9 +34385,9 @@ snapshots:
 
   zod@3.25.76: {}
 
-  zod@4.1.13: {}
-
   zod@4.2.0: {}
+
+  zod@4.2.1: {}
 
   zwitch@1.0.5: {}
 
