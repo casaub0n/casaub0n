@@ -21,15 +21,12 @@
   "scripts": {
     "ts:check": "tsc --noEmit",
     "test": "pnpm tsx src/money.test.ts",
+    "start": "pnpm tsx src/index.ts",
     "test:watch": "node --watch --no-warnings --import tsx src/money.test.ts",
     "test:ci": "pnpm test",
     "test:purenode": "pnpm build && pnpm node dist/test.mjs",
-    "rmdist": "node scripts/rrm.ts",
-    "prebuild": "pnpm rmdist",
     "build": "tsdown",
-    "test:coverage": "node --test --experimental-test-coverage ./dist/test.mjs",
-    "test:xml": "node --test --test-reporter=junit ./dist/test.mjs > ../../apps/casaub0n-astro/src/test-driven-development-by-example-report.xml",
-    "start": "pnpm build && node dist/index.js",
+    "test:report": "node --test --experimental-test-coverage --test-reporter=tap --test-reporter-destination=./dist/test-driven-development-by-example-report.tap ./dist/test.mjs && tap ./dist/test-driven-development-by-example-report.tap",
     "lint": "eslint src/**",
     "lint:turbo": "turbo lint"
   },
@@ -47,6 +44,7 @@
   "devDependencies": {
     "@casaub0n/eslint-base": "workspace:*",
     "@types/node": "catalog:",
+    "tap": "catalog:",
     "tsdown": "catalog:",
     "tsx": "catalog:",
     "typescript": "catalog:"

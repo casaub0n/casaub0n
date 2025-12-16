@@ -13,6 +13,10 @@ pnpm install
 pnpm test
 ```
 
+## Dev packages
+
+**tsdown** is for bundler. **tap** is for report.
+
 ## Test Environment
 
 That must be standard feature in the future.
@@ -28,16 +32,6 @@ Node.js has to use loader to run TypeScript.
 ### Motivation
 
 Use standard Node.js's functions
-
-### Notes
-
-This node version is expected over 20 currently. As tsup, `node:test` is not proper solving in build process.
-
-I hope this:
-
-```console
-tsup src/money.test.ts
-```
 
 ## Conclusion
 
