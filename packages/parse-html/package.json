@@ -12,17 +12,15 @@
     "email": "netzach.yoshida@gmail.com",
     "url": "https://github.com/casaub0n"
   },
-  "main": "./dist/index.js",
+  "main": "./dist/index.mjs",
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   },
   "type": "module",
   "scripts": {
     "test": "echo hello",
-    "rmdist": "node scripts/rrm.ts",
-    "prebuild": "pnpm rmdist",
-    "build": "tsup src/index.ts --format cjs --dts --env.TABLE_HEAD 月",
-    "start:parse-html": "pnpm build && node dist/index.js",
+    "build": "tsdown",
+    "start:parse-html": "pnpm build && node dist/index.mjs",
     "lint": "eslint src/**"
   },
   "files": [
@@ -38,7 +36,7 @@
     "@casaub0n/eslint-base": "workspace:*",
     "@types/jsdom": "catalog:",
     "@types/node": "catalog:",
-    "tsup": "catalog:",
+    "tsdown": "catalog:",
     "tsx": "catalog:",
     "typescript": "catalog:"
   },
