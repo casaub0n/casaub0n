@@ -14,7 +14,7 @@
     "email": "netzach.yoshida@gmail.com",
     "url": "https://github.com/casaub0n"
   },
-  "main": "./dist/index.js",
+  "main": "./dist/index.mjs",
   "engines": {
     "node": ">=22"
   },
@@ -23,8 +23,8 @@
     "test:ci": "pnpm test",
     "test:export": "vitest --reporter=html",
     "rmdist": "node scripts/rrm.ts",
-    "build": "pnpm rmdist && tsup src/index.ts --format cjs --dts",
-    "start:tsbox": "pnpm build && node dist/index.js",
+    "build": "tsdown",
+    "start:tsbox": "pnpm build && node dist/index.mjs",
     "lint": "eslint src/**"
   },
   "files": [
@@ -33,7 +33,7 @@
   "keywords": [
     "TypeScript",
     "vitest",
-    "tsup"
+    "tsdown"
   ],
   "publishConfig": {
     "access": "public"
@@ -42,7 +42,7 @@
     "@casaub0n/eslint-base": "workspace:*",
     "@types/node": "catalog:",
     "@vitest/ui": "catalog:",
-    "tsup": "catalog:",
+    "tsdown": "catalog:",
     "tsx": "catalog:",
     "typescript": "catalog:",
     "vitest": "catalog:"
