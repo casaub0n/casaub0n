@@ -69,13 +69,16 @@ import fs from "node:fs";
   ...,
   "type": "module",
   "scripts": {
-    ...,
-    "rmdist": "node scripts/rrm.ts",
-    "build": "pnpm rmdist && tsup src/index.ts --format cjs --dts",
+    "build": "tsdown",
   }
   ...
 }
 ```
+
+We still use knowledge from tsup config:
+
+- [Mark all node_modules as external · Issue #289 · egoist/tsup](https://github.com/egoist/tsup/issues/289#issuecomment-1382492040)
+- [error: Invalid define: --define:process.env.NODE_ENV=development · Issue #44 · evanw/esbuild](https://github.com/evanw/esbuild/issues/44#issuecomment-606719394)
 
 ## PowerShell
 
