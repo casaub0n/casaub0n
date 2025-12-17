@@ -14,9 +14,7 @@
     "node": ">=24"
   },
   "scripts": {
-    "prebuild": "tsdown",
-    "copy": "cpx -u src/static/**/*.{json,html,js} dist/",
-    "build": "pnpm prebuild && pnpm copy",
+    "build": "tsdown",
     "test": "tsc --noEmit && node --env-file .env.windows --import tsx src/test.ts",
     "test:addon": "pnpm build && node --env-file .env.windows --import tsx src/addonTest.ts",
     "test:ci": "node --env-file ../../.env.ci --no-warnings --import tsx src/test.ts"
@@ -31,7 +29,6 @@
     "@casaub0n/eslint-base": "workspace:*",
     "@types/jest": "catalog:",
     "@types/node": "catalog:",
-    "cpx2": "catalog:",
     "jest": "catalog:",
     "puppeteer": "catalog:",
     "tsdown": "catalog:",

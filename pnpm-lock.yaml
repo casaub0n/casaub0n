@@ -207,9 +207,6 @@ catalogs:
     consola:
       specifier: 3.4.2
       version: 3.4.2
-    cpx2:
-      specifier: 8.0.0
-      version: 8.0.0
     cspell:
       specifier: 9.4.0
       version: 9.4.0
@@ -1435,9 +1432,6 @@ importers:
       '@types/node':
         specifier: 'catalog:'
         version: 24.10.4
-      cpx2:
-        specifier: 'catalog:'
-        version: 8.0.0
       jest:
         specifier: 'catalog:'
         version: 30.2.0(@types/node@24.10.4)(ts-node@10.9.2(@types/node@24.10.4)(typescript@5.9.3))
@@ -1472,9 +1466,6 @@ importers:
       '@types/node':
         specifier: 'catalog:'
         version: 24.10.4
-      cpx2:
-        specifier: 'catalog:'
-        version: 8.0.0
       evp-ts:
         specifier: 'catalog:'
         version: 1.1.1
@@ -8967,11 +8958,6 @@ packages:
       typescript:
         optional: true
 
-  cpx2@8.0.0:
-    resolution: {integrity: sha512-RxD9jrSVNSOmfcbiPlr3XnKbUKH9K1w2HCv0skczUKhsZTueiDBecxuaSAKQkYSLQaGVA4ZQJZlTj5hVNNEvKg==}
-    engines: {node: ^20.0.0 || >=22.0.0, npm: '>=10'}
-    hasBin: true
-
   create-ecdh@4.0.4:
     resolution: {integrity: sha512-mf+TCx8wWc9VpuxfP2ht0iSISLZnt0JgWlrOKZiNqyUZWnjIaCIVNQArMHnCZKfEYRg6IM7A+NeJoN8gf/Ws0A==}
 
@@ -9188,10 +9174,6 @@ packages:
   data-view-byte-offset@1.0.1:
     resolution: {integrity: sha512-BS8PfmtDGnrgYdOonGZQdLZslWIeCGFP9tpan0hi1Co2Zr2NKADsvGYA8XxuG/4UWgJ6Cjtv+YJnB6MM69QGlQ==}
     engines: {node: '>= 0.4'}
-
-  debounce@2.2.0:
-    resolution: {integrity: sha512-Xks6RUDLZFdz8LIdR6q0MTH44k7FikOmnh5xkSjMig6ch45afc8sjTjRQf3P6ax8dMgcQrYO/AR2RGWURrruqw==}
-    engines: {node: '>=18'}
 
   debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
@@ -10331,9 +10313,6 @@ packages:
     resolution: {integrity: sha512-9ZonPT4ZAK4a+1pUPVPZJapbi7O5qbbJPdYw/NOQWZZbVLdDTYM3A4R9z/DpAM08IDaFGsvPgiGZ82WEwUDWjg==}
     engines: {node: '>=14.16'}
 
-  find-index@0.1.1:
-    resolution: {integrity: sha512-uJ5vWrfBKMcE6y2Z8834dwEZj9mNGxYa3t3I53OwFeuZ8D9oc2E5zcsrkuhX6h4iYrjhiv0T3szQmxlAV9uxDg==}
-
   find-packages@10.0.4:
     resolution: {integrity: sha512-JmO9lEBUEYOiRw/bdbdgFWpGFgBZBGLcK/5GjQKo3ZN+zR6jmQOh9gWyZoqxlQmnldZ9WBWhna0QYyuq6BxvRg==}
     engines: {node: '>=14.6'}
@@ -10609,10 +10588,6 @@ packages:
 
   glob-to-regexp@0.4.1:
     resolution: {integrity: sha512-lkX1HJXwyMcprw/5YUZc2s7DrpAiHB21/V+E1rHUrVNokkvB6bqMzT0VfV6/86ZNabt1k14YOIaT7nDvOX3Iiw==}
-
-  glob2base@0.0.12:
-    resolution: {integrity: sha512-ZyqlgowMbfj2NPjxaZZ/EtsXlOch28FRXgMd64vqZWk1bT9+wvSRLYD1om9M7QfQru51zJPAT17qXm4/zd+9QA==}
-    engines: {node: '>= 0.10'}
 
   glob@10.5.0:
     resolution: {integrity: sha512-DfXN8DfhJ7NH3Oe7cFmu3NCu1wKbkReJ8TorzSAFbSKrlNaQSKfIzqYqVY8zlbs2NLBbWpRiU52GX2PbaBVNkg==}
@@ -11002,10 +10977,6 @@ packages:
 
   ignore@5.3.2:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
-    engines: {node: '>= 4'}
-
-  ignore@6.0.2:
-    resolution: {integrity: sha512-InwqeHHN2XpumIkMvpl/DCJVrAHgCsG5+cn1XlnLWGwtZBm8QJfSusItfrwx81CTp5agNZqpKU2J/ccC5nGT4A==}
     engines: {node: '>= 4'}
 
   ignore@7.0.5:
@@ -14878,9 +14849,6 @@ packages:
         optional: true
       babel-plugin-macros:
         optional: true
-
-  subarg@1.0.0:
-    resolution: {integrity: sha512-RIrIdRY0X1xojthNcVtgT9sjpOGagEUKpZdgBUi054OEPFo282yg+zE+t1Rj3+RqKq2xStL7uUHhY+AjbC4BXg==}
 
   supports-color@10.2.2:
     resolution: {integrity: sha512-SS+jx45GF1QjgEXQx4NJZV9ImqmO2NPz5FNsIHrsDjh2YsHnawpan7SNQ1o8NuhrbHZy9AZhIoCUiCeaW/C80g==}
@@ -20347,7 +20315,7 @@ snapshots:
 
   '@npmcli/fs@5.0.0':
     dependencies:
-      semver: 7.7.2
+      semver: 7.7.3
 
   '@npmcli/git@7.0.1':
     dependencies:
@@ -25619,24 +25587,6 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.3
 
-  cpx2@8.0.0:
-    dependencies:
-      debounce: 2.2.0
-      debug: 4.4.3
-      duplexer: 0.1.2
-      fs-extra: 11.3.2
-      glob: 11.1.0
-      glob2base: 0.0.12
-      ignore: 6.0.2
-      minimatch: 10.1.1
-      p-map: 7.0.4
-      resolve: 1.22.11
-      safe-buffer: 5.2.1
-      shell-quote: 1.8.3
-      subarg: 1.0.0
-    transitivePeerDependencies:
-      - supports-color
-
   create-ecdh@4.0.4:
     dependencies:
       bn.js: 4.12.2
@@ -25956,8 +25906,6 @@ snapshots:
       call-bound: 1.0.4
       es-errors: 1.3.0
       is-data-view: 1.0.2
-
-  debounce@2.2.0: {}
 
   debug@2.6.9:
     dependencies:
@@ -27546,8 +27494,6 @@ snapshots:
       common-path-prefix: 3.0.0
       pkg-dir: 7.0.0
 
-  find-index@0.1.1: {}
-
   find-packages@10.0.4:
     dependencies:
       '@pnpm/read-project-manifest': 4.1.1
@@ -27913,10 +27859,6 @@ snapshots:
       is-glob: 4.0.3
 
   glob-to-regexp@0.4.1: {}
-
-  glob2base@0.0.12:
-    dependencies:
-      find-index: 0.1.1
 
   glob@10.5.0:
     dependencies:
@@ -28436,8 +28378,6 @@ snapshots:
       minimatch: 10.1.1
 
   ignore@5.3.2: {}
-
-  ignore@6.0.2: {}
 
   ignore@7.0.5: {}
 
@@ -33496,10 +33436,6 @@ snapshots:
       react: 19.2.3
     optionalDependencies:
       '@babel/core': 7.28.5
-
-  subarg@1.0.0:
-    dependencies:
-      minimist: 1.2.8
 
   supports-color@10.2.2: {}
 
