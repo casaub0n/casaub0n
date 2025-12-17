@@ -14,8 +14,7 @@
     "node": ">=24"
   },
   "scripts": {
-    "rmdist": "node scripts/rrm.ts",
-    "prebuild": "pnpm rmdist && esbuild src/index.ts --bundle --define:process.env.NODE_ENV=\\\"production\\\" --minify --platform=node --target=node17 --outfile=dist/index.js",
+    "prebuild": "tsdown",
     "copy": "cpx -u src/static/**/*.{json,html,js} dist/",
     "build": "pnpm prebuild && pnpm copy",
     "test": "tsc --noEmit && node --env-file .env.windows --import tsx src/mklink.test.ts",
@@ -33,7 +32,6 @@
     "@types/jest": "catalog:",
     "@types/node": "catalog:",
     "cpx2": "catalog:",
-    "esbuild": "catalog:",
     "evp-ts": "catalog:",
     "jest": "catalog:",
     "neverthrow": "catalog:",
