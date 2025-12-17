@@ -12,4 +12,5 @@ export default defineConfig({
   skipNodeModulesBundle: true,
   // eslint-disable-next-line unicorn/better-regex
   noExternal: [/(?:.*)/],
+  copy: ["./src/static/**/*.{json,html,js}"],
 });
