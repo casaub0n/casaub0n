@@ -367,8 +367,8 @@ catalogs:
       specifier: 3.6.0
       version: 3.6.0
     renovate:
-      specifier: 42.63.0
-      version: 42.63.0
+      specifier: 42.64.1
+      version: 42.64.1
     schema-dts:
       specifier: 1.1.5
       version: 1.1.5
@@ -505,7 +505,7 @@ importers:
         version: 3.7.4
       renovate:
         specifier: 'catalog:'
-        version: 42.63.0(encoding@0.1.13)(typanion@3.14.0)
+        version: 42.64.1(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: 'catalog:'
         version: 15.5.0(hono@4.10.6)
@@ -14032,8 +14032,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@42.63.0:
-    resolution: {integrity: sha512-rELyFskKdtcSgeVCyQ4uskupk6Gtg0W3LNBV7c+2WG7vN3QMsQ+GHUXI4P98U57E8Zjyyp7nf62tXsY7i1cBiA==}
+  renovate@42.64.1:
+    resolution: {integrity: sha512-5KU+VlbDnVAHjarpr/+Up1mF3JMoyiuo97iCmwJdsLZRqM2PABatg3uAfHlu82m5nufXySW9C6CaaXA1ZKhMDg==}
     engines: {node: ^22.13.0 || ^24.11.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -16392,8 +16392,8 @@ packages:
   xmlchars@2.2.0:
     resolution: {integrity: sha512-JZnDKK8B0RCDw84FNdDAIpZK+JuJw+s7Lz8nksI7SIuU3UXJJslUthsi+uWBUYOwPFwW7W7PRLRfUKpxjtjFCw==}
 
-  xmldoc@2.0.2:
-    resolution: {integrity: sha512-UiRwoSStEXS3R+YE8OqYv3jebza8cBBAI2y8g3B15XFkn3SbEOyyLnmPHjLBPZANrPJKEzxxB7A3XwcLikQVlQ==}
+  xmldoc@2.0.3:
+    resolution: {integrity: sha512-6gRk4NY/Jvg67xn7OzJuxLRsGgiXBaPUQplVJ/9l99uIugxh4FTOewYz5ic8WScj7Xx/2WvhENiQKwkK9RpE4w==}
     engines: {node: '>=12.0.0'}
 
   xtend@4.0.2:
@@ -32280,7 +32280,7 @@ snapshots:
       lodash: 4.17.21
       strip-ansi: 6.0.1
 
-  renovate@42.63.0(encoding@0.1.13)(typanion@3.14.0):
+  renovate@42.64.1(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.940.0
       '@aws-sdk/client-ec2': 3.940.0
@@ -32398,7 +32398,7 @@ snapshots:
       upath: 2.0.1
       url-join: 5.0.0
       validate-npm-package-name: 7.0.0
-      xmldoc: 2.0.2
+      xmldoc: 2.0.3
       yaml: 2.8.2
       zod: 3.25.76
     optionalDependencies:
@@ -35344,7 +35344,7 @@ snapshots:
 
   xmlchars@2.2.0: {}
 
-  xmldoc@2.0.2:
+  xmldoc@2.0.3:
     dependencies:
       sax: 1.4.3
 
