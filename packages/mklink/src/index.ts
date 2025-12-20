@@ -3,7 +3,7 @@
 console.log("loading mklink");
 
 // https://qiita.com/kim_t0814/items/084bb8c042defc1e232d
-document.addEventListener("keydown", function (event) {
+document.addEventListener("keydown", (event) => {
   keysPressed[event.key] = true;
   if (keysPressed["d"] && keysPressed["v"]) {
     console.log("press button");
@@ -11,8 +11,7 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-document.addEventListener("keyup", function (event) {
-  // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
+document.addEventListener("keyup", (event) => {
   delete keysPressed[event.key];
 });
 
@@ -39,7 +38,5 @@ const copySelectedTextAsMarkdown = () => {
   const { selectedText, url, title } = getTextAndUrl();
   if (selectedText) {
     copyAsMarkdown(selectedText, url);
-  } else {
-    if (title) copyAsMarkdown(title, url);
-  }
+  } else if (title) copyAsMarkdown(title, url);
 };
