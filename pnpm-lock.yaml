@@ -1453,9 +1453,21 @@ importers:
 
   packages/mklink:
     dependencies:
+      '@formkit/tempo':
+        specifier: 'catalog:'
+        version: 0.1.2
       consola:
         specifier: 'catalog:'
         version: 3.4.2
+      effect:
+        specifier: 'catalog:'
+        version: 3.19.13
+      es-toolkit:
+        specifier: 'catalog:'
+        version: 1.43.0
+      zod:
+        specifier: 'catalog:'
+        version: 4.2.1
     devDependencies:
       '@casaub0n/eslint-base':
         specifier: workspace:*
