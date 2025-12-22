@@ -2,6 +2,9 @@ import { defineConfig } from "eslint/config";
 import base from "@casaub0n/eslint-base";
 
 export default defineConfig([
+  ...base({
+    tsConfigurationRootDirectory: import.meta.dirname,
+  }),
   {
     ignores: ["**/eslint.config.mjs"],
     rules: {
@@ -10,7 +13,4 @@ export default defineConfig([
       "@typescript-eslint/no-dynamic-delete": "off",
     },
   },
-  ...base({
-    tsConfigurationRootDirectory: import.meta.dirname,
-  }),
 ]);
