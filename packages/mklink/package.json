@@ -18,7 +18,8 @@
     "lint": "eslint src/**/*.ts",
     "test": "node --env-file .env.windows --import tsx src/mklink.test.ts",
     "test:addon": "pnpm build && node --env-file .env.windows --import tsx src/addonTest.ts",
-    "test:ci": "node --env-file ../../.env.ci --no-warnings --import tsx src/mklink.test.ts"
+    "test:ci": "node --env-file ../../.env.ci --no-warnings --import tsx src/mklink.test.ts",
+    "test:playwright": "playwright test"
   },
   "files": [
     "dist"
