@@ -1,15 +1,15 @@
-import type TSESLint from "@typescript-eslint/utils";
 import js from "@eslint/js";
 import globals from "globals";
 import eslintPluginAstro from "eslint-plugin-astro";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import eslintConfigPrettier from "eslint-config-prettier";
 import { ignoreConfig } from "../../utils/src/ignore-config";
+import { type FlatConfig } from "typescript-eslint";
 
 /**
  * @see https://zenn.dev/suree/articles/71591ec903463d
  */
-const config: TSESLint.TSESLint.FlatConfig.ConfigArray = [
+const config: FlatConfig.ConfigArray = [
   {
     ignores: ignoreConfig,
   },

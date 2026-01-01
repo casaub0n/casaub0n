@@ -1,12 +1,11 @@
 import { defineConfig } from "eslint/config";
 import pluginJs from "@eslint/js";
-import tseslint from "typescript-eslint";
+import tseslint, { type FlatConfig } from "typescript-eslint";
 
 /**
  * @see https://github.com/sweepline/eslint-plugin-unused-imports/tree/master?tab=readme-ov-file#usage
  */
 import unusedImports from "eslint-plugin-unused-imports";
-import type TSESLint from "@typescript-eslint/utils";
 import cspellESLintPluginRecommended from "@cspell/eslint-plugin/recommended";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import turboPlugin from "eslint-plugin-turbo";
@@ -45,7 +44,7 @@ const config = ({
   tsConfigurationRootDirectory = import.meta.dirname,
 }: Readonly<{
   tsConfigurationRootDirectory: string;
-}>): TSESLint.TSESLint.FlatConfig.ConfigArray =>
+}>): FlatConfig.ConfigArray =>
   defineConfig([
     /**
      * @see https://zenn.dev/yu_ta_9/articles/7001d66779ff3a#%40eslint%2Fjs
