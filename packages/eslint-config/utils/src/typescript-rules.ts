@@ -1,4 +1,4 @@
-import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint";
+import { type FlatConfig } from "typescript-eslint";
 
 /**
  * `@typescript-eslint`
