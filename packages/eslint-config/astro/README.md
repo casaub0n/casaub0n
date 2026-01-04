@@ -1,28 +1,23 @@
-# `@casaub0n/eslint-base`
+# `@casaub0n/eslint-config-astro`
 
 [![badge](https://img.shields.io/badge/ESLint-3A33D1?logo=eslint)](https://eslint.org/docs/latest/use/configure/)
 
 This is flat config. Check [peerDependencies](./package.json).
 
+The config is for Astro's project because we use [ota-meshi/eslint-plugin-astro](https://github.com/ota-meshi/eslint-plugin-astro).
+
 ## Usage
 
-1. Add `"@casaub0n/eslint-base": "workspace:*"` in devDependencies in `package.json`, and then `pnpm install` on a root directory.
+1. Add `"@casaub0n/eslint-config-astro": "workspace:*"` in devDependencies in `package.json`, and then `pnpm install` on a root directory.
 1. Make `eslint.config.mjs` on the root of a project.
 
 This is a example eslint config.
-
-Use `tsConfigurationRootDirectory` and `tsconfigFileName` to point tsconfig.json location.
 
 ```js
 import { defineConfig } from "eslint/config";
 import base from "@casaub0n/eslint-base";
 
-export default defineConfig([
-  ...base({
-    tsConfigurationRootDirectory: import.meta.dirname,
-    tsconfigFileName: "./tsconfig.json",
-  }),
-]);
+export default defineConfig([...base]);
 ```
 
 ## Development
