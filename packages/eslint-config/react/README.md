@@ -29,7 +29,7 @@ export default defineConfig([
 ### Build
 
 ```console
-pnpm buid
+pnpm build
 ```
 
 [tsdown](./tsdown.config.ts) compiles files in `dist` directory.
