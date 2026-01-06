@@ -370,8 +370,8 @@ catalogs:
       specifier: 3.6.0
       version: 3.6.0
     renovate:
-      specifier: 42.71.0
-      version: 42.71.0
+      specifier: 42.71.2
+      version: 42.71.2
     schema-dts:
       specifier: 1.1.5
       version: 1.1.5
@@ -508,7 +508,7 @@ importers:
         version: 3.7.4
       renovate:
         specifier: 'catalog:'
-        version: 42.71.0(encoding@0.1.13)(typanion@3.14.0)
+        version: 42.71.2(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: 'catalog:'
         version: 15.5.0(hono@4.10.6)
@@ -6017,10 +6017,6 @@ packages:
   '@sindresorhus/is@4.6.0':
     resolution: {integrity: sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==}
     engines: {node: '>=10'}
-
-  '@sindresorhus/is@7.1.1':
-    resolution: {integrity: sha512-rO92VvpgMc3kfiTjGT52LEtJ8Yc5kCWhZjLQ3LwlA4pSgPpQO7bVpYXParOD8Jwf+cVQECJo3yP/4I8aZtUQTQ==}
-    engines: {node: '>=18'}
 
   '@sindresorhus/is@7.2.0':
     resolution: {integrity: sha512-P1Cz1dWaFfR4IR+U13mqqiGsLFf1KbayybWwdd2vfctdV6hDpUkgCY0nKOLLTMSoRd/jJNjtbqzf13K8DCCXQw==}
@@ -14089,8 +14085,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@42.71.0:
-    resolution: {integrity: sha512-TQcPwhYGO+PUghLQEjnP/co51RCBdlSvOMLhTlEnigoc1Dzth+UeD/B9UvRP0uZikVzvDX9e7yJnVXuqlexaig==}
+  renovate@42.71.2:
+    resolution: {integrity: sha512-hoa2jkremRbYT6/DeXecCzAcUXjBJpyNkkrCrTcfxVn3l1ACtR1OetfPc9P+XaCGJccDAwAvvToeED7eeA4npA==}
     engines: {node: ^22.13.0 || ^24.11.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -20773,7 +20769,7 @@ snapshots:
   '@poppinss/dumper@0.6.5':
     dependencies:
       '@poppinss/colors': 4.1.5
-      '@sindresorhus/is': 7.1.1
+      '@sindresorhus/is': 7.2.0
       supports-color: 10.2.2
 
   '@poppinss/exception@1.2.2': {}
@@ -21401,8 +21397,6 @@ snapshots:
   '@sinclair/typebox@0.34.41': {}
 
   '@sindresorhus/is@4.6.0': {}
-
-  '@sindresorhus/is@7.1.1': {}
 
   '@sindresorhus/is@7.2.0': {}
 
@@ -32309,7 +32303,7 @@ snapshots:
       lodash: 4.17.21
       strip-ansi: 6.0.1
 
-  renovate@42.71.0(encoding@0.1.13)(typanion@3.14.0):
+  renovate@42.71.2(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.958.0
       '@aws-sdk/client-ec2': 3.958.0
