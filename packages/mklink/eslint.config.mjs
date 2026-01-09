@@ -12,6 +12,8 @@ export default defineConfig([
     rules: {
       "@typescript-eslint/explicit-function-return-type": "off",
       "@typescript-eslint/no-dynamic-delete": "off",
+      // This project is for addon
+      "unicorn/prefer-global-this": "off",
     },
   },
 ]);
