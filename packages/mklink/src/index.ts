@@ -1,9 +1,6 @@
-/* eslint-disable unicorn/prefer-global-this */
-
 import consola from "consola";
 import { isNil } from "es-toolkit/predicate";
 
-// eslint-disable-next-line @cspell/spellchecker
 consola.log("loading mklink");
 
 // eslint-disable-next-line prefer-const
