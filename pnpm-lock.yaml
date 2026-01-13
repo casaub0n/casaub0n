@@ -370,8 +370,8 @@ catalogs:
       specifier: 3.6.0
       version: 3.6.0
     renovate:
-      specifier: 42.80.1
-      version: 42.80.1
+      specifier: 42.80.3
+      version: 42.80.3
     schema-dts:
       specifier: 1.1.5
       version: 1.1.5
@@ -508,7 +508,7 @@ importers:
         version: 3.7.4
       renovate:
         specifier: 'catalog:'
-        version: 42.80.1(encoding@0.1.13)(typanion@3.14.0)
+        version: 42.80.3(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: 'catalog:'
         version: 15.5.0(hono@4.10.6)
@@ -12993,10 +12993,6 @@ packages:
     resolution: {integrity: sha512-aNZ+VfjobsWryoiPnEApGGmf5WmNsCo9xu8dfaYamG5qaLP7ClhLN6NgsFe6SwJ2UbLEBK5dv9x8Mn5+RVhMWQ==}
     engines: {node: '>=18'}
 
-  p-queue@9.0.1:
-    resolution: {integrity: sha512-RhBdVhSwJb7Ocn3e8ULk4NMwBEuOxe+1zcgphUy9c2e5aR/xbEsdVXxHJ3lynw6Qiqu7OINEyHlZkiblEpaq7w==}
-    engines: {node: '>=20'}
-
   p-queue@9.1.0:
     resolution: {integrity: sha512-O/ZPaXuQV29uSLbxWBGGZO1mCQXV2BLIwUr59JUU9SoH76mnYvtms7aafH/isNSNGwuEfP6W/4xD0/TJXxrizw==}
     engines: {node: '>=20'}
@@ -13921,8 +13917,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@42.80.1:
-    resolution: {integrity: sha512-EqzEt8VUhQu/Cvp3yGB3lRZ9bOpCkrJ0vflg1UqSo3E9Nnt+JPnNKx/3H0dhL4PUqEdzNPZVoxBxpQaSB6jJbQ==}
+  renovate@42.80.3:
+    resolution: {integrity: sha512-Bb9An0rzggiq7IJ6gTD4aeff2+QmwkAy2hdkStFYL9wm3+9kawbvAr96IeoaOcyr/FiIk7z10SwSD/d1efj3og==}
     engines: {node: ^22.13.0 || ^24.11.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -19778,7 +19774,7 @@ snapshots:
       load-json-file: 7.0.1
       npm-package-arg: 13.0.2
       p-map: 7.0.4
-      p-queue: 9.0.1
+      p-queue: 9.1.0
       semver: 7.7.3
       slash: 5.1.0
       tinyglobby: 0.2.15
@@ -30857,11 +30853,6 @@ snapshots:
       eventemitter3: 5.0.1
       p-timeout: 6.1.4
 
-  p-queue@9.0.1:
-    dependencies:
-      eventemitter3: 5.0.1
-      p-timeout: 7.0.1
-
   p-queue@9.1.0:
     dependencies:
       eventemitter3: 5.0.1
@@ -32006,7 +31997,7 @@ snapshots:
       lodash: 4.17.21
       strip-ansi: 6.0.1
 
-  renovate@42.80.1(encoding@0.1.13)(typanion@3.14.0):
+  renovate@42.80.3(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.958.0
       '@aws-sdk/client-ec2': 3.958.0
