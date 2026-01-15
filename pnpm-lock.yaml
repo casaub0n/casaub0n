@@ -370,8 +370,8 @@ catalogs:
       specifier: 3.6.0
       version: 3.6.0
     renovate:
-      specifier: 42.81.7
-      version: 42.81.7
+      specifier: 42.81.8
+      version: 42.81.8
     schema-dts:
       specifier: 1.1.5
       version: 1.1.5
@@ -508,7 +508,7 @@ importers:
         version: 3.8.0
       renovate:
         specifier: 'catalog:'
-        version: 42.81.7(encoding@0.1.13)(typanion@3.14.0)
+        version: 42.81.8(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: 'catalog:'
         version: 15.5.0(hono@4.10.6)
@@ -8898,10 +8898,6 @@ packages:
     resolution: {integrity: sha512-uIFDxqpRZGZ6ThOk84hEfqWoHx2devRFvpTZcTHur85vImfaxUbTW9Ryh4CpCuDnToOP1CEtXKIgytHBPVff5A==}
     engines: {node: '>=0.3.1'}
 
-  diff@8.0.2:
-    resolution: {integrity: sha512-sSuxWU5j5SR9QQji/o2qMvqRNYRDOcBTgsJ/DeCf4iSN4gW+gNMXM7wFIP+fdXZxoNiAnHUTGjCr+TSWXdRDKg==}
-    engines: {node: '>=0.3.1'}
-
   diff@8.0.3:
     resolution: {integrity: sha512-qejHi7bcSD4hQAZE0tNAawRK1ZtafHDmMTMkrrIGgSLl7hTnQHmKCeB45xAcbfTqK2zowkM3j3bHt/4b/ARbYQ==}
     engines: {node: '>=0.3.1'}
@@ -13446,8 +13442,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@42.81.7:
-    resolution: {integrity: sha512-2/euhwjTeBAI3izVbzxwzO8pbQg1X1v5h1Xp6JWqy44g4O5l3u1zioo3v3wWX1M5h+DRD7oLEsNU7tRLqsuuSg==}
+  renovate@42.81.8:
+    resolution: {integrity: sha512-921v7WU9fN6mXCoM3frr8y/ItY3XWEiK8ILGykWUuVNQ3n17tW/ihGsmOz2FEU3zejeCLL4VBJqQW2laSuHXIQ==}
     engines: {node: ^22.13.0 || ^24.11.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -21371,7 +21367,7 @@ snapshots:
       '@tapjs/stack': 4.3.0
       '@tapjs/test': 4.3.0(@tapjs/core@4.4.0(@types/node@24.10.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(@types/node@24.10.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       async-hook-domain: 4.0.1
-      diff: 8.0.2
+      diff: 8.0.3
       is-actual-promise: 1.0.2
       minipass: 7.1.2
       signal-exit: 4.1.0
@@ -25104,8 +25100,6 @@ snapshots:
   diff@4.0.2: {}
 
   diff@5.2.0: {}
-
-  diff@8.0.2: {}
 
   diff@8.0.3: {}
 
@@ -31178,7 +31172,7 @@ snapshots:
       lodash: 4.17.21
       strip-ansi: 6.0.1
 
-  renovate@42.81.7(encoding@0.1.13)(typanion@3.14.0):
+  renovate@42.81.8(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.958.0
       '@aws-sdk/client-ec2': 3.958.0
@@ -32453,7 +32447,7 @@ snapshots:
 
   tcompare@9.3.0(react-dom@19.2.3(react@19.2.3))(react@18.3.1):
     dependencies:
-      diff: 8.0.2
+      diff: 8.0.3
       react-element-to-jsx-string: 15.0.0(react-dom@19.2.3(react@19.2.3))(react@18.3.1)
     transitivePeerDependencies:
       - react
@@ -32461,7 +32455,7 @@ snapshots:
 
   tcompare@9.3.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
     dependencies:
-      diff: 8.0.2
+      diff: 8.0.3
       react-element-to-jsx-string: 15.0.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
     transitivePeerDependencies:
       - react
