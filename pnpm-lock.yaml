@@ -18,9 +18,21 @@ catalogs:
     '@cspell/cspell-types':
       specifier: 9.6.0
       version: 9.6.0
+    '@cspell/eslint-plugin':
+      specifier: 9.6.0
+      version: 9.6.0
+    '@eslint/compat':
+      specifier: 2.0.1
+      version: 2.0.1
     '@eslint/config-inspector':
       specifier: 1.4.2
       version: 1.4.2
+    '@eslint/eslintrc':
+      specifier: 3.3.3
+      version: 3.3.3
+    '@eslint/js':
+      specifier: 9.39.2
+      version: 9.39.2
     '@eslint/json':
       specifier: 0.14.0
       version: 0.14.0
@@ -124,8 +136,8 @@ catalogs:
       specifier: 6.0.0
       version: 6.0.0
     '@types/chrome':
-      specifier: 0.1.35
-      version: 0.1.35
+      specifier: 0.1.36
+      version: 0.1.36
     '@types/eslint-config-prettier':
       specifier: 6.11.3
       version: 6.11.3
@@ -147,6 +159,12 @@ catalogs:
     '@types/react-dom':
       specifier: 19.2.3
       version: 19.2.3
+    '@typescript-eslint/eslint-plugin':
+      specifier: 8.53.1
+      version: 8.53.1
+    '@typescript-eslint/parser':
+      specifier: 8.53.1
+      version: 8.53.1
     '@unocss/reset':
       specifier: 66.6.0
       version: 66.6.0
@@ -213,9 +231,42 @@ catalogs:
     eslint-config-next:
       specifier: 16.1.4
       version: 16.1.4
+    eslint-config-prettier:
+      specifier: 10.1.8
+      version: 10.1.8
+    eslint-import-resolver-typescript:
+      specifier: 4.4.4
+      version: 4.4.4
+    eslint-plugin-astro:
+      specifier: 1.5.0
+      version: 1.5.0
+    eslint-plugin-import:
+      specifier: 2.32.0
+      version: 2.32.0
+    eslint-plugin-import-x:
+      specifier: 4.16.1
+      version: 4.16.1
+    eslint-plugin-only-warn:
+      specifier: 1.1.0
+      version: 1.1.0
+    eslint-plugin-react:
+      specifier: 7.37.5
+      version: 7.37.5
+    eslint-plugin-react-hooks:
+      specifier: 7.0.1
+      version: 7.0.1
     eslint-plugin-storybook:
       specifier: 10.1.11
       version: 10.1.11
+    eslint-plugin-turbo:
+      specifier: 2.7.5
+      version: 2.7.5
+    eslint-plugin-unicorn:
+      specifier: 62.0.0
+      version: 62.0.0
+    eslint-plugin-unused-imports:
+      specifier: 4.3.0
+      version: 4.3.0
     eslint-plugin-yml:
       specifier: 3.0.0
       version: 3.0.0
@@ -237,6 +288,9 @@ catalogs:
     glob:
       specifier: 13.0.0
       version: 13.0.0
+    globals:
+      specifier: 17.0.0
+      version: 17.0.0
     gsap:
       specifier: 3.14.2
       version: 3.14.2
@@ -1297,7 +1351,7 @@ importers:
         version: 2.3.0
       '@types/chrome':
         specifier: 'catalog:'
-        version: 0.1.35
+        version: 0.1.36
       '@types/node':
         specifier: 'catalog:'
         version: 24.10.9
@@ -1420,7 +1474,7 @@ importers:
         version: 1.57.0
       '@types/chrome':
         specifier: 'catalog:'
-        version: 0.1.35
+        version: 0.1.36
       '@types/jest':
         specifier: 'catalog:'
         version: 30.0.0
@@ -6479,8 +6533,8 @@ packages:
   '@types/chai@5.2.3':
     resolution: {integrity: sha512-Mw558oeA9fFbv65/y4mHtXDs9bPnFMZAL/jxdPFUpOHHIXX91mcgEHbS5Lahr+pwZFR8A7GQleRWeI6cGFC2UA==}
 
-  '@types/chrome@0.1.35':
-    resolution: {integrity: sha512-Luzu3E4wbOawkBIiQOY/CIsx1W8cC2NF8VCHnoy+1Nszj1v0dfeo0XnGwHp+c+MUV0yhi6+s4Lo9UbATT1M32A==}
+  '@types/chrome@0.1.36':
+    resolution: {integrity: sha512-BvHbuyGttYXnGt5Gpwa4769KIinKHY1iLjlAPrrMBS2GI9m/XNMPtdsq0NgQalyuUdxvlMN/0OyGw0shFVIoUQ==}
 
   '@types/d3-array@3.2.2':
     resolution: {integrity: sha512-hOLWVbm7uRza0BYXpIIW5pxfrKe0W+D5lrFiAEYR+pb6w3N2SwSMaJbXdUfSEv+dT4MfHBLtn5js0LAWaO6otw==}
@@ -17722,7 +17776,7 @@ snapshots:
     dependencies:
       '@babel/code-frame': 7.28.6
       '@babel/generator': 7.28.6
-      '@babel/parser': 7.27.7
+      '@babel/parser': 7.28.6
       '@babel/template': 7.28.6
       '@babel/types': 7.28.6
       debug: 4.4.3
@@ -22056,7 +22110,7 @@ snapshots:
       '@types/deep-eql': 4.0.2
       assertion-error: 2.0.1
 
-  '@types/chrome@0.1.35':
+  '@types/chrome@0.1.36':
     dependencies:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
@@ -22301,8 +22355,8 @@ snapshots:
 
   '@typescript-eslint/project-service@8.53.0(typescript@5.9.3)':
     dependencies:
-      '@typescript-eslint/tsconfig-utils': 8.53.0(typescript@5.9.3)
-      '@typescript-eslint/types': 8.53.0
+      '@typescript-eslint/tsconfig-utils': 8.53.1(typescript@5.9.3)
+      '@typescript-eslint/types': 8.53.1
       debug: 4.4.3
       typescript: 5.9.3
     transitivePeerDependencies:
@@ -23535,8 +23589,8 @@ snapshots:
   astro-eslint-parser@1.2.2:
     dependencies:
       '@astrojs/compiler': 2.13.0
-      '@typescript-eslint/scope-manager': 8.53.0
-      '@typescript-eslint/types': 8.53.0
+      '@typescript-eslint/scope-manager': 8.53.1
+      '@typescript-eslint/types': 8.53.1
       astrojs-compiler-sync: 1.1.1(@astrojs/compiler@2.13.0)
       debug: 4.4.3
       entities: 6.0.1
@@ -25798,7 +25852,7 @@ snapshots:
     dependencies:
       '@eslint-community/eslint-utils': 4.9.1(eslint@9.39.2(jiti@2.6.1))
       '@jridgewell/sourcemap-codec': 1.5.5
-      '@typescript-eslint/types': 8.53.0
+      '@typescript-eslint/types': 8.53.1
       astro-eslint-parser: 1.2.2
       eslint: 9.39.2(jiti@2.6.1)
       eslint-compat-utils: 0.6.5(eslint@9.39.2(jiti@2.6.1))
