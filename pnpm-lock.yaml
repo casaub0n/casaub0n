@@ -448,8 +448,8 @@ catalogs:
       specifier: 1.2.0
       version: 1.2.0
     vercel:
-      specifier: 50.4.10
-      version: 50.4.10
+      specifier: 50.5.0
+      version: 50.5.0
     vite:
       specifier: 7.3.1
       version: 7.3.1
@@ -705,7 +705,7 @@ importers:
         version: 5.9.3
       vercel:
         specifier: 'catalog:'
-        version: 50.4.10(encoding@0.1.13)(rollup@4.55.1)(typescript@5.9.3)
+        version: 50.5.0(encoding@0.1.13)(rollup@4.55.1)(typescript@5.9.3)
 
   apps/catalog:
     devDependencies:
@@ -7003,8 +7003,8 @@ packages:
     peerDependencies:
       typescript: ^4.0.0 || ^5.0.0
 
-  '@vercel/detect-agent@1.0.0':
-    resolution: {integrity: sha512-AIPgNkmtFcDgPCl+xvTT1ga90OL7OTX2RKM4zu0PMpwBthPfN2DpdHy10n3bh8K+CA22GDU0/ncjzprZsrk0sw==}
+  '@vercel/detect-agent@1.1.0':
+    resolution: {integrity: sha512-Zfq6FbIcYl9gaAmVu6ROsqUiCNwpEj3Ljz/tMX5fl12Z95OFOxzf7vlO03WE5JBU/ri1tBDFHnW41dihMINOPQ==}
     engines: {node: '>=14'}
 
   '@vercel/elysia@0.1.26':
@@ -7064,9 +7064,10 @@ packages:
   '@vercel/postgres@0.10.0':
     resolution: {integrity: sha512-fSD23DxGND40IzSkXjcFcxr53t3Tiym59Is0jSYIFpG4/0f0KO9SGtcp1sXiebvPaGe7N/tU05cH4yt2S6/IPg==}
     engines: {node: '>=18.14'}
+    deprecated: '@vercel/postgres is deprecated. You can either choose an alternate storage solution from the Vercel Marketplace if you want to set up a new database. Or you can follow this guide to migrate your existing Vercel Postgres db: https://neon.com/docs/guides/vercel-postgres-transition-guide'
 
-  '@vercel/python@6.3.0':
-    resolution: {integrity: sha512-2Cmmet1087W39ENgm0VeEG87fwsOHNi1nFGGRPn6jNE5XEWJR0/dafkhRp77My0qbUxsG6F7Xg3+7hrRX4RAYA==}
+  '@vercel/python@6.3.1':
+    resolution: {integrity: sha512-GpScOs86aq/o1dBn6ypxodM4Si39VedZ6sRSegZIYppu/GNjCHldo7+3Tx0cykQK8KW3yH3ruxp01qK6Qv0OcQ==}
 
   '@vercel/redwood@2.4.9':
     resolution: {integrity: sha512-U7bYIuWfMEFMIcKKbX7lTT8pFNjig9Q3vLeCYRYQUrKVP8xLoUBXSEfW3ijtWJBUV8GmbZCDI30A16uUfNhN+g==}
@@ -15312,8 +15313,8 @@ packages:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
 
-  vercel@50.4.10:
-    resolution: {integrity: sha512-2SAB+BxL20kVHXWm0FKWQxPnscWJsu62Wlz+Awqh0LAx/9sR+OWBcy0h+gjoNcJy/e39i1t55IVxTCpeApiQ2g==}
+  vercel@50.5.0:
+    resolution: {integrity: sha512-z9dfb0XNStSkW5KxCAf5YYDeH6bLzvDooU83viTLX0cDlX+MnWY5rY752kIZLXM5nyzLLhOKXjDrQxb7yYAaiA==}
     engines: {node: '>= 18'}
     hasBin: true
 
@@ -22654,7 +22655,7 @@ snapshots:
       tsx: 4.21.0
       typescript: 5.9.3
 
-  '@vercel/detect-agent@1.0.0': {}
+  '@vercel/detect-agent@1.1.0': {}
 
   '@vercel/elysia@0.1.26(encoding@0.1.13)(rollup@4.55.1)':
     dependencies:
@@ -22862,7 +22863,7 @@ snapshots:
     transitivePeerDependencies:
       - utf-8-validate
 
-  '@vercel/python@6.3.0': {}
+  '@vercel/python@6.3.1': {}
 
   '@vercel/redwood@2.4.9(encoding@0.1.13)(rollup@4.55.1)':
     dependencies:
@@ -33478,12 +33479,12 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vercel@50.4.10(encoding@0.1.13)(rollup@4.55.1)(typescript@5.9.3):
+  vercel@50.5.0(encoding@0.1.13)(rollup@4.55.1)(typescript@5.9.3):
     dependencies:
       '@vercel/backends': 0.0.23(encoding@0.1.13)(rollup@4.55.1)(typescript@5.9.3)
       '@vercel/blob': 1.0.2
       '@vercel/build-utils': 13.2.15
-      '@vercel/detect-agent': 1.0.0
+      '@vercel/detect-agent': 1.1.0
       '@vercel/elysia': 0.1.26(encoding@0.1.13)(rollup@4.55.1)
       '@vercel/express': 0.1.33(encoding@0.1.13)(rollup@4.55.1)(typescript@5.9.3)
       '@vercel/fastify': 0.1.29(encoding@0.1.13)(rollup@4.55.1)
@@ -33496,7 +33497,7 @@ snapshots:
       '@vercel/nestjs': 0.2.30(encoding@0.1.13)(rollup@4.55.1)
       '@vercel/next': 4.15.16(encoding@0.1.13)(rollup@4.55.1)
       '@vercel/node': 5.5.27(encoding@0.1.13)(rollup@4.55.1)
-      '@vercel/python': 6.3.0
+      '@vercel/python': 6.3.1
       '@vercel/redwood': 2.4.9(encoding@0.1.13)(rollup@4.55.1)
       '@vercel/remix-builder': 5.5.9(encoding@0.1.13)(rollup@4.55.1)
       '@vercel/ruby': 2.2.4
