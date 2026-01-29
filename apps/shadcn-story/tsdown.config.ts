@@ -13,4 +13,5 @@ export default defineConfig({
   platform: "node",
   minify: true,
   skipNodeModulesBundle: true,
+  inlineOnly: false,
 });
