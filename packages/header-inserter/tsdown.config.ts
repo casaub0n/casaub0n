@@ -8,7 +8,7 @@ export default defineConfig({
   format: ["esm"],
   target: "esnext",
   platform: "node",
-  skipNodeModulesBundle: true,
+  minify: true,
   // eslint-disable-next-line unicorn/better-regex
   noExternal: [/(?:.*)/],
   inlineOnly: false,
