@@ -355,8 +355,8 @@ catalogs:
       specifier: 3.7.0
       version: 3.7.0
     renovate:
-      specifier: 43.10.3
-      version: 43.10.3
+      specifier: 43.11.0
+      version: 43.11.0
     schema-dts:
       specifier: 1.1.5
       version: 1.1.5
@@ -493,7 +493,7 @@ importers:
         version: 3.8.1
       renovate:
         specifier: 'catalog:'
-        version: 43.10.3(encoding@0.1.13)(typanion@3.14.0)
+        version: 43.11.0(encoding@0.1.13)(typanion@3.14.0)
       textlint:
         specifier: 'catalog:'
         version: 15.5.1(hono@4.11.4)
@@ -10499,10 +10499,6 @@ packages:
     resolution: {integrity: sha512-B7U/vJpE3DkJ5WXTgTpTRN63uV42DseiXXKMwG14LQBXmsdeIoHAPbU/MEo6II0k5ED74uc2ZGTC6MwHFQhF6w==}
     engines: {node: 20 || >=22}
 
-  glob@13.0.2:
-    resolution: {integrity: sha512-035InabNu/c1lW0tzPhAgapKctblppqsKKG9ZaNzbr+gXwWMjXoiyGSyB9sArzrjG7jY+zntRq5ZSUYemrnWVQ==}
-    engines: {node: 20 || >=22}
-
   glob@13.0.3:
     resolution: {integrity: sha512-/g3B0mC+4x724v1TgtBlBtt2hPi/EWptsIAmXUx9Z2rvBYleQcsrmaOzd5LyL50jf/Soi83ZDJmw2+XqvH/EeA==}
     engines: {node: 20 || >=22}
@@ -13902,8 +13898,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@43.10.3:
-    resolution: {integrity: sha512-YTKrzRs7dwVUPb/jyrD6rCjiRTMi/pJrrlnIqkhpJ/C2whmsmAnwbqzYBIitlKkW6Nu5ZP9pLtYzxrj3oMcYxg==}
+  renovate@43.11.0:
+    resolution: {integrity: sha512-2+tOIuooozSWIxg9Wl55/mm8O0Kt17RdIecP9hGJsNuUgT2VF8wL2pCN2Fm15eCZyvQK0YTpMKXWE2iylPx5Ww==}
     engines: {node: ^24.11.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -20233,7 +20229,7 @@ snapshots:
       hosted-git-info: 9.0.2
       json-stringify-nice: 1.1.4
       lru-cache: 11.2.5
-      minimatch: 10.1.2
+      minimatch: 10.2.0
       nopt: 9.0.0
       npm-install-checks: 8.0.0
       npm-package-arg: 13.0.2
@@ -20281,8 +20277,8 @@ snapshots:
     dependencies:
       '@npmcli/name-from-folder': 4.0.0
       '@npmcli/package-json': 7.0.4
-      glob: 13.0.2
-      minimatch: 10.1.2
+      glob: 13.0.3
+      minimatch: 10.2.0
 
   '@npmcli/metavuln-calculator@9.0.3':
     dependencies:
@@ -20301,7 +20297,7 @@ snapshots:
   '@npmcli/package-json@7.0.4':
     dependencies:
       '@npmcli/git': 7.0.1
-      glob: 13.0.2
+      glob: 13.0.3
       hosted-git-info: 9.0.2
       json-parse-even-better-errors: 5.0.0
       proc-log: 6.1.0
@@ -22301,7 +22297,7 @@ snapshots:
       chalk: 5.6.2
       chokidar: 4.0.3
       foreground-child: 4.0.0
-      glob: 13.0.2
+      glob: 13.0.3
       minipass: 7.1.2
       mkdirp: 3.0.1
       node-options-to-argv: 1.0.0
@@ -22370,7 +22366,7 @@ snapshots:
       '@tapjs/stdin': 4.3.1(@tapjs/core@4.4.1(@types/node@24.10.13)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
       '@tapjs/typescript': 3.5.1(@tapjs/core@4.4.1(@types/node@24.10.13)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(@types/node@24.10.13)(typescript@5.9.3)
       '@tapjs/worker': 4.3.1(@tapjs/core@4.4.1(@types/node@24.10.13)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
-      glob: 13.0.2
+      glob: 13.0.3
       jackspeak: 4.2.1
       mkdirp: 3.0.1
       package-json-from-dist: 1.0.1
@@ -24932,7 +24928,7 @@ snapshots:
     dependencies:
       '@npmcli/fs': 5.0.0
       fs-minipass: 3.0.3
-      glob: 13.0.2
+      glob: 13.0.3
       lru-cache: 11.2.5
       minipass: 7.1.2
       minipass-collect: 2.0.1
@@ -27588,20 +27584,14 @@ snapshots:
     dependencies:
       foreground-child: 3.3.1
       jackspeak: 4.2.1
-      minimatch: 10.1.2
+      minimatch: 10.2.0
       minipass: 7.1.2
       package-json-from-dist: 1.0.1
       path-scurry: 2.0.1
 
   glob@13.0.1:
     dependencies:
-      minimatch: 10.1.2
-      minipass: 7.1.2
-      path-scurry: 2.0.1
-
-  glob@13.0.2:
-    dependencies:
-      minimatch: 10.1.2
+      minimatch: 10.2.0
       minipass: 7.1.2
       path-scurry: 2.0.1
 
@@ -28097,7 +28087,7 @@ snapshots:
 
   ignore-walk@8.0.0:
     dependencies:
-      minimatch: 10.1.2
+      minimatch: 10.2.0
 
   ignore@5.3.2: {}
 
@@ -31924,7 +31914,7 @@ snapshots:
       lodash: 4.17.23
       strip-ansi: 6.0.1
 
-  renovate@43.10.3(encoding@0.1.13)(typanion@3.14.0):
+  renovate@43.11.0(encoding@0.1.13)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.980.0
       '@aws-sdk/client-ec2': 3.980.0
@@ -32083,7 +32073,7 @@ snapshots:
 
   resolve-import@2.1.1:
     dependencies:
-      glob: 13.0.2
+      glob: 13.0.3
       walk-up-path: 4.0.0
 
   resolve-pkg-maps@1.0.0: {}
@@ -32175,7 +32165,7 @@ snapshots:
 
   rimraf@6.1.2:
     dependencies:
-      glob: 13.0.2
+      glob: 13.0.3
       package-json-from-dist: 1.0.1
 
   ripemd160@2.0.3:
@@ -33093,7 +33083,7 @@ snapshots:
 
   sync-content@2.0.3:
     dependencies:
-      glob: 13.0.2
+      glob: 13.0.3
       mkdirp: 3.0.1
       path-scurry: 2.0.1
       rimraf: 6.1.2
@@ -33778,7 +33768,7 @@ snapshots:
       chalk: 5.6.2
       chokidar: 4.0.3
       foreground-child: 4.0.0
-      minimatch: 10.1.2
+      minimatch: 10.2.0
       mkdirp: 3.0.1
       polite-json: 5.0.0
       resolve-import: 2.1.1
