@@ -9,6 +9,11 @@ import unusedImports from "eslint-plugin-unused-imports";
 import cspellESLintPluginRecommended from "@cspell/eslint-plugin/recommended";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import turboPlugin from "eslint-plugin-turbo";
+
+/**
+ * [turborepo/packages/eslint-config-turbo at main · vercel/turborepo](https://github.com/vercel/turborepo/blob/main/packages/eslint-config-turbo/src/flat/index.ts) is useless.
+ */
+// import turboConfig from "eslint-config-turbo/flat";
 import pluginConfigPrettier from "eslint-config-prettier";
 import typescriptEslintParser from "@typescript-eslint/parser";
 import globals from "globals";
@@ -87,7 +92,7 @@ const config = ({
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         "unused-imports": unusedImports as any,
         unicorn: eslintPluginUnicorn,
-        turbo: turboPlugin.configs["flat/recommended"].plugins.turbo,
+        turbo: turboPlugin,
         react: pluginReact,
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         "react-hooks": pluginReactHooks as any,
@@ -114,7 +119,12 @@ const config = ({
             argsIgnorePattern: "^_",
           },
         ],
-        ...turboPlugin.configs["flat/recommended"].rules,
+        "turbo/no-undeclared-env-vars": [
+          "error",
+          {
+            allowList: ["^ENV_[A-Z]+$"],
+          },
+        ],
         ...pluginReact.configs.recommended.rules,
         ...pluginReact.configs["jsx-runtime"].rules,
         ...pluginReactHooks.configs.recommended.rules,
@@ -174,7 +184,7 @@ const config = ({
       plugins: {
         js: pluginJs,
         unicorn: eslintPluginUnicorn,
-        turbo: turboPlugin.configs["flat/recommended"].plugins.turbo,
+        turbo: turboPlugin,
         react: pluginReact,
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         "react-hooks": pluginReactHooks as any,
@@ -182,7 +192,12 @@ const config = ({
       rules: {
         ...pluginJs.configs.recommended.rules,
         ...eslintCoreRules,
-        ...turboPlugin.configs["flat/recommended"].rules,
+        "turbo/no-undeclared-env-vars": [
+          "error",
+          {
+            allowList: ["^ENV_[A-Z]+$"],
+          },
+        ],
         ...pluginReact.configs.recommended.rules,
         ...pluginReact.configs["jsx-runtime"].rules,
         ...pluginReactHooks.configs.recommended.rules,

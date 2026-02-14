@@ -98,7 +98,7 @@ CommonJS modules can always be imported via the default export, for example usin
          */
         // "@next/next": flatConfig.recommended.plugins["@next/next"], // This package is CommonJS style
         unicorn: eslintPluginUnicorn,
-        turbo: turboPlugin.configs["flat/recommended"].plugins.turbo,
+        turbo: turboPlugin,
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         "import-x": importX as any,
       },
@@ -120,7 +120,12 @@ CommonJS modules can always be imported via the default export, for example usin
         "react/prop-types": "off",
         "react/react-in-jsx-scope": "off",
         ...eslintPluginUnicorn.configs.all.rules,
-        ...turboPlugin.configs["flat/recommended"].rules,
+        "turbo/no-undeclared-env-vars": [
+          "error",
+          {
+            allowList: ["^ENV_[A-Z]+$"],
+          },
+        ],
         ...importX.flatConfigs.recommended.rules,
         ...importX.flatConfigs.typescript.rules,
         ...pluginNext.configs.recommended.rules,
@@ -152,13 +157,18 @@ CommonJS modules can always be imported via the default export, for example usin
       plugins: {
         js: pluginJs,
         unicorn: eslintPluginUnicorn,
-        turbo: turboPlugin.configs["flat/recommended"].plugins.turbo,
+        turbo: turboPlugin,
       },
       rules: {
         ...pluginJs.configs.recommended.rules,
         ...eslintCoreRules,
         ...eslintPluginUnicorn.configs.all.rules,
-        ...turboPlugin.configs["flat/recommended"].rules,
+        "turbo/no-undeclared-env-vars": [
+          "error",
+          {
+            allowList: ["^ENV_[A-Z]+$"],
+          },
+        ],
       },
     },
     /**
