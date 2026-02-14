@@ -87,7 +87,7 @@ const config = ({
       plugins: {
         "unused-imports": unusedImports,
         unicorn: eslintPluginUnicorn,
-        turbo: turboPlugin.configs["flat/recommended"].plugins.turbo,
+        turbo: turboPlugin,
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         "import-x": importX as any,
       },
@@ -112,7 +112,12 @@ const config = ({
           },
         ],
         ...eslintPluginUnicorn.configs.all.rules,
-        ...turboPlugin.configs["flat/recommended"].rules,
+        "turbo/no-undeclared-env-vars": [
+          "error",
+          {
+            allowList: ["^ENV_[A-Z]+$"],
+          },
+        ],
         ...importX.flatConfigs.recommended.rules,
         ...importX.flatConfigs.typescript.rules,
       },
@@ -142,13 +147,18 @@ const config = ({
       plugins: {
         js: pluginJs,
         unicorn: eslintPluginUnicorn,
-        turbo: turboPlugin.configs["flat/recommended"].plugins.turbo,
+        turbo: turboPlugin,
       },
       rules: {
         ...pluginJs.configs.recommended.rules,
         ...eslintCoreRules,
         ...eslintPluginUnicorn.configs.all.rules,
-        ...turboPlugin.configs["flat/recommended"].rules,
+        "turbo/no-undeclared-env-vars": [
+          "error",
+          {
+            allowList: ["^ENV_[A-Z]+$"],
+          },
+        ],
       },
     },
     /**
