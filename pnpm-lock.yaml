@@ -430,8 +430,8 @@ catalogs:
       specifier: 1.2.0
       version: 1.2.0
     vercel:
-      specifier: 50.17.0
-      version: 50.17.0
+      specifier: 50.17.1
+      version: 50.17.1
     vite:
       specifier: 7.3.1
       version: 7.3.1
@@ -687,7 +687,7 @@ importers:
         version: 5.9.3
       vercel:
         specifier: 'catalog:'
-        version: 50.17.0(@vercel/backends@0.0.33(encoding@0.1.13)(rollup@4.55.1)(typescript@5.9.3))(@vercel/elysia@0.1.36(encoding@0.1.13)(rollup@4.55.1))(@vercel/express@0.1.45(encoding@0.1.13)(rollup@4.55.1)(typescript@5.9.3))(@vercel/fastify@0.1.39(encoding@0.1.13)(rollup@4.55.1))(@vercel/go@3.4.0)(@vercel/h3@0.1.45(encoding@0.1.13)(rollup@4.55.1))(@vercel/hono@0.2.39(encoding@0.1.13)(rollup@4.55.1))(@vercel/hydrogen@1.3.5)(@vercel/koa@0.1.19(encoding@0.1.13)(rollup@4.55.1))(@vercel/nestjs@0.2.40(encoding@0.1.13)(rollup@4.55.1))(@vercel/next@4.15.28(encoding@0.1.13)(rollup@4.55.1))(@vercel/node@5.6.3(encoding@0.1.13)(rollup@4.55.1))(@vercel/python@6.12.0)(@vercel/redwood@2.4.9(encoding@0.1.13)(rollup@4.55.1))(@vercel/remix-builder@5.5.10(encoding@0.1.13)(rollup@4.55.1))(@vercel/ruby@2.3.0)(@vercel/rust@1.0.5)(@vercel/static-build@2.8.37)(encoding@0.1.13)
+        version: 50.17.1(@vercel/backends@0.0.33(encoding@0.1.13)(rollup@4.55.1)(typescript@5.9.3))(@vercel/elysia@0.1.36(encoding@0.1.13)(rollup@4.55.1))(@vercel/express@0.1.45(encoding@0.1.13)(rollup@4.55.1)(typescript@5.9.3))(@vercel/fastify@0.1.39(encoding@0.1.13)(rollup@4.55.1))(@vercel/go@3.4.0)(@vercel/h3@0.1.45(encoding@0.1.13)(rollup@4.55.1))(@vercel/hono@0.2.39(encoding@0.1.13)(rollup@4.55.1))(@vercel/hydrogen@1.3.5)(@vercel/koa@0.1.19(encoding@0.1.13)(rollup@4.55.1))(@vercel/nestjs@0.2.40(encoding@0.1.13)(rollup@4.55.1))(@vercel/next@4.15.28(encoding@0.1.13)(rollup@4.55.1))(@vercel/node@5.6.3(encoding@0.1.13)(rollup@4.55.1))(@vercel/python@6.12.0)(@vercel/redwood@2.4.9(encoding@0.1.13)(rollup@4.55.1))(@vercel/remix-builder@5.5.10(encoding@0.1.13)(rollup@4.55.1))(@vercel/ruby@2.3.0)(@vercel/rust@1.0.5)(@vercel/static-build@2.8.37)(encoding@0.1.13)
 
   apps/catalog:
     devDependencies:
@@ -13510,6 +13510,10 @@ packages:
     resolution: {integrity: sha512-llQsMLSUDUPT44jdrU/O37qlnifitDP+ZwrmmZcoSKyLKvtZxpyV0n2/bD/N4tBAAZ/gJEdZU7KMraoK1+XYAg==}
     engines: {node: '>= 0.10'}
 
+  proxy-agent@6.4.0:
+    resolution: {integrity: sha512-u0piLU+nCOHMgGjRbimiXmA9kM/L9EHh3zL81xCdp7m+Y2pHIsnmbdDoEDoAz5geaonNR6q6+yOPQs6n4T6sBQ==}
+    engines: {node: '>= 14'}
+
   proxy-agent@6.5.0:
     resolution: {integrity: sha512-TmatMXdr2KlRiA2CyDu8GqR8EjahTG3aY3nXjdzFyoZbmB8hrBsTyMezhULIXKnC0jpfjlmiZ3+EaCzoInSu/A==}
     engines: {node: '>= 14'}
@@ -15732,8 +15736,8 @@ packages:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
 
-  vercel@50.17.0:
-    resolution: {integrity: sha512-O9x4LM3oZbKQHZ+AYCa8jz69dNU4NnhLGRuR3mPRH5vd6GQS3jbKTeebEEYZj3QJlHtiGfiWm23SZ8PYLjU8zQ==}
+  vercel@50.17.1:
+    resolution: {integrity: sha512-ffbavqxjpiLco2Yh7sAnU5npKli663wVyD/bMeJPRZCBGexzZUZo/GGn1hHQzoIh3hKNV0rIXsXUan7PD4HYKg==}
     engines: {node: '>= 18'}
     hasBin: true
     peerDependencies:
@@ -31343,6 +31347,19 @@ snapshots:
       forwarded: 0.2.0
       ipaddr.js: 1.9.1
 
+  proxy-agent@6.4.0:
+    dependencies:
+      agent-base: 7.1.4
+      debug: 4.4.3
+      http-proxy-agent: 7.0.2
+      https-proxy-agent: 7.0.6
+      lru-cache: 7.18.3
+      pac-proxy-agent: 7.2.0
+      proxy-from-env: 1.1.0
+      socks-proxy-agent: 8.0.5
+    transitivePeerDependencies:
+      - supports-color
+
   proxy-agent@6.5.0:
     dependencies:
       agent-base: 7.1.4
@@ -34294,7 +34311,7 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vercel@50.17.0(@vercel/backends@0.0.33(encoding@0.1.13)(rollup@4.55.1)(typescript@5.9.3))(@vercel/elysia@0.1.36(encoding@0.1.13)(rollup@4.55.1))(@vercel/express@0.1.45(encoding@0.1.13)(rollup@4.55.1)(typescript@5.9.3))(@vercel/fastify@0.1.39(encoding@0.1.13)(rollup@4.55.1))(@vercel/go@3.4.0)(@vercel/h3@0.1.45(encoding@0.1.13)(rollup@4.55.1))(@vercel/hono@0.2.39(encoding@0.1.13)(rollup@4.55.1))(@vercel/hydrogen@1.3.5)(@vercel/koa@0.1.19(encoding@0.1.13)(rollup@4.55.1))(@vercel/nestjs@0.2.40(encoding@0.1.13)(rollup@4.55.1))(@vercel/next@4.15.28(encoding@0.1.13)(rollup@4.55.1))(@vercel/node@5.6.3(encoding@0.1.13)(rollup@4.55.1))(@vercel/python@6.12.0)(@vercel/redwood@2.4.9(encoding@0.1.13)(rollup@4.55.1))(@vercel/remix-builder@5.5.10(encoding@0.1.13)(rollup@4.55.1))(@vercel/ruby@2.3.0)(@vercel/rust@1.0.5)(@vercel/static-build@2.8.37)(encoding@0.1.13):
+  vercel@50.17.1(@vercel/backends@0.0.33(encoding@0.1.13)(rollup@4.55.1)(typescript@5.9.3))(@vercel/elysia@0.1.36(encoding@0.1.13)(rollup@4.55.1))(@vercel/express@0.1.45(encoding@0.1.13)(rollup@4.55.1)(typescript@5.9.3))(@vercel/fastify@0.1.39(encoding@0.1.13)(rollup@4.55.1))(@vercel/go@3.4.0)(@vercel/h3@0.1.45(encoding@0.1.13)(rollup@4.55.1))(@vercel/hono@0.2.39(encoding@0.1.13)(rollup@4.55.1))(@vercel/hydrogen@1.3.5)(@vercel/koa@0.1.19(encoding@0.1.13)(rollup@4.55.1))(@vercel/nestjs@0.2.40(encoding@0.1.13)(rollup@4.55.1))(@vercel/next@4.15.28(encoding@0.1.13)(rollup@4.55.1))(@vercel/node@5.6.3(encoding@0.1.13)(rollup@4.55.1))(@vercel/python@6.12.0)(@vercel/redwood@2.4.9(encoding@0.1.13)(rollup@4.55.1))(@vercel/remix-builder@5.5.10(encoding@0.1.13)(rollup@4.55.1))(@vercel/ruby@2.3.0)(@vercel/rust@1.0.5)(@vercel/static-build@2.8.37)(encoding@0.1.13):
     dependencies:
       '@vercel/blob': 1.0.2
       '@vercel/build-utils': 13.4.0
@@ -34304,6 +34321,7 @@ snapshots:
       esbuild: 0.27.0
       form-data: 4.0.5
       jose: 5.9.6
+      proxy-agent: 6.4.0
     optionalDependencies:
       '@vercel/backends': 0.0.33(encoding@0.1.13)(rollup@4.55.1)(typescript@5.9.3)
       '@vercel/elysia': 0.1.36(encoding@0.1.13)(rollup@4.55.1)
