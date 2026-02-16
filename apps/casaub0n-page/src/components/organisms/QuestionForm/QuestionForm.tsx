@@ -1,4 +1,4 @@
-import { useId, type ComponentPropsWithoutRef, type FC } from "react";
+import { type ComponentPropsWithoutRef, type FC, useId } from "react";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as Form from "@radix-ui/react-form";
@@ -6,7 +6,7 @@ import clsx from "clsx";
 import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
 
-import { Button, StyledFlex, StyledFormField, StyledFormLabel, StyledFormMessage, StyledFormRoot, Input, Textarea } from "./QuestionForm.css";
+import { Button, Input, StyledFlex, StyledFormField, StyledFormLabel, StyledFormMessage, StyledFormRoot, Textarea } from "./QuestionForm.css";
 
 import type { SubmitHandler } from "react-hook-form";
 
@@ -41,7 +41,7 @@ export const QuestionForm: FC<Props> = ({ className="question-form", ...props })
 
   const { control, handleSubmit } = useForm({
     mode: "onChange",
-    resolver: zodResolver(FormSchema),
+    resolver: zodResolver(FormSchema), // https://github.com/react-hook-form/resolvers/issues/813
   });
 
   const onSubmit: SubmitHandler<IForm> = async () => {

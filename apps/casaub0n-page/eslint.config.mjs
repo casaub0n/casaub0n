@@ -28,6 +28,11 @@ export default defineConfig([
       ],
       "@typescript-eslint/explicit-function-return-type": "off",
       "unicorn/no-keyword-prefix": "off",
+      "unicorn/prevent-abbreviations": "off",
+      "no-console": "off",
+      "@typescript-eslint/strict-boolean-expressions": "off",
+      "@typescript-eslint/no-unnecessary-condition": "off",
+      "unicorn/consistent-function-scoping": "off",
     },
   },
 ]);
