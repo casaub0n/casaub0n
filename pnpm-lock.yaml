@@ -268,8 +268,8 @@ catalogs:
       specifier: 4.9.0
       version: 4.9.0
     glob:
-      specifier: 13.0.4
-      version: 13.0.4
+      specifier: 13.0.5
+      version: 13.0.5
     globals:
       specifier: 17.3.0
       version: 17.3.0
@@ -1416,7 +1416,7 @@ importers:
         version: 1.1.1
       glob:
         specifier: 'catalog:'
-        version: 13.0.4
+        version: 13.0.5
       jsdom:
         specifier: 'catalog:'
         version: 28.1.0
@@ -1459,7 +1459,7 @@ importers:
         version: 1.44.0
       glob:
         specifier: 'catalog:'
-        version: 13.0.4
+        version: 13.0.5
       jsdom:
         specifier: 'catalog:'
         version: 28.1.0
@@ -10486,12 +10486,12 @@ packages:
     resolution: {integrity: sha512-B7U/vJpE3DkJ5WXTgTpTRN63uV42DseiXXKMwG14LQBXmsdeIoHAPbU/MEo6II0k5ED74uc2ZGTC6MwHFQhF6w==}
     engines: {node: 20 || >=22}
 
-  glob@13.0.3:
-    resolution: {integrity: sha512-/g3B0mC+4x724v1TgtBlBtt2hPi/EWptsIAmXUx9Z2rvBYleQcsrmaOzd5LyL50jf/Soi83ZDJmw2+XqvH/EeA==}
-    engines: {node: 20 || >=22}
-
   glob@13.0.4:
     resolution: {integrity: sha512-KACie1EOs9BIOMtenFaxwmYODWA3/fTfGSUnLhMJpXRntu1g+uL/Xvub5f8SCTppvo9q62Qy4LeOoUiaL54G5A==}
+    engines: {node: 20 || >=22}
+
+  glob@13.0.5:
+    resolution: {integrity: sha512-BzXxZg24Ibra1pbQ/zE7Kys4Ua1ks7Bn6pKLkVPZ9FZe4JQS6/Q7ef3LG1H+k7lUf5l4T3PLSyYyYJVYUvfgTw==}
     engines: {node: 20 || >=22}
 
   glob@6.0.4:
@@ -12273,10 +12273,6 @@ packages:
 
   minimatch@10.1.2:
     resolution: {integrity: sha512-fu656aJ0n2kcXwsnwnv9g24tkU5uSmOlTjd6WyyaKm2Z+h1qmY6bAjrcaIxF/BslFqbZ8UBtbJi7KgQOZD2PTw==}
-    engines: {node: 20 || >=22}
-
-  minimatch@10.2.0:
-    resolution: {integrity: sha512-ugkC31VaVg9cF0DFVoADH12k6061zNZkZON+aX8AWsR9GhPcErkcMBceb6znR8wLERM2AkkOxy2nWRLpT9Jq5w==}
     engines: {node: 20 || >=22}
 
   minimatch@10.2.1:
@@ -20054,7 +20050,7 @@ snapshots:
       hosted-git-info: 9.0.2
       json-stringify-nice: 1.1.4
       lru-cache: 11.2.5
-      minimatch: 10.2.0
+      minimatch: 10.2.1
       nopt: 9.0.0
       npm-install-checks: 8.0.0
       npm-package-arg: 13.0.2
@@ -20102,8 +20098,8 @@ snapshots:
     dependencies:
       '@npmcli/name-from-folder': 4.0.0
       '@npmcli/package-json': 7.0.4
-      glob: 13.0.3
-      minimatch: 10.2.0
+      glob: 13.0.4
+      minimatch: 10.2.1
 
   '@npmcli/metavuln-calculator@9.0.3':
     dependencies:
@@ -20122,7 +20118,7 @@ snapshots:
   '@npmcli/package-json@7.0.4':
     dependencies:
       '@npmcli/git': 7.0.1
-      glob: 13.0.3
+      glob: 13.0.4
       hosted-git-info: 9.0.2
       json-parse-even-better-errors: 5.0.0
       proc-log: 6.1.0
@@ -22119,7 +22115,7 @@ snapshots:
       chalk: 5.6.2
       chokidar: 4.0.3
       foreground-child: 4.0.0
-      glob: 13.0.3
+      glob: 13.0.4
       minipass: 7.1.2
       mkdirp: 3.0.1
       node-options-to-argv: 1.0.0
@@ -22188,7 +22184,7 @@ snapshots:
       '@tapjs/stdin': 4.3.1(@tapjs/core@4.4.1(@types/node@24.10.13)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
       '@tapjs/typescript': 3.5.1(@tapjs/core@4.4.1(@types/node@24.10.13)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(@types/node@24.10.13)(typescript@5.9.3)
       '@tapjs/worker': 4.3.1(@tapjs/core@4.4.1(@types/node@24.10.13)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
-      glob: 13.0.3
+      glob: 13.0.4
       jackspeak: 4.2.1
       mkdirp: 3.0.1
       package-json-from-dist: 1.0.1
@@ -22550,7 +22546,7 @@ snapshots:
   '@tufjs/models@4.1.0':
     dependencies:
       '@tufjs/canonical-json': 2.0.0
-      minimatch: 10.2.0
+      minimatch: 10.2.1
 
   '@turbo/gen-darwin-64@2.8.9':
     optional: true
@@ -23441,7 +23437,7 @@ snapshots:
       async-sema: 3.1.1
       bindings: 1.5.0
       estree-walker: 2.0.2
-      glob: 13.0.3
+      glob: 13.0.4
       graceful-fs: 4.2.11
       node-gyp-build: 4.8.4
       picomatch: 4.0.3
@@ -23460,7 +23456,7 @@ snapshots:
       async-sema: 3.1.1
       bindings: 1.5.0
       estree-walker: 2.0.2
-      glob: 13.0.3
+      glob: 13.0.4
       graceful-fs: 4.2.11
       node-gyp-build: 4.8.4
       picomatch: 4.0.3
@@ -24700,7 +24696,7 @@ snapshots:
     dependencies:
       '@npmcli/fs': 5.0.0
       fs-minipass: 3.0.3
-      glob: 13.0.3
+      glob: 13.0.4
       lru-cache: 11.2.6
       minipass: 7.1.2
       minipass-collect: 2.0.1
@@ -27264,24 +27260,24 @@ snapshots:
     dependencies:
       foreground-child: 3.3.1
       jackspeak: 4.2.1
-      minimatch: 10.2.0
+      minimatch: 10.2.1
       minipass: 7.1.2
       package-json-from-dist: 1.0.1
       path-scurry: 2.0.1
 
   glob@13.0.1:
     dependencies:
-      minimatch: 10.2.0
-      minipass: 7.1.2
-      path-scurry: 2.0.1
-
-  glob@13.0.3:
-    dependencies:
-      minimatch: 10.2.0
+      minimatch: 10.2.1
       minipass: 7.1.2
       path-scurry: 2.0.1
 
   glob@13.0.4:
+    dependencies:
+      minimatch: 10.2.1
+      minipass: 7.1.2
+      path-scurry: 2.0.1
+
+  glob@13.0.5:
     dependencies:
       minimatch: 10.2.1
       minipass: 7.1.2
@@ -27749,7 +27745,7 @@ snapshots:
 
   ignore-walk@8.0.0:
     dependencies:
-      minimatch: 10.2.0
+      minimatch: 10.2.1
 
   ignore@5.3.2: {}
 
@@ -29591,10 +29587,6 @@ snapshots:
   minimatch@10.1.2:
     dependencies:
       '@isaacs/brace-expansion': 5.0.1
-
-  minimatch@10.2.0:
-    dependencies:
-      brace-expansion: 5.0.2
 
   minimatch@10.2.1:
     dependencies:
@@ -31645,7 +31637,7 @@ snapshots:
 
   resolve-import@2.1.1:
     dependencies:
-      glob: 13.0.3
+      glob: 13.0.4
       walk-up-path: 4.0.0
 
   resolve-pkg-maps@1.0.0: {}
@@ -31731,7 +31723,7 @@ snapshots:
 
   rimraf@6.1.2:
     dependencies:
-      glob: 13.0.3
+      glob: 13.0.4
       package-json-from-dist: 1.0.1
 
   ripemd160@2.0.3:
@@ -32620,7 +32612,7 @@ snapshots:
 
   sync-content@2.0.3:
     dependencies:
-      glob: 13.0.3
+      glob: 13.0.4
       mkdirp: 3.0.1
       path-scurry: 2.0.1
       rimraf: 6.1.2
@@ -33284,7 +33276,7 @@ snapshots:
       chalk: 5.6.2
       chokidar: 4.0.3
       foreground-child: 4.0.0
-      minimatch: 10.2.0
+      minimatch: 10.2.1
       mkdirp: 3.0.1
       polite-json: 5.0.0
       resolve-import: 2.1.1
