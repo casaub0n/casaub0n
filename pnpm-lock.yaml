@@ -331,8 +331,8 @@ catalogs:
       specifier: 7.4.1
       version: 7.4.1
     puppeteer:
-      specifier: 24.37.4
-      version: 24.37.4
+      specifier: 24.37.5
+      version: 24.37.5
     react:
       specifier: 19.2.4
       version: 19.2.4
@@ -1263,7 +1263,7 @@ importers:
         version: 8.2.0
       puppeteer:
         specifier: 'catalog:'
-        version: 24.37.4(bufferutil@4.1.0)(typescript@5.9.3)
+        version: 24.37.5(bufferutil@4.1.0)(typescript@5.9.3)
       tsx:
         specifier: 'catalog:'
         version: 4.21.0
@@ -1334,7 +1334,7 @@ importers:
         version: 30.2.0(@types/node@24.10.13)(ts-node@10.9.2(@types/node@24.10.13)(typescript@5.9.3))
       puppeteer:
         specifier: 'catalog:'
-        version: 24.37.4(bufferutil@4.1.0)(typescript@5.9.3)
+        version: 24.37.5(bufferutil@4.1.0)(typescript@5.9.3)
       ts-jest:
         specifier: 'catalog:'
         version: 29.4.6(@babel/core@7.29.0)(@jest/transform@30.2.0)(@jest/types@30.2.0)(babel-jest@30.2.0(@babel/core@7.29.0))(jest-util@30.2.0)(jest@30.2.0(@types/node@24.10.13)(ts-node@10.9.2(@types/node@24.10.13)(typescript@5.9.3)))(typescript@5.9.3)
@@ -1395,7 +1395,7 @@ importers:
         version: 1.58.2
       puppeteer:
         specifier: 'catalog:'
-        version: 24.37.4(bufferutil@4.1.0)(typescript@5.9.3)
+        version: 24.37.5(bufferutil@4.1.0)(typescript@5.9.3)
       ts-jest:
         specifier: 'catalog:'
         version: 29.4.6(@babel/core@7.29.0)(@jest/transform@30.2.0)(@jest/types@30.2.0)(babel-jest@30.2.0(@babel/core@7.29.0))(jest-util@30.2.0)(jest@30.2.0(@types/node@24.10.13)(ts-node@10.9.2(@types/node@24.10.13)(typescript@5.9.3)))(typescript@5.9.3)
@@ -13612,12 +13612,12 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
-  puppeteer-core@24.37.4:
-    resolution: {integrity: sha512-sQYtYgaNaLYO82k2FHmr7bR1tCmo2fBupEI7Kd0WpBlMropNcfxSTLOJXVRkhiHig0dUiMI7g0yq+HJI1IDCzg==}
+  puppeteer-core@24.37.5:
+    resolution: {integrity: sha512-ybL7iE78YPN4T6J+sPLO7r0lSByp/0NN6PvfBEql219cOnttoTFzCWKiBOjstXSqi/OKpwae623DWAsL7cn2MQ==}
     engines: {node: '>=18'}
 
-  puppeteer@24.37.4:
-    resolution: {integrity: sha512-SMSq+FL3gnglolhrIks3maRkrdQEjoDCesy6FXziMPWsF1DxoX+GVxRa82y+euzkzS52/UujM/BoaFPQ+AnPXQ==}
+  puppeteer@24.37.5:
+    resolution: {integrity: sha512-3PAOIQLceyEmn1Fi76GkGO2EVxztv5OtdlB1m8hMUZL3f8KDHnlvXbvCXv+Ls7KzF1R0KdKBqLuT/Hhrok12hQ==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -31488,7 +31488,7 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  puppeteer-core@24.37.4(bufferutil@4.1.0):
+  puppeteer-core@24.37.5(bufferutil@4.1.0):
     dependencies:
       '@puppeteer/browsers': 2.13.0
       chromium-bidi: 14.0.0(devtools-protocol@0.0.1566079)
@@ -31505,13 +31505,13 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  puppeteer@24.37.4(bufferutil@4.1.0)(typescript@5.9.3):
+  puppeteer@24.37.5(bufferutil@4.1.0)(typescript@5.9.3):
     dependencies:
       '@puppeteer/browsers': 2.13.0
       chromium-bidi: 14.0.0(devtools-protocol@0.0.1566079)
       cosmiconfig: 9.0.0(typescript@5.9.3)
       devtools-protocol: 0.0.1566079
-      puppeteer-core: 24.37.4(bufferutil@4.1.0)
+      puppeteer-core: 24.37.5(bufferutil@4.1.0)
       typed-query-selector: 2.12.0
     transitivePeerDependencies:
       - bare-abort-controller
