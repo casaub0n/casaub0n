@@ -250,8 +250,8 @@ catalogs:
       specifier: 4.4.1
       version: 4.4.1
     eslint-plugin-yml:
-      specifier: 3.2.1
-      version: 3.2.1
+      specifier: 3.2.2
+      version: 3.2.2
     eslint-typegen:
       specifier: 2.3.1
       version: 2.3.1
@@ -478,7 +478,7 @@ importers:
         version: 9.39.3(jiti@2.6.1)
       eslint-plugin-yml:
         specifier: 'catalog:'
-        version: 3.2.1(@eslint/markdown@7.5.1)(eslint@9.39.3(jiti@2.6.1))
+        version: 3.2.2(eslint@9.39.3(jiti@2.6.1))
       git-cz:
         specifier: 'catalog:'
         version: 4.9.0
@@ -968,7 +968,7 @@ importers:
         version: 4.4.1(@typescript-eslint/eslint-plugin@8.56.0(@typescript-eslint/parser@8.56.0(eslint@9.39.3(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.3(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.3(jiti@2.6.1))
       eslint-plugin-yml:
         specifier: 'catalog:'
-        version: 3.2.1(@eslint/markdown@7.5.1)(eslint@9.39.3(jiti@2.6.1))
+        version: 3.2.2(eslint@9.39.3(jiti@2.6.1))
       globals:
         specifier: 'catalog:'
         version: 17.3.0
@@ -4919,12 +4919,9 @@ packages:
   '@oslojs/encoding@1.1.0':
     resolution: {integrity: sha512-70wQhgYmndg4GCPxPPxPGevRKqTIJ2Nh4OkiMWmDAVYsTQ+Ta7Sq+rPevXyXGdzr30/qZBnyOalCszoMxlyldQ==}
 
-  '@ota-meshi/ast-token-store@0.2.1':
-    resolution: {integrity: sha512-+8oB1wcOSWJCR6vAm2ioSLas7SoPwp+8tZ1Tcy8DSVEHMip6jxxlGu6EsRzJLAYVCyzKQ38B5pAqSbon1l1rmA==}
+  '@ota-meshi/ast-token-store@0.3.0':
+    resolution: {integrity: sha512-XRO0zi2NIUKq2lUk3T1ecFSld1fMWRKE6naRFGkgkdeosx7IslyUKNv5Dcb5PJTja9tHJoFu0v/7yEpAkrkrTg==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
-    peerDependencies:
-      '@eslint/markdown': ^7.4.0
-      eslint: '>=9.0.0'
 
   '@oxc-project/types@0.110.0':
     resolution: {integrity: sha512-6Ct21OIlrEnFEJk5LT4e63pk3btsI6/TusD/GStLi7wYlGJNOl1GI9qvXAnRAxQU9zqA2Oz+UwhfTOU2rPZVow==}
@@ -9723,8 +9720,8 @@ packages:
       '@typescript-eslint/eslint-plugin':
         optional: true
 
-  eslint-plugin-yml@3.2.1:
-    resolution: {integrity: sha512-/oFj7MWk56AKLelLSUb7zN1OKDI9kR+uKEzbf/sGu7Bov0tJs3qwtMcu+VCcEtFAFD7KZe0LSYhyy0Uq8hKF9g==}
+  eslint-plugin-yml@3.2.2:
+    resolution: {integrity: sha512-vMluBBMGecygLzeOly0EnDhudQb9CNEXEUokTap93oF/KyASAADed4xRlFBQQNuzJK3N6u5s3M/IjIKPGZZOKA==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24.0.0}
     peerDependencies:
       eslint: '>=9.38.0'
@@ -20348,10 +20345,7 @@ snapshots:
 
   '@oslojs/encoding@1.1.0': {}
 
-  '@ota-meshi/ast-token-store@0.2.1(@eslint/markdown@7.5.1)(eslint@9.39.3(jiti@2.6.1))':
-    dependencies:
-      '@eslint/markdown': 7.5.1
-      eslint: 9.39.3(jiti@2.6.1)
+  '@ota-meshi/ast-token-store@0.3.0': {}
 
   '@oxc-project/types@0.110.0': {}
 
@@ -26450,11 +26444,11 @@ snapshots:
     optionalDependencies:
       '@typescript-eslint/eslint-plugin': 8.56.0(@typescript-eslint/parser@8.56.0(eslint@9.39.3(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.3(jiti@2.6.1))(typescript@5.9.3)
 
-  eslint-plugin-yml@3.2.1(@eslint/markdown@7.5.1)(eslint@9.39.3(jiti@2.6.1)):
+  eslint-plugin-yml@3.2.2(eslint@9.39.3(jiti@2.6.1)):
     dependencies:
       '@eslint/core': 1.1.0
       '@eslint/plugin-kit': 0.6.0
-      '@ota-meshi/ast-token-store': 0.2.1(@eslint/markdown@7.5.1)(eslint@9.39.3(jiti@2.6.1))
+      '@ota-meshi/ast-token-store': 0.3.0
       debug: 4.4.3
       diff-sequences: 29.6.3
       escape-string-regexp: 5.0.0
@@ -26462,7 +26456,6 @@ snapshots:
       natural-compare: 1.4.0
       yaml-eslint-parser: 2.0.0
     transitivePeerDependencies:
-      - '@eslint/markdown'
       - supports-color
 
   eslint-scope@5.1.1:
