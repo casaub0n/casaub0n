@@ -131,6 +131,12 @@ const config = ({
         // React scope no longer necessary with new JSX transform.
         "react/react-in-jsx-scope": "off",
         "react/prop-types": "off",
+        // for eslint v10
+        "react/display-name": "off",
+        "react/no-direct-mutation-state": "off",
+        "react/no-render-return-value": "off",
+        "react/no-string-refs": "off",
+        "react/require-render-return": "off",
         ...eslintPluginUnicorn.configs.all.rules,
         ...importX.flatConfigs.recommended.rules,
         ...importX.flatConfigs.typescript.rules,
