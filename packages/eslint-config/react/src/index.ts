@@ -25,6 +25,7 @@ import pluginReact from "eslint-plugin-react";
 import pluginReactHooks from "eslint-plugin-react-hooks";
 import { importX } from "eslint-plugin-import-x";
 import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
+import { rules } from "./rules";
 
 /**
  * This config compatible with TypeScript project, YAML file, JavaScript file.
@@ -89,8 +90,7 @@ const config = ({
         },
       },
       plugins: {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        "unused-imports": unusedImports as any,
+        "unused-imports": unusedImports,
         unicorn: eslintPluginUnicorn,
         turbo: turboPlugin,
         react: pluginReact,
@@ -102,67 +102,14 @@ const config = ({
       rules: {
         ...eslintCoreRules,
         ...typescriptRules,
-
-        /**
-         * unused-config
-         * [最低限の flat config（まずは no-unused-imports を動かす）](https://zenn.dev/seventhseven07/articles/06a02c4048decf)
-         * [sweepline/eslint-plugin-unused-imports: Package to separate no-unused-vars and no-unused-imports for eslint as well as providing an autofixer for the latter.](https://github.com/sweepline/eslint-plugin-unused-imports/tree/master?tab=readme-ov-file#usage)
-         */
         "no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
-        "unused-imports/no-unused-imports": "error",
-        "unused-imports/no-unused-vars": [
-          "warn",
-          {
-            vars: "all",
-            varsIgnorePattern: "^_",
-            args: "after-used",
-            argsIgnorePattern: "^_",
-          },
-        ],
-        "turbo/no-undeclared-env-vars": [
-          "error",
-          {
-            allowList: ["^ENV_[A-Z]+$"],
-          },
-        ],
         ...pluginReact.configs.recommended.rules,
         ...pluginReact.configs["jsx-runtime"].rules,
         ...pluginReactHooks.configs.recommended.rules,
-        // React scope no longer necessary with new JSX transform.
-        "react/react-in-jsx-scope": "off",
-        "react/prop-types": "off",
-        // for eslint v10
-        "react/display-name": "off",
-        "react/no-direct-mutation-state": "off",
-        "react/no-render-return-value": "off",
-        "react/no-string-refs": "off",
-        "react/require-render-return": "off",
         ...eslintPluginUnicorn.configs.all.rules,
         ...importX.flatConfigs.recommended.rules,
         ...importX.flatConfigs.typescript.rules,
-
-        // It is used ui package rule
-        "@typescript-eslint/explicit-function-return-type": "off",
-        /**
-         * [eslint-plugin-unicorn/docs/rules/prevent-abbreviations.md at main · sindresorhus/eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prevent-abbreviations.md#options)
-         */
-        "unicorn/prevent-abbreviations": [
-          "error",
-          {
-            replacements: {
-              props: {
-                properties: false,
-              },
-              utils: {
-                utilities: false,
-              },
-            },
-          },
-        ],
-        /**
-         * [eslint-plugin-unicorn/docs/rules/no-keyword-prefix.md at v60.0.0 · sindresorhus/eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/v60.0.0/docs/rules/no-keyword-prefix.md#disallowedprefixes)
-         */
-        "unicorn/no-keyword-prefix": ["error", { disallowedPrefixes: ["className"] }],
+        ...rules,
       },
       settings: {
         "import-x/resolver-next": createTypeScriptImportResolver({
