@@ -355,8 +355,8 @@ catalogs:
       specifier: 3.8.0
       version: 3.8.0
     renovate:
-      specifier: 43.58.0
-      version: 43.58.0
+      specifier: 43.59.2
+      version: 43.59.2
     schema-dts:
       specifier: 1.1.5
       version: 1.1.5
@@ -493,7 +493,7 @@ importers:
         version: 3.8.1
       renovate:
         specifier: 'catalog:'
-        version: 43.58.0(typanion@3.14.0)
+        version: 43.59.2(typanion@3.14.0)
       textlint:
         specifier: 'catalog:'
         version: 15.5.2
@@ -12410,6 +12410,9 @@ packages:
   moo@0.5.2:
     resolution: {integrity: sha512-iSAJLHYKnX41mKcJKjqvnAN9sf0LMDTXDEvFv+ffuRR9a1MIuXLjMNL6EsnDHSkKLTWNqQQ5uo61P4EbU4NU+Q==}
 
+  moo@0.5.3:
+    resolution: {integrity: sha512-m2fmM2dDm7GZQsY7KK2cme8agi+AAljILjQnof7p1ZMDe6dQ4bdnSMx0cPppudoeNv5hEFQirN6u+O4fDE0IWA==}
+
   morpheme-match-all@2.0.5:
     resolution: {integrity: sha512-a6B6Nh4AhjMoEzVz8NOT5M9f3XwFVPM395gqnFNUXG/KTqQFTb9qM5JJFHJe+SvWfRVXTZSejyXNt+h+jmHUuQ==}
 
@@ -13882,8 +13885,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@43.58.0:
-    resolution: {integrity: sha512-+WfAuKS6usuV4eLYu9N6xvPmi3vqN6Ltl/awimPrQbNBIoJAM3Euve+DNO7I/Mpp4bvfSo12l3yofh3U6Hj7pw==}
+  renovate@43.59.2:
+    resolution: {integrity: sha512-2E9jHWL6TCJBRohjqZhBvFMsDmoot6wo4kiodztoNAwAhcy+a1T18Ngfb0fFYPNcC75pJxn3+yRRpW5IOamExA==}
     engines: {node: ^24.11.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -29769,6 +29772,8 @@ snapshots:
 
   moo@0.5.2: {}
 
+  moo@0.5.3: {}
+
   morpheme-match-all@2.0.5:
     dependencies:
       morpheme-match: 2.0.4
@@ -31625,7 +31630,7 @@ snapshots:
       lodash: 4.17.23
       strip-ansi: 6.0.1
 
-  renovate@43.58.0(typanion@3.14.0):
+  renovate@43.59.2(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.1000.0
       '@aws-sdk/client-ec2': 3.1000.0
@@ -31712,7 +31717,7 @@ snapshots:
       markdown-it: 14.1.1
       markdown-table: 3.0.4
       minimatch: 10.2.4
-      moo: 0.5.2
+      moo: 0.5.3
       ms: 2.1.3
       neotraverse: 0.6.18
       node-html-parser: 7.0.2
