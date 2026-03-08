@@ -355,8 +355,8 @@ catalogs:
       specifier: 3.8.0
       version: 3.8.0
     renovate:
-      specifier: 43.59.2
-      version: 43.59.2
+      specifier: 43.59.3
+      version: 43.59.3
     schema-dts:
       specifier: 1.1.5
       version: 1.1.5
@@ -493,7 +493,7 @@ importers:
         version: 3.8.1
       renovate:
         specifier: 'catalog:'
-        version: 43.59.2(typanion@3.14.0)
+        version: 43.59.3(typanion@3.14.0)
       textlint:
         specifier: 'catalog:'
         version: 15.5.2
@@ -4751,8 +4751,8 @@ packages:
   '@octokit/types@16.0.0':
     resolution: {integrity: sha512-sKq+9r1Mm4efXW1FCk7hFSeJo4QKreL/tTbR0rz/qx/r1Oa2VV83LTA/H/MuCOX7uCIJmQVRKBcbmWoySjAnSg==}
 
-  '@one-ini/wasm@0.2.0':
-    resolution: {integrity: sha512-n+L/BvrwKUn7q5O3wHGo+CJZAqfewh38+37sk+eBzv/39lM9pPgPRd4sOZRvSRzo0ukLxzyXso4WlGj2oKZ5hA==}
+  '@one-ini/wasm@0.2.1':
+    resolution: {integrity: sha512-TUqERXGNTifZ9y2g3wPxQrw3HpHv/02DsW3D90T9x0hhonrL1ZqpSmNrU2XkoIq0fP1N6gZfVQzy2Fw1ZvGBNg==}
 
   '@open-draft/deferred-promise@2.2.0':
     resolution: {integrity: sha512-CecwLWx3rhxVQF6V4bAgPS5t+So2sTbPgAzafKkVizyi7tlwpcFpdFqq+wqF2OwNBmqFuu6tOyouTuxgpMfzmA==}
@@ -9486,8 +9486,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  editorconfig@3.0.1:
-    resolution: {integrity: sha512-k5NZM2XNIJfH/omUv0SRYaiLae4VRwg1ILW6xLOjuP4AQGAGcvzNij5imJ+m1rbzDIH0ov6EbH53BW96amFXpQ==}
+  editorconfig@3.0.2:
+    resolution: {integrity: sha512-T0ix8GhtxyKVfUFEcvdNDt3YGqlwkFHbD4/5bgFUDgFmxhI/cSRAeJ87/Sz//Cq8Eam6JX/e23RkoFO71P7aAA==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -12299,10 +12299,6 @@ packages:
   minimalistic-crypto-utils@1.0.1:
     resolution: {integrity: sha512-JIYlbt6g8i5jKfJ3xz7rF0LXmv2TkDxBLUkiBeZ7bAx4GnnNMr8xFpGnOxn6GhTEHx3SjRrZEoU+j04prX1ktg==}
 
-  minimatch@10.0.1:
-    resolution: {integrity: sha512-ethXTt3SGGR+95gudmqJ1eNhRO7eGEGIgYA9vnPatK4/etz2MEVDno5GMCibdMTuBMyElzIlgxMna3K94XDIDQ==}
-    engines: {node: 20 || >=22}
-
   minimatch@10.1.1:
     resolution: {integrity: sha512-enIvLvRAFZYXJzkCYG5RKmPfrFArdLv+R+lbQ53BmIMLIry74bjKzX6iHAm8WYamJkhSSEabrWN5D97XnKObjQ==}
     engines: {node: 20 || >=22}
@@ -13888,8 +13884,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@43.59.2:
-    resolution: {integrity: sha512-2E9jHWL6TCJBRohjqZhBvFMsDmoot6wo4kiodztoNAwAhcy+a1T18Ngfb0fFYPNcC75pJxn3+yRRpW5IOamExA==}
+  renovate@43.59.3:
+    resolution: {integrity: sha512-GNfHwXGUa5FrzO4nCgyAYXMUAGQFrhCvQtLz8e/FW+hOILZWYzqWRKUQ2idWcn+ckAW3HflPDa5Fqe593U2xdA==}
     engines: {node: ^24.11.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -20152,7 +20148,7 @@ snapshots:
     dependencies:
       '@octokit/openapi-types': 27.0.0
 
-  '@one-ini/wasm@0.2.0': {}
+  '@one-ini/wasm@0.2.1': {}
 
   '@open-draft/deferred-promise@2.2.0': {}
 
@@ -25833,11 +25829,11 @@ snapshots:
       signal-exit: 4.0.2
       time-span: 4.0.0
 
-  editorconfig@3.0.1:
+  editorconfig@3.0.2:
     dependencies:
-      '@one-ini/wasm': 0.2.0
+      '@one-ini/wasm': 0.2.1
       commander: 14.0.3
-      minimatch: 10.0.1
+      minimatch: 10.2.4
       semver: 7.7.4
 
   ee-first@1.1.1: {}
@@ -29643,10 +29639,6 @@ snapshots:
 
   minimalistic-crypto-utils@1.0.1: {}
 
-  minimatch@10.0.1:
-    dependencies:
-      brace-expansion: 2.0.2
-
   minimatch@10.1.1:
     dependencies:
       '@isaacs/brace-expansion': 5.0.1
@@ -31603,7 +31595,7 @@ snapshots:
       lodash: 4.17.23
       strip-ansi: 6.0.1
 
-  renovate@43.59.2(typanion@3.14.0):
+  renovate@43.59.3(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.1000.0
       '@aws-sdk/client-ec2': 3.1000.0
@@ -31660,7 +31652,7 @@ snapshots:
       dequal: 2.0.3
       detect-indent: 7.0.2
       diff: 8.0.3
-      editorconfig: 3.0.1
+      editorconfig: 3.0.2
       email-addresses: 5.0.0
       emoji-regex: 10.6.0
       emojibase: 17.0.0
