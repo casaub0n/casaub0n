@@ -18,4 +18,8 @@ export default defineConfig({
     skipNodeModulesBundle: true,
     onlyAllowBundle: false,
   },
+  // https://tsdown.dev/options/css#css-support
+  css: {
+    target: false,
+  },
 });
