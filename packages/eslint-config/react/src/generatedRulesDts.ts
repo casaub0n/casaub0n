@@ -8,7 +8,8 @@ import pluginReactHooks from "eslint-plugin-react-hooks";
 import { importX } from "eslint-plugin-import-x";
 import pluginTs from "@typescript-eslint/eslint-plugin";
 
-export const generatedRulesDts = async () => {
+// eslint-disable-next-line unicorn/prefer-top-level-await
+void (async () => {
   const dts = await pluginsToRulesDTS({
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     "@typescript-eslint": pluginTs as any,
@@ -21,7 +22,7 @@ export const generatedRulesDts = async () => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     "import-x": importX as any,
   });
-  await fs.writeFile("src/types.gen.d.ts", dts);
+  await fs.writeFile("./types.gen.d.ts", dts);
   // eslint-disable-next-line no-console
   console.log("Generated src/types.gen.d.ts");
-};
+})();
