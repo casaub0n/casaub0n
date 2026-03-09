@@ -9,6 +9,9 @@ export default defineConfig({
   target: "esnext",
   platform: "node",
   minify: true,
-  skipNodeModulesBundle: true,
+  // https://tsdown.dev/options/dependencies#deps-skipnodemodulesbundle
+  deps: {
+    skipNodeModulesBundle: true,
+  },
   env: { TABLE_HEAD: "月" },
 });

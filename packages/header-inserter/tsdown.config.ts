@@ -11,5 +11,8 @@ export default defineConfig({
   minify: true,
   // eslint-disable-next-line unicorn/better-regex
   noExternal: [/(?:.*)/],
-  inlineOnly: false,
+  // https://tsdown.dev/options/dependencies#deps-onlyallowbundle
+  deps: {
+    onlyAllowBundle: false,
+  },
 });

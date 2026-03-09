@@ -12,6 +12,10 @@ export default defineConfig({
   target: "esnext",
   platform: "node",
   minify: true,
-  skipNodeModulesBundle: true,
-  inlineOnly: false,
+  // https://tsdown.dev/options/dependencies#deps-onlyallowbundle
+  // https://tsdown.dev/options/dependencies#deps-skipnodemodulesbundle
+  deps: {
+    skipNodeModulesBundle: true,
+    onlyAllowBundle: false,
+  },
 });
