@@ -34,7 +34,9 @@
     "build": "tsdown",
     "build:watch": "tsdown --watch src",
     "type:check": "tsc --noEmit",
-    "lint": "pnpm dlx eslint src/**"
+    "lint": "pnpm dlx eslint src/**",
+    "gendts": "node --import tsx src/generated-rules-dts.ts",
+    "postinstall": "pnpm gendts"
   },
   "peerDependencies": {
     "@cspell/eslint-plugin": "catalog:",
