@@ -355,8 +355,8 @@ catalogs:
       specifier: 3.8.0
       version: 3.8.0
     renovate:
-      specifier: 43.59.3
-      version: 43.59.3
+      specifier: 43.59.5
+      version: 43.59.5
     schema-dts:
       specifier: 1.1.5
       version: 1.1.5
@@ -493,7 +493,7 @@ importers:
         version: 3.8.1
       renovate:
         specifier: 'catalog:'
-        version: 43.59.3(typanion@3.14.0)
+        version: 43.59.5(typanion@3.14.0)
       textlint:
         specifier: 'catalog:'
         version: 15.5.2
@@ -13884,8 +13884,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@43.59.3:
-    resolution: {integrity: sha512-GNfHwXGUa5FrzO4nCgyAYXMUAGQFrhCvQtLz8e/FW+hOILZWYzqWRKUQ2idWcn+ckAW3HflPDa5Fqe593U2xdA==}
+  renovate@43.59.5:
+    resolution: {integrity: sha512-dz4Xpv1+rCWOUDRVkjMg3czfG/StyydOuJUuu6axaZlfLe6f0MM7LSaAOLv3SFCfr0OzCLN0ny5S/z1pAt0+IQ==}
     engines: {node: ^24.11.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -14142,6 +14142,10 @@ packages:
 
   sax@1.4.4:
     resolution: {integrity: sha512-1n3r/tGXO6b6VXMdFT54SHzT9ytu9yr7TaELowdYpMqY/Ao7EnlQGmAQ1+RatX7Tkkdm6hONI2owqNx2aZj5Sw==}
+    engines: {node: '>=11.0.0'}
+
+  sax@1.5.0:
+    resolution: {integrity: sha512-21IYA3Q5cQf089Z6tgaUTr7lDAyzoTPx5HRtbhsME8Udispad8dC/+sziTNugOEx54ilvatQ9YCzl4KQLPcRHA==}
     engines: {node: '>=11.0.0'}
 
   saxes@6.0.0:
@@ -31591,7 +31595,7 @@ snapshots:
       lodash: 4.17.23
       strip-ansi: 6.0.1
 
-  renovate@43.59.3(typanion@3.14.0):
+  renovate@43.59.5(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.1000.0
       '@aws-sdk/client-ec2': 3.1000.0
@@ -31694,7 +31698,7 @@ snapshots:
       remark-gfm: 4.0.1
       remark-github: 12.0.0
       safe-stable-stringify: 2.5.0
-      sax: 1.4.4
+      sax: 1.5.0
       semver: 7.7.4
       semver-stable: 3.0.0
       semver-utils: 1.1.4
@@ -32033,6 +32037,8 @@ snapshots:
       webpack: 5.105.2
 
   sax@1.4.4: {}
+
+  sax@1.5.0: {}
 
   saxes@6.0.0:
     dependencies:
@@ -34557,7 +34563,7 @@ snapshots:
 
   xmldoc@2.0.3:
     dependencies:
-      sax: 1.4.4
+      sax: 1.5.0
 
   xtend@4.0.2: {}
 
