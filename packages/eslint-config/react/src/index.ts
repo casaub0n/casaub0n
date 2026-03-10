@@ -5,7 +5,6 @@ import tseslint, { type FlatConfig } from "typescript-eslint";
 /**
  * @see https://github.com/sweepline/eslint-plugin-unused-imports/tree/master?tab=readme-ov-file#usage
  */
-import unusedImports from "eslint-plugin-unused-imports";
 import cspellESLintPluginRecommended from "@cspell/eslint-plugin/recommended";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import turboPlugin from "eslint-plugin-turbo";
@@ -26,6 +25,7 @@ import pluginReactHooks from "eslint-plugin-react-hooks";
 import { importX } from "eslint-plugin-import-x";
 import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 import { rules } from "./rules";
+import { myPlugins } from "./generated-rules-dts";
 
 /**
  * This config compatible with TypeScript project, YAML file, JavaScript file.
@@ -89,16 +89,7 @@ const config = ({
           warnOnUnsupportedTypeScriptVersion: false,
         },
       },
-      plugins: {
-        "unused-imports": unusedImports,
-        unicorn: eslintPluginUnicorn,
-        turbo: turboPlugin,
-        react: pluginReact,
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        "react-hooks": pluginReactHooks as any,
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        "import-x": importX as any,
-      },
+      plugins: myPlugins,
       rules: {
         ...eslintCoreRules,
         ...typescriptRules,
