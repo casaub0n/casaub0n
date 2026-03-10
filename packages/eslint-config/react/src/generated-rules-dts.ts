@@ -7,22 +7,25 @@ import turboPlugin from "eslint-plugin-turbo";
 import pluginReactHooks from "eslint-plugin-react-hooks";
 import { importX } from "eslint-plugin-import-x";
 import pluginTs from "@typescript-eslint/eslint-plugin";
+import { consola } from "consola";
+import type { ESLint } from "eslint";
+
+export const myPlugins: Record<string, ESLint.Plugin> = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  "@typescript-eslint": pluginTs as any,
+  "unused-imports": unusedImports,
+  unicorn: eslintPluginUnicorn,
+  turbo: turboPlugin,
+  react: pluginReact,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  "react-hooks": pluginReactHooks as any,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  "import-x": importX as any,
+};
 
 // eslint-disable-next-line unicorn/prefer-top-level-await
 void (async () => {
-  const dts = await pluginsToRulesDTS({
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    "@typescript-eslint": pluginTs as any,
-    "unused-imports": unusedImports,
-    unicorn: eslintPluginUnicorn,
-    turbo: turboPlugin,
-    react: pluginReact,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    "react-hooks": pluginReactHooks as any,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    "import-x": importX as any,
-  });
+  const dts = await pluginsToRulesDTS(myPlugins);
   await fs.writeFile("./types.gen.d.ts", dts);
-  // eslint-disable-next-line no-console
-  console.log("Generated src/types.gen.d.ts");
+  consola.log("Generated src/types.gen.d.ts");
 })();

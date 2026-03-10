@@ -8,6 +8,7 @@ import turboPlugin from "eslint-plugin-turbo";
 import pluginReactHooks from "eslint-plugin-react-hooks";
 import { importX } from "eslint-plugin-import-x";
 import pluginTs from "@typescript-eslint/eslint-plugin";
+import { consola } from "consola";
 
 export default defineConfig({
   entry: ["./src/index.ts"],
@@ -24,6 +25,7 @@ export default defineConfig({
   },
   hooks: {
     "build:prepare": async () => {
+      // must be direct import
       const dts = await pluginsToRulesDTS({
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         "@typescript-eslint": pluginTs as any,
@@ -37,8 +39,7 @@ export default defineConfig({
         "import-x": importX as any,
       });
       await fs.writeFile("src/types.gen.d.ts", dts);
-      // eslint-disable-next-line no-console
-      console.log("Generated src/types.gen.d.ts");
+      consola.log("Generated src/types.gen.d.ts");
     },
   },
 });
