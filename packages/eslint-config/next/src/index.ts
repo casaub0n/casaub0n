@@ -5,7 +5,6 @@ import tseslint, { type FlatConfig } from "typescript-eslint";
 /**
  * @see https://github.com/sweepline/eslint-plugin-unused-imports/tree/master?tab=readme-ov-file#usage
  */
-import unusedImports from "eslint-plugin-unused-imports";
 import cspellESLintPluginRecommended from "@cspell/eslint-plugin/recommended";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import turboPlugin from "eslint-plugin-turbo";
@@ -13,12 +12,14 @@ import storybook from "eslint-plugin-storybook";
 import pluginConfigPrettier from "eslint-config-prettier";
 import typescriptEslintParser from "@typescript-eslint/parser";
 import globals from "globals";
-import pluginNext from "@next/eslint-plugin-next";
+import nextPlugin from "@next/eslint-plugin-next";
 import { ignoreConfig } from "@casaub0n/eslint-config-utils/ignore-config";
 import { eslintCoreRules } from "@casaub0n/eslint-config-utils/eslint-core-rules";
 import { typescriptRules } from "@casaub0n/eslint-config-utils/typescript-rules";
 import { importX } from "eslint-plugin-import-x";
 import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
+import { myPlugins } from "./my-plugins";
+import { rules } from "./rules";
 
 /**
  * This config compatible with TypeScript project, YAML file, JavaScript file.
@@ -85,33 +86,11 @@ const config = ({
           warnOnUnsupportedTypeScriptVersion: false,
         },
       },
-      plugins: {
-        "unused-imports": unusedImports,
-        /**
-         * A configuration object specifies rule "@next/next/google-font-display", but could not find plugin "@next/next".
-         */
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        "@next/next": pluginNext as any,
-        /**
-         * SyntaxError: Named export 'flatConfig' not found. The requested module '@next/eslint-plugin-next' is a CommonJS module, which may not support all module.exports as named exports.
-CommonJS modules can always be imported via the default export, for example using:
-         */
-        // "@next/next": flatConfig.recommended.plugins["@next/next"], // This package is CommonJS style
-        unicorn: eslintPluginUnicorn,
-        turbo: turboPlugin,
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        "import-x": importX as any,
-      },
+      plugins: myPlugins,
       rules: {
         ...eslintCoreRules,
         ...typescriptRules,
-        "@typescript-eslint/explicit-function-return-type": "off",
-
-        /**
-         * [最低限の flat config（まずは no-unused-imports を動かす）](https://zenn.dev/seventhseven07/articles/06a02c4048decf)
-         */
-        "unused-imports/no-unused-imports": "error",
-
+        ...rules,
         /**
          * React
          * @see https://github.com/herp-inc/eslint-config/blob/master/react/index.js
@@ -120,16 +99,10 @@ CommonJS modules can always be imported via the default export, for example usin
         "react/prop-types": "off",
         "react/react-in-jsx-scope": "off",
         ...eslintPluginUnicorn.configs.all.rules,
-        "turbo/no-undeclared-env-vars": [
-          "error",
-          {
-            allowList: ["^ENV_[A-Z]+$"],
-          },
-        ],
         ...importX.flatConfigs.recommended.rules,
         ...importX.flatConfigs.typescript.rules,
-        ...pluginNext.configs.recommended.rules,
-        ...pluginNext.configs["core-web-vitals"].rules,
+        ...nextPlugin.configs.recommended.rules,
+        ...nextPlugin.configs["core-web-vitals"].rules,
       },
       settings: {
         "import-x/resolver-next": createTypeScriptImportResolver({
