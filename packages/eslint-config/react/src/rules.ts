@@ -5,7 +5,7 @@ import type { RuleOptions } from "./types.gen.ts";
  *
  * Check [what's generated rules](../tsdown.config.ts)
  */
-export const rules: RuleOptions = {
+export const rules = {
   // It is used ui package rule
   "@typescript-eslint/explicit-function-return-type": "off",
   /**
@@ -58,4 +58,4 @@ export const rules: RuleOptions = {
    * [eslint-plugin-unicorn/docs/rules/no-keyword-prefix.md at v60.0.0 · sindresorhus/eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/v60.0.0/docs/rules/no-keyword-prefix.md#disallowedprefixes)
    */
   "unicorn/no-keyword-prefix": ["error", { disallowedPrefixes: ["className"] }],
-};
+} as const satisfies RuleOptions;
