@@ -25,7 +25,7 @@ import pluginReactHooks from "eslint-plugin-react-hooks";
 import { importX } from "eslint-plugin-import-x";
 import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 import { rules } from "./rules";
-import { myPlugins } from "./generated-rules-dts";
+import { myPlugins } from "./my-plugins";
 
 /**
  * This config compatible with TypeScript project, YAML file, JavaScript file.
