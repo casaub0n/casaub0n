@@ -1,5 +1,8 @@
 import { type FlatConfig } from "typescript-eslint";
 
+/**
+ * @see https://eslint.org/docs/latest/use/configure/ignore
+ */
 export const ignoreConfig = [
   /**
    * output
