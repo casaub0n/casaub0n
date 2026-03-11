@@ -4,13 +4,12 @@ import eslintPluginAstro from "eslint-plugin-astro";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import eslintConfigPrettier from "eslint-config-prettier";
 import { ignoreConfig } from "../../utils/src/ignore-config";
-import { type FlatConfig } from "typescript-eslint";
 import { defineConfig } from "eslint/config";
 
 /**
  * @see https://zenn.dev/suree/articles/71591ec903463d
  */
-const config: FlatConfig.ConfigArray = defineConfig([
+const config = defineConfig([
   {
     ignores: ignoreConfig,
   },
