@@ -1,9 +1,7 @@
 import { type FlatConfig } from "typescript-eslint";
+import type { RuleOptions } from "./types.gen";
 
-/**
- * `@typescript-eslint`
- */
-export const typescriptRules = {
+const _typescriptRules: RuleOptions = {
   "@typescript-eslint/array-type": ["error", { default: "array-simple" }],
   "@typescript-eslint/class-literal-property-style": "off",
   "@typescript-eslint/consistent-indexed-object-style": "off",
@@ -132,4 +130,9 @@ export const typescriptRules = {
   "@typescript-eslint/promise-function-async": "error",
   "@typescript-eslint/strict-boolean-expressions": "error",
   "@typescript-eslint/unbound-method": ["error", { ignoreStatic: true }],
-} satisfies FlatConfig.Config["rules"];
+};
+
+/**
+ * `@typescript-eslint`
+ */
+export const typescriptRules: FlatConfig.Config["rules"] = _typescriptRules;
