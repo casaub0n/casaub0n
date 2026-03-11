@@ -5,6 +5,7 @@ import turboPlugin from "eslint-plugin-turbo";
 import pluginReactHooks from "eslint-plugin-react-hooks";
 import { importX } from "eslint-plugin-import-x";
 import pluginTs from "@typescript-eslint/eslint-plugin";
+import js from "@eslint/js";
 import type { ESLint } from "eslint";
 
 export const myPlugins: Record<string, ESLint.Plugin> = {
@@ -18,4 +19,5 @@ export const myPlugins: Record<string, ESLint.Plugin> = {
   "react-hooks": pluginReactHooks as any,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   "import-x": importX as any,
+  js,
 };
