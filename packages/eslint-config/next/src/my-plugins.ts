@@ -6,6 +6,7 @@ import { importX } from "eslint-plugin-import-x";
 import pluginTs from "@typescript-eslint/eslint-plugin";
 import type { ESLint } from "eslint";
 import nextPlugin from "@next/eslint-plugin-next";
+import js from "@eslint/js";
 
 export const myPlugins: Record<string, ESLint.Plugin> = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -25,4 +26,5 @@ CommonJS modules can always be imported via the default export, for example usin
   turbo: turboPlugin,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   "import-x": importX as any,
+  js,
 };
