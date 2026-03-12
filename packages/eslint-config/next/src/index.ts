@@ -91,13 +91,6 @@ const config = ({
         ...eslintCoreRules,
         ...typescriptRules,
         ...rules,
-        /**
-         * React
-         * @see https://github.com/herp-inc/eslint-config/blob/master/react/index.js
-         */
-        "react/jsx-no-target-blank": "off",
-        "react/prop-types": "off",
-        "react/react-in-jsx-scope": "off",
         ...eslintPluginUnicorn.configs.all.rules,
         ...importX.flatConfigs.recommended.rules,
         ...importX.flatConfigs.typescript.rules,

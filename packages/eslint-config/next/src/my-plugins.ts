@@ -7,10 +7,12 @@ import pluginTs from "@typescript-eslint/eslint-plugin";
 import type { ESLint } from "eslint";
 import nextPlugin from "@next/eslint-plugin-next";
 import js from "@eslint/js";
+import pluginReact from "eslint-plugin-react";
 
 export const myPlugins: Record<string, ESLint.Plugin> = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   "@typescript-eslint": pluginTs as any,
+  react: pluginReact,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   "react-hooks": pluginReactHooks as any,
   /**
