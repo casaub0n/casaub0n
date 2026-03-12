@@ -18,4 +18,11 @@ export const rules = {
       allowList: ["^ENV_[A-Z]+$"],
     },
   ],
+  /**
+   * React
+   * @see https://github.com/herp-inc/eslint-config/blob/master/react/index.js
+   */
+  "react/jsx-no-target-blank": "off",
+  "react/prop-types": "off",
+  "react/react-in-jsx-scope": "off",
 } as const satisfies RuleOptions;
