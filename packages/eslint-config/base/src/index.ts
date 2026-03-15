@@ -18,6 +18,7 @@ import { typescriptRules } from "@casaub0n/eslint-config-utils/typescript-rules"
 import eslintPluginYml from "eslint-plugin-yml";
 import { importX } from "eslint-plugin-import-x";
 import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
+import { rules } from "./rules";
 
 /**
  * This config compatible with TypeScript project, YAML file, JavaScript file.
@@ -94,32 +95,10 @@ const config = ({
       rules: {
         ...eslintCoreRules,
         ...typescriptRules,
-
-        /**
-         * unused-config
-         * [最低限の flat config（まずは no-unused-imports を動かす）](https://zenn.dev/seventhseven07/articles/06a02c4048decf)
-         * [sweepline/eslint-plugin-unused-imports: Package to separate no-unused-vars and no-unused-imports for eslint as well as providing an autofixer for the latter.](https://github.com/sweepline/eslint-plugin-unused-imports/tree/master?tab=readme-ov-file#usage)
-         */
-        "no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
-        "unused-imports/no-unused-imports": "error",
-        "unused-imports/no-unused-vars": [
-          "warn",
-          {
-            vars: "all",
-            varsIgnorePattern: "^_",
-            args: "after-used",
-            argsIgnorePattern: "^_",
-          },
-        ],
-        ...eslintPluginUnicorn.configs.all.rules,
-        "turbo/no-undeclared-env-vars": [
-          "error",
-          {
-            allowList: ["^ENV_[A-Z]+$"],
-          },
-        ],
         ...importX.flatConfigs.recommended.rules,
         ...importX.flatConfigs.typescript.rules,
+        "no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
+        ...rules,
       },
       /**
        * https://github.com/un-ts/eslint-plugin-import-x/issues/229#issuecomment-2654512757
