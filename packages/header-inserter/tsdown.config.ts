@@ -9,10 +9,8 @@ export default defineConfig({
   target: "esnext",
   platform: "node",
   minify: true,
-  // eslint-disable-next-line unicorn/better-regex
-  noExternal: [/(?:.*)/],
-  // https://tsdown.dev/options/dependencies#deps-onlyallowbundle
   deps: {
-    onlyAllowBundle: false,
+    alwaysBundle: [/(?:.*)/],
+    onlyBundle: false,
   },
 });
