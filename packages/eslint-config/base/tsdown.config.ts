@@ -1,5 +1,7 @@
 import { defineConfig } from "tsdown";
 import fs from "node:fs/promises";
+import { pluginsToRulesDTS } from "eslint-typegen/core";
+import { consola } from "consola";
 
 export default defineConfig({
   entry: ["./src/index.ts"],
@@ -16,14 +18,10 @@ export default defineConfig({
   },
   hooks: {
     "build:prepare": async () => {
-      const eslintConfigPreset = await import("./src/gen.ts").then((m) => m.basePreset);
-      const { flatConfigsToRulesDTS } = await import("eslint-typegen/core");
-      const dts = await flatConfigsToRulesDTS(eslintConfigPreset(), {
-        includeAugmentation: false,
-      });
+      const myPlugins = await import("./src/my-plugins.ts").then((m) => m.myPlugins);
+      const dts = await pluginsToRulesDTS(myPlugins);
       await fs.writeFile("src/types.gen.d.ts", dts);
-      // eslint-disable-next-line no-console
-      console.log("Generated src/types.gen.d.ts");
+      consola.log("Generated src/types.gen.d.ts");
     },
   },
 });
