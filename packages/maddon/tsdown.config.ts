@@ -9,7 +9,8 @@ export default defineConfig({
   target: "esnext",
   platform: "browser",
   minify: true,
-  // eslint-disable-next-line unicorn/better-regex
-  noExternal: [/(?:.*)/],
+  deps: {
+    alwaysBundle: [/(?:.*)/],
+  },
   copy: ["./src/static/**/*.{json,html,js}"],
 });
