@@ -430,8 +430,8 @@ catalogs:
       specifier: 66.6.6
       version: 66.6.6
     valibot:
-      specifier: 1.2.0
-      version: 1.2.0
+      specifier: 1.3.0
+      version: 1.3.0
     vercel:
       specifier: 50.32.5
       version: 50.32.5
@@ -1244,7 +1244,7 @@ importers:
         version: 8.2.0
       valibot:
         specifier: 'catalog:'
-        version: 1.2.0(typescript@5.9.3)
+        version: 1.3.0(typescript@5.9.3)
     devDependencies:
       '@casaub0n/eslint-base':
         specifier: workspace:*
@@ -1317,7 +1317,7 @@ importers:
         version: 8.2.0
       valibot:
         specifier: 'catalog:'
-        version: 1.2.0(typescript@5.9.3)
+        version: 1.3.0(typescript@5.9.3)
     devDependencies:
       '@casaub0n/eslint-base':
         specifier: workspace:*
@@ -15434,6 +15434,14 @@ packages:
 
   valibot@1.2.0:
     resolution: {integrity: sha512-mm1rxUsmOxzrwnX5arGS+U4T25RdvpPjPN4yR0u9pUBov9+zGVtO84tif1eY4r6zWxVxu3KzIyknJy3rxfRZZg==}
+    peerDependencies:
+      typescript: '>=5'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
+  valibot@1.3.0:
+    resolution: {integrity: sha512-SItIaOFnWYho/AcRU5gOtyfkTsuDTC3tRv+jy4/py8xERPnvHdM+ybD1iIqWTATVWG1nZetOfwZKq5upBjSqzw==}
     peerDependencies:
       typescript: '>=5'
     peerDependenciesMeta:
@@ -33251,6 +33259,10 @@ snapshots:
       convert-source-map: 2.0.0
 
   valibot@1.2.0(typescript@5.9.3):
+    optionalDependencies:
+      typescript: 5.9.3
+
+  valibot@1.3.0(typescript@5.9.3):
     optionalDependencies:
       typescript: 5.9.3
 
