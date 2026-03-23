@@ -1,5 +1,3 @@
-/* eslint-disable unicorn/no-array-callback-reference -- This is a test*/
-/* eslint-disable unicorn/no-array-reduce -- This is a test */
 import { strict as assert } from "node:assert";
 import { test } from "node:test";
 
