@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "prebuild": "tsdown",
+    "prebuild:vite": "vite build",
     "build": "pnpm prebuild",
     "lint": "eslint ./src/**",
     "storybook": "pnpm prebuild && storybook dev -p 6006"

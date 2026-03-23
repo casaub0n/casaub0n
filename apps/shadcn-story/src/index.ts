@@ -18,7 +18,6 @@ const config: StorybookConfig = {
     return Object.assign(config, {
       resolve: {
         alias: {
-          // eslint-disable-next-line unicorn/prefer-module
           "@": path.resolve(__dirname, "../../../packages/ui/src"),
         },
       },
