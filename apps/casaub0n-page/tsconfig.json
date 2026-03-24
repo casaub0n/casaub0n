@@ -7,7 +7,6 @@
       "esnext"
     ],
     "allowJs": true,
-    "baseUrl": ".",
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -41,6 +40,6 @@
     ".next/dev/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules", "__reports__", ".swc", ".turbo", ".vercel", "coverage"
   ]
 }
