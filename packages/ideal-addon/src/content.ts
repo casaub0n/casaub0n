@@ -1,5 +1,5 @@
 /* eslint-disable @cspell/spellchecker */
-import { MessageActionsId, ResponseMessageData, ZennArticleData } from "./types";
+import type { MessageActionsId, ResponseMessageData, ZennArticleData } from "./types";
 
 const setupMessageListener = () => {
   chrome.runtime.onMessage.addListener(
@@ -8,6 +8,7 @@ const setupMessageListener = () => {
       _sender,
       sendResponse: (response: ResponseMessageData) => void,
     ) => {
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
       if (request.action === "get-zenn-articles") {
         const details: ZennArticleData[] = [];
         let count = 1;
@@ -20,9 +21,11 @@ const setupMessageListener = () => {
           )) !== null
         ) {
           try {
+            // eslint-disable-next-line @typescript-eslint/no-use-before-define
             const article = getArticleData(element);
             details.push(article);
           } catch (error) {
+            // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
             console.error(`記事の取得中にエラーが発生しました : ${error}`);
             continue;
           }

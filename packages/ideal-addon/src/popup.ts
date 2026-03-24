@@ -1,5 +1,5 @@
 /* eslint-disable @cspell/spellchecker */
-import { MessageActionsId, ResponseMessageData, ZennArticleData } from "./types";
+import type { MessageActionsId, ResponseMessageData, ZennArticleData } from "./types";
 
 document.addEventListener("DOMContentLoaded", () => {
   // 現在のタブ情報を取得
@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
           throw new Error("記事情報の取得に失敗しました。");
         }
 
+        // eslint-disable-next-line @typescript-eslint/no-use-before-define
         const markdown = createArticleMarkdown(response.data);
         const textarea = document.querySelector<HTMLTextAreaElement>(".markdown-output");
         if (!textarea) {
