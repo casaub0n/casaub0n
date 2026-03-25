@@ -121,8 +121,8 @@ catalogs:
       specifier: 14.6.1
       version: 14.6.1
     '@tsdown/css':
-      specifier: 0.21.4
-      version: 0.21.4
+      specifier: 0.21.5
+      version: 0.21.5
     '@turbo/gen':
       specifier: 2.8.20
       version: 2.8.20
@@ -824,7 +824,7 @@ importers:
         version: 10.3.3(esbuild@0.27.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(rollup@4.57.1)(storybook@10.3.3(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(typescript@6.0.2)(vite@8.0.2(@types/node@24.12.0)(esbuild@0.27.3)(jiti@2.6.1)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(webpack@5.105.2(esbuild@0.27.3))
       '@tsdown/css':
         specifier: 'catalog:'
-        version: 0.21.4(jiti@2.6.1)(postcss@8.5.8)(tsdown@0.21.4)(tsx@4.21.0)(yaml@2.8.2)
+        version: 0.21.5(jiti@2.6.1)(postcss@8.5.8)(tsdown@0.21.4)(tsx@4.21.0)(yaml@2.8.2)
       '@types/node':
         specifier: 'catalog:'
         version: 24.12.0
@@ -839,7 +839,7 @@ importers:
         version: 10.3.3(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       tsdown:
         specifier: 'catalog:'
-        version: 0.21.4(@tsdown/css@0.21.4)(@typescript/native-preview@7.0.0-dev.20260219.1)(synckit@0.11.12)(typescript@6.0.2)
+        version: 0.21.4(@tsdown/css@0.21.5)(@typescript/native-preview@7.0.0-dev.20260219.1)(synckit@0.11.12)(typescript@6.0.2)
       typescript:
         specifier: 'catalog:'
         version: 6.0.2
@@ -6894,6 +6894,28 @@ packages:
       sass: '*'
       sass-embedded: '*'
       tsdown: 0.21.4
+    peerDependenciesMeta:
+      postcss:
+        optional: true
+      postcss-import:
+        optional: true
+      postcss-modules:
+        optional: true
+      sass:
+        optional: true
+      sass-embedded:
+        optional: true
+
+  '@tsdown/css@0.21.5':
+    resolution: {integrity: sha512-twACFs2WaFlz//7+ev68BLOtznSH9jUQXn58/gEknqsRqz+SChTD9RZ4wP3xsA6HSRNnoSCXW9uzHnUzJJA6ug==}
+    engines: {node: '>=20.19.0'}
+    peerDependencies:
+      postcss: ^8.4.0
+      postcss-import: ^16.0.0
+      postcss-modules: ^6.0.0
+      sass: '*'
+      sass-embedded: '*'
+      tsdown: 0.21.5
     peerDependenciesMeta:
       postcss:
         optional: true
@@ -22413,6 +22435,20 @@ snapshots:
       - jiti
       - tsx
       - yaml
+    optional: true
+
+  '@tsdown/css@0.21.5(jiti@2.6.1)(postcss@8.5.8)(tsdown@0.21.4)(tsx@4.21.0)(yaml@2.8.2)':
+    dependencies:
+      lightningcss: 1.32.0
+      postcss-load-config: 6.0.1(jiti@2.6.1)(postcss@8.5.8)(tsx@4.21.0)(yaml@2.8.2)
+      rolldown: 1.0.0-rc.11
+      tsdown: 0.21.4(@tsdown/css@0.21.5)(@typescript/native-preview@7.0.0-dev.20260219.1)(synckit@0.11.12)(typescript@6.0.2)
+    optionalDependencies:
+      postcss: 8.5.8
+    transitivePeerDependencies:
+      - jiti
+      - tsx
+      - yaml
 
   '@tufjs/canonical-json@2.0.0': {}
 
@@ -33035,6 +33071,34 @@ snapshots:
       unrun: 0.2.32(synckit@0.11.12)
     optionalDependencies:
       '@tsdown/css': 0.21.4(jiti@2.6.1)(postcss@8.5.8)(tsdown@0.21.4)(tsx@4.21.0)(yaml@2.8.2)
+      typescript: 6.0.2
+    transitivePeerDependencies:
+      - '@ts-macro/tsc'
+      - '@typescript/native-preview'
+      - oxc-resolver
+      - synckit
+      - vue-tsc
+
+  tsdown@0.21.4(@tsdown/css@0.21.5)(@typescript/native-preview@7.0.0-dev.20260219.1)(synckit@0.11.12)(typescript@6.0.2):
+    dependencies:
+      ansis: 4.2.0
+      cac: 7.0.0
+      defu: 6.1.4
+      empathic: 2.0.0
+      hookable: 6.1.0
+      import-without-cache: 0.2.5
+      obug: 2.1.1
+      picomatch: 4.0.3
+      rolldown: 1.0.0-rc.9
+      rolldown-plugin-dts: 0.22.5(@typescript/native-preview@7.0.0-dev.20260219.1)(rolldown@1.0.0-rc.9)(typescript@6.0.2)
+      semver: 7.7.4
+      tinyexec: 1.0.4
+      tinyglobby: 0.2.15
+      tree-kill: 1.2.2
+      unconfig-core: 7.5.0
+      unrun: 0.2.32(synckit@0.11.12)
+    optionalDependencies:
+      '@tsdown/css': 0.21.5(jiti@2.6.1)(postcss@8.5.8)(tsdown@0.21.4)(tsx@4.21.0)(yaml@2.8.2)
       typescript: 6.0.2
     transitivePeerDependencies:
       - '@ts-macro/tsc'
