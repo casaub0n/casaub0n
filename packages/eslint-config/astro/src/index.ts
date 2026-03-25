@@ -3,7 +3,7 @@ import globals from "globals";
 import eslintPluginAstro from "eslint-plugin-astro";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import eslintConfigPrettier from "eslint-config-prettier";
-import { ignoreConfig } from "../../utils/src/ignore-config";
+import { ignoreConfig } from "@casaub0n/eslint-config-utils/ignore-config";
 import { defineConfig } from "eslint/config";
 
 /**
