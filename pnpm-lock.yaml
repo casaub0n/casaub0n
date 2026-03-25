@@ -358,8 +358,8 @@ catalogs:
       specifier: 3.8.0
       version: 3.8.0
     renovate:
-      specifier: 43.88.0
-      version: 43.88.0
+      specifier: 43.89.5
+      version: 43.89.5
     schema-dts:
       specifier: 2.0.0
       version: 2.0.0
@@ -496,7 +496,7 @@ importers:
         version: 3.8.1
       renovate:
         specifier: 'catalog:'
-        version: 43.88.0(typanion@3.14.0)
+        version: 43.89.5(typanion@3.14.0)
       textlint:
         specifier: 'catalog:'
         version: 15.5.2
@@ -13818,8 +13818,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@43.88.0:
-    resolution: {integrity: sha512-E510+RPlJ+P089U0qN/piJVrJzOwuaWNU+XZkBrE/28PBSbqADSKIPxXswZxTvdlWEoWnScwsaCQRRoJwvUBtg==}
+  renovate@43.89.5:
+    resolution: {integrity: sha512-0x/h6QKgKBpmK5BvON044cXHImgC+S7gwg6DhoJOOCypR7e0Tis2nZZJx1DB+Ik+NaGCHGxKLp5SpRhRx6c7/g==}
     engines: {node: ^24.11.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -14067,10 +14067,6 @@ packages:
         optional: true
       webpack:
         optional: true
-
-  sax@1.5.0:
-    resolution: {integrity: sha512-21IYA3Q5cQf089Z6tgaUTr7lDAyzoTPx5HRtbhsME8Udispad8dC/+sziTNugOEx54ilvatQ9YCzl4KQLPcRHA==}
-    engines: {node: '>=11.0.0'}
 
   sax@1.6.0:
     resolution: {integrity: sha512-6R3J5M4AcbtLUdZmRv2SygeVaM7IhrLXu9BmnOGmmACak8fiUtOsYNWUS4uK7upbmHIBbLBeFeI//477BKLBzA==}
@@ -31249,7 +31245,7 @@ snapshots:
       lodash: 4.17.23
       strip-ansi: 6.0.1
 
-  renovate@43.88.0(typanion@3.14.0):
+  renovate@43.89.5(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.1000.0
       '@aws-sdk/client-ec2': 3.1000.0
@@ -31709,8 +31705,6 @@ snapshots:
       neo-async: 2.6.2
     optionalDependencies:
       webpack: 5.105.2(esbuild@0.27.3)
-
-  sax@1.5.0: {}
 
   sax@1.6.0: {}
 
@@ -32382,7 +32376,7 @@ snapshots:
       css-what: 6.2.2
       csso: 5.0.5
       picocolors: 1.1.1
-      sax: 1.5.0
+      sax: 1.6.0
 
   swr@2.4.0(react@19.2.4):
     dependencies:
