@@ -30,8 +30,8 @@ jobs:
       - name: Install dotfiles
         run: ${{matrix.script}}
 
-  pnpm-install:
-    name: pnpm install
+  Run-npm-on-Ubuntu:
+    name: Run npm on Ubuntu
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -41,6 +41,14 @@ jobs:
       CI: true
       TURBO_TOKEN: ${{ secrets.USERSCRIPT_TURBO_TOKEN }}
       TURBO_TEAM: ${{ secrets.USERSCRIPT_TURBO_TEAM }}
+    strategy:
+      matrix:
+        tasks:
+          [
+            "build",
+            "test:ci",
+            "pnpm lint --filter=@casaub0n/test-driven-development-by-example --filter=next-casaub0n --filter=@casaub0n/ui --filter=@casaub0n/casaub0n-astro",
+          ]
 
     steps:
       - name: Checkout
@@ -76,137 +84,5 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-  pnpm-build:
-    name: pnpm build
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      deployments: write
-      statuses: write
-    env:
-      CI: true
-      TURBO_TOKEN: ${{ secrets.USERSCRIPT_TURBO_TOKEN }}
-      TURBO_TEAM: ${{ secrets.USERSCRIPT_TURBO_TEAM }}
-    needs: [pnpm-install]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-        with:
-          fetch-depth: 2
-
-      # Don't specific actual pnpm's version because renovate can't update pnpm's version, this action read pnpm version of root's package.json
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v5
-        with:
-          run_install: false
-
-      - name: Install Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version-file: ".node-version"
-          cache: "pnpm"
-
-      - name: Setup Chrome
-        uses: browser-actions/setup-chrome@v2
-        id: setup-chrome
-      - run: |
-          echo Installed chromium version: ${{ steps.setup-chrome.outputs.chrome-version }}
-          ${{ steps.setup-chrome.outputs.chrome-path }} --version
-
-      - name: Create dot env file
-        shell: bash
-        run: |
-          touch .env.ci
-          echo "CHROME=${{ steps.setup-chrome.outputs.chrome-path }}" >> .env.ci
-      - name: pnpm build
-        run: pnpm build
-
-  pnpm-test:
-    name: pnpm test
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      deployments: write
-      statuses: write
-    env:
-      CI: true
-      TURBO_TOKEN: ${{ secrets.USERSCRIPT_TURBO_TOKEN }}
-      TURBO_TEAM: ${{ secrets.USERSCRIPT_TURBO_TEAM }}
-    needs: [pnpm-install]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-        with:
-          fetch-depth: 2
-
-      # Don't specific actual pnpm's version because renovate can't update pnpm's version, this action read pnpm version of root's package.json
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v5
-        with:
-          run_install: false
-
-      - name: Install Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version-file: ".node-version"
-          cache: "pnpm"
-
-      - name: Setup Chrome
-        uses: browser-actions/setup-chrome@v2
-        id: setup-chrome
-      - run: |
-          echo Installed chromium version: ${{ steps.setup-chrome.outputs.chrome-version }}
-          ${{ steps.setup-chrome.outputs.chrome-path }} --version
-
-      - name: Create dot env file
-        shell: bash
-        run: |
-          touch .env.ci
-          echo "CHROME=${{ steps.setup-chrome.outputs.chrome-path }}" >> .env.ci
-      - name: pnpm test
-        run: pnpm test
-
-  pnpm-lint:
-    name: pnpm lint
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      deployments: write
-      statuses: write
-    env:
-      CI: true
-      TURBO_TOKEN: ${{ secrets.USERSCRIPT_TURBO_TOKEN }}
-      TURBO_TEAM: ${{ secrets.USERSCRIPT_TURBO_TEAM }}
-    needs: [pnpm-install]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-        with:
-          fetch-depth: 2
-
-      # Don't specific actual pnpm's version because renovate can't update pnpm's version, this action read pnpm version of root's package.json
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v5
-        with:
-          run_install: false
-
-      - name: Install Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version-file: ".node-version"
-          cache: "pnpm"
-
-      - name: Setup Chrome
-        uses: browser-actions/setup-chrome@v2
-        id: setup-chrome
-      - run: |
-          echo Installed chromium version: ${{ steps.setup-chrome.outputs.chrome-version }}
-          ${{ steps.setup-chrome.outputs.chrome-path }} --version
-
-      - name: Create dot env file
-        shell: bash
-        run: |
-          touch .env.ci
-          echo "CHROME=${{ steps.setup-chrome.outputs.chrome-path }}" >> .env.ci
-      - name: pnpm lint
-        run: pnpm lint --filter=@casaub0n/test-driven-development-by-example --filter=next-casaub0n --filter=@casaub0n/ui --filter=@casaub0n/casaub0n-astro
+      - name: pnpm tasks
+        run: pnpm ${{ matrix.tasks }}
