@@ -30,8 +30,8 @@ jobs:
       - name: Install dotfiles
         run: ${{matrix.script}}
 
-  Run-npm-on-Ubuntu:
-    name: Run npm on Ubuntu
+  pnpm-install:
+    name: pnpm install
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -76,13 +76,47 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      # pass nextjs-dashboard project because that is still WIP
-      - name: Build
-        run: pnpm build
+  pnpm-build:
+    name: pnpm install
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+      statuses: write
+    env:
+      CI: true
+      TURBO_TOKEN: ${{ secrets.USERSCRIPT_TURBO_TOKEN }}
+      TURBO_TEAM: ${{ secrets.USERSCRIPT_TURBO_TEAM }}
+    needs: [pnpm-install]
+    steps:
+      - run: pnpm build
 
-      - name: test
-        run: pnpm test:ci
+  pnpm-test:
+    name: pnpm install
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+      statuses: write
+    env:
+      CI: true
+      TURBO_TOKEN: ${{ secrets.USERSCRIPT_TURBO_TOKEN }}
+      TURBO_TEAM: ${{ secrets.USERSCRIPT_TURBO_TEAM }}
+    needs: [pnpm-install]
+    steps:
+      - run: pnpm test:ci
 
-      # check eslint
-      - name: lint check
-        run: pnpm lint --filter=@casaub0n/test-driven-development-by-example --filter=next-casaub0n --filter=@casaub0n/ui --filter=@casaub0n/casaub0n-astro
+  pnpm-lint:
+    name: pnpm install
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+      statuses: write
+    env:
+      CI: true
+      TURBO_TOKEN: ${{ secrets.USERSCRIPT_TURBO_TOKEN }}
+      TURBO_TEAM: ${{ secrets.USERSCRIPT_TURBO_TEAM }}
+    needs: [pnpm-install]
+    steps:
+      - run: pnpm lint --filter=@casaub0n/test-driven-development-by-example --filter=next-casaub0n --filter=@casaub0n/ui --filter=@casaub0n/casaub0n-astro
