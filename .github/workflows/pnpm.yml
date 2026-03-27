@@ -30,8 +30,8 @@ jobs:
       - name: Install dotfiles
         run: ${{matrix.script}}
 
-  Run-npm-on-Ubuntu:
-    name: Run npm on Ubuntu
+  Run-pnpm:
+    name: Run pnpm on Ubuntu
     runs-on: ubuntu-latest
     permissions:
       contents: read
