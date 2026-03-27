@@ -68,7 +68,7 @@ jobs:
           echo "CHROME=${{ steps.setup-chrome.outputs.chrome-path }}" >> .env.ci
 
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
         # with:
         # Automatically inject basePath in your Next.js configuration file and disable
         # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
