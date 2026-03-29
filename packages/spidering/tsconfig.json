@@ -26,7 +26,6 @@
     "strict": true,
     "noEmit": true,
     "strictNullChecks": true,
-    "downlevelIteration": true,
     "lib": ["DOM","DOM.Iterable","ESNext"],
     "outDir": "./dist",
     "types": ["node"],
@@ -36,6 +35,6 @@
     "erasableSyntaxOnly": true,
     "verbatimModuleSyntax": true
   },
-  "include": ["./src", "./tsdown.config.ts"],
-  "exclude": ["node_modules",  "dist"]
+  "include": ["./src/**/*", "./scripts/**/*", "tsdown.config.ts"],
+  "exclude": ["node_modules",  "dist", ".turbo"]
 }

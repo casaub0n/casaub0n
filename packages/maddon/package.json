@@ -17,7 +17,8 @@
     "build": "tsdown",
     "test": "node --env-file .env.windows --import tsx src/test.ts",
     "test:addon": "pnpm build && node --env-file .env.windows --import tsx src/addonTest.ts",
-    "test:ci": "node --env-file ../../.env.ci --no-warnings --import tsx src/test.ts"
+    "test:ci": "node --env-file ../../.env.ci --no-warnings --import tsx src/test.ts",
+    "type:check": "tsc --noEmit"
   },
   "files": [
     "dist"
@@ -27,12 +28,9 @@
   ],
   "devDependencies": {
     "@casaub0n/eslint-base": "workspace:*",
-    "@types/jest": "catalog:",
     "@types/node": "catalog:",
-    "jest": "catalog:",
     "puppeteer": "catalog:",
     "tsdown": "catalog:",
-    "ts-jest": "catalog:",
     "tsx": "catalog:",
     "typescript": "catalog:"
   },

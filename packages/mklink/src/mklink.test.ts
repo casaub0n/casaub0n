@@ -16,7 +16,7 @@ import { consola } from "consola";
  */
 const getChromePathFromEnvironment = (): Result<string, Error> => {
   const chromePath = env.CHROME;
-  // eslint-disable-next-line eqeqeq, unicorn/no-null
+  // eslint-disable-next-line eqeqeq
   if (chromePath == null || chromePath == "") {
     return err(new Error("There is not env config"));
   }

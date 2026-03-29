@@ -13,7 +13,7 @@ export const myName = "casaub0n" as const satisfies string;
 /**
  * https://zenn.dev/moneyforward/articles/typescript-as-const-satisfies
  */
-export const foodList = {
+export const foodList: { [key: string]: string } = {
   ramen: "ラーメン",
   udon: "うどん",
   soba: "そば",
