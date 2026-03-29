@@ -19,9 +19,9 @@
     "node": ">=24"
   },
   "scripts": {
-    "ts:check": "tsc --noEmit",
-    "test": "pnpm tsx src/money.test.ts",
-    "start": "pnpm tsx src/index.ts",
+    "type:check": "tsc --noEmit",
+    "test": "tsx src/money.test.ts",
+    "start": "tsx src/index.ts",
     "test:watch": "node --watch --no-warnings --import tsx src/money.test.ts",
     "test:ci": "pnpm test",
     "test:purenode": "pnpm build && pnpm node dist/test.mjs",
