@@ -5,7 +5,7 @@
 // コードコメントには Why not
 // を書こうという話をした
 
-export const getFirst = <T>(myList: T[]): T => {
+export const getFirst = <T>(myList: T[]): T | undefined => {
   return myList[0];
 };
 
@@ -22,7 +22,6 @@ export const getSum = (myList: number[]): number => {
  */
 type A = "a" | "b" | "c";
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export function exhaustive(v: A) {
   switch (v) {
     case "a": {
