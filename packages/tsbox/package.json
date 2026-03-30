@@ -25,7 +25,8 @@
     "rmdist": "node scripts/rrm.ts",
     "build": "tsdown",
     "start:tsbox": "pnpm build && node dist/index.mjs",
-    "lint": "eslint src/**"
+    "lint": "eslint src/**",
+    "type:check": "tsc --noEmit"
   },
   "files": [
     "dist"
