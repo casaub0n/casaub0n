@@ -358,8 +358,8 @@ catalogs:
       specifier: 3.8.1
       version: 3.8.1
     renovate:
-      specifier: 43.101.2
-      version: 43.101.2
+      specifier: 43.102.0
+      version: 43.102.0
     schema-dts:
       specifier: 2.0.0
       version: 2.0.0
@@ -496,7 +496,7 @@ importers:
         version: 3.8.1
       renovate:
         specifier: 'catalog:'
-        version: 43.101.2(typanion@3.14.0)
+        version: 43.102.0(typanion@3.14.0)
       textlint:
         specifier: 'catalog:'
         version: 15.5.2
@@ -4972,8 +4972,8 @@ packages:
     resolution: {integrity: sha512-L6AiU3OXv9kjKGTJN9j8n1TeJGDcLX9atQlZvAkthlvbXjvKc5SKNWESc/eXhr5nEfuMWhQhiKHDJCpYejmeCQ==}
     engines: {node: '>=14.19'}
 
-  '@pnpm/error@1000.0.5':
-    resolution: {integrity: sha512-GjH0TPjbVNrPnl/BAGoFuBLJ2sFfXNKbS33lll/Ehe9yw0fyc8Kdw7kO9if37yQqn6vaa4dAHKkPllum7f/IPQ==}
+  '@pnpm/error@1000.1.0':
+    resolution: {integrity: sha512-Dqc2IJJPjUatwc9Letw+vG29rnaMrDGi5g6WCx1HiZYm0obXbTmLygeRafMbgf+sLKXrWE1shOeiayQuczBdoA==}
     engines: {node: '>=18.12'}
 
   '@pnpm/error@4.0.0':
@@ -4984,8 +4984,8 @@ packages:
     resolution: {integrity: sha512-ogUZCGf0/UILZt6d8PsO4gA4pXh7f0BumXeFkcCe4AQ65PXPKfAkHC0C30Lheh2EgFOpLZm3twDP1Eiww18gew==}
     engines: {node: '>=14.19'}
 
-  '@pnpm/parse-overrides@1001.0.3':
-    resolution: {integrity: sha512-Ctu3m3cnGscQM9SQjnBVzrw6C4ZI4DBkotEOYv1dyRF0xc+aktGNDnrx59O/hnWU8PbsQ9PT5LmAO/GkdlrM/Q==}
+  '@pnpm/parse-overrides@1001.0.4':
+    resolution: {integrity: sha512-fk6gFXDKN61vZfb/qbTne/938GPQaYy8U+B2TdBPxPuw2M/U8l1ltlUoJZzR3SW4O+jghzaFKTVVIPiPs3K1AQ==}
     engines: {node: '>=18.12'}
 
   '@pnpm/parse-wanted-dependency@1001.0.0':
@@ -13677,8 +13677,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@43.101.2:
-    resolution: {integrity: sha512-x9koGX/573W3B/iQZSy2f++E+T77zoUHPivrJODyvR/Y3pAvafSkLti090Pz+B1AYIx6ABR9GiNVRp4I3jwOSg==}
+  renovate@43.102.0:
+    resolution: {integrity: sha512-1P3hvXKtgbkdlCz+iyMNbnFQr4D3893zU+kXoRVXn3ht06MHt/gyFf6185/Lr+JgkfhyzfpkzEaxRchqlU4Axg==}
     engines: {node: ^24.11.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -20045,7 +20045,7 @@ snapshots:
   '@pnpm/catalogs.resolver@1000.0.5':
     dependencies:
       '@pnpm/catalogs.protocol-parser': 1001.0.0
-      '@pnpm/error': 1000.0.5
+      '@pnpm/error': 1000.1.0
 
   '@pnpm/catalogs.types@1000.0.0': {}
 
@@ -20053,7 +20053,7 @@ snapshots:
 
   '@pnpm/constants@6.1.0': {}
 
-  '@pnpm/error@1000.0.5':
+  '@pnpm/error@1000.1.0':
     dependencies:
       '@pnpm/constants': 1001.3.1
 
@@ -20065,11 +20065,11 @@ snapshots:
     dependencies:
       graceful-fs: 4.2.11
 
-  '@pnpm/parse-overrides@1001.0.3':
+  '@pnpm/parse-overrides@1001.0.4':
     dependencies:
       '@pnpm/catalogs.resolver': 1000.0.5
       '@pnpm/catalogs.types': 1000.0.0
-      '@pnpm/error': 1000.0.5
+      '@pnpm/error': 1000.1.0
       '@pnpm/parse-wanted-dependency': 1001.0.0
 
   '@pnpm/parse-wanted-dependency@1001.0.0':
@@ -21605,7 +21605,7 @@ snapshots:
       '@tapjs/stack': 4.3.0
       '@tapjs/test': 4.4.2(@swc/core@1.15.18(@swc/helpers@0.5.18))(@tapjs/core@4.5.2(@swc/core@1.15.18(@swc/helpers@0.5.18))(@types/node@24.12.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(@types/node@24.12.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       async-hook-domain: 4.0.1
-      diff: 8.0.3
+      diff: 8.0.4
       is-actual-promise: 1.0.2
       minipass: 7.1.3
       signal-exit: 4.1.0
@@ -21905,7 +21905,7 @@ snapshots:
       '@textlint/types': 15.5.2
       chalk: 4.1.2
       debug: 4.4.3
-      diff: 8.0.3
+      diff: 8.0.4
       string-width: 4.2.3
       strip-ansi: 6.0.1
       text-table: 0.2.0
@@ -31038,7 +31038,7 @@ snapshots:
       lodash: 4.17.23
       strip-ansi: 6.0.1
 
-  renovate@43.101.2(typanion@3.14.0):
+  renovate@43.102.0(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.1000.0
       '@aws-sdk/client-ec2': 3.1000.0
@@ -31065,7 +31065,7 @@ snapshots:
       '@opentelemetry/sdk-trace-base': 2.6.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-node': 2.6.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/semantic-conventions': 1.40.0
-      '@pnpm/parse-overrides': 1001.0.3
+      '@pnpm/parse-overrides': 1001.0.4
       '@qnighy/marshal': 0.1.3
       '@redis/client': 5.11.0
       '@renovatebot/detect-tools': 2.0.0
@@ -32276,7 +32276,7 @@ snapshots:
 
   tcompare@9.3.0(react-dom@19.2.4(react@19.2.4))(react@18.3.1):
     dependencies:
-      diff: 8.0.3
+      diff: 8.0.4
       react-element-to-jsx-string: 15.0.0(react-dom@19.2.4(react@19.2.4))(react@18.3.1)
     transitivePeerDependencies:
       - react
@@ -32284,7 +32284,7 @@ snapshots:
 
   tcompare@9.3.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
     dependencies:
-      diff: 8.0.3
+      diff: 8.0.4
       react-element-to-jsx-string: 15.0.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
     transitivePeerDependencies:
       - react
