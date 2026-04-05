@@ -21,7 +21,8 @@
   "scripts": {
     "rmdist": "node scripts/rrm.ts",
     "build": "tsdown",
-    "lint": "eslint src/**"
+    "lint": "eslint src/**",
+    "type:check": "tsc --noEmit"
   },
   "files": [
     "dist"
