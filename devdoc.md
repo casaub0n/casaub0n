@@ -134,8 +134,9 @@ There is a [eslint-base config](./packages/config-eslint/tsconfig.json)
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Default",
   "compilerOptions": {
-    "composite": false,
-    "inlineSources": false,
+    "composite": true,
+    "inlineSources": true,
+    "inlineSourceMap": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "exactOptionalPropertyTypes": false,
