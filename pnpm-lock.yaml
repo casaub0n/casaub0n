@@ -358,8 +358,8 @@ catalogs:
       specifier: 3.8.1
       version: 3.8.1
     renovate:
-      specifier: 43.104.7
-      version: 43.104.7
+      specifier: 43.104.8
+      version: 43.104.8
     schema-dts:
       specifier: 2.0.0
       version: 2.0.0
@@ -496,7 +496,7 @@ importers:
         version: 3.8.1
       renovate:
         specifier: 'catalog:'
-        version: 43.104.7(typanion@3.14.0)
+        version: 43.104.8(typanion@3.14.0)
       textlint:
         specifier: 'catalog:'
         version: 15.5.2
@@ -8182,6 +8182,10 @@ packages:
     resolution: {integrity: sha512-h+DEnpVvxmfVefa4jFbCf5HdH5YMDXRsmKflpf1pILZWRFlTbJpxeU55nJl4Smt5HQaGzg1o6RHFPJaOqnmBDg==}
     engines: {node: 18 || 20 || >=22}
 
+  brace-expansion@5.0.5:
+    resolution: {integrity: sha512-VZznLgtwhn+Mact9tfiwx64fA9erHH/MCXEUfB/0bX/6Fz6ny5EGTXYltMocqg4xFAQZtnO3DHWWXi8RiuN7cQ==}
+    engines: {node: 18 || 20 || >=22}
+
   braces@3.0.3:
     resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
     engines: {node: '>=8'}
@@ -12079,6 +12083,10 @@ packages:
     resolution: {integrity: sha512-oRjTw/97aTBN0RHbYCdtF1MQfvusSIBQM0IZEgzl6426+8jSC0nF1a/GmnVLpfB9yyr6g6FTqWqiZVbxrtaCIg==}
     engines: {node: 18 || 20 || >=22}
 
+  minimatch@10.2.5:
+    resolution: {integrity: sha512-MULkVLfKGYDFYejP07QOurDLLQpcjk7Fw+7jXS2R2czRQzR56yHRveU5NDJEOviH+hETZKSkIk5c+T23GjFUMg==}
+    engines: {node: 18 || 20 || >=22}
+
   minimatch@3.1.5:
     resolution: {integrity: sha512-VgjWUsnnT6n+NUk6eZq77zeFdpW2LWDzP6zFGrCbHXiYNul5Dzqk2HHQ5uFH2DNW5Xbp8+jVzaeNt94ssEEl4w==}
 
@@ -13586,8 +13594,8 @@ packages:
   renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
 
-  renovate@43.104.7:
-    resolution: {integrity: sha512-+J1mvPMXsVojnhCeyzbv901w2LRrTwb/L3qUDsJ0qBNlleAlRqrK++TAUvkHCZ7DPvxUeQGjqej3JKlKH7G69g==}
+  renovate@43.104.8:
+    resolution: {integrity: sha512-P6iI8yu6Cy1gewPABZ0FlPmTQUENjc5APa7n2PpvW5URXgyfeCnwSFZu4jxKvCVYQSxWe21WTFGrWO0ebaRDGQ==}
     engines: {node: ^24.11.0, pnpm: ^10.0.0}
     hasBin: true
 
@@ -23957,6 +23965,10 @@ snapshots:
     dependencies:
       balanced-match: 4.0.4
 
+  brace-expansion@5.0.5:
+    dependencies:
+      balanced-match: 4.0.4
+
   braces@3.0.3:
     dependencies:
       fill-range: 7.1.1
@@ -25133,7 +25145,7 @@ snapshots:
     dependencies:
       '@one-ini/wasm': 0.2.1
       commander: 14.0.3
-      minimatch: 10.2.4
+      minimatch: 10.2.5
       semver: 7.7.4
 
   ee-first@1.1.1: {}
@@ -28834,6 +28846,10 @@ snapshots:
     dependencies:
       brace-expansion: 5.0.4
 
+  minimatch@10.2.5:
+    dependencies:
+      brace-expansion: 5.0.5
+
   minimatch@3.1.5:
     dependencies:
       brace-expansion: 1.1.12
@@ -30680,7 +30696,7 @@ snapshots:
       lodash: 4.17.23
       strip-ansi: 6.0.1
 
-  renovate@43.104.7(typanion@3.14.0):
+  renovate@43.104.8(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.1021.0
       '@aws-sdk/client-ec2': 3.1021.0
@@ -30764,7 +30780,7 @@ snapshots:
       luxon: 3.7.2
       markdown-it: 14.1.1
       markdown-table: 3.0.4
-      minimatch: 10.2.4
+      minimatch: 10.2.5
       moo: 0.5.3
       ms: 2.1.3
       neotraverse: 0.6.18
