@@ -135,4 +135,4 @@ const _typescriptRules: RuleOptions = {
 /**
  * `@typescript-eslint`
  */
-export const typescriptRules: FlatConfig.Config["rules"] = _typescriptRules;
+export const typescriptRules = _typescriptRules as FlatConfig.Config["rules"];

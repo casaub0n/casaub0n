@@ -62,7 +62,9 @@
   ],
   "scripts": {
     "build": "tsdown",
-    "build:watch": "tsdown --watch src"
+    "build:watch": "tsdown --watch src",
+    "gendts": "node --import tsx src/generate-rules-dts.ts",
+    "type:check": "pnpm gendts && pnpm tsc --noEmit"
   },
   "devDependencies": {
     "@eslint/js": "catalog:",
