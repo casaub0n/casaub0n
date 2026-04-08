@@ -34,7 +34,8 @@
   "scripts": {
     "build": "tsdown",
     "build:watch": "tsdown --watch src",
-    "lint": "eslint src/**"
+    "lint": "eslint src/**",
+    "type:check": "tsc --noEmit"
   },
   "peerDependencies": {
     "@cspell/eslint-plugin": "catalog:",

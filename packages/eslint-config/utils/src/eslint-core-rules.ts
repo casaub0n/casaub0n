@@ -1,7 +1,6 @@
 import { type FlatConfig } from "typescript-eslint";
-import type { RuleOptions } from "./types.gen";
 
-const _eslintCoreRules: RuleOptions = {
+export const eslintCoreRules = {
   curly: "error",
   "default-case-last": "error",
   eqeqeq: "error",
@@ -33,11 +32,4 @@ const _eslintCoreRules: RuleOptions = {
       ignoreDeclarationSort: true,
     },
   ],
-};
-
-/**
- * ESlint core
- *
- * [eslint-config/base/index.js at master · herp-inc/eslint-config](https://github.com/herp-inc/eslint-config/blob/master/base/index.js)
- */
-export const eslintCoreRules: FlatConfig.Config["rules"] = _eslintCoreRules;
+} as const satisfies FlatConfig.Config["rules"];
