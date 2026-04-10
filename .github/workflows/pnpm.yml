@@ -59,7 +59,7 @@ jobs:
 
       # Don't specific actual pnpm's version because renovate can't update pnpm's version, this action read pnpm version of root's package.json
       - name: Set up pnpm
-        uses: pnpm/action-setup@v5
+        uses: pnpm/action-setup@v6
         with:
           run_install: false
 
