@@ -3,6 +3,20 @@ packages:
   - packages/eslint-config/*
   - apps/*
 
+allowBuilds:
+  '@prisma/engines': true
+  '@swc/core': true
+  better-sqlite3: true
+  core-js-pure: true
+  esbuild: true
+  get-windows: true
+  msw: true
+  prisma: true
+  puppeteer: true
+  sharp: true
+  unrs-resolver: true
+  workerd: true
+
 catalog:
   '@astrojs/cloudflare': 13.5.0
   '@astrojs/react': 5.0.4
