@@ -11,6 +11,7 @@ import type { Article, WithContext } from "schema-dts";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// eslint-disable-next-line unicorn/prefer-export-from
 export const metadata = layoutMetadata;
 
 /**
