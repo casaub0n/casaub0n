@@ -4,14 +4,15 @@ import type { ReactNode } from "react";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 
-// import { layoutMetadata } from "@/components/layouts/layoutMetadata";
+import { layoutMetadata } from "@/components/layouts/layoutMetadata";
 
 import type { Article, WithContext } from "schema-dts";
 
 
 const inter = Inter({ subsets: ["latin"] });
 
-// const metadata = layoutMetadata;
+// eslint-disable-next-line unicorn/prefer-export-from
+export const metadata = layoutMetadata;
 
 /**
  * @see https://nextjs.org/docs/app/building-your-application/optimizing/metadata#json-ld
