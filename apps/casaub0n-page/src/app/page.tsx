@@ -1,8 +1,10 @@
-import { Top } from "@/components/templates/Top";
-import { layoutMetadata } from "@/components/layouts/layoutMetadata";
+"use client";
 
-// eslint-disable-next-line unicorn/prefer-export-from
-export const metadata = layoutMetadata;
+import { Top } from "@/components/templates/Top";
+// import { layoutMetadata } from "@/components/layouts/layoutMetadata";
+
+ 
+// export const metadata = layoutMetadata;
 
 export default function Page() {
   return (

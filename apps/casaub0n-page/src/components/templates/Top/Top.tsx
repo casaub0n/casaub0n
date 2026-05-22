@@ -7,7 +7,7 @@ import { MyTweet } from "@/components/organisms/myTweet";
 
 import { cherry_bomb_one } from "@/app/fonts";
 
-import { styledSection, styledMyAvatar, styledH1, styledDiv } from "./Top.css"
+import { styledDiv, styledH1, styledMyAvatar, styledSection } from "./Top.css"
 
 
 type Props = ComponentPropsWithoutRef<"main">;
