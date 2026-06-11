@@ -4,14 +4,12 @@ packages:
   - apps/*
 
 allowBuilds:
-  '@prisma/engines': true
   '@swc/core': true
   better-sqlite3: true
   core-js-pure: true
   esbuild: true
   get-windows: true
   msw: true
-  prisma: true
   puppeteer: true
   sharp: true
   unrs-resolver: true
@@ -34,10 +32,8 @@ catalog:
   '@lerna-lite/cli': 5.3.0
   '@lerna-lite/publish': 5.3.0
   '@lerna-lite/version': 5.3.0
-  '@next-auth/prisma-adapter': 1.0.7
   '@next/eslint-plugin-next': 16.2.9
   '@playwright/test': 1.60.0
-  '@prisma/client': 7.8.0
   '@radix-ui/colors': 3.0.0
   '@radix-ui/react-aspect-ratio': 1.1.9
   '@radix-ui/react-avatar': 1.1.12
@@ -138,7 +134,6 @@ catalog:
   playwright: 1.60.0
   postcss: 8.5.15
   prettier: 3.8.4
-  prisma: 7.8.0
   puppeteer: 25.1.0
   react: 19.2.7
   react-dom: 19.2.7
