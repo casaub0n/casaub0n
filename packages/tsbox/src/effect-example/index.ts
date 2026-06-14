@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { consola } from "consola";
 import { Option } from "effect/index";
 
