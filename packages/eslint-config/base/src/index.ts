@@ -72,7 +72,6 @@ const config = ({
           sourceType: "module",
           projectService: true,
           ecmaVersion: "latest",
-          // eslint-disable-next-line unicorn/no-null
           jsxPragma: null, // for @typescript/eslint-parser
           ecmaFeatures: {
             modules: true,
