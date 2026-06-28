@@ -12,7 +12,7 @@ This repository is experimental apps and profile readme
 - [pnpm](https://pnpm.io/)
 - [Node.js](https://nodejs.org/ja)
 - [Rust](https://www.rust-lang.org/)
-- [vscode](https://code.visualstudio.com/)
+- [VS Code](https://code.visualstudio.com/)
 
 ## Set up your development environment on Windows
 
