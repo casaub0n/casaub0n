@@ -100,6 +100,15 @@ const config = ({
         ...importX.flatConfigs.recommended.rules,
         ...importX.flatConfigs.typescript.rules,
         ...rules,
+        "unicorn/prevent-abbreviations": "off",
+        "unicorn/name-replacements": [
+          "error",
+          {
+            allowList: {
+              props: true,
+            },
+          },
+        ],
       },
       settings: {
         "import-x/resolver-next": createTypeScriptImportResolver({
@@ -148,6 +157,15 @@ const config = ({
         "react/react-in-jsx-scope": "off",
         "react/prop-types": "off",
         ...eslintPluginUnicorn.configs.all.rules,
+        "unicorn/prevent-abbreviations": "off",
+        "unicorn/name-replacements": [
+          "error",
+          {
+            allowList: {
+              props: true,
+            },
+          },
+        ],
       },
     },
 
