@@ -8,4 +8,9 @@ export default defineConfig([
   ...base({
     tsConfigurationRootDirectory: import.meta.dirname,
   }),
+  {
+    rules: {
+      "unicorn/prevent-abbreviations": "off",
+    },
+  },
 ]);
