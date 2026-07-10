@@ -11,6 +11,14 @@ export default defineConfig([
   {
     rules: {
       "unicorn/prevent-abbreviations": "off",
+      "unicorn/name-replacements": [
+        "error",
+        {
+          allowList: {
+            props: true,
+          },
+        },
+      ],
     },
   },
 ]);
