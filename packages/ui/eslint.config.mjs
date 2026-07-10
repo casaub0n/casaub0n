@@ -8,17 +8,4 @@ export default defineConfig([
   ...base({
     tsConfigurationRootDirectory: import.meta.dirname,
   }),
-  {
-    rules: {
-      "unicorn/prevent-abbreviations": "off",
-      "unicorn/name-replacements": [
-        "error",
-        {
-          allowList: {
-            props: true,
-          },
-        },
-      ],
-    },
-  },
 ]);

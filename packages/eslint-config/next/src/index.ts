@@ -95,6 +95,15 @@ const config = ({
         ...importX.flatConfigs.typescript.rules,
         ...nextPlugin.configs.recommended.rules,
         ...nextPlugin.configs["core-web-vitals"].rules,
+        "unicorn/prevent-abbreviations": "off",
+        "unicorn/name-replacements": [
+          "error",
+          {
+            allowList: {
+              props: true,
+            },
+          },
+        ],
       },
       settings: {
         "import-x/resolver-next": createTypeScriptImportResolver({
@@ -132,6 +141,15 @@ const config = ({
           "error",
           {
             allowList: ["^ENV_[A-Z]+$"],
+          },
+        ],
+        "unicorn/prevent-abbreviations": "off",
+        "unicorn/name-replacements": [
+          "error",
+          {
+            allowList: {
+              props: true,
+            },
           },
         ],
       },

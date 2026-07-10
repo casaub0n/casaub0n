@@ -38,11 +38,12 @@ const config = defineConfig([
           ignore: [".astro$"],
         },
       ],
-      "unicorn/prevent-abbreviations": [
+      "unicorn/prevent-abbreviations": "off",
+      "unicorn/name-replacements": [
         "error",
         {
           allowList: {
-            Props: true,
+            props: true,
           },
         },
       ],
