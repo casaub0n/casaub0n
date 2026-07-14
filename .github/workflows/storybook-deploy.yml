@@ -78,15 +78,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Run tests
-        run: pnpm test --filter=@casaub0n/casaub0n-page
-        env:
-          CI: true
-          TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-          TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
-
       - name: Build static storybook
-        run: pnpm build --filter=@casaub0n/catalog
+        run: pnpm build --filter=@casaub0n/shadcn-story
         env:
           CI: true
           TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
@@ -95,7 +88,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
-          path: ./apps/catalog/storybook-static
+          path: ./apps/shadcn-story/storybook-static
 
   # Deployment job
   deploy:

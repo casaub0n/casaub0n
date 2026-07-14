@@ -6,9 +6,9 @@
   "scripts": {
     "prebuild": "tsdown",
     "prebuild:vite": "vite build",
-    "build": "pnpm prebuild",
+    "build": "pnpm prebuild && storybook build",
     "lint": "eslint ./src/**",
-    "storybook": "pnpm prebuild && storybook dev -p 6006"
+    "dev": "pnpm prebuild && storybook dev -p 6006"
   },
   "dependencies": {
     "@casaub0n/ui": "workspace:*",

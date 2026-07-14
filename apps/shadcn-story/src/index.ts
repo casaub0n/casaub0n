@@ -11,8 +11,6 @@ const config: StorybookConfig = {
     options: {},
   },
 
-  core: {},
-
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   async viteFinal(config: any) {
     return Object.assign(config, {
