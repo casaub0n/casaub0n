@@ -178,8 +178,8 @@ catalogs:
       specifier: 7.0.7
       version: 7.0.7
     autoprefixer:
-      specifier: 10.5.2
-      version: 10.5.2
+      specifier: 10.5.3
+      version: 10.5.3
     capnp-es:
       specifier: 0.0.14
       version: 0.0.14
@@ -639,7 +639,7 @@ importers:
         version: 2.5.2(@swc/helpers@0.5.23)(@types/node@26.1.1)(babel-plugin-macros@3.1.0)(esbuild@0.28.1)(jiti@2.7.0)(next@16.2.10(@babel/core@7.29.7)(@playwright/test@1.61.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(terser@5.49.0)(tsx@4.23.0)(webpack@5.108.4(esbuild@0.28.1)(postcss@8.5.17))(yaml@2.9.0)
       autoprefixer:
         specifier: 'catalog:'
-        version: 10.5.2(postcss@8.5.17)
+        version: 10.5.3(postcss@8.5.17)
       jest:
         specifier: 'catalog:'
         version: 30.4.2(@types/node@26.1.1)(babel-plugin-macros@3.1.0)
@@ -772,7 +772,7 @@ importers:
         version: 4.3.2
       autoprefixer:
         specifier: 'catalog:'
-        version: 10.5.2(postcss@8.5.16)
+        version: 10.5.3(postcss@8.5.17)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7701,8 +7701,8 @@ packages:
     resolution: {integrity: sha512-ooviqdwwgfIfNmDwo94wlshcdzfO64XV0Cg6oDsDYBJfITDz1EngD2z7DkbvCWn+XIMsIqW27sEVF6qcpJrRcg==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  autoprefixer@10.5.2:
-    resolution: {integrity: sha512-rD5t5DwOjJdmSORcTq64j8MawTC+tbQ+HHqjR4NDumamy/ambn1UJrlKL+KdwujWxMkFjPM3pPHOEA9tl4767Q==}
+  autoprefixer@10.5.3:
+    resolution: {integrity: sha512-bJRzflk8GgE4JX+iZNEwz9f9p460NCHnU7bd+CZ9vIjIlZuTkt6F3WSl2oNO8StZBFx17nLEsiQ6H2wcZiY7nA==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
@@ -21418,16 +21418,7 @@ snapshots:
 
   auto-bind@5.0.1: {}
 
-  autoprefixer@10.5.2(postcss@8.5.16):
-    dependencies:
-      browserslist: 4.28.6
-      caniuse-lite: 1.0.30001805
-      fraction.js: 5.3.4
-      picocolors: 1.1.1
-      postcss: 8.5.16
-      postcss-value-parser: 4.2.0
-
-  autoprefixer@10.5.2(postcss@8.5.17):
+  autoprefixer@10.5.3(postcss@8.5.17):
     dependencies:
       browserslist: 4.28.6
       caniuse-lite: 1.0.30001805
