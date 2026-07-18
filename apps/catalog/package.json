@@ -5,7 +5,8 @@
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "mv-test-results": "node mv-test-result.js",
-    "start": "serve storybook-static"
+    "start": "serve storybook-static",
+    "broken-build": "storybook build && pnpm mv-test-results"
   },
   "devDependencies": {
     "@casaub0n/eslint-base": "workspace:*",
