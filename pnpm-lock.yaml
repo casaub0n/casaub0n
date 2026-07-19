@@ -18,6 +18,12 @@ catalogs:
     '@cspell/cspell-types':
       specifier: 10.0.1
       version: 10.0.1
+    '@cspell/eslint-plugin':
+      specifier: 10.0.1
+      version: 10.0.1
+    '@eslint/compat':
+      specifier: 2.1.0
+      version: 2.1.0
     '@eslint/config-inspector':
       specifier: 3.1.0
       version: 3.1.0
@@ -141,6 +147,9 @@ catalogs:
     '@typescript-eslint/eslint-plugin':
       specifier: 8.64.0
       version: 8.64.0
+    '@typescript-eslint/parser':
+      specifier: 8.64.0
+      version: 8.64.0
     '@unocss/astro':
       specifier: 66.7.5
       version: 66.7.5
@@ -201,9 +210,45 @@ catalogs:
     eslint:
       specifier: 10.7.0
       version: 10.7.0
+    eslint-config-next:
+      specifier: 16.2.10
+      version: 16.2.10
+    eslint-config-prettier:
+      specifier: 10.1.8
+      version: 10.1.8
+    eslint-import-resolver-typescript:
+      specifier: 4.4.5
+      version: 4.4.5
+    eslint-plugin-astro:
+      specifier: 3.0.1
+      version: 3.0.1
+    eslint-plugin-import:
+      specifier: 2.32.0
+      version: 2.32.0
+    eslint-plugin-import-x:
+      specifier: 4.17.1
+      version: 4.17.1
+    eslint-plugin-only-warn:
+      specifier: 1.2.1
+      version: 1.2.1
+    eslint-plugin-react:
+      specifier: 7.37.5
+      version: 7.37.5
+    eslint-plugin-react-hooks:
+      specifier: 7.1.1
+      version: 7.1.1
     eslint-plugin-storybook:
       specifier: 10.5.2
       version: 10.5.2
+    eslint-plugin-turbo:
+      specifier: 2.10.5
+      version: 2.10.5
+    eslint-plugin-unicorn:
+      specifier: 72.0.0
+      version: 72.0.0
+    eslint-plugin-unused-imports:
+      specifier: 4.4.1
+      version: 4.4.1
     eslint-plugin-yml:
       specifier: 3.6.0
       version: 3.6.0
@@ -225,6 +270,9 @@ catalogs:
     glob:
       specifier: 13.0.6
       version: 13.0.6
+    globals:
+      specifier: 17.7.0
+      version: 17.7.0
     gsap:
       specifier: 3.15.0
       version: 3.15.0
@@ -373,8 +421,8 @@ catalogs:
       specifier: 1.4.2
       version: 1.4.2
     vercel:
-      specifier: 56.3.1
-      version: 56.3.1
+      specifier: 56.3.2
+      version: 56.3.2
     vite:
       specifier: 8.1.5
       version: 8.1.5
@@ -621,7 +669,7 @@ importers:
         version: 6.0.3
       vercel:
         specifier: 'catalog:'
-        version: 56.3.1(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.2)(encoding@0.1.13)(rollup@4.62.2)(supports-color@10.2.2)
+        version: 56.3.2(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.2)(encoding@0.1.13)(rollup@4.62.2)(supports-color@10.2.2)
 
   apps/catalog:
     devDependencies:
@@ -14305,8 +14353,8 @@ packages:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
 
-  vercel@56.3.1:
-    resolution: {integrity: sha512-i0sfBaX6SiTfylSFUL8VPfztfdfDOjGHwJXeUa80d7b+GSR8Palmw6eB93dHf+T/6hLBTpUvIPZFU5UasG7lsg==}
+  vercel@56.3.2:
+    resolution: {integrity: sha512-UyOL/TMXPOvVyx4SEzpP4kLdv56dUPU4VBRrGzyY+GEBX0o8vTtp+CPOAr1gKAHDgeWdnrD8SGG3D3ONNU+FEg==}
     engines: {node: '>= 18'}
     hasBin: true
 
@@ -29733,7 +29781,7 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vercel@56.3.1(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.2)(encoding@0.1.13)(rollup@4.62.2)(supports-color@10.2.2):
+  vercel@56.3.2(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.2)(encoding@0.1.13)(rollup@4.62.2)(supports-color@10.2.2):
     dependencies:
       '@vercel/backends': 0.8.25(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.2)(encoding@0.1.13)(rollup@4.62.2)(supports-color@10.2.2)
       '@vercel/blob': 2.4.0
