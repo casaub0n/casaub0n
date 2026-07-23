@@ -12,9 +12,9 @@ export default defineConfig({
   target: "esnext",
   platform: "node",
   minify: true,
-  // https://tsdown.dev/options/dependencies#deps-skipnodemodulesbundle
+  // https://tsdown.dev/options/dependencies#deps-neverBundle
   deps: {
-    skipNodeModulesBundle: true,
+    neverBundle: true,
   },
   hooks: {
     "build:prepare": async () => {
