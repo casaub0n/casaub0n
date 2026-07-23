@@ -421,8 +421,8 @@ catalogs:
       specifier: 1.4.2
       version: 1.4.2
     vercel:
-      specifier: 56.4.1
-      version: 56.4.1
+      specifier: 56.5.0
+      version: 56.5.0
     vite:
       specifier: 8.1.5
       version: 8.1.5
@@ -669,7 +669,7 @@ importers:
         version: 6.0.3
       vercel:
         specifier: 'catalog:'
-        version: 56.4.1(d25986c2ab81788e8608fec96f592a10)
+        version: 56.5.0(b5a02f7f13f5bef2d78b3eeabe548cc2)
 
   apps/catalog:
     devDependencies:
@@ -7284,9 +7284,6 @@ packages:
 
   '@vercel/python-analysis@0.11.1':
     resolution: {integrity: sha512-EPPLuXJQhIDUx08H9nG76AR2HSgBquwe3OAX5s2w20M923iaWeGGVkhX/4yZ89CJfXEZgE1Aj/mX7lVHOVIcYA==}
-
-  '@vercel/python@6.51.0':
-    resolution: {integrity: sha512-81n05giwRNXwp7UZQbDoSHv8XhQTsFRfQnlFSaITmsWA8MVl1t1XJrrHSNswiRm+hceWzHxBZxE0ysfWXs4AQA==}
 
   '@vercel/redwood@2.5.0':
     resolution: {integrity: sha512-LO24CbieV57rGAqrq5n5z/B+fMYeUqbE/Ge3qMeKRuS3Q9awgcBgB6WYLCe8crHM7XJd5AZjbuyoS/6k3r0X0w==}
@@ -14474,8 +14471,8 @@ packages:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
 
-  vercel@56.4.1:
-    resolution: {integrity: sha512-+CIEa0qcKm1RNBRhOvpo2l/yz28LMKSDuGeAYGx4/EkYyR5VOrXJZYV52WvqVARcxBAbH3Un2RRin8YGXMlcNg==}
+  vercel@56.5.0:
+    resolution: {integrity: sha512-wAKpT8DFSbnwlgbS711fbvxGjOfQeb1n+NcaBaSC4onq9eJAjbPfERrjrKE4GDsV8dkoBo0627lp0QxbLCGFiw==}
     engines: {node: '>= 18'}
     hasBin: true
     peerDependencies:
@@ -14492,7 +14489,7 @@ packages:
       '@vercel/nestjs': 0.2.106
       '@vercel/next': 4.20.4
       '@vercel/node': 5.8.26
-      '@vercel/python': 6.51.0
+      '@vercel/python': 6.51.1
       '@vercel/redwood': 2.5.0
       '@vercel/remix-builder': 5.9.1
       '@vercel/ruby': 2.5.1
@@ -21168,11 +21165,6 @@ snapshots:
       minimatch: 10.1.1
       smol-toml: 1.5.2
       zod: 3.22.4
-
-  '@vercel/python@6.51.0':
-    dependencies:
-      '@vercel/python-analysis': 0.11.1
-    optional: true
 
   '@vercel/redwood@2.5.0(encoding@0.1.13)(rollup@4.62.2)(supports-color@10.2.2)':
     dependencies:
@@ -30158,7 +30150,7 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vercel@56.4.1(d25986c2ab81788e8608fec96f592a10):
+  vercel@56.5.0(b5a02f7f13f5bef2d78b3eeabe548cc2):
     dependencies:
       '@vercel/blob': 2.4.0
       '@vercel/build-utils': 13.34.0
@@ -30190,7 +30182,6 @@ snapshots:
       '@vercel/nestjs': 0.2.106(encoding@0.1.13)(rollup@4.62.2)(supports-color@10.2.2)
       '@vercel/next': 4.20.4(encoding@0.1.13)(rollup@4.62.2)(supports-color@10.2.2)
       '@vercel/node': 5.8.26(encoding@0.1.13)(rollup@4.62.2)(supports-color@10.2.2)
-      '@vercel/python': 6.51.0
       '@vercel/redwood': 2.5.0(encoding@0.1.13)(rollup@4.62.2)(supports-color@10.2.2)
       '@vercel/remix-builder': 5.9.1(encoding@0.1.13)(rollup@4.62.2)(supports-color@10.2.2)
       '@vercel/ruby': 2.5.1
