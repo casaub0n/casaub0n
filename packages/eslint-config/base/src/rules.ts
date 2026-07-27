@@ -23,6 +23,15 @@ export const rules = {
       argsIgnorePattern: "^_",
     },
   ],
+  "unicorn/prevent-abbreviations": "off",
+  "unicorn/name-replacements": [
+    "error",
+    {
+      allowList: {
+        props: true,
+      },
+    },
+  ],
 
   "turbo/no-undeclared-env-vars": [
     "error",

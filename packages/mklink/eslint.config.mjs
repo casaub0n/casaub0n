@@ -6,7 +6,7 @@ export default defineConfig([
     ignores: ["dist/*", "eslint.config.mjs", "playwright-report/*"],
   },
   ...base({
-    tsConfigurationRootDirectory: import.meta.dirname,
+    tsConfigRootDirectory: import.meta.dirname,
   }),
   {
     rules: {

@@ -30,7 +30,7 @@ import { myPlugins } from "./my-plugins";
 /**
  * This config compatible with TypeScript project, YAML file, JavaScript file.
  *
- * @param tsConfigurationRootDirectory `import.meta.dirname` [The directory name of the current module. This is the same as the `path.dirname()` of the `import.meta.filename`.](https://nodejs.org/api/esm.html#importmetadirname)
+ * @param tsConfigRootDirectory `import.meta.dirname` [The directory name of the current module. This is the same as the `path.dirname()` of the `import.meta.filename`.](https://nodejs.org/api/esm.html#importmetadirname)
  *
  * `eslint` is needed at root directory. Use [defineConfig](https://eslint.org/docs/latest/use/configure/configuration-files)
  *
@@ -40,15 +40,15 @@ import { myPlugins } from "./my-plugins";
  *
  * export default defineConfig([
  *   ...base({
- *     tsConfigurationRootDirectory: import.meta.dirname,
+ *     tsConfigRootDirectory: import.meta.dirname,
  *   }),
  * ]);
  * ```
  */
 const config = ({
-  tsConfigurationRootDirectory = import.meta.dirname,
+  tsConfigRootDirectory = import.meta.dirname,
 }: Readonly<{
-  tsConfigurationRootDirectory: string;
+  tsConfigRootDirectory: string;
 }>): FlatConfig.ConfigArray =>
   defineConfig([
     /**
@@ -72,7 +72,7 @@ const config = ({
           window: "readonly",
         },
         parserOptions: {
-          tsconfigRootDir: tsConfigurationRootDirectory,
+          tsconfigRootDir: tsConfigRootDirectory,
           sourceType: "module",
           projectService: true,
           ecmaVersion: "latest",

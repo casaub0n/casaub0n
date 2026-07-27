@@ -6,7 +6,7 @@ export default defineConfig([
     ignores: ["**/eslint.config.mjs", "**/dist/**"],
   },
   ...base({
-    tsConfigurationRootDirectory: import.meta.dirname,
+    tsConfigRootDirectory: import.meta.dirname,
     tsconfigFileName: "./tsconfig.json",
   }),
 ]);

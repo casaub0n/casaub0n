@@ -8,7 +8,7 @@ export default defineConfig([
     ignores: ["**/eslint.config.mjs"],
   },
   ...base({
-    tsConfigurationRootDirectory: import.meta.dirname,
+    tsConfigRootDirectory: import.meta.dirname,
   }),
   ...storybook.configs["flat/recommended"],
 ]);
