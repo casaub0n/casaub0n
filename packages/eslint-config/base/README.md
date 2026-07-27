@@ -11,7 +11,7 @@ This is flat config. Check [peerDependencies](./package.json).
 
 This is a example eslint config.
 
-Use `tsConfigurationRootDirectory` to point tsconfig.json location.
+Use `tsConfigRootDirectory` to point tsconfig.json location.
 
 ```js
 import { defineConfig } from "eslint/config";
@@ -22,7 +22,7 @@ export default defineConfig([
     ignores: ["**/eslint.config.mjs"],
   },
   ...base({
-    tsConfigurationRootDirectory: import.meta.dirname
+    tsConfigRootDirectory: import.meta.dirname,
   }),
 ]);
 ```

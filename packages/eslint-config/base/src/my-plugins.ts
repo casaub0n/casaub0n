@@ -5,6 +5,7 @@ import { importX } from "eslint-plugin-import-x";
 import pluginTs from "@typescript-eslint/eslint-plugin";
 import type { ESLint } from "eslint";
 import js from "@eslint/js";
+import packageJson from "eslint-package-json";
 
 export const myPlugins: Record<string, ESLint.Plugin> = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -14,5 +15,6 @@ export const myPlugins: Record<string, ESLint.Plugin> = {
   turbo: turboPlugin,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   "import-x": importX as any,
+  "eslint-package-json": packageJson,
   js,
 };

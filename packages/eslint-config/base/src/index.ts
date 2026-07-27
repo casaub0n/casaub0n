@@ -18,12 +18,13 @@ import { typescriptRules } from "@casaub0n/eslint-config-utils/typescript-rules"
 import eslintPluginYml from "eslint-plugin-yml";
 import { importX } from "eslint-plugin-import-x";
 import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
+import packageJson from "eslint-package-json";
 import { rules } from "./rules";
 
 /**
  * This config compatible with TypeScript project, YAML file, JavaScript file.
  *
- * @param tsConfigurationRootDirectory `import.meta.dirname` [The directory name of the current module. This is the same as the `path.dirname()` of the `import.meta.filename`.](https://nodejs.org/api/esm.html#importmetadirname)
+ * @param tsConfigRootDirectory `import.meta.dirname` [The directory name of the current module. This is the same as the `path.dirname()` of the `import.meta.filename`.](https://nodejs.org/api/esm.html#importmetadirname)
  *
  * `eslint` is needed at root directory. Use [defineConfig](https://eslint.org/docs/latest/use/configure/configuration-files)
  *
@@ -36,15 +37,15 @@ import { rules } from "./rules";
  *      ignores: ["**\/eslint.config.mjs"],
  *   }
  *   ...base({
- *     tsConfigurationRootDirectory: import.meta.dirname,
+ *     tsConfigRootDirectory: import.meta.dirname,
  *   }),
  * ]);
  * ```
  */
 const config = ({
-  tsConfigurationRootDirectory = import.meta.dirname,
+  tsConfigRootDirectory = import.meta.dirname,
 }: Readonly<{
-  tsConfigurationRootDirectory: string;
+  tsConfigRootDirectory: string;
 }>): FlatConfig.ConfigArray =>
   defineConfig([
     /**
@@ -68,7 +69,7 @@ const config = ({
           window: "readonly",
         },
         parserOptions: {
-          tsconfigRootDir: tsConfigurationRootDirectory,
+          tsconfigRootDir: tsConfigRootDirectory,
           sourceType: "module",
           projectService: true,
           ecmaVersion: "latest",
@@ -98,15 +99,6 @@ const config = ({
         ...importX.flatConfigs.typescript.rules,
         "no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
         ...rules,
-        "unicorn/prevent-abbreviations": "off",
-        "unicorn/name-replacements": [
-          "error",
-          {
-            allowList: {
-              props: true,
-            },
-          },
-        ],
       },
       /**
        * https://github.com/un-ts/eslint-plugin-import-x/issues/229#issuecomment-2654512757
@@ -140,27 +132,21 @@ const config = ({
         ...pluginJs.configs.recommended.rules,
         ...eslintCoreRules,
         ...eslintPluginUnicorn.configs.all.rules,
-        "turbo/no-undeclared-env-vars": [
-          "error",
-          {
-            allowList: ["^ENV_[A-Z]+$"],
-          },
-        ],
-        "unicorn/prevent-abbreviations": "off",
-        "unicorn/name-replacements": [
-          "error",
-          {
-            allowList: {
-              props: true,
-            },
-          },
-        ],
+        ...rules,
       },
     },
     /**
      * @see https://github.com/streetsidesoftware/cspell/tree/main/packages/cspell-eslint-plugin#configuration-new-eslintconfigjs
      */
     cspellESLintPluginRecommended,
+
+    {
+      files: ["**/package.json"],
+      plugins: {
+        "package-json": packageJson,
+      },
+      extends: ["package-json/recommended"],
+    },
 
     eslintPluginYml.configs["flat/recommended"],
 
