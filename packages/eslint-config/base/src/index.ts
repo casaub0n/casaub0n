@@ -140,6 +140,9 @@ const config = ({
      */
     cspellESLintPluginRecommended,
 
+    /**
+     * [sindresorhus/eslint-package-json: Powerful ESLint rules for package.json](https://github.com/sindresorhus/eslint-package-json)
+     */
     {
       files: ["**/package.json"],
       plugins: {

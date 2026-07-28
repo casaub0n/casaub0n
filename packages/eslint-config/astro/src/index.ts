@@ -5,6 +5,7 @@ import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import eslintConfigPrettier from "eslint-config-prettier";
 import { ignoreConfig } from "@casaub0n/eslint-config-utils/ignore-config";
 import { defineConfig } from "eslint/config";
+import packageJson from "eslint-package-json";
 
 /**
  * @see https://zenn.dev/suree/articles/71591ec903463d
@@ -48,6 +49,17 @@ const config = defineConfig([
         },
       ],
     },
+  },
+
+  /**
+   * [sindresorhus/eslint-package-json: Powerful ESLint rules for package.json](https://github.com/sindresorhus/eslint-package-json)
+   */
+  {
+    files: ["**/package.json"],
+    plugins: {
+      "package-json": packageJson,
+    },
+    extends: ["package-json/recommended"],
   },
 
   eslintConfigPrettier,
