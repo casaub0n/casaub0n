@@ -26,6 +26,7 @@ import { importX } from "eslint-plugin-import-x";
 import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 import { rules } from "./rules";
 import { myPlugins } from "./my-plugins";
+import packageJson from "eslint-package-json";
 
 /**
  * This config compatible with TypeScript project, YAML file, JavaScript file.
@@ -167,6 +168,17 @@ const config = ({
           },
         ],
       },
+    },
+
+    /**
+     * [sindresorhus/eslint-package-json: Powerful ESLint rules for package.json](https://github.com/sindresorhus/eslint-package-json)
+     */
+    {
+      files: ["**/package.json"],
+      plugins: {
+        "package-json": packageJson,
+      },
+      extends: ["package-json/recommended"],
     },
 
     /**
