@@ -42,7 +42,7 @@ jobs:
         with:
           fetch-depth: 2
 
-      # Don't specific actual pnpm's version because renovate can't update pnpm's version, this action read pnpm version of root's packege.json
+      # Don't specific actual pnpm's version because renovate can't update pnpm's version, this action read pnpm version of root's package.json
       - name: Set up pnpm
         uses: pnpm/action-setup@v6
         with:
@@ -54,18 +54,11 @@ jobs:
           node-version-file: ".node-version"
           cache: "pnpm"
 
-      - name: Setup Chrome
-        uses: browser-actions/setup-chrome@v2
-        id: setup-chrome
-      - run: |
-          echo Installed chromium version: ${{ steps.setup-chrome.outputs.chrome-version }}
-          ${{ steps.setup-chrome.outputs.chrome-path }} --version
-
       - name: Create dot env file
         shell: bash
         run: |
           touch .env.ci
-          echo "CHROME=${{ steps.setup-chrome.outputs.chrome-path }}" >> .env.ci
+          echo "CHROME=$(which google-chrome)" >> .env.ci
 
       - name: Setup Pages
         uses: actions/configure-pages@v6
