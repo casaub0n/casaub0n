@@ -1,11 +1,11 @@
-import type { RuleOptions } from "./types.gen.ts";
+import type { RuleOptions } from "./types.gen";
 
 /**
  * ESLint config rules by generated eslint-typegen
  *
  * Check [what's generated rules](../tsdown.config.ts)
  */
-export const rules = {
+export const myRules = {
   "@typescript-eslint/explicit-function-return-type": "off",
 
   /**

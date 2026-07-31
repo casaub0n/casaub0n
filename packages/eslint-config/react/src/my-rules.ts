@@ -1,11 +1,11 @@
-import type { RuleOptions } from "./types.gen.ts";
+import type { RuleOptions } from "./types.gen";
 
 /**
  * ESLint config rules by generated eslint-typegen
  *
  * Check [what's generated rules](../tsdown.config.ts)
  */
-export const rules = {
+export const myRules = {
   // It is used ui package rule
   "@typescript-eslint/explicit-function-return-type": "off",
   /**
@@ -39,23 +39,22 @@ export const rules = {
   "react/no-string-refs": "off",
   "react/require-render-return": "off",
   /**
-   * [eslint-plugin-unicorn/docs/rules/prevent-abbreviations.md at main · sindresorhus/eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prevent-abbreviations.md#options)
-   */
-  "unicorn/prevent-abbreviations": [
-    "error",
-    {
-      replacements: {
-        props: {
-          properties: false,
-        },
-        utils: {
-          utilities: false,
-        },
-      },
-    },
-  ],
-  /**
    * [eslint-plugin-unicorn/docs/rules/no-keyword-prefix.md at v60.0.0 · sindresorhus/eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/v60.0.0/docs/rules/no-keyword-prefix.md#disallowedprefixes)
    */
   "unicorn/no-keyword-prefix": ["error", { disallowedPrefixes: ["className"] }],
+
+  "unicorn/prevent-abbreviations": "off",
+  // "unicorn/prevent-abbreviations": [
+  //   "error",
+  //   {
+  //     replacements: {
+  //       props: {
+  //         properties: false,
+  //       },
+  //       utils: {
+  //         utilities: false,
+  //       },
+  //     },
+  //   },
+  // ],
 } as const satisfies RuleOptions;
