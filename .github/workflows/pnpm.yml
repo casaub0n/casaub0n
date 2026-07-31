@@ -73,7 +73,6 @@ jobs:
         shell: bash
         run: |
           touch .env.ci
-          echo "CHROME=$(which google-chrome)"
           echo "CHROME=$(which google-chrome)" >> .env.ci
 
       - name: Install dependencies
