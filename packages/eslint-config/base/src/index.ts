@@ -19,7 +19,7 @@ import eslintPluginYml from "eslint-plugin-yml";
 import { importX } from "eslint-plugin-import-x";
 import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 import packageJson from "eslint-package-json";
-import { rules } from "./rules";
+import { myRules } from "./my-rules";
 
 /**
  * This config compatible with TypeScript project, YAML file, JavaScript file.
@@ -98,7 +98,7 @@ const config = ({
         ...importX.flatConfigs.recommended.rules,
         ...importX.flatConfigs.typescript.rules,
         "no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
-        ...rules,
+        ...myRules,
       },
       /**
        * https://github.com/un-ts/eslint-plugin-import-x/issues/229#issuecomment-2654512757
@@ -132,7 +132,7 @@ const config = ({
         ...pluginJs.configs.recommended.rules,
         ...eslintCoreRules,
         ...eslintPluginUnicorn.configs.all.rules,
-        ...rules,
+        ...myRules,
       },
     },
     /**

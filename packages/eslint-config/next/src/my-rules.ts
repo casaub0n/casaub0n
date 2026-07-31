@@ -1,11 +1,11 @@
-import type { RuleOptions } from "./types.gen.ts";
+import type { RuleOptions } from "./types.gen";
 
 /**
  * ESLint config rules by generated eslint-typegen
  *
  * Check [what's generated rules](../tsdown.config.ts)
  */
-export const rules = {
+export const myRules = {
   "@typescript-eslint/explicit-function-return-type": "off",
 
   /**
@@ -25,4 +25,13 @@ export const rules = {
   "react/jsx-no-target-blank": "off",
   "react/prop-types": "off",
   "react/react-in-jsx-scope": "off",
+  "unicorn/prevent-abbreviations": "off",
+  "unicorn/name-replacements": [
+    "error",
+    {
+      allowList: {
+        props: true,
+      },
+    },
+  ],
 } as const satisfies RuleOptions;

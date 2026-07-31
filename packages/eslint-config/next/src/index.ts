@@ -19,7 +19,7 @@ import { typescriptRules } from "@casaub0n/eslint-config-utils/typescript-rules"
 import { importX } from "eslint-plugin-import-x";
 import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 import { myPlugins } from "./my-plugins";
-import { rules } from "./rules";
+import { myRules } from "./my-rules";
 import packageJson from "eslint-package-json";
 
 /**
@@ -90,21 +90,12 @@ const config = ({
       rules: {
         ...eslintCoreRules,
         ...typescriptRules,
-        ...rules,
+        ...myRules,
         ...eslintPluginUnicorn.configs.all.rules,
         ...importX.flatConfigs.recommended.rules,
         ...importX.flatConfigs.typescript.rules,
         ...nextPlugin.configs.recommended.rules,
         ...nextPlugin.configs["core-web-vitals"].rules,
-        "unicorn/prevent-abbreviations": "off",
-        "unicorn/name-replacements": [
-          "error",
-          {
-            allowList: {
-              props: true,
-            },
-          },
-        ],
       },
       settings: {
         "import-x/resolver-next": createTypeScriptImportResolver({

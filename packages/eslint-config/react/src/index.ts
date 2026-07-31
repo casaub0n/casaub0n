@@ -24,7 +24,7 @@ import pluginReact from "eslint-plugin-react";
 import pluginReactHooks from "eslint-plugin-react-hooks";
 import { importX } from "eslint-plugin-import-x";
 import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
-import { rules } from "./rules";
+import { myRules } from "./my-rules";
 import { myPlugins } from "./my-plugins";
 import packageJson from "eslint-package-json";
 
@@ -100,8 +100,7 @@ const config = ({
         ...eslintPluginUnicorn.configs.all.rules,
         ...importX.flatConfigs.recommended.rules,
         ...importX.flatConfigs.typescript.rules,
-        ...rules,
-        "unicorn/prevent-abbreviations": "off",
+        ...myRules,
         "unicorn/name-replacements": [
           "error",
           {
