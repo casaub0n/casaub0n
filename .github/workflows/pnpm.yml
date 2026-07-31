@@ -73,8 +73,7 @@ jobs:
         shell: bash
         run: |
           touch .env.ci
-          chrome-path=$(google-chrome --version)
-          echo "CHROME=$chrome-path" >> .env.ci
+          echo "CHROME=$(google-chrome --version)" >> .env.ci
 
       - name: Install dependencies
         run: pnpm install
