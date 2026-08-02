@@ -66,7 +66,10 @@ export default defineConfig([
     },
     extends: ["markdown/recommended"],
     rules: {
-      "markdown/no-html": "error",
+      /**
+       * GitHub is allowed html tags.
+       */
+      "markdown/no-html": "off",
     },
   },
 ]);
