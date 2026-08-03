@@ -20,6 +20,7 @@ const filterNumber = new Set([0, 1, 2, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
  */
 const filterTable = (tableElement: HTMLElement, month: number): string => {
   //  TODO: use evp-ts
+  // eslint-disable-next-line no-useless-assignment
   let resultHtml = "";
   const environmentTableHead = process.env.TABLE_HEAD;
 
@@ -52,7 +53,6 @@ const getContent = (htmlText: string, month: number): Result<string, Error> => {
     runScripts: "dangerously",
     resources: "usable",
   });
-  // eslint-disable-next-line unicorn/prefer-query-selector
   const tableElement = dom.window.document.getElementById("scrTable");
   return tableElement ? ok(filterTable(tableElement, month)) : err(new Error("no tableElement"));
 };
@@ -99,7 +99,7 @@ export const filterHtml = (): void => {
       for (let index = 1; index < 13; index++) {
         const file = `src\\input_data\\${index.toString()}.html`;
         const rawFile = await fs.readFile(file, "utf8");
-        // eslint-disable-next-line unicorn/prefer-string-replace-all, @cspell/spellchecker
+        // eslint-disable-next-line @cspell/spellchecker
         const htmlFile = rawFile.replace(/id='liststd'/g, "class='listd'");
         const month = path.basename(file, ".html");
 
