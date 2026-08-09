@@ -156,13 +156,13 @@ export const getTimeData = (scheduleContent: Element): void => {
     let month: number = 0;
     for (const element of inHtml) {
       const tagName = element.tagName;
-      // eslint-disable-next-line unicorn/no-keyword-prefix
+
       const className = element.className;
       // eslint-disable-next-line eqeqeq
       if (tagName == "h2") {
         // TODO: do h2
         const em = element.getElementsByTagName("em").item(0)?.nodeValue;
-        // eslint-disable-next-line eqeqeq, unicorn/no-null
+        // eslint-disable-next-line eqeqeq
         if (em != null) {
           const monthOrDay = haveMonth(em);
           if (monthOrDay.isOk()) {
@@ -170,12 +170,13 @@ export const getTimeData = (scheduleContent: Element): void => {
             // push date
           }
           if (monthOrDay.isErr()) {
+            // eslint-disable-next-line unused-imports/no-unused-vars
             const date = addYear(addMonth(monthOrDay.error, month), 2015);
             // push date
           }
         }
       }
-      // eslint-disable-next-line eqeqeq, unicorn/no-keyword-prefix
+      // eslint-disable-next-line eqeqeq
       if (tagName == "div" && className == "schedule-program") {
         // TODO: div
       }
@@ -191,6 +192,7 @@ export const getData = async (): Promise<void> => {
     if (maybeScheduleContentList.isOk()) {
       const scheduleContentList = maybeScheduleContentList.value;
       // do schedule-box-main
+      // eslint-disable-next-line unused-imports/no-unused-vars
       for (const scheduleContent of scheduleContentList) {
         // getScheduleMain(scheduleBoxMain);
         // TODO merge datalist
