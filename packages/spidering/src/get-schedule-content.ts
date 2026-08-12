@@ -128,7 +128,7 @@ export const getDate = (scheduleContent: Element): Date[] => {
 /**
  * @todo WIP
  */
-const getH2 = (element: Element): number | undefined => {
+export const getH2 = (element: Element): number | undefined => {
   const wrapperElementList = element.getElementsByTagName("h2");
   const maybeElement = wrapperElementList.item(0);
 
@@ -146,7 +146,9 @@ const getH2 = (element: Element): number | undefined => {
         return day;
       }
     }
+    return undefined;
   }
+  return undefined;
 };
 
 export const getTimeData = (scheduleContent: Element): void => {
