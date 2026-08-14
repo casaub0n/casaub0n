@@ -26,9 +26,8 @@ Since then, my movie's adventure has started.
 - [Stream casaub0n](https://steamcommunity.com/id/casaub0n/)
 - [Amazon](https://www.amazon.co.jp/gp/profile/amzn1.account.AFOX7NXYS7UPZ3QUANIEGQC3P4PA)
 
-Pikmin Bloom friend's code: 465561226769
-<img width="800" height="800" alt="15879" src="https://github.com/user-attachments/assets/74b484fc-b278-4d02-9cc9-01ca43acdaa1" />
-
+**Pikmin Bloom friend's code: 465561226769**
+[![Pikmin Bloom friend's code](https://github.com/user-attachments/assets/05ba982f-7366-4c1c-a622-3a26c2917c69)](https://pikminbloom.onelink.me/pWSt/eseuctq1)
 
 _[Duolingo](https://www.duolingo.com/profile/casaub00n?via=share_profile_link)_
 [![1000009215](https://github.com/user-attachments/assets/2c77b80c-e6b7-4367-848c-bc621b102be5)](https://www.duolingo.com/profile/casaub00n?via=share_profile_link)
