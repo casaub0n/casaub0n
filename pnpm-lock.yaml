@@ -181,8 +181,8 @@ catalogs:
       specifier: 10.5.4
       version: 10.5.4
     capnp-es:
-      specifier: 0.0.15
-      version: 0.0.15
+      specifier: 0.0.16
+      version: 0.0.16
     class-variance-authority:
       specifier: 0.7.1
       version: 0.7.1
@@ -1551,7 +1551,7 @@ importers:
     dependencies:
       capnp-es:
         specifier: 'catalog:'
-        version: 0.0.15(typescript@6.0.3)
+        version: 0.0.16(typescript@6.0.3)
       consola:
         specifier: 'catalog:'
         version: 3.4.2
@@ -8272,11 +8272,11 @@ packages:
   caniuse-lite@1.0.30001806:
     resolution: {integrity: sha512-72Cuvd95zbSYPKq6Fhg8eDJRlzgWDf7/mtoZv6Qe/DYNCEBdNxoA3+rZAU2ZhGCpZlns3EssFavaZomckT5Uuw==}
 
-  capnp-es@0.0.15:
-    resolution: {integrity: sha512-p3nLMXKmoMtO1pjdX3QrdtNep+gi9A3Q6k1GaVPyMsvdLLU6HH8wQxJJ7zs86ywti4BxSkaaksF7UZ3+NGI2JQ==}
+  capnp-es@0.0.16:
+    resolution: {integrity: sha512-pqhhnRqGfDdgHa+rz4JVO9j1jnkyqsHRYrD4RBtIwxCknYSRG7Mjs+x3IRfd20u+ZGS0IhW2L7cDv9ZcIkCYhQ==}
     hasBin: true
     peerDependencies:
-      typescript: ^5.7.3
+      typescript: ^5.7.3 || ^6.0.0
     peerDependenciesMeta:
       typescript:
         optional: true
@@ -22181,7 +22181,7 @@ snapshots:
 
   caniuse-lite@1.0.30001806: {}
 
-  capnp-es@0.0.15(typescript@6.0.3):
+  capnp-es@0.0.16(typescript@6.0.3):
     optionalDependencies:
       typescript: 6.0.3
 
