@@ -4,6 +4,8 @@
 
 This is flat config. Check [peerDependencies](./package.json).
 
+TypeScript's version is only **6.0.3**. [The version 7 is not working currently.](https://github.com/casaub0n/casaub0n/issues/6895)
+
 ## Usage
 
 1. Add `"@casaub0n/eslint-base": "workspace:*"` in devDependencies in `package.json`, and then `pnpm install` on a root directory.
