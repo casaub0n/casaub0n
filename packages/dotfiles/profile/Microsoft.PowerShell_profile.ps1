@@ -45,3 +45,9 @@ Set-PSReadLineKeyHandler @parameters
 $psdir = "$HOME\sandbox\casaub0n\packages\dotfiles\profile"
 Write-Host ("Load PS Profiles from {0}\modules" -f $psdir) -ForegroundColor DarkCyan
 Get-ChildItem $psdir\modules | Where-Object Extension -eq ".ps1" | ForEach-Object { .$_.FullName }
+
+# [Quick Start | vfox](https://vfox.dev/guides/quick-start.html#_2-hook-vfox-to-your-shell)
+if (-not (Test-Path -Path $PROFILE)) { New-Item -Type File -Path $PROFILE -Force }; Add-Content -Path $PROFILE -Value 'Invoke-Expression "$(vfox activate pwsh)"'
+Invoke-Expression "$(vfox activate pwsh)"
+Invoke-Expression "$(vfox activate pwsh)"
+Invoke-Expression "$(vfox activate pwsh)"
