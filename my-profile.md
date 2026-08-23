@@ -25,6 +25,7 @@ Since then, my movie's adventure has started.
 - ![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white) - [casaub0n](https://twitter.com/casaub0n)
 - [Stream casaub0n](https://steamcommunity.com/id/casaub0n/)
 - [Amazon](https://www.amazon.co.jp/gp/profile/amzn1.account.AFOX7NXYS7UPZ3QUANIEGQC3P4PA)
+- 鳥貴族 wbyxi8m097ve
 
 **Pikmin Bloom friend's code: 465561226769**
 [![Pikmin Bloom friend's code](https://github.com/user-attachments/assets/05ba982f-7366-4c1c-a622-3a26c2917c69)](https://pikminbloom.onelink.me/pWSt/eseuctq1)
