@@ -331,8 +331,8 @@ catalogs:
       specifier: 3.9.6
       version: 3.9.6
     puppeteer:
-      specifier: 25.8.0
-      version: 25.8.0
+      specifier: 25.9.0
+      version: 25.9.0
     react:
       specifier: 19.2.8
       version: 19.2.8
@@ -1290,7 +1290,7 @@ importers:
         version: 8.2.0
       puppeteer:
         specifier: 'catalog:'
-        version: 25.8.0(yauzl@2.10.0)
+        version: 25.9.0(yauzl@2.10.0)
       tsx:
         specifier: 'catalog:'
         version: 4.23.12
@@ -1355,7 +1355,7 @@ importers:
         version: 26.3.0
       puppeteer:
         specifier: 'catalog:'
-        version: 25.8.0(yauzl@2.10.0)
+        version: 25.9.0(yauzl@2.10.0)
       tsdown:
         specifier: 'catalog:'
         version: 0.22.14(@tsdown/css@0.22.14)(oxc-resolver@11.24.2)(tsx@4.23.12)(typescript@6.0.3)
@@ -1413,7 +1413,7 @@ importers:
         version: 1.62.1
       puppeteer:
         specifier: 'catalog:'
-        version: 25.8.0(yauzl@2.10.0)
+        version: 25.9.0(yauzl@2.10.0)
       ts-jest:
         specifier: 'catalog:'
         version: 29.4.12(@babel/core@7.29.7(supports-color@10.2.2))(@jest/transform@30.4.1(supports-color@10.2.2))(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(esbuild@0.28.1)(jest-util@30.4.1)(jest@30.4.2(@types/node@26.3.0)(babel-plugin-macros@3.1.0)(supports-color@10.2.2))(typescript@6.0.3)
@@ -12964,12 +12964,12 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
-  puppeteer-core@25.8.0:
-    resolution: {integrity: sha512-LDOrawV8vfCVk+yLj2ozvajNP4Sv3OV9y3Tpiyy2g2Z+aQlbcozP6KJfI4iSBq7YQER+86ihEtPa5ioiZyWxMQ==}
+  puppeteer-core@25.9.0:
+    resolution: {integrity: sha512-U61rCwSMha62CA/Opy6tCx2Fx+ck7ouiKnbpEApzSoLYMoEu9F71nuFpHL55vmIt33/GYm6eKZVhH2ev0nAIeg==}
     engines: {node: '>=22.12.0'}
 
-  puppeteer@25.8.0:
-    resolution: {integrity: sha512-3gcUJ+Jfodb5zNa/lWLZukBUwYiRIwAc8WRICoqfi+ZYmNWqpsPFyanTU3Gw/lhgII9aotVbAmhT6/NKHWgyUA==}
+  puppeteer@25.9.0:
+    resolution: {integrity: sha512-2JqQszD2pyDTpIvBH1ZCXdrHgENVNdJIeOM6asbwHRgWknFiaLd1gNB91w/B/0hQHNpafkpxa90lPpBaJM87Hw==}
     engines: {node: '>=22.12.0'}
     hasBin: true
 
@@ -15267,6 +15267,18 @@ packages:
 
   ws@8.21.1:
     resolution: {integrity: sha512-+0NTnW77fFN/DjQi6k/Sq/Yvk4Sgajw7urW8V+asjXnRgDs9gyGkdb7EzgfhA4goXsRIZKE28fzIXBHEzhuiWw==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: '>=5.0.2'
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+
+  ws@8.21.3:
+    resolution: {integrity: sha512-201TZ/kPWxoPr/OKWjquZR1SWKXcvxdH+e1xrx89b3YbmzLMFCLfnaG1HFIgWzJOEWZ7MvpK++odZufgYR50Rw==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -28094,27 +28106,27 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  puppeteer-core@25.8.0(yauzl@2.10.0):
+  puppeteer-core@25.9.0(yauzl@2.10.0):
     dependencies:
       '@puppeteer/browsers': 3.2.1(yauzl@2.10.0)
       chromium-bidi: 17.0.2(devtools-protocol@0.0.1666840)
       devtools-protocol: 0.0.1666840
       typed-query-selector: 2.12.2
       webdriver-bidi-protocol: 0.4.2
-      ws: 8.21.1
+      ws: 8.21.3
     transitivePeerDependencies:
       - bufferutil
       - proxy-agent
       - utf-8-validate
       - yauzl
 
-  puppeteer@25.8.0(yauzl@2.10.0):
+  puppeteer@25.9.0(yauzl@2.10.0):
     dependencies:
       '@puppeteer/browsers': 3.2.1(yauzl@2.10.0)
       chromium-bidi: 17.0.2(devtools-protocol@0.0.1666840)
       devtools-protocol: 0.0.1666840
       lilconfig: 3.1.3
-      puppeteer-core: 25.8.0(yauzl@2.10.0)
+      puppeteer-core: 25.9.0(yauzl@2.10.0)
       typed-query-selector: 2.12.2
     transitivePeerDependencies:
       - bufferutil
@@ -31059,6 +31071,8 @@ snapshots:
   ws@8.21.0: {}
 
   ws@8.21.1: {}
+
+  ws@8.21.3: {}
 
   wsl-utils@0.1.0:
     dependencies:
