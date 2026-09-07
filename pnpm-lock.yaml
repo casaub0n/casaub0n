@@ -222,8 +222,8 @@ catalogs:
       specifier: 2.10.12
       version: 2.10.12
     '@types/chrome':
-      specifier: 0.2.8
-      version: 0.2.8
+      specifier: 0.2.9
+      version: 0.2.9
     '@types/eslint-config-prettier':
       specifier: 6.11.3
       version: 6.11.3
@@ -1379,7 +1379,7 @@ importers:
         version: 2.7.1(supports-color@10.2.2)(vite@8.2.2(@types/node@26.4.1)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.0))
       '@types/chrome':
         specifier: 'catalog:'
-        version: 0.2.8
+        version: 0.2.9
       '@types/node':
         specifier: 'catalog:'
         version: 26.4.1
@@ -1493,7 +1493,7 @@ importers:
         version: 1.63.0
       '@types/chrome':
         specifier: 'catalog:'
-        version: 0.2.8
+        version: 0.2.9
       '@types/jest':
         specifier: 'catalog:'
         version: 30.0.0
@@ -7247,8 +7247,8 @@ packages:
   '@types/chai@5.2.3':
     resolution: {integrity: sha512-Mw558oeA9fFbv65/y4mHtXDs9bPnFMZAL/jxdPFUpOHHIXX91mcgEHbS5Lahr+pwZFR8A7GQleRWeI6cGFC2UA==}
 
-  '@types/chrome@0.2.8':
-    resolution: {integrity: sha512-dznDYMiJUyuc7b+78PxnWhaGOonmbX/OmcWu7NE42sg/yTLJMYnJ7Uah40SLPNFiCh8reqcthk7vOva2+MSvzw==}
+  '@types/chrome@0.2.9':
+    resolution: {integrity: sha512-6rXrDPkkWv4D2Q23HqT+iED4voODU5CpOSc2VFgKyecSFItuEsIBvz9CY6jUQ3dd+Q7zo1bnCE9pKRMtkYut5g==}
 
   '@types/d3-array@3.2.2':
     resolution: {integrity: sha512-hOLWVbm7uRza0BYXpIIW5pxfrKe0W+D5lrFiAEYR+pb6w3N2SwSMaJbXdUfSEv+dT4MfHBLtn5js0LAWaO6otw==}
@@ -15882,38 +15882,32 @@ snapshots:
       - utf-8-validate
       - yaml
 
-  '@astrojs/compiler-binding-darwin-arm64@0.3.2':
-    optional: true
+  '@astrojs/compiler-binding-darwin-arm64@0.3.2': {}
 
   '@astrojs/compiler-binding-darwin-arm64@0.4.0':
     optional: true
 
-  '@astrojs/compiler-binding-darwin-x64@0.3.2':
-    optional: true
+  '@astrojs/compiler-binding-darwin-x64@0.3.2': {}
 
   '@astrojs/compiler-binding-darwin-x64@0.4.0':
     optional: true
 
-  '@astrojs/compiler-binding-linux-arm64-gnu@0.3.2':
-    optional: true
+  '@astrojs/compiler-binding-linux-arm64-gnu@0.3.2': {}
 
   '@astrojs/compiler-binding-linux-arm64-gnu@0.4.0':
     optional: true
 
-  '@astrojs/compiler-binding-linux-arm64-musl@0.3.2':
-    optional: true
+  '@astrojs/compiler-binding-linux-arm64-musl@0.3.2': {}
 
   '@astrojs/compiler-binding-linux-arm64-musl@0.4.0':
     optional: true
 
-  '@astrojs/compiler-binding-linux-x64-gnu@0.3.2':
-    optional: true
+  '@astrojs/compiler-binding-linux-x64-gnu@0.3.2': {}
 
   '@astrojs/compiler-binding-linux-x64-gnu@0.4.0':
     optional: true
 
-  '@astrojs/compiler-binding-linux-x64-musl@0.3.2':
-    optional: true
+  '@astrojs/compiler-binding-linux-x64-musl@0.3.2': {}
 
   '@astrojs/compiler-binding-linux-x64-musl@0.4.0':
     optional: true
@@ -15924,7 +15918,6 @@ snapshots:
     transitivePeerDependencies:
       - '@emnapi/core'
       - '@emnapi/runtime'
-    optional: true
 
   '@astrojs/compiler-binding-wasm32-wasi@0.4.0(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.3)':
     dependencies:
@@ -15934,14 +15927,12 @@ snapshots:
       - '@emnapi/runtime'
     optional: true
 
-  '@astrojs/compiler-binding-win32-arm64-msvc@0.3.2':
-    optional: true
+  '@astrojs/compiler-binding-win32-arm64-msvc@0.3.2': {}
 
   '@astrojs/compiler-binding-win32-arm64-msvc@0.4.0':
     optional: true
 
-  '@astrojs/compiler-binding-win32-x64-msvc@0.3.2':
-    optional: true
+  '@astrojs/compiler-binding-win32-x64-msvc@0.3.2': {}
 
   '@astrojs/compiler-binding-win32-x64-msvc@0.4.0':
     optional: true
@@ -21194,7 +21185,7 @@ snapshots:
       '@types/deep-eql': 4.0.2
       assertion-error: 2.0.1
 
-  '@types/chrome@0.2.8':
+  '@types/chrome@0.2.9':
     dependencies:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
