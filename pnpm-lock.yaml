@@ -303,8 +303,8 @@ catalogs:
       specifier: 11.0.0
       version: 11.0.0
     effect:
-      specifier: 3.22.1
-      version: 3.22.1
+      specifier: 3.22.2
+      version: 3.22.2
     es-toolkit:
       specifier: 1.52.0
       version: 1.52.0
@@ -1333,7 +1333,7 @@ importers:
         version: 3.4.2
       effect:
         specifier: 'catalog:'
-        version: 3.22.1
+        version: 3.22.2
       neverthrow:
         specifier: 'catalog:'
         version: 8.2.0
@@ -1477,7 +1477,7 @@ importers:
         version: 3.4.2
       effect:
         specifier: 'catalog:'
-        version: 3.22.1
+        version: 3.22.2
       es-toolkit:
         specifier: 'catalog:'
         version: 1.52.0
@@ -1575,7 +1575,7 @@ importers:
         version: 3.4.2
       effect:
         specifier: 'catalog:'
-        version: 3.22.1
+        version: 3.22.2
       es-toolkit:
         specifier: 'catalog:'
         version: 1.52.0
@@ -1658,7 +1658,7 @@ importers:
         version: 3.4.2
       effect:
         specifier: 'catalog:'
-        version: 3.22.1
+        version: 3.22.2
       es-toolkit:
         specifier: 'catalog:'
         version: 1.52.0
@@ -9781,6 +9781,9 @@ packages:
 
   effect@3.22.1:
     resolution: {integrity: sha512-TNoXushmPOBAjJlthF5d2QwnX2xBPEtcNJr5XKNKbRLbDvBcOYkXlYDfvGfSA0zriwLFuCll5MDtNMAdZL17PQ==}
+
+  effect@3.22.2:
+    resolution: {integrity: sha512-fm1CQXCs7GTMwpadZxwU5rnAb2bN6mbQpknq/pXBGCzSKkosNYb9k0wsoL0TfB10rSa5xOEZJjo77u/KLXSANg==}
 
   electron-to-chromium@1.5.416:
     resolution: {integrity: sha512-K6bvB2BjnNrugtIih6ewlbBI9DXa976jIdiIlRLHhBoEI9a4JaQjjHyF+A1IQI543aQYR4LnmOrT/K5fZj0aPA==}
@@ -24294,6 +24297,12 @@ snapshots:
       time-span: 4.0.0
 
   effect@3.22.1:
+    dependencies:
+      '@standard-schema/spec': 1.1.0
+      fast-check: 3.23.2
+    optional: true
+
+  effect@3.22.2:
     dependencies:
       '@standard-schema/spec': 1.1.0
       fast-check: 3.23.2
