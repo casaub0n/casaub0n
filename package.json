@@ -26,12 +26,20 @@
     "textlint-rule-preset-ja-technical-writing": "catalog:",
     "turbo": "catalog:"
   },
-  "engines": {
-    "node": ">=24"
-  },
   "license": "MIT",
   "name": "casaub0n",
-  "packageManager": "pnpm@12.4.1",
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "24.21.0",
+      "onFail": "error"
+    },
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.4.1",
+      "onFail": "download"
+    }
+  },
   "private": true,
   "scripts": {
     "all:build": "run-p rs:build build",
