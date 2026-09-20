@@ -2,6 +2,6 @@
 lang: en
 ---
 
-- [What is this repository](./devdoc.md)
+- [About this repository](./dev.md)
 - [My profile](./my-profile.md)
 - [Diary](./packages/diary/)
