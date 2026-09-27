@@ -173,3 +173,7 @@ There is a [eslint-base config](./packages/config-eslint/tsconfig.json)
   "exclude": ["node_modules", "dist"]
 }
 ```
+
+## fallow
+
+[Xユーザーのazuさん: 「knip + dependency-cruiserをfallowに移行した。 https://t.co/2F69zFUTac」 / X](https://x.com/azu_re/status/2103071819377074200)
