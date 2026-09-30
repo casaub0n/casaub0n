@@ -279,8 +279,8 @@ catalogs:
       specifier: 2.11.5
       version: 2.11.5
     '@types/chrome':
-      specifier: 0.3.0
-      version: 0.3.0
+      specifier: 0.3.1
+      version: 0.3.1
     '@types/eslint-config-prettier':
       specifier: 6.11.3
       version: 6.11.3
@@ -1448,7 +1448,7 @@ importers:
         version: 3.0.0(supports-color@10.2.2)(vite@8.3.1(@types/node@26.6.3)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.0))
       '@types/chrome':
         specifier: 'catalog:'
-        version: 0.3.0
+        version: 0.3.1
       '@types/node':
         specifier: 'catalog:'
         version: 26.6.3
@@ -1562,7 +1562,7 @@ importers:
         version: 1.63.0
       '@types/chrome':
         specifier: 'catalog:'
-        version: 0.3.0
+        version: 0.3.1
       '@types/jest':
         specifier: 'catalog:'
         version: 30.0.0
@@ -7587,8 +7587,8 @@ packages:
   '@types/chai@5.2.3':
     resolution: {integrity: sha512-Mw558oeA9fFbv65/y4mHtXDs9bPnFMZAL/jxdPFUpOHHIXX91mcgEHbS5Lahr+pwZFR8A7GQleRWeI6cGFC2UA==}
 
-  '@types/chrome@0.3.0':
-    resolution: {integrity: sha512-HPAMKyJwUnNJdVsxgypwvIStlwRhhaLnxgEwKIB99oOcffJrC4UMeD5xseVoBwDinSkr690DCBaAtSYdK6M1qw==}
+  '@types/chrome@0.3.1':
+    resolution: {integrity: sha512-ddsp7jge8v65JKL6ZtGvE0D9tCBt7wUueCwXX2m4q6B0CDQx2zrzW166kqDDFZXG816uohrM2aYFK0LerWQO+g==}
 
   '@types/d3-array@3.2.2':
     resolution: {integrity: sha512-hOLWVbm7uRza0BYXpIIW5pxfrKe0W+D5lrFiAEYR+pb6w3N2SwSMaJbXdUfSEv+dT4MfHBLtn5js0LAWaO6otw==}
@@ -16546,38 +16546,32 @@ snapshots:
   '@astrojs/compiler-binding-android-arm64@0.5.0':
     optional: true
 
-  '@astrojs/compiler-binding-darwin-arm64@0.3.2':
-    optional: true
+  '@astrojs/compiler-binding-darwin-arm64@0.3.2': {}
 
   '@astrojs/compiler-binding-darwin-arm64@0.5.0':
     optional: true
 
-  '@astrojs/compiler-binding-darwin-x64@0.3.2':
-    optional: true
+  '@astrojs/compiler-binding-darwin-x64@0.3.2': {}
 
   '@astrojs/compiler-binding-darwin-x64@0.5.0':
     optional: true
 
-  '@astrojs/compiler-binding-linux-arm64-gnu@0.3.2':
-    optional: true
+  '@astrojs/compiler-binding-linux-arm64-gnu@0.3.2': {}
 
   '@astrojs/compiler-binding-linux-arm64-gnu@0.5.0':
     optional: true
 
-  '@astrojs/compiler-binding-linux-arm64-musl@0.3.2':
-    optional: true
+  '@astrojs/compiler-binding-linux-arm64-musl@0.3.2': {}
 
   '@astrojs/compiler-binding-linux-arm64-musl@0.5.0':
     optional: true
 
-  '@astrojs/compiler-binding-linux-x64-gnu@0.3.2':
-    optional: true
+  '@astrojs/compiler-binding-linux-x64-gnu@0.3.2': {}
 
   '@astrojs/compiler-binding-linux-x64-gnu@0.5.0':
     optional: true
 
-  '@astrojs/compiler-binding-linux-x64-musl@0.3.2':
-    optional: true
+  '@astrojs/compiler-binding-linux-x64-musl@0.3.2': {}
 
   '@astrojs/compiler-binding-linux-x64-musl@0.5.0':
     optional: true
@@ -16588,7 +16582,6 @@ snapshots:
     transitivePeerDependencies:
       - '@emnapi/core'
       - '@emnapi/runtime'
-    optional: true
 
   '@astrojs/compiler-binding-wasm32-wasi@0.5.0':
     dependencies:
@@ -16597,14 +16590,12 @@ snapshots:
       '@napi-rs/wasm-runtime': 1.2.4(@emnapi/core@1.11.3)(@emnapi/runtime@1.11.3)
     optional: true
 
-  '@astrojs/compiler-binding-win32-arm64-msvc@0.3.2':
-    optional: true
+  '@astrojs/compiler-binding-win32-arm64-msvc@0.3.2': {}
 
   '@astrojs/compiler-binding-win32-arm64-msvc@0.5.0':
     optional: true
 
-  '@astrojs/compiler-binding-win32-x64-msvc@0.3.2':
-    optional: true
+  '@astrojs/compiler-binding-win32-x64-msvc@0.3.2': {}
 
   '@astrojs/compiler-binding-win32-x64-msvc@0.5.0':
     optional: true
@@ -19422,7 +19413,6 @@ snapshots:
       '@emnapi/core': 1.11.3
       '@emnapi/runtime': 1.11.3
       '@tybys/wasm-util': 0.10.3
-    optional: true
 
   '@napi-rs/wasm-runtime@1.2.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)':
     dependencies:
@@ -22126,7 +22116,7 @@ snapshots:
       '@types/deep-eql': 4.0.2
       assertion-error: 2.0.1
 
-  '@types/chrome@0.3.0':
+  '@types/chrome@0.3.1':
     dependencies:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
