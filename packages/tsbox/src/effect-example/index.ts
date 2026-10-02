@@ -1,5 +1,5 @@
 import { consola } from "consola";
-import { Option } from "effect/index";
+import { Option } from "effect";
 
 /**
  *
