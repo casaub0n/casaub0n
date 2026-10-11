@@ -18,4 +18,10 @@ export default defineConfig([
       ],
     },
   },
+  {
+    files: ["*.config.mjs", "**/eslint.config.mjs"],
+    rules: {
+      "unicorn/no-top-level-side-effects": "off",
+    },
+  },
 ]);
