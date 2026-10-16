@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { badCanAccessDashboard, goodCanAccessDashboard, type User } from "./deepNest";
+import { badCanAccessDashboard, goodCanAccessDashboard, type User } from "./deep-nest";
 
 test("dashboard is OK", () => {
   const user: User = {
