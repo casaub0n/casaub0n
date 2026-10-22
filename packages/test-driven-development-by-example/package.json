@@ -28,7 +28,7 @@
     "test:purenode": "pnpm build && pnpm node dist/test.mjs",
     "build": "tsdown",
     "test:report": "node --test --experimental-test-coverage --test-reporter=tap --test-reporter-destination=./dist/test-driven-development-by-example-report.tap ./dist/test.mjs && tap ./dist/test-driven-development-by-example-report.tap",
-    "lint": "eslint src/**",
+    "lint": "oxlint",
     "lint:turbo": "turbo lint"
   },
   "files": [
