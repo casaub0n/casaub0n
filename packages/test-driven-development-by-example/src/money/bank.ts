@@ -18,9 +18,13 @@ export default class Bank {
   }
 
   public rate(from: string, to: string): number {
-    if (from === to) return 1;
+    if (from === to) {
+      return 1;
+    }
     const rate = this.#__rates?.rate;
-    if (rate) return rate;
+    if (rate) {
+      return rate;
+    }
     return 1; // if no setting
   }
 
