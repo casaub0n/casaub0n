@@ -43,8 +43,14 @@ export function badCanAccessDashboard(user: User | null): boolean {
  * @see [✅ OK: 早期リターンで解消](https://qiita.com/Nao52/items/38757bc86c30f0326519#-ok-%E6%97%A9%E6%9C%9F%E3%83%AA%E3%82%BF%E3%83%BC%E3%83%B3%E3%81%A7%E8%A7%A3%E6%B6%88)
  */
 export function goodCanAccessDashboard(user: User | null): boolean {
-  if (user === null) return false;
-  if (!user.isActive) return false;
-  if (!user.emailVerified) return false;
+  if (user === null) {
+    return false;
+  }
+  if (!user.isActive) {
+    return false;
+  }
+  if (!user.emailVerified) {
+    return false;
+  }
   return user.role === "admin" || user.role === "member";
 }

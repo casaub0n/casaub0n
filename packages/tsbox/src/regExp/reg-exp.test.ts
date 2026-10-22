@@ -22,45 +22,58 @@ const INPUT_VALUE = "ABCDE";
 
 test('"' + INPUT_VALUE + '" much "BC" by RegExp object\'s method', () => {
   const resultRegExpExecArray = regExpObjectMethod(INPUT_VALUE);
-  if (resultRegExpExecArray) expect(resultRegExpExecArray[0]).toBe("BC");
+  if (resultRegExpExecArray) {
+    expect(resultRegExpExecArray[0]).toBe("BC");
+  }
 });
 
 test("The RegExpExecArray index is 1 by RegExp object's method", () => {
   const resultRegExpExecArray = regExpObjectMethod(INPUT_VALUE);
-  if (resultRegExpExecArray) expect(resultRegExpExecArray.index).toBe(1);
+  if (resultRegExpExecArray) {
+    expect(resultRegExpExecArray.index).toBe(1);
+  }
 });
 
 test(
   'The input value is "' + INPUT_VALUE + "\" in the RegExpExecArray by RegExp object's method",
   () => {
     const resultRegExpExecArray = regExpObjectMethod(INPUT_VALUE);
-    if (resultRegExpExecArray) expect(resultRegExpExecArray.input).toBe(INPUT_VALUE);
+    if (resultRegExpExecArray) {
+      expect(resultRegExpExecArray.input).toBe(INPUT_VALUE);
+    }
   },
 );
 
 test('"' + INPUT_VALUE + '" much "BC" by String object\'s method', () => {
   const resultRegExpExecArray = stringExpObjectMethod(INPUT_VALUE);
-  if (resultRegExpExecArray) expect(resultRegExpExecArray[0]).toBe("BC");
+  if (resultRegExpExecArray) {
+    expect(resultRegExpExecArray[0]).toBe("BC");
+  }
 });
 
 test("The RegExpExecArray index is 1 by String object's method", () => {
   const resultRegExpExecArray = stringExpObjectMethod(INPUT_VALUE);
-  if (resultRegExpExecArray) expect(resultRegExpExecArray.index).toBe(1);
+  if (resultRegExpExecArray) {
+    expect(resultRegExpExecArray.index).toBe(1);
+  }
 });
 
 test(
   'The input value is "' + INPUT_VALUE + "\" in the RegExpExecArray by RegExp object's method",
   () => {
     const resultRegExpExecArray = stringExpObjectMethod(INPUT_VALUE);
-    if (resultRegExpExecArray) expect(resultRegExpExecArray.input).toBe(INPUT_VALUE);
+    if (resultRegExpExecArray) {
+      expect(resultRegExpExecArray.input).toBe(INPUT_VALUE);
+    }
   },
 );
 
 test("Same result between RegExp object's method and String object's method", () => {
   const resultRegExpObjectMethod = regExpObjectMethod(INPUT_VALUE);
   const resultStringExpObjectMethod = stringExpObjectMethod(INPUT_VALUE);
-  if (resultRegExpObjectMethod && resultStringExpObjectMethod)
+  if (resultRegExpObjectMethod && resultStringExpObjectMethod) {
     expect(resultRegExpObjectMethod).toStrictEqual(resultStringExpObjectMethod);
+  }
 });
 
 test('Search with "g" option by specify constructor', () => {
@@ -80,11 +93,15 @@ test('Same result between specify constructor and specify literal with "g" optio
 });
 
 test('"ABC" much "ABC" by Option "i"', () => {
-  if (optionIRegExp) expect(optionIRegExp[0]).toBe("ABC");
+  if (optionIRegExp) {
+    expect(optionIRegExp[0]).toBe("ABC");
+  }
 });
 
 test(String.raw`"ABC\nDEF" much "D" by Option "m"`, () => {
-  if (optionMRegExp) expect(optionMRegExp[0]).toBe("D");
+  if (optionMRegExp) {
+    expect(optionMRegExp[0]).toBe("D");
+  }
 });
 
 test('By Option "y", Last index of "ABC" is 0', () => {
@@ -105,39 +122,57 @@ test("When from second word", () => {
 test('When from second word and Option "y", the regexp much "ABC"', () => {
   optionYRegExp.lastIndex = 1;
   const abcMatchResult = "ABC".match(optionYRegExp);
-  if (abcMatchResult) expect(abcMatchResult[0]).toBe("ABC");
+  if (abcMatchResult) {
+    expect(abcMatchResult[0]).toBe("ABC");
+  }
 });
 
 test("combine g with i option", () => {
-  if (optionGIRegExp) expect(optionGIRegExp).toStrictEqual(["ABC", "abc", "ABC"]);
+  if (optionGIRegExp) {
+    expect(optionGIRegExp).toStrictEqual(["ABC", "abc", "ABC"]);
+  }
 });
 
 test("it matches meta char", () => {
-  if (metaRegExp) expect(metaRegExp).toStrictEqual(["?", "?", "?"]);
+  if (metaRegExp) {
+    expect(metaRegExp).toStrictEqual(["?", "?", "?"]);
+  }
 });
 
 test("it matches single word", () => {
-  if (singleMatcher) expect(singleMatcher[0]).toBe("A");
+  if (singleMatcher) {
+    expect(singleMatcher[0]).toBe("A");
+  }
 });
 
 test("it matches single word with G Option", () => {
-  if (singleMatcherGOption) expect(singleMatcherGOption).toStrictEqual(["A", "B", "C"]);
+  if (singleMatcherGOption) {
+    expect(singleMatcherGOption).toStrictEqual(["A", "B", "C"]);
+  }
 });
 
 test("it matches continued word", () => {
-  if (continuedWordMatcher) expect(continuedWordMatcher[0]).toBe("AB");
+  if (continuedWordMatcher) {
+    expect(continuedWordMatcher[0]).toBe("AB");
+  }
 });
 
 test("it matches continued word with G Option", () => {
-  if (continuedWordMatcherGOption) expect(continuedWordMatcherGOption[0]).toBe("AB");
+  if (continuedWordMatcherGOption) {
+    expect(continuedWordMatcherGOption[0]).toBe("AB");
+  }
 });
 
 test('it matches "AB" by combine word matcher that\'s "ABCD"', () => {
-  if (combineMatcherA) expect(combineMatcherA[0]).toBe("AB");
+  if (combineMatcherA) {
+    expect(combineMatcherA[0]).toBe("AB");
+  }
 });
 
 test('it matches "CD" by combine word matcher that\'s "ABCD"', () => {
-  if (combineMatcherD) expect(combineMatcherD[0]).toBe("CD");
+  if (combineMatcherD) {
+    expect(combineMatcherD[0]).toBe("CD");
+  }
 });
 
 test.todo('["AB", "CD"]');
