@@ -18,7 +18,8 @@
     "test": "node --env-file .env.windows --import tsx src/test.ts",
     "test:addon": "pnpm build && node --env-file .env.windows --import tsx src/addonTest.ts",
     "test:ci": "node --env-file ../../.env.ci --no-warnings --import tsx src/test.ts",
-    "type:check": "tsc --noEmit"
+    "type:check": "tsc --noEmit",
+    "lint": "oxlint"
   },
   "files": [
     "dist"
