@@ -3,12 +3,18 @@
   "version": "0.0.0",
   "type": "module",
   "private": true,
+  "description": "Storybook of shadcn for casaub0n",
   "scripts": {
     "prebuild": "tsdown",
     "prebuild:vite": "vite build",
     "build": "pnpm prebuild && storybook build",
-    "lint": "eslint ./src/**",
+    "lint": "oxlint",
     "dev": "pnpm prebuild && storybook dev -p 6006"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:casaub0n/casaub0n.git",
+    "directory": "apps/shadcn-story"
   },
   "dependencies": {
     "@casaub0n/ui": "workspace:*",
