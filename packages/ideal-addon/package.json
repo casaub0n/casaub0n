@@ -18,7 +18,7 @@
     "build": "tsc && vite build",
     "test": "tsc --noEmit && node --env-file .env.windows --import tsx src/ideal-addon.test.ts",
     "test:ci": "tsc --noEmit && node --env-file ../../.env.ci --import tsx src/ideal-addon.test.ts",
-    "lint": "eslint src/**",
+    "lint": "oxlint",
     "type:check": "tsc --noEmit"
   },
   "files": [
