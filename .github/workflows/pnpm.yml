@@ -43,13 +43,7 @@ jobs:
       TURBO_TEAM: ${{ secrets.USERSCRIPT_TURBO_TEAM }}
     strategy:
       matrix:
-        tasks:
-          [
-            "build",
-            "test:ci",
-            "lint --filter=@casaub0n/test-driven-development-by-example --filter=next-casaub0n --filter=@casaub0n/ui --filter=@casaub0n/casaub0n-astro --filter=@casaub0n/mklink --filter=@casaub0n/spidering --filter=@casaub0n/maddon --filter=@casaub0n/parse-html --filter=lang-inserter --filter=@casaub0n/ideal-addon --filter=header-inserter --filter=@casaub0n/shadcn-story",
-            "type:check",
-          ]
+        tasks: ["build", "test:ci", "lint --filter=!@casaub0n/casaub0n-page", "type:check"]
 
     steps:
       - name: Checkout
