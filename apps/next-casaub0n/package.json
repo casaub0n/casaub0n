@@ -4,12 +4,13 @@
   "private": true,
   "homepage": "https://github.com/casaub0n/casaub0n/tree/main/apps/next-casaub0n#readme",
   "description": "my Next.js boilerplate",
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "dev:ultra": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ./app/** ./components/**"
+    "lint": "oxlint"
   },
   "dependencies": {
     "next": "catalog:",
