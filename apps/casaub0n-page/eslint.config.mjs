@@ -26,6 +26,7 @@ export default defineConfig([
           ignore: [String.raw`/./.tsx$`],
         },
       ],
+      "no-irregular-whitespace": "off",
       "@typescript-eslint/explicit-function-return-type": "off",
       "unicorn/no-keyword-prefix": "off",
       "unicorn/prevent-abbreviations": "off",
