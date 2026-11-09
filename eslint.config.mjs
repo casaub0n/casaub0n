@@ -2,6 +2,7 @@ import { defineConfig } from "eslint/config";
 import json from "@eslint/json";
 import markdown from "@eslint/markdown";
 import eslintPluginYml from "eslint-plugin-yml";
+import packageJson from "eslint-package-json";
 
 /**
  * only for pnpm-workspace.yaml
@@ -71,5 +72,14 @@ export default defineConfig([
        */
       "markdown/no-html": "off",
     },
+  },
+
+  // package.json
+  {
+    files: ["**/package.json"],
+    plugins: {
+      "package-json": packageJson,
+    },
+    extends: ["package-json/recommended"],
   },
 ]);

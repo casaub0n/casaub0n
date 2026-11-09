@@ -1,49 +1,18 @@
 {
-  "author": {
-    "email": "netzach.yoshida@gmail.com",
-    "name": "casaub0n",
-    "url": "https://github.com/casaub0n"
-  },
+  "name": "casaub0n",
+  "private": true,
   "description": "my experimental apps and readme profile",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git@github.com:casaub0n/casaub0n.git",
     "directory": "."
   },
-  "keywords": [
-    "monorepo",
-    "Node.js",
-    "TypeScript",
-    "Rust",
-    "My profile"
-  ],
-  "devDependencies": {
-    "@cspell/cspell-types": "catalog:",
-    "@eslint/json": "catalog:",
-    "@eslint/markdown": "catalog:",
-    "@lerna-lite/cli": "catalog:",
-    "@lerna-lite/publish": "catalog:",
-    "@lerna-lite/version": "catalog:",
-    "cf": "catalog:",
-    "cspell": "catalog:",
-    "dotenv-cli": "catalog:",
-    "eslint": "catalog:",
-    "eslint-plugin-yml": "catalog:",
-    "fallow": "catalog:",
-    "git-cz": "catalog:",
-    "npm-run-all2": "catalog:",
-    "oxlint": "catalog:",
-    "oxlint-tsgolint": "catalog:",
-    "prettier": "catalog:",
-    "textlint": "catalog:",
-    "textlint-filter-rule-allowlist": "catalog:",
-    "textlint-filter-rule-comments": "catalog:",
-    "textlint-rule-no-todo": "catalog:",
-    "textlint-rule-preset-ja-technical-writing": "catalog:",
-    "turbo": "catalog:"
+  "author": "casaub0n <netzach.yoshida@gmail.com> (https://github.com/casaub0n)",
+  "type": "module",
+  "engines": {
+    "node": ">=26"
   },
-  "license": "MIT",
-  "name": "casaub0n",
   "devEngines": {
     "runtime": {
       "name": "node",
@@ -56,7 +25,6 @@
       "onFail": "download"
     }
   },
-  "private": true,
   "scripts": {
     "all:build": "run-p rs:build build",
     "build": "turbo run build",
@@ -71,5 +39,38 @@
     "test": "dotenv -- turbo run test",
     "test:ci": "dotenv -- turbo run test:ci",
     "version:set": "pnpm exec lerna version"
+  },
+  "keywords": [
+    "monorepo",
+    "node.js",
+    "typescript",
+    "rust",
+    "my profile"
+  ],
+  "devDependencies": {
+    "@cspell/cspell-types": "catalog:",
+    "@eslint/json": "catalog:",
+    "@eslint/markdown": "catalog:",
+    "@lerna-lite/cli": "catalog:",
+    "@lerna-lite/publish": "catalog:",
+    "@lerna-lite/version": "catalog:",
+    "cf": "catalog:",
+    "cspell": "catalog:",
+    "dotenv-cli": "catalog:",
+    "eslint": "catalog:",
+    "eslint-package-json": "catalog:",
+    "eslint-plugin-yml": "catalog:",
+    "fallow": "catalog:",
+    "git-cz": "catalog:",
+    "npm-run-all2": "catalog:",
+    "oxlint": "catalog:",
+    "oxlint-tsgolint": "catalog:",
+    "prettier": "catalog:",
+    "textlint": "catalog:",
+    "textlint-filter-rule-allowlist": "catalog:",
+    "textlint-filter-rule-comments": "catalog:",
+    "textlint-rule-no-todo": "catalog:",
+    "textlint-rule-preset-ja-technical-writing": "catalog:",
+    "turbo": "catalog:"
   }
 }
