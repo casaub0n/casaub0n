@@ -1,21 +1,49 @@
 {
-  "author": {
-    "email": "netzach.yoshida@gmail.com",
-    "name": "casaub0n",
-    "url": "https://github.com/casaub0n"
-  },
+  "name": "casaub0n",
   "description": "my experimental apps and readme profile",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git@github.com:casaub0n/casaub0n.git",
     "directory": "."
   },
+  "author": "casaub0n <netzach.yoshida@gmail.com> (https://github.com/casaub0n)",
+  "engines": {
+    "node": ">=26"
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "26.13.0",
+      "onFail": "error"
+    },
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.18.0",
+      "onFail": "download"
+    }
+  },
+  "scripts": {
+    "all:build": "run-p rs:build build",
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "type:check": "turbo run type:check",
+    "rs:build": "cargo build",
+    "spellcheck:fix": "cspell --words-only --unique \"**/*.md\" | sort --ignore-case | uniq",
+    "spellcheck:lint": "cspell lint \"**/*.md\"",
+    "start": "turbo run start",
+    "storybook": "turbo run storybook",
+    "test": "dotenv -- turbo run test",
+    "test:ci": "dotenv -- turbo run test:ci",
+    "version:set": "pnpm exec lerna version"
+  },
   "keywords": [
     "monorepo",
-    "Node.js",
-    "TypeScript",
-    "Rust",
-    "My profile"
+    "node.js",
+    "typescript",
+    "rust",
+    "my profile"
   ],
   "devDependencies": {
     "@cspell/cspell-types": "catalog:",
@@ -41,35 +69,5 @@
     "textlint-rule-no-todo": "catalog:",
     "textlint-rule-preset-ja-technical-writing": "catalog:",
     "turbo": "catalog:"
-  },
-  "license": "MIT",
-  "name": "casaub0n",
-  "devEngines": {
-    "runtime": {
-      "name": "node",
-      "version": "26.13.0",
-      "onFail": "error"
-    },
-    "packageManager": {
-      "name": "pnpm",
-      "version": "12.18.0",
-      "onFail": "download"
-    }
-  },
-  "private": true,
-  "scripts": {
-    "all:build": "run-p rs:build build",
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "type:check": "turbo run type:check",
-    "rs:build": "cargo build",
-    "spellcheck:fix": "cspell --words-only --unique \"**/*.md\" | sort --ignore-case | uniq",
-    "spellcheck:lint": "cspell lint \"**/*.md\"",
-    "start": "turbo run start",
-    "storybook": "turbo run storybook",
-    "test": "dotenv -- turbo run test",
-    "test:ci": "dotenv -- turbo run test:ci",
-    "version:set": "pnpm exec lerna version"
   }
 }
