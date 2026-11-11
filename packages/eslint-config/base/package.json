@@ -42,8 +42,7 @@
     "build": "tsdown",
     "build:turbo": "turbo run build",
     "build:watch": "tsdown --watch src",
-    "lint": "eslint src/**",
-    "lint:turbo": "turbo run lint",
+    "lint": "oxlint",
     "dev": "eslint-config-inspector",
     "gendts": "node --import tsx src/generate-rules-dts.ts"
   },
