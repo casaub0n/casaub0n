@@ -99,6 +99,7 @@ const config = ({
         ...importX.flatConfigs.typescript.rules,
         "no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
         ...myRules,
+        "no-irregular-whitespace": "off",
       },
       /**
        * https://github.com/un-ts/eslint-plugin-import-x/issues/229#issuecomment-2654512757
