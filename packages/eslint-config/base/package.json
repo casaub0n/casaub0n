@@ -1,6 +1,7 @@
 {
   "name": "@casaub0n/eslint-base",
   "version": "0.0.0",
+  "private": true,
   "description": "base eslint config for casaub0n",
   "license": "MIT",
   "repository": {
@@ -15,9 +16,6 @@
     "types": "./dist/index.d.mts",
     "default": "./dist/index.mjs"
   },
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.mts",
   "sideEffects": false,
   "engines": {
     "node": ">=24"
@@ -46,15 +44,32 @@
     "@casaub0n/eslint-config-utils": "workspace:*"
   },
   "devDependencies": {
+    "@cspell/eslint-plugin": "catalog:",
+    "@eslint/compat": "catalog:",
     "@eslint/config-inspector": "catalog:",
+    "@eslint/js": "catalog:",
     "@types/eslint-config-prettier": "catalog:",
     "@types/node": "catalog:",
+    "@typescript-eslint/eslint-plugin": "catalog:",
+    "@typescript-eslint/parser": "catalog:",
     "consola": "catalog:",
+    "eslint": "catalog:",
+    "eslint-config-prettier": "catalog:",
+    "eslint-import-resolver-typescript": "catalog:",
+    "eslint-package-json": "catalog:",
+    "eslint-plugin-import": "catalog:",
+    "eslint-plugin-import-x": "catalog:",
+    "eslint-plugin-turbo": "catalog:",
+    "eslint-plugin-unicorn": "catalog:",
+    "eslint-plugin-unused-imports": "catalog:",
+    "eslint-plugin-yml": "catalog:",
     "eslint-typegen": "catalog:",
+    "globals": "catalog:",
     "jiti": "catalog:",
     "tsdown": "catalog:",
     "tsx": "catalog:",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "typescript-eslint": "catalog:"
   },
   "peerDependencies": {
     "@cspell/eslint-plugin": "catalog:",
