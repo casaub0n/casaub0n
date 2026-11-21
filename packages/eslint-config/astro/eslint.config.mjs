@@ -8,4 +8,9 @@ export default defineConfig([
   ...base({
     tsConfigRootDirectory: import.meta.dirname,
   }),
+  {
+    rules: {
+      "no-irregular-whitespace": "off",
+    },
+  },
 ]);
