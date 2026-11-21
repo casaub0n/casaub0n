@@ -1118,21 +1118,34 @@ importers:
       '@casaub0n/eslint-config-utils':
         specifier: workspace:*
         version: link:../utils
+    devDependencies:
       '@cspell/eslint-plugin':
         specifier: 'catalog:'
         version: 10.5.2(eslint@10.15.0(jiti@2.7.0)(supports-color@10.2.2))
       '@eslint/compat':
         specifier: 'catalog:'
         version: 2.1.1(eslint@10.15.0(jiti@2.7.0)(supports-color@10.2.2))
+      '@eslint/config-inspector':
+        specifier: 'catalog:'
+        version: 3.5.0(crossws@0.4.12(srvx@1.0.4))(eslint@10.15.0(jiti@2.7.0)(supports-color@10.2.2))(srvx@1.0.4)
       '@eslint/js':
         specifier: 'catalog:'
         version: 10.0.1(eslint@10.15.0(jiti@2.7.0)(supports-color@10.2.2))
+      '@types/eslint-config-prettier':
+        specifier: 'catalog:'
+        version: 6.11.3
+      '@types/node':
+        specifier: 'catalog:'
+        version: 26.6.6
       '@typescript-eslint/eslint-plugin':
         specifier: 'catalog:'
         version: 8.73.0(@typescript-eslint/parser@8.73.0(eslint@10.15.0(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@6.0.3))(eslint@10.15.0(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@6.0.3)
       '@typescript-eslint/parser':
         specifier: 'catalog:'
         version: 8.73.0(eslint@10.15.0(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@6.0.3)
+      consola:
+        specifier: 'catalog:'
+        version: 3.4.2
       eslint:
         specifier: 'catalog:'
         version: 10.15.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -1163,28 +1176,12 @@ importers:
       eslint-plugin-yml:
         specifier: 'catalog:'
         version: 3.10.0(eslint@10.15.0(jiti@2.7.0)(supports-color@10.2.2))
-      globals:
-        specifier: 'catalog:'
-        version: 17.14.0
-      typescript-eslint:
-        specifier: 'catalog:'
-        version: 8.73.0(eslint@10.15.0(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@6.0.3)
-    devDependencies:
-      '@eslint/config-inspector':
-        specifier: 'catalog:'
-        version: 3.5.0(crossws@0.4.12(srvx@1.0.4))(eslint@10.15.0(jiti@2.7.0)(supports-color@10.2.2))(srvx@1.0.4)
-      '@types/eslint-config-prettier':
-        specifier: 'catalog:'
-        version: 6.11.3
-      '@types/node':
-        specifier: 'catalog:'
-        version: 26.6.6
-      consola:
-        specifier: 'catalog:'
-        version: 3.4.2
       eslint-typegen:
         specifier: 'catalog:'
         version: 2.3.2(eslint@10.15.0(jiti@2.7.0)(supports-color@10.2.2))
+      globals:
+        specifier: 'catalog:'
+        version: 17.14.0
       jiti:
         specifier: 'catalog:'
         version: 2.7.0
@@ -1197,6 +1194,9 @@ importers:
       typescript:
         specifier: 'catalog:'
         version: 6.0.3
+      typescript-eslint:
+        specifier: 'catalog:'
+        version: 8.73.0(eslint@10.15.0(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@6.0.3)
 
   packages/eslint-config/next:
     dependencies:
