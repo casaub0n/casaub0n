@@ -1,45 +1,76 @@
 {
   "name": "@casaub0n/eslint-config-react",
   "version": "0.0.0",
-  "main": "./dist/index.mjs",
+  "private": true,
+  "description": "ESLint config for react",
   "license": "MIT",
-  "publishConfig": {
-    "access": "public"
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:casaub0n/casaub0n.git",
+    "directory": "packages/eslint-config/react"
   },
+  "author": "casaub0n <netzach.yoshida@gmail.com> (https://github.com/casaub0n)",
   "type": "module",
   "exports": {
     "types": "./dist/index.d.mts",
     "default": "./dist/index.mjs"
   },
   "sideEffects": false,
-  "files": [
-    "./dist/index.d.mts",
-    "./dist/index.mjs"
-  ],
   "engines": {
     "node": ">=24"
   },
-  "author": {
-    "name": "casaub0n",
-    "email": "netzach.yoshida@gmail.com",
-    "url": "https://github.com/casaub0n"
+  "publishConfig": {
+    "access": "public"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:casaub0n/casaub0n.git",
-    "directory": "packages/eslint-config/react"
-  },
-  "keywords": [
-    "ESLint",
-    "TypeScript",
-    "Node.js",
-    "JavaScript"
-  ],
   "scripts": {
     "build": "tsdown",
     "build:watch": "tsdown --watch src",
     "lint": "eslint src/**",
     "gendts": "node --import tsx src/generate-rules-dts.ts"
+  },
+  "files": [
+    "./dist/index.mjs",
+    "./dist/index.d.mts"
+  ],
+  "keywords": [
+    "eslint",
+    "typescript",
+    "node.js",
+    "javascript"
+  ],
+  "dependencies": {
+    "@casaub0n/eslint-config-utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@casaub0n/eslint-base": "workspace:*",
+    "@cspell/eslint-plugin": "catalog:",
+    "@eslint/compat": "catalog:",
+    "@eslint/config-inspector": "catalog:",
+    "@eslint/js": "catalog:",
+    "@types/eslint-config-prettier": "catalog:",
+    "@types/node": "catalog:",
+    "@typescript-eslint/eslint-plugin": "catalog:",
+    "@typescript-eslint/parser": "catalog:",
+    "consola": "catalog:",
+    "eslint": "catalog:",
+    "eslint-config-prettier": "catalog:",
+    "eslint-import-resolver-typescript": "catalog:",
+    "eslint-package-json": "catalog:",
+    "eslint-plugin-import": "catalog:",
+    "eslint-plugin-import-x": "catalog:",
+    "eslint-plugin-only-warn": "catalog:",
+    "eslint-plugin-react": "catalog:",
+    "eslint-plugin-react-hooks": "catalog:",
+    "eslint-plugin-storybook": "catalog:",
+    "eslint-plugin-turbo": "catalog:",
+    "eslint-plugin-unicorn": "catalog:",
+    "eslint-plugin-unused-imports": "catalog:",
+    "eslint-typegen": "catalog:",
+    "globals": "catalog:",
+    "tsdown": "catalog:",
+    "tsx": "catalog:",
+    "typescript": "catalog:",
+    "typescript-eslint": "catalog:"
   },
   "peerDependencies": {
     "@cspell/eslint-plugin": "catalog:",
@@ -50,31 +81,17 @@
     "eslint": "catalog:",
     "eslint-config-prettier": "catalog:",
     "eslint-import-resolver-typescript": "catalog:",
+    "eslint-package-json": "catalog:",
     "eslint-plugin-import": "catalog:",
     "eslint-plugin-import-x": "catalog:",
+    "eslint-plugin-only-warn": "catalog:",
     "eslint-plugin-react": "catalog:",
     "eslint-plugin-react-hooks": "catalog:",
     "eslint-plugin-storybook": "catalog:",
     "eslint-plugin-turbo": "catalog:",
     "eslint-plugin-unicorn": "catalog:",
     "eslint-plugin-unused-imports": "catalog:",
-    "eslint-package-json": "catalog:",
     "globals": "catalog:",
-    "typescript-eslint": "catalog:",
-    "eslint-plugin-only-warn": "catalog:"
-  },
-  "dependencies": {
-    "@casaub0n/eslint-config-utils": "workspace:*"
-  },
-  "devDependencies": {
-    "@eslint/config-inspector": "catalog:",
-    "@casaub0n/eslint-base": "workspace:*",
-    "@types/eslint-config-prettier": "catalog:",
-    "@types/node": "catalog:",
-    "consola": "catalog:",
-    "eslint-typegen": "catalog:",
-    "tsdown": "catalog:",
-    "tsx": "catalog:",
-    "typescript": "catalog:"
+    "typescript-eslint": "catalog:"
   }
 }
