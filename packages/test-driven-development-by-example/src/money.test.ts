@@ -18,8 +18,8 @@ void test("equality", () => {
 });
 
 void test("currency", () => {
-  assert.deepStrictEqual(Money.dollar(1).currency, "USD");
-  assert.deepStrictEqual(Money.franc(1).currency, "CHF");
+  assert.equal(Money.dollar(1).currency, "USD");
+  assert.equal(Money.franc(1).currency, "CHF");
 });
 
 void test("simple addition", () => {
@@ -58,7 +58,7 @@ void test("reduce Money different Currency", () => {
 });
 
 void test("identity rate", () => {
-  assert.deepStrictEqual(new Bank().rate("USD", "USD"), 1);
+  assert.strictEqual(new Bank().rate("USD", "USD"), 1);
 });
 
 void test("mixed addition", () => {

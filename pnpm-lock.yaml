@@ -399,6 +399,9 @@ catalogs:
     eslint-import-resolver-typescript:
       specifier: 4.4.5
       version: 4.4.5
+    eslint-node-test:
+      specifier: 1.0.1
+      version: 1.0.1
     eslint-package-json:
       specifier: 3.0.0
       version: 3.0.0
@@ -1738,6 +1741,9 @@ importers:
       '@types/node':
         specifier: 'catalog:'
         version: 26.6.6
+      eslint-node-test:
+        specifier: 'catalog:'
+        version: 1.0.1(eslint@10.15.0(jiti@2.7.0)(supports-color@10.2.2))
       tap:
         specifier: 'catalog:'
         version: 21.8.1(@swc/core@1.15.43(@swc/helpers@0.5.23))(@types/node@26.6.6)(@types/react@19.3.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(supports-color@10.2.2)(typescript@6.0.3)
@@ -10128,6 +10134,12 @@ packages:
         optional: true
       eslint-import-resolver-webpack:
         optional: true
+
+  eslint-node-test@1.0.1:
+    resolution: {integrity: sha512-GZk/NDo2K5bINn/Sm47tizOw8gVeT5zzmhl194ApV/asmxEnhrlIe2Risti8mdPuOFvwwv3mdXI5XooYTb7pzg==}
+    engines: {node: '>=22'}
+    peerDependencies:
+      eslint: '>=10.4'
 
   eslint-package-json@3.0.0:
     resolution: {integrity: sha512-is5/FA6xN7sOc70vZWCgQRhXYyaKQcUpxrCxkT8IJbt10SNiwVQNJ+MWbSUi4IXFzyhuVUzTtf4WEpcmKuIGXg==}
@@ -24483,6 +24495,12 @@ snapshots:
       eslint-import-resolver-typescript: 4.4.5(eslint-plugin-import-x@4.18.1(@typescript-eslint/utils@8.73.0(eslint@10.15.0(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@6.0.3))(eslint-import-resolver-node@0.3.10(supports-color@10.2.2))(eslint@10.15.0(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2))(eslint-plugin-import@2.32.0)(eslint@10.15.0(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - supports-color
+
+  eslint-node-test@1.0.1(eslint@10.15.0(jiti@2.7.0)(supports-color@10.2.2)):
+    dependencies:
+      '@eslint-community/eslint-utils': 4.10.1(eslint@10.15.0(jiti@2.7.0)(supports-color@10.2.2))
+      eslint: 10.15.0(jiti@2.7.0)(supports-color@10.2.2)
+      quote-js-string: 0.1.0
 
   eslint-package-json@3.0.0(eslint@10.15.0(jiti@2.7.0)(supports-color@10.2.2)):
     dependencies:
