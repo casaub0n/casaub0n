@@ -1,23 +1,27 @@
 {
   "name": "@casaub0n/test-driven-development-by-example",
   "version": "1.0.0",
+  "private": true,
   "description": "test driven development by example for TypeScript",
-  "homepage": "https://github.com/casaub0n/casaub0n/tree/main/packages/test-driven-development-by-example#readme",
   "license": "MIT",
-  "type": "module",
   "repository": {
     "url": "git@github.com:casaub0n/casaub0n.git",
     "type": "git",
     "directory": "packages/test-driven-development-by-example"
   },
-  "author": {
-    "name": "casaub0n",
-    "email": "netzach.yoshida@gmail.com",
-    "url": "https://github.com/casaub0n"
+  "homepage": "https://github.com/casaub0n/casaub0n/tree/main/packages/test-driven-development-by-example#readme",
+  "author": "casaub0n <netzach.yoshida@gmail.com> (https://github.com/casaub0n)",
+  "type": "module",
+  "exports": {
+    "types": "./dist/index.d.mts",
+    "default": "./dist/index.js"
   },
-  "main": "./dist/index.js",
+  "sideEffects": false,
   "engines": {
     "node": ">=26"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "type:check": "tsc --noEmit",
@@ -35,12 +39,12 @@
     "dist"
   ],
   "keywords": [
-    "Testing",
-    "TypeScript",
-    "Node.js"
+    "testing",
+    "typescript",
+    "node.js"
   ],
-  "publishConfig": {
-    "access": "public"
+  "dependencies": {
+    "consola": "catalog:"
   },
   "devDependencies": {
     "@casaub0n/eslint-base": "workspace:*",
@@ -49,8 +53,5 @@
     "tsdown": "catalog:",
     "tsx": "catalog:",
     "typescript": "catalog:"
-  },
-  "dependencies": {
-    "consola": "catalog:"
   }
 }
