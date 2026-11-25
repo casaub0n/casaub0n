@@ -32,5 +32,4 @@ export const eslintCoreRules = {
       ignoreDeclarationSort: true,
     },
   ],
-  "no-irregular-whitespace": "off",
 } as const satisfies FlatConfig.Config["rules"];

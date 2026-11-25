@@ -18,8 +18,5 @@ export default defineConfig([
       "**/.tubo/",
       "**/next-env.d.ts",
     ],
-    rules: {
-      "no-irregular-whitespace": "off",
-    },
   },
 ]);

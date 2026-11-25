@@ -55,11 +55,20 @@ const config = defineConfig([
    * [sindresorhus/eslint-package-json: Powerful ESLint rules for package.json](https://github.com/sindresorhus/eslint-package-json)
    */
   {
+    files: ["**/*.json"],
+    rules: {
+      "no-irregular-whitespace": "off",
+    },
+  },
+  {
     files: ["**/package.json"],
     plugins: {
       "package-json": packageJson,
     },
     extends: ["package-json/recommended"],
+    rules: {
+      "no-irregular-whitespace": "off",
+    },
   },
 
   eslintConfigPrettier,
