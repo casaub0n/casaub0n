@@ -99,7 +99,6 @@ const config = ({
         ...importX.flatConfigs.typescript.rules,
         "no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
         ...myRules,
-        "no-irregular-whitespace": "off",
       },
       /**
        * https://github.com/un-ts/eslint-plugin-import-x/issues/229#issuecomment-2654512757
@@ -145,11 +144,20 @@ const config = ({
      * [sindresorhus/eslint-package-json: Powerful ESLint rules for package.json](https://github.com/sindresorhus/eslint-package-json)
      */
     {
+      files: ["**/*.json"],
+      rules: {
+        "no-irregular-whitespace": "off",
+      },
+    },
+    {
       files: ["**/package.json"],
       plugins: {
         "package-json": packageJson,
       },
       extends: ["package-json/recommended"],
+      rules: {
+        "no-irregular-whitespace": "off",
+      },
     },
 
     eslintPluginYml.configs["flat/recommended"],
