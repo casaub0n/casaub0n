@@ -1,6 +1,7 @@
 {
   "name": "@casaub0n/spidering",
   "version": "1.0.0",
+  "private": true,
   "description": "parse your html data",
   "license": "MIT",
   "repository": {
@@ -8,16 +9,19 @@
     "url": "git@github.com:casaub0n/casaub0n.git",
     "directory": "packages/spidering"
   },
-  "author": {
-    "name": "casaub0n",
-    "email": "netzach.yoshida@gmail.com",
-    "url": "https://github.com/casaub0n"
+  "author": "casaub0n <netzach.yoshida@gmail.com> (https://github.com/casaub0n)",
+  "type": "module",
+  "exports": {
+    "types": "./dist/index.d.mts",
+    "default": "./dist/index.mjs"
   },
-  "main": "./dist/index.js",
+  "sideEffects": false,
   "engines": {
     "node": ">=26"
   },
-  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "lint:tsc": "tsc --noEmit",
     "test": "vitest run",
@@ -32,8 +36,16 @@
   "keywords": [
     "userscript"
   ],
-  "publishConfig": {
-    "access": "public"
+  "dependencies": {
+    "@formkit/tempo": "catalog:",
+    "consola": "catalog:",
+    "effect": "catalog:",
+    "es-toolkit": "catalog:",
+    "glob": "catalog:",
+    "jsdom": "catalog:",
+    "neverthrow": "catalog:",
+    "node-fetch": "catalog:",
+    "zod": "catalog:"
   },
   "devDependencies": {
     "@casaub0n/eslint-base": "workspace:*",
@@ -45,16 +57,5 @@
     "tsx": "catalog:",
     "typescript": "catalog:",
     "vitest": "catalog:"
-  },
-  "dependencies": {
-    "@formkit/tempo": "catalog:",
-    "consola": "catalog:",
-    "effect": "catalog:",
-    "es-toolkit": "catalog:",
-    "glob": "catalog:",
-    "jsdom": "catalog:",
-    "neverthrow": "catalog:",
-    "node-fetch": "catalog:",
-    "zod": "catalog:"
   }
 }
