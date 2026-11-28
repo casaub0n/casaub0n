@@ -1,22 +1,26 @@
 {
   "name": "lang-inserter",
   "version": "1.0.17",
+  "private": true,
   "description": "Inserting lang config in your md",
   "license": "MIT",
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "git@github.com:casaub0n/casaub0n.git",
     "directory": "packages/lang-inserter"
   },
-  "author": {
-    "name": "casaub0n",
-    "email": "netzach.yoshida@gmail.com",
-    "url": "https://github.com/casaub0n"
+  "author": "casaub0n <netzach.yoshida@gmail.com> (https://github.com/casaub0n)",
+  "type": "module",
+  "exports": {
+    "types": "./dist/index.d.mts",
+    "default": "./dist/index.mjs"
   },
-  "main": "./dist/index.js",
+  "sideEffects": false,
   "engines": {
     "node": ">=26"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "rmdist": "node scripts/rrm.ts",
@@ -32,12 +36,13 @@
     "schemer",
     "node script"
   ],
-  "publishConfig": {
-    "access": "public"
+  "dependencies": {
+    "consola": "catalog:",
+    "neverthrow": "catalog:",
+    "valibot": "catalog:"
   },
   "devDependencies": {
     "@casaub0n/eslint-base": "workspace:*",
-    "@types/mock-fs": "catalog:",
     "@types/node": "catalog:",
     "@vitest/ui": "catalog:",
     "tsdown": "catalog:",
@@ -45,10 +50,5 @@
     "typescript": "catalog:",
     "vite": "catalog:",
     "vitest": "catalog:"
-  },
-  "dependencies": {
-    "consola": "catalog:",
-    "neverthrow": "catalog:",
-    "valibot": "catalog:"
   }
 }
