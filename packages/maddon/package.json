@@ -1,6 +1,7 @@
 {
   "name": "@casaub0n/maddon",
   "version": "0.0.0",
+  "private": true,
   "description": "redirect favorite host",
   "license": "MIT",
   "repository": {
@@ -8,14 +9,18 @@
     "url": "git@github.com:casaub0n/casaub0n.git",
     "directory": "packages/maddon"
   },
-  "author": {
-    "name": "casaub0n",
-    "email": "netzach.yoshida@gmail.com",
-    "url": "https://github.com/casaub0n"
+  "author": "casaub0n <netzach.yoshida@gmail.com> (https://github.com/casaub0n)",
+  "type": "module",
+  "exports": {
+    "types": "./dist/index.d.mts",
+    "default": "./dist/index.mjs"
   },
-  "main": "./dist/index.js",
+  "sideEffects": false,
   "engines": {
     "node": ">=26"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "build": "tsdown",
@@ -31,6 +36,9 @@
   "keywords": [
     "userscript"
   ],
+  "dependencies": {
+    "consola": "catalog:"
+  },
   "devDependencies": {
     "@casaub0n/eslint-base": "workspace:*",
     "@types/node": "catalog:",
@@ -38,12 +46,5 @@
     "tsdown": "catalog:",
     "tsx": "catalog:",
     "typescript": "catalog:"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "type": "module",
-  "dependencies": {
-    "consola": "catalog:"
   }
 }
